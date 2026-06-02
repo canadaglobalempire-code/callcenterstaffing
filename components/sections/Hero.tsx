@@ -16,7 +16,7 @@ const HERO_STATS = [
 export function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-navy-950 text-white pt-40 pb-0 lg:pt-48">
-      {/* Background video */}
+      {/* Background video — full color, no overlay */}
       <video
         aria-hidden
         autoPlay
@@ -24,15 +24,14 @@ export function Hero() {
         loop
         playsInline
         poster="/images/cc-office-wide.jpg"
-        className="absolute inset-0 h-full w-full object-cover opacity-45"
+        className="absolute inset-0 h-full w-full object-cover"
       >
         <source src="/images/hero-video.mp4" type="video/mp4" />
       </video>
 
-      {/* Warm dark overlay — desaturates the video so it's not pure blue */}
-      <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/75 to-navy-950/50" />
-      <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/30" />
-      <div aria-hidden className="absolute inset-0 pattern-grid opacity-20" />
+      {/* Black overlay — darker on the left for text legibility, video shows through on the right */}
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/25" />
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent" />
 
       {/* Orange glows — replace blue with warmer accent for depth */}
       <div
@@ -52,7 +51,7 @@ export function Hero() {
           </span>
 
           <h1 className="mt-6 font-display text-[2.25rem] sm:text-[2.75rem] lg:text-[3.5rem] font-extrabold leading-[1.05] tracking-[-0.02em] text-white">
-            Trained call center agents,{' '}
+            Call Center Staffing,{' '}
             <span className="relative inline-block">
               <span className="relative z-10 text-accent-500">deployed to your business.</span>
               <span aria-hidden className="absolute inset-x-0 bottom-1 h-3 bg-accent-500/15 -z-0" />

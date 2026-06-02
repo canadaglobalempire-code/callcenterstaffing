@@ -16,7 +16,6 @@ import {
   ShieldCheck,
   Headphones,
   PhoneOutgoing,
-  Phone,
   Languages,
   ClipboardCheck,
   Activity,
@@ -343,14 +342,7 @@ export function Header() {
           })}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-5">
-          <a
-            href={site.contact.phoneHref}
-            className="inline-flex items-center gap-2 text-sm font-semibold text-navy-900 transition-colors hover:text-accent-600"
-          >
-            <Phone className="h-4 w-4 text-accent-500" strokeWidth={2} />
-            {site.contact.phoneDisplay}
-          </a>
+        <div className="hidden lg:flex items-center gap-4">
           <Button href="/contact" size="md">
             Get a Quote
           </Button>

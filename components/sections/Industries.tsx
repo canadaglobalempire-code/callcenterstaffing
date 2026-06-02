@@ -12,6 +12,7 @@ import {
   Truck,
   Building,
   GraduationCap,
+  Headphones,
   ArrowUpRight,
   ArrowRight,
 } from 'lucide-react';
@@ -98,6 +99,13 @@ const INDUSTRIES = [
     note: 'FERPA · enrollment · aid',
     image: '/images/cc-team-collab.jpg',
   },
+  {
+    slug: 'tech-support',
+    label: 'Tech Support & Helpdesk',
+    icon: Headphones,
+    note: 'tier 1/2/3 · 24/7 · SaaS',
+    image: '/images/cc-support-team.jpg',
+  },
 ];
 
 export function Industries() {
@@ -114,14 +122,14 @@ export function Industries() {
           <div className="flex flex-col gap-5 lg:col-span-5">
             <p className="max-w-prose text-body-l text-navy-700">
               Compliance, licensure, language mix and seasonality all change how we screen. Every
-              one of our 11 verticals has a tailored screening protocol our recruiters are trained
+              one of our 13 verticals has a tailored screening protocol our recruiters are trained
               on.
             </p>
             <Link
               href="/industries"
               className="bg-accent-500/10 group inline-flex h-11 w-fit items-center gap-2 rounded-full px-5 text-[13px] font-bold uppercase tracking-[0.14em] text-accent-500 transition-colors hover:bg-accent-500 hover:text-white"
             >
-              View all 11 industries
+              View all 13 industries
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
             </Link>
           </div>

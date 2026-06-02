@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Phone, Mail, MapPin, Clock, Linkedin } from 'lucide-react';
 import { Container } from './Container';
 import { site } from '@/lib/site';
 
@@ -83,45 +82,6 @@ export function Footer() {
               Specialized recruiting for call centers, BPOs and customer-experience teams. Onshore,
               nearshore and offshore — placed with discipline.
             </p>
-
-            <ul className="mt-7 space-y-3 text-sm">
-              <li>
-                <a
-                  href={site.contact.phoneHref}
-                  className="inline-flex items-center gap-3 text-white/80 transition-colors hover:text-white"
-                >
-                  <Phone className="h-4 w-4 shrink-0 text-accent-500" strokeWidth={2} />
-                  {site.contact.phoneDisplay}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={site.contact.emailHref}
-                  className="inline-flex items-center gap-3 text-white/80 transition-colors hover:text-white"
-                >
-                  <Mail className="h-4 w-4 shrink-0 text-accent-500" strokeWidth={2} />
-                  {site.contact.email}
-                </a>
-              </li>
-              <li className="inline-flex items-center gap-3 text-white/70">
-                <MapPin className="h-4 w-4 shrink-0 text-accent-500" strokeWidth={2} />
-                {site.contact.address.full}
-              </li>
-              <li className="inline-flex items-center gap-3 text-white/70">
-                <Clock className="h-4 w-4 shrink-0 text-accent-500" strokeWidth={2} />
-                {site.contact.hours}
-              </li>
-            </ul>
-
-            <a
-              href={site.social.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`${site.name} on LinkedIn`}
-              className="mt-7 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/80 transition-colors hover:border-accent-500 hover:text-white"
-            >
-              <Linkedin className="h-4 w-4" strokeWidth={2} />
-            </a>
           </div>
 
           <div className="lg:col-span-8 grid gap-10 sm:grid-cols-2 md:grid-cols-4">

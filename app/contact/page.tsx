@@ -6,13 +6,10 @@ import {
   ShieldCheck,
   UserCheck,
   FileText,
-  Linkedin,
   CalendarDays,
   BookOpen,
   Check,
   MessageSquare,
-  Phone,
-  Mail,
 } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
 import { Section } from '@/components/layout/Section';
@@ -93,15 +90,6 @@ const TRUST_LIST = [
 ];
 
 const ENGAGEMENT_OPTIONS = [
-  {
-    icon: Linkedin,
-    eyebrow: 'Follow along',
-    title: 'Connect on LinkedIn',
-    body: 'Operator notes, hiring market signals, and the occasional staffing playbook excerpt.',
-    href: site.social.linkedin,
-    cta: 'View company page',
-    external: true,
-  },
   {
     icon: CalendarDays,
     eyebrow: '45 minutes',
@@ -297,10 +285,6 @@ export default function ContactPage() {
                   <StaffingPlanForm />
                 </div>
               </div>
-
-              <p className="mt-5 text-[12px] leading-relaxed text-navy-700/80 max-w-prose">
-                Free · No obligation · 1 business day response · HIPAA · PCI · SOC 2 ready.
-              </p>
             </div>
           </div>
         </Container>
@@ -322,48 +306,7 @@ export default function ContactPage() {
             </p>
           </div>
 
-          {/* DIRECT CONTACT STRIP */}
-          <div className="mb-5 grid gap-5 sm:grid-cols-2">
-            <a
-              href={site.contact.phoneHref}
-              className="group flex items-center gap-5 rounded-3xl border border-navy-950/8 bg-white p-7 transition-all hover:border-accent-500/40 hover:shadow-md hover:-translate-y-0.5"
-            >
-              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-accent-500/10 text-accent-500 transition-colors group-hover:bg-accent-500 group-hover:text-white">
-                <Phone className="h-6 w-6" strokeWidth={2} />
-              </span>
-              <span>
-                <span className="block text-[10px] font-bold uppercase tracking-[0.18em] text-accent-500">
-                  Call a recruiter
-                </span>
-                <span className="mt-1 block font-display text-[1.35rem] font-bold tracking-[-0.02em] text-navy-950">
-                  {site.contact.phoneDisplay}
-                </span>
-                <span className="mt-0.5 block text-[13px] text-navy-700">{site.contact.hours}</span>
-              </span>
-            </a>
-
-            <a
-              href={site.contact.salesEmailHref}
-              className="group flex items-center gap-5 rounded-3xl border border-navy-950/8 bg-white p-7 transition-all hover:border-accent-500/40 hover:shadow-md hover:-translate-y-0.5"
-            >
-              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-accent-500/10 text-accent-500 transition-colors group-hover:bg-accent-500 group-hover:text-white">
-                <Mail className="h-6 w-6" strokeWidth={2} />
-              </span>
-              <span>
-                <span className="block text-[10px] font-bold uppercase tracking-[0.18em] text-accent-500">
-                  Email the team
-                </span>
-                <span className="mt-1 block font-display text-[1.35rem] font-bold tracking-[-0.02em] text-navy-950 break-all">
-                  {site.contact.salesEmail}
-                </span>
-                <span className="mt-0.5 block text-[13px] text-navy-700">
-                  Written reply within one business day
-                </span>
-              </span>
-            </a>
-          </div>
-
-          <ul className="grid gap-5 lg:grid-cols-3">
+          <ul className="grid gap-5 sm:grid-cols-2">
             {ENGAGEMENT_OPTIONS.map((opt) => {
               const Icon = opt.icon;
               return (
