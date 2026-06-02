@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Navy — corporate dark (slate-900 family) */
+  --navy-950: #0f172a;
+  --navy-900: #1e293b;
+  --navy-800: #334155;
+  --navy-700: #475569;
+
+  /* Brand blue — kept for trust/links */
+  --blue-600: #2563eb;
+  --blue-500: #3b82f6;
+  --blue-50: #eff6ff;
+
+  /* Orange accent — primary CTA + emphasis. -400 is the lighter hover state. */
+  --orange-500: #f97316;
+  --orange-400: #fb923c;
+
+  /* Neutral ramp */
+  --neutral-950: #0e0e10;
+  --neutral-900: #1a1a1f;
+  --neutral-700: #4a4a52;
+  --neutral-500: #7a7a82;
+  --neutral-300: #d4d4d8;
+  --neutral-200: #e5e5e8;
+  --neutral-100: #f4f4f6;
+  --neutral-50: #fafafb;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: var(--navy-700);
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  ::selection {
+    background-color: var(--navy-950);
+    color: #ffffff;
+  }
+
+  :where(h1, h2, h3, h4, h5, h6) {
+    color: var(--navy-950);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  /* Focus states — visible, brand-coloured */
+  :focus-visible {
+    outline: 2px solid var(--blue-600);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  .container-page {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  @media (min-width: 1024px) {
+    .container-page {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  /* Subtle grid texture for navy hero/CTA backgrounds */
+  .pattern-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  /* A thin dotted divider used in section eyebrows */
+  .rule-thin {
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      var(--neutral-200),
+      var(--neutral-200) 50%,
+      transparent 50%
+    );
+    background-size: 6px 1px;
+  }
+}
+
+@layer utilities {
+  /* Figure number — used for process steps */
+  .figure-num {
+    font-family: var(--font-display), system-ui, sans-serif;
+    font-feature-settings: 'lnum', 'tnum';
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+
+  /* Stats marquee */
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee 32s linear infinite;
+  }
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+}

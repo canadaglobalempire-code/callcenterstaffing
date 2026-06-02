@@ -1,0 +1,297 @@
+'use client';
+
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Check, ArrowRight, AlertCircle, Send } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { submitToSplitforms } from '@/lib/splitforms';
+
+const schema = z.object({
+  name: z.string().min(2, 'Please enter your full name'),
+  company: z.string().min(2, 'Please enter your company'),
+  email: z.string().email('Enter a valid work email'),
+  phone: z
+    .string()
+    .min(7, 'Enter a phone number we can reach you on')
+    .regex(/^[\d+\-().\s]+$/, 'Phone number contains invalid characters'),
+  roleType: z.enum([
+    'inbound-cs',
+    'outbound-sales',
+    'bilingual',
+    'team-leads',
+    'qa-wfm',
+    'multiple',
+  ]),
+  agentCount: z.enum(['1-9', '10-49', '50-199', '200-499', '500+']),
+  location: z.enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open']),
+  timeline: z.enum(['immediate', '30-days', '60-90-days', 'planning']),
+  notes: z.string().max(800).optional(),
+});
+
+type FormValues = z.infer<typeof schema>;
+
+const ROLE_OPTIONS: { value: FormValues['roleType']; label: string }[] = [
+  { value: 'inbound-cs', label: 'Inbound customer service' },
+  { value: 'outbound-sales', label: 'Outbound sales' },
+  { value: 'bilingual', label: 'Bilingual / multilingual' },
+  { value: 'team-leads', label: 'Team leads / supervisors' },
+  { value: 'qa-wfm', label: 'QA / WFM / trainers' },
+  { value: 'multiple', label: 'Multiple roles' },
+];
+const AGENT_OPTIONS: { value: FormValues['agentCount']; label: string }[] = [
+  { value: '1-9', label: '1–9 agents' },
+  { value: '10-49', label: '10–49 agents' },
+  { value: '50-199', label: '50–199 agents' },
+  { value: '200-499', label: '200–499 agents' },
+  { value: '500+', label: '500+ agents' },
+];
+const LOCATION_OPTIONS: { value: FormValues['location']; label: string }[] = [
+  { value: 'onshore-us', label: 'Onshore (US / Canada)' },
+  { value: 'nearshore-latam', label: 'Nearshore (Latin America)' },
+  { value: 'offshore-asia', label: 'Offshore (Asia / Africa)' },
+  { value: 'multi-region', label: 'Multi-region' },
+  { value: 'open', label: 'Open to recommendation' },
+];
+const TIMELINE_OPTIONS: { value: FormValues['timeline']; label: string }[] = [
+  { value: 'immediate', label: 'Immediate (this month)' },
+  { value: '30-days', label: 'Within 30 days' },
+  { value: '60-90-days', label: '60–90 days' },
+  { value: 'planning', label: 'Just planning' },
+];
+
+const fieldClass =
+  'h-11 w-full rounded-md border border-ink-200 bg-white px-3.5 text-[15px] text-navy-950 shadow-sm transition-colors focus:border-brand-600 focus:outline-none placeholder:text-navy-700/50';
+const labelClass = 'text-xs font-semibold uppercase tracking-[0.12em] text-navy-700';
+
+export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
+  const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<FormValues>({
+    resolver: zodResolver(schema),
+    mode: 'onBlur',
+  });
+
+  const onSubmit = async (values: FormValues) => {
+    setSubmitError(null);
+    try {
+      await submitToSplitforms(
+        {
+          source: 'StaffingPlanForm',
+          page: typeof window !== 'undefined' ? window.location.pathname : '',
+          name: values.name,
+          company: values.company,
+          email: values.email,
+          phone: values.phone,
+          roleType: values.roleType,
+          agentCount: values.agentCount,
+          location: values.location,
+          timeline: values.timeline,
+          notes: values.notes,
+        },
+        `New staffing plan request from ${values.name} (${values.company})`,
+      );
+      setSubmitted(true);
+      reset();
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : 'Something went wrong. Try again.');
+    }
+  };
+
+  if (submitted) {
+    return (
+      <div
+        role="status"
+        className="rounded-lg border border-brand-600/30 bg-brand-50 p-8 text-center"
+      >
+        <span className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-brand-600 text-white">
+          <Check className="h-6 w-6" />
+        </span>
+        <h3 className="mt-5 text-xl font-semibold text-navy-950">Quote request received.</h3>
+        <p className="mt-2 text-navy-700 max-w-sm mx-auto">
+          A senior recruiter will respond within one business day with a written quote and
+          sourcing timeline.
+        </p>
+        <button
+          type="button"
+          className="mt-6 text-sm font-semibold text-brand-600 hover:text-navy-950"
+          onClick={() => setSubmitted(false)}
+        >
+          Submit another request
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className={cn('grid gap-5', compact ? '' : 'lg:grid-cols-2')}
+      noValidate
+    >
+      <Field label="Full name" id="name" error={errors.name?.message}>
+        <input id="name" {...register('name')} className={fieldClass} placeholder="Jane Doe" />
+      </Field>
+
+      <Field label="Company" id="company" error={errors.company?.message}>
+        <input
+          id="company"
+          {...register('company')}
+          className={fieldClass}
+          placeholder="Acme BPO"
+        />
+      </Field>
+
+      <Field label="Email" id="email" error={errors.email?.message}>
+        <input
+          id="email"
+          type="email"
+          {...register('email')}
+          className={fieldClass}
+          placeholder="jane@company.com"
+        />
+      </Field>
+
+      <Field label="Phone" id="phone" error={errors.phone?.message}>
+        <input
+          id="phone"
+          type="tel"
+          {...register('phone')}
+          className={fieldClass}
+          placeholder="+1 (555) 555-5555"
+        />
+      </Field>
+
+      <Field label="Role type" id="roleType" error={errors.roleType?.message}>
+        <Select id="roleType" {...register('roleType')} options={ROLE_OPTIONS} />
+      </Field>
+
+      <Field label="Agents needed" id="agentCount" error={errors.agentCount?.message}>
+        <Select id="agentCount" {...register('agentCount')} options={AGENT_OPTIONS} />
+      </Field>
+
+      <Field label="Location preference" id="location" error={errors.location?.message}>
+        <Select id="location" {...register('location')} options={LOCATION_OPTIONS} />
+      </Field>
+
+      <Field label="Timeline" id="timeline" error={errors.timeline?.message}>
+        <Select id="timeline" {...register('timeline')} options={TIMELINE_OPTIONS} />
+      </Field>
+
+      <Field
+        label="Anything we should know?"
+        id="notes"
+        error={errors.notes?.message}
+        className="lg:col-span-2"
+      >
+        <textarea
+          id="notes"
+          rows={4}
+          {...register('notes')}
+          className={cn(fieldClass, 'h-auto py-3 leading-relaxed')}
+          placeholder="Account licensure, language mix, ramp constraints…"
+        />
+      </Field>
+
+      <div className="lg:col-span-2 flex flex-col gap-4 pt-2">
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="group relative inline-flex h-[60px] w-full items-center justify-between gap-3 overflow-hidden rounded-2xl bg-gradient-to-br from-accent-500 to-accent-400 pl-5 pr-2 text-left text-white shadow-[0_10px_30px_-10px_rgba(249,115,22,0.55)] transition-all hover:shadow-[0_18px_40px_-10px_rgba(249,115,22,0.65)] hover:-translate-y-0.5 disabled:opacity-60 disabled:translate-y-0 disabled:cursor-not-allowed"
+        >
+          <span className="flex items-center gap-3 min-w-0">
+            <span className="grid h-9 w-9 flex-none place-items-center rounded-xl bg-white/15 backdrop-blur-sm">
+              <Send className="h-4 w-4" strokeWidth={2.25} />
+            </span>
+            <span className="flex flex-col leading-tight min-w-0">
+              <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/80">
+                {isSubmitting ? 'Submitting' : 'Free · 1 business day · No obligation'}
+              </span>
+              <span className="text-[15px] font-extrabold tracking-tight truncate">
+                {isSubmitting ? 'Sending your request…' : 'Get my Free Quote'}
+              </span>
+            </span>
+          </span>
+          <span className="grid h-11 w-11 flex-none place-items-center rounded-xl bg-white text-accent-500 shadow-md transition-transform group-hover:translate-x-1">
+            <ArrowRight className="h-5 w-5" strokeWidth={2.5} />
+          </span>
+        </button>
+        {submitError && (
+          <p
+            role="alert"
+            className="inline-flex items-center gap-2 rounded-md bg-red-50 px-3 py-2 text-sm text-red-700 font-medium"
+          >
+            <AlertCircle className="h-4 w-4" />
+            {submitError}
+          </p>
+        )}
+        <p className="text-xs text-navy-700/80">
+          By submitting, you agree we may contact you about your staffing needs. We never sell or
+          share your information.
+        </p>
+      </div>
+    </form>
+  );
+}
+
+function Field({
+  label,
+  id,
+  error,
+  children,
+  className,
+}: {
+  label: string;
+  id: string;
+  error?: string;
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <div className={cn('flex flex-col gap-2', className)}>
+      <label htmlFor={id} className={labelClass}>
+        {label}
+      </label>
+      {children}
+      {error && (
+        <p className="inline-flex items-center gap-1 text-xs text-red-600">
+          <AlertCircle className="h-3 w-3" />
+          {error}
+        </p>
+      )}
+    </div>
+  );
+}
+
+const Select = (props: React.SelectHTMLAttributes<HTMLSelectElement> & {
+  options: { value: string; label: string }[];
+}) => {
+  const { options, className, ...rest } = props;
+  return (
+    <select
+      {...rest}
+      defaultValue=""
+      className={cn(fieldClass, 'appearance-none bg-no-repeat bg-[length:14px] bg-[right_14px_center]', className)}
+      style={{
+        backgroundImage:
+          "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%232a3d5f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E\")",
+      }}
+    >
+      <option value="" disabled>
+        Select…
+      </option>
+      {options.map((o) => (
+        <option key={o.value} value={o.value}>
+          {o.label}
+        </option>
+      ))}
+    </select>
+  );
+};

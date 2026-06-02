@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(PORT=3000 npm run dev)",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(curl *)",
+      "Bash(grep -rn \"@\" --include=\"*.tsx\" --include=\"*.ts\" --include=\"*.json\" --include=\"*.txt\" -E \"[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}\" -l)",
+      "Bash(grep -rn -E \"[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}\" --include=\"*.tsx\" --include=\"*.ts\" --include=\"*.json\" --include=\"*.txt\" --include=\"*.md\" .)",
+      "Bash(lsof -nP -iTCP:3000 -sTCP:LISTEN)",
+      "Bash(grep -oE '\"@type\":\"BlogPosting\"|<h1[^>]*>[^<]*|\"headline\":\"[^\"]{1,90}')",
+      "Bash(ps -p 16787 -o command=)",
+      "Bash(lsof -ti:30002)",
+      "Bash(PORT=30002 npm run dev)",
+      "Bash(lsof -iTCP:30002 -sTCP:LISTEN)",
+      "Bash(grep *)",
+      "Bash(node *)",
+      "Bash(awk -F \"'\" '{print length\\($2\\), $0}')"
+    ]
+  }
+}
