@@ -37,7 +37,7 @@ export function CTABand({
       />
       <div
         aria-hidden
-        className="via-navy-950/90 to-navy-950/70 absolute inset-0 bg-gradient-to-br from-navy-950"
+        className="via-black/70 to-black/55 absolute inset-0 bg-gradient-to-br from-navy-950"
       />
       <div aria-hidden className="pattern-grid absolute inset-0 opacity-20" />
       <div

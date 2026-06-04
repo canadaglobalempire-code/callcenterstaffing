@@ -15,7 +15,7 @@ const HERO_STATS = [
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden bg-navy-950 text-white pt-40 pb-0 lg:pt-48">
+    <section className="relative isolate overflow-hidden bg-black text-white pt-40 pb-0 lg:pt-48">
       {/* Background video — full color, no overlay */}
       <video
         aria-hidden
@@ -30,8 +30,8 @@ export function Hero() {
       </video>
 
       {/* Black overlay — darker on the left for text legibility, video shows through on the right */}
-      <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/25" />
-      <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent" />
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/20" />
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
 
       {/* Orange glows — replace blue with warmer accent for depth */}
       <div
@@ -118,11 +118,11 @@ export function Hero() {
         <div className="relative overflow-hidden py-5">
           <div
             aria-hidden
-            className="pointer-events-none absolute left-0 top-0 z-10 h-full w-16 bg-gradient-to-r from-navy-950 to-transparent"
+            className="pointer-events-none absolute left-0 top-0 z-10 h-full w-16 bg-gradient-to-r from-black to-transparent"
           />
           <div
             aria-hidden
-            className="pointer-events-none absolute right-0 top-0 z-10 h-full w-16 bg-gradient-to-l from-navy-950 to-transparent"
+            className="pointer-events-none absolute right-0 top-0 z-10 h-full w-16 bg-gradient-to-l from-black to-transparent"
           />
           <div className="flex w-max animate-marquee items-center">
             {[...HERO_STATS, ...HERO_STATS].map((s, i) => (

@@ -99,7 +99,7 @@ export default function RolePage({ params }: { params: Params }) {
 
   const crumbs = [
     { label: 'Home', href: '/' },
-    { label: 'Roles', href: '/#roles' },
+    { label: 'Roles', href: '/roles' },
     { label: role.shortName, href: `/roles/${role.slug}` },
   ];
 
@@ -123,7 +123,7 @@ export default function RolePage({ params }: { params: Params }) {
       <FAQSchema items={role.faqs} />
 
       {/* HERO — homepage template */}
-      <section className="relative isolate overflow-hidden bg-navy-950 text-white pt-40 pb-20 lg:pt-48 lg:pb-28">
+      <section className="relative isolate overflow-hidden bg-black text-white pt-40 pb-20 lg:pt-48 lg:pb-28">
         <Image
           src={heroImage}
           alt={role.name}
@@ -132,8 +132,8 @@ export default function RolePage({ params }: { params: Params }) {
           sizes="100vw"
           className="object-cover opacity-45"
         />
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/75 to-navy-950/50" />
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/20" />
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/60 to-black/40" />
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/15" />
         <div aria-hidden className="absolute inset-0 pattern-grid opacity-20" />
         <div
           aria-hidden

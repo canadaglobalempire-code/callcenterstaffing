@@ -184,11 +184,11 @@ const CASES: CaseStudy[] = [
   },
 ];
 
-const OVERVIEW_STATS: { value: string; label: string }[] = [
-  { value: '+22 pts', label: '90-day retention vs prior model' },
-  { value: '94%', label: 'cohort completion' },
-  { value: '<72 hrs', label: 'first qualified shortlist' },
-  { value: '200+', label: 'active operators served' },
+const OVERVIEW_STATS: { value: string; label: string; icon: typeof Clock }[] = [
+  { value: '+22 pts', label: '90-day retention vs prior model', icon: TrendingUp },
+  { value: '94%', label: 'cohort completion', icon: Award },
+  { value: '<72 hrs', label: 'first qualified shortlist', icon: Clock },
+  { value: '200+', label: 'active operators served', icon: Users },
 ];
 
 const SCORECARD: { icon: typeof Clock; title: string; report: string; cadence: string }[] = [
@@ -267,11 +267,11 @@ export default function CaseStudiesPage() {
         />
         <div
           aria-hidden
-          className="from-navy-950/95 via-navy-950/75 to-navy-950/50 absolute inset-0 bg-gradient-to-r"
+          className="from-black/75 via-black/60 to-black/40 absolute inset-0 bg-gradient-to-r"
         />
         <div
           aria-hidden
-          className="to-navy-950/20 absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent"
+          className="to-black/15 absolute inset-0 bg-gradient-to-t from-black via-transparent"
         />
         <div aria-hidden className="pattern-grid absolute inset-0 opacity-20" />
         <div
@@ -348,19 +348,28 @@ export default function CaseStudiesPage() {
             </p>
           </div>
 
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {OVERVIEW_STATS.map((s) => (
-              <li
-                key={s.label}
-                className="border-navy-950/8 hover:border-accent-500/40 relative overflow-hidden rounded-3xl border bg-white p-7 transition-all hover:-translate-y-0.5 hover:shadow-md lg:p-8"
-              >
-                <div className="bg-accent-500/40 absolute right-0 top-0 h-px w-12" />
-                <div className="font-display text-[2.75rem] font-extrabold tabular-nums leading-none tracking-[-0.04em] text-navy-950 lg:text-[3.25rem]">
-                  {s.value}
-                </div>
-                <div className="mt-3 text-sm leading-snug text-navy-700">{s.label}</div>
-              </li>
-            ))}
+          <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {OVERVIEW_STATS.map((s) => {
+              const Icon = s.icon;
+              return (
+                <li
+                  key={s.label}
+                  className="group relative flex flex-col overflow-hidden rounded-3xl border border-navy-950/10 bg-white p-7 shadow-sm transition-all hover:border-accent-500/40 hover:-translate-y-0.5 hover:shadow-md lg:p-8"
+                >
+                  <div
+                    aria-hidden
+                    className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent-500 to-accent-500/0"
+                  />
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent-500/10 text-accent-500 transition-colors group-hover:bg-accent-500 group-hover:text-white">
+                    <Icon className="h-5 w-5" strokeWidth={2} />
+                  </span>
+                  <div className="mt-6 font-display text-[2.75rem] font-extrabold tabular-nums leading-none tracking-[-0.04em] text-navy-950 lg:text-[3.25rem]">
+                    {s.value}
+                  </div>
+                  <div className="mt-3 text-sm leading-snug text-navy-700">{s.label}</div>
+                </li>
+              );
+            })}
           </ul>
         </Container>
       </Section>
@@ -395,7 +404,7 @@ export default function CaseStudiesPage() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="from-navy-950/85 via-navy-950/30 absolute inset-0 bg-gradient-to-t to-transparent" />
+                  <div className="from-black/70 via-black/25 absolute inset-0 bg-gradient-to-t to-transparent" />
                   <div className="absolute left-4 top-4">
                     <span className="inline-flex items-center rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-navy-950 backdrop-blur-sm">
                       {c.industry}

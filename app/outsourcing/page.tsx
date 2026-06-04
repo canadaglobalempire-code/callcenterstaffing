@@ -30,9 +30,9 @@ import { site } from '@/lib/site';
 import { alternatesFor } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Call Center Outsourcing & Staffing — In-House, BPO, Hybrid',
+  title: 'Call Center Outsourcing vs In-House | We Staff Both',
   description:
-    'Call center outsourcing companies, in-house staffing, hybrid models. We recruit agents for both. Specialist call center staffing partner since 2003.',
+    'Outsource your call center or keep it in-house — we recruit the agents either way. Honest BPO vs in-house framework. Get a free staffing plan in 1 day.',
   alternates: alternatesFor('/outsourcing'),
   openGraph: {
     title: 'Call Center Outsourcing & Staffing — In-House, BPO, Hybrid',
@@ -231,9 +231,9 @@ export default function OutsourcingPage() {
       <FAQSchema items={FAQS} />
 
       {/* HERO — 7/5 split, dark navy */}
-      <section className="relative isolate overflow-hidden bg-navy-950 text-white pt-40 pb-20 lg:pt-48 lg:pb-28">
+      <section className="relative isolate overflow-hidden bg-black text-white pt-40 pb-20 lg:pt-48 lg:pb-28">
         <Image
-          src="/images/hd-office-team.jpg"
+          src="/images/cc-support-team.jpg"
           alt="Contact center floor"
           fill
           priority
@@ -242,11 +242,11 @@ export default function OutsourcingPage() {
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/75 to-navy-950/50"
+          className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/60 to-black/40"
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/20"
+          className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/15"
         />
         <div aria-hidden className="absolute inset-0 pattern-grid opacity-20" />
         <div

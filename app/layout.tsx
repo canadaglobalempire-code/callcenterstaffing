@@ -55,17 +55,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: site.url,
     languages: {
-      'en-US': site.url,
-      'en-GB': site.url,
-      'en-CA': site.url,
-      'en-AU': site.url,
-      'en-IE': site.url,
-      'en-NZ': site.url,
-      'en-ZA': site.url,
-      'en-IN': site.url,
-      'en-AE': site.url,
-      'en-SG': site.url,
-      'en-PH': site.url,
       'x-default': site.url,
     },
   },

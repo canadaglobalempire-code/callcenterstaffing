@@ -44,7 +44,7 @@ export function Reframe() {
             </p>
             <p className="mt-3 text-[15px] leading-relaxed text-navy-700 max-w-3xl">
               The agents stay on our payroll. You don&apos;t hire, train, or manage HR. Tell us
-              how many you need and what you sell — we deploy a team within 72 hours. Onshore,
+              how many you need and what the work is — we deploy a team within 72 hours. Onshore,
               nearshore, offshore. Pay only for the hours they work.
             </p>
 

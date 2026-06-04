@@ -115,11 +115,11 @@ export default function ServicePage({ params }: { params: Params }) {
         />
         <div
           aria-hidden
-          className="from-navy-950/95 via-navy-950/75 to-navy-950/50 absolute inset-0 bg-gradient-to-r"
+          className="from-black/75 via-black/60 to-black/40 absolute inset-0 bg-gradient-to-r"
         />
         <div
           aria-hidden
-          className="to-navy-950/20 absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent"
+          className="to-black/15 absolute inset-0 bg-gradient-to-t from-black via-transparent"
         />
         <div aria-hidden className="pattern-grid absolute inset-0 opacity-20" />
         <div
@@ -194,7 +194,7 @@ export default function ServicePage({ params }: { params: Params }) {
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover"
                 />
-                <div className="from-navy-950/40 absolute inset-0 bg-gradient-to-t via-transparent to-transparent" />
+                <div className="from-black/30 absolute inset-0 bg-gradient-to-t via-transparent to-transparent" />
                 <div className="ring-navy-950/5 absolute bottom-5 left-5 right-5 rounded-2xl bg-white/95 px-5 py-4 shadow-2xl ring-1 backdrop-blur-sm">
                   <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-accent-500">
                     Specialist recruiters
@@ -404,7 +404,7 @@ export default function ServicePage({ params }: { params: Params }) {
               {relatedLocations.map((loc) => (
                 <li key={loc.slug}>
                   <Link
-                    href={`/locations/${loc.slug}`}
+                    href="/locations"
                     className="border-navy-950/8 hover:border-accent-500/40 group flex h-full items-start gap-5 rounded-3xl border bg-white p-7 transition-all hover:-translate-y-0.5 hover:shadow-md"
                   >
                     <span className="bg-accent-500/10 inline-flex h-12 w-12 flex-none items-center justify-center rounded-xl text-accent-500">

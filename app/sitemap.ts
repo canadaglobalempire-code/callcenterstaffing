@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { LOCATIONS } from '@/lib/content/locations';
+import { REGIONS } from '@/lib/content/regions';
 import { ROLES } from '@/lib/content/roles';
 import { SOLUTIONS } from '@/lib/content/solutions';
 import { SERVICES } from '@/lib/content/services';
@@ -18,16 +18,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${site.url}/case-studies`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.7 },
     { url: `${site.url}/small-business`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.7 },
     { url: `${site.url}/outsourcing`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.7 },
+    { url: `${site.url}/remote-call-center-staffing`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${site.url}/faq`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.6 },
     { url: `${site.url}/contact`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${site.url}/services`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.85 },
     { url: `${site.url}/industries`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.85 },
-    ...LOCATIONS.map((l) => ({
-      url: `${site.url}/locations/${l.slug}`,
+    { url: `${site.url}/solutions`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.85 },
+    { url: `${site.url}/roles`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${site.url}/locations`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 },
+    ...REGIONS.map((r) => ({
+      url: `${site.url}/locations/${r.slug}`,
       lastModified: now,
       changeFrequency: 'monthly' as const,
-      priority: 0.8,
+      priority: 0.7,
     })),
+    { url: `${site.url}/resources`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.75 },
     ...ROLES.map((r) => ({
       url: `${site.url}/roles/${r.slug}`,
       lastModified: now,

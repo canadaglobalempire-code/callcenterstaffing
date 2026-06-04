@@ -146,7 +146,7 @@ export default function FAQPage() {
       <FAQSchema items={ALL_FAQS} />
 
       {/* HERO — single column, centered, matches /services hub voice */}
-      <section className="relative isolate overflow-hidden bg-navy-950 text-white pt-40 pb-20 lg:pt-48 lg:pb-28">
+      <section className="relative isolate overflow-hidden bg-black text-white pt-40 pb-20 lg:pt-48 lg:pb-28">
         <Image
           src="/images/cc-team-meeting.jpg"
           alt="Call Center Staffing FAQ"
@@ -157,11 +157,11 @@ export default function FAQPage() {
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/80 to-navy-950/60"
+          className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/65 to-black/50"
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/20"
+          className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/15"
         />
         <div aria-hidden className="absolute inset-0 pattern-grid opacity-20" />
         <div

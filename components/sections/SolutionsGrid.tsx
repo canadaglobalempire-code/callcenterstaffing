@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowUpRight, TrendingUp, Rocket, CalendarClock, Building2, Users, ShieldCheck } from 'lucide-react';
+import { ArrowUpRight, TrendingUp, Rocket, CalendarClock, Users, ShieldCheck, Sparkles } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
 import { Section } from '@/components/layout/Section';
 import { Eyebrow } from '@/components/ui/Eyebrow';
@@ -8,6 +8,7 @@ import { Heading } from '@/components/ui/Heading';
 
 const SOLUTIONS: {
   slug: string;
+  href?: string;
   icon: typeof TrendingUp;
   title: string;
   desc: string;
@@ -35,13 +36,6 @@ const SOLUTIONS: {
     image: '/images/agents-team-row.jpg',
   },
   {
-    slug: 'bpo-staffing',
-    icon: Building2,
-    title: 'BPO & outsourcer staffing',
-    desc: 'Headcount for outsourcers running multi-client floors with strict quality standards.',
-    image: '/images/cc-support-team.jpg',
-  },
-  {
     slug: 'direct-to-employer',
     icon: Users,
     title: 'Direct-to-employer staffing',
@@ -54,6 +48,14 @@ const SOLUTIONS: {
     title: 'Compliance & licensed roles',
     desc: 'NMLS, state-insurance, HIPAA and PCI-cleared agents — screened to your regulator, not just your scorecard.',
     image: '/images/cc-headset-desk.jpg',
+  },
+  {
+    slug: 'small-business',
+    href: '/small-business',
+    icon: Sparkles,
+    title: 'Small business & startups',
+    desc: '5–50 seat cohorts — the same screening and quality bar, on a lighter, faster engagement.',
+    image: '/images/cc-team-huddle.jpg',
   },
 ];
 
@@ -80,7 +82,7 @@ export function SolutionsGrid() {
             return (
               <li key={s.slug} className="group h-full">
                 <Link
-                  href={`/solutions/${s.slug}`}
+                  href={s.href ?? `/solutions/${s.slug}`}
                   className="relative flex h-full flex-col overflow-hidden rounded-3xl bg-white ring-1 ring-navy-950/5 shadow-sm transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
                 >
                   <div className="relative h-52 overflow-hidden">
@@ -91,7 +93,7 @@ export function SolutionsGrid() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-navy-950/10 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
                     <div className="absolute top-5 left-5">
                       <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/95 backdrop-blur-sm text-accent-500 shadow-lg">
                         <Icon className="h-6 w-6" strokeWidth={2} />

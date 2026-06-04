@@ -42,6 +42,19 @@
     font-family: var(--font-sans), system-ui, sans-serif;
     font-size: 1rem;
     line-height: 1.65;
+    /* Safety net: never allow accidental horizontal scroll on mobile.
+       'clip' (not 'hidden') so the fixed header / position:sticky still work. */
+    overflow-x: clip;
+  }
+
+  /* iOS Safari zooms the page when a focused input is < 16px. Force 16px on
+     phones so focusing a form field never triggers an unwanted zoom. */
+  @media (max-width: 640px) {
+    input,
+    select,
+    textarea {
+      font-size: 16px;
+    }
   }
 
   ::selection {
@@ -75,6 +88,14 @@
     .container-page {
       padding-left: 3rem;
       padding-right: 3rem;
+    }
+  }
+  /* 15"–16" laptops and large desktops (>=1536px): use a little more width
+     so the layout feels intentional rather than sitting in wide gutters.
+     14" and smaller keep the tuned 1280px. */
+  @media (min-width: 1536px) {
+    .container-page {
+      max-width: 1440px;
     }
   }
 

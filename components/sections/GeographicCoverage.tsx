@@ -8,7 +8,7 @@ import { Heading } from '@/components/ui/Heading';
 const REGIONS = [
   {
     label: 'Onshore',
-    href: '/locations/united-states',
+    href: '/locations/north-america',
     seats: '12,000+',
     countries: ['🇺🇸 United States', '🇨🇦 Canada'],
     cities: ['New York', 'Atlanta', 'Dallas', 'Phoenix', 'Vancouver'],
@@ -19,7 +19,7 @@ const REGIONS = [
   },
   {
     label: 'Nearshore',
-    href: '/locations/mexico',
+    href: '/locations/central-america',
     seats: '18,000+',
     countries: ['🇲🇽 Mexico', '🇨🇴 Colombia', '🇨🇷 Costa Rica'],
     cities: ['Guadalajara', 'Mexico City', 'Bogotá', 'San José'],
@@ -30,7 +30,7 @@ const REGIONS = [
   },
   {
     label: 'Offshore',
-    href: '/locations/philippines',
+    href: '/locations/asia',
     seats: '22,000+',
     countries: ['🇵🇭 Philippines', '🇿🇦 South Africa'],
     cities: ['Manila', 'Cebu', 'Davao', 'Cape Town'],
@@ -123,7 +123,7 @@ export function GeographicCoverage() {
                       sizes="(max-width: 1024px) 100vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/70 to-navy-950/20" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/15" />
                     <div className="absolute top-5 left-5">
                       <span className={`inline-flex items-center gap-2 rounded-full ${c.bg} px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-lg`}>
                         {r.label}

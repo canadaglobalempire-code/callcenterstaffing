@@ -111,7 +111,7 @@ export function RolesGrid() {
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     {/* Subtle bottom shading + icon chip — text moves to the panel below */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy-950/30 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
                     <span className="absolute top-4 left-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white text-accent-500 shadow-lg ring-1 ring-navy-950/5">
                       <Icon className="h-5 w-5" strokeWidth={2.25} />
                     </span>

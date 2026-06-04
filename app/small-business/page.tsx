@@ -27,9 +27,9 @@ import { site } from '@/lib/site';
 import { alternatesFor } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Call Center Staffing for Small Business & Startups',
+  title: 'Call Center Staffing for Small Business',
   description:
-    'Call center staffing agency for small business and startups. 5–50 seat cohorts, lighter engagement, same screen and 90-day guarantee. Free written quote in 1 day.',
+    'Call center staffing for small business and startups. Enterprise screen, 5-50 seat cohorts, 90-day guarantee. Free written quote in one business day.',
   alternates: alternatesFor('/small-business'),
   openGraph: {
     title: 'Call Center Staffing for Small Business & Startups',
@@ -174,9 +174,9 @@ export default function SmallBusinessPage() {
       <FAQSchema items={FAQS} />
 
       {/* HERO — 7/5 split, dark navy */}
-      <section className="relative isolate overflow-hidden bg-navy-950 text-white pt-40 pb-20 lg:pt-48 lg:pb-28">
+      <section className="relative isolate overflow-hidden bg-black text-white pt-40 pb-20 lg:pt-48 lg:pb-28">
         <Image
-          src="/images/cc-discussion.jpg"
+          src="/images/call-center-team.jpg"
           alt="A small operator team reviewing a call-center staffing plan"
           fill
           priority
@@ -185,11 +185,11 @@ export default function SmallBusinessPage() {
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/75 to-navy-950/50"
+          className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/60 to-black/40"
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/20"
+          className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/15"
         />
         <div aria-hidden className="absolute inset-0 pattern-grid opacity-20" />
         <div

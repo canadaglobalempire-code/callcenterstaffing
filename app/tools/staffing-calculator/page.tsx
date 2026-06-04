@@ -15,14 +15,14 @@ import { site } from '@/lib/site';
 import { alternatesFor } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Call Center Agent Calculator — How Many Agents Do You Need?',
+  title: 'Call Center Staffing Calculator — Agents & Cost',
   description:
-    'Free interactive tool. Calculate how many call center agents you need based on volume, AHT, service level, attrition. Field-tuned approximation in seconds.',
+    'Free call center staffing calculator. Estimate agents needed and cost per agent by region (onshore, nearshore, offshore) in seconds. No signup. Get a quote.',
   alternates: alternatesFor('/tools/staffing-calculator'),
   openGraph: {
-    title: 'Call Center Agent Calculator — How Many Agents Do You Need?',
+    title: 'Call Center Staffing Calculator — Agents & Cost',
     description:
-      'Free interactive tool. Calculate how many call center agents you need based on volume, AHT, service level, attrition.',
+      'Estimate how many call center agents you need and what they cost per region — onshore, nearshore, offshore. Free, instant, no signup.',
     url: `${site.url}/tools/staffing-calculator`,
     images: [
       {
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Call Center Agent Calculator — How Many Agents Do You Need?',
+    title: 'Call Center Staffing Calculator — Agents & Cost',
     description:
-      'Free interactive tool. Calculate how many call center agents you need based on volume, AHT, service level, attrition.',
+      'Estimate how many call center agents you need and what they cost per region — onshore, nearshore, offshore. Free, instant, no signup.',
   },
 };
 
@@ -85,9 +85,9 @@ export default function StaffingCalculatorPage() {
       <BreadcrumbSchema items={crumbs} />
 
       {/* HERO */}
-      <section className="relative isolate overflow-hidden bg-navy-950 text-white pt-40 pb-20 lg:pt-48 lg:pb-28">
+      <section className="relative isolate overflow-hidden bg-black text-white pt-40 pb-20 lg:pt-48 lg:pb-28">
         <Image
-          src="/images/cc-team-plan.jpg"
+          src="/images/cc-man-laptop.jpg"
           alt=""
           fill
           priority
@@ -96,11 +96,11 @@ export default function StaffingCalculatorPage() {
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/75 to-navy-950/50"
+          className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/60 to-black/40"
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/20"
+          className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/15"
         />
         <div aria-hidden className="absolute inset-0 pattern-grid opacity-20" />
         <div

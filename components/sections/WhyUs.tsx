@@ -43,7 +43,7 @@ export function WhyUs() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/40 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
 
               {/* "20+ years" badge — top-right */}
               <div className="absolute top-5 right-5 rounded-2xl bg-navy-950 text-white px-5 py-4 shadow-2xl ring-1 ring-white/10">

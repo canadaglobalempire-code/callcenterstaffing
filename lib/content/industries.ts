@@ -5,17 +5,16 @@ export const INDUSTRIES: Industry[] = [
     slug: 'healthcare',
     name: 'Healthcare',
     primaryKeyword: 'healthcare call center staffing',
-    metaTitle: 'Healthcare Call Center Staffing — HIPAA, Member Services, Prior Auth',
+    metaTitle: 'Healthcare Call Center Staffing',
     metaDescription:
-      'Healthcare call center staffing for payer member services, provider intake and prior auth. HIPAA-cleared agents, EMR-ready, license-verified at shortlist.',
+      'HIPAA-cleared healthcare call center staffing for member services, prior auth & patient access. License-verified agents on our payroll, live in ~72 hours. Get a quote.',
     hero: {
       eyebrow: 'Industries · Healthcare',
-      headline:
-        'Healthcare call center staffing built for HIPAA, EMR and prior auth.',
+      headline: 'HIPAA-Cleared Agents for Healthcare Member Services, Prior Auth & Patient Access',
       subhead:
         'Member services, provider intake, prior auth, claims and Rx refill — staffed by recruiters who have placed for payers, providers and PBMs since 2003.',
     },
-    intro: `Healthcare call center staffing is the recruiting, screening, and placement of contact-center agents and supervisors for payer member services, provider intake, prior authorization, claims, Rx refill and patient access lines. The work is HIPAA-regulated, EMR-mediated, and built on clinical vocabulary the agent has to speak fluently from call one. We staff onshore for licensed and PHI-touching work, nearshore for bilingual member services, and offshore for non-clinical back-office. Every shortlisted agent has documented HIPAA training current within twelve months, a verified clean OIG/SAM exclusion check, and a recorded role-play on member-PHI verification scored by a senior account manager. Healthcare clients ramp differently from generic CX — open enrollment surges, Medicare AEP, and CMS audit windows all dictate the cohort calendar. We plan against those windows, not a generic recruiting funnel.`,
+    intro: `Need HIPAA-compliant agents for member services, provider intake, prior authorization, claims or Rx refill lines? Call Center Staffing recruits, screens and places trained healthcare contact-center agents who stay on our payroll while you pay only for hours worked. Every shortlisted agent arrives with HIPAA training current within twelve months, a clean OIG/SAM exclusion check, and a recorded PHI-verification role-play scored by a senior healthcare recruiter. We plan cohorts against real healthcare windows — open enrollment, Medicare AEP and CMS audit prep — and can deploy in as little as ~72 hours with a 90-day attrition guarantee.`,
     industryChallenges: [
       {
         title: 'HIPAA training currency',
@@ -85,23 +84,34 @@ export const INDUSTRIES: Industry[] = [
         q: 'Onshore vs. nearshore for healthcare — what do you recommend?',
         a: 'Onshore for clinical triage and PHI-heavy work. Nearshore (Mexico) for bilingual Spanish member services where CT/ET overlap matters. We rarely recommend offshore for direct member contact in healthcare, though offshore back-office for claims data entry and provider directory maintenance works well.',
       },
+      {
+        q: 'Are your healthcare call center agents HIPAA compliant?',
+        a: 'Yes. Every shortlisted agent has documented HIPAA training current within the last twelve months (we verify the issuing platform, not a self-attestation), a clean OIG/SAM exclusion check, and a recorded PHI-verification role-play scored by a senior healthcare recruiter before they reach your interview loop.',
+      },
+      {
+        q: 'Do the healthcare agents work on your payroll or ours?',
+        a: 'Agents stay on Call Center Staffing\'s payroll, so you carry no HR, benefits or training burden. You pay only for hours worked, on a month-to-month basis, and can swap any agent for free if the fit isn\'t right — backed by our 90-day attrition guarantee.',
+      },
+      {
+        q: 'How quickly can you deploy healthcare call center agents?',
+        a: 'For 10-25 HIPAA-cleared seats we typically place in 14-21 days, and small backfills can go live in as little as ~72 hours. Open-enrollment and Medicare AEP cohorts of 50-150 seats run in waves and benefit from 60+ days of pre-build aligned to your training calendar.',
+      },
     ],
   },
   {
     slug: 'financial-services',
     name: 'Financial Services',
     primaryKeyword: 'financial services call center staffing',
-    metaTitle: 'Financial Services Call Center Staffing — NMLS, Reg E, Collections',
+    metaTitle: 'Financial Services Call Center Staffing | NMLS, FCRA',
     metaDescription:
-      'Financial services call center staffing for mortgage, deposits, collections and KYC. NMLS license currency verified at shortlist. Reg E, FCRA, GLBA-aware.',
+      'Financial services call center staffing for banks, lenders & fintechs. NMLS-verified, FCRA & Reg E-trained agents on our payroll. Get a shortlist in 72 hours.',
     hero: {
       eyebrow: 'Industries · Financial Services',
-      headline:
-        'Financial services call center staffing tuned to NMLS and Reg E.',
+      headline: 'Staff Your Financial Services Contact Center With Verified, Compliant Agents',
       subhead:
         'Mortgage origination, deposits, collections, KYC and dispute resolution — staffed by recruiters who carry an active NMLS-licensed pipeline and screen against the regulator, not just your scorecard.',
     },
-    intro: `Financial services call center staffing is the recruiting and placement of contact-center agents, licensed mortgage originators, collectors and dispute analysts for banks, credit unions, lenders, fintechs and processors. The work is regulated end-to-end — NMLS license currency for mortgage, FCRA for collections and credit disputes, Reg E for ACH and debit-card disputes, Reg Z for lending disclosures, and GLBA for every customer-data interaction. Generalist staffing firms place to a "licensed agent" requisition and hope the license is current; the firms that win regulated bank work verify NMLS status, state endorsements and CRD records before the candidate hits the shortlist. We carry active pipelines of NMLS-licensed loan officers, FCRA-trained collectors and KYC-experienced agents across onshore US, Mexico and the Philippines. Every cohort completes a regulator-specific compliance refresher before going live, and disclosure-handling competence is screened in a recorded role-play scored by a senior account manager who has run a regulated lending floor.`,
+    intro: `Hiring agents for a regulated financial services contact center means a lapsed NMLS license, a missed Mini-Miranda, or a blown Reg E timer can each turn into a CFPB exposure. We supply NMLS-verified loan officers, FCRA-trained collectors, and KYC/BSA analysts for banks, credit unions, lenders, fintechs, and processors worldwide — every agent on our payroll, billed only for hours worked, and verified against the regulator before they reach your shortlist. You skip the HR, licensing, and training burden; we cover the 90-day attrition guarantee and swap any agent free. Tell us your state footprint and we will return a shortlist with NMLS status, state endorsements, and CRD records confirmed.`,
     industryChallenges: [
       {
         title: 'NMLS license currency at shortlist',
@@ -167,23 +177,34 @@ export const INDUSTRIES: Industry[] = [
         q: 'Do you place KYC and BSA analysts?',
         a: 'Yes. KYC analysts, sanctions screening reviewers and BSA case investigators are placed primarily onshore and from our Manila offshore pipeline. Every candidate is screened for sanctions screening tooling experience and case documentation discipline.',
       },
+      {
+        q: 'Do the financial services agents work on your payroll or ours?',
+        a: 'Every agent stays on our payroll. You pay only for hours worked, with no HR, benefits, licensing-maintenance, or training overhead — and you can swap any agent free, backed by our 90-day attrition guarantee.',
+      },
+      {
+        q: 'How fast can you staff a regulated banking or lending contact center?',
+        a: 'We return a verified shortlist in about 72 hours and average under 21 days to a live, NMLS-verified cohort. We pull NMLS Consumer Access and confirm state endorsements against your origination footprint before any candidate is submitted.',
+      },
+      {
+        q: 'Can you supply bilingual Spanish agents for financial services?',
+        a: 'Yes. Bilingual Spanish member services and collections run primarily out of our Mexico nearshore delivery for CT/ET overlap, with onshore US available for PII-heavy lending and KYC/BSA work staffed from our Manila pipeline.',
+      },
     ],
   },
   {
     slug: 'insurance',
     name: 'Insurance',
     primaryKeyword: 'insurance call center staffing',
-    metaTitle: 'Insurance Call Center Staffing — Licensed P&C, Life, Health, FNOL',
+    metaTitle: 'Insurance Call Center Staffing | Licensed P&C, Life, FNOL',
     metaDescription:
-      'Insurance call center staffing for licensed P&C, life and health agents plus FNOL claims intake. State license verified at shortlist. TCPA-compliant outreach.',
+      'Insurance call center staffing for licensed P&C, life and health agents plus FNOL claims intake. State license verified at shortlist. Get a staffing quote.',
     hero: {
       eyebrow: 'Industries · Insurance',
-      headline:
-        'Insurance call center staffing for licensed agents and FNOL.',
+      headline: 'Staff Your Insurance Contact Center With Licensed Agents and FNOL Reps',
       subhead:
         'State-licensed life, health and P&C agents, FNOL intake and claims dispatch — staffed by recruiters who carry an active multi-state licensed pipeline and verify currency at shortlist.',
     },
-    intro: `Insurance call center staffing is the recruiting and placement of state-licensed insurance agents, FNOL intake reps, claims dispatchers, adjuster support and member-services staff for carriers, MGAs, brokers and insurtech operators. State license currency, line-of-authority match (life, health, P&C), and TCPA-compliant outbound discipline are non-negotiable — a placed agent without the right state appointment cannot legally quote, bind or service the policy. We carry active pipelines of licensed agents across all 50 states with line-of-authority detail captured in our database, plus FNOL-experienced intake reps trained on the major carrier intake systems. FNOL intake is its own discipline: empathy under stress, claim-number generation discipline, photo-and-document collection on the first call, and accurate first-pass coverage triage. We staff onshore for licensed and complex-claims work, nearshore for bilingual P&C and FNOL, offshore for non-licensed claims back-office and policy administration.`,
+    intro: `Call Center Staffing places state-licensed insurance agents, FNOL claims-intake reps, claims dispatchers and member-services staff on our payroll, so carriers, MGAs, brokers and insurtechs add capacity without the licensing and HR burden. Every shortlisted agent's state license currency and line-of-authority (life, health, P&C) are verified before you interview, and outbound candidates are screened for TCPA discipline on a recorded scenario. You pay only for hours worked, swap any agent free, and ramp multi-state licensed cohorts in roughly 25 days. Onshore for licensed and complex-claims work, nearshore Spanish-bilingual for P&C and FNOL, offshore for non-licensed back-office.`,
     industryChallenges: [
       {
         title: 'Multi-state license currency',
@@ -249,23 +270,34 @@ export const INDUSTRIES: Industry[] = [
         q: 'How do you screen for TCPA discipline on outbound?',
         a: 'Every outbound licensed candidate completes a recorded TCPA scenario — consent verification, DNC check, call-recording disclosure and prior-express-written-consent confirmation. Audio is shared with your compliance team before the candidate hits your loop.',
       },
+      {
+        q: 'How much does insurance call center staffing cost?',
+        a: 'You pay a single blended hourly rate per agent for hours worked only — no recruiting fees, no benefits administration, no severance. Rates vary by line of authority and delivery location (onshore licensed agents cost more than offshore policy-admin staff). Engagements are month-to-month, and we share a written rate card per role in your quote.',
+      },
+      {
+        q: 'Are your insurance agents your employees or ours?',
+        a: 'Every agent stays on our payroll. We handle hiring, licensing verification, training, benefits and HR compliance, so you get production capacity without adding headcount or carrying the licensing and CE-tracking burden. You direct the work; we own the employment.',
+      },
+      {
+        q: 'How quickly can you staff licensed insurance agents?',
+        a: 'Licensed multi-state cohorts average under 25 days to ramp, and we keep a quarterly FNOL bench refresh for 72-hour CAT-event stand-up. A first cohort is typically live in two to three weeks with full state-appointment and line-of-authority match verified at shortlist.',
+      },
     ],
   },
   {
     slug: 'ecommerce-retail',
     name: 'eCommerce & Retail',
     primaryKeyword: 'ecommerce customer service outsourcing',
-    metaTitle: 'eCommerce Customer Service Outsourcing — Returns, CSAT, Q4 Surge',
+    metaTitle: 'eCommerce Customer Service Outsourcing',
     metaDescription:
-      'eCommerce customer service outsourcing and retail call center staffing. PCI-cleared agents for payments. Q4 surge bench pre-built in July. CSAT-tuned screening.',
+      'eCommerce customer service outsourcing done as staffing: trained agents on our payroll, pay per hour, Q4 surge bench pre-built. Get a free plan in 1 day.',
     hero: {
       eyebrow: 'Industries · eCommerce & Retail',
-      headline:
-        'eCommerce customer service outsourcing built for CSAT and Q4.',
+      headline: 'Ecommerce & retail customer service agents, staffed on our payroll',
       subhead:
         'Order management, returns, refunds, loyalty and PCI-cleared payments — staffed by recruiters who pre-build the Q4 bench in July and demobilize cleanly in February.',
     },
-    intro: `eCommerce customer service outsourcing — and broader retail call center staffing including warehouse-adjacent fulfillment support — is the recruiting and placement of contact-center agents, returns specialists, fulfillment-coordination reps and loyalty-program reps for direct-to-consumer brands, marketplace sellers, warehouse-direct retailers and omnichannel operators. The work is CSAT-driven, PCI-regulated wherever payments are touched, and brutally seasonal — Q4 retail volume can run 4–6x baseline, and the brands that win Q4 are the ones whose staffing partner started building the bench in July. We staff order management, returns and refunds, warehouse-coordination CX (delivery exceptions, fulfillment status, claims), loyalty and rewards, escalations, social-channel CX and PCI-cleared payment troubleshooting across onshore, nearshore and offshore. Every shortlisted agent for payment-touching work has documented PCI awareness training; CSAT-driving soft skills are screened on a recorded customer-recovery scenario, not a generic skills test. For brands serving California consumers we screen for CCPA awareness and verified-deletion-request literacy. Cohort calendars are aligned to your retail peak — Black Friday, Cyber Monday, post-holiday returns surge — with planned demobilization that retains top performers for next season.`,
+    intro: `Looking for ecommerce customer service outsourcing without handing your brand voice to a black-box call center? We staff trained order-management, returns, refunds, loyalty and PCI-cleared payment agents who work your queues, your tools and your tone — but stay on our payroll, so there is no HR, training or attrition burden on you. You pay only for hours worked, scale up for Black Friday and Cyber Monday peaks we start sourcing in July, and swap any agent free if the fit is off. Onshore, nearshore (Mexico) and offshore (Philippines) delivery, deployed in roughly 72 hours and month-to-month.`,
     industryChallenges: [
       {
         title: 'Q4 surge starts in July',
@@ -331,23 +363,34 @@ export const INDUSTRIES: Industry[] = [
         q: 'Do you cover chat, email and social alongside voice?',
         a: 'Yes — most of our retail CX placements are multi-channel. Candidates are screened on a chat + voice context-switch scenario and we share their writing samples with your team before submission.',
       },
+      {
+        q: 'What does ecommerce customer service outsourcing cost with a staffing model?',
+        a: 'You pay only for hours worked at a per-hour rate — no recruiting fees, no training overhead, no benefits administration, because agents stay on our payroll. Most ecommerce and retail brands run month-to-month and scale hours up for Q4 peak and back down in February, so you are not carrying off-season headcount you do not need.',
+      },
+      {
+        q: 'How quickly can you staff seasonal ecommerce support agents for Black Friday and Q4?',
+        a: 'We start sourcing peak cohorts in July and can deploy a vetted, brand-trained team in roughly 72 hours once a plan is signed. Brands that engage by mid-summer land fully-screened cohorts on day one of training; later starts are possible but candidate quality and cohort completion drop the closer you get to October.',
+      },
+      {
+        q: 'Are your agents PCI-compliant for payment and checkout troubleshooting?',
+        a: 'Yes. Every payment-touching agent has documented PCI awareness training and passes a recorded call-control scenario at shortlist where they must refuse to repeat a card number aloud. For brands serving California consumers we also screen for CCPA awareness and verified deletion-request handling.',
+      },
     ],
   },
   {
     slug: 'telecom-media',
     name: 'Telecom & Media',
     primaryKeyword: 'telecom call center staffing',
-    metaTitle: 'Telecom Call Center Staffing — Tier 1, Tier 2, CPNI, Sales',
+    metaTitle: 'Telecom Call Center Staffing | Tier 1/2 & CPNI',
     metaDescription:
-      'Telecom call center staffing for tier 1/tier 2 tech support, billing and CPNI-aware sales. Bilingual Spanish bench in Mexico. TCPA-compliant outbound discipline.',
+      'Hire tier 1/2 telecom support, billing, retention and CPNI-trained sales agents. Bilingual Spanish bench, TCPA discipline, deploy in ~72 hours. Get agents.',
     hero: {
       eyebrow: 'Industries · Telecom & Media',
-      headline:
-        'Telecom call center staffing for tier 1, tier 2 and CPNI sales.',
+      headline: 'Hire Telecom & Media Call Center Agents — Tier 1, Tier 2 & CPNI Sales',
       subhead:
         'Tier 1 troubleshooting, tier 2 escalations, billing, retention, CPNI-aware sales and field-dispatch coordination — staffed by recruiters with deep MSO and MVNO history.',
     },
-    intro: `Telecom call center staffing is the recruiting and placement of tier 1 and tier 2 technical support agents, billing reps, retention specialists, CPNI-trained sales agents, and field-dispatch coordinators for MSOs, MVNOs, fiber providers, satellite operators and streaming-media platforms. The work is technically dense — agents have to navigate provisioning systems, modem diagnostics, bill-print logic and OSS/BSS portals while holding a customer through a service outage. CPNI handling on every account-modifying call is non-negotiable, and TCPA exposure on outbound retention dialing is one of the largest unmanaged staffing risks in the industry. We staff tier 1 troubleshooting from the Philippines and Mexico, tier 2 escalations onshore for English and from Mexico for bilingual, retention onshore and nearshore for outbound discipline, and CPNI-trained sales onshore. Bilingual Spanish technical support runs out of Mexico — Guadalajara and Tijuana — for live CT/ET overlap. Every agent on a CPNI-touching workflow completes documented CPNI training before taking a live call.`,
+    intro: `Need trained telecom support agents without the hiring and compliance burden? Call Center Staffing supplies tier 1 and tier 2 tech support, billing, retention and CPNI-trained sales agents to MSOs, MVNOs, fiber, satellite and streaming providers — staffed by recruiters with deep telecom history. Agents are screened on real modem-diagnostic and CPNI authentication scenarios before they reach your floor, stay on our payroll, and you pay only for hours worked. Bilingual Spanish technical support runs from Guadalajara and Tijuana with live US time-zone overlap, and every CPNI- or TCPA-touching cohort is trained before going live.`,
     industryChallenges: [
       {
         title: 'Modem & provisioning system fluency',
@@ -413,23 +456,34 @@ export const INDUSTRIES: Industry[] = [
         q: 'Can you ramp a retention cohort with TCPA discipline guaranteed?',
         a: 'Yes. Every outbound retention candidate completes a recorded TCPA scenario at screen, and every cohort gets a TCPA refresher before going live. We coordinate the consent-database and DNC-scrub workflow with your compliance team during onboarding.',
       },
+      {
+        q: 'How fast can you deploy telecom call center agents?',
+        a: 'We typically place screened tier 1 telecom agents on your floor in about 72 hours, and ramp larger cohorts in stages — our Coastline Connect engagement had 40 tier 1 agents live in 28 days and a full 165-seat bilingual ramp live by day 75.',
+      },
+      {
+        q: 'Do telecom agents stay on your payroll or ours?',
+        a: 'Agents stay on our payroll. You carry no hiring, HR, training or termination burden — you pay only for hours worked, on a month-to-month basis, and can swap any agent free under our 90-day attrition guarantee.',
+      },
+      {
+        q: 'Can you staff onshore, nearshore and offshore telecom support?',
+        a: 'Yes. We staff tier 1 from the Philippines and Mexico, tier 2 and CPNI sales onshore, and bilingual Spanish technical support from Guadalajara and Tijuana with live US time-zone overlap — so buyers in the US, UK, Canada and Australia can match delivery to cost and language needs.',
+      },
     ],
   },
   {
     slug: 'travel-hospitality',
     name: 'Travel & Hospitality',
-    primaryKeyword: 'travel customer service outsourcing',
-    metaTitle: 'Travel Customer Service Outsourcing — 24/7 Multi-Lingual, GDS, OTA',
+    primaryKeyword: 'travel call center staffing',
+    metaTitle: 'Travel Call Center Staffing',
     metaDescription:
-      'Travel customer service outsourcing for OTAs, airlines, hotels and cruise. GDS-fluent agents, 24/7 multi-language coverage, irrops-ready scenario screening.',
+      'Travel & hospitality call center staffing: GDS-trained, 24/7 multilingual agents for OTAs, airlines, hotels and cruise. Live in ~72 hours. Book a staffing call.',
     hero: {
       eyebrow: 'Industries · Travel & Hospitality',
-      headline:
-        'Travel customer service outsourcing for 24/7 and irrops.',
+      headline: 'Travel & Hospitality Call Center Staffing for 24/7 Multilingual Support',
       subhead:
         'OTAs, airlines, hotels, cruise and tour — staffed for GDS fluency, irrops handling and 24/7 multi-language coverage with Manila and Mexico anchoring the night-side.',
     },
-    intro: `Travel customer service outsourcing is the recruiting and placement of contact-center agents and supervisors for OTAs, airlines, hotels, cruise lines, tour operators and DMC platforms. The work is 24/7 by definition, multi-language by necessity, and dominated by irregular operations — cancellations, rebookings, weather disruptions, missed connections and overbooking — where agent calm and process discipline determine the customer outcome. GDS fluency (Sabre, Amadeus, Galileo) and PNR-handling discipline are screened directly, not assumed from a resume line item. For OTAs and airline call centers we run scenario-based screens on irrops handling — schedule changes, denied boarding, weather waiver application and flight-credit reissuance. For hotel and cruise we screen on PMS and reservation-system fluency plus loyalty-program literacy. Manila anchors our night-side English coverage with strong tenure and hospitality cultural fluency; Mexico anchors bilingual Spanish-English daytime; onshore handles complex escalations and high-value loyalty members. For brands serving European travelers we screen for GDPR awareness and verified-DSAR handling.`,
+    intro: `Travel call center staffing means recruiting, screening and placing trained customer-service agents and supervisors for OTAs, airlines, hotels, cruise lines and tour operators — agents who stay on our payroll while you pay only for hours worked. The work is 24/7 and multilingual by default, and dominated by irregular operations: cancellations, rebookings, weather waivers and overbooking, where agent calm and PNR accuracy decide the outcome. We screen GDS fluency (Sabre, Amadeus, Galileo) and irrops handling on timed, recorded scenarios — never assumed from a resume — and anchor night-side English in Manila with bilingual Spanish daytime from Mexico. With our 90-day attrition guarantee, free agent swaps and ~72-hour deploy, you scale travel CX up for peak season and down across shoulder months without carrying the hiring risk.`,
     industryChallenges: [
       {
         title: 'Irrops empathy + process discipline',
@@ -495,23 +549,34 @@ export const INDUSTRIES: Industry[] = [
         q: 'Do you cover GDPR for European traveler-facing work?',
         a: 'Yes. Every European-facing candidate completes a GDPR awareness screen and a verified-DSAR-handling scenario. We coordinate refresher delivery with your privacy team before the cohort goes live.',
       },
+      {
+        q: 'What does travel call center staffing cost?',
+        a: 'You pay per hour worked, month-to-month — no recruiting fees, no training overhead and no HR burden, because agents stay on our payroll while working your queues. That makes it straightforward to scale travel CX up for summer or holiday peak and back down across shoulder seasons without carrying full-time headcount year round.',
+      },
+      {
+        q: 'How fast can you stand up a travel customer service team?',
+        a: 'We deploy trained, GDS-screened agents in about 72 hours from a bench refreshed against your historical peak and irrops volume. A full multi-language program (night-side English plus bilingual daytime) typically reaches first cohort live within roughly 35 days and full scale by day 90, as in our Wayfinder Travel engagement.',
+      },
+      {
+        q: 'Can you screen agents for GDS and PNR handling before they reach my floor?',
+        a: 'Yes. Every GDS-touching candidate completes a timed PNR-handling scenario in your platform — Sabre, Amadeus or Galileo — plus a recorded irrops scenario (rebooking a denied-boarding family on a tight connection) scored for empathy, PNR accuracy and recovery-credit application. We share the recordings with your training lead, and any agent who underperforms can be swapped free.',
+      },
     ],
   },
   {
     slug: 'saas',
     name: 'SaaS & Tech',
-    primaryKeyword: 'saas customer support staffing',
-    metaTitle: 'SaaS Customer Support Staffing — Technical Tier 1/2, SOC 2, GDPR',
+    primaryKeyword: 'saas customer support outsourcing',
+    metaTitle: 'SaaS Customer Support Outsourcing',
     metaDescription:
-      'SaaS customer support staffing for tier 1, tier 2 technical, customer success ops and onboarding. SOC 2-aware, GDPR-aware. API and product-depth screening.',
+      'Staff SaaS tier 1/2 technical support, CS ops and onboarding with product-screened agents. SOC 2 & GDPR-aware, deploy in ~72 hrs. Get matched agents.',
     hero: {
       eyebrow: 'Industries · SaaS & Tech',
-      headline:
-        'SaaS customer support staffing with real product depth.',
+      headline: 'SaaS & Tech Customer Support Agents, Screened for Product Depth',
       subhead:
         'Tier 1 and tier 2 technical support, onboarding, customer success ops and trust-and-safety — screened for actual product literacy, API fluency and SOC 2 / GDPR awareness.',
     },
-    intro: `SaaS customer support staffing is the recruiting and placement of technical support agents, customer success operations associates, onboarding specialists, trust-and-safety reviewers, and tier 2 escalation engineers for B2B SaaS, B2C consumer software, infrastructure and developer-tools companies. The defining staffing challenge in SaaS is product depth — generic CX agents will close tickets but will not actually resolve them, and the resulting backlog crushes both NPS and engineering capacity. We screen tier 1 candidates on documented experience with API basics, log-reading literacy and ticket-system fluency (Zendesk, Intercom, Front, HelpScout). Tier 2 candidates are screened on debugging scenarios in your stack — webhook payload inspection, OAuth troubleshooting, rate-limit math. SOC 2 awareness is non-negotiable for any agent with production system access; GDPR-aware for any product serving European customers. We staff tier 1 from the Philippines and Mexico, tier 2 onshore and select Mexico, and trust-and-safety in markets matched to your content language mix.`,
+    intro: `Hire SaaS customer support agents who actually resolve tickets instead of just closing them. We recruit and place tier 1 and tier 2 technical support, customer success operations, onboarding specialists and trust-and-safety reviewers for B2B and B2C software companies worldwide — screened for real product literacy, API fluency and SOC 2 / GDPR awareness. Agents stay on our payroll, you pay only for hours worked, swap anyone free, and your first product-screened cohort can be live in roughly 72 hours. Since 2003 we've trained 100,000+ agents, with onshore, nearshore and offshore delivery matched to your stack and channel mix.`,
     industryChallenges: [
       {
         title: 'Product depth on day one',
@@ -577,23 +642,34 @@ export const INDUSTRIES: Industry[] = [
         q: 'Do you staff trust-and-safety reviewers?',
         a: 'Yes. Trust-and-safety candidates are screened on policy-application scenarios using your moderation guidelines. Language-matched recruiting from Philippines and Mexico, plus onshore for English-only escalation review.',
       },
+      {
+        q: 'Should I outsource SaaS customer support or hire in-house?',
+        a: 'You don\'t have to choose. We place trained tier 1/2, CS ops and onboarding agents who work as an extension of your team but stay on our payroll — so you skip the HR, recruiting and training burden, pay only for hours worked, and can scale up or down month-to-month. Most SaaS teams use us to clear backlog or cover growth without committing to permanent headcount.',
+      },
+      {
+        q: 'How quickly can you staff a SaaS support team?',
+        a: 'A first product-screened cohort can be live in roughly 72 hours for standard tier 1, and within about 30 days for a full multi-tier ramp. In one developer-tools engagement, 18 product-screened tier 1 agents went live in 26 days and cleared a 14-day ticket backlog in 11 days post-go-live.',
+      },
+      {
+        q: 'Are your SaaS support agents SOC 2 and GDPR aware?',
+        a: 'Yes. Any agent with production system access is briefed on SOC 2 access provisioning, audit-logging discipline and offboarding timing, coordinated with your security team from day one of training. European-customer-facing roles add GDPR awareness and DSAR-handling screening.',
+      },
     ],
   },
   {
     slug: 'utilities',
     name: 'Utilities & Energy',
     primaryKeyword: 'utilities call center staffing',
-    metaTitle: 'Utilities Call Center Staffing — Billing, Outage, Disconnection, PUC',
+    metaTitle: 'Utilities Call Center Staffing',
     metaDescription:
-      'Utilities call center staffing for billing, outage, disconnection and assistance programs. State PUC-aware, LIHEAP-trained, storm surge bench pre-built.',
+      'Utilities call center staffing for billing, outage, disconnection & assistance programs. PUC-aware, LIHEAP-trained agents on our payroll. Get a staffing plan.',
     hero: {
       eyebrow: 'Industries · Utilities & Energy',
-      headline:
-        'Utilities call center staffing for outage, billing and PUC.',
+      headline: 'Staff Your Utility Contact Center With PUC-Trained Agents',
       subhead:
         'Billing, outage reporting, disconnection-and-arrears handling, assistance programs and storm-surge response — staffed by recruiters who know state PUC rules and LIHEAP intake protocols.',
     },
-    intro: `Utilities call center staffing is the recruiting and placement of contact-center agents, supervisors and outage-response coordinators for electric, gas, water and sewer utilities, plus competitive retail energy providers and natural-gas marketers. The work is regulated by state public utility commissions (PUCs) with strict billing-accuracy, disconnection-process and assistance-program standards. Mishandling an arrears call, miscalculating a deferred-payment plan, or skipping a LIHEAP eligibility prompt creates direct PUC complaint exposure. We staff billing, outage reporting, move-in/move-out, disconnection-and-arrears, assistance-program intake, and storm-surge response across onshore (for PUC-regulated complex calls) and Mexico (for bilingual Spanish billing and assistance work). Storm-surge response — hurricanes, ice storms, wildfire-driven public safety power shutoffs — requires a pre-built bench available for 72-hour stand-up. Every cohort completes state-PUC-specific tariff rule training and assistance-program eligibility briefing before going live.`,
+    intro: `Utilities call center staffing puts trained billing, outage and assistance-program agents into your contact center without the hiring and PUC-training burden falling on your team. We recruit, screen and place agents on our payroll for electric, gas, water and competitive energy providers — and you pay only for hours worked, swap any agent free, and keep a 72-hour storm-surge bench on retainer. Every cohort is screened against state PUC tariff scenarios and briefed on LIHEAP and weatherization eligibility before live volume, so an arrears or disconnection call never becomes a complaint to the commission. Bilingual Spanish coverage for assistance intake is built in, not bolted on.`,
     industryChallenges: [
       {
         title: 'State PUC tariff complexity',
@@ -659,23 +735,34 @@ export const INDUSTRIES: Industry[] = [
         q: 'Do you place outage-dispatch and field-coordinator roles?',
         a: 'Yes. Outage-dispatch and field-coordinator support are placed primarily onshore for shift-overlap with line crews and OMS access reasons. We screen for map-tool fluency, dispatch-coordination process and storm-protocol literacy.',
       },
+      {
+        q: 'How fast can you staff a utility call center?',
+        a: 'A first cohort typically goes live in about 72 hours for surge work and within three to four weeks for fully tariff-trained billing and disconnection agents. The Heartland Power engagement had 35 agents live in 27 days with verified state-tariff training, and storm-surge seats stand up inside 72 hours on a pre-built retainer bench.',
+      },
+      {
+        q: 'Are the utility agents on your payroll or ours?',
+        a: 'Agents stay on our payroll. You direct the work and pay only for hours worked — no hiring, benefits, severance or HR overhead. You can swap any agent free, and our 90-day attrition guarantee means replacements are covered if someone leaves early.',
+      },
+      {
+        q: 'Can you scale utility staffing for storm season and PSPS events?',
+        a: 'Yes. We keep a quarterly-refreshed bench of utility-trained agents on retainer sized to your historical event volume and PSPS calendar. Declared events trigger a 72-hour stand-up, and surging 80 to 150 incremental seats within two weeks is realistic with named cohort owners standing by.',
+      },
     ],
   },
   {
     slug: 'logistics',
     name: 'Logistics & Transportation',
-    primaryKeyword: 'logistics customer service staffing',
-    metaTitle: 'Logistics Customer Service Staffing — Track-and-Trace, ETA, Claims',
+    primaryKeyword: 'logistics call center staffing',
+    metaTitle: 'Logistics Call Center Staffing',
     metaDescription:
-      'Logistics customer service staffing for track-and-trace, ETA accuracy, claims intake and dispatch support. TMS-fluent agents, peak-season bench, multi-language.',
+      'Logistics call center staffing for track-and-trace, ETA, claims and dispatch. TMS-fluent agents on our payroll, peak-season bench, deployed in ~72 hours. Get a quote.',
     hero: {
       eyebrow: 'Industries · Logistics & Transportation',
-      headline:
-        'Logistics customer service staffing for track-and-trace and claims.',
+      headline: 'Logistics call center staffing for track-and-trace, ETA and claims',
       subhead:
         'Track-and-trace, ETA management, exceptions, claims intake and dispatch support — staffed by recruiters who screen for real TMS fluency and peak-season cohort discipline.',
     },
-    intro: `Logistics customer service staffing is the recruiting and placement of contact-center agents and dispatch-support coordinators for parcel carriers, LTL and TL freight operators, last-mile delivery networks, freight forwarders and 3PLs. The work is dominated by track-and-trace, ETA accuracy, exception handling (delays, lost shipments, address corrections), claims intake and dispatch coordination. Generic CX agents close tickets without resolving exceptions; logistics-trained agents read TMS status codes, interpret tracking event sequences and route exceptions through the right operations queue. We screen for direct experience with TMS platforms (MercuryGate, Oracle TMS, McLeod, BluJay), parcel APIs and dispatch tooling. Peak-season planning — Q4 parcel surge, produce-season for refrigerated carriers, peak-shipping windows for retailers — is where logistics CX programs win or lose. We pre-build bench against your historical peak volume, not against an abstract recruiting funnel. Bilingual Spanish coverage for cross-border freight runs from Mexico; English peak coverage runs from Mexico and the Philippines.`,
+    intro: `Logistics call center staffing puts trained, TMS-fluent agents on your floor for track-and-trace, ETA management, exception handling, claims intake and dispatch support — without the HR, recruiting or training burden landing on your team. We recruit and screen for real platform fluency (MercuryGate, Oracle TMS, McLeod, BluJay) and parcel-API experience, then place agents who stay on our payroll while you pay only for hours worked. Peak-season planning is where logistics CX wins or loses, so we pre-build bench against your historical Q4 surge — not an abstract recruiting funnel — and can deploy in as little as 72 hours. Onshore, nearshore (Monterrey, Guadalajara) and offshore (Manila) delivery, with bilingual Spanish coverage for cross-border freight.`,
     industryChallenges: [
       {
         title: 'TMS and tracking-event fluency',
@@ -741,23 +828,34 @@ export const INDUSTRIES: Industry[] = [
         q: 'Do you place dispatch and operations support roles?',
         a: 'Yes. Dispatch-support coordinators and operations-team support are placed primarily onshore and from Manila for overnight coverage. We screen for shift-pattern fit, TMS fluency and operations-team communication discipline.',
       },
+      {
+        q: 'How quickly can you staff a logistics call center?',
+        a: 'For standard track-and-trace and dispatch-support roles we can deploy trained agents in as little as 72 hours, with the first cohort typically live within 30 days of plan sign-off. For Q4 parcel surge we start pipeline build in July and run cohort waves of 25-50 through September and October so peak coverage is live and ramped before volume hits.',
+      },
+      {
+        q: 'Do the logistics agents work for us or for you?',
+        a: 'The agents stay on our payroll — we handle recruiting, screening, HR and the employment burden, and you pay only for hours worked. You direct the work day to day; we cover attrition with a 90-day guarantee and let you swap any agent free if a fit is wrong. Engagements are month-to-month, so you scale up for peak and back down without long-term commitments.',
+      },
+      {
+        q: 'Can you provide bilingual Spanish agents for cross-border freight?',
+        a: 'Yes. We recruit bilingual Spanish track-and-trace and dispatch-support agents from Monterrey and Guadalajara, where there is genuine logistics-vertical depth — customs-coordination terminology, cross-border documentation literacy and US-time-zone overlap with your dispatch teams.',
+      },
     ],
   },
   {
     slug: 'government-public',
     name: 'Government & Public Sector',
     primaryKeyword: 'government call center staffing',
-    metaTitle: 'Government Call Center Staffing — Citizen Services, ADA, FedRAMP',
+    metaTitle: 'Government Call Center Staffing',
     metaDescription:
-      'Government call center staffing for citizen services, benefits intake, DMV, 311 and program enrollment. ADA Section 508-aware, FedRAMP-aware, security-clearable.',
+      'Government call center staffing for citizen services, benefits intake, DMV & 311. US-based, ADA 508-aware, clearable, LEP-covered agents. Deploy in ~72 hrs.',
     hero: {
       eyebrow: 'Industries · Government & Public Sector',
-      headline:
-        'Government call center staffing for citizen services and benefits.',
+      headline: 'Government & Public Sector Call Center Staffing',
       subhead:
         'Citizen services, benefits intake, DMV, 311, program enrollment and unemployment — staffed by recruiters who understand ADA Section 508, FedRAMP-aware tooling and security-clearable talent.',
     },
-    intro: `Government call center staffing is the recruiting and placement of contact-center agents, supervisors and program-support staff for federal, state, county and municipal government clients, plus the prime contractors who deliver citizen-service programs under federal contract vehicles. The work is shaped by citizen-service standards, ADA Section 508 accessibility requirements, language-access mandates (Limited English Proficiency / Title VI), and program-specific eligibility rules. Federal contracts often require US-based delivery, US-citizen or work-authorized staff, and security-clearable talent against the program profile. State and county work is typically more flexible on geography but tighter on language access (LEP coverage in 10+ languages is common). We staff citizen-service lines, benefits intake (SNAP, Medicaid, unemployment, child-care subsidy), DMV, 311 municipal services, and program enrollment surges (open-enrollment marketplaces, tax-season filer support). FedRAMP-aware tooling, ADA Section 508 compliance and language-access protocols are built into the staffing engagement from day one.`,
+    intro: `Government call center staffing supplies recruited, trained citizen-service agents and supervisors for federal, state, county and municipal programs — and the prime contractors who run them. We staff benefits intake (SNAP, Medicaid, unemployment), DMV, 311 and program-enrollment surges with US-based, security-clearable talent where the contract vehicle demands it, plus LEP language coverage across 10+ languages and ADA Section 508 protocol fluency. Agents stay on our payroll, you pay only for hours worked, and we plan cohorts against your fiscal-year and open-enrollment calendar — not a generic recruiting funnel.`,
     industryChallenges: [
       {
         title: 'US-citizen / clearable talent depth',
@@ -823,23 +921,34 @@ export const INDUSTRIES: Industry[] = [
         q: 'Can you ramp for open-enrollment or program-launch surge?',
         a: 'Yes. Health-marketplace open enrollment, tax-season filer support and unemployment-program launches all benefit from 60+ days of pre-build. We run cohort waves aligned to the program calendar with planned demobilization for the off-season.',
       },
+      {
+        q: 'How fast can you staff a government or citizen-services call center?',
+        a: 'For routine citizen-service and benefits-intake roles we can deploy screened agents in as little as ~72 hours. For larger fiscal-year or open-enrollment ramps we plan cohort waves against your program calendar — a recent state engagement put 60 benefits-intake agents live in 31 days and 180 by day 78.',
+      },
+      {
+        q: 'Are your government call center agents US-based and security-clearable?',
+        a: 'Yes. All federally-restricted work is delivered onshore from US-citizen or work-authorized cohorts, and we screen for clearance-eligibility (Public Trust, Secret) against your program profile at shortlist. State, county and municipal work can be staffed more flexibly while still meeting language-access requirements.',
+      },
+      {
+        q: 'What does government call center staffing cost?',
+        a: 'You pay only for hours worked — agents stay on our payroll, so there\'s no HR, benefits or training burden on your side. Engagements are month-to-month, you can swap any agent free, and we back placements with a 90-day attrition guarantee.',
+      },
     ],
   },
   {
     slug: 'education',
     name: 'Education',
     primaryKeyword: 'education call center staffing',
-    metaTitle: 'Education Call Center Staffing — Enrollment, Financial Aid, FERPA',
+    metaTitle: 'Education Call Center Staffing | Enrollment & Aid',
     metaDescription:
-      'Education call center staffing for enrollment, admissions, financial aid and student services. FERPA-cleared agents, enrollment-cycle bench, multi-channel coverage.',
+      'Education call center staffing for admissions, enrollment, financial aid & student services. FERPA-cleared agents, cycle-ready bench, live in ~72 hrs. Get a quote.',
     hero: {
       eyebrow: 'Industries · Education',
-      headline:
-        'Education call center staffing for enrollment and financial aid.',
+      headline: 'Education call center staffing for enrollment, financial aid and student services',
       subhead:
         'Admissions, enrollment, financial aid, registrar and student services — staffed by recruiters who understand FERPA, enrollment-cycle peaks and parent-vs-student call routing.',
     },
-    intro: `Education call center staffing is the recruiting and placement of contact-center agents and supervisors for higher education institutions, K-12 systems, online learning platforms, OPM partners and education-services providers. The work is dominated by enrollment cycles (decision deadlines, FAFSA windows, registration peaks), financial aid complexity, and FERPA-regulated student-record handling. A FERPA-naive agent who confirms a student\'s enrollment status to a parent without verifying the student-record release on file creates direct compliance exposure and institutional reputational risk. Enrollment cycles drive volume in concentrated peaks — late spring decision deadlines, August registration crunch, October FAFSA opening, January spring-semester start — and the institutions that win those windows are the ones whose staffing partner pre-builds bench against the cycle. We staff admissions inquiry, enrollment counseling, financial aid intake, registrar support, student services and parent-call routing across onshore and bilingual Spanish from Mexico for institutions serving Hispanic-majority student populations.`,
+    intro: `Education call center staffing supplies trained, FERPA-disciplined agents for admissions, enrollment counseling, financial aid intake, registrar support and student services — on our payroll, billed only for hours worked. We staff colleges, universities, K-12 systems, online learning platforms and OPM partners worldwide, pre-building bench against your enrollment calendar so you have coverage for decision-deadline and FAFSA peaks instead of scrambling mid-cycle. Every student-record-touching agent ships with documented FERPA training and a recorded refusal-scenario screen, and you can swap any agent free with a 90-day attrition guarantee. Bilingual Spanish enrollment counselors are available for institutions serving Hispanic-majority student populations.`,
     industryChallenges: [
       {
         title: 'FERPA + parent call routing',
@@ -905,24 +1014,35 @@ export const INDUSTRIES: Industry[] = [
         q: 'Do you place financial aid specialists with real aid-logic depth?',
         a: 'Yes. Financial aid candidates are screened on aid-logic scenarios — SAP appeals, verification holds, dependency overrides, Pell-eligibility — with accuracy scored against your published aid-policy rubric. We do not place agents who only memorize talking points.',
       },
+      {
+        q: 'Do your education call center agents understand FERPA?',
+        a: 'Yes. Every student-record-touching candidate completes a recorded scenario where a parent or third party requests information with no release on file, scored for refusal discipline, correct routing and tone before they reach your interview loop. Agents stay on our payroll, so FERPA training and currency are our responsibility, not yours.',
+      },
+      {
+        q: 'How fast can you staff for an enrollment or FAFSA surge?',
+        a: 'We pre-build bench against your enrollment calendar and can deploy cycle-aligned cohorts in about 72 hours once a plan is approved, with first waves typically live in under 30 days. For spring decision-deadline peaks, start the pipeline by mid-January; for fall, lead the August registration crunch by 60 days.',
+      },
+      {
+        q: 'Can you provide bilingual Spanish enrollment and financial aid agents?',
+        a: 'Yes. We staff bilingual Spanish enrollment counselors and financial aid agents for institutions serving Hispanic-majority student populations, sourced primarily from Guadalajara for cultural fluency on family-financial-decision conversations and live overlap with US time zones.',
+      },
     ],
   },
   {
     slug: 'tech-support',
     name: 'Tech Support & Helpdesk',
-    primaryKeyword: 'tech support call center staffing',
-    metaTitle: 'Tech Support Call Center Staffing — Tier 1/2/3, 24/7',
+    primaryKeyword: 'tech support staffing',
+    metaTitle: 'Tech Support Staffing — Tier 1/2/3',
     metaDescription:
-      'Tech support call center staffing for tier 1/2/3 helpdesk. Zendesk, ServiceNow, Salesforce-fluent agents. SOC 2-aware. 24/7 follow-the-sun coverage.',
+      'Hire vetted tier 1/2/3 tech support agents on our payroll. Zendesk, ServiceNow, Salesforce-fluent. 24/7 follow-the-sun coverage. Deploy in ~72 hours.',
     heroImage: '/images/cc-agent-laptop.jpg',
     hero: {
       eyebrow: 'Industries · Tech Support & Helpdesk',
-      headline:
-        'Tech support call center staffing built for tier-1 through tier-3.',
+      headline: 'Tech Support & Helpdesk Staffing for Tier 1, 2 and 3 Teams',
       subhead:
         'We screen for the technical depth that actually closes a ticket and the customer tone that keeps a frustrated user calm. Same candidate, both halves verified — not a tradeoff your team has to live with.',
     },
-    intro: `Tech support call center staffing is the recruiting and placement of helpdesk agents, tier 2 troubleshooters and tier 3 escalation engineers across consumer electronics, hardware OEMs, fintech apps, B2B SaaS and managed-service providers — wherever the function is "fix the customer's broken thing." Unlike the SaaS industry vertical, which is a product category, tech-support is the function: the same screening rubric applies whether the product is a smart-home device, a payments app, a Windows fleet or a developer API. Agents have to navigate Zendesk, ServiceNow, Salesforce Service Cloud, Jira and Freshdesk while reading log files, tracing API calls, validating webhook payloads and walking a non-technical user through a hardware reset. Multi-tier escalation discipline — when to fix, when to hand off, when to file the engineering ticket — is what separates a tier 1 floor that resolves from one that just routes. After-hours and weekend coverage is built in for most engagements, with follow-the-sun cohorts staffed across Manila, Mexico and onshore for true 24/7 without a quality cliff at midnight. SOC 2 awareness is non-negotiable for any agent with production tooling access; PCI applies anywhere tier 2 touches payment-related troubleshooting; GDPR/CCPA-verified deletion-request literacy applies to consumer-data products.`,
+    intro: `Need tech support agents who can actually close a ticket without burning out your engineers? We recruit and staff tier 1 helpdesk agents, tier 2 troubleshooters and tier 3 escalation specialists who navigate Zendesk, ServiceNow, Salesforce Service Cloud, Jira and Freshdesk while keeping a frustrated customer calm. Every agent stays on our payroll and is screened on a recorded troubleshooting scenario in your stack, so you skip the HR and training burden and pay only for hours worked. With follow-the-sun cohorts onshore, nearshore and offshore, you get true 24/7 coverage deployed in about 72 hours — no quality cliff at midnight.`,
     industryChallenges: [
       {
         title: 'Technical depth vs. tone fluency',
@@ -992,24 +1112,35 @@ export const INDUSTRIES: Industry[] = [
         q: 'What language mix do you support for global tech support?',
         a: 'English from Manila and onshore; Spanish from Mexico (Guadalajara, Mexico City, Tijuana); Portuguese from Mexico City and select Manila pools; French and German on a project-by-project basis from European near-shore partners. We will share realistic pipeline depth and shortlist timing per language as part of the written quote.',
       },
+      {
+        q: 'How much does it cost to staff tech support agents?',
+        a: 'You pay only for hours worked — no recruiting fees, no per-agent HR overhead, and no training cost on our side. Agents stay on our payroll on month-to-month terms, so you scale tier 1, tier 2 or tier 3 up or down without severance exposure. We send a written quote with realistic pipeline depth and shortlist timing per tier and language.',
+      },
+      {
+        q: 'How fast can you deploy tech support agents?',
+        a: 'Most engagements deploy in about 72 hours for shortlisted tier 1 and tier 2 candidates, with full cohorts ramping over a few weeks. In our Vertex SaaS engagement, 22 pre-screened tier 2 agents were live in 24 days and 90 seats across three time zones by day 78.',
+      },
+      {
+        q: 'What happens if a tech support agent is not a fit?',
+        a: 'Swap any agent free, with no questions and no penalty, and our 90-day attrition guarantee means a replacement is recruited and screened at our cost. Because every candidate is vetted on a recorded troubleshooting scenario in your stack before training, swaps are rare — but the safety net is built in.',
+      },
     ],
   },
   {
     slug: 'warehouse',
     name: 'Warehouse, Fulfillment & Logistics CX',
-    primaryKeyword: 'warehouse call center staffing',
-    metaTitle: 'Warehouse Call Center Staffing — Fulfillment & Q4 Surge',
+    primaryKeyword: 'fulfillment customer service staffing',
+    metaTitle: 'Fulfillment Customer Service Staffing',
     metaDescription:
-      'Warehouse call center staffing for fulfillment, returns and delivery exceptions. WMS/TMS-fluent agents. Q4 surge bench pre-built. B2B and B2C tone-tested.',
+      'Fulfillment & 3PL customer service staffing for returns, delivery exceptions and Q4 surge. WMS/TMS-fluent agents on our payroll. Get a free staffing plan.',
     heroImage: '/images/cc-team-row-2.jpg',
     hero: {
       eyebrow: 'Industries · Warehouse & Fulfillment',
-      headline:
-        'Warehouse call center staffing for fulfillment, returns and delivery exceptions.',
+      headline: 'Fulfillment & warehouse customer service staffing, built for the seasonal curve',
       subhead:
         'High-volume, time-sensitive fulfillment CX — carrier ETA escalations, missed deliveries, returns processing and B2B order-status calls — staffed against the seasonal curve, not a flat headcount plan. Q4 bench pre-built in July; demobilized cleanly in February.',
     },
-    intro: `Warehouse call center staffing — covering fulfillment, returns processing, delivery-exception handling and 3PL customer service — is the recruiting and placement of contact-center agents and supervisors for ecommerce operators, marketplace sellers, B2B distribution networks, 3PL warehouse operators and direct-fulfillment retailers. The work is high-volume, time-sensitive (carrier ETA exceptions, missed deliveries, claims, returns) and brutally seasonal — Black Friday through January return surge can run 4–6x baseline, and the agent profile is distinct from generic ecommerce CX. Where retail CX rewards brand-tone polish, warehouse CX rewards dispatch-coordination fluency, carrier-system literacy and the ability to read a tracking trace and tell the customer what actually happened. Agents have to move between WMS (Warehouse Management Systems — Manhattan, NetSuite, Shopify Fulfillment, ShipStation), TMS (Transport Management Systems for FedEx, UPS, DHL, USPS exception handling), and the customer-facing platform (Shopify, Magento, NetSuite OneWorld, SAP) without losing the thread of a single delivery exception. We staff Q4 surge benches starting in July, returns-processing cohorts that ramp through January, and steady-state B2B order-status teams year-round across Mexico, Manila and onshore for complex carrier escalations.`,
+    intro: `Fulfillment customer service staffing is how ecommerce operators, 3PL warehouse partners and B2B distributors put WMS/TMS-fluent agents on returns, delivery-exception and order-status queues without carrying the hiring, training or seasonal-bench risk themselves. The work is high-volume and time-sensitive — carrier ETA escalations, missed deliveries, RMA processing and B2B pallet inquiries — and the agent profile is distinct from generic ecommerce CX: it rewards carrier-system literacy and the ability to read a tracking trace, not just brand-tone polish. Every agent stays on our payroll, you pay only for hours worked, and we plan the Q4-to-January surge against your real volume curve — benching in July, demobilizing cleanly in February. Swap any agent free, with a 90-day attrition guarantee, and deploy in roughly 72 hours.`,
     industryChallenges: [
       {
         title: 'Q4 surge volume',
@@ -1077,6 +1208,18 @@ export const INDUSTRIES: Industry[] = [
       {
         q: 'Do you staff B2B and B2C agents differently?',
         a: 'Yes. We tag B2B-capable agents separately in our pipeline and test for tone-pivot on a recorded scenario with a B2C consumer call and a B2B buyer escalation back-to-back. Pure-B2C cohorts run cheaper and faster from Mexico and Manila; B2B-capable agents are placed at a smaller premium and we recommend a single combined queue only when the volume mix justifies the investment in tone-pivot screening.',
+      },
+      {
+        q: 'What is fulfillment customer service staffing, and how is it different from a BPO?',
+        a: 'It is the recruiting and placement of WMS/TMS-fluent agents for returns, delivery-exception and order-status queues — for businesses that own the inventory and the customer relationship. We are a staffing partner, not a BPO: agents work your processes and your tools, but stay on our payroll, and you pay only for hours worked. You keep control of the floor without the hiring and training burden.',
+      },
+      {
+        q: 'Do you staff for both ecommerce returns and B2B distribution order status?',
+        a: 'Yes. We tag B2B-capable agents separately and test for tone-pivot on a recorded scenario that runs a B2C consumer call and a B2B buyer escalation back-to-back. Pure-B2C cohorts run faster and cheaper from Mexico and Manila; B2B-capable agents are placed at a small premium for mixed queues.',
+      },
+      {
+        q: 'How fast can you stand up a fulfillment CX cohort, and what does it cost?',
+        a: 'We deploy screened agents in roughly 72 hours for steady-state needs, and we bench Q4 surge cohorts starting in July for an October-November ramp. You pay per hour worked, month-to-month — no long-term lock-in — and any agent can be swapped free, backed by a 90-day attrition guarantee.',
       },
     ],
   },

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, forwardRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -270,14 +270,17 @@ function Field({
   );
 }
 
-const Select = (props: React.SelectHTMLAttributes<HTMLSelectElement> & {
-  options: { value: string; label: string }[];
-}) => {
+const Select = forwardRef<
+  HTMLSelectElement,
+  React.SelectHTMLAttributes<HTMLSelectElement> & {
+    options: { value: string; label: string }[];
+  }
+>((props, ref) => {
   const { options, className, ...rest } = props;
   return (
     <select
+      ref={ref}
       {...rest}
-      defaultValue=""
       className={cn(fieldClass, 'appearance-none bg-no-repeat bg-[length:14px] bg-[right_14px_center]', className)}
       style={{
         backgroundImage:
@@ -294,4 +297,5 @@ const Select = (props: React.SelectHTMLAttributes<HTMLSelectElement> & {
       ))}
     </select>
   );
-};
+});
+Select.displayName = 'Select';

@@ -152,7 +152,7 @@ export function Industries() {
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="via-navy-950/60 to-navy-950/10 absolute inset-0 bg-gradient-to-t from-navy-950" />
+                    <div className="via-black/50 to-black/10 absolute inset-0 bg-gradient-to-t from-navy-950" />
                     <span className="absolute left-5 top-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/95 text-accent-500 shadow-lg backdrop-blur-sm">
                       <Icon className="h-5 w-5" strokeWidth={2} />
                     </span>

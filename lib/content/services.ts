@@ -5,18 +5,17 @@ export const SERVICES: Service[] = [
     slug: 'call-center-recruitment',
     name: 'Call Center Recruitment',
     primaryKeyword: 'call center recruitment',
-    metaTitle: 'Call Center Recruitment & Headhunter — Agents, Supervisors, QA',
+    metaTitle: 'Call Center Recruitment Agency',
     metaDescription:
-      'A specialist call center staffing agency and headhunter — agents, supervisors, QA, leadership. 100k+ trained candidates, 72-hr first qualified, 90-day attrition guarantee.',
+      'Specialist call center recruitment agency. Hire screened agents, leads & QA in 72 hrs, 90-day attrition guarantee, since 2003. Get a shortlist today.',
     heroImage: '/images/cc-team-row-2.jpg',
     hero: {
       eyebrow: 'Services',
-      headline:
-        'Call center recruitment built for the people who run the floor.',
+      headline: 'Call Center Recruitment That Delivers Floor-Ready Agents Fast',
       subhead:
         'Agents, team leads, QA and ops — sourced against your scorecard, not a generic CX rubric. Embedded recruiting at the cadence your forecast actually demands.',
     },
-    intro: `Call center recruitment is the specialised function of sourcing, screening and placing contact-center talent — frontline agents, supervisors, QA analysts, WFM and operations leadership — against the AHT, FCR and CSAT bar an operating floor will actually grade them on. Generalist staffing firms run resume search; a true call center headhunter runs against a quality bar. We have done it since 2003 across onshore, nearshore and offshore markets, with 100,000+ trained candidates already screened against live scorecards. Every shortlist is built by a senior account manager who has stood up a floor — not a chatbot, not an offshore SDR. For leadership and licensed roles we operate as a dedicated call center headhunter; for cohort frontline volume we operate as embedded recruiters. We do not place generalist clerical roles, finance roles or unrelated knowledge work. The discipline is narrow on purpose.`,
+    intro: `Looking for a call center recruitment partner that sources agents who can carry live volume on day one? We recruit, screen and place frontline agents, team leads, QA analysts and ops leadership against your actual AHT, FCR and CSAT bar — not a generic resume search. Since 2003 we have screened 100,000+ trained candidates across onshore, nearshore and offshore markets, with a first qualified shortlist typically inside 72 hours and a written 90-day attrition guarantee on every placement.`,
     whatIsIt: `Call center recruitment is the end-to-end practice of building cohorts of agents and supervisors who can carry your live volume on day one of nesting. The work is different from generic staffing because the screen is different: tenure intent, AHT discipline, disclosure literacy, language fluency at a scored level (not self-reported), and cohort fit against the QA scorecard your team will grade against in week 4.
 
 Done well, call center recruitment looks like an integrated extension of your TA, ops and WFM functions. We meet weekly with WFM to map open requisitions against the live forecast — not against a static job rec — then source, screen and shortlist against your published quality bar. Every cohort gets a named owner on our side, a 72-hour pre-start health check, and a 30-day attrition flag.
@@ -112,24 +111,35 @@ Where most vendors hand you a stack of resumes and walk away, we report against 
         q: 'Do you support remote, hybrid and on-site cohorts?',
         a: 'All three. Roughly 45% of current placements are remote-first, 30% hybrid, 25% fully on-site. Sourcing geography and screening criteria shift by model — we calibrate at the start of every engagement.',
       },
+      {
+        q: 'How much does call center recruitment cost?',
+        a: 'Most engagements are priced per placement or as a per-hour rate on agents who stay on our payroll, so you pay only for hours worked with no separate HR, training or benefits overhead. We work month-to-month with no long-term lock-in, and pricing scales with role seniority and delivery region (onshore, nearshore or offshore). Request a quote and we will scope it to your forecast.',
+      },
+      {
+        q: 'How long does it take to hire call center agents?',
+        a: 'A first qualified shortlist typically lands within 72 hours from our active bench of 100,000+ trained candidates. For a full cohort of 10-25 seats, plan on roughly 14-21 days from agreement to first class start; larger ramps of 50+ run in waves with the first wave inside that same window.',
+      },
+      {
+        q: 'What makes a call center recruitment agency better than recruiting in-house?',
+        a: 'A specialist agency screens against a live quality bar (AHT, FCR, disclosure literacy and language scored to level) instead of resumes, and absorbs the HR, payroll and training burden. With us, agents stay on our payroll, you can swap any agent free, and every placement carries a 90-day attrition guarantee, so you de-risk hiring without building a contact-center TA function.',
+      },
     ],
   },
   {
     slug: 'bpo-recruitment',
     name: 'BPO Recruitment',
-    primaryKeyword: 'bpo recruitment',
-    metaTitle: 'BPO Recruitment — Multi-Client Floor Hiring at Scale',
+    primaryKeyword: 'BPO staffing services',
+    metaTitle: 'BPO Staffing Services',
     metaDescription:
-      'BPO recruitment for multi-client floors — calibrated quality bars, overlapping ramps, language mix. 100k+ trained agents across nearshore and offshore.',
+      'BPO staffing services that put trained call-center agents on our payroll. Pay per hour worked, swap any agent free, deploy in ~72 hours. Get a staffing plan.',
     heroImage: '/images/cc-management.jpg',
     hero: {
       eyebrow: 'Services',
-      headline:
-        'BPO recruitment tuned to multi-client floors and tight SLAs.',
+      headline: 'BPO Staffing Services: Trained Agents on Our Payroll, Not Yours',
       subhead:
         'Calibrated quality bars, overlapping ramps, blended language mix. We staff against the floor’s blended scorecard — not just the open req.',
     },
-    intro: `BPO recruitment is the discipline of sourcing and placing contact-center talent into outsourced floors that run multiple clients on shared infrastructure. The job is harder than captive hiring in three specific ways: every client account on the floor has a different quality bar, ramps overlap (so the local talent pool gets thin in week 6 of every quarter), and a missed SLA on one account creates spillover risk on every other account sharing the same floor. Generalist firms cannot see this dependency math. They place to a single requisition, hit the seat number, and miss the cohort-mix problem entirely. We have done BPO recruitment since 2003 across nearshore and offshore markets, with active engagements across four sites in three countries.`,
+    intro: `BPO staffing services give you the trained call-center agents a BPO would provide — without handing over your customer relationship, processes or quality control. We source, screen and place inbound, outbound and blended agents who stay on our payroll, so you carry no HR, training or attrition burden. You pay only for hours worked, can swap any agent free, and stay month-to-month. Since 2003 we've placed 100,000+ trained agents across nearshore and offshore markets, with first qualified candidates ready in about 72 hours.`,
     whatIsIt: `BPO recruitment maps client-level quality bars onto a single floor-level sourcing plan. That sounds abstract; in practice it means a recruiter who can look at three live ramps — say a healthcare client at HIPAA-cleared bilingual agents, a fintech client at NMLS-licensed bilingual agents, and a retail client at high-AHT generalist agents — and source against the highest-published bar, then route placements to the client whose bar they best match.
 
 Done badly, BPO recruitment becomes a race to the bottom: a vendor places anyone breathing into the easiest-to-fill ramp, the harder ramp slips, and your client-services team spends the quarter explaining the SLA miss. Done well, it looks like cross-client calibration sessions every week, a per-client cohort owner on the recruiting side, and a single dashboard showing the blended floor SLA — not just per-client funnels.
@@ -222,24 +232,35 @@ We embed with your client-services and ops leads, run weekly calibration with ea
         q: 'How fast can you spin up a new client account on the floor?',
         a: 'For most new client SOWs, first cohort starts inside 14 days. The bench is already current, the cohort owner is named on day one, and calibration with the new client\'s QA team happens in week one.',
       },
+      {
+        q: 'What is the difference between BPO staffing and BPO outsourcing?',
+        a: 'With BPO outsourcing, a provider runs your contact center end-to-end — their process, their quality control, their roof — and you get limited visibility. With BPO staffing, we recruit and place trained agents who work to YOUR process and QA scorecard while staying on our payroll. You keep control of the customer experience, pay only for hours worked, and can swap any agent free.',
+      },
+      {
+        q: 'Do the agents work for me or for you?',
+        a: 'The agents work to your goals and scorecard but stay on our payroll. That means we carry the HR, training, benefits and compliance burden — you carry none. If an agent isn\'t a fit, we swap them at no charge, and our 90-day attrition guarantee re-places anyone who leaves inside 90 days for free.',
+      },
+      {
+        q: 'How fast can you staff a BPO-style team?',
+        a: 'Most engagements get a first qualified shortlist within about 72 hours, with agents deployed shortly after. We\'ve maintained a current bench of trained inbound, outbound and bilingual agents across nearshore and offshore markets since 2003, so we ramp from a live pool rather than a cold search.',
+      },
     ],
   },
   {
     slug: 'contact-center-staffing',
     name: 'Contact Center Staffing',
     primaryKeyword: 'contact center staffing',
-    metaTitle: 'Contact Center Staffing — Voice, Chat, Email and Social',
+    metaTitle: 'Contact Center Staffing Agency',
     metaDescription:
-      'Contact center staffing for omnichannel operations — voice, chat, email and social. Vetted agents calibrated to your channel mix and QA scorecard.',
+      'Omnichannel contact center staffing across voice, chat, email and social. Channel-fluent agents on our payroll, 90-day guarantee, shortlist in 72 hrs. Book a call.',
     heroImage: '/images/cc-headset-desk.jpg',
     hero: {
       eyebrow: 'Services',
-      headline:
-        'Contact center staffing for the channels customers actually use.',
+      headline: 'Omnichannel Contact Center Staffing: Voice, Chat, Email & Social',
       subhead:
         'Voice, chat, email, social and async messaging — staffed against a blended scorecard. Channel-fluent agents, not voice-only generalists redeployed to chat.',
     },
-    intro: `Contact center staffing is the recruiting practice for modern omnichannel operations — voice, chat, email, social, in-app messaging — where the agent has to switch context between channels in a single shift and the QA scorecard grades each channel differently. It is the natural evolution of "call center" hiring; the difference matters because chat-fluent and voice-fluent are not the same screen, and putting a voice-only agent on chat is the fastest way to wreck CSAT. We have run contact center staffing since 2003, evolving the screen as the channels evolved. Today most placements carry at least two live channels on day one of nesting, with a calibrated QA bar per channel and blended SLA reporting at the floor level.`,
+    intro: `Need contact center staffing for an omnichannel team where one agent handles voice, chat, email and social in a single shift? We supply channel-fluent agents screened per channel against your QA scorecard, not voice-only generalists redeployed to chat in week six. Agents stay on our payroll, you pay only for hours worked, and we have run contact center staffing since 2003 across 100,000+ trained agents. Get a first qualified shortlist in about 72 hours, with a 90-day attrition guarantee on every placement.`,
     whatIsIt: `Contact center staffing covers omnichannel operations where voice is one channel among several. The screening profile is different from voice-only call center hiring: written-fluency at a scored level (most chat hires fail on grammar more than empathy), context-switching tolerance, async patience, and the discipline to follow brand-voice guidelines without sounding robotic.
 
 Done well, contact center staffing looks like a per-channel screen layered onto a single sourcing plan. We screen written fluency through a recorded chat role-play, voice through a recorded call role-play, and async through a brief turnaround test. Each candidate is ranked per channel, and the cohort is built so the channel mix matches your forecast — not so the easiest-to-fill channel dominates.
@@ -331,24 +352,35 @@ The trap most operators fall into is staffing voice-only and "redeploying to cha
         q: 'Do you place agents who can flex across channels in a single shift?',
         a: 'Yes — most modern operators want this. We screen for context-switching tolerance and async patience explicitly. About 60% of current placements are blended-channel from day one of nesting; the rest are channel-specialised.',
       },
+      {
+        q: 'What does a contact center staffing agency do?',
+        a: 'A contact center staffing agency sources, screens and supplies trained agents for omnichannel support teams — voice, chat, email, social and async. The agents stay on the agency\'s payroll, so you avoid the HR, recruiting and training burden and pay only for the hours worked. We screen each candidate per channel against your QA scorecard so a voice hire is not quietly redeployed to chat.',
+      },
+      {
+        q: 'How much does contact center staffing cost?',
+        a: 'You pay a single hourly rate per agent for hours worked — no separate recruiting fee, severance or training overhead, because agents stay on our payroll. Rates depend on delivery geography (onshore, nearshore or offshore), channel mix and language requirements. Engagements are month-to-month, and if an agent leaves or misses the bar inside 90 days we re-source and re-place at no extra fee.',
+      },
+      {
+        q: 'How fast can you staff an omnichannel contact center team?',
+        a: 'Most briefs get a first qualified shortlist within about 72 hours, and a screened cohort can be deployed in days because our bench of 100,000+ trained agents is kept current. We screen voice, chat and async fluency before placement so agents are channel-ready on day one of nesting rather than ramped onto a channel they were never tested on.',
+      },
     ],
   },
   {
     slug: 'customer-service-staffing',
     name: 'Customer Service Staffing',
     primaryKeyword: 'customer service staffing agency',
-    metaTitle: 'Customer Service Staffing Agency — CX Agents Across All Channels',
+    metaTitle: 'Customer Service Staffing Agency | CX Agents Fast',
     metaDescription:
-      'Customer service staffing agency placing CX agents across voice, chat, email and social. 90-day guarantee, 72-hr first qualified, 100k+ trained candidates.',
+      'Customer service staffing agency placing CX agents across voice, chat, email & social. 90-day guarantee, first shortlist in 72 hrs. Book a discovery call.',
     heroImage: '/images/cc-team-desk.jpg',
     hero: {
       eyebrow: 'Services',
-      headline:
-        'A customer service staffing agency that thinks like an operator.',
+      headline: 'Hire vetted customer service agents across every channel',
       subhead:
         'CX-focused agent placement across every channel — voice, chat, email, social. Senior account managers, calibrated quality, and a 90-day attrition guarantee on every assignment.',
     },
-    intro: `A customer service staffing agency places CX talent — frontline agents, escalation specialists, supervisors and QA — into customer-facing teams that own retention, resolution and brand experience. The scope is slightly broader than call center staffing because customer service is not always voice-led; it includes chat, email, social, in-app, async and the escalation paths between them. We have run as a customer service staffing agency since 2003 across captive and outsourced models, with placements grading to a CX scorecard — CSAT, NPS, FCR, AHT, retention impact — not a generic clerical bar. The point of a specialised customer service staffing agency is that the screen matches the work; the screen at a generalist agency does not.`,
+    intro: `Looking for a customer service staffing agency that screens for the skills that actually move CSAT, retention and resolution? We place CX talent — frontline agents, escalation specialists, supervisors and QA — across voice, chat, email, social and async, with every placement graded to your scorecard, not a generic clerical bar. Agents stay on our payroll, you pay only for hours worked, and every assignment carries a 90-day attrition guarantee. Operators have kept us on retainer since 2003, with a first qualified shortlist typically inside 72 hours.`,
     whatIsIt: `A customer service staffing agency is the layer between your CX leadership and a market full of generic resumes. The work is screening for the specific competencies that move CSAT and retention: empathy at scored level (not self-reported), de-escalation discipline, brand-voice fluency, channel flex, and the patience to read a confused customer's third paragraph before responding.
 
 Done well, a customer service staffing agency looks like an embedded extension of your CX team. We sit with your QA leads to map the scorecard, screen against it (not against a generic CX rubric), and route placements to the queues where their strengths land hardest. Senior account managers carry pipeline against your live forecast — not a static job rec — and every cohort gets a named owner on our side.
@@ -439,24 +471,35 @@ Done badly, a customer service staffing agency hands you resumes and walks away.
         q: 'How do you protect our brand voice during sourcing?',
         a: 'Every recruiter outreach message is reviewed by your CX team before launch. We do not use generic templates. Brand-voice fluency is screened against your published guidelines, so the cohort sounds like your brand from cohort one — not "like CX in general."',
       },
+      {
+        q: 'How much does customer service staffing cost?',
+        a: 'You pay only for hours agents actually work — no recruiting fees, HR overhead or training cost on your side. Agents stay on our payroll on a month-to-month basis, and you can swap any agent free at any time. Pricing scales with your channel mix and delivery geography (onshore, nearshore or offshore).',
+      },
+      {
+        q: 'How fast can you staff a customer service team?',
+        a: 'Most briefs get a first qualified shortlist inside 72 hours, and screened agents can deploy in roughly 72 hours once a role profile is approved. Larger cohorts are sized to your training calendar with a named account manager owning the ramp.',
+      },
+      {
+        q: 'Can you provide bilingual or multichannel customer service agents?',
+        a: 'Yes. We place agents across voice, chat, email, social and async, and current placements span 30+ languages with bilingual depth in Spanish, Portuguese, French, Tagalog, Mandarin and more. Channel flex and language fluency are scored to level, not self-reported.',
+      },
     ],
   },
   {
     slug: 'outsourced-call-center-staffing',
     name: 'Outsourced Call Center Staffing',
     primaryKeyword: 'outsourced call center staffing',
-    metaTitle: 'Outsourced Call Center Staffing — Recruiting INTO BPO Floors',
+    metaTitle: 'Outsourced Call Center Staffing',
     metaDescription:
-      'Outsourced call center staffing — we recruit talent into your BPO partner\'s floor against your scorecard. 90-day guarantee, embedded program management.',
+      'Outsourced call center staffing without the HR burden. Trained agents on our payroll, pay per hour, 90-day guarantee, deploy in ~72 hours. Get a free quote.',
     heroImage: '/images/internet-office-team-meeting.jpg',
     hero: {
       eyebrow: 'Services',
-      headline:
-        'Outsourced call center staffing — recruiting INTO your BPO floor.',
+      headline: 'Outsourced Call Center Staffing That Stays on Our Payroll, Not Yours',
       subhead:
         'A common confusion: we are not a BPO. We are the staffing partner that staffs the BPO floor — to your scorecard, on your calendar, with your accountability.',
     },
-    intro: `Outsourced call center staffing is the recruiting service for brands who run their contact centers through a BPO partner but want recruiting accountability that the BPO's internal TA team often cannot deliver alone. The distinction matters: we are not a BPO. We do not own the floor, the agents' badges or the operations leadership. We are the specialised recruiter that sources, screens and shortlists agents who then get hired into your BPO partner's roster — against your scorecard, on your calendar, with the brand outcomes you actually care about. Brands choose outsourced call center staffing when their BPO is slipping on hiring SLAs, when quality is drifting, or when a new client SOW is ramping faster than the BPO's internal recruiting can keep up.`,
+    intro: `Outsourced call center staffing lets you add trained, screened agents to your contact center without taking on the HR, payroll, or training burden — the agents stay on our payroll, and you pay only for the hours they work. Since 2003 we have placed from a bench of 100,000+ trained agents across onshore, nearshore, and offshore markets, with a first qualified shortlist in ~72 hours and a 90-day attrition guarantee on every assignment. Whether you are scaling an in-house team, ramping a new program, or supplementing recruiting on a BPO floor, we source to your scorecard — swap any agent free, month-to-month, no long contract.`,
     whatIsIt: `Outsourced call center staffing is the layer between you and your BPO partner's recruiting funnel. The work is sourcing and screening to the brand-side scorecard — your CSAT, your QA bar, your tenure intent — then handing pre-screened candidates to the BPO's onboarding team for hire and training under their badge.
 
 Done well, this looks like a co-managed pipeline. We sit between your CX leadership and the BPO's TA lead, run weekly calibration so both sides grade to the same bar, and report into both organisations against the floor SLA. The BPO gets faster fill rates; you get quality you can trust.
@@ -547,24 +590,35 @@ Done badly, outsourced call center staffing creates a tug-of-war between brand a
         q: 'Will our BPO partner resist outsourced call center staffing?',
         a: 'Rarely, in our 20+ years of doing this. BPO TA teams are usually under-resourced and welcome the supplemental capacity. We design the engagement so the BPO is named, calibrated-with, and reported-to throughout — never bypassed.',
       },
+      {
+        q: 'What does outsourced call center staffing cost?',
+        a: 'You pay only for the hours your agents actually work — there is no recruiting fee, no payroll tax, and no training overhead, because the agents stay on our payroll. Most engagements are month-to-month with no long-term contract, and you can swap any agent free if the fit isn\'t right. We share a transparent per-hour rate by role and delivery market (onshore, nearshore, or offshore) in your free staffing plan.',
+      },
+      {
+        q: 'How is outsourcing call center staffing different from hiring in-house?',
+        a: 'When you hire in-house you carry the recruiting, payroll, benefits, training, and attrition risk yourself, and it typically takes weeks to fill a seat. With outsourced call center staffing, we supply trained agents in about 72 hours, keep them on our payroll, replace anyone who leaves inside 90 days at no charge, and let you scale up or down month-to-month — so you get the agents without the HR burden.',
+      },
+      {
+        q: 'Can you supplement recruiting on our existing BPO floor?',
+        a: 'Yes. If your BPO partner is missing hiring SLAs or quality is drifting, we can source and pre-screen agents to your brand-side scorecard and hand them to the BPO for onboarding — a co-managed, tri-party engagement where the BPO stays a named stakeholder. The 90-day attrition guarantee sits in your SOW, so accountability lives with us.',
+      },
     ],
   },
   {
     slug: 'nearshore-call-center-staffing',
     name: 'Nearshore Call Center Staffing',
-    primaryKeyword: 'nearshore call center',
-    metaTitle: 'Nearshore Call Center Staffing — Mexico, Colombia, Costa Rica',
+    primaryKeyword: 'nearshore call center staffing',
+    metaTitle: 'Nearshore Call Center Staffing',
     metaDescription:
-      'Nearshore call center staffing across Mexico, Colombia and Costa Rica. CT/ET overlap, deep bilingual pool, USMCA-friendly terms. 90-day guarantee.',
+      'Hire nearshore call center agents in Mexico, Colombia & Costa Rica. CT/ET overlap, bilingual depth, pay per hour, 90-day guarantee. Get a shortlist in 72 hrs.',
     heroImage: '/images/cc-agent-monitor.jpg',
     hero: {
       eyebrow: 'Services',
-      headline:
-        'Nearshore call center recruiting — bilingual depth, time-zone fit.',
+      headline: 'Nearshore Call Center Agents in Mexico, Colombia & Costa Rica',
       subhead:
         'Mexico, Colombia, Costa Rica. CT/ET overlap, deep bilingual labor pools, USMCA-friendly contracting, IP terms operators trust. We have placed in nearshore since 2003.',
     },
-    intro: `Nearshore call center staffing is the recruiting practice for contact-center talent located in markets that share business hours with US operations — Mexico, Colombia, Costa Rica, El Salvador, the Dominican Republic — where the time-zone, bilingual depth and contracting framework let a brand operate "as if onshore" at lower cost. The nearshore call center model has been the fastest-growing segment in CX since roughly 2018 because three things converged: deeper bilingual fluency than offshore, CT/ET overlap that lets agents handle live US peak hours without graveyard shifts, and post-USMCA contracting that gives operators IP and labor terms they recognise. We have placed across nearshore call center markets since 2003, with the largest active footprint in Mexico — Guadalajara, Mexico City, Monterrey, Tijuana and Querétaro.`,
+    intro: `Nearshore call center staffing puts trained, bilingual agents in markets that share your business hours — Mexico, Colombia, Costa Rica and beyond — so your team handles live US peak volume without graveyard shifts or offshore IP worries. Agents stay on our payroll and you pay only for hours worked, with a 90-day attrition guarantee on every placement. We have recruited across nearshore markets since 2003 and screen against the city, not against "nearshore" in the abstract — Guadalajara, Mexico City, Monterrey, Tijuana, Bogotá and San José each get their own playbook. Most briefs get a first qualified bilingual shortlist inside 72 hours.`,
     whatIsIt: `Nearshore call center staffing is the discipline of sourcing agents, supervisors and QA in nearshore markets to a bar US brands recognise. The screening profile is different from offshore in two specific ways: bilingual fluency is the default expectation (not a premium add-on), and tenure intent is screened against a US contracting framework (USMCA in Mexico, similar bilateral agreements in Colombia and Costa Rica) where labor protections shape what "long tenure" actually means.
 
 Done well, nearshore call center staffing looks like a market-specific playbook per city. Guadalajara has the largest bilingual labor pool and strong tenure but wage benchmarks are rising. Monterrey is the B2B sales depth. Tijuana gives PT overlap and deep telecom history. Mexico City is where senior leadership and licensed roles live. Bogotá and San José have their own playbooks again. We screen against the city, not against "nearshore" in the abstract.
@@ -660,24 +714,35 @@ Reporting is to your QA scorecard with bilingual fluency scored at the level you
         q: 'Can you run a multi-city nearshore engagement with one program lead?',
         a: 'Yes. The largest active nearshore engagement runs continuous recruiting across three Mexican cities with one embedded program lead. Multi-country (Mexico + Colombia + Costa Rica) is supported with a regional lead and per-country recruiters.',
       },
+      {
+        q: 'How much does nearshore call center staffing cost?',
+        a: 'You pay only for hours actually worked — agents stay on our payroll, so there is no separate recruiting fee, HR overhead or training burden. Hourly rates vary by city, language and queue; for example, Guadalajara entry-level bilingual benchmarks moved roughly 18% upward between 2022 and 2024, while Mexico City senior bilingual runs meaningfully higher. We share city-level wage benchmarks in every staffing plan so finance can model accurately.',
+      },
+      {
+        q: 'How fast can nearshore agents start?',
+        a: 'Most nearshore briefs get a first qualified bilingual shortlist inside 72 hours, drawn from an active bench of 100,000+ trained agents across Mexico, Colombia, Costa Rica and El Salvador. Engagements are month-to-month, and if any agent isn\'t the right fit you can swap them free.',
+      },
+      {
+        q: 'Is nearshore better than offshore for a US contact center?',
+        a: 'Nearshore wins when you need CT/ET time-zone overlap so agents handle live US peak hours without graveyard shifts, deeper bilingual fluency, or USMCA-aligned IP and labor terms your legal team recognises. Offshore (Philippines, India) is usually more cost-efficient for follow-the-sun or after-hours queues. We staff all three and will recommend the fit your forecast and compliance bar actually call for.',
+      },
     ],
   },
   {
     slug: 'offshore-call-center-staffing',
     name: 'Offshore Call Center Staffing',
-    primaryKeyword: 'offshore call center',
-    metaTitle: 'Offshore Call Center Staffing — Philippines and India',
+    primaryKeyword: 'offshore call center staffing',
+    metaTitle: 'Offshore Call Center Staffing',
     metaDescription:
-      'Offshore call center staffing in the Philippines and India. 24/7 coverage, deep CX maturity, cost economics. 90-day guarantee, 100k+ trained agents.',
+      'Hire trained offshore call center agents in the Philippines and India. 24/7 coverage, lower cost per seat, 90-day guarantee. First shortlist in 72 hrs.',
     heroImage: '/images/internet-call-center-agents-row.jpg',
     hero: {
       eyebrow: 'Services',
-      headline:
-        'Offshore call center recruiting — 24/7 coverage, deep CX maturity.',
+      headline: 'Offshore Call Center Staffing in the Philippines and India',
       subhead:
         'Philippines and India — the world\'s deepest CX talent pools. Active since 2003, with senior account managers living in-market and a 90-day attrition guarantee on every assignment.',
     },
-    intro: `Offshore call center staffing is the recruiting practice for contact-center talent in markets where time-zone, cost economics and deep CX maturity favour offshore delivery — primarily the Philippines and India, with select engagements in Vietnam and Eastern Europe. The offshore call center model has been the foundation of global BPO since the early 2000s because three things hold true: 24/7 coverage is structurally easier when the workforce sits in a different time zone, agent cost economics meaningfully lower the per-seat operating cost, and 20+ years of CX maturity in these markets means the senior leadership pool is unusually deep. We have placed in offshore call center markets since 2003, with the largest active footprint in the Philippines — Manila (BGC, Ortigas, Makati), Cebu, Davao, Iloilo and Clark.`,
+    intro: `Offshore call center staffing puts trained, screened agents in the Philippines and India onto your queues without the cost of running a contact center yourself. You get 24/7 coverage that your time zone can't staff, a meaningfully lower cost per seat, and a senior CX talent pool 20+ years deep — while every agent stays on our payroll and you pay only for hours worked. We have placed offshore agents since 2003, with our largest active footprint across Manila, Cebu, Davao, Iloilo and Clark, and a 90-day attrition guarantee on every assignment.`,
     whatIsIt: `Offshore call center staffing is the discipline of sourcing, screening and placing agents and supervisors in markets like the Philippines and India where local CX maturity is deep enough that the screen runs against an experienced talent pool — not a green one.
 
 Done well, offshore call center staffing looks like a market-specific playbook per city. Manila (BGC, Ortigas, Makati) is where senior leadership and licensed roles concentrate; Cebu has lower attrition and a deep frontline pool; Davao is cost-efficient and growing; Iloilo gives strong English at lower wage points than Manila; Clark / Pampanga has mature site capacity. India has its own city-level playbook — Bangalore, Hyderabad, Pune, Gurgaon — with different wage and attrition dynamics again.
@@ -773,24 +838,35 @@ The trap most operators fall into with offshore call center hiring is treating t
         q: 'How do you handle the 90-day attrition guarantee offshore?',
         a: 'Same structure as onshore — if an assignment leaves voluntarily or is terminated for cause inside 90 days, we re-source and re-place at no additional fee. The clause is written into every SOW with named redeployment timelines.',
       },
+      {
+        q: 'How fast can offshore call center agents start?',
+        a: 'Most offshore briefs get a first qualified shortlist within 72 hours, with agents deployable in roughly 72 hours to a few days once you approve. We hold an active bench of 100,000+ trained agents across the Philippines and India, so you are screening from a ready pool rather than starting a search from scratch.',
+      },
+      {
+        q: 'Do I have to hire or payroll offshore agents myself?',
+        a: 'No. Every offshore agent stays on our payroll. You pay only for hours worked, on a month-to-month basis, with no HR, training, benefits or local-entity burden on your side. If an agent isn\'t the right fit, you can swap them at no cost, and every placement carries a 90-day attrition guarantee.',
+      },
+      {
+        q: 'Is offshore call center quality good enough for US and UK brands?',
+        a: 'Yes, when screened correctly. We score English fluency at CEFR level (C1+ is standard in the Philippines) using recorded voice and written role-plays, and most placements carry 24+ months of prior CX experience on day one. Self-reported fluency is never accepted as an assignment criterion.',
+      },
     ],
   },
   {
     slug: 'onshore-call-center-staffing',
     name: 'Onshore Call Center Staffing',
-    primaryKeyword: 'onshore call center',
-    metaTitle: 'Onshore Call Center Staffing — US-Based Recruiting',
+    primaryKeyword: 'onshore call center staffing',
+    metaTitle: 'Onshore Call Center Staffing',
     metaDescription:
-      'Onshore call center staffing for US-based contact centers. Compliance-cleared, license-verified, brand-aligned. 90-day guarantee, 72-hr first qualified.',
+      'Onshore call center staffing with US-based, compliance-cleared agents. License-verified, brand-aligned, 90-day guarantee, first shortlist in 72 hrs. Get staff.',
     heroImage: '/images/hd-agents-pair.jpg',
     hero: {
       eyebrow: 'Services',
-      headline:
-        'Onshore call center recruiting — when domestic talent is non-negotiable.',
+      headline: 'US-Based Onshore Call Center Staffing for Regulated & Brand-Critical Queues',
       subhead:
         'US-based agents, supervisors and QA. License-verified, compliance-cleared, brand-aligned. The right model when regulators or brand reputation require domestic delivery.',
     },
-    intro: `Onshore call center staffing is the recruiting practice for contact-center talent located inside the United States — the right model when regulators require domestic delivery (most healthcare PHI work, certain financial services queues, government contracts), when the brand needs a fully US-accent agent base for reputational reasons, or when the queue handles sensitive consumer interactions where the cost economics of offshore are outweighed by the brand-protection economics of onshore. We have run onshore call center staffing since 2003 across remote-first, hybrid and on-site models, with active assignments in 40+ US states. Most current onshore engagements are remote-first or hybrid; pure on-site is roughly 25% of the assignment mix and concentrated in regulated work where in-office training is required.`,
+    intro: `Onshore call center staffing gives you US-based agents, supervisors and QA for the queues where domestic delivery is non-negotiable — regulated PHI and financial work, government contracts, and consumer brands that need a fully US-accent agent base. Agents stay on our payroll, you pay only for hours worked, and every placement is license-verified and compliance-cleared before it reaches your shortlist. We have run onshore call center staffing since 2003 across remote-first, hybrid and on-site models in 40+ US states, and most briefs get a first qualified shortlist inside 72 hours. Every assignment carries a 90-day attrition guarantee with free agent swaps.`,
     whatIsIt: `Onshore call center staffing is the discipline of sourcing US-based agents, supervisors and QA against the regulatory, compliance and brand-voice bars that apply to domestic operations. The screen is different from nearshore and offshore in three specific ways: regulatory clearance (HIPAA, PCI, NMLS, state-insurance) is verified pre-shortlist; background and drug-screen timing is built into the assignment timeline so badging doesn't slip; and English-as-first-language is the default expectation, not a screening criterion.
 
 Done well, onshore call center staffing looks like a market-specific playbook per US region. Remote-first sourcing pulls from a national pool, but the wage benchmark and attrition pattern shift dramatically by state. On-site sourcing is city-specific — Phoenix, Atlanta, Tampa, Dallas, San Antonio, Salt Lake City, Boise and Charlotte each have different talent depth and wage benchmarks. We screen against the city or against the national remote pool, depending on your model.
@@ -886,24 +962,35 @@ Compliance-cleared roles get specialised pipelines. NMLS, state-insurance, HIPAA
         q: 'How fast can you stand up a HIPAA-cleared US cohort?',
         a: 'For 10–25 seats, typically 14–21 days from SOW to first class start. Larger cohorts run in waves with the first wave inside the same window. License and background verification happens pre-shortlist so badging never slips.',
       },
+      {
+        q: 'How much does onshore call center staffing cost?',
+        a: 'You pay only for hours worked — agents stay on our payroll, so there is no separate HR, training, benefits or severance burden. Hourly rates vary by state, city and role: remote-first national hires typically run 15–25% below on-site California or New York benchmarks, and sun-belt on-site markets (Phoenix, Tampa, Dallas, San Antonio) are the most cost-efficient. We share state- and city-level benchmarks in every staffing plan.',
+      },
+      {
+        q: 'Are your onshore call center agents fully US-based and HIPAA-compliant?',
+        a: 'Yes. Every onshore agent is located in the United States, English-as-first-language by default, and screened for the regulatory bar of your queue. We carry active, license-verified pipelines for HIPAA-cleared, PCI-cleared, NMLS-licensed, state-insurance and FINRA Series 6/7 agents, with clearance verified at submission rather than at offer — so badging never slips.',
+      },
+      {
+        q: 'How fast can you staff a US-based onshore team?',
+        a: 'Most onshore briefs get a first qualified shortlist inside 72 hours. For a compliance-cleared cohort of 10–25 seats, plan on roughly 14–21 days from signed SOW to first class start, with background clearing in 7–10 days. Larger cohorts run in waves with the first wave inside the same window.',
+      },
     ],
   },
   {
     slug: 'bilingual-call-center-staffing',
     name: 'Bilingual Call Center Staffing',
     primaryKeyword: 'bilingual call center staffing',
-    metaTitle: 'Bilingual Call Center Staffing — Spanish, Portuguese, Tagalog & More',
+    metaTitle: 'Bilingual Call Center Staffing',
     metaDescription:
-      'Bilingual call center staffing scored to level — Spanish, Portuguese, Tagalog, French. Language fluency tested, not self-reported. 90-day attrition guarantee.',
+      'Hire bilingual call center agents with fluency tested to level, not self-reported. Spanish, Portuguese, Tagalog & more. Get a tested shortlist in 72 hrs.',
     heroImage: '/images/agent-female-office.jpg',
     hero: {
       eyebrow: 'Services',
-      headline:
-        'Bilingual call center staffing — fluency scored, not self-reported.',
+      headline: 'Hire Bilingual Call Center Agents With Fluency Scored to Level',
       subhead:
         'Spanish, Portuguese, Tagalog, French and more. Every bilingual agent is tested to level on a structured rubric — you hear the recording before you hire.',
     },
-    intro: `Bilingual call center staffing is the recruiting practice for agents who handle customer queues in two or more languages at a verified fluency level. The discipline is different from generic CX recruiting because the screen is different — language is tested on a structured rubric, scored to level, and shipped as a recording with every shortlist. Self-reported fluency on a resume is not a screen. We have run bilingual call center staffing since 2003 across Spanish, Portuguese, Tagalog, French, German, Mandarin and Cantonese, sourced from nearshore Mexico and Colombia, offshore Philippines, and onshore US bilingual markets like Miami, San Antonio, Los Angeles and Phoenix.`,
+    intro: `Need bilingual call center agents who hold CSAT in both languages? We staff Spanish, Portuguese, Tagalog, French and 30+ more language pairs, with every agent tested on a structured fluency rubric and shipped as a recording you hear before you hire. Agents stay on our payroll, you pay only for hours worked, and a 90-day attrition and language-drift guarantee covers every placement. Since 2003 we've staffed bilingual queues from nearshore Mexico and Colombia, offshore Philippines, and onshore US markets like Miami and San Antonio.`,
     whatIsIt: `Bilingual call center staffing is the end-to-end practice of sourcing and verifying agents who can carry live volume in two languages without dropping CSAT in either. The work matters because language drift on a queue costs more than wage premium — a Spanish agent who handles English queues at B1 fluency will see CSAT drop 8–14 points vs. a calibrated bilingual agent.
 
 Done well, every bilingual call center placement carries a recorded language sample scored to a level — CEFR-style for European languages, ILR for US-government-style mapping. The recording is shared with the shortlist; you hear the agent in both languages before you hire. Cohort calibration runs in both languages — a bilingual cohort that calibrates only in English will drift in the second language inside 30 days.
@@ -997,6 +1084,18 @@ Where most vendors trust the resume, we trust the recording. That is why operato
       {
         q: 'Can you staff trilingual or multilingual queues?',
         a: 'Yes. Trilingual placements (English + Spanish + Portuguese is the most common combination) are sourced primarily from Brazil, Argentina and Mexico. Pre-build timeline runs 30–45 days vs. 14–21 for bilingual. Every language is scored to level independently.',
+      },
+      {
+        q: 'How much does bilingual call center staffing cost?',
+        a: 'You pay only for hours worked, and bilingual agents carry a wage premium of roughly 15-25% over monolingual market rate for verified B2/C1 fluency, with regional variance by source market. There are no recruiting, training or HR fees — agents stay on our payroll. Because self-reported bilingual hires drop CSAT 8-14 points on second-language queues, the premium typically pays for itself by month two.',
+      },
+      {
+        q: 'Where do your bilingual agents work — onshore, nearshore or offshore?',
+        a: 'All three, selected by language pair, time zone and wage benchmark. English-Spanish is sourced from US bilingual markets (Miami, San Antonio, Los Angeles, Phoenix), nearshore Mexico (Guadalajara, Monterrey) and Colombia (Bogotá, Medellín); English-Portuguese from Brazil; English-Tagalog from the Philippines (Manila, Cebu); and English-French from Canada and Mauritius.',
+      },
+      {
+        q: 'How fast can you deliver a bilingual agent shortlist?',
+        a: 'A first qualified, tested and recorded bilingual shortlist lands in about 72 hours for established language pairs. Less common pairs need a 30-60 day in-market pre-build. Every candidate is scored on a structured rubric in both languages and shipped with the recording, so you hear fluency before you hire.',
       },
     ],
   },

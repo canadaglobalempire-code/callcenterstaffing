@@ -89,7 +89,7 @@ export function Testimonials() {
                   sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent" />
                 <div className="absolute bottom-5 left-5 right-5">
                   <div className="font-display text-xl font-extrabold tracking-tight text-accent-500">
                     {q.metric.value}

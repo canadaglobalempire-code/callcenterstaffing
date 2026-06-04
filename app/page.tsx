@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Hero } from '@/components/sections/Hero';
 import { Reframe } from '@/components/sections/Reframe';
+import { WhatWeDo } from '@/components/sections/WhatWeDo';
 import { HowItWorks } from '@/components/sections/HowItWorks';
 import { SEOIntro } from '@/components/sections/SEOIntro';
 import { TrustBar } from '@/components/sections/TrustBar';
@@ -19,9 +20,9 @@ import { site } from '@/lib/site';
 import { alternatesFor } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Call Center Staffing Agency — Trained Agents, Deployed to You',
+  title: 'Call Center Staffing Agency | Trained Agents in 72 Hrs',
   description:
-    'Need call center agents? We have 100,000+ trained agents ready to deploy to your business. Temporary or long-term. Onshore, nearshore, offshore. Free quote, pay only for hours worked.',
+    'Hire trained call center agents on our payroll. Deploy a team in 72 hours, pay only for hours worked, swap any agent free. Get a free quote today.',
   keywords: [
     'trained call center agents',
     'trained call center staff',
@@ -88,6 +89,7 @@ export default function HomePage() {
     <>
       <Hero />
       <Reframe />
+      <WhatWeDo />
       <ClientVerticalStrip />
       <TrustBar />
       <HowItWorks />

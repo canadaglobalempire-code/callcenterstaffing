@@ -4,16 +4,14 @@ export const SOLUTIONS: Solution[] = [
   {
     slug: 'scaling-existing-call-center',
     name: 'Scaling an Existing Call Center',
-    metaTitle: 'Scale Call Center Staffing — Ramp Agents Fast, Backfill Attrition',
+    metaTitle: 'Scale Call Center Staffing Fast',
     metaDescription:
-      'Ramp call center agents fast, backfill attrition and protect SLAs. We embed with your ops team to scale call center operations at the cadence your forecast demands.',
+      'Scale call center staffing on your forecast: ramp agents fast, backfill attrition, protect SLAs. Agents on our payroll, deploy in ~72 hours. Get a free quote.',
     heroImage: '/images/cc-agent-pro.jpg',
     hero: {
       eyebrow: 'Solutions',
-      headline:
-        'Scale call center operations and ramp agents fast — without burning your ops team.',
-      subhead:
-        'We run continuous, embedded recruiting against your forecast, your AHT and your QA scorecard. Backfill attrition, scale seat count, ramp call center agents fast — you get the seats; we run the engine.',
+      headline: 'Scale Your Call Center Staffing to Match Forecast — Agents Ready in ~72 Hours',
+      subhead: 'When demand outpaces your in-house hiring, you need to scale call center staffing without overloading your ops or TA team. We run continuous, embedded recruiting against your real forecast, AHT and QA scorecard — so you ramp agents fast, backfill attrition before SLAs slip, and add seats at the cadence your numbers demand. Agents stay on our payroll and you pay only for hours worked, so you scale up (or down) without HR or training burden.',
     },
     problem: `Most contact-center operators do not have a hiring problem in the abstract — they have a calendar problem. Attrition is predictable. Forecast surges are predictable. The seats that need to be filled in week 7 of Q3 are predictable. What is not predictable is whether your in-house TA team or last-quarter’s recruiting vendor will hit the calendar without dropping quality.
 
@@ -69,20 +67,31 @@ Operators end up running recruiting twice: once with a vendor, and once again th
         q: 'Can you scale across multiple sites at once?',
         a: 'Yes. Our largest active engagement runs continuous recruiting across four sites in three countries with a single embedded program lead.',
       },
+      {
+        q: 'How fast can you scale up our call center staffing?',
+        a: 'We deploy pre-screened agents in roughly 72 hours and move full cohorts of 10-50 aligned to your training calendar. Most engagements go from plan to first live cohort in under 30 days, then scale weekly against your forecast.',
+      },
+      {
+        q: 'Do we hire the agents or do they stay on your payroll?',
+        a: 'Agents stay on our payroll. You pay only for hours worked — no HR, benefits or training overhead — which lets you scale seat count up or down month-to-month without carrying fixed headcount risk.',
+      },
+      {
+        q: 'How do you keep quality up while scaling fast?',
+        a: 'We source against your QA scorecard (not generic CX criteria), run a 72-hour pre-start health check, flag 30-day attrition risk, and back every cohort with a 90-day attrition guarantee and free agent swaps if quality slips.',
+      },
     ],
   },
   {
     slug: 'launching-new-call-center',
     name: 'Launching a New Call Center',
-    metaTitle: 'New Call Center Launch Staffing — Greenfield Recruiting at Scale',
+    metaTitle: 'New Call Center Staffing — Launch-Ready Agents',
     metaDescription:
-      'Greenfield call center builds across onshore, nearshore and offshore. From first 25 to first 250 — recruited on the calendar your launch demands.',
+      'Staffing for a new call center launch. Pre-built agent bench, cohort-ready hiring on your go-live calendar, from first 25 to first 250. Book a launch plan.',
     heroImage: '/images/call-center-team.jpg',
     hero: {
       eyebrow: 'Solutions',
-      headline: 'Greenfield call centers, recruited on a launch calendar.',
-      subhead:
-        'When the lease is signed, the IT punchlist is open and you are 90 days from go-live, you do not need a generalist staffing firm.',
+      headline: 'Staffing for a New Call Center Launch',
+      subhead: 'Launching a new call center means recruiting is racing the same clock as your lease, IT and training build-out — and it is usually the milestone that slips. We staff greenfield launches end to end, pre-building an agent bench in your target market before badging is even possible, so your first cohort lands inside ramp and every seat is graded to your quality bar. Onshore, nearshore or offshore, you get launch-ready agents on the calendar your go-live demands — on our payroll, paid only for hours worked.',
     },
     problem: `Standing up a new call center is a project-management problem disguised as a recruiting problem. Lease, build-out, IT, telco, badging, training and recruiting all run on the same critical path — and recruiting is almost always the variable that slips.
 
@@ -139,20 +148,31 @@ Most staffing firms come to a launch with the same playbook they use to backfill
         q: 'Do you cover both captive and BPO launches?',
         a: 'Both. Roughly 60% of our launch work is captive (in-house) builds; 40% is BPO floors.',
       },
+      {
+        q: 'How long does it take to staff a new call center from scratch?',
+        a: 'With 60+ days of lead time we land the first 25 seats roughly 60 days from contract sign, then scale to your full launch headcount cohort by cohort against your training calendar. We\'ve run compressed 30-day launches, but 60–90 days lets us pre-build the market bench that keeps quality high from cohort one.',
+      },
+      {
+        q: 'Do we have to hire and run the agents ourselves?',
+        a: 'No. Launch agents stay on our payroll — we own recruiting, onboarding and HR — so you carry no employment, training or attrition burden during the build. You pay only for hours worked, can swap any agent free, and every placement is backed by a 90-day attrition guarantee.',
+      },
+      {
+        q: 'Can you staff our first call center if we\'ve never run one before?',
+        a: 'Yes. First-time builds are core to this work. We co-plan the launch with your ops, IT and PM teams, recruit the leadership layer (ops manager, WFM and training lead) before the first agent class, and grade cohort one to the same quality bar as cohort twelve.',
+      },
     ],
   },
   {
     slug: 'seasonal-surge',
     name: 'Seasonal & Surge Staffing',
-    metaTitle: 'Seasonal Call Center Staffing & Temp Agency — Q4, Tax Season',
+    metaTitle: 'Seasonal Call Center Staffing | Q4 & Surge',
     metaDescription:
-      'Seasonal call center staffing and temporary call center agents for Q4, open enrollment, tax season, holiday peaks. Pre-built bench, ramp on schedule, demobilize cleanly.',
+      'Seasonal call center staffing for Q4, open enrollment, tax season & holiday peaks. Pre-built bench, ramp on schedule, demobilize cleanly. Get a free plan.',
     heroImage: '/images/agents-row.jpg',
     hero: {
       eyebrow: 'Solutions',
-      headline: 'Seasonal & holiday call center staffing — built ahead of the surge.',
-      subhead:
-        'Q4, open enrollment, tax season, holiday peaks and product launches. We are the call center temp agency that pre-builds your bench in the off-season — so you ramp on schedule, hit SLA, and demobilize cleanly.',
+      headline: 'Seasonal & Holiday Call Center Staffing, Built Ahead of the Surge',
+      subhead: 'When Q4, open enrollment, tax season, or a product launch lands on the same dates every year, reactive hiring guarantees late classes and missed SLAs. Call Center Staffing pre-builds your seasonal bench in the off-season, so qualified temporary call center agents land fully vetted on day one. We size every cohort to your training calendar, report against your seasonal critical path, and demobilize cleanly when peak ends, with redeployment paths for top performers. Agents stay on our payroll and you pay only for hours worked, so scaling up for the surge never becomes a permanent headcount problem.',
     },
     problem: `Seasonal contact-center work is a calendar problem disguised as a recruiting problem. Q4 retail volume, October–December open enrollment, January–April tax season, and product-launch windows all arrive on the same dates every year — yet most staffing partners react to the surge instead of recruiting against it.
 
@@ -201,84 +221,31 @@ The result: classes start late, ramp into go-live, quality scores never recover,
         q: 'What happens to seasonal hires after peak?',
         a: 'We offer redeployment to other clients, conversion to permanent if you want to keep them, or planned demobilization with off-ramp coaching.',
       },
-    ],
-  },
-  {
-    slug: 'bpo-staffing',
-    name: 'BPO & Outsourcer Staffing',
-    metaTitle: 'BPO & Outsourcer Call Center Staffing — Multi-Client Floor Recruiting',
-    metaDescription:
-      'Headcount for outsourcers running multi-client floors with strict quality standards. Per-client cohort owners, calibrated quality, and pipeline that holds.',
-    heroImage: '/images/internet-call-center-agent-working.jpg',
-    hero: {
-      eyebrow: 'Solutions',
-      headline: 'BPO recruiting tuned to multi-client floors and tight SLAs.',
-      subhead:
-        'Headcount for outsourcers running multiple clients on the same floor — calibrated quality bars, dedicated cohort owners, and a bench that holds across simultaneous ramps.',
-    },
-    problem: `BPO recruiting is harder than captive recruiting in three ways: every client has a different quality bar, ramps overlap (so the talent pool gets thin fast), and a missed SLA on one client's account creates spillover risk on every other account on the floor.
-
-Generalist staffing firms can't see the dependency math. They place to a single requisition, hit the seat number, and miss the cohort-mix problem. The outsourcers who scale are the ones whose staffing partner runs against the floor's blended scorecard, not just the open req.`,
-    ourApproach: `We embed with your client-services and ops teams to map each client's quality bar, language mix, and ramp schedule onto a single sourcing plan. Every cohort has a dedicated owner per client account. Pipeline is built across all live ramps simultaneously, with calibration sessions held weekly so the QA bars stay aligned client-to-client. We report against your blended floor SLA, not just per-client requisitions.`,
-    approachSteps: [
       {
-        title: 'Floor-level sourcing plan',
-        body: 'A single plan that maps every client ramp on your floor — language mix, license requirements, quality bar, and timing.',
+        q: 'How far in advance should we book seasonal call center staffing?',
+        a: 'For a Q4 or holiday retail peak, engage in July or August; for January–April tax season, start in the fall. The strongest pipelines come from 60–90 days of off-season pre-build before your ramp date, so cohorts land fully vetted instead of scrambling at go-live.',
       },
       {
-        title: 'Per-client cohort owners',
-        body: 'Each client account on the floor gets a named recruiter who calibrates with that client\'s QA team weekly.',
+        q: 'Do we keep paying for seasonal agents after peak ends?',
+        a: 'No. You pay only for hours worked, month-to-month, and agents stay on our payroll. When peak ends we run a planned off-ramp at no severance cost to you, and you can redeploy or convert top performers to permanent if you want to keep them.',
       },
       {
-        title: 'Cross-client calibration',
-        body: 'Weekly calibration sessions so QA bars stay aligned and a strong agent gets routed to the right client account.',
-      },
-      {
-        title: 'Blended SLA reporting',
-        body: 'We report against your floor SLA, not just per-client funnels. Risk is flagged at the floor level.',
-      },
-    ],
-    outcomes: [
-      { metric: '+24%', description: 'Floor SLA achievement rate vs. prior staffing model' },
-      { metric: '4 sites', description: 'Largest active engagement — across three countries' },
-      { metric: '< 14 days', description: 'Avg. cohort start from new-client SOW signature' },
-    ],
-    rolesIncluded: [
-      'inbound-customer-service',
-      'outbound-sales-agents',
-      'bilingual-agents',
-      'team-leads-supervisors',
-      'qa-analysts',
-      'workforce-management',
-      'operations-managers',
-    ],
-    faqs: [
-      {
-        q: 'Do you replace our internal TA team?',
-        a: 'No. We typically own frontline volume across all clients while your TA team owns leadership and exempt roles.',
-      },
-      {
-        q: 'How do you handle conflicting client quality bars?',
-        a: 'We screen against the highest published bar on the floor, then route placements to the client whose bar they best match.',
-      },
-      {
-        q: 'Can you support multi-country BPO operations?',
-        a: 'Yes — our largest active engagement runs four sites across three countries with a single embedded program lead.',
+        q: 'How fast can you deploy a seasonal surge cohort?',
+        a: 'When the off-season bench is pre-built, a 10–50 seat cohort can deploy in roughly 72 hours and reach the first qualified call in under 25 days. Larger surges run in waves aligned to your training calendar, with a named cohort owner on our side.',
       },
     ],
   },
   {
     slug: 'direct-to-employer',
     name: 'Direct-to-Employer Staffing',
-    metaTitle: 'Direct-to-Employer Call Center Staffing — In-House Hire Recruiting',
+    metaTitle: 'Direct Hire Call Center Staffing',
     metaDescription:
-      'Permanent hires placed directly into in-house contact centers, not vendor floors. Senior-recruiter screening, real cohort fit, and 90-day attrition guarantees.',
+      'Direct hire call center staffing for in-house teams. Permanent agents placed on your badge, tenure-first screening, 90-day attrition guarantee. Get a shortlist.',
     heroImage: '/images/agents-working.jpg',
     hero: {
       eyebrow: 'Solutions',
-      headline: 'Permanent hires for your in-house team — not a vendor floor.',
-      subhead:
-        'Direct hires placed into your contact center, on your badge, against your quality bar. Senior-recruiter screening, real cohort fit, and a 90-day attrition guarantee on every assignment.',
+      headline: 'Direct Hire Call Center Staffing for In-House Teams',
+      subhead: 'When you need permanent agents on your own badge — not contractors on a vendor floor — direct hire call center staffing screens for people who stay. We recruit, vet, and place full-time customer service, sales, and support agents directly into your in-house contact center, against your quality bar and employer brand. Every placement is screened tenure-first and backed by a 90-day attrition guarantee written into the SOW.',
     },
     problem: `Captive contact centers want what BPOs can't always give them: agents who join the company, not the floor. The hiring problem is different — longer tenure expectations, internal mobility paths, employer brand to protect, and a benefits package that has to land cleanly.
 
@@ -330,20 +297,31 @@ Most staffing firms apply BPO recruiting playbooks to captive hiring and get bur
         q: 'What if an assignment leaves before 90 days?',
         a: 'We replace at no charge. The replacement guarantee is written into every SOW.',
       },
+      {
+        q: 'What is direct hire call center staffing?',
+        a: 'Direct hire call center staffing means we recruit and screen permanent agents and place them directly onto your payroll and badge, inside your in-house contact center. Unlike our pay-per-hour model where agents stay on our payroll, a direct hire becomes your full-time employee — we handle sourcing, tenure-first screening, and a 90-day attrition guarantee.',
+      },
+      {
+        q: 'How is direct hire different from contract or staff augmentation?',
+        a: 'Contract staffing keeps agents on the agency\'s payroll with month-to-month flexibility and free agent swaps. Direct hire converts the candidate into your permanent employee from day one — better for protecting employer brand, building internal-mobility paths, and roles you expect to keep for years.',
+      },
+      {
+        q: 'Do you guarantee direct hire placements?',
+        a: 'Yes. Every direct placement carries a 90-day attrition guarantee written into the SOW — if a hire leaves in the first 90 days, we replace them at no charge. Across recent engagements, 76% of placements are still in role at 12 months.',
+      },
     ],
   },
   {
     slug: 'compliance-licensed',
     name: 'Compliance & Licensed Roles',
-    metaTitle: 'Licensed Call Center Agents Staffing — NMLS, HIPAA, PCI, SOC 2',
+    metaTitle: 'Licensed Call Center Agents Staffing',
     metaDescription:
-      'Licensed call center agents staffing — NMLS licensed agents staffing, state-insurance, HIPAA and PCI-cleared. License verified at submission. Active pipelines for healthcare, finance, insurance.',
+      'Licensed call center agents staffing — NMLS, state-insurance, HIPAA and PCI-cleared agents, license verified at submission. Deploy in ~72 hours. Book a call.',
     heroImage: '/images/office-phone.jpg',
     hero: {
       eyebrow: 'Solutions',
-      headline: 'Licensed call center agents — screened to your regulator, not just your scorecard.',
-      subhead:
-        'NMLS licensed agents staffing, state-insurance, HIPAA-cleared, PCI-cleared and SOC 2-aware agents. Active pipelines for healthcare, financial services and insurance — license verified at submission, never at offer.',
+      headline: 'Licensed & Compliant Call Center Agents, Verified Before They Ever Reach Your Shortlist',
+      subhead: 'When your floor is regulated, a generic "licensed agent" requisition isn\'t enough — an expired NMLS license or a missed background-check window means the agent legally can\'t take a call on day one. Our licensed call center agents staffing carries warm, year-round pipelines of NMLS, state-insurance, HIPAA-cleared, PCI-cleared and SOC 2-aware agents, with every license verified at submission, never at offer. Agents stay on our payroll and you pay only for hours worked — so you add compliant capacity in roughly 72 hours without taking on the HR, licensing and re-certification burden yourself.',
     },
     problem: `Regulated contact-center work has a recruiting problem that generic staffing firms don't see: license currency, background check timing, training-hour minimums, and disclosure-handling competence are all real constraints — and missing any of them means the assignment can't legally take calls on day one. Licensed call center agents staffing is a different discipline — and NMLS licensed agents staffing in particular is its own pipeline that has to be warm-kept year-round, not built reactively.
 
@@ -391,6 +369,18 @@ Most generalist firms place to a "licensed agent" requisition and hope the candi
       {
         q: 'Do you handle the regulator-specific training itself?',
         a: 'No — we recruit the talent and verify they meet baseline. Regulator-specific training is delivered by your team or your training partner. We coordinate the calendar.',
+      },
+      {
+        q: 'Are your call center agents HIPAA and PCI compliant?',
+        a: 'Yes. We maintain active pipelines of HIPAA-cleared and PCI-cleared agents, and every shortlisted candidate\'s clearance is verified at submission. Each cohort also completes a tailored compliance refresher (HIPAA, PCI, FCRA, Reg E or TCPA as applicable) before going live.',
+      },
+      {
+        q: 'How does NMLS licensed agents staffing work and how is the license verified?',
+        a: 'We keep NMLS-licensed agent pipelines warm year-round rather than building reactively. Before a candidate reaches your shortlist we confirm the license is current and unrestricted, run background and NPDB checks, and score disclosure handling in a recorded role-play — so there are no failed-licensure surprises at offer.',
+      },
+      {
+        q: 'Who is responsible if a compliance issue arises after an agent starts?',
+        a: 'Agents stay on our payroll, so we own license currency, re-certification tracking and replacement. If an agent\'s fit or compliance standing changes we swap them at no charge, and our 90-day attrition guarantee is written into every SOW — across active engagements we\'ve recorded zero compliance violations in the last 24 months.',
       },
     ],
   },

@@ -80,7 +80,7 @@ export function ProcessSteps({
                       sizes="(max-width: 1024px) 100vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-br from-navy-950/85 via-navy-950/55 to-navy-950/30" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/45 to-black/25" />
 
                     {/* Giant step number watermark */}
                     <div

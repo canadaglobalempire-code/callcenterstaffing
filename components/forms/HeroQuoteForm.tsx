@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, forwardRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -167,7 +167,7 @@ export function HeroQuoteForm() {
                 />
               </Field>
 
-              <div className="grid grid-cols-2 gap-3.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div className="flex flex-col gap-1.5">
                   <label htmlFor="agentCount" className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/70">
                     Agents needed
@@ -266,16 +266,15 @@ function Field({
   );
 }
 
-const Select = ({
-  options,
-  placeholder,
-  className,
-  ...rest
-}: React.SelectHTMLAttributes<HTMLSelectElement> & {
-  options: { value: string; label: string }[];
-  placeholder?: string;
-}) => (
+const Select = forwardRef<
+  HTMLSelectElement,
+  React.SelectHTMLAttributes<HTMLSelectElement> & {
+    options: { value: string; label: string }[];
+    placeholder?: string;
+  }
+>(({ options, placeholder, className, ...rest }, ref) => (
   <select
+    ref={ref}
     {...rest}
     className={cn(
       fieldClass,
@@ -297,4 +296,5 @@ const Select = ({
       </option>
     ))}
   </select>
-);
+));
+Select.displayName = 'Select';

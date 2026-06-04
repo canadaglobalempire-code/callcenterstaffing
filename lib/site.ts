@@ -25,9 +25,11 @@ export const site = {
       full: '2500 N Central Ave, Suite 900, Phoenix, AZ 85004',
     },
   },
+  // NOTE: only ship sameAs/social URLs that actually resolve — a 404 sameAs
+  // weakens trust. Add facebook/crunchbase/clutch here once those profiles exist.
   social: {
     linkedin: 'https://www.linkedin.com/company/call-center-staffing',
-    twitter: 'https://twitter.com/ccs_staffing',
+    x: 'https://x.com/ccs_staffing',
   },
   founded: '2003',
 } as const;

@@ -45,7 +45,7 @@ export default function BlogIndexPage() {
       <BreadcrumbSchema items={crumbs} />
 
       {/* HERO */}
-      <section className="relative isolate overflow-hidden bg-navy-950 text-white pt-40 pb-20 lg:pt-48 lg:pb-28">
+      <section className="relative isolate overflow-hidden bg-black text-white pt-40 pb-20 lg:pt-48 lg:pb-28">
         <Image
           src="/images/cc-team-plan.jpg"
           alt="Operator notes from the floor"
@@ -56,11 +56,11 @@ export default function BlogIndexPage() {
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/75 to-navy-950/50"
+          className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/60 to-black/40"
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/20"
+          className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/15"
         />
         <div aria-hidden className="absolute inset-0 pattern-grid opacity-20" />
         <div
@@ -146,7 +146,7 @@ export default function BlogIndexPage() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/30 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
               </div>
 
               <div className="lg:col-span-6 flex flex-col justify-center">
@@ -209,7 +209,7 @@ export default function BlogIndexPage() {
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy-950/35 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
                     <span className="absolute top-3 left-3 inline-flex items-center gap-2 rounded-full bg-white/95 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-accent-500 shadow-sm">
                       {post.category}
                     </span>

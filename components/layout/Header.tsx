@@ -89,7 +89,7 @@ const NAV: NavItem[] = [
   },
   {
     label: 'Solutions',
-    href: '/solutions/scaling-existing-call-center',
+    href: '/solutions',
     layout: 'solutions',
     children: [
       {
@@ -109,12 +109,6 @@ const NAV: NavItem[] = [
         href: '/solutions/seasonal-surge',
         desc: 'Pre-built bench for Q4, open enrollment, tax season.',
         icon: CalendarClock,
-      },
-      {
-        label: 'BPO & outsourcer staffing',
-        href: '/solutions/bpo-staffing',
-        desc: 'Headcount for outsourcers running multi-client floors.',
-        icon: Building2,
       },
       {
         label: 'Direct-to-employer staffing',
@@ -160,75 +154,69 @@ const NAV: NavItem[] = [
   },
   {
     label: 'Locations',
-    href: '/locations/mexico',
+    href: '/locations',
     layout: 'locations',
     children: [
       {
-        label: 'United States',
-        href: '/locations/united-states',
-        desc: 'Onshore · License-verified · Native English',
-        flag: '🇺🇸',
+        label: 'North America',
+        href: '/locations/north-america',
+        desc: 'Onshore US & Canada · Native English · All US time zones',
+        flag: '🌎',
       },
       {
-        label: 'Mexico',
-        href: '/locations/mexico',
-        desc: 'Nearshore · CT/ET overlap · Bilingual',
-        flag: '🇲🇽',
+        label: 'South America',
+        href: '/locations/south-america',
+        desc: 'Nearshore · Bilingual depth · CT/ET overlap',
+        flag: '🌎',
       },
       {
-        label: 'Colombia',
-        href: '/locations/colombia',
+        label: 'Central America',
+        href: '/locations/central-america',
         desc: 'Nearshore · Bilingual · Cost-efficient',
-        flag: '🇨🇴',
+        flag: '🌎',
       },
       {
-        label: 'Philippines',
-        href: '/locations/philippines',
-        desc: 'Offshore · 24/7 coverage · Native English',
-        flag: '🇵🇭',
+        label: 'Caribbean',
+        href: '/locations/caribbean',
+        desc: 'Nearshore · Native English · ET overlap',
+        flag: '🌎',
       },
       {
-        label: 'South Africa',
-        href: '/locations/south-africa',
+        label: 'Europe',
+        href: '/locations/europe',
+        desc: 'Multilingual · EU time-zone coverage',
+        flag: '🌍',
+      },
+      {
+        label: 'Africa',
+        href: '/locations/africa',
         desc: 'Offshore · Neutral accent · UK time-zone',
-        flag: '🇿🇦',
+        flag: '🌍',
       },
       {
-        label: 'Phoenix, AZ',
-        href: '/locations/phoenix-az',
-        desc: 'Sun-belt · Healthcare-payer hub · Bilingual',
-        flag: '🇺🇸',
+        label: 'Asia',
+        href: '/locations/asia',
+        desc: 'Offshore · 24/7 coverage · Native English',
+        flag: '🌏',
       },
       {
-        label: 'Tampa, FL',
-        href: '/locations/tampa-fl',
-        desc: 'Finance & insurance corridor · ET coverage',
-        flag: '🇺🇸',
+        label: 'Australia',
+        href: '/locations/australia',
+        desc: 'APAC time-zone · Native English',
+        flag: '🌏',
       },
       {
-        label: 'San Antonio, TX',
-        href: '/locations/san-antonio-tx',
-        desc: 'Deepest US bilingual bench · Veteran talent',
-        flag: '🇺🇸',
-      },
-      {
-        label: 'Atlanta, GA',
-        href: '/locations/atlanta-ga',
-        desc: 'CX leadership bench · Healthcare/CX hub',
-        flag: '🇺🇸',
-      },
-      {
-        label: 'Charlotte, NC',
-        href: '/locations/charlotte-nc',
-        desc: 'Banking capital of the southeast · Licensed',
-        flag: '🇺🇸',
+        label: 'Middle East',
+        href: '/locations/middle-east',
+        desc: 'Multilingual · Arabic & English coverage',
+        flag: '🌍',
       },
     ],
-    footer: { label: 'See global coverage', href: '/#regions' },
+    footer: { label: 'See global coverage', href: '/locations' },
   },
   {
     label: 'Roles',
-    href: '/roles/bilingual-agents',
+    href: '/roles',
     layout: 'roles',
     children: [
       { label: 'Inbound CS agents', href: '/roles/inbound-customer-service', icon: Headphones },
@@ -240,11 +228,11 @@ const NAV: NavItem[] = [
       { label: 'Trainers & QA coaches', href: '/roles/trainers', icon: GraduationCap },
       { label: 'Operations managers', href: '/roles/operations-managers', icon: Briefcase },
     ],
-    footer: { label: 'View all roles', href: '/#roles' },
+    footer: { label: 'View all roles', href: '/roles' },
   },
   {
     label: 'Resources',
-    href: '/blog',
+    href: '/resources',
     layout: 'resources',
     children: [
       { label: 'Why us', href: '/why-us', desc: 'Specialist vs generalist — head-to-head.', icon: Award },
@@ -431,6 +419,7 @@ function DropdownPanel({ item, onClose }: { item: NavItem; onClose: () => void }
     <div
       className={cn(
         'absolute left-1/2 top-full -translate-x-1/2 pt-3 animate-fade-in',
+        'max-w-[calc(100vw-2rem)]',
         widthClass,
       )}
     >

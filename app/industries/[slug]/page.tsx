@@ -144,11 +144,11 @@ export default function IndustryPage({ params }: { params: Params }) {
         />
         <div
           aria-hidden
-          className="from-navy-950/95 via-navy-950/75 to-navy-950/50 absolute inset-0 bg-gradient-to-r"
+          className="from-black/75 via-black/60 to-black/40 absolute inset-0 bg-gradient-to-r"
         />
         <div
           aria-hidden
-          className="to-navy-950/20 absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent"
+          className="to-black/15 absolute inset-0 bg-gradient-to-t from-black via-transparent"
         />
         <div aria-hidden className="pattern-grid absolute inset-0 opacity-20" />
         <div
@@ -284,7 +284,7 @@ export default function IndustryPage({ params }: { params: Params }) {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
-                <div className="from-navy-950/50 absolute inset-0 bg-gradient-to-t via-transparent to-transparent" />
+                <div className="from-black/40 absolute inset-0 bg-gradient-to-t via-transparent to-transparent" />
                 <div className="ring-navy-950/5 absolute bottom-5 left-5 right-5 flex items-center gap-3 rounded-2xl bg-white/95 px-5 py-4 shadow-2xl ring-1 backdrop-blur-sm">
                   <span className="grid h-10 w-10 flex-none place-items-center rounded-xl bg-accent-500 text-white">
                     <ShieldCheck className="h-5 w-5" strokeWidth={2.25} />
@@ -412,7 +412,7 @@ export default function IndustryPage({ params }: { params: Params }) {
                     sizes="(max-width: 1024px) 100vw, 40vw"
                     className="object-cover"
                   />
-                  <div className="from-navy-950/60 absolute inset-0 bg-gradient-to-t via-transparent to-transparent" />
+                  <div className="from-black/50 absolute inset-0 bg-gradient-to-t via-transparent to-transparent" />
                   <div className="absolute bottom-5 left-5 right-5">
                     <span className="inline-flex items-center gap-2 rounded-full bg-accent-500 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white shadow-lg">
                       Case highlight
