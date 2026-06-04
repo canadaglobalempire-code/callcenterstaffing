@@ -42,7 +42,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ['var(--font-display)', 'serif'],
+        display: ['var(--font-display)', 'system-ui', 'sans-serif'],
         sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
       },
       fontSize: {

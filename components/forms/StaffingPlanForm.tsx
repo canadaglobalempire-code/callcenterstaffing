@@ -114,7 +114,7 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
         <span className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-brand-600 text-white">
           <Check className="h-6 w-6" />
         </span>
-        <h3 className="mt-5 text-xl font-semibold text-navy-950">Quote request received.</h3>
+        <h3 className="mt-5 font-display text-xl font-semibold tracking-[-0.01em] text-navy-950">Quote request received.</h3>
         <p className="mt-2 text-navy-700 max-w-sm mx-auto">
           A senior recruiter will respond within one business day with a written quote and
           sourcing timeline.

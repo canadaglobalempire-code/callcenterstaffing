@@ -16,10 +16,10 @@ const displayStyles: Record<'xl' | 'l' | 'm', string> = {
 };
 
 const proseStyles: Record<1 | 2 | 3 | 4, string> = {
-  1: 'text-3xl lg:text-4xl font-semibold',
-  2: 'text-2xl lg:text-3xl font-semibold',
-  3: 'text-xl font-semibold leading-[1.3]',
-  4: 'text-lg font-semibold leading-[1.4]',
+  1: 'font-display text-3xl lg:text-4xl font-semibold tracking-[-0.02em]',
+  2: 'font-display text-2xl lg:text-3xl font-semibold tracking-[-0.02em]',
+  3: 'font-display text-xl font-semibold leading-[1.3] tracking-[-0.01em]',
+  4: 'font-display text-lg font-semibold leading-[1.4] tracking-[-0.01em]',
 };
 
 export function Heading({

@@ -77,7 +77,7 @@ Where most vendors hand you a stack of resumes and walk away, we report against 
       },
     ],
     outcomes: [
-      { metric: '< 72 hrs', description: 'Average time to first qualified shortlist' },
+      { metric: 'Less than 72 hrs', description: 'Average time to first qualified shortlist' },
       { metric: '+22 pts', description: '90-day retention vs. prior recruiting model' },
       { metric: '94%', description: 'Average cohort completion through ramp' },
     ],
@@ -202,7 +202,7 @@ We embed with your client-services and ops leads, run weekly calibration with ea
     ],
     outcomes: [
       { metric: '+24%', description: 'Floor SLA achievement vs. prior staffing model' },
-      { metric: '< 14 days', description: 'Average cohort start from new-client SOW signature' },
+      { metric: 'Less than 14 days', description: 'Average cohort start from new-client SOW signature' },
       { metric: '4 sites', description: 'Largest active engagement — across three countries' },
     ],
     relatedRoles: [
@@ -322,7 +322,7 @@ The trap most operators fall into is staffing voice-only and "redeploying to cha
       },
     ],
     outcomes: [
-      { metric: '< 72 hrs', description: 'Average time to first qualified shortlist' },
+      { metric: 'Less than 72 hrs', description: 'Average time to first qualified shortlist' },
       { metric: '94%', description: 'Average cohort completion through ramp' },
       { metric: '+18 pts', description: 'Per-channel CSAT vs. voice-only redeployment model' },
     ],
@@ -442,7 +442,7 @@ Done badly, a customer service staffing agency hands you resumes and walks away.
       },
     ],
     outcomes: [
-      { metric: '< 72 hrs', description: 'Average time to first qualified shortlist' },
+      { metric: 'Less than 72 hrs', description: 'Average time to first qualified shortlist' },
       { metric: '+22 pts', description: '90-day retention vs. prior recruiting model' },
       { metric: '94%', description: 'Average cohort completion through ramp' },
     ],
@@ -562,7 +562,7 @@ Done badly, outsourced call center staffing creates a tug-of-war between brand a
     ],
     outcomes: [
       { metric: '+22 pts', description: '90-day retention vs. BPO-internal recruiting alone' },
-      { metric: '< 72 hrs', description: 'Average time to first qualified shortlist for BPO onboarding' },
+      { metric: 'Less than 72 hrs', description: 'Average time to first qualified shortlist for BPO onboarding' },
       { metric: '94%', description: 'Average cohort completion through ramp' },
     ],
     relatedRoles: [
@@ -680,7 +680,7 @@ Reporting is to your QA scorecard with bilingual fluency scored at the level you
       },
     ],
     outcomes: [
-      { metric: '< 72 hrs', description: 'Average time to first qualified bilingual shortlist' },
+      { metric: 'Less than 72 hrs', description: 'Average time to first qualified bilingual shortlist' },
       { metric: '94%', description: 'Cohort completion through ramp across Mexican cities' },
       { metric: '18 mo+', description: 'Average tenure for nearshore placements at our largest engagement' },
     ],
@@ -804,7 +804,7 @@ The trap most operators fall into with offshore call center hiring is treating t
       },
     ],
     outcomes: [
-      { metric: '< 72 hrs', description: 'Average time to first qualified offshore shortlist' },
+      { metric: 'Less than 72 hrs', description: 'Average time to first qualified offshore shortlist' },
       { metric: '24 mo+', description: 'Average prior CX experience per agent at largest engagement' },
       { metric: '92%', description: 'Cohort completion through ramp across Philippine cities' },
     ],
@@ -928,7 +928,7 @@ Compliance-cleared roles get specialised pipelines. NMLS, state-insurance, HIPAA
       },
     ],
     outcomes: [
-      { metric: '< 72 hrs', description: 'Average time to first qualified onshore shortlist' },
+      { metric: 'Less than 72 hrs', description: 'Average time to first qualified onshore shortlist' },
       { metric: '100%', description: 'License verification at shortlist for compliance-cleared roles' },
       { metric: '40+ states', description: 'Active remote-first placement coverage' },
     ],
@@ -1052,7 +1052,7 @@ Where most vendors trust the resume, we trust the recording. That is why operato
       },
     ],
     outcomes: [
-      { metric: '< 72 hrs', description: 'Average time to first qualified bilingual shortlist' },
+      { metric: 'Less than 72 hrs', description: 'Average time to first qualified bilingual shortlist' },
       { metric: '30+', description: 'Languages actively recruited and scored to level' },
       { metric: '+18 pts', description: 'CSAT lift on bilingual queues vs. self-reported fluency hires' },
     ],

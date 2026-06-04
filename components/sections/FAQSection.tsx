@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
 import { Section } from '@/components/layout/Section';
@@ -14,6 +15,8 @@ type FAQSectionProps = {
   background?: 'white' | 'neutral';
   ctaHref?: string;
   ctaLabel?: string;
+  image?: string;
+  imageAlt?: string;
 };
 
 export function FAQSection({
@@ -24,6 +27,8 @@ export function FAQSection({
   background = 'white',
   ctaHref,
   ctaLabel,
+  image,
+  imageAlt = '',
 }: FAQSectionProps) {
   return (
     <Section background={background}>
@@ -43,6 +48,18 @@ export function FAQSection({
                 {ctaLabel}
                 <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
+            )}
+            {image && (
+              <div className="ring-navy-950/5 relative mt-8 hidden aspect-[4/3] overflow-hidden rounded-3xl shadow-xl ring-1 lg:block">
+                <Image
+                  src={image}
+                  alt={imageAlt}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+              </div>
             )}
           </div>
           <div className="lg:col-span-7">

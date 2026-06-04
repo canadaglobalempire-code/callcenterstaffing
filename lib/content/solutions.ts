@@ -36,7 +36,7 @@ Operators end up running recruiting twice: once with a vendor, and once again th
       },
     ],
     outcomes: [
-      { metric: '< 30 days', description: 'Average ramp from plan to first cohort live' },
+      { metric: 'Less than 30 days', description: 'Average ramp from plan to first cohort live' },
       { metric: '+18%', description: '90-day retention vs. prior recruiting model (avg.)' },
       { metric: '3.2%', description: 'No-show rate at start date' },
     ],
@@ -197,7 +197,7 @@ The result: classes start late, ramp into go-live, quality scores never recover,
       },
     ],
     outcomes: [
-      { metric: '< 25 days', description: 'Average ramp from cohort kickoff to first qualified call' },
+      { metric: 'Less than 25 days', description: 'Average ramp from cohort kickoff to first qualified call' },
       { metric: '92%', description: 'Of placements complete the seasonal contract' },
       { metric: '+18%', description: 'Re-engagement rate for top performers next season' },
     ],
@@ -347,7 +347,7 @@ Most generalist firms place to a "licensed agent" requisition and hope the candi
     ],
     outcomes: [
       { metric: '100%', description: 'License verification at shortlist — no failed-licensure starts' },
-      { metric: '< 21 days', description: 'Average shortlist for licensed role pipelines' },
+      { metric: 'Less than 21 days', description: 'Average shortlist for licensed role pipelines' },
       { metric: '0', description: 'Compliance violations across active engagements (last 24 months)' },
     ],
     rolesIncluded: [

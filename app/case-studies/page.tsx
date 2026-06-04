@@ -187,7 +187,7 @@ const CASES: CaseStudy[] = [
 const OVERVIEW_STATS: { value: string; label: string; icon: typeof Clock }[] = [
   { value: '+22 pts', label: '90-day retention vs prior model', icon: TrendingUp },
   { value: '94%', label: 'cohort completion', icon: Award },
-  { value: '<72 hrs', label: 'first qualified shortlist', icon: Clock },
+  { value: 'Less than 72 hrs', label: 'first qualified shortlist', icon: Clock },
   { value: '200+', label: 'active operators served', icon: Users },
 ];
 

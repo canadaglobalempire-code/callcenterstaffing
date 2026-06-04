@@ -178,35 +178,39 @@ export default function ServicePage({ params }: { params: Params }) {
       {/* INTRO + WHAT IS IT */}
       <Section id="what-is-it" background="white">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
-            <div className="lg:col-span-5">
-              <Eyebrow>What it is</Eyebrow>
-              <Heading level={2} display="m" className="mt-5">
-                What is {svc.primaryKeyword}?
-              </Heading>
-              <p className="mt-6 text-[15px] leading-relaxed text-navy-700">{svc.intro}</p>
+          {/* Lead */}
+          <div className="max-w-3xl">
+            <Eyebrow>What it is</Eyebrow>
+            <Heading level={2} display="m" className="mt-5">
+              What is {svc.primaryKeyword}?
+            </Heading>
+            <p className="mt-6 text-body-l text-navy-700">{svc.intro}</p>
+          </div>
 
-              <div className="ring-navy-950/5 relative mt-8 aspect-[4/3] overflow-hidden rounded-3xl shadow-xl ring-1">
-                <Image
-                  src={supportImage}
-                  alt={`${svc.name} staffing specialists`}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover"
-                />
-                <div className="from-black/30 absolute inset-0 bg-gradient-to-t via-transparent to-transparent" />
-                <div className="ring-navy-950/5 absolute bottom-5 left-5 right-5 rounded-2xl bg-white/95 px-5 py-4 shadow-2xl ring-1 backdrop-blur-sm">
-                  <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-accent-500">
-                    Specialist recruiters
-                  </div>
-                  <div className="mt-1 font-display text-sm font-extrabold leading-tight text-navy-950">
-                    20+ years recruiting only into the contact-center industry
-                  </div>
+          {/* Two equal columns */}
+          <div className="mt-10 grid items-stretch gap-6 lg:grid-cols-2">
+            {/* Left: specialist image card */}
+            <div className="ring-navy-950/5 relative min-h-[340px] overflow-hidden rounded-3xl shadow-xl ring-1">
+              <Image
+                src={supportImage}
+                alt={`${svc.name} staffing specialists`}
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+              <div className="ring-navy-950/5 absolute bottom-5 left-5 right-5 rounded-2xl bg-white/95 px-5 py-4 shadow-2xl ring-1 backdrop-blur-sm">
+                <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-accent-500">
+                  Specialist recruiters
+                </div>
+                <div className="mt-1 font-display text-sm font-extrabold leading-tight text-navy-950">
+                  20+ years recruiting only into the contact-center industry
                 </div>
               </div>
             </div>
 
-            <div className="space-y-5 text-[15px] leading-relaxed text-navy-700 lg:col-span-7">
+            {/* Right: what-is-it content card (equal weight) */}
+            <div className="flex flex-col justify-center space-y-5 rounded-3xl border border-navy-950/8 bg-ink-50 p-7 text-[15px] leading-relaxed text-navy-700 lg:p-9">
               {svc.whatIsIt.split('\n\n').map((p, i) => (
                 <p key={i}>{p}</p>
               ))}
@@ -433,6 +437,10 @@ export default function ServicePage({ params }: { params: Params }) {
         heading={`${svc.name} — common questions.`}
         items={svc.faqs}
         background="neutral"
+        image="/images/cc-discussion.jpg"
+        imageAlt={`Talk to a ${svc.name.toLowerCase()} recruiter`}
+        ctaHref="/contact"
+        ctaLabel="Talk to a recruiter"
       />
 
       <StaffingPlanCTA />

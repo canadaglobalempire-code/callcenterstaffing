@@ -37,7 +37,7 @@ const SHRINKAGE_OPTIONS = [
 ] as const;
 
 const ATTRITION_OPTIONS = [
-  { value: 0.10, label: '<15% (top quartile)' },
+  { value: 0.10, label: 'Less than 15% (top quartile)' },
   { value: 0.20, label: '15–25% (average)' },
   { value: 0.325, label: '25–40% (high)' },
   { value: 0.50, label: '>40% (urgent)' },

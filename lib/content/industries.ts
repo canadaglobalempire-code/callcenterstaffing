@@ -60,7 +60,7 @@ export const INDUSTRIES: Industry[] = [
     },
     outcomes: [
       { metric: '100%', description: 'HIPAA training currency verified at shortlist' },
-      { metric: '< 21 days', description: 'Average shortlist for HIPAA-cleared cohorts' },
+      { metric: 'Less than 21 days', description: 'Average shortlist for HIPAA-cleared cohorts' },
       { metric: '+18 pts', description: '90-day retention vs. generalist staffing baseline' },
     ],
     faqs: [
@@ -158,7 +158,7 @@ export const INDUSTRIES: Industry[] = [
     outcomes: [
       { metric: '0', description: 'Compliance violations across active engagements (24 months)' },
       { metric: '100%', description: 'NMLS verification at shortlist — no failed-licensure starts' },
-      { metric: '< 21 days', description: 'Average shortlist for licensed financial services roles' },
+      { metric: 'Less than 21 days', description: 'Average shortlist for licensed financial services roles' },
     ],
     faqs: [
       {
@@ -250,7 +250,7 @@ export const INDUSTRIES: Industry[] = [
     },
     outcomes: [
       { metric: '100%', description: 'License + line-of-authority verified at shortlist' },
-      { metric: '< 25 days', description: 'Average ramp for licensed multi-state cohorts' },
+      { metric: 'Less than 25 days', description: 'Average ramp for licensed multi-state cohorts' },
       { metric: '+22 pts', description: '90-day retention vs. prior recruiting model' },
     ],
     faqs: [
@@ -530,7 +530,7 @@ export const INDUSTRIES: Industry[] = [
     outcomes: [
       { metric: '24/7', description: 'Live coverage across three language pairs' },
       { metric: '+11 pts', description: 'Night-shift CSAT vs. prior staffing model' },
-      { metric: '< 36 hrs', description: 'Avg. irrops weather-event clear time' },
+      { metric: 'Less than 36 hrs', description: 'Avg. irrops weather-event clear time' },
     ],
     faqs: [
       {
@@ -623,7 +623,7 @@ export const INDUSTRIES: Industry[] = [
     outcomes: [
       { metric: '+34%', description: 'Tier 1 first-contact resolution vs. baseline' },
       { metric: '-78%', description: 'CSM-covered escalation volume after ramp (avg.)' },
-      { metric: '< 30 days', description: 'Average ramp from plan sign to first cohort live' },
+      { metric: 'Less than 30 days', description: 'Average ramp from plan sign to first cohort live' },
     ],
     faqs: [
       {
@@ -715,7 +715,7 @@ export const INDUSTRIES: Industry[] = [
     },
     outcomes: [
       { metric: '0', description: 'PUC complaints across active engagements (12 months)' },
-      { metric: '< 72 hrs', description: 'Storm-surge stand-up time on retainer' },
+      { metric: 'Less than 72 hrs', description: 'Storm-surge stand-up time on retainer' },
       { metric: '+19%', description: 'Assistance-program enrollment vs. baseline' },
     ],
     faqs: [
@@ -807,7 +807,7 @@ export const INDUSTRIES: Industry[] = [
         'Pipeline build started July 21; first cohort of 35 live October 14; full 110 live November 4 with bilingual Spanish bench in Monterrey and overnight dispatch coverage in Manila. Q4 exception-resolution time held at 1.4x baseline (vs. 3x prior year); January claims-intake backlog cleared in 9 days post-peak.',
     },
     outcomes: [
-      { metric: '< 30 days', description: 'Average ramp from plan sign to first cohort live' },
+      { metric: 'Less than 30 days', description: 'Average ramp from plan sign to first cohort live' },
       { metric: '-58%', description: 'Q4 exception-resolution time vs. prior staffing baseline' },
       { metric: '92%', description: 'Of seasonal cohort completes the contract' },
     ],
@@ -902,7 +902,7 @@ export const INDUSTRIES: Industry[] = [
     outcomes: [
       { metric: '0', description: 'Title VI complaints across active state engagements' },
       { metric: '7+', description: 'Languages typically covered per state engagement (LEP)' },
-      { metric: '< 35 days', description: 'Average ramp from plan sign to first cohort live' },
+      { metric: 'Less than 35 days', description: 'Average ramp from plan sign to first cohort live' },
     ],
     faqs: [
       {
@@ -995,7 +995,7 @@ export const INDUSTRIES: Industry[] = [
     outcomes: [
       { metric: '+14%', description: 'Deposit-conversion rate on inbound inquiry vs. baseline' },
       { metric: '0', description: 'FERPA-related escalations across active engagements' },
-      { metric: '< 30 days', description: 'Average ramp for cycle-aligned enrollment cohorts' },
+      { metric: 'Less than 30 days', description: 'Average ramp for cycle-aligned enrollment cohorts' },
     ],
     faqs: [
       {
@@ -1088,7 +1088,7 @@ export const INDUSTRIES: Industry[] = [
     },
     outcomes: [
       { metric: '+14 pts', description: 'FCR lift on tier 2 queues post-screening upgrade' },
-      { metric: '< 8%', description: 'Ticket-handoff drift after 60-day calibration cycle' },
+      { metric: 'Less than 8%', description: 'Ticket-handoff drift after 60-day calibration cycle' },
       { metric: '24/7', description: 'Coverage models we staff across 14 countries' },
     ],
     faqs: [

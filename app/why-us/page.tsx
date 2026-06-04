@@ -163,7 +163,7 @@ const OUTCOMES = [
   },
   {
     icon: Clock,
-    metric: '<72 hrs',
+    metric: 'Less than 72 hrs',
     label: 'time to first slate',
     body: 'On most engagements, the first batch of qualified, recorded candidates lands within 72 hours of plan sign-off.',
   },
