@@ -2,7 +2,18 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, MapPin, Languages, Clock, Globe2, CheckCircle2 } from 'lucide-react';
+import {
+  ArrowRight,
+  MapPin,
+  Languages,
+  Clock,
+  Globe2,
+  Users,
+  GraduationCap,
+  ShieldCheck,
+  Target,
+  CheckCircle2,
+} from 'lucide-react';
 import { Container } from '@/components/layout/Container';
 import { Section } from '@/components/layout/Section';
 import { Eyebrow } from '@/components/ui/Eyebrow';
@@ -10,20 +21,13 @@ import { Heading } from '@/components/ui/Heading';
 import { Button } from '@/components/ui/Button';
 import { TrustBar } from '@/components/sections/TrustBar';
 import { CTABand } from '@/components/sections/CTABand';
+import { FAQSection } from '@/components/sections/FAQSection';
 import { HeroQuoteForm } from '@/components/forms/HeroQuoteForm';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { FAQSchema } from '@/components/seo/FAQSchema';
 import { REGIONS, getRegion } from '@/lib/content/regions';
 import { site } from '@/lib/site';
 import { alternatesFor } from '@/lib/seo';
-
-const ROLES_WE_STAFF = [
-  { label: 'Inbound customer service', href: '/roles/inbound-customer-service' },
-  { label: 'Outbound sales agents', href: '/roles/outbound-sales-agents' },
-  { label: 'Bilingual agents', href: '/roles/bilingual-agents' },
-  { label: 'Team leads & supervisors', href: '/roles/team-leads-supervisors' },
-  { label: 'QA analysts', href: '/roles/qa-analysts' },
-  { label: 'Workforce management', href: '/roles/workforce-management' },
-];
 
 export function generateStaticParams() {
   return REGIONS.map((r) => ({ slug: r.slug }));
@@ -33,19 +37,19 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const region = getRegion(params.slug);
   if (!region) return {};
   return {
-    title: `Call Center Staffing in ${region.name} — Trained Agents, Deployed to You`,
-    description: `${region.shore} call center staffing across ${region.name}. ${region.blurb}`,
+    title: region.metaTitle,
+    description: region.metaDescription,
     alternates: alternatesFor(`/locations/${region.slug}`),
     openGraph: {
-      title: `Call Center Staffing in ${region.name}`,
-      description: region.blurb,
+      title: region.metaTitle,
+      description: region.metaDescription,
       url: `${site.url}/locations/${region.slug}`,
       images: [{ url: region.image, width: 1200, height: 630, alt: `Call center staffing in ${region.name}` }],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `Call Center Staffing in ${region.name}`,
-      description: region.blurb,
+      title: region.metaTitle,
+      description: region.metaDescription,
     },
   };
 }
@@ -60,9 +64,18 @@ export default function RegionPage({ params }: { params: { slug: string } }) {
     { label: region.name, href: `/locations/${region.slug}` },
   ];
 
+  const snapshot = [
+    { icon: Users, label: 'Talent pool', value: region.talentSnapshot.talentPool },
+    { icon: Languages, label: 'English', value: region.talentSnapshot.englishProficiency },
+    { icon: GraduationCap, label: 'Avg. tenure', value: region.talentSnapshot.avgTenure },
+    { icon: Clock, label: 'Time zones', value: region.talentSnapshot.timeZones },
+    { icon: Globe2, label: 'Languages', value: region.talentSnapshot.languages },
+  ];
+
   return (
     <>
       <BreadcrumbSchema items={crumbs} />
+      <FAQSchema items={region.faqs} />
 
       {/* HERO */}
       <section className="relative isolate overflow-hidden bg-black text-white pt-40 pb-20 lg:pt-48 lg:pb-28">
@@ -86,16 +99,12 @@ export default function RegionPage({ params }: { params: { slug: string } }) {
               {region.name} · {region.shore}
             </span>
 
-            <h1 className="mt-6 font-display text-[2.5rem] sm:text-[3.25rem] lg:text-[4.25rem] font-extrabold leading-[1.02] tracking-[-0.04em] text-white">
-              Trained call center agents in{' '}
-              <span className="relative inline-block">
-                <span className="relative z-10 text-accent-500">{region.name}.</span>
-                <span aria-hidden className="absolute inset-x-0 bottom-1 h-3 bg-accent-500/15 -z-0" />
-              </span>
+            <h1 className="mt-6 font-display text-[2.25rem] sm:text-[2.75rem] lg:text-[3.4rem] font-extrabold leading-[1.05] tracking-[-0.03em] text-white">
+              {region.h1}
             </h1>
 
-            <p className="mt-6 max-w-[560px] text-[17px] lg:text-lg leading-relaxed text-white/75">
-              {region.blurb}
+            <p className="mt-6 max-w-[600px] text-[17px] lg:text-lg leading-relaxed text-white/80">
+              {region.intro}
             </p>
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
@@ -120,72 +129,58 @@ export default function RegionPage({ params }: { params: { slug: string } }) {
 
       <TrustBar />
 
-      {/* AT A GLANCE + MARKETS */}
+      {/* WHY HERE + SNAPSHOT */}
       <Section background="white">
         <Container>
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-7">
-              <Eyebrow>Where we recruit</Eyebrow>
+              <Eyebrow>Why {region.name}</Eyebrow>
               <Heading level={2} display="l" className="mt-5 max-w-2xl">
-                Markets we recruit in across {region.name}.
+                Why companies staff agents in {region.name}.
               </Heading>
-              <p className="mt-5 text-body-l text-navy-700 max-w-prose">
-                We run the same disciplined sourcing, screening and quality bar in every market we
-                cover. Tell us the work and your volume — we&apos;ll recommend the right market in{' '}
-                {region.name} and deploy a trained team against it.
-              </p>
 
               <ul className="mt-8 grid gap-4 sm:grid-cols-2">
-                {region.markets.map((m) => (
+                {region.whyHere.map((w) => (
                   <li
-                    key={m}
-                    className="flex items-center gap-4 rounded-2xl border border-navy-950/8 bg-white p-5 transition-colors hover:border-accent-500/40"
+                    key={w.title}
+                    className="rounded-3xl border border-navy-950/8 bg-white p-6 transition-colors hover:border-accent-500/40"
                   >
-                    <span className="grid h-11 w-11 flex-none place-items-center rounded-xl bg-accent-500/10 text-accent-500">
-                      <MapPin className="h-5 w-5" strokeWidth={2} />
-                    </span>
-                    <span className="font-display text-lg font-bold tracking-tight text-navy-950">
-                      {m}
-                    </span>
+                    <div className="flex items-center gap-2 font-display text-[15px] font-bold tracking-tight text-navy-950">
+                      <CheckCircle2 className="h-5 w-5 flex-none text-accent-500" strokeWidth={2.25} />
+                      {w.title}
+                    </div>
+                    <p className="mt-3 text-[14px] leading-relaxed text-navy-700">{w.body}</p>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* At a glance */}
+            {/* Talent snapshot */}
             <aside className="lg:col-span-5">
               <div className="rounded-3xl border border-navy-950/10 bg-ink-50 p-6 lg:p-7">
                 <p className="text-eyebrow uppercase tracking-[0.16em] text-navy-700/80">
-                  {region.name} at a glance
+                  {region.name} talent snapshot
                 </p>
                 <ul className="mt-5 grid gap-5">
-                  <li className="flex items-start gap-3 border-t border-navy-950/10 pt-5 first:border-t-0 first:pt-0">
-                    <Globe2 className="h-5 w-5 mt-0.5 flex-none text-accent-500" />
-                    <div>
-                      <div className="text-[11px] font-bold uppercase tracking-wider text-navy-700/70">
-                        Model
-                      </div>
-                      <div className="font-semibold text-navy-950">{region.shore}</div>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3 border-t border-navy-950/10 pt-5">
-                    <Languages className="h-5 w-5 mt-0.5 flex-none text-accent-500" />
-                    <div>
-                      <div className="text-[11px] font-bold uppercase tracking-wider text-navy-700/70">
-                        Languages
-                      </div>
-                      <div className="font-semibold text-navy-950">{region.languages}</div>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3 border-t border-navy-950/10 pt-5">
-                    <Clock className="h-5 w-5 mt-0.5 flex-none text-accent-500" />
-                    <div>
-                      <div className="text-[11px] font-bold uppercase tracking-wider text-navy-700/70">
-                        Coverage
-                      </div>
-                      <div className="font-semibold text-navy-950">{region.coverage}</div>
-                    </div>
-                  </li>
+                  {snapshot.map((s) => {
+                    const Icon = s.icon;
+                    return (
+                      <li
+                        key={s.label}
+                        className="flex items-start gap-3 border-t border-navy-950/10 pt-5 first:border-t-0 first:pt-0"
+                      >
+                        <Icon className="h-5 w-5 mt-0.5 flex-none text-accent-500" />
+                        <div>
+                          <div className="text-[11px] font-bold uppercase tracking-wider text-navy-700/70">
+                            {s.label}
+                          </div>
+                          <div className="mt-0.5 text-[14px] font-medium leading-snug text-navy-950">
+                            {s.value}
+                          </div>
+                        </div>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </aside>
@@ -193,40 +188,73 @@ export default function RegionPage({ params }: { params: { slug: string } }) {
         </Container>
       </Section>
 
-      {/* ROLES WE STAFF */}
+      {/* KEY MARKETS */}
       <Section background="neutral">
         <Container>
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end mb-10">
+          <div className="mb-10 grid items-end gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-7">
-              <Eyebrow>Roles we staff here</Eyebrow>
+              <Eyebrow>Where we recruit</Eyebrow>
               <Heading level={2} display="l" className="mt-5 max-w-2xl">
-                Every seat on the floor, staffed in {region.name}.
+                Key markets we staff across {region.name}.
               </Heading>
             </div>
-            <p className="lg:col-span-5 text-body-l text-navy-700 max-w-prose">
-              From frontline agents to QA and workforce management — every role is trained and
-              screened, and you hear a voice sample before anyone starts.
-            </p>
+            <p className="lg:col-span-5 text-body-l text-navy-700 max-w-prose">{region.bestFor}</p>
           </div>
 
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {ROLES_WE_STAFF.map((r) => (
-              <li key={r.href}>
-                <Link
-                  href={r.href}
-                  className="group flex items-center gap-3 rounded-2xl border border-navy-950/8 bg-white p-5 transition-all hover:border-accent-500/40 hover:-translate-y-0.5 hover:shadow-md"
-                >
-                  <CheckCircle2 className="h-5 w-5 flex-none text-accent-500" strokeWidth={2.25} />
-                  <span className="font-display text-[15px] font-bold tracking-tight text-navy-950 group-hover:text-accent-500 transition-colors">
-                    {r.label}
-                  </span>
-                  <ArrowRight className="ml-auto h-4 w-4 text-navy-700/40 transition-all group-hover:translate-x-1 group-hover:text-accent-500" />
-                </Link>
+          <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {region.keyMarkets.map((m) => (
+              <li
+                key={m.name}
+                className="flex h-full flex-col rounded-3xl border border-navy-950/8 bg-white p-6 transition-all hover:border-accent-500/40 hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent-500/10 text-accent-500">
+                  <MapPin className="h-5 w-5" strokeWidth={2} />
+                </span>
+                <div className="mt-5 font-display text-lg font-bold tracking-tight text-navy-950">
+                  {m.name}
+                </div>
+                <p className="mt-2 text-[14px] leading-relaxed text-navy-700">{m.note}</p>
               </li>
             ))}
           </ul>
+
+          {/* Best-for + compliance band */}
+          <div className="mt-8 grid gap-5 lg:grid-cols-2">
+            <div className="flex items-start gap-4 rounded-3xl border border-navy-950/8 bg-white p-7">
+              <span className="grid h-11 w-11 flex-none place-items-center rounded-xl bg-accent-500/10 text-accent-500">
+                <Target className="h-5 w-5" strokeWidth={2} />
+              </span>
+              <div>
+                <div className="font-display text-sm font-extrabold uppercase tracking-wider text-navy-950">
+                  Best for
+                </div>
+                <p className="mt-2 text-[14px] leading-relaxed text-navy-700">{region.bestFor}</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4 rounded-3xl border border-navy-950/8 bg-white p-7">
+              <span className="grid h-11 w-11 flex-none place-items-center rounded-xl bg-accent-500/10 text-accent-500">
+                <ShieldCheck className="h-5 w-5" strokeWidth={2} />
+              </span>
+              <div>
+                <div className="font-display text-sm font-extrabold uppercase tracking-wider text-navy-950">
+                  Compliance &amp; data
+                </div>
+                <p className="mt-2 text-[14px] leading-relaxed text-navy-700">{region.compliance}</p>
+              </div>
+            </div>
+          </div>
         </Container>
       </Section>
+
+      <FAQSection
+        heading={`Call center staffing in ${region.name} — FAQs.`}
+        items={region.faqs}
+        background="white"
+        image={region.image}
+        imageAlt={`Call center staffing in ${region.name}`}
+        ctaHref="/contact"
+        ctaLabel="Talk to a recruiter"
+      />
 
       <CTABand
         headline={`Need trained agents in ${region.name}?`}

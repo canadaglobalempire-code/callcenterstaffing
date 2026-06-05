@@ -113,11 +113,11 @@ export default function SolutionPage({ params }: { params: Params }) {
               {sol.hero.eyebrow}
             </span>
 
-            <h1 className="mt-6 font-display text-[2.5rem] sm:text-[3.25rem] lg:text-[4.25rem] font-extrabold leading-[1.02] tracking-[-0.04em] text-white">
+            <h1 className="mt-6 text-balance font-display text-[2.25rem] sm:text-[2.75rem] lg:text-[3.5rem] font-extrabold leading-[1.06] tracking-[-0.035em] text-white">
               {headlineLead && <>{headlineLead} </>}
-              <span className="relative inline-block">
+              <span className="relative inline-block whitespace-nowrap">
                 <span className="relative z-10 text-accent-500">{headlineTail}</span>
-                <span aria-hidden className="absolute inset-x-0 bottom-1 h-3 bg-accent-500/15 -z-0" />
+                <span aria-hidden className="absolute inset-x-0 bottom-1.5 h-3 rounded-sm bg-accent-500/20 -z-0" />
               </span>
             </h1>
 

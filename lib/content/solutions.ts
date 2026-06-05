@@ -16,7 +16,9 @@ export const SOLUTIONS: Solution[] = [
     problem: `Most contact-center operators do not have a hiring problem in the abstract — they have a calendar problem. Attrition is predictable. Forecast surges are predictable. The seats that need to be filled in week 7 of Q3 are predictable. What is not predictable is whether your in-house TA team or last-quarter’s recruiting vendor will hit the calendar without dropping quality.
 
 Operators end up running recruiting twice: once with a vendor, and once again themselves at 9 pm to make up the gap. SLAs slip. Quality scores erode in week 4 of every cohort. The numbers go red, and the only honest cause is that the seats were never full to begin with.`,
-    ourApproach: `We embed a senior account manager with your operations and WFM teams, run weekly cohort planning against your real forecast — not a job spec — and source against the actual quality bar your QA team will grade against. Every cohort gets a 72-hour pre-start health check, a 30-day attrition flag, and a 90-day cohort score-card. Your TA team stays in the loop on every step.`,
+    ourApproach: `We embed a senior account manager with your operations and WFM teams, run weekly cohort planning against your real forecast — not a job spec — and source against the actual quality bar your QA team will grade against. The result is capacity that maps to your calendar, not a pile of resumes you still have to triage.
+
+Every cohort gets a 72-hour pre-start health check, a 30-day attrition flag, and a 90-day cohort score-card, so a soft class shows up as data while you can still act on it. Your TA team stays in the loop on every step, and agents stay on our payroll — you add seats when the forecast calls for them and scale back just as cleanly.`,
     approachSteps: [
       {
         title: 'Forecast-aligned planning',
@@ -96,7 +98,9 @@ Operators end up running recruiting twice: once with a vendor, and once again th
     problem: `Standing up a new call center is a project-management problem disguised as a recruiting problem. Lease, build-out, IT, telco, badging, training and recruiting all run on the same critical path — and recruiting is almost always the variable that slips.
 
 Most staffing firms come to a launch with the same playbook they use to backfill seats at a mature site, only louder. That playbook breaks at greenfield. There is no employer brand yet, no referral pipeline, no QA team to grade candidates. The firm that wins the launch is the one that has already built the bench in that market, before the lease was even signed.`,
-    ourApproach: `We co-plan the launch with your ops, IT and program-management teams from week one. We pre-build a candidate bench in the market 30–60 days before badging is even possible, run cohort-aligned classes with named owners, and report against the launch critical-path — not against an abstract recruiting funnel. The first cohort lands inside ramp; the last cohort lands at full quality.`,
+    ourApproach: `We co-plan the launch with your ops, IT and program-management teams from week one, mapping recruiting milestones onto the same critical path as lease, build-out, telco and badging. We pre-build a candidate bench in the market 30–60 days before badging is even possible, so the first class is ready the moment your site is.
+
+From there we run cohort-aligned classes with named owners on our side and yours, and report against the launch critical-path — not against an abstract recruiting funnel. The first cohort lands inside ramp and the last cohort lands at full quality, so go-live isn't the day your staffing risk begins.`,
     approachSteps: [
       {
         title: 'Pre-launch market build',
@@ -177,7 +181,9 @@ Most staffing firms come to a launch with the same playbook they use to backfill
     problem: `Seasonal contact-center work is a calendar problem disguised as a recruiting problem. Q4 retail volume, October–December open enrollment, January–April tax season, and product-launch windows all arrive on the same dates every year — yet most staffing partners react to the surge instead of recruiting against it.
 
 The result: classes start late, ramp into go-live, quality scores never recover, and SLAs miss in the highest-stakes weeks of the year. The teams who win surge are the ones who start their pipeline in July for November. As a specialist call center temp agency placing temporary call center agents at scale, we run the off-season pipeline that turns Q4 from a fire drill into a calendar.`,
-    ourApproach: `We pre-build a market bench in the off-season — sourcing, screening, and warm-keeping qualified candidates — so the surge cohort lands fully-vetted on day one. Every cohort is sized to your training calendar with a named owner on our side, and we report against your seasonal critical-path, not against an abstract recruiting funnel. Demobilization is planned from week one, with redeployment options for top performers.`,
+    ourApproach: `We pre-build a market bench in the off-season — sourcing, screening, and warm-keeping qualified candidates — so the surge cohort lands fully-vetted on day one instead of being scrambled together the week volume hits. Every cohort is sized to your training calendar with a named owner on our side, and we report against your seasonal critical-path, not against an abstract recruiting funnel.
+
+Because the bench is built ahead of the curve, you get peak-season quality without paying to carry those seats year-round. Demobilization is planned from week one, with redeployment options for top performers — so the ramp-down is as orderly as the ramp-up, and your best surge agents are first in line next season.`,
     approachSteps: [
       {
         title: 'Off-season pipeline build',
@@ -250,7 +256,9 @@ The result: classes start late, ramp into go-live, quality scores never recover,
     problem: `Captive contact centers want what BPOs can't always give them: agents who join the company, not the floor. The hiring problem is different — longer tenure expectations, internal mobility paths, employer brand to protect, and a benefits package that has to land cleanly.
 
 Most staffing firms apply BPO recruiting playbooks to captive hiring and get burned: agents leave at 6 months for the next gig, employer brand takes a hit, and HR ends up doing the work twice. Captive hiring needs a different screen and a different conversation.`,
-    ourApproach: `We screen for tenure intent first, skill second. Every shortlisted candidate is interviewed about career trajectory, role progression, and what they want from an employer — not just their resume. We coordinate offer, background, drug screen and badging through your in-house process, never around it. Every placement comes with a 90-day attrition guarantee written into the SOW.`,
+    ourApproach: `We screen for tenure intent first, skill second. Every shortlisted candidate is interviewed about career trajectory, role progression, and what they want from an employer — not just their resume — because a captive floor is paying for people who stay, not people who pass an interview.
+
+We coordinate offer, background, drug screen and badging through your in-house process, never around it, so your employer brand and candidate experience stay yours end to end. Every placement comes with a 90-day attrition guarantee written into the SOW — if a hire doesn't stick inside that window, the replacement is on us.`,
     approachSteps: [
       {
         title: 'Tenure-first screening',
@@ -326,7 +334,9 @@ Most staffing firms apply BPO recruiting playbooks to captive hiring and get bur
     problem: `Regulated contact-center work has a recruiting problem that generic staffing firms don't see: license currency, background check timing, training-hour minimums, and disclosure-handling competence are all real constraints — and missing any of them means the assignment can't legally take calls on day one. Licensed call center agents staffing is a different discipline — and NMLS licensed agents staffing in particular is its own pipeline that has to be warm-kept year-round, not built reactively.
 
 Most generalist firms place to a "licensed agent" requisition and hope the candidate's license is current and unrestricted. The teams that win regulated work have a staffing partner who verifies license status, NPDB, and disclosure literacy before the candidate hits the shortlist.`,
-    ourApproach: `We carry active, current pipelines of NMLS-licensed, state-insurance-licensed, HIPAA-cleared, and PCI-cleared agents in the markets you operate in. Every shortlisted candidate has a verified, current license on the date of submission. Disclosure-handling is screened in a recorded role-play scored by a senior account manager who has run a regulated floor. Every cohort completes a tailored compliance refresher before going live.`,
+    ourApproach: `We carry active, current pipelines of NMLS-licensed, state-insurance-licensed, HIPAA-cleared, and PCI-cleared agents in the markets you operate in. Every shortlisted candidate has a verified, current license on the date of submission — never a stale credential we hope is still active at offer. Disclosure-handling is screened in a recorded role-play scored by a senior account manager who has actually run a regulated floor.
+
+Every cohort then completes a tailored compliance refresher — HIPAA, PCI, FCRA, Reg E or TCPA, matched to your regulator — before taking a single live call. Agents stay on our payroll and you pay only for hours worked, so you add compliant capacity in roughly 72 hours and scale back just as fast, without inheriting the licensing and re-certification burden yourself.`,
     approachSteps: [
       {
         title: 'License-verified pipeline',

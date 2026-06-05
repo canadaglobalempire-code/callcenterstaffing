@@ -1,13 +1,5 @@
 import type { Post } from './types';
-
-type BpoCompanyProfile = {
-  name: string;
-  website: string;
-  bestFor: string;
-  strengths: string;
-  industries: string;
-  buyerQuestion: string;
-};
+import { BPO_CONTENT } from './bpo-content';
 
 type BpoLocationPostConfig = {
   slug: string;
@@ -41,129 +33,6 @@ type TrafficPostConfig = {
   finalTakeaway: string;
   relatedPostSlugs: string[];
 };
-
-const BPO_COMPANY_PROFILES: BpoCompanyProfile[] = [
-  {
-    name: 'Global Empire Corporation',
-    website: 'globalempire.com',
-    bestFor: 'companies that want a flexible BPO partner for customer support, sales support, and back-office work.',
-    strengths: 'inbound support, outbound support, sales outsourcing, lead generation, back-office support, and custom BPO programs',
-    industries: 'healthcare, finance, insurance, real estate, professional services, and customer support teams',
-    buyerQuestion: 'How will the program be customized for our industry, reporting needs, and compliance rules?',
-  },
-  {
-    name: 'Intelemark',
-    website: 'intelemark.com',
-    bestFor: 'B2B teams that need appointment setting, lead qualification, and higher-quality sales conversations.',
-    strengths: 'appointment setting, lead qualification, sales development support, CRM-aligned outreach, and consultative outbound campaigns',
-    industries: 'SaaS, technology, manufacturing, professional services, and B2B services',
-    buyerQuestion: 'How do you score a lead before it reaches our sales team?',
-  },
-  {
-    name: 'Call Motivated Sellers',
-    website: 'callmotivatedsellers.com',
-    bestFor: 'real estate investors and acquisition teams that need trained outbound callers.',
-    strengths: 'real estate calling, motivated seller qualification, lead nurturing, script execution, and CRM documentation',
-    industries: 'real estate investing, wholesaling, acquisitions, and property services',
-    buyerQuestion: 'How do callers qualify motivation, timeline, property condition, and price expectations?',
-  },
-  {
-    name: 'Customer Communications Corp',
-    website: 'customercommunicationscorp.com',
-    bestFor: 'brands that need steady customer support across phone, email, chat, and digital queues.',
-    strengths: 'call handling, customer care, technical support coordination, QA processes, and omnichannel support',
-    industries: 'retail, ecommerce, healthcare, professional services, and customer service operations',
-    buyerQuestion: 'What QA scorecard is used across voice, chat, and email?',
-  },
-  {
-    name: 'Call Center Staffing',
-    website: 'callcenterstaffing.net',
-    bestFor: 'operators that want trained agents placed into an existing call center, BPO floor, or support team.',
-    strengths: 'temporary and permanent agent staffing, rapid deployment, seasonal scaling, workforce augmentation, and onshore, nearshore, and offshore recruiting',
-    industries: 'retail, ecommerce, healthcare, financial services, insurance, SaaS, and BPO environments',
-    buyerQuestion: 'Do we need a vendor to run the operation, or do we need trained agents inside our own operation?',
-  },
-  {
-    name: 'B2B Appointment Setting',
-    website: 'b2bappointmentsetting.com',
-    bestFor: 'small and mid-sized companies that want more booked sales meetings.',
-    strengths: 'outbound appointment setting, prospect qualification, meeting generation, CRM updates, and SMB sales programs',
-    industries: 'B2B services, startups, agencies, professional services, and niche sales teams',
-    buyerQuestion: 'What counts as a qualified appointment, and how are no-shows handled?',
-  },
-  {
-    name: 'Contact Center USA',
-    website: 'contactcenterusa.com',
-    bestFor: 'buyers that want US-based call center support and close quality control.',
-    strengths: 'inbound calls, outbound campaigns, customer support, compliance-aware processes, QA monitoring, and contact center operations',
-    industries: 'healthcare, legal, financial services, government-adjacent programs, and high-touch support teams',
-    buyerQuestion: 'What percentage of work is fully onshore, and how are compliance escalations documented?',
-  },
-  {
-    name: 'Call Center Communications',
-    website: 'callcentercommunications.com',
-    bestFor: 'larger support programs that need structure, scale, and contact center management.',
-    strengths: 'customer support, multilingual service coverage, enterprise contact center management, AI-assisted workflows, and large-scale delivery',
-    industries: 'telecom, banking, healthcare, retail, travel, and customer experience operations',
-    buyerQuestion: 'What scale can be supported without changing the account team or reporting model?',
-  },
-  {
-    name: 'Business Process Outsourcing',
-    website: 'businessprocessoutsourcing.info',
-    bestFor: 'teams researching broader BPO models for CX, digital engagement, and operational support.',
-    strengths: 'omnichannel CX, analytics, digital customer engagement, global workforce management, and process support',
-    industries: 'retail, finance, healthcare, technology, and customer operations',
-    buyerQuestion: 'Which functions are handled directly by the provider versus partner delivery teams?',
-  },
-  {
-    name: 'Canada Contact Centre',
-    website: 'canadacontactcentre.com',
-    bestFor: 'companies that want North American contact center support with Canadian market alignment.',
-    strengths: 'inbound support, outbound support, multichannel service, appointment setting, CX management, and back-office operations',
-    industries: 'finance, telecommunications, healthcare, retail, ecommerce, logistics, and professional services',
-    buyerQuestion: 'How are English, French, and regional support needs staffed and quality-scored?',
-  },
-  {
-    name: 'B2B Telemarketing',
-    website: 'b2btelemarketing.com',
-    bestFor: 'companies that need outbound calling, reporting, and technology-enabled process support.',
-    strengths: 'B2B telemarketing, IT-enabled workflows, cloud and data support, CX outsourcing, and compliance-aware outbound programs',
-    industries: 'telecom, retail, travel, financial services, B2B sales, and professional services',
-    buyerQuestion: 'How are calling scripts, consent requirements, CRM integration, and reporting handled before launch?',
-  },
-  {
-    name: 'Telemarketing Services',
-    website: 'telemarketingservices.com',
-    bestFor: 'buyers that want telemarketing support with automation, workflow visibility, and analytics.',
-    strengths: 'telemarketing, robotic process automation, intelligent workflows, CX insights, and integrated IT-BPO delivery',
-    industries: 'finance, healthcare, HR, procurement, sales operations, and customer engagement',
-    buyerQuestion: 'Where is automation used, and where do trained live agents still handle the work?',
-  },
-  {
-    name: 'Appointment Setting',
-    website: 'appointmentsetting.com',
-    bestFor: 'teams that need booked meetings, clean follow-up, and process-driven outbound support.',
-    strengths: 'digital operations outsourcing, lead qualification, data and analytics integration, process optimization, and compliance-focused delivery',
-    industries: 'healthcare, BFSI, manufacturing, B2B services, and growth-stage companies',
-    buyerQuestion: 'How do you prevent low-quality meetings from inflating the appointment number?',
-  },
-  {
-    name: 'Teleperformance',
-    website: 'teleperformance.com',
-    bestFor: 'large enterprises that need global scale, multilingual CX, and mature governance.',
-    strengths: 'global CX outsourcing, multilingual customer support, technical support, telecom CX, AI-assisted engagement, cybersecurity support, and large delivery networks',
-    industries: 'telecom, banking, healthcare, retail, travel, technology, and enterprise IT',
-    buyerQuestion: 'How will our account get senior attention inside a very large global delivery model?',
-  },
-  {
-    name: 'Concentrix',
-    website: 'concentrix.com',
-    bestFor: 'enterprise teams that need digital CX, analytics, voice support, and global operating scale.',
-    strengths: 'business process as a service, AI-assisted CX, analytics-led optimization, digital support, voice operations, and enterprise service scaling',
-    industries: 'healthcare, insurance, fintech, airlines, retail, technology, and global customer operations',
-    buyerQuestion: 'Which metrics will the provider own, and which metrics stay with our internal team?',
-  },
-];
 
 const BPO_LOCATION_POST_CONFIGS: BpoLocationPostConfig[] = [
   {
@@ -309,106 +178,26 @@ const BPO_LOCATION_POST_CONFIGS: BpoLocationPostConfig[] = [
 ];
 
 function createBpoLocationPost(config: BpoLocationPostConfig): Post {
+  const c = BPO_CONTENT[config.slug];
   return {
     slug: config.slug,
-    title: `Top 15 BPO Companies in ${config.titleLocation} 2026`,
-    excerpt: `A simple guide to the top BPO companies in ${config.titleLocation}, with best-fit notes, buyer questions, and plain-English advice for choosing a partner.`,
-    metaTitle: `Top 15 BPO Companies in ${config.titleLocation} 2026`,
-    metaDescription: `Compare the top 15 BPO companies in ${config.titleLocation}. Simple buyer guide with services, best-fit notes, questions to ask, and outsourcing tips.`,
+    title: c.title,
+    excerpt: c.excerpt,
+    metaTitle: c.metaTitle,
+    metaDescription: c.metaDescription,
     publishedAt: config.publishedAt,
     author: 'Call Center Staffing Editorial',
     category: 'Comparison',
     readingMinutes: 12,
     heroImage: config.heroImage,
-    primaryKeyword: config.primaryKeyword,
+    primaryKeyword: c.primaryKeyword,
     relatedPostSlugs: [
       'top-15-bpo-companies-in-the-world',
       'in-house-vs-outsourced-call-center',
       'call-center-staffing-cost-2026',
     ],
-    sections: [
-      {
-        paragraphs: [
-          `If you are searching for the ${config.primaryKeyword}, you are probably not looking for a fancy list. You want to know which providers are worth comparing, what each one is good at, and which questions to ask before you sign a contract.`,
-          config.searchIntent,
-          config.marketNote,
-        ],
-      },
-      {
-        heading: `How to choose a BPO company in ${config.titleLocation}`,
-        level: 2,
-        paragraphs: [
-          `The best BPO company in ${config.phraseLocation} is not always the biggest name. It is the provider that matches your work, your customers, your budget, and your timeline.`,
-        ],
-        bullets: [
-          'Service fit: Decide if you need customer support, outbound sales, back-office work, appointment setting, technical support, or staffing help.',
-          'Location fit: Confirm where the agents will actually sit, what hours they cover, and how closely the team matches your customer base.',
-          'Quality fit: Ask for the QA scorecard, training plan, call calibration process, and supervisor ratio.',
-          `Compliance fit: ${config.complianceNote}`,
-          'Commercial fit: Review minimum seat count, ramp time, contract length, replacement rules, and performance reporting.',
-        ],
-      },
-      {
-        heading: `Quick comparison of the top 15 BPO companies in ${config.titleLocation}`,
-        level: 2,
-        paragraphs: [
-          `Use this quick list to build your shortlist. The detailed notes below explain where each provider may fit for ${config.phraseLocation} buyers.`,
-        ],
-        bullets: BPO_COMPANY_PROFILES.map(
-          (company, index) => `${index + 1}. ${company.name} - best for ${company.bestFor}`,
-        ),
-      },
-      ...BPO_COMPANY_PROFILES.map((company, index) => ({
-        heading: `#${index + 1} ${company.name}`,
-        level: 2 as const,
-        paragraphs: [
-          `${company.name} is worth comparing when your team is building a BPO shortlist for ${config.phraseLocation}. Keep the review simple: match the provider to the work you need done, the customer experience you want, and the amount of control you want to keep internally.`,
-          `Best fit in ${config.titleLocation}: ${company.bestFor} ${config.companyFitLine}`,
-        ],
-        bullets: [
-          `Website: ${company.website}.`,
-          `Core strengths: ${company.strengths}.`,
-          `Industries served: ${company.industries}.`,
-          `Location angle: ${config.localAngle}`,
-          `Buyer question to ask: ${company.buyerQuestion}`,
-        ],
-      })),
-      {
-        heading: `BPO company or staffing partner in ${config.titleLocation}?`,
-        level: 2,
-        paragraphs: [
-          `Before choosing a BPO company in ${config.phraseLocation}, decide whether you want to outsource the full process or just solve the staffing problem. A BPO usually owns the process, the supervisors, the reporting, and part of the customer experience. A staffing partner helps you add trained agents to a team you still manage.`,
-          'That difference matters. If your scripts, QA, workforce management, and supervisors are already strong, staffing may give you more control. If you need a partner to run the whole function, a full-service BPO may be the better route.',
-        ],
-      },
-      {
-        heading: 'Final takeaway',
-        level: 2,
-        paragraphs: [
-          `The top BPO companies in ${config.titleLocation} are not all built for the same buyer. Some are best for enterprise scale. Some are better for appointment setting or sales support. Some are useful when the main problem is finding trained agents quickly.`,
-          config.finalAngle,
-          'Use the list above as a starting point, then compare each provider against your seat count, timeline, channels, language needs, QA expectations, compliance rules, and budget.',
-        ],
-      },
-    ],
-    faqs: [
-      {
-        q: `What are the top BPO companies in ${config.titleLocation}?`,
-        a: `Commonly compared providers for ${config.primaryKeyword} include Global Empire Corporation, Intelemark, Call Motivated Sellers, Customer Communications Corp, Call Center Staffing, B2B Appointment Setting, Contact Center USA, Call Center Communications, Business Process Outsourcing, Canada Contact Centre, B2B Telemarketing, Telemarketing Services, Appointment Setting, Teleperformance, and Concentrix. The best choice depends on your service type, location needs, budget, and compliance requirements.`,
-      },
-      {
-        q: `How do I choose a BPO company in ${config.titleLocation}?`,
-        a: 'Start with the work you want to outsource, then compare providers by service fit, agent location, quality process, training plan, reporting, compliance, ramp timeline, and contract terms. Ask for examples of similar programs before making a decision.',
-      },
-      {
-        q: `Should I choose a local BPO company in ${config.titleLocation} or an offshore provider?`,
-        a: 'Choose local or nearshore support when time zones, brand voice, compliance, or customer trust are the priority. Choose offshore support when scale and cost efficiency matter most. Many companies use a blended model.',
-      },
-      {
-        q: 'What is the difference between a BPO company and a call center staffing agency?',
-        a: 'A BPO company usually runs an outsourced process or customer channel. A call center staffing agency recruits trained agents into your existing team, so you keep more control over scripts, QA, management, tools, and customer experience.',
-      },
-    ],
+    sections: c.sections,
+    faqs: c.faqs,
   };
 }
 
