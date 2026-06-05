@@ -12,6 +12,7 @@ const schema = z.object({
   name: z.string().min(2, 'Enter your name'),
   email: z.string().email('Enter a valid work email'),
   company: z.string().min(2, 'Enter your company'),
+  website: z.string().optional(),
   phone: z
     .string()
     .min(7, 'Enter a phone number')
@@ -55,6 +56,7 @@ export function HeroQuoteForm() {
       name: '',
       email: '',
       company: '',
+      website: '',
       phone: '',
       agentCount: undefined,
       region: undefined,
@@ -71,6 +73,7 @@ export function HeroQuoteForm() {
           name: values.name,
           email: values.email,
           company: values.company,
+          website: values.website,
           phone: values.phone,
           agentCount: values.agentCount,
           region: values.region,
@@ -147,13 +150,23 @@ export function HeroQuoteForm() {
                 />
               </Field>
 
-              <Field id="email" label="Email" error={errors.email?.message}>
+              <Field id="website" label="Website" error={errors.website?.message}>
+                <input
+                  id="website"
+                  type="text"
+                  {...register('website')}
+                  className={fieldClass}
+                  placeholder="Website (e.g. www.yourcompany.com)"
+                />
+              </Field>
+
+              <Field id="email" label="Company email" error={errors.email?.message}>
                 <input
                   id="email"
                   type="email"
                   {...register('email')}
                   className={fieldClass}
-                  placeholder="Email address"
+                  placeholder="you@company.com"
                 />
               </Field>
 

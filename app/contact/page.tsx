@@ -18,7 +18,6 @@ import { Heading } from '@/components/ui/Heading';
 import { Button } from '@/components/ui/Button';
 import { TrustBar } from '@/components/sections/TrustBar';
 import { CTABand } from '@/components/sections/CTABand';
-import { HeroQuoteForm } from '@/components/forms/HeroQuoteForm';
 import { StaffingPlanForm } from '@/components/forms/StaffingPlanForm';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import { site } from '@/lib/site';
@@ -121,7 +120,7 @@ export default function ContactPage() {
       <BreadcrumbSchema items={crumbs} />
 
       {/* HERO */}
-      <section className="relative isolate overflow-hidden bg-black text-white pt-40 pb-20 lg:pt-48 lg:pb-28">
+      <section className="relative isolate overflow-hidden bg-black text-white pt-36 pb-14 lg:pt-44 lg:pb-16">
         <Image
           src="/images/cc-team-huddle.jpg"
           alt="Recruiters reviewing a staffing plan"
@@ -195,7 +194,24 @@ export default function ContactPage() {
           </div>
 
           <div className="lg:col-span-5 lg:pl-4">
-            <HeroQuoteForm />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-2xl ring-1 ring-white/15">
+              <Image
+                src="/images/cc-management.jpg"
+                alt="A senior account manager reviewing a staffing plan"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover"
+              />
+              <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+              <div className="absolute bottom-5 left-5 right-5 rounded-2xl bg-white/95 px-5 py-4 shadow-2xl ring-1 ring-navy-950/5 backdrop-blur-sm">
+                <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-accent-500">
+                  Senior account manager
+                </div>
+                <div className="mt-1 font-display text-sm font-extrabold leading-tight text-navy-950">
+                  A written staffing plan back within one business day.
+                </div>
+              </div>
+            </div>
           </div>
         </Container>
       </section>

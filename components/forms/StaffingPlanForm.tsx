@@ -11,7 +11,8 @@ import { submitToSplitforms } from '@/lib/splitforms';
 const schema = z.object({
   name: z.string().min(2, 'Please enter your full name'),
   company: z.string().min(2, 'Please enter your company'),
-  email: z.string().email('Enter a valid work email'),
+  website: z.string().optional(),
+  email: z.string().email('Enter a valid company email'),
   phone: z
     .string()
     .min(7, 'Enter a phone number we can reach you on')
@@ -26,7 +27,6 @@ const schema = z.object({
   ]),
   agentCount: z.enum(['1-9', '10-49', '50-199', '200-499', '500+']),
   location: z.enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open']),
-  timeline: z.enum(['immediate', '30-days', '60-90-days', 'planning']),
   notes: z.string().max(800).optional(),
 });
 
@@ -53,12 +53,6 @@ const LOCATION_OPTIONS: { value: FormValues['location']; label: string }[] = [
   { value: 'offshore-asia', label: 'Offshore (Asia / Africa)' },
   { value: 'multi-region', label: 'Multi-region' },
   { value: 'open', label: 'Open to recommendation' },
-];
-const TIMELINE_OPTIONS: { value: FormValues['timeline']; label: string }[] = [
-  { value: 'immediate', label: 'Immediate (this month)' },
-  { value: '30-days', label: 'Within 30 days' },
-  { value: '60-90-days', label: '60–90 days' },
-  { value: 'planning', label: 'Just planning' },
 ];
 
 const fieldClass =
@@ -88,12 +82,12 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
           page: typeof window !== 'undefined' ? window.location.pathname : '',
           name: values.name,
           company: values.company,
+          website: values.website,
           email: values.email,
           phone: values.phone,
           roleType: values.roleType,
           agentCount: values.agentCount,
           location: values.location,
-          timeline: values.timeline,
           notes: values.notes,
         },
         `New staffing plan request from ${values.name} (${values.company})`,
@@ -149,13 +143,23 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
         />
       </Field>
 
-      <Field label="Email" id="email" error={errors.email?.message}>
+      <Field label="Website" id="website" error={errors.website?.message}>
+        <input
+          id="website"
+          type="text"
+          {...register('website')}
+          className={fieldClass}
+          placeholder="www.yourcompany.com"
+        />
+      </Field>
+
+      <Field label="Company email" id="email" error={errors.email?.message}>
         <input
           id="email"
           type="email"
           {...register('email')}
           className={fieldClass}
-          placeholder="jane@company.com"
+          placeholder="you@company.com"
         />
       </Field>
 
@@ -179,10 +183,6 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
 
       <Field label="Location preference" id="location" error={errors.location?.message}>
         <Select id="location" {...register('location')} options={LOCATION_OPTIONS} />
-      </Field>
-
-      <Field label="Timeline" id="timeline" error={errors.timeline?.message}>
-        <Select id="timeline" {...register('timeline')} options={TIMELINE_OPTIONS} />
       </Field>
 
       <Field

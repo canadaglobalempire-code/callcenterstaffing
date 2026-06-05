@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter, Inter_Tight } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -52,6 +53,9 @@ export const metadata: Metadata = {
     images: ['/images/agents-team-row.jpg'],
   },
   robots: { index: true, follow: true },
+  verification: {
+    google: '1ffyhqmcj-JRp9k1GZOGD6pcBK4dB844HbEuYaoI9D4',
+  },
   alternates: {
     canonical: site.url,
     languages: {
@@ -82,6 +86,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <StickyCTA />
         <OrganizationSchema />
         <WebsiteSchema />
+        <Script id="ms-clarity" strategy="afterInteractive">
+          {`(function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "x2dgwn3f7g");`}
+        </Script>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-B7QE452XJX"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-gtag" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-B7QE452XJX');`}
+        </Script>
       </body>
     </html>
   );
