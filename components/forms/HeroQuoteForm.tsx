@@ -1,12 +1,13 @@
 'use client';
 
-import { useState, forwardRef } from 'react';
+import { useState, useRef, forwardRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Check, ArrowRight, AlertCircle, ShieldCheck, Send } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { submitToSplitforms } from '@/lib/splitforms';
+import { Recaptcha, type RecaptchaHandle } from './Recaptcha';
 
 const schema = z.object({
   name: z.string().min(2, 'Enter your name'),
@@ -44,6 +45,8 @@ const fieldClass =
 export function HeroQuoteForm() {
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const captchaRef = useRef<RecaptchaHandle>(null);
   const {
     register,
     handleSubmit,
@@ -65,6 +68,10 @@ export function HeroQuoteForm() {
 
   const onSubmit = async (values: FormValues) => {
     setSubmitError(null);
+    if (!captchaToken) {
+      setSubmitError('Please confirm you are not a robot.');
+      return;
+    }
     try {
       await submitToSplitforms(
         {
@@ -77,11 +84,14 @@ export function HeroQuoteForm() {
           phone: values.phone,
           agentCount: values.agentCount,
           region: values.region,
+          'g-recaptcha-response': captchaToken,
         },
         `New quote request from ${values.name} (${values.company})`,
       );
       setSubmitted(true);
       reset();
+      captchaRef.current?.reset();
+      setCaptchaToken(null);
     } catch (err) {
       setSubmitError(err instanceof Error ? err.message : 'Something went wrong. Try again.');
     }
@@ -205,6 +215,10 @@ export function HeroQuoteForm() {
                     </p>
                   )}
                 </div>
+              </div>
+
+              <div className="mt-1">
+                <Recaptcha ref={captchaRef} onChange={setCaptchaToken} theme="dark" />
               </div>
 
               <button

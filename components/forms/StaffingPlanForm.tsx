@@ -1,12 +1,13 @@
 'use client';
 
-import { useState, forwardRef } from 'react';
+import { useState, useRef, forwardRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Check, ArrowRight, AlertCircle, Send } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { submitToSplitforms } from '@/lib/splitforms';
+import { Recaptcha, type RecaptchaHandle } from './Recaptcha';
 
 const schema = z.object({
   name: z.string().min(2, 'Please enter your full name'),
@@ -62,6 +63,8 @@ const labelClass = 'text-xs font-semibold uppercase tracking-[0.12em] text-navy-
 export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const captchaRef = useRef<RecaptchaHandle>(null);
 
   const {
     register,
@@ -75,6 +78,10 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
 
   const onSubmit = async (values: FormValues) => {
     setSubmitError(null);
+    if (!captchaToken) {
+      setSubmitError('Please confirm you are not a robot.');
+      return;
+    }
     try {
       await submitToSplitforms(
         {
@@ -89,11 +96,14 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
           agentCount: values.agentCount,
           location: values.location,
           notes: values.notes,
+          'g-recaptcha-response': captchaToken,
         },
         `New staffing plan request from ${values.name} (${values.company})`,
       );
       setSubmitted(true);
       reset();
+      captchaRef.current?.reset();
+      setCaptchaToken(null);
     } catch (err) {
       setSubmitError(err instanceof Error ? err.message : 'Something went wrong. Try again.');
     }
@@ -201,6 +211,8 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
       </Field>
 
       <div className="lg:col-span-2 flex flex-col gap-4 pt-2">
+        <Recaptcha ref={captchaRef} onChange={setCaptchaToken} />
+
         <button
           type="submit"
           disabled={isSubmitting}
