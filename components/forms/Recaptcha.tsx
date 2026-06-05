@@ -4,7 +4,7 @@ import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
 
 // Public reCAPTCHA v2 site key — safe to ship in client code.
 // The matching SECRET key is configured in the SplitForms dashboard (never in this repo).
-const SITE_KEY = '6LfpCA8tAAAAAKwSEn4xHC12iRO8DgN4BpqEjIF2';
+const SITE_KEY = '6Ld_Fw8tAAAAAGmZm1aBgugZA434TfkJWlhkUzEP';
 
 export type RecaptchaHandle = { reset: () => void };
 
