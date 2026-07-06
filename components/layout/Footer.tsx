@@ -125,6 +125,16 @@ export function Footer() {
                 Get a Quote
               </Link>
             </li>
+            <li>
+              <Link href="/privacy" className="hover:text-white">
+                Privacy
+              </Link>
+            </li>
+            <li>
+              <Link href="/terms" className="hover:text-white">
+                Terms
+              </Link>
+            </li>
           </ul>
         </div>
       </Container>

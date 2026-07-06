@@ -2,9 +2,9 @@ import { ShieldCheck, Wallet, Users, Globe2 } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
 
 const TRUST_BADGES = [
-  { icon: Wallet, value: 'Free quote', label: 'Month-to-month · no setup fees' },
+  { icon: Wallet, value: 'Written plan', label: 'No obligation · one business day' },
   { icon: Users, value: '200+', label: 'Businesses served' },
-  { icon: ShieldCheck, value: 'HIPAA · PCI · SOC 2', label: 'Compliance ready' },
+  { icon: ShieldCheck, value: 'HIPAA · PCI · SOC 2', label: 'Compliance-aware screening' },
   { icon: Globe2, value: '14 countries', label: 'Trained agents on tap' },
 ];
 

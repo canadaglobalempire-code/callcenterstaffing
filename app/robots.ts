@@ -2,6 +2,8 @@ import type { MetadataRoute } from 'next';
 import { site } from '@/lib/site';
 
 export default function robots(): MetadataRoute.Robots {
+  const hostname = new URL(site.url).hostname;
+
   return {
     rules: [
       { userAgent: '*', allow: '/' },
@@ -25,6 +27,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'DuckDuckBot', allow: '/' },
     ],
     sitemap: `${site.url}/sitemap.xml`,
-    host: site.url,
+    host: hostname,
   };
 }

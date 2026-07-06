@@ -1,12 +1,14 @@
 'use client';
 
-import { useState, type FormEvent } from 'react';
+import { useRef, useState, type FormEvent } from 'react';
 import { ArrowRight, Check, AlertCircle } from 'lucide-react';
-import { submitToSplitforms } from '@/lib/splitforms';
+import { submitLead } from '@/lib/lead-client';
+import { trackEvent } from '@/lib/analytics';
 
 export function NewsletterForm() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'done' | 'error'>('idle');
   const [error, setError] = useState<string | null>(null);
+  const renderedAtRef = useRef(Date.now());
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -17,15 +19,21 @@ export function NewsletterForm() {
     setStatus('sending');
     setError(null);
     try {
-      await submitToSplitforms(
-        {
-          source: 'NewsletterForm',
-          page: typeof window !== 'undefined' ? window.location.pathname : '',
+      await submitLead({
+        source: 'NewsletterForm',
+        subject: `Newsletter signup: ${email}`,
+        renderedAt: renderedAtRef.current,
+        companyWebsite: String(fd.get('companyWebsite') ?? ''),
+        fields: {
           email,
         },
-        `Newsletter signup: ${email}`,
-      );
+      });
+      trackEvent('newsletter_signup', {
+        form_source: 'NewsletterForm',
+        page_path: window.location.pathname,
+      });
       setStatus('done');
+      renderedAtRef.current = Date.now();
       e.currentTarget.reset();
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong.');
@@ -42,6 +50,14 @@ export function NewsletterForm() {
       onSubmit={onSubmit}
       aria-label="Newsletter signup"
     >
+      <input
+        type="text"
+        name="companyWebsite"
+        tabIndex={-1}
+        autoComplete="off"
+        className="hidden"
+        aria-hidden="true"
+      />
       <div className="flex flex-col sm:flex-row gap-2">
         <label className="sr-only" htmlFor="footer-email">
           Email address

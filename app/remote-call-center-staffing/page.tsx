@@ -19,7 +19,7 @@ import { alternatesFor } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'Remote Call Center Staffing — Work-From-Home Agents',
   description:
-    'Remote call center staffing: trained work-from-home agents on our payroll, deployed in 72 hours. Pay per hour, swap any agent free. Get a free quote.',
+    'Remote call center staffing: trained work-from-home agents on our payroll, deployed in 72 hours. Pay per hour, swap any agent free. Get a written plan.',
   alternates: alternatesFor('/remote-call-center-staffing'),
   openGraph: {
     title: 'Remote Call Center Staffing — Work-From-Home Agents',
@@ -134,7 +134,7 @@ export default function RemoteStaffingPage() {
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Button href="/contact" size="lg" withArrow>
-                Get a Free Quote
+                Get a written plan
               </Button>
               <a
                 href="#how"
@@ -235,7 +235,7 @@ export default function RemoteStaffingPage() {
         items={FAQS}
         background="neutral"
         ctaHref="/contact"
-        ctaLabel="Get a Free Quote"
+        ctaLabel="Get a written plan"
       />
 
       <CTABand

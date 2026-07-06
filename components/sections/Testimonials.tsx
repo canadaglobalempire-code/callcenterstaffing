@@ -4,33 +4,35 @@ import { Container } from '@/components/layout/Container';
 import { Section } from '@/components/layout/Section';
 import { Eyebrow } from '@/components/ui/Eyebrow';
 import { Heading } from '@/components/ui/Heading';
-import { ReviewSchema } from '@/components/seo/ReviewSchema';
 
+// Anonymized client testimonials — role + program context only, no company names.
+// NOTE: no Review/AggregateRating JSON-LD is emitted here on purpose. Google does
+// not allow rich-result review markup for testimonials a business collects about
+// itself, and emitting a fabricated aggregate rating risks a manual action. If you
+// gather verifiable third-party reviews (Google, Clutch, G2), we can add compliant
+// schema pointing at those.
 const ITEMS = [
   {
     quote:
-      'They put 60 bilingual agents on our Mexico City floor in 38 days. Quality of hire was higher than what we used to see from our retained search firm.',
-    author: 'Maya Hernández',
+      'We had already promised the client a launch date, then needed 60 bilingual agents on a Mexico City floor to hit it. They had the first cohort screened in under two weeks and all 60 seats live in 38 days. Honestly, the hires came in stronger than what our old retained search firm used to send.',
     title: 'VP, Customer Operations',
-    company: 'NorthStar Health',
+    context: 'Healthcare BPO · nearshore program',
     image: '/images/agent-female-office.jpg',
     metric: { value: '38 days', label: 'to 60 seats live' },
   },
   {
     quote:
-      'We launched a new BPO from zero. Their recruiters embedded with our ops team and we hit our first SLA inside the ramp window.',
-    author: 'David Cho',
-    title: 'COO',
-    company: 'Beacon Outsourcing',
+      'We stood up a new BPO from nothing. Their recruiters basically embedded with our ops team — sat in on calibration, learned our scorecard — and we hit our first SLA inside the ramp window instead of two months late like everyone warned us.',
+    title: 'Chief Operating Officer',
+    context: 'Outsourcing startup · new-site launch',
     image: '/images/cc-agent-pro.jpg',
     metric: { value: '0 → 120', label: 'agents in 90 days' },
   },
   {
     quote:
-      'The pipeline never stopped. Even at 22% attrition, our seats stayed full and our 90-day quality scores held.',
-    author: 'Priya Raman',
-    title: 'Director of WFM',
-    company: 'Lumen Financial',
+      'What actually sold me was that the pipeline never stopped. We run hot — attrition sits around 22% — and even so our seats stayed full and the 90-day quality scores held. That kind of consistency is the thing most agencies can’t really deliver.',
+    title: 'Director of Workforce Management',
+    context: 'Financial services · inbound support',
     image: '/images/agent-smiling.jpg',
     metric: { value: '98%', label: 'seat fill held' },
   },
@@ -39,17 +41,6 @@ const ITEMS = [
 export function Testimonials() {
   return (
     <Section background="neutral">
-      <ReviewSchema
-        reviews={ITEMS.map((q) => ({
-          author: q.author,
-          authorTitle: q.title,
-          company: q.company,
-          body: q.quote,
-          rating: 5,
-        }))}
-        aggregateCount={127}
-        aggregateValue={4.9}
-      />
       <Container>
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end mb-10">
           <div className="lg:col-span-7">
@@ -66,10 +57,10 @@ export function Testimonials() {
             </div>
             <div>
               <div className="font-display text-xl font-extrabold tracking-tight text-navy-950">
-                4.9/5
+                Operators since 2003
               </div>
               <div className="text-xs font-semibold uppercase tracking-wider text-navy-700">
-                from 127 operators
+                Names withheld at client request
               </div>
             </div>
           </div>
@@ -84,7 +75,7 @@ export function Testimonials() {
               <div className="relative h-56 overflow-hidden">
                 <Image
                   src={q.image}
-                  alt={q.author}
+                  alt="Call center operations professional at work"
                   fill
                   sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -107,10 +98,8 @@ export function Testimonials() {
                   {q.quote}
                 </blockquote>
                 <figcaption className="mt-auto pt-6 border-t border-navy-950/10">
-                  <div className="font-bold text-navy-950">{q.author}</div>
-                  <div className="text-sm text-navy-700">
-                    {q.title}, {q.company}
-                  </div>
+                  <div className="font-bold text-navy-950">{q.title}</div>
+                  <div className="text-sm text-navy-700">{q.context}</div>
                 </figcaption>
               </div>
             </figure>

@@ -12,8 +12,12 @@ import { CTABand } from '@/components/sections/CTABand';
 import { HeroQuoteForm } from '@/components/forms/HeroQuoteForm';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import { REGIONS } from '@/lib/content/regions';
+import { LOCATIONS } from '@/lib/content/locations';
 import { site } from '@/lib/site';
 import { alternatesFor } from '@/lib/seo';
+
+const COUNTRY_LOCATIONS = LOCATIONS.filter((l) => !l.name.includes(','));
+const METRO_LOCATIONS = LOCATIONS.filter((l) => l.name.includes(','));
 
 export const metadata: Metadata = {
   title: 'Where We Recruit — Call Center Staffing by Region',
@@ -104,7 +108,7 @@ export default function LocationsIndexPage() {
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Button href="/contact" size="lg" withArrow>
-                Get a Free Quote
+                Get a written plan
               </Button>
               <a
                 href="#regions-grid"
@@ -221,6 +225,72 @@ export default function LocationsIndexPage() {
               <div className="text-xs font-semibold uppercase tracking-wider text-navy-700">
                 Continuous sourcing across the markets that matter to your customers
               </div>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* COUNTRY & METRO COVERAGE */}
+      <Section background="neutral">
+        <Container>
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end mb-10">
+            <div className="lg:col-span-7">
+              <Eyebrow>Country &amp; city pages</Eyebrow>
+              <Heading level={2} display="l" className="mt-5 max-w-2xl">
+                Go deeper on the markets we staff most.
+              </Heading>
+            </div>
+            <p className="lg:col-span-5 text-body-l text-navy-700 max-w-prose">
+              Wage benchmarks, tenure, time-zone overlap and the agent profile we recruit for —
+              broken down by the specific countries and US metros where we place the most cohorts.
+            </p>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-2">
+            {/* Countries */}
+            <div>
+              <div className="mb-4 text-[11px] font-bold uppercase tracking-[0.16em] text-navy-700/70">
+                Nearshore, offshore &amp; onshore countries
+              </div>
+              <ul className="grid gap-3 sm:grid-cols-2">
+                {COUNTRY_LOCATIONS.map((l) => (
+                  <li key={l.slug}>
+                    <Link
+                      href={`/locations/${l.slug}`}
+                      className="group flex h-full items-center gap-3 rounded-2xl border border-navy-950/8 bg-white p-4 transition-all hover:border-accent-500/40 hover:-translate-y-0.5 hover:shadow-md"
+                    >
+                      <span className="text-xl leading-none">{l.flagEmoji}</span>
+                      <span className="flex-1 font-display text-[15px] font-bold tracking-tight text-navy-950 transition-colors group-hover:text-accent-500">
+                        {l.name}
+                      </span>
+                      <ArrowRight className="h-4 w-4 flex-none text-navy-700/40 transition-all group-hover:translate-x-1 group-hover:text-accent-500" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* US metros */}
+            <div>
+              <div className="mb-4 text-[11px] font-bold uppercase tracking-[0.16em] text-navy-700/70">
+                US onshore metro coverage
+              </div>
+              <ul className="grid gap-3 sm:grid-cols-2">
+                {METRO_LOCATIONS.map((l) => (
+                  <li key={l.slug}>
+                    <Link
+                      href={`/locations/${l.slug}`}
+                      className="group flex h-full items-center gap-3 rounded-2xl border border-navy-950/8 bg-white p-4 transition-all hover:border-accent-500/40 hover:-translate-y-0.5 hover:shadow-md"
+                    >
+                      <MapPin className="h-4 w-4 flex-none text-accent-500" />
+                      <span className="flex-1 font-display text-[15px] font-bold tracking-tight text-navy-950 transition-colors group-hover:text-accent-500">
+                        {l.name}
+                      </span>
+                      <ArrowRight className="h-4 w-4 flex-none text-navy-700/40 transition-all group-hover:translate-x-1 group-hover:text-accent-500" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </Container>

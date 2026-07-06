@@ -30,6 +30,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# codebase-memory MCP index (local tooling artifact)
+.codebase-memory/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

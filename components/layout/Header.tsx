@@ -129,7 +129,7 @@ const NAV: NavItem[] = [
         icon: Sparkles,
       },
     ],
-    footer: { label: 'Get a Free Quote', href: '/contact' },
+    footer: { label: 'Get a written plan', href: '/contact' },
   },
   {
     label: 'Industries',
@@ -332,7 +332,7 @@ export function Header() {
 
         <div className="hidden lg:flex items-center gap-4">
           <Button href="/contact" size="md">
-            Get a Quote
+            Get a plan
           </Button>
         </div>
 
@@ -390,7 +390,7 @@ export function Header() {
             </ul>
             <div className="mt-8 flex flex-col gap-3">
               <Button href="/contact" size="lg" className="w-full justify-center">
-                Get a Quote
+                Get a written plan
               </Button>
             </div>
           </div>

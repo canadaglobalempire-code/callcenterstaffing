@@ -22,6 +22,12 @@ const interTight = Inter_Tight({
   weight: ['500', '600', '700', '800'],
 });
 
+const clarityProjectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID ?? 'x2dgwn3f7g';
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-B7QE452XJX';
+const googleVerification =
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ??
+  '1ffyhqmcj-JRp9k1GZOGD6pcBK4dB844HbEuYaoI9D4';
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
@@ -54,7 +60,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   verification: {
-    google: '1ffyhqmcj-JRp9k1GZOGD6pcBK4dB844HbEuYaoI9D4',
+    google: googleVerification,
   },
   alternates: {
     canonical: site.url,
@@ -91,17 +97,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
               y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "x2dgwn3f7g");`}
+            })(window, document, "clarity", "script", "${clarityProjectId}");`}
         </Script>
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-B7QE452XJX"
+          src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
           strategy="afterInteractive"
         />
         <Script id="ga4-gtag" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-B7QE452XJX');`}
+            gtag('config', '${gaMeasurementId}');`}
         </Script>
       </body>
     </html>

@@ -23,8 +23,6 @@ export function OrganizationSchema() {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'sales',
-      telephone: site.contact.phoneHref.replace('tel:', ''),
-      email: site.contact.salesEmail,
       url: `${site.url}/contact`,
       areaServed: ['US', 'CA', 'MX', 'PH', 'CO'],
       availableLanguage: ['English', 'Spanish', 'Tagalog', 'Portuguese'],

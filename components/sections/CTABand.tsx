@@ -12,19 +12,23 @@ type CTABandProps = {
 };
 
 const QUOTE_INCLUDES = [
-  'How many agents you need and where',
+  'Recommended agent count and region mix',
   'Estimated hourly rate per agent',
-  'How fast we can deploy a team',
-  'Free written quote — no obligation',
+  'Earliest shortlist and ramp timeline',
+  'Compliance notes for regulated queues',
 ];
 
 export function CTABand({
   eyebrow = 'Ready when you are',
-  headline = 'Get a free quote in one business day.',
+  headline = 'Get a written plan in one business day.',
   sub = 'Tell us how many agents you need and what they would handle. We send back a written quote with timing, regions and rate — no decks, no fluff.',
   primaryHref = '/contact',
-  primaryLabel = 'Get a Free Quote',
+  primaryLabel = 'Get a written plan',
 }: CTABandProps) {
+  const words = headline.split(' ');
+  const lead = words.slice(0, -3).join(' ');
+  const emphasis = words.slice(-3).join(' ');
+
   return (
     <section className="relative isolate overflow-hidden bg-navy-950 py-20 text-white lg:py-24">
       {/* Background image */}
@@ -59,10 +63,10 @@ export function CTABand({
             </span>
 
             <h2 className="mt-6 max-w-3xl font-display text-[2.25rem] font-extrabold leading-[1.05] tracking-[-0.035em] text-white sm:text-[2.75rem] lg:text-[3.5rem]">
-              {headline.split(' ').slice(0, -3).join(' ')}{' '}
+              {lead}{' '}
               <span className="relative inline-block">
                 <span className="relative z-10 text-accent-500">
-                  {headline.split(' ').slice(-3).join(' ')}
+                  {emphasis}
                 </span>
                 <span
                   aria-hidden
@@ -82,11 +86,11 @@ export function CTABand({
               </span>
               <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-white backdrop-blur-sm">
                 <ShieldCheck className="h-3.5 w-3.5 text-accent-500" />
-                No obligation
+                Protected form
               </span>
               <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-white backdrop-blur-sm">
                 <Check className="h-3.5 w-3.5 text-accent-500" />
-                Pay only for hours worked
+                No public phone or email
               </span>
             </div>
           </div>
@@ -98,7 +102,7 @@ export function CTABand({
                 What you&apos;ll get
               </div>
               <h3 className="mt-2 font-display text-xl font-extrabold tracking-tight text-navy-950">
-                Your free written quote includes:
+                Your written staffing plan includes:
               </h3>
 
               <ul className="mt-5 space-y-3">
@@ -120,7 +124,7 @@ export function CTABand({
                   {primaryLabel}
                 </Button>
                 <p className="text-navy-700/80 text-center text-[12px]">
-                  No spam. No newsletter. A senior account manager reads every reply.
+                  A senior account manager reviews every protected request.
                 </p>
               </div>
             </div>

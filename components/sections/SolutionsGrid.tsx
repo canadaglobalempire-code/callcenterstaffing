@@ -165,7 +165,7 @@ export function SolutionsGrid() {
                       href="#staffing-plan"
                       className="group inline-flex items-center gap-2 rounded-full bg-accent-500 px-7 h-12 text-sm font-bold uppercase tracking-wider text-white shadow-lg transition-all hover:bg-accent-400 hover:-translate-y-0.5 hover:shadow-xl"
                     >
-                      Get a Free Quote
+                      Get a written plan
                       <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </Link>
                     <div className="flex items-center gap-3 text-xs text-navy-700">

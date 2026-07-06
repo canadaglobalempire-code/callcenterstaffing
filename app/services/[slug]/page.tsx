@@ -103,7 +103,7 @@ export default function ServicePage({ params }: { params: Params }) {
       />
       <FAQSchema items={svc.faqs} />
 
-      {/* HERO — homepage template */}
+      {/* HERO */}
       <section className="relative isolate overflow-hidden bg-navy-950 pb-20 pt-40 text-white lg:pb-28 lg:pt-48">
         <Image
           src={heroImage}
@@ -155,7 +155,7 @@ export default function ServicePage({ params }: { params: Params }) {
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Button href="#staffing-plan" size="lg" withArrow>
-                Get a Free Quote
+                Get a written plan
               </Button>
               <a
                 href="#what-is-it"
@@ -165,6 +165,21 @@ export default function ServicePage({ params }: { params: Params }) {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
+
+            <dl className="mt-8 grid max-w-2xl gap-3 sm:grid-cols-3">
+              {[
+                ['Model', 'Agents on our payroll'],
+                ['Timing', 'First slate in about 72 hours'],
+                ['Request', 'Protected form only'],
+              ].map(([label, value]) => (
+                <div key={label} className="rounded-2xl border border-white/10 bg-white/[0.08] px-4 py-3">
+                  <dt className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/50">
+                    {label}
+                  </dt>
+                  <dd className="mt-1 text-sm font-semibold leading-tight text-white">{value}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
 
           <div className="lg:col-span-5 lg:pl-4">
@@ -408,7 +423,7 @@ export default function ServicePage({ params }: { params: Params }) {
               {relatedLocations.map((loc) => (
                 <li key={loc.slug}>
                   <Link
-                    href="/locations"
+                    href={`/locations/${loc.slug}`}
                     className="border-navy-950/8 hover:border-accent-500/40 group flex h-full items-start gap-5 rounded-3xl border bg-white p-7 transition-all hover:-translate-y-0.5 hover:shadow-md"
                   >
                     <span className="bg-accent-500/10 inline-flex h-12 w-12 flex-none items-center justify-center rounded-xl text-accent-500">
@@ -447,7 +462,7 @@ export default function ServicePage({ params }: { params: Params }) {
 
       <CTABand
         headline={`Ready to talk ${svc.primaryKeyword}?`}
-        sub={`A senior account manager who has run ${svc.primaryKeyword} engagements for years writes your plan — not a generalist. Reply within one business day.`}
+        sub={`A senior account manager who has run ${svc.primaryKeyword} engagements for years writes your plan — not a generalist. We respond within one business day.`}
       />
     </>
   );

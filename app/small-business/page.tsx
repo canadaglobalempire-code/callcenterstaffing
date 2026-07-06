@@ -228,7 +228,7 @@ export default function SmallBusinessPage() {
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Button href="/contact" size="lg" withArrow>
-                Get a Free Quote
+                Get a written plan
               </Button>
               <a
                 href="#expectations"
@@ -462,7 +462,7 @@ export default function SmallBusinessPage() {
         headline="Tell us your floor — even if it&rsquo;s small."
         sub="Five seats or fifty. Same screen, same 90-day guarantee, lighter engagement. A senior account manager writes back inside one business day with a plan and a written quote — or tells you straight if we&rsquo;re not the fit."
         primaryHref="/contact"
-        primaryLabel="Get a Free Quote"
+        primaryLabel="Get a written plan"
       />
     </>
   );

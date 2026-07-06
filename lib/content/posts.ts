@@ -1,4 +1,4 @@
-import type { Post } from './types';
+import type { Post, PostSection } from './types';
 import { BPO_CONTENT } from './bpo-content';
 
 type BpoLocationPostConfig = {
@@ -177,8 +177,48 @@ const BPO_LOCATION_POST_CONFIGS: BpoLocationPostConfig[] = [
   },
 ];
 
+// Country BPO posts that have a matching, published location page. For these we
+// append a staffing-alternative section — this reframes a directory-intent post
+// toward our own staffing offer and links to the /locations/{slug} page.
+const BPO_STAFFING_LINK: Record<string, { locationSlug: string; service: string }> = {
+  'top-15-bpo-companies-in-usa': {
+    locationSlug: 'united-states',
+    service: 'onshore-call-center-staffing',
+  },
+  'top-15-bpo-companies-in-mexico': {
+    locationSlug: 'mexico',
+    service: 'nearshore-call-center-staffing',
+  },
+  'top-15-bpo-companies-in-colombia': {
+    locationSlug: 'colombia',
+    service: 'nearshore-call-center-staffing',
+  },
+  'top-15-bpo-companies-in-philippines': {
+    locationSlug: 'philippines',
+    service: 'offshore-call-center-staffing',
+  },
+  'top-15-bpo-companies-in-south-africa': {
+    locationSlug: 'south-africa',
+    service: 'offshore-call-center-staffing',
+  },
+};
+
+function bpoStaffingSection(config: BpoLocationPostConfig): PostSection | null {
+  const link = BPO_STAFFING_LINK[config.slug];
+  if (!link) return null;
+  return {
+    heading: `Staffing agents in ${config.phraseLocation}, not just outsourcing`,
+    level: 2,
+    paragraphs: [
+      `Hiring a BPO is only one way to run ${config.phraseLocation} support. If you already have — or want to keep — your own floor, tooling, QA and brand voice, a staffing partner places trained agents directly into your operation instead of handing the whole channel to a vendor. Our /locations/${link.locationSlug} page breaks down the ${config.phraseLocation} talent pool, wage benchmarks, time-zone overlap and the agent profile we screen for.`,
+      `For the model itself, /services/${link.service} explains how we source, screen and guarantee agents — you pay only for hours worked and can swap any agent free. It is often the cleaner path when your process is already strong and you simply need trained people fast. A senior recruiter will write a plan against your forecast within one business day.`,
+    ],
+  };
+}
+
 function createBpoLocationPost(config: BpoLocationPostConfig): Post {
   const c = BPO_CONTENT[config.slug];
+  const staffingSection = bpoStaffingSection(config);
   return {
     slug: config.slug,
     title: c.title,
@@ -186,7 +226,7 @@ function createBpoLocationPost(config: BpoLocationPostConfig): Post {
     metaTitle: c.metaTitle,
     metaDescription: c.metaDescription,
     publishedAt: config.publishedAt,
-    author: 'Call Center Staffing Editorial',
+    author: 'Call Center Staffing',
     category: 'Comparison',
     readingMinutes: 12,
     heroImage: config.heroImage,
@@ -196,7 +236,7 @@ function createBpoLocationPost(config: BpoLocationPostConfig): Post {
       'in-house-vs-outsourced-call-center',
       'call-center-staffing-cost-2026',
     ],
-    sections: c.sections,
+    sections: staffingSection ? [...c.sections, staffingSection] : c.sections,
     faqs: c.faqs,
   };
 }
@@ -634,7 +674,7 @@ function createTrafficPost(config: TrafficPostConfig): Post {
     metaTitle: config.title,
     metaDescription: config.metaDescription,
     publishedAt: config.publishedAt,
-    author: 'Call Center Staffing Editorial',
+    author: 'Call Center Staffing',
     category: config.category,
     readingMinutes: 8,
     heroImage: config.heroImage,
@@ -738,7 +778,7 @@ export const POSTS: Post[] = [
     metaDescription:
       'Compare the top 15 BPO companies in the world for 2026. See best-fit use cases, core services, industry strengths, and buyer questions before outsourcing.',
     publishedAt: '2026-06-04',
-    author: 'Call Center Staffing Editorial',
+    author: 'Call Center Staffing',
     category: 'Comparison',
     readingMinutes: 16,
     heroImage: '/images/cc-office-wide.jpg',
@@ -756,24 +796,27 @@ export const POSTS: Post[] = [
         ],
       },
       {
-        heading: 'How to compare BPO companies',
+        heading: 'How we selected the top BPO companies',
         level: 2,
         paragraphs: [
-          'A strong BPO comparison should look beyond brand size. The largest provider is not automatically the best partner for your operation, and the most specialized provider is not automatically too small. Before comparing the top BPO companies in the world, evaluate each provider against the operating problem you actually need solved.',
+          'These companies consistently outperform larger competitors in flexibility, ROI, and hands-on execution.',
+          'To create this list, we evaluated global BPO providers using objective, enterprise-grade criteria:',
         ],
         bullets: [
-          'Service fit: inbound support, outbound sales, back office, technical support, appointment setting, staffing, or a blended model.',
-          'Scale fit: whether the provider is built for 10 seats, 100 seats, 1,000 seats, or a global multi-language footprint.',
-          'Industry fit: healthcare, financial services, insurance, ecommerce, retail, telecom, real estate, SaaS, travel, or public sector work.',
-          'Compliance fit: HIPAA, PCI DSS, SOC 2, ISO 27001, privacy controls, call recording rules, and industry-specific audit expectations.',
-          'Technology fit: CRM integration, QA analytics, workforce management, AI-assisted workflows, reporting cadence, and omnichannel support.',
-          'Commercial fit: contract length, ramp timeline, pricing model, minimum seat count, replacement rules, and how performance is measured.',
+          'Global delivery footprint & scalability',
+          'Industry specialization & vertical expertise',
+          'Security & compliance (HIPAA, SOC 2, ISO 27001, PCI DSS)',
+          'Technology maturity (AI, automation, analytics)',
+          'Client profile (SMBs, mid-market, enterprise)',
+          'Service flexibility & pricing transparency',
+          'Market reputation & operational track record',
         ],
       },
       {
         heading: 'Quick comparison of the top 15 BPO companies',
         level: 2,
         paragraphs: [
+          'This approach ensures the rankings reflect real-world outsourcing performance, not marketing hype.',
           'Here is the shortlist at a glance. Treat this as a starting point, then use the company-by-company notes below to decide which providers deserve a sales conversation.',
         ],
         bullets: [
@@ -1069,7 +1112,7 @@ export const POSTS: Post[] = [
       'How to scale a call center without watching CSAT, AHT and QA scores fall. A practical playbook for forecast-aligned hiring, cohort waves, and 30/60/90 score-cards.',
     publishedAt: '2026-04-22',
     updatedAt: '2026-05-05',
-    author: 'Call Center Staffing Editorial',
+    author: 'Call Center Staffing',
     category: 'Process',
     readingMinutes: 9,
     heroImage: '/images/hero-agent-1.jpg',
@@ -1200,7 +1243,7 @@ export const POSTS: Post[] = [
       'How to reduce call center turnover at the root: wrong-fit hires, unclear ramp expectations, unsupported nesting, and weak frontline leadership. A practical playbook.',
     publishedAt: '2026-04-15',
     updatedAt: '2026-05-05',
-    author: 'Call Center Staffing Editorial',
+    author: 'Call Center Staffing',
     category: 'Hiring',
     readingMinutes: 9,
     heroImage: '/images/hero-agent-2.jpg',
@@ -1337,7 +1380,7 @@ export const POSTS: Post[] = [
       'Call center staffing cost in 2026: how staffing agencies actually charge, wage benchmarks across US, Mexico, Colombia and the Philippines, and the real ROI math.',
     publishedAt: '2026-04-08',
     updatedAt: '2026-05-05',
-    author: 'Call Center Staffing Editorial',
+    author: 'Call Center Staffing',
     category: 'Pricing',
     readingMinutes: 10,
     heroImage: '/images/hero-agent-3.jpg',
@@ -1482,7 +1525,7 @@ export const POSTS: Post[] = [
     metaDescription:
       'In-house vs outsourced call center in 2026: how the decision actually gets made, cost ratios, control trade-offs, compliance ownership, and when each model wins.',
     publishedAt: '2026-04-08',
-    author: 'Call Center Staffing Editorial',
+    author: 'Call Center Staffing',
     category: 'Comparison',
     readingMinutes: 11,
     heroImage: '/images/internet-call-center-headset-pair.jpg',
@@ -1614,7 +1657,7 @@ export const POSTS: Post[] = [
     metaDescription:
       'How to hire call center agents fast without dropping quality: the 72-hour shortlist standard, pre-built bench tactics, cohort waves, and when to bring in a specialist.',
     publishedAt: '2026-04-15',
-    author: 'Call Center Staffing Editorial',
+    author: 'Call Center Staffing',
     category: 'Hiring',
     readingMinutes: 9,
     heroImage: '/images/agent-close.jpg',
@@ -1744,7 +1787,7 @@ export const POSTS: Post[] = [
     metaDescription:
       'Call center staffing best practices for 2026: forecast-aligned recruiting, QA-aligned screening, cohort waves, 30/60/90 score-cards, attrition guarantees, and more.',
     publishedAt: '2026-04-29',
-    author: 'Call Center Staffing Editorial',
+    author: 'Call Center Staffing',
     category: 'Process',
     readingMinutes: 12,
     heroImage: '/images/diverse-team.jpg',
@@ -1905,7 +1948,7 @@ export const POSTS: Post[] = [
     metaDescription:
       'Seasonal call center staffing: why Q4 hiring starts in July, how pre-built bench economics work, clean demobilization, and tax season and open enrollment timing.',
     publishedAt: '2026-05-13',
-    author: 'Call Center Staffing Editorial',
+    author: 'Call Center Staffing',
     category: 'Process',
     readingMinutes: 10,
     heroImage: '/images/team-thumbsup.jpg',
@@ -2047,7 +2090,7 @@ export const POSTS: Post[] = [
     metaDescription:
       'Call center no-show rate benchmarks for 2026: top quartile under 5 percent, average 5 to 10 percent, root causes, measurement, and how to fix offer ghosting and day-1 no-shows.',
     publishedAt: '2026-05-27',
-    author: 'Call Center Staffing Editorial',
+    author: 'Call Center Staffing',
     category: 'Hiring',
     readingMinutes: 8,
     heroImage: '/images/cc-agent-writing.jpg',
@@ -2194,7 +2237,7 @@ export const POSTS: Post[] = [
     metaDescription:
       'How we placed 60 bilingual call center agents in Mexico City inside 38 days for a US healthcare payer — sourcing playbook, CEFR voice scoring, cohort waves, outcomes.',
     publishedAt: '2026-03-25',
-    author: 'Call Center Staffing Editorial',
+    author: 'Call Center Staffing',
     category: 'Case Study',
     readingMinutes: 9,
     heroImage: '/images/cc-diverse-team.jpg',
@@ -2320,7 +2363,7 @@ export const POSTS: Post[] = [
     metaDescription:
       'How we launched a fintech BPO from 0 to 120 agents in 90 days in Manila and Cebu — pre-built bench, embedded recruiters, cohort waves, first SLA hit inside ramp window.',
     publishedAt: '2026-04-01',
-    author: 'Call Center Staffing Editorial',
+    author: 'Call Center Staffing',
     category: 'Case Study',
     readingMinutes: 10,
     heroImage: '/images/hd-office-team.jpg',

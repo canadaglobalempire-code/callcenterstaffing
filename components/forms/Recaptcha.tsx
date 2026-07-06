@@ -5,6 +5,7 @@ import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
 // Public reCAPTCHA v2 site key — safe to ship in client code.
 // The matching SECRET key is configured in the SplitForms dashboard (never in this repo).
 const SITE_KEY = '6Ld_Fw8tAAAAAGmZm1aBgugZA434TfkJWlhkUzEP';
+const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? SITE_KEY;
 
 export type RecaptchaHandle = { reset: () => void };
 
@@ -61,7 +62,7 @@ export const Recaptcha = forwardRef<RecaptchaHandle, Props>(({ onChange, theme =
         widgetId.current === null
       ) {
         widgetId.current = window.grecaptcha.render(containerRef.current, {
-          sitekey: SITE_KEY,
+          sitekey: siteKey,
           theme,
           callback: (token: string) => onChange(token),
           'expired-callback': () => onChange(null),

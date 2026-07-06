@@ -6,7 +6,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Check, ArrowRight, AlertCircle, ShieldCheck, Send } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { submitToSplitforms } from '@/lib/splitforms';
+import { submitLead } from '@/lib/lead-client';
+import { trackLeadSubmission } from '@/lib/analytics';
 import { Recaptcha, type RecaptchaHandle } from './Recaptcha';
 
 const schema = z.object({
@@ -47,6 +48,8 @@ export function HeroQuoteForm() {
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const captchaRef = useRef<RecaptchaHandle>(null);
+  const renderedAtRef = useRef(Date.now());
+  const honeypotRef = useRef<HTMLInputElement>(null);
   const {
     register,
     handleSubmit,
@@ -73,10 +76,12 @@ export function HeroQuoteForm() {
       return;
     }
     try {
-      await submitToSplitforms(
-        {
-          source: 'HeroQuoteForm',
-          page: typeof window !== 'undefined' ? window.location.pathname : '',
+      await submitLead({
+        source: 'HeroQuoteForm',
+        subject: `New quote request from ${values.name} (${values.company})`,
+        renderedAt: renderedAtRef.current,
+        companyWebsite: honeypotRef.current?.value,
+        fields: {
           name: values.name,
           email: values.email,
           company: values.company,
@@ -86,10 +91,11 @@ export function HeroQuoteForm() {
           region: values.region,
           'g-recaptcha-response': captchaToken,
         },
-        `New quote request from ${values.name} (${values.company})`,
-      );
+      });
+      trackLeadSubmission('HeroQuoteForm');
       setSubmitted(true);
       reset();
+      renderedAtRef.current = Date.now();
       captchaRef.current?.reset();
       setCaptchaToken(null);
     } catch (err) {
@@ -117,12 +123,15 @@ export function HeroQuoteForm() {
               Quote request received.
             </h3>
             <p className="mt-3 text-white/75 max-w-sm mx-auto text-[15px]">
-              A senior recruiter will email you a written quote and sourcing timeline within one
-              business day.
+              A senior recruiter will review the request and respond with a written quote and
+              sourcing timeline within one business day.
             </p>
             <button
               type="button"
-              onClick={() => setSubmitted(false)}
+              onClick={() => {
+                renderedAtRef.current = Date.now();
+                setSubmitted(false);
+              }}
               className="mt-5 text-sm font-semibold text-accent-500 hover:text-accent-400"
             >
               Submit another request
@@ -133,7 +142,7 @@ export function HeroQuoteForm() {
             <div className="flex items-center justify-between gap-4">
               <div>
                 <h2 className="font-display text-xl lg:text-2xl font-extrabold tracking-tight text-white">
-                  Get a Free Quote
+                  Get a written plan
                 </h2>
                 <p className="mt-1 text-sm text-white/65">
                   Written quote in one business day. No obligation.
@@ -142,6 +151,16 @@ export function HeroQuoteForm() {
             </div>
 
             <form onSubmit={handleSubmit(onSubmit)} className="mt-6 grid gap-3.5" noValidate>
+              <input
+                ref={honeypotRef}
+                type="text"
+                name="companyWebsite"
+                tabIndex={-1}
+                autoComplete="off"
+                className="hidden"
+                aria-hidden="true"
+              />
+
               <Field id="name" label="Your name" error={errors.name?.message}>
                 <input
                   id="name"
@@ -232,10 +251,10 @@ export function HeroQuoteForm() {
                   </span>
                   <span className="flex flex-col leading-tight min-w-0">
                     <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/80">
-                      {isSubmitting ? 'Submitting' : 'Free · 1 business day'}
+                      {isSubmitting ? 'Submitting' : 'Protected · 1 business day'}
                     </span>
                     <span className="text-[15px] font-extrabold tracking-tight truncate">
-                      {isSubmitting ? 'Sending your request…' : 'Get my Free Quote'}
+                      {isSubmitting ? 'Sending your request…' : 'Get my written plan'}
                     </span>
                   </span>
                 </span>

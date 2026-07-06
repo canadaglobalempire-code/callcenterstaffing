@@ -491,7 +491,7 @@ Done badly, a customer service staffing agency hands you resumes and walks away.
     primaryKeyword: 'outsourced call center staffing',
     metaTitle: 'Outsourced Call Center Staffing',
     metaDescription:
-      'Outsourced call center staffing without the HR burden. Trained agents on our payroll, pay per hour, 90-day guarantee, deploy in ~72 hours. Get a free quote.',
+      'Outsourced call center staffing without the HR burden. Trained agents on our payroll, pay per hour, 90-day guarantee, deploy in ~72 hours. Get a written plan.',
     heroImage: '/images/internet-office-team-meeting.jpg',
     hero: {
       eyebrow: 'Services',

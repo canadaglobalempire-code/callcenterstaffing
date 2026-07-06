@@ -13,11 +13,11 @@ export function StaffingPlanCTA() {
           <div className="lg:col-span-5">
             <Eyebrow>Get a quote</Eyebrow>
             <Heading level={2} display="l" className="mt-5">
-              Tell us how many agents you need. We&rsquo;ll send a quote in one business day.
+              Tell us the queue, headcount and timeline. We&rsquo;ll map the staffing plan.
             </Heading>
             <p className="mt-6 text-body-l text-navy-700 max-w-prose">
-              No decks. No long sales calls. Tell us what your business does, how many agents you
-              want and where — and we send back a written quote with timing and rate.
+              No public phone number, no direct email posted for bots to scrape. Use the protected
+              form and we route the request to a senior account manager for a written plan.
             </p>
 
             <ul className="mt-10 space-y-5 text-sm">
@@ -25,21 +25,21 @@ export function StaffingPlanCTA() {
                 <UserCheck className="mt-0.5 h-4 w-4 flex-none text-accent-500" />
                 <div>
                   <div className="font-semibold text-navy-950">A real person reads your request</div>
-                  <p className="text-navy-700">Not a chatbot. A senior account manager who understands call centers.</p>
+                  <p className="text-navy-700">Not a chatbot. A senior account manager who understands call-center ramps.</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
                 <Clock className="mt-0.5 h-4 w-4 flex-none text-accent-500" />
                 <div>
                   <div className="font-semibold text-navy-950">Response in 24 hours</div>
-                  <p className="text-navy-700">One business day. Written quote in your inbox.</p>
+                  <p className="text-navy-700">One business day. Written next steps using the details you provide.</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
                 <ShieldCheck className="mt-0.5 h-4 w-4 flex-none text-accent-500" />
                 <div>
-                  <div className="font-semibold text-navy-950">Free quote · no commitment</div>
-                  <p className="text-navy-700">Pay only for hours worked. Month-to-month, scale anytime.</p>
+                  <div className="font-semibold text-navy-950">No commitment</div>
+                  <p className="text-navy-700">Region mix, hourly range and ramp calendar before you decide.</p>
                 </div>
               </li>
             </ul>
@@ -47,6 +47,11 @@ export function StaffingPlanCTA() {
 
           <div className="lg:col-span-7">
             <div className="rounded-lg border border-ink-200 bg-white p-6 lg:p-10 shadow-sm">
+              <div className="mb-6 rounded-lg border border-accent-500/20 bg-accent-500/8 px-4 py-3 text-sm leading-relaxed text-navy-700">
+                <strong className="font-semibold text-navy-950">Protected request:</strong> we do
+                not publish phone or email contact details on the site. This form is the cleanest
+                way to reach the staffing team without opening the door to spam.
+              </div>
               <StaffingPlanForm />
             </div>
           </div>

@@ -100,7 +100,7 @@ export default function SolutionsIndexPage() {
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Button href="/contact" size="lg" withArrow>
-                Get a Free Quote
+                Get a written plan
               </Button>
               <a
                 href="#solutions"

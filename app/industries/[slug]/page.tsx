@@ -184,7 +184,7 @@ export default function IndustryPage({ params }: { params: Params }) {
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Button href="#staffing-plan" size="lg" withArrow>
-                Get a Free Quote
+                Get a written plan
               </Button>
               <a
                 href="#challenges"
@@ -197,7 +197,55 @@ export default function IndustryPage({ params }: { params: Params }) {
           </div>
 
           <div className="lg:col-span-5 lg:pl-4">
-            <HeroQuoteForm />
+            <div className="rounded-3xl border border-white/15 bg-white/[0.06] p-6 shadow-2xl backdrop-blur-md lg:p-7">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-accent-500">
+                    Industry readiness
+                  </div>
+                  <h2 className="mt-2 font-display text-2xl font-extrabold tracking-tight text-white">
+                    {ind.name} staffing screen
+                  </h2>
+                </div>
+                <span className="inline-flex h-11 w-11 flex-none items-center justify-center rounded-2xl bg-accent-500 text-white">
+                  <ShieldCheck className="h-5 w-5" strokeWidth={2.4} />
+                </span>
+              </div>
+
+              <dl className="mt-6 grid gap-3">
+                <div className="rounded-2xl border border-white/10 bg-white/[0.08] px-4 py-3">
+                  <dt className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/55">
+                    Roles mapped
+                  </dt>
+                  <dd className="mt-1 text-sm font-semibold leading-snug text-white">
+                    {roleEntries.length} role families screened against industry scenarios
+                  </dd>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/[0.08] px-4 py-3">
+                  <dt className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/55">
+                    Compliance watchlist
+                  </dt>
+                  <dd className="mt-1 text-sm font-semibold leading-snug text-white">
+                    {(ind.regulatoryFrameworks ?? ind.complianceConsiderations ?? ['QA scorecard'])
+                      .slice(0, 3)
+                      .join(' · ')}
+                  </dd>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/[0.08] px-4 py-3">
+                  <dt className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/55">
+                    First screen focus
+                  </dt>
+                  <dd className="mt-1 text-sm font-semibold leading-snug text-white">
+                    {ind.industryChallenges[0]?.title ?? 'Queue fit, compliance and customer tone'}
+                  </dd>
+                </div>
+              </dl>
+
+              <p className="mt-5 text-sm leading-relaxed text-white/68">
+                This page is built around the screening risks that matter in {ind.name.toLowerCase()},
+                not a generic call-center hiring checklist.
+              </p>
+            </div>
           </div>
         </Container>
       </section>
@@ -489,8 +537,8 @@ export default function IndustryPage({ params }: { params: Params }) {
             </h2>
             <p className="mt-5 max-w-[560px] text-[16px] leading-relaxed text-white/80 lg:text-[17px]">
               A senior account manager who has placed {ind.name.toLowerCase()} talent against your
-              regulator will write your plan — not a generalist. Free, no obligation, one business
-              day.
+              regulator will write your plan — not a generalist. Protected request, no obligation,
+              one business day.
             </p>
             <ul className="mt-8 grid max-w-xl gap-3 sm:grid-cols-2">
               {[
@@ -569,7 +617,7 @@ export default function IndustryPage({ params }: { params: Params }) {
       <StaffingPlanCTA />
       <CTABand
         headline={`Ready to staff your ${ind.name.toLowerCase()} contact center?`}
-        sub={`A senior account manager who has placed ${ind.name.toLowerCase()} talent against your regulator will write your plan — not a generalist. Reply within one business day.`}
+        sub={`A senior account manager who has placed ${ind.name.toLowerCase()} talent against your regulator will write your plan — not a generalist. We respond within one business day.`}
       />
     </>
   );

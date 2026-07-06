@@ -181,7 +181,7 @@ export default function ContactPage() {
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Button href="#staffing-plan" size="lg" withArrow>
-                Get a Free Quote
+                Get a written plan
               </Button>
               <a
                 href="#other-ways"
@@ -293,8 +293,8 @@ export default function ContactPage() {
                 </h3>
                 <p className="mt-3 text-[15px] leading-relaxed text-navy-700 max-w-prose">
                   The more you share — forecast, languages, licensure, ramp window — the more
-                  specific your written quote will be. Every field below shapes the plan that lands
-                  in your inbox.
+                  specific your written quote will be. Every field below shapes the plan our team
+                  sends back.
                 </p>
 
                 <div className="mt-7">
@@ -317,8 +317,8 @@ export default function ContactPage() {
               </Heading>
             </div>
             <p className="lg:col-span-5 text-body-l text-navy-700 max-w-prose">
-              No newsletter list. No nurture sequence. Pick the channel that fits where you are in
-              your planning cycle.
+              No public phone number or email address for bots to scrape. Pick the protected path
+              that fits where you are in your planning cycle.
             </p>
           </div>
 

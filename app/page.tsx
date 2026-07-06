@@ -22,7 +22,7 @@ import { alternatesFor } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'Call Center Staffing Agency | Trained Agents in 72 Hrs',
   description:
-    'Hire trained call center agents on our payroll. Deploy a team in 72 hours, pay only for hours worked, swap any agent free. Get a free quote today.',
+    'Hire trained call center agents on our payroll. Deploy a team in 72 hours, pay only for hours worked, swap any agent free. Get a written staffing plan.',
   keywords: [
     'trained call center agents',
     'trained call center staff',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Call Center Staffing Agency — Trained Agents, Deployed to You',
     description:
-      '100,000+ trained call center agents, deployed to your business. Temporary or long-term. Free quote, pay only for hours worked.',
+      '100,000+ trained call center agents, deployed to your business. Temporary or long-term. Written plan, pay only for hours worked.',
     images: ['/images/cc-office-wide.jpg'],
   },
 };

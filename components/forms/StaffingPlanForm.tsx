@@ -6,7 +6,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Check, ArrowRight, AlertCircle, Send } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { submitToSplitforms } from '@/lib/splitforms';
+import { submitLead } from '@/lib/lead-client';
+import { trackLeadSubmission } from '@/lib/analytics';
 import { Recaptcha, type RecaptchaHandle } from './Recaptcha';
 
 const schema = z.object({
@@ -65,6 +66,8 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const captchaRef = useRef<RecaptchaHandle>(null);
+  const renderedAtRef = useRef(Date.now());
+  const honeypotRef = useRef<HTMLInputElement>(null);
 
   const {
     register,
@@ -83,10 +86,12 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
       return;
     }
     try {
-      await submitToSplitforms(
-        {
-          source: 'StaffingPlanForm',
-          page: typeof window !== 'undefined' ? window.location.pathname : '',
+      await submitLead({
+        source: 'StaffingPlanForm',
+        subject: `New staffing plan request from ${values.name} (${values.company})`,
+        renderedAt: renderedAtRef.current,
+        companyWebsite: honeypotRef.current?.value,
+        fields: {
           name: values.name,
           company: values.company,
           website: values.website,
@@ -98,10 +103,11 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
           notes: values.notes,
           'g-recaptcha-response': captchaToken,
         },
-        `New staffing plan request from ${values.name} (${values.company})`,
-      );
+      });
+      trackLeadSubmission('StaffingPlanForm');
       setSubmitted(true);
       reset();
+      renderedAtRef.current = Date.now();
       captchaRef.current?.reset();
       setCaptchaToken(null);
     } catch (err) {
@@ -126,7 +132,10 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
         <button
           type="button"
           className="mt-6 text-sm font-semibold text-brand-600 hover:text-navy-950"
-          onClick={() => setSubmitted(false)}
+          onClick={() => {
+            renderedAtRef.current = Date.now();
+            setSubmitted(false);
+          }}
         >
           Submit another request
         </button>
@@ -140,8 +149,18 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
       className={cn('grid gap-5', compact ? '' : 'lg:grid-cols-2')}
       noValidate
     >
+      <input
+        ref={honeypotRef}
+        type="text"
+        name="companyWebsite"
+        tabIndex={-1}
+        autoComplete="off"
+        className="hidden"
+        aria-hidden="true"
+      />
+
       <Field label="Full name" id="name" error={errors.name?.message}>
-        <input id="name" {...register('name')} className={fieldClass} placeholder="Jane Doe" />
+        <input id="name" {...register('name')} className={fieldClass} placeholder="Operations lead" />
       </Field>
 
       <Field label="Company" id="company" error={errors.company?.message}>
@@ -149,7 +168,7 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
           id="company"
           {...register('company')}
           className={fieldClass}
-          placeholder="Acme BPO"
+          placeholder="Northstar Commerce"
         />
       </Field>
 
@@ -179,7 +198,7 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
           type="tel"
           {...register('phone')}
           className={fieldClass}
-          placeholder="+1 (555) 555-5555"
+          placeholder="Best callback number"
         />
       </Field>
 
@@ -224,10 +243,10 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
             </span>
             <span className="flex flex-col leading-tight min-w-0">
               <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/80">
-                {isSubmitting ? 'Submitting' : 'Free · 1 business day · No obligation'}
+                {isSubmitting ? 'Submitting' : 'Protected · 1 business day · No obligation'}
               </span>
               <span className="text-[15px] font-extrabold tracking-tight truncate">
-                {isSubmitting ? 'Sending your request…' : 'Get my Free Quote'}
+                {isSubmitting ? 'Sending your request…' : 'Get my written plan'}
               </span>
             </span>
           </span>

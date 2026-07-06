@@ -6,7 +6,7 @@ export const SOLUTIONS: Solution[] = [
     name: 'Scaling an Existing Call Center',
     metaTitle: 'Scale Call Center Staffing Fast',
     metaDescription:
-      'Scale call center staffing on your forecast: ramp agents fast, backfill attrition, protect SLAs. Agents on our payroll, deploy in ~72 hours. Get a free quote.',
+      'Scale call center staffing on your forecast: ramp agents fast, backfill attrition, protect SLAs. Agents on our payroll, deploy in ~72 hours. Get a written plan.',
     heroImage: '/images/cc-agent-pro.jpg',
     hero: {
       eyebrow: 'Solutions',

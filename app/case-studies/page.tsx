@@ -52,7 +52,6 @@ type CaseStudy = {
   result: string;
   resultMetrics: { value: string; label: string }[];
   quote: string;
-  quoteAuthor: string;
   quoteTitle: string;
   tags: { region: string; role: string; timeline: string };
 };
@@ -60,7 +59,7 @@ type CaseStudy = {
 const CASES: CaseStudy[] = [
   {
     industry: 'Healthcare',
-    company: 'NorthStar Health',
+    company: 'National healthcare payer',
     image: '/images/case-study-healthcare.jpg',
     headlineMetric: { value: '60 in 38 days', label: 'bilingual nesting class filled' },
     challenge:
@@ -74,13 +73,12 @@ const CASES: CaseStudy[] = [
     ],
     quote:
       '60 bilingual agents on the Mexico City floor in 38 days. Quality of hire was higher than what we used to see from our retained search firm.',
-    quoteAuthor: 'Maya Hernández',
     quoteTitle: 'VP, Customer Operations',
     tags: { region: 'Onshore + Nearshore Mexico City', role: 'Bilingual CX', timeline: '38 days' },
   },
   {
     industry: 'BPO',
-    company: 'Beacon Outsourcing',
+    company: 'Greenfield BPO · US fintech program',
     image: '/images/cc-agent-pro.jpg',
     headlineMetric: { value: '0 → 120', label: 'agents in 90 days' },
     challenge:
@@ -94,13 +92,12 @@ const CASES: CaseStudy[] = [
     ],
     quote:
       'We launched a new BPO from zero. Their recruiters embedded with our ops team and we hit our first SLA inside the ramp window.',
-    quoteAuthor: 'David Cho',
     quoteTitle: 'COO',
     tags: { region: 'Offshore Manila + Cebu', role: 'Multi-channel CX', timeline: '90 days' },
   },
   {
     industry: 'Financial Services',
-    company: 'Lumen Financial',
+    company: 'Licensed collections operator',
     image: '/images/case-study-financial.jpg',
     headlineMetric: { value: '98%', label: 'seat fill held' },
     challenge:
@@ -114,13 +111,12 @@ const CASES: CaseStudy[] = [
     ],
     quote:
       'The pipeline never stopped. Even at 22% attrition, our seats stayed full and our 90-day quality scores held.',
-    quoteAuthor: 'Priya Raman',
     quoteTitle: 'Director of WFM',
     tags: { region: 'Onshore US', role: 'Licensed collections', timeline: '14 months' },
   },
   {
     industry: 'Insurance',
-    company: 'Aurora Insurance',
+    company: 'Multi-state P&C insurer',
     image: '/images/internet-call-center-agent-working.jpg',
     headlineMetric: { value: '80 licensed', label: 'agents in 9 weeks' },
     challenge:
@@ -134,13 +130,12 @@ const CASES: CaseStudy[] = [
     ],
     quote:
       'Every shortlist arrived with verified licenses attached. We stopped losing badging days, and our compliance lead stopped chasing paperwork.',
-    quoteAuthor: 'Marcus Bell',
     quoteTitle: 'Head of Licensing Ops',
     tags: { region: 'Onshore US Sun-Belt', role: 'NMLS-licensed P&C', timeline: '9 weeks' },
   },
   {
     industry: 'SaaS / Tech',
-    company: 'Vertex SaaS',
+    company: 'B2B SaaS platform',
     image: '/images/case-study-technology.jpg',
     headlineMetric: { value: '+65 seats', label: 'in 8 weeks' },
     challenge:
@@ -154,13 +149,12 @@ const CASES: CaseStudy[] = [
     ],
     quote:
       'They sourced engineers who could actually debug an integration call. Our FCR moved 14 points and we hit the launch window without burning the existing team out.',
-    quoteAuthor: 'Alicia Tang',
     quoteTitle: 'VP, Support',
     tags: { region: 'Offshore Philippines', role: 'Tier-2 tech support', timeline: '8 weeks' },
   },
   {
     industry: 'eCommerce',
-    company: 'Sun & Stripe Retail',
+    company: 'DTC ecommerce brand',
     image: '/images/case-study-ecommerce.jpg',
     headlineMetric: { value: '110-agent', label: 'Q4 surge bench' },
     challenge:
@@ -174,7 +168,6 @@ const CASES: CaseStudy[] = [
     ],
     quote:
       'The bench was ready before our forecast was final. We ramped on schedule, held CSAT through peak, and demobilized without a single contract dispute.',
-    quoteAuthor: 'Jordan Wei',
     quoteTitle: 'Director of CX',
     tags: {
       region: 'Onshore US + Nearshore Colombia',
@@ -312,7 +305,7 @@ export default function CaseStudiesPage() {
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Button href="/contact" size="lg" withArrow>
-                Get a Free Quote
+                Get a written plan
               </Button>
               <a
                 href="#cases"
@@ -461,11 +454,8 @@ export default function CaseStudiesPage() {
                       &ldquo;{c.quote}&rdquo;
                     </blockquote>
                     <div className="mt-3 text-[12px]">
-                      <span className="font-bold text-navy-950">{c.quoteAuthor}</span>
-                      <span className="text-navy-700">
-                        {' '}
-                        — {c.quoteTitle}, {c.company}
-                      </span>
+                      <span className="font-bold text-navy-950">{c.quoteTitle}</span>
+                      <span className="text-navy-700"> · {c.company}</span>
                     </div>
                   </div>
 
