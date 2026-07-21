@@ -769,6 +769,128 @@ const TRAFFIC_POSTS = TRAFFIC_POST_CONFIGS.map(createTrafficPost);
 export const POSTS: Post[] = [
   ...TRAFFIC_POSTS,
   ...BPO_LOCATION_POSTS,
+  // Hand-written, not generated from BPO_CONTENT. Deliberately a different
+  // shape from the templated location listicles: no invented ranking, no
+  // competitor list to click away to, and a staffing-vs-BPO pivot that the
+  // template cannot express.
+  {
+    slug: 'bpo-companies-in-texas',
+    title: 'BPO Companies in Texas: How to Choose One (2026 Buyer Guide)',
+    excerpt:
+      'Most "top BPO companies in Texas" lists rank vendors who paid to be on them. This one ranks the questions instead — what Dallas, Houston, Austin and San Antonio each do well, what to verify before signing, and when staffing your own floor beats outsourcing it.',
+    metaTitle: 'BPO Companies in Texas: 2026 Buyer Guide',
+    metaDescription:
+      'How to evaluate BPO companies in Texas: what each metro specialises in, the questions that separate real capability from a good pitch, and when staffing your own floor is the better call.',
+    publishedAt: '2026-07-21',
+    author: 'Call Center Staffing',
+    category: 'Comparison',
+    readingMinutes: 9,
+    heroImage: '/images/cc-diverse-team.jpg',
+    primaryKeyword: 'BPO companies in Texas',
+    relatedPostSlugs: [
+      'in-house-vs-outsourced-call-center',
+      'how-to-hire-call-center-agents-fast',
+      'top-15-bpo-companies-in-usa',
+    ],
+    sections: [
+      {
+        paragraphs: [
+          'If you searched for the top BPO companies in Texas, you have probably already found four or five ranked lists. It is worth knowing how most of them are built: directory sites rank by review volume and paid placement, and vendor blogs rank themselves first. Neither tells you which provider fits your programme.',
+          'So this guide does not rank companies. It ranks the decisions — because in Texas the important variable is usually not which vendor you pick, it is which metro you staff in and which operating model you choose. Get those two right and a mid-tier partner performs well. Get them wrong and the best-reviewed provider in the state still misses your SLA.',
+        ],
+      },
+      {
+        heading: 'Texas is not one contact centre market — it is four',
+        level: 2,
+        paragraphs: [
+          'Buyers routinely evaluate "Texas" as a single labour pool. It is not. The four major metros have genuinely different talent bases, and the mismatch between programme type and metro is the most common avoidable mistake we see.',
+        ],
+        bullets: [
+          'Dallas–Fort Worth — the deepest bench for financial services and telecom. Long-established corporate contact centre presence means experienced supervisors and QA analysts are available, not just frontline agents. This matters more than it sounds: leadership is the constraint on most ramps, not headcount.',
+          'Houston — energy and healthcare. The Texas Medical Center anchors a real supply of agents who have handled patient-facing workflows and understand why a HIPAA rule exists rather than just memorising it. Also the metro where business continuity planning is not optional; see the hurricane section below.',
+          'Austin — technology and SaaS support. Strong for product-literate Tier 1 and Tier 2, weaker for high-volume commodity voice, and the most expensive labour market of the four because agents compete with tech employers for the same people.',
+          'San Antonio — insurance and military-adjacent work, plus the strongest bilingual depth of the major metros. A large veteran and military-family population also means genuine familiarity with regulated, procedure-driven environments.',
+        ],
+      },
+      {
+        paragraphs: [
+          'There is a fifth pool worth knowing about: the Rio Grande Valley and the border cities. Bilingual fluency there is native rather than learned, which is a different quality of Spanish-language support than a scored B2 speaker in a non-border metro. If Spanish volume is a meaningful share of your queue, this is the part of Texas to ask about — and most vendor pitches will not raise it unless you do.',
+        ],
+      },
+      {
+        heading: 'Three Texas-specific things that change the maths',
+        level: 2,
+        bullets: [
+          'No state income tax. Take-home pay goes further at the same gross wage, which is a real retention advantage over comparable coastal metros — and retention, not hiring, is what actually determines whether your floor stays staffed.',
+          'Right-to-work state. Relevant if you are comparing Texas against unionised contact centre markets, and worth a direct question about how it affects your specific programme.',
+          'Gulf Coast weather risk. Houston and the coastal metros carry genuine hurricane-season exposure. Any Texas provider you are seriously considering should be able to describe what happened to their SLA during the last significant storm — not describe a continuity plan in the abstract. Ask for the incident, not the policy.',
+        ],
+      },
+      {
+        heading: 'The questions that separate capability from a good pitch',
+        level: 2,
+        paragraphs: [
+          'These are the ones that reliably change the conversation. They are deliberately hard to answer with marketing language.',
+        ],
+        bullets: [
+          'What is your 90-day agent attrition on programmes like mine, and how is it calculated? A provider quoting annualised attrition when you asked for 90-day is telling you something.',
+          'Who screens my candidates, and have they run a floor? There is a difference between a recruiter filling a requisition and someone who has carried an SLA.',
+          'Show me a recording of a candidate you rejected, and tell me why. Anyone can supply their best sample. The rejects reveal where the bar actually sits.',
+          'What is your ramp plan if cohort one comes in under-sized? Under-sized first cohorts are normal. Not having a wave-two plan is not.',
+          'Which metro will my agents actually sit in, and can that change without my agreement? Sub-delivery to a cheaper market mid-contract is common and rarely surfaced up front.',
+          'What happens to my programme if I want to bring it in-house in eighteen months? The answer tells you how much of the operating knowledge will belong to you versus to them.',
+        ],
+      },
+      {
+        heading: 'The question most Texas buyers skip: do you need a BPO at all?',
+        level: 2,
+        paragraphs: [
+          'Almost every list you will read compares BPO providers against each other. That framing assumes you have already decided to outsource the function, and for a lot of operations that decision is the expensive one — not the vendor choice.',
+          'There are two distinct models, and they fail in different ways:',
+        ],
+        bullets: [
+          'Outsourcing. The provider runs the operation — their supervisors, their QA, their floor, their process. You buy an outcome. This works when contact handling is not a differentiator for you and you would rather not build the capability. It goes wrong when your product is complex, when the process changes weekly, or when the customer conversation is a core part of the brand.',
+          'Staffing. The agents work on someone else\'s payroll but sit inside your operation, on your systems, following your scorecard, managed by your supervisors. You keep the process and the institutional knowledge. This works when you already know how to run the floor and the constraint is purely hiring and employment overhead. It goes wrong if you do not actually have the leadership capacity to manage them.',
+        ],
+      },
+      {
+        paragraphs: [
+          'The honest test is a single question: is the way your customers are handled a differentiator, or a cost? If it is a differentiator, outsourcing it usually erodes the thing that made it good, and the erosion is gradual enough that you notice about a year late. If it is genuinely a cost centre, a competent BPO will run it more cheaply than you will.',
+          'We staff floors rather than run them, so we are not a neutral party here — you should weigh that. But the failure mode we get called in to fix is consistent enough to be worth naming: an operator outsources a complex, brand-critical queue to save on overhead, spends a year losing process knowledge to a partner, and then has to rebuild the capability from nothing when it comes back in-house. The savings rarely covered the rebuild.',
+        ],
+      },
+      {
+        heading: 'If you are staffing in Texas rather than outsourcing',
+        level: 2,
+        paragraphs: [
+          'The practical constraint is usually not whether the talent exists — in these four metros it does. It is whether your hiring calendar is built backwards from your training dates, and whether your screen is tight enough that the people who start are still there at day 90. Those two things determine staffing outcomes far more than which state you hire in.',
+          'Our /how-we-work page walks through the calendar template, and /blog/how-to-hire-call-center-agents-fast covers the screening bar in detail. If you want to compare the two models against your own numbers rather than in the abstract, the /tools/staffing-calculator sizes the cohort and the ramp.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Which Texas city is best for call center staffing?',
+        a: 'It depends on the programme. Dallas–Fort Worth has the deepest supervisor and QA bench and suits financial services and telecom. Houston suits healthcare and energy but carries hurricane-season continuity risk. Austin is strongest for technical and SaaS support and is the most competitive labour market. San Antonio offers the best bilingual depth among the major metros, and the border cities offer native rather than learned Spanish fluency.',
+      },
+      {
+        q: 'Are BPO companies in Texas cheaper than other US states?',
+        a: 'Texas labour costs generally sit below comparable coastal markets, helped by the absence of a state income tax, which stretches take-home pay at the same gross wage. How that translates to your programme depends on metro, channel mix, complexity and seat count, so we scope and quote per programme rather than publish a rate card.',
+      },
+      {
+        q: 'What is the difference between a BPO and a call center staffing agency?',
+        a: 'A BPO runs the operation for you — their supervisors, their QA, their process — and you buy an outcome. A staffing agency supplies agents who sit inside your operation on your systems and your scorecard, managed by your own leadership, while the employment overhead sits with the agency. Outsourcing suits functions that are a cost centre; staffing suits operations where the customer conversation is a differentiator and you want to keep the process knowledge.',
+      },
+      {
+        q: 'How quickly can a call center team be staffed in Texas?',
+        a: 'Speed is usually limited by the training calendar rather than by sourcing. When the hiring plan is built backwards from class-start dates, with buffers for pre-employment fall-off and ghosted offers, cohorts land on plan. When it is built forward from a headcount target, they consistently arrive under-sized regardless of the market.',
+      },
+      {
+        q: 'Should I outsource my Texas call center or staff it myself?',
+        a: 'Ask whether contact handling is a differentiator or a cost. If customer conversations are part of what makes the product good, outsourcing tends to erode that gradually and the erosion is noticed late. If the queue is genuinely a cost centre with stable process, a competent BPO will usually run it more cheaply than you can. Complexity and rate of process change are the two variables that decide it.',
+      },
+    ],
+  },
   {
     slug: 'top-15-bpo-companies-in-the-world',
     title: 'Top 15 BPO Companies in the World 2026',
