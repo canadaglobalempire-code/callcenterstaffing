@@ -141,7 +141,7 @@ export default function ToolsIndexPage() {
         headline="Hand the numbers to a senior recruiter."
         sub="Calculator output plus your timeline and license requirements is enough for a written plan within one business day. No obligation."
         primaryHref="/contact"
-        primaryLabel="Get a written plan"
+        primaryLabel="Get a quote"
       />
     </>
   );

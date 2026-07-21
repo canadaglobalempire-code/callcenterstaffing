@@ -23,7 +23,7 @@ export function CTABand({
   headline = 'Get a written plan in one business day.',
   sub = 'Tell us how many agents you need and what they would handle. We send back a written quote with timing, regions and rate — no decks, no fluff.',
   primaryHref = '/contact',
-  primaryLabel = 'Get a written plan',
+  primaryLabel = 'Get a quote',
 }: CTABandProps) {
   const words = headline.split(' ');
   const lead = words.slice(0, -3).join(' ');

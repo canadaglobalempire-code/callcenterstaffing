@@ -128,7 +128,7 @@ export default function AboutPage() {
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Button href="#staffing-plan" size="lg" withArrow>
-                Get a written plan
+                Get a quote
               </Button>
               <a
                 href="#why-us"

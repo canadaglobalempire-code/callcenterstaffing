@@ -134,7 +134,7 @@ export default function RemoteStaffingPage() {
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Button href="/contact" size="lg" withArrow>
-                Get a written plan
+                Get a quote
               </Button>
               <a
                 href="#how"
@@ -235,7 +235,7 @@ export default function RemoteStaffingPage() {
         items={FAQS}
         background="neutral"
         ctaHref="/contact"
-        ctaLabel="Get a written plan"
+        ctaLabel="Get a quote"
       />
 
       <CTABand

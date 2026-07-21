@@ -227,7 +227,7 @@ export default function StaffingCalculatorPage() {
                 </p>
                 <div className="mt-7">
                   <Button href="/contact" variant="primary" size="lg" withArrow>
-                    Get a written plan
+                    Get a quote
                   </Button>
                 </div>
               </div>
@@ -392,7 +392,7 @@ export default function StaffingCalculatorPage() {
         headline="Turn your calculator output into a written staffing plan."
         sub="A senior recruiter takes your inputs, refines them against an interval forecast, and sends back a written plan with screening criteria and a sourcing timeline — within one business day."
         primaryHref="/contact"
-        primaryLabel="Get my written plan"
+        primaryLabel="Get a quote"
       />
     </>
   );

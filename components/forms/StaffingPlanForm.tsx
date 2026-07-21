@@ -246,7 +246,7 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
                 {isSubmitting ? 'Submitting' : 'Protected · 1 business day · No obligation'}
               </span>
               <span className="text-[15px] font-extrabold tracking-tight truncate">
-                {isSubmitting ? 'Sending your request…' : 'Get my written plan'}
+                {isSubmitting ? 'Sending your request…' : 'Get a quote'}
               </span>
             </span>
           </span>

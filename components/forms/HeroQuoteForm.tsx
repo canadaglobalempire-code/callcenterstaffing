@@ -142,7 +142,7 @@ export function HeroQuoteForm() {
             <div className="flex items-center justify-between gap-4">
               <div>
                 <h2 className="font-display text-xl lg:text-2xl font-extrabold tracking-tight text-white">
-                  Get a written plan
+                  Get a quote
                 </h2>
                 <p className="mt-1 text-sm text-white/65">
                   Written quote in one business day. No obligation.
@@ -254,7 +254,7 @@ export function HeroQuoteForm() {
                       {isSubmitting ? 'Submitting' : 'Protected · 1 business day'}
                     </span>
                     <span className="text-[15px] font-extrabold tracking-tight truncate">
-                      {isSubmitting ? 'Sending your request…' : 'Get my written plan'}
+                      {isSubmitting ? 'Sending your request…' : 'Get a quote'}
                     </span>
                   </span>
                 </span>

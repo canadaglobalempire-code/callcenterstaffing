@@ -158,7 +158,7 @@ function RegionView({ region }: { region: Region }) {
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Button href="/contact" size="lg" withArrow>
-                Get a written plan
+                Get a quote
               </Button>
               <Link
                 href="/locations"
@@ -418,7 +418,7 @@ function LocationView({ location }: { location: Location }) {
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Button href="/contact" size="lg" withArrow>
-                Get a written plan
+                Get a quote
               </Button>
               <Link
                 href="/locations"

@@ -305,7 +305,7 @@ export default function CaseStudiesPage() {
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Button href="/contact" size="lg" withArrow>
-                Get a written plan
+                Get a quote
               </Button>
               <a
                 href="#cases"
