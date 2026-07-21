@@ -1572,10 +1572,10 @@ const RAW_POSTS: Post[] = [
   },
   {
     slug: 'how-to-scale-a-call-center-without-sacrificing-quality',
-    title: 'How to Scale a Call Center Without Sacrificing Quality of Hire',
+    title: 'How to Scale a Call Center Without Losing Quality',
     excerpt:
       'Most operators do not have a hiring problem in the abstract — they have a calendar problem. Here is the playbook for adding seats fast without watching the QA bar collapse.',
-    metaTitle: 'How to Scale a Call Center Without Sacrificing Quality of Hire',
+    metaTitle: 'How to Scale a Call Center Without Losing Quality',
     metaDescription:
       'How to scale a call center without watching CSAT, AHT and QA scores fall. A practical playbook for forecast-aligned hiring, cohort waves, and 30/60/90 score-cards.',
     publishedAt: '2026-04-22',
@@ -1706,7 +1706,7 @@ const RAW_POSTS: Post[] = [
     title: 'How to Reduce Call Center Turnover (Tactics That Actually Work)',
     excerpt:
       'Most attrition in a call center is decided before the agent ever takes a live call. The fix is upstream — in the recruiting funnel and the first thirty days — not in retention bonuses.',
-    metaTitle: 'How to Reduce Call Center Turnover — Tactics That Actually Work',
+    metaTitle: 'How to Reduce Call Center Turnover: What Works',
     metaDescription:
       'How to reduce call center turnover at the root: wrong-fit hires, unclear ramp expectations, unsupported nesting, and weak frontline leadership. A practical playbook.',
     publishedAt: '2026-04-15',
@@ -1843,7 +1843,7 @@ const RAW_POSTS: Post[] = [
     title: 'Call Center Staffing Cost in 2026: What to Expect by Region and Role',
     excerpt:
       "Two cost questions get conflated constantly: what does an agent's wage look like, and what does the staffing engagement itself cost? Here is the honest read on both for 2026.",
-    metaTitle: 'Call Center Staffing Cost 2026 — Wages, Fees and ROI by Region',
+    metaTitle: 'Call Center Staffing Cost 2026: Wages and ROI',
     metaDescription:
       'Call center staffing cost in 2026: how staffing agencies actually charge, wage benchmarks across US, Mexico, Colombia and the Philippines, and the real ROI math.',
     publishedAt: '2026-04-08',
@@ -2251,7 +2251,7 @@ const RAW_POSTS: Post[] = [
     title: 'Call Center Staffing Best Practices for 2026',
     excerpt:
       'Most call center staffing problems are not about effort. They are about a handful of operational disciplines that most teams know about and very few actually run. Here is the 2026 list.',
-    metaTitle: 'Call Center Staffing Best Practices for 2026 — Operator Guide',
+    metaTitle: 'Call Center Staffing Best Practices 2026',
     metaDescription:
       'Call center staffing best practices for 2026: forecast-aligned recruiting, QA-aligned screening, cohort waves, 30/60/90 score-cards, attrition guarantees, and more.',
     publishedAt: '2026-04-29',

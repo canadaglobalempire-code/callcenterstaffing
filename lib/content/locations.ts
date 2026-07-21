@@ -321,7 +321,7 @@ export const LOCATIONS: Location[] = [
     region: 'onshore',
     flagEmoji: '🇺🇸',
     heroImage: '/images/america.jpg',
-    metaTitle: 'US-Based Call Center Staffing — Onshore Agents & HIPAA Pipelines',
+    metaTitle: 'US-Based Call Center Staffing: Onshore Agents',
     metaDescription:
       'Recruit US-based call center staffing across Phoenix, Tampa, Dallas and Atlanta. Onshore call center agents, HIPAA call center staffing and licensed pipelines.',
     hero: {

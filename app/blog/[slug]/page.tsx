@@ -142,7 +142,10 @@ const COMPANY_DATABASE: Record<string, { hq: string; website: string; founded: s
   'intelemark': { hq: 'United States', website: 'intelemark.com', founded: '1999' },
   'call motivated sellers': { hq: 'United States', website: 'callmotivatedsellers.com', founded: '2015' },
   'customer communications corp': { hq: 'United States', website: 'customercommunicationscorp.com', founded: '2008' },
-  'call center staffing': { hq: 'United States', website: 'callcenterstaffing.net', founded: '2018' },
+  // 2003, not 2018: the homepage claims "20+ years" and the social-proof
+  // block says "Operators since 2003", both confirmed accurate. 2018 was
+  // contradicting them on the same site.
+  'call center staffing': { hq: 'United States', website: 'callcenterstaffing.net', founded: '2003' },
   'b2b appointment setting': { hq: 'United States', website: 'b2bappointmentsetting.com', founded: '2012' },
   'contact center usa': { hq: 'United States', website: 'contactcenterusa.com', founded: '1999' },
   'call center communications': { hq: 'United States', website: 'callcentercommunications.com', founded: '2005' },
