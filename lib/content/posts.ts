@@ -2257,7 +2257,7 @@ export const POSTS: Post[] = [
         heading: 'The client',
         level: 2,
         paragraphs: [
-          'NorthStar Health, a US-based healthcare payer with 2.4 million members, needed to stand up a bilingual member-services nesting class at their Mexico City delivery center. The role was high-touch member-care — eligibility questions, claims status, benefits explanation, escalations — handled in English and Spanish across the full member base.',
+          'A US-based healthcare payer with 2.4 million members needed to stand up a bilingual member-services nesting class at their Mexico City delivery center. The role was high-touch member-care — eligibility questions, claims status, benefits explanation, escalations — handled in English and Spanish across the full member base.',
           'The deadline was non-negotiable. The class had to nest by a fixed regulatory window; missing it meant pushing the program quarter-end target and losing committed reporting cycles. The operations team had been planning for the cohort for six months, but the recruiting side had stalled.',
         ],
       },
@@ -2265,8 +2265,8 @@ export const POSTS: Post[] = [
         heading: 'The problem we walked into',
         level: 2,
         paragraphs: [
-          'Before we were engaged, NorthStar had been working with a retained search firm against a 16-seat first cohort. After 9 weeks, the firm had placed 8 of 16, and the quality of those 8 was uneven — three were flagged in nesting for English fluency that did not match the recruiting interviews, two had schedule conflicts not surfaced in screening, and the remaining three were genuinely strong.',
-          'When NorthStar called us, the regulatory deadline was 38 days out. The required headcount had grown to 60 (the program had expanded), and the operations team had no confidence the existing pipeline would deliver. The honest framing of the engagement: replace the existing recruiting effort entirely, deliver 60 agents at standard inside 38 days, and protect the regulatory deadline.',
+          'Before we were engaged, the client had been working with a retained search firm against a 16-seat first cohort. After 9 weeks, the firm had placed 8 of 16, and the quality of those 8 was uneven — three were flagged in nesting for English fluency that did not match the recruiting interviews, two had schedule conflicts not surfaced in screening, and the remaining three were genuinely strong.',
+          'When the client called us, the regulatory deadline was 38 days out. The required headcount had grown to 60 (the program had expanded), and the operations team had no confidence the existing pipeline would deliver. The honest framing of the engagement: replace the existing recruiting effort entirely, deliver 60 agents at standard inside 38 days, and protect the regulatory deadline.',
           'We took the engagement on the basis that we already had a pre-built bench in Guadalajara and Mexico City — both bilingual healthcare-specific — and could compress the front of the funnel. Without the bench, we would have declined the timeline. /services/bilingual-call-center-staffing walks through how that bench is maintained.',
         ],
       },
@@ -2276,14 +2276,14 @@ export const POSTS: Post[] = [
         paragraphs: ['The playbook had four pieces, all running in parallel from day one:'],
         bullets: [
           'Bilingual sourcing pull from our Guadalajara and Mexico City bench, prioritizing candidates already voice-screened in both languages within the prior 90 days.',
-          'CEFR-scored voice samples in English and Spanish, captured asynchronously and scored against a healthcare-care-aligned rubric. Every candidate submitted to NorthStar arrived with two recordings and two scores.',
+          'CEFR-scored voice samples in English and Spanish, captured asynchronously and scored against a healthcare-care-aligned rubric. Every candidate submitted to the client arrived with two recordings and two scores.',
           'Schedule-realism confirmation in writing before any offer extended, with the actual rotation including weekend and holiday detail.',
           'Cohort wave deployment — three waves of 20, two weeks apart — instead of one large class, to give the trainer calibration room and the operations team a wave-on-wave QA comparison.',
         ],
       },
       {
         paragraphs: [
-          "We also embedded a senior account manager on weekly calls with NorthStar's training and QA leads. The screening rubric was calibrated against the QA scorecard before the first cohort and recalibrated between waves 1 and 2 based on early nesting data. /how-we-work covers the calibration cadence we use across all engagements.",
+          "We also embedded a senior account manager on weekly calls with the client's training and QA leads. The screening rubric was calibrated against the QA scorecard before the first cohort and recalibrated between waves 1 and 2 based on early nesting data. /how-we-work covers the calibration cadence we use across all engagements.",
         ],
       },
       {
@@ -2291,11 +2291,11 @@ export const POSTS: Post[] = [
         level: 2,
         paragraphs: ['A clean week-by-week reconstruction of how the engagement actually ran:'],
         bullets: [
-          'Days 1 to 4: kickoff, rubric calibration with NorthStar QA, bench pull, first 30 candidates submitted with voice samples and CEFR scores.',
-          'Days 5 to 10: first interview loop running. NorthStar interviewing through pre-confirmed daily blocks. 22 offers extended for wave 1; written schedule confirmation in every offer.',
+          'Days 1 to 4: kickoff, rubric calibration with client QA, bench pull, first 30 candidates submitted with voice samples and CEFR scores.',
+          'Days 5 to 10: first interview loop running. The client interviewing through pre-confirmed daily blocks. 22 offers extended for wave 1; written schedule confirmation in every offer.',
           'Days 11 to 15: pre-employment screens running in parallel with continued sourcing for waves 2 and 3. 20 of 22 offers cleared (one schedule mismatch surfaced post-offer; one ghosted). Two backfills extended same-week.',
           'Day 16: wave 1 starts training (20 agents).',
-          'Days 16 to 22: sourcing focused on waves 2 and 3. Second-round interviews for wave 2 candidates. Embedded recruiter on weekly calibration with NorthStar training lead. Voice-sample bar tightened slightly for wave 2 based on day-3 training observations.',
+          'Days 16 to 22: sourcing focused on waves 2 and 3. Second-round interviews for wave 2 candidates. Embedded recruiter on weekly calibration with the client training lead. Voice-sample bar tightened slightly for wave 2 based on day-3 training observations.',
           'Day 23: wave 2 starts training (20 agents). 21 offers extended; 20 cleared.',
           'Days 24 to 30: wave 3 sourcing and screening. Wave 1 progressing through training; QA showing wave 1 calibrated to floor benchmark.',
           'Day 30: wave 3 starts training (20 agents).',
@@ -2313,12 +2313,12 @@ export const POSTS: Post[] = [
           'Cohort completion through nesting: 94 percent. The remaining 6 percent split between two early voluntary exits and two performance issues that did not clear nesting QA.',
           "CSAT impact in production (measured at 90 days): +18 points against the program's prior bilingual baseline, driven primarily by the CEFR-scored fluency lift over the prior cohort.",
           'Wage premium below US onshore: 22 percent of the equivalent US bilingual healthcare-care role, well inside the nearshore band we had projected.',
-          'Quality of hire (NorthStar internal QA at 60 days): higher than the average of the cohorts placed by the prior retained search firm, by a meaningful margin.',
+          'Quality of hire (client internal QA at 60 days): higher than the average of the cohorts placed by the prior retained search firm, by a meaningful margin.',
         ],
       },
       {
         paragraphs: [
-          'Maya Hernández, NorthStar\'s VP Customer Operations, summarized the engagement after the first 90 days of production: "Quality of hire was higher than what we used to see from our retained search firm." That assessment was supported by the QA data; we are quoting it because it captures what the engagement actually delivered.',
+          'The client\'s VP Customer Operations summarized the engagement after the first 90 days of production: "Quality of hire was higher than what we used to see from our retained search firm." That assessment was supported by the QA data; we are quoting it because it captures what the engagement actually delivered.',
         ],
       },
       {
@@ -2328,8 +2328,8 @@ export const POSTS: Post[] = [
           'Three honest reflections on the engagement, because every case study should have them:',
         ],
         bullets: [
-          "We would calibrate the CEFR rubric against NorthStar's healthcare-specific lexicon earlier. Wave 1 cleared training but a couple of agents struggled in nesting on healthcare-specific Spanish vocabulary. Wave 2 onward, we built a healthcare-glossary recall element into the voice-sample prompt. It should have been there from day one.",
-          "We would pre-confirm the IT logistics for wave 1 with NorthStar earlier. Wave 1 had two days of disrupted access on the second week of training because of badge issues that were on NorthStar's side but should have been flagged in our weekly call. Process improvement for our project management, not theirs.",
+          "We would calibrate the CEFR rubric against the client's healthcare-specific lexicon earlier. Wave 1 cleared training but a couple of agents struggled in nesting on healthcare-specific Spanish vocabulary. Wave 2 onward, we built a healthcare-glossary recall element into the voice-sample prompt. It should have been there from day one.",
+          "We would pre-confirm the IT logistics for wave 1 with the client earlier. Wave 1 had two days of disrupted access on the second week of training because of badge issues that were on the client's side but should have been flagged in our weekly call. Process improvement for our project management, not theirs.",
           'We would extend the schedule realism check from "written confirmation" to "written confirmation plus 48-hour cooling period." We had one offer ghost in wave 1 because the candidate signed under time pressure and changed their mind 24 hours later. A short cooling period on the offer letter would have caught it before pre-employment screen costs were incurred.',
         ],
       },
@@ -2383,7 +2383,7 @@ export const POSTS: Post[] = [
         heading: 'The client',
         level: 2,
         paragraphs: [
-          'Beacon Outsourcing, a multi-client fintech BPO, was standing up its first US-fintech contract delivering customer support, fraud-flag review, and account-recovery handling for a US neobank. The contract had been signed three months earlier; the launch date for first SLA delivery was 90 days out when we were brought in.',
+          'A multi-client fintech BPO was standing up its first US-fintech contract delivering customer support, fraud-flag review, and account-recovery handling for a US neobank. The contract had been signed three months earlier; the launch date for first SLA delivery was 90 days out when we were brought in.',
           'Beacon had run prior BPO programs in Manila for non-fintech clients, but this was their first US-financial-services contract and the regulatory and quality bar was higher than their existing operations. They needed 120 agents — across customer support and fraud lanes — on a Manila-and-Cebu split, hitting first-week SLA inside the contractual ramp window.',
         ],
       },
@@ -2450,7 +2450,7 @@ export const POSTS: Post[] = [
       },
       {
         paragraphs: [
-          'David Cho, COO of Beacon Outsourcing, summarized the engagement: "Their recruiters embedded with our ops team and we hit our first SLA inside the ramp window." The first-SLA-inside-ramp-window outcome was the contractual milestone that mattered most; everything else was downstream of that.',
+          'The BPO\'s COO summarized the engagement: "Their recruiters embedded with our ops team and we hit our first SLA inside the ramp window." The first-SLA-inside-ramp-window outcome was the contractual milestone that mattered most; everything else was downstream of that.',
         ],
       },
       {
