@@ -5,6 +5,7 @@ import {
   groupProvidersDetailSection,
   groupProvidersIntro,
   groupProvidersRankedSections,
+  groupProvidersSection,
 } from './group-providers';
 
 type BpoLocationPostConfig = {
@@ -780,7 +781,7 @@ function createTrafficPost(config: TrafficPostConfig): Post {
 
 const TRAFFIC_POSTS = TRAFFIC_POST_CONFIGS.map(createTrafficPost);
 
-export const POSTS: Post[] = [
+const RAW_POSTS: Post[] = [
   NETWORK_DIRECTORY_POST,
   ...TRAFFIC_POSTS,
   ...BPO_LOCATION_POSTS,
@@ -2952,6 +2953,53 @@ export const POSTS: Post[] = [
     ],
   },
 ];
+
+/**
+ * Attach the group provider list to every blog post.
+ *
+ * Sized to the post rather than applied uniformly:
+ *  - Comparison / listicle posts get the full ranked treatment at the top,
+ *    same as the BPO location pages.
+ *  - Operational posts (how-tos, case studies, process pieces) get the
+ *    compact labelled list near the end instead. Dropping fifteen ranked
+ *    provider entries into "Call Center No-Show Rate" would bury the article
+ *    under a directory and dilute the topic the page ranks on.
+ *
+ * Posts that already carry the section — the BPO location listicles and the
+ * standalone directory — are left alone rather than double-listed.
+ */
+const FULL_TREATMENT_CATEGORIES = new Set(['Comparison', 'Industry', 'Pricing']);
+
+function alreadyHasGroupSection(post: Post): boolean {
+  return post.sections.some(
+    (section) =>
+      section.heading?.startsWith("Our group's providers") ||
+      section.heading === 'Providers in our group'
+  );
+}
+
+function withGroupProviders(post: Post): Post {
+  if (alreadyHasGroupSection(post)) return post;
+
+  if (FULL_TREATMENT_CATEGORIES.has(post.category)) {
+    return {
+      ...post,
+      sections: [
+        groupProvidersIntro('call center and BPO programs'),
+        ...groupProvidersRankedSections(),
+        groupProvidersDetailSection(),
+        ...post.sections,
+      ],
+    };
+  }
+
+  return {
+    ...post,
+    sections: [...post.sections, groupProvidersSection()],
+  };
+}
+
+export const POSTS: Post[] = RAW_POSTS.map(withGroupProviders);
 
 export function getPost(slug: string): Post | undefined {
   return POSTS.find((p) => p.slug === slug);
