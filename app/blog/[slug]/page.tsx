@@ -146,7 +146,7 @@ const COMPANY_DATABASE: Record<string, { hq: string; website: string; founded: s
   'b2b appointment setting': { hq: 'United States', website: 'b2bappointmentsetting.com', founded: '2012' },
   'contact center usa': { hq: 'United States', website: 'contactcenterusa.com', founded: '1999' },
   'call center communications': { hq: 'United States', website: 'callcentercommunications.com', founded: '2005' },
-  'business process outsourcing': { hq: 'United States', website: 'businessprocessoutsourcing.com', founded: '2010' },
+  'business process outsourcing': { hq: 'United States', website: 'businessprocessoutsourcing.info', founded: '2010' },
   'canada contact centre': { hq: 'Canada', website: 'canadacontactcentre.com', founded: '2004' },
   'b2b telemarketing': { hq: 'United States', website: 'b2btelemarketing.com', founded: '2008' },
   'telemarketing services': { hq: 'United States', website: 'telemarketingservices.com', founded: '2010' },
@@ -187,10 +187,13 @@ function getCompanyDetails(companyName: string) {
     return COMPANY_DATABASE[matchedKey];
   }
 
+  // No invented defaults. A company we have no record of previously rendered
+  // as "Founded: 2010", which published a fabricated fact for every unlisted
+  // provider. Empty values are omitted from the meta line instead.
   return {
-    hq: 'Global',
+    hq: '',
     website: '',
-    founded: '2010',
+    founded: '',
   };
 }
 
@@ -824,7 +827,18 @@ function RankedSection({
               {rank.title}
             </h3>
             <p className="mt-1 text-sm text-navy-700/60 leading-relaxed">
-              <strong>Headquarters:</strong> {parsed.hq} | <strong>Founded:</strong> {parsed.founded} | <strong>Best For:</strong> {parsed.bestFit}
+              {[
+                parsed.hq ? ['Headquarters', parsed.hq] : null,
+                parsed.founded ? ['Founded', parsed.founded] : null,
+                parsed.bestFit ? ['Best For', parsed.bestFit] : null,
+              ]
+                .filter((pair): pair is [string, string] => pair !== null)
+                .map(([label, value], i) => (
+                  <span key={label}>
+                    {i > 0 && ' | '}
+                    <strong>{label}:</strong> {value}
+                  </span>
+                ))}
             </p>
           </div>
         </div>

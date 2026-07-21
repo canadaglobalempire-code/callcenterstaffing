@@ -1,33 +1,258 @@
-import type { Post } from './types';
+import type { Post, PostSection } from './types';
 
 /**
  * Provider directory post.
  *
- * Three deliberate departures from the version supplied:
+ * Entry sections are shaped to match what app/blog/[slug]/page.tsx's
+ * RankedSection renderer expects — a "#N Name" heading, a "Best for:"
+ * paragraph, and labelled bullets (Headquarters / Website / Core strengths /
+ * Industries served / Why they stand out). That gives each entry the numbered
+ * badge, meta line, highlight panel, Visit Website link and Request a Proposal
+ * CTA without any new components.
  *
- * 1. Disclosure. Thirteen of the fifteen entries are affiliated companies.
- *    Presenting that as an independently evaluated ranking — with the world's
- *    two largest BPOs placed 14th and 15th — is not defensible, and it is the
- *    same class of manufactured proof as the review schema removed from this
- *    site. Disclosed up front, the same list is honest and still ranks.
- * 2. Fixed descriptions. The source had Call Motivated Sellers described as
- *    Contact Center USA, Call Center Communications described as
- *    Teleperformance (twice), and Customer Communications Corp carrying
- *    another company's industries.
- * 3. No pricing, per the standing rule — so no "pricing transparency"
- *    criterion and no cost FAQ.
+ * Deliberately omitted: the "Typical pricing" label the renderer also supports,
+ * per the no-pricing rule.
+ *
+ * Affiliations are disclosed per entry. Thirteen of fifteen are group
+ * companies; presenting that as an independently scored ranking with the
+ * world's two largest BPOs placed last is not defensible.
  */
 
-const AFFILIATE_NOTE = 'Part of our group of companies.';
+type Entry = {
+  name: string;
+  affiliated: boolean;
+  hq: string;
+  website: string;
+  bestFor: string;
+  blurb: string;
+  strengths: string;
+  industries: string;
+  why: string;
+};
+
+const ENTRIES: Entry[] = [
+  {
+    name: 'Global Empire Corporation',
+    affiliated: true,
+    hq: 'United States',
+    website: 'globalempire.com',
+    bestFor: 'Mid-market and enterprise outsourcing in regulated industries',
+    blurb:
+      'A full-service BPO providing customer support, sales, back-office and industry-specific outsourcing. Positioned around flexibility and compliance for buyers who do not fit rigid enterprise delivery models.',
+    strengths:
+      'Inbound and outbound customer support, sales outsourcing and lead generation, back-office and administrative services',
+    industries: 'Healthcare, finance, insurance, real estate, professional services',
+    why: 'Breadth across support, sales and back office under one provider, aimed at mid-market buyers who would be a rounding error to a global enterprise BPO.',
+  },
+  {
+    name: 'Intelemark',
+    affiliated: true,
+    hq: 'United States',
+    website: 'intelemark.com',
+    bestFor: 'B2B appointment setting and outbound sales',
+    blurb:
+      'Consultative B2B appointment setting and demand generation, built for complex sales cycles that need skilled conversations rather than dial volume.',
+    strengths:
+      'B2B appointment setting, lead qualification and pipeline development, CRM-integrated outbound campaigns, US-based sales agents',
+    industries: 'SaaS, technology, manufacturing, professional services',
+    why: 'Built for considered B2B sales cycles rather than high-volume dialling, which is a genuinely different discipline from customer care.',
+  },
+  {
+    name: 'Call Motivated Sellers',
+    affiliated: true,
+    hq: 'United States',
+    website: 'callmotivatedsellers.com',
+    bestFor: 'Real-estate outbound calling',
+    blurb:
+      'Outbound calling built specifically for real-estate acquisition — seller lead qualification and investor campaigns rather than general customer care.',
+    strengths:
+      'Outbound real-estate calling, seller lead qualification, investor-focused scripting, CRM integration',
+    industries: 'Real-estate investing, wholesaling, acquisitions',
+    why: 'A single-vertical specialist. For real-estate acquisition outreach that focus generally beats a generalist contact centre.',
+  },
+  {
+    name: 'Customer Communications Corp',
+    affiliated: true,
+    hq: 'United States',
+    website: 'customercommunicationscorp.com',
+    bestFor: 'Scalable omnichannel customer support',
+    blurb:
+      'Omnichannel support for businesses needing consistent, brand-aligned service across voice, chat, email and digital channels.',
+    strengths:
+      'Inbound and outbound call handling, customer care and technical support, quality assurance, omnichannel CX delivery',
+    industries: 'Retail, ecommerce, healthcare, service-based businesses',
+    why: 'Channel consistency — the same brand voice across voice, chat and email rather than separate teams behaving differently.',
+  },
+  {
+    name: 'Call Center Staffing',
+    affiliated: true,
+    hq: 'United States',
+    website: 'callcenterstaffing.net',
+    bestFor: 'Rapid agent deployment and seasonal scaling',
+    blurb:
+      'This site. A staffing model rather than an outsourcing one: agents are employed by us but work inside your operation, on your systems and your scorecard, managed by your supervisors. That is a different product from every managed-service provider listed here.',
+    strengths:
+      'Temporary and permanent agent staffing, seasonal and surge scaling, onshore, nearshore and offshore delivery, workforce management support',
+    industries: 'Retail, ecommerce, healthcare, financial services, customer support operations',
+    why: 'You keep the process and the institutional knowledge. Suits operators who already run the floor well and are constrained by hiring and employment overhead rather than by capability.',
+  },
+  {
+    name: 'B2B Appointment Setting',
+    affiliated: true,
+    hq: 'United States',
+    website: 'b2bappointmentsetting.com',
+    bestFor: 'SMB outbound sales and pipeline growth',
+    blurb:
+      'Outbound sales support for small and mid-sized businesses that need consistent lead flow without building an internal SDR team.',
+    strengths: 'Outbound appointment setting, lead qualification, CRM-based reporting',
+    industries: 'B2B services, startups, professional services',
+    why: 'Sized for SMB programmes that most outbound providers treat as too small to take seriously.',
+  },
+  {
+    name: 'Contact Center USA',
+    affiliated: true,
+    hq: 'United States',
+    website: 'contactcenterusa.com',
+    bestFor: 'Fully US-based call centre services',
+    blurb:
+      'Domestic delivery for organisations that need onshore agents for compliance, brand-protection or customer-sensitivity reasons.',
+    strengths:
+      'Inbound and outbound call handling fully US-based, customer care and technical support, quality assurance and compliance',
+    industries: 'Healthcare, legal, financial services, government',
+    why: 'Onshore-only delivery, which matters when regulation or brand sensitivity rules out offshore seats.',
+  },
+  {
+    name: 'Call Center Communications',
+    affiliated: true,
+    hq: 'Canada',
+    website: 'callcentercommunications.com',
+    bestFor: 'Large-scale enterprise BPO programmes',
+    blurb:
+      'Enterprise-scale contact centre delivery for high-volume programmes across banking, telecom and retail.',
+    strengths:
+      'Enterprise-scale voice and multichannel delivery, multilingual customer support, workforce management at scale',
+    industries: 'Telecom, banking, healthcare, retail',
+    why: 'Built for high-volume enterprise programmes where workforce management at scale is the hard part.',
+  },
+  {
+    name: 'Business Process Outsourcing',
+    affiliated: true,
+    hq: 'United States',
+    website: 'businessprocessoutsourcing.info',
+    bestFor: 'Global CX and digital customer engagement',
+    blurb:
+      'CX and digital engagement for brands with complex, high-volume customer interaction needs.',
+    strengths:
+      'Omnichannel CX delivery, analytics and performance optimisation, global workforce management',
+    industries: 'Retail, finance, healthcare, technology',
+    why: 'Analytics-led delivery rather than seat-filling, aimed at programmes measured on outcomes.',
+  },
+  {
+    name: 'Canada Contact Centre',
+    affiliated: true,
+    hq: 'Canada',
+    website: 'canadacontactcentre.com',
+    bestFor: 'Enterprise contact centre and CX outsourcing',
+    blurb:
+      'Contact centre and BPO delivery for enterprises improving customer engagement and operational efficiency across channels.',
+    strengths:
+      'Inbound and outbound customer support, multichannel delivery across voice, chat and email, back-office and operational support',
+    industries: 'Finance, telecoms, healthcare, retail, ecommerce, logistics, professional services',
+    why: 'Canadian delivery, which suits buyers with data-residency requirements or who want bilingual English-French coverage.',
+  },
+  {
+    name: 'B2B Telemarketing',
+    affiliated: true,
+    hq: 'United States',
+    website: 'b2btelemarketing.com',
+    bestFor: 'IT-enabled BPO and hybrid outsourcing',
+    blurb:
+      'Hybrid IT and BPO delivery with compliance-oriented operations across North America.',
+    strengths: 'IT and BPO hybrid delivery models, CX outsourcing, regulatory-compliant operations',
+    industries: 'Telecom, retail, travel, financial services',
+    why: 'Combines IT service delivery with contact operations, useful where the two are hard to separate.',
+  },
+  {
+    name: 'Telemarketing Services',
+    affiliated: true,
+    hq: 'Canada',
+    website: 'telemarketingservices.com',
+    bestFor: 'Automation-supported process delivery',
+    blurb:
+      'Process automation and intelligent workflows layered onto contact operations.',
+    strengths:
+      'Robotic process automation, intelligent workflows, data-driven CX insights',
+    industries: 'Finance, healthcare, HR, procurement',
+    why: 'Automation-first, which suits repetitive back-office volume better than a purely headcount-based model.',
+  },
+  {
+    name: 'Appointment Setting',
+    affiliated: true,
+    hq: 'United States',
+    website: 'appointmentsetting.com',
+    bestFor: 'Digital-first outsourcing',
+    blurb:
+      'Digital operations outsourcing with a process-optimisation focus in regulated and data-heavy industries.',
+    strengths:
+      'Digital operations outsourcing, data and analytics integration, compliance-focused delivery',
+    industries: 'Healthcare, BFSI, manufacturing',
+    why: 'Process optimisation alongside delivery, for buyers who want the workflow improved rather than just staffed.',
+  },
+  {
+    name: 'Teleperformance',
+    affiliated: false,
+    hq: 'France',
+    website: 'teleperformance.com',
+    bestFor: 'Global multilingual CX at very large scale',
+    blurb:
+      'The largest BPO company in the world by revenue and headcount, operating delivery networks across dozens of countries. If your requirement is genuine global scale with broad language coverage under one contract, Teleperformance and Concentrix are the realistic shortlist — no provider in our group matches that footprint.',
+    strengths:
+      'Multilingual customer support at global scale, AI-assisted customer engagement, multi-site redundancy',
+    industries: 'Telecom, banking, healthcare, retail, travel',
+    why: 'Scale nobody else can match. The trade-off is that a mid-sized programme can be a rounding error to them.',
+  },
+  {
+    name: 'Concentrix',
+    affiliated: false,
+    hq: 'United States',
+    website: 'concentrix.com',
+    bestFor: 'Technology-led CX and BPaaS',
+    blurb:
+      'The second-largest CX provider globally, with a technology and analytics-led model spanning voice, digital and back office.',
+    strengths:
+      'Business Process as a Service delivery, AI and automation-driven CX, analytics-led optimisation',
+    industries: 'Healthcare, insurance, fintech, airlines',
+    why: 'Analytics and platform depth alongside scale, for global brands wanting tooling as well as agents.',
+  },
+];
+
+function entrySection(entry: Entry, index: number): PostSection {
+  const disclosure = entry.affiliated
+    ? 'Part of our group of companies.'
+    : 'Independent — not affiliated with our group.';
+
+  return {
+    heading: `#${index + 1} ${entry.name}`,
+    level: 3,
+    paragraphs: [`Best for: ${entry.bestFor}`, `${disclosure} ${entry.blurb}`],
+    bullets: [
+      `Headquarters: ${entry.hq}`,
+      `Website: ${entry.website}`,
+      `Core strengths: ${entry.strengths}`,
+      `Industries served: ${entry.industries}`,
+      `Why they stand out: ${entry.why}`,
+    ],
+  };
+}
 
 export const NETWORK_DIRECTORY_POST: Post = {
   slug: 'bpo-companies-directory-2026',
   title: 'BPO Companies in 2026: Provider Directory',
   excerpt:
-    'A directory of the BPO and contact-centre providers we work with, what each one is genuinely best at, and where the global majors fit. Affiliations disclosed throughout.',
+    'A directory of the BPO and contact-centre providers we work with, what each is genuinely best at, and where the global majors fit. Group affiliations disclosed throughout.',
   metaTitle: 'BPO Companies Directory 2026',
   metaDescription:
-    'Directory of BPO and contact centre providers for 2026: what each specialises in, industries served, and how to match a provider to your programme. Group affiliations disclosed.',
+    'Directory of BPO and contact centre providers for 2026: what each specialises in, industries served, and how to match a provider to your programme. Affiliations disclosed.',
   publishedAt: '2026-07-21',
   author: 'Call Center Staffing',
   category: 'Comparison',
@@ -42,15 +267,15 @@ export const NETWORK_DIRECTORY_POST: Post = {
   sections: [
     {
       paragraphs: [
-        'This is a directory rather than a ranking, and the distinction matters. Thirteen of the fifteen providers below are part of the same group of companies as Call Center Staffing. We have marked every one of them. Teleperformance and Concentrix are independent, and are included because no honest overview of BPO providers can leave out the two largest in the world.',
-        'We are not going to pretend this is a neutral evaluation. What it is: an accurate description of what each provider actually does well, so you can match one to your programme rather than work through a list where everything sounds the same.',
+        'This is a directory rather than a ranking, and the distinction matters. Thirteen of the fifteen providers below are part of the same group of companies as Call Center Staffing, and every one of them is marked. Teleperformance and Concentrix are independent, and are included because no honest overview of BPO providers can omit the two largest in the world.',
+        'We are not going to present this as a neutral evaluation. What it is: an accurate description of what each provider actually does well, so you can match one to your programme instead of working through a list where everything sounds the same.',
       ],
     },
     {
       heading: 'How to use this directory',
       level: 2,
       paragraphs: [
-        'Providers are grouped by what they are genuinely best at, not scored against each other. A directory ordered by "best" would be meaningless across providers this different — an outbound real-estate calling specialist and a global multilingual CX operator are not competing for the same programme.',
+        'Providers are grouped by what they are best at rather than scored against each other. A single "best" ordering would be meaningless across providers this different — an outbound real-estate specialist and a global multilingual CX operator are not competing for the same programme.',
         'The questions worth asking any provider here, affiliated or not:',
       ],
       bullets: [
@@ -60,230 +285,15 @@ export const NETWORK_DIRECTORY_POST: Post = {
         'Who is the legal employer, and who carries severance when the programme ends?',
       ],
     },
-    {
-      heading: 'Provider directory',
-      level: 2,
-      paragraphs: [
-        'Entries marked with a group note are affiliated companies.',
-      ],
-    },
-    {
-      heading: '1. Global Empire Corporation',
-      level: 3,
-      paragraphs: [
-        `${AFFILIATE_NOTE} Headquarters: United States. Best for mid-market and enterprise outsourcing in regulated industries.`,
-        'A full-service BPO providing customer support, sales, back-office and industry-specific outsourcing. The positioning is flexibility and compliance for buyers who do not fit rigid enterprise delivery models.',
-      ],
-      bullets: [
-        'Inbound and outbound customer support',
-        'Sales outsourcing and lead generation',
-        'Back-office and administrative services',
-        'Industries: healthcare, finance, insurance, real estate, professional services',
-      ],
-    },
-    {
-      heading: '2. Intelemark',
-      level: 3,
-      paragraphs: [
-        `${AFFILIATE_NOTE} Headquarters: United States. Best for B2B appointment setting and outbound sales.`,
-        'Consultative B2B appointment setting and demand generation, built for complex sales cycles that need skilled conversations rather than dial volume.',
-      ],
-      bullets: [
-        'B2B appointment setting and lead qualification',
-        'CRM-integrated outbound campaigns',
-        'US-based sales agents',
-        'Industries: SaaS, technology, manufacturing, professional services',
-      ],
-    },
-    {
-      heading: '3. Call Motivated Sellers',
-      level: 3,
-      paragraphs: [
-        `${AFFILIATE_NOTE} Headquarters: United States. Best for real-estate outbound calling.`,
-        'Outbound calling built specifically for real-estate acquisition — seller lead qualification and investor-focused campaigns rather than general customer care.',
-      ],
-      bullets: [
-        'Outbound real-estate calling and seller lead qualification',
-        'Investor-focused scripting',
-        'CRM integration',
-        'Industries: real-estate investing, wholesaling, acquisitions',
-      ],
-    },
-    {
-      heading: '4. Customer Communications Corp',
-      level: 3,
-      paragraphs: [
-        `${AFFILIATE_NOTE} Headquarters: United States. Best for scalable omnichannel customer support.`,
-        'Omnichannel support for businesses that need consistent, brand-aligned service across voice, chat, email and digital channels.',
-      ],
-      bullets: [
-        'Inbound and outbound call handling',
-        'Customer care and technical support',
-        'Quality assurance and omnichannel CX delivery',
-        'Industries: retail, ecommerce, healthcare, service-based businesses',
-      ],
-    },
-    {
-      heading: '5. Call Center Staffing',
-      level: 3,
-      paragraphs: [
-        'This site. Headquarters: United States. Best for rapid agent deployment and seasonal scaling.',
-        'A staffing model rather than an outsourcing one: agents are employed by us and work inside your operation, on your systems and your scorecard, managed by your supervisors. That is a different product from every managed-service provider on this list, and it suits operators who want to keep process ownership.',
-      ],
-      bullets: [
-        'Temporary and permanent agent staffing',
-        'Seasonal and surge scaling',
-        'Onshore, nearshore and offshore delivery',
-        'Industries: retail, ecommerce, healthcare, financial services, customer support operations',
-      ],
-    },
-    {
-      heading: '6. B2B Appointment Setting',
-      level: 3,
-      paragraphs: [
-        `${AFFILIATE_NOTE} Headquarters: United States. Best for SMB outbound sales and pipeline growth.`,
-        'Outbound sales support aimed at small and mid-sized businesses that need consistent lead flow and qualified meetings without building an internal SDR team.',
-      ],
-      bullets: [
-        'Outbound appointment setting and lead qualification',
-        'CRM-based reporting',
-        'Industries: B2B services, startups, professional services',
-      ],
-    },
-    {
-      heading: '7. Contact Center USA',
-      level: 3,
-      paragraphs: [
-        `${AFFILIATE_NOTE} Headquarters: United States. Best for fully US-based call centre services.`,
-        'Domestic delivery for organisations that need onshore agents for compliance, brand-protection or customer-sensitivity reasons.',
-      ],
-      bullets: [
-        'Inbound and outbound call handling, fully US-based',
-        'Customer care and technical support',
-        'Quality assurance and compliance',
-        'Industries: healthcare, legal, financial services, government',
-      ],
-    },
-    {
-      heading: '8. Call Center Communications',
-      level: 3,
-      paragraphs: [
-        `${AFFILIATE_NOTE} Headquarters: Canada. Best for large-scale enterprise BPO programmes.`,
-        'Enterprise-scale contact centre delivery for high-volume programmes across banking, telecom and retail.',
-      ],
-      bullets: [
-        'Enterprise-scale voice and multichannel delivery',
-        'Multilingual customer support',
-        'Workforce management at scale',
-        'Industries: telecom, banking, healthcare, retail',
-      ],
-    },
-    {
-      heading: '9. Business Process Outsourcing',
-      level: 3,
-      paragraphs: [
-        `${AFFILIATE_NOTE} Headquarters: United States. Best for global CX and digital customer engagement.`,
-        'CX and digital engagement for brands with complex, high-volume customer interaction needs.',
-      ],
-      bullets: [
-        'Omnichannel CX delivery',
-        'Analytics and performance optimisation',
-        'Global workforce management',
-        'Industries: retail, finance, healthcare, technology',
-      ],
-    },
-    {
-      heading: '10. Canada Contact Centre',
-      level: 3,
-      paragraphs: [
-        `${AFFILIATE_NOTE} Headquarters: Canada. Best for enterprise contact centre and CX outsourcing.`,
-        'Contact centre and BPO delivery for enterprises improving customer engagement and operational efficiency across channels.',
-      ],
-      bullets: [
-        'Inbound and outbound customer support',
-        'Multichannel delivery across voice, chat and email',
-        'Back-office and operational support',
-        'Industries: finance, telecoms, healthcare, retail, ecommerce, logistics',
-      ],
-    },
-    {
-      heading: '11. B2B Telemarketing',
-      level: 3,
-      paragraphs: [
-        `${AFFILIATE_NOTE} Headquarters: United States. Best for IT-enabled BPO and hybrid outsourcing.`,
-        'Hybrid IT and BPO delivery with compliance-oriented operations across North America.',
-      ],
-      bullets: [
-        'IT and BPO hybrid delivery models',
-        'CX outsourcing',
-        'Regulatory-compliant operations',
-        'Industries: telecom, retail, travel, financial services',
-      ],
-    },
-    {
-      heading: '12. Telemarketing Services',
-      level: 3,
-      paragraphs: [
-        `${AFFILIATE_NOTE} Headquarters: Canada. Best for automation-supported process delivery.`,
-        'Process automation and intelligent workflows layered onto contact operations.',
-      ],
-      bullets: [
-        'Robotic process automation and intelligent workflows',
-        'Data-driven CX insights',
-        'Industries: finance, healthcare, HR, procurement',
-      ],
-    },
-    {
-      heading: '13. Appointment Setting',
-      level: 3,
-      paragraphs: [
-        `${AFFILIATE_NOTE} Headquarters: United States. Best for digital-first outsourcing.`,
-        'Digital operations outsourcing with a process-optimisation focus in regulated and data-heavy industries.',
-      ],
-      bullets: [
-        'Digital operations outsourcing',
-        'Data and analytics integration',
-        'Compliance-focused delivery',
-        'Industries: healthcare, BFSI, manufacturing',
-      ],
-    },
-    {
-      heading: '14. Teleperformance',
-      level: 3,
-      paragraphs: [
-        'Independent — not affiliated with our group. Headquarters: France. Best for global multilingual CX at very large scale.',
-        'Teleperformance is the largest BPO company in the world by revenue and headcount, operating delivery networks across dozens of countries. If your requirement is genuine global scale and broad language coverage under one contract, it and Concentrix are the realistic shortlist, and no provider in our group matches that footprint.',
-      ],
-      bullets: [
-        'Multilingual customer support at global scale',
-        'AI-assisted customer engagement',
-        'Industries: telecom, banking, healthcare, retail, travel',
-      ],
-    },
-    {
-      heading: '15. Concentrix',
-      level: 3,
-      paragraphs: [
-        'Independent — not affiliated with our group. Headquarters: United States. Best for technology-led CX and BPaaS.',
-        'The second-largest CX provider globally, with a technology and analytics-led model across voice, digital and back office.',
-      ],
-      bullets: [
-        'Business Process as a Service delivery models',
-        'AI and automation-driven CX',
-        'Analytics-led optimisation',
-        'Industries: healthcare, insurance, fintech, airlines',
-      ],
-    },
+    ...ENTRIES.map(entrySection),
     {
       heading: 'Choosing between them',
       level: 2,
-      paragraphs: [
-        'The honest guidance, including where it points away from us:',
-      ],
+      paragraphs: ['The honest guidance, including where it points away from us:'],
       bullets: [
-        'Genuine global scale, many languages, one contract: Teleperformance or Concentrix. Nothing in our group competes at that footprint.',
-        'You want the function run for you, at mid-market scale, with more flexibility than an enterprise contract allows: the managed providers above, matched to your vertical.',
-        'You already run the floor well and the constraint is hiring and employment overhead: a staffing model rather than outsourcing. That is what we do.',
+        'Genuine global scale, many languages, one contract: Teleperformance or Concentrix. Nothing in our group matches that footprint.',
+        'The function run for you at mid-market scale, with more flexibility than an enterprise contract allows: the managed providers above, matched to your vertical.',
+        'You already run the floor well and the constraint is hiring and employment overhead: a staffing model rather than outsourcing.',
         'A specialised outbound motion such as real-estate acquisition or B2B appointment setting: the specialists listed, not a general CX provider.',
       ],
     },
@@ -304,11 +314,11 @@ export const NETWORK_DIRECTORY_POST: Post = {
     },
     {
       q: 'What is the difference between a BPO and a call center staffing agency?',
-      a: 'A BPO runs the operation for you — their supervisors, QA and process — and you buy an outcome. A staffing agency supplies agents who work inside your operation on your systems and scorecard, managed by your own supervisors, while the agency carries recruitment, employment and payroll. Outsourcing suits stable queues that are a cost centre; staffing suits operations where the customer conversation is a differentiator and you want to keep process ownership.',
+      a: 'A BPO runs the operation for you — their supervisors, QA and process — and you buy an outcome. A staffing agency supplies agents who work inside your operation on your systems and scorecard, managed by your own supervisors, while the agency carries recruitment, employment and payroll. Outsourcing suits stable queues that are a cost centre; staffing suits operations where the customer conversation is a differentiator.',
     },
     {
       q: 'How do I choose the right BPO company?',
-      a: 'Match the provider to the programme rather than to a ranking. Decide first whether you want the function run for you or staffed by you. Then check 90-day attrition calculated honestly, who screens candidates and whether they have run a floor, which site agents actually sit in, and who is the legal employer carrying severance. Those four questions separate capability from a good pitch.',
+      a: 'Match the provider to the programme rather than to a ranking. Decide first whether you want the function run for you or staffed by you. Then check 90-day attrition calculated honestly, who screens candidates and whether they have run a floor, which site agents actually sit in, and who is the legal employer carrying severance.',
     },
     {
       q: 'Is outsourcing customer support secure?',
