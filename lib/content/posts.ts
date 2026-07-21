@@ -769,6 +769,336 @@ const TRAFFIC_POSTS = TRAFFIC_POST_CONFIGS.map(createTrafficPost);
 export const POSTS: Post[] = [
   ...TRAFFIC_POSTS,
   ...BPO_LOCATION_POSTS,
+  // ---------------------------------------------------------------------
+  // Hand-written posts targeting queries that actually appear in Bing
+  // Webmaster data, and that no existing page answers. Each is a literal
+  // entry rather than a BPO_CONTENT template fill, and each deliberately
+  // varies in structure and length.
+  // ---------------------------------------------------------------------
+  {
+    slug: 'how-to-vet-nearshore-customer-service-partners',
+    title: 'How to Vet a Nearshore Customer Service Partner in Latin America',
+    excerpt:
+      'Buyers evaluating nearshore support consistently check the same three things — English fluency, time-zone overlap and employment compliance — and consistently check them badly. Here is what each one actually means and how to test it before you sign.',
+    metaTitle: 'How to Vet Nearshore Customer Service Partners',
+    metaDescription:
+      'A vetting framework for nearshore customer service in Latin America: how to test English fluency properly, what time-zone overlap really requires, and the EOR and employment compliance questions most buyers miss.',
+    publishedAt: '2026-07-21',
+    author: 'Call Center Staffing',
+    category: 'Comparison',
+    readingMinutes: 8,
+    heroImage: '/images/cc-agent-headset.jpg',
+    primaryKeyword: 'nearshore customer service providers Latin America vetting',
+    relatedPostSlugs: [
+      'customer-support-staffing-agencies-latin-america',
+      'eor-vs-staffing-agency-latin-america',
+      'nearshore-call-center-outsourcing-2026',
+    ],
+    sections: [
+      {
+        paragraphs: [
+          'Buyers comparing nearshore customer service partners in Latin America almost always converge on the same three criteria: English fluency, time-zone overlap, and employment compliance. That instinct is right. The trouble is that all three are easy to answer convincingly and hard to answer honestly, and most evaluation processes never get past the convincing version.',
+          'What follows is how to test each one so the answer means something.',
+        ],
+      },
+      {
+        heading: '1. English fluency: stop accepting self-reported levels',
+        level: 2,
+        paragraphs: [
+          'Almost every provider will tell you their agents are B2 or C1 on the CEFR scale. Very few will tell you who assessed that, against what rubric, or when. Self-reported and recruiter-assessed fluency ratings are the single most inflated number in nearshore staffing.',
+          'The distinction that matters operationally is not vocabulary — it is what happens under pressure. An agent can present as fluent in a calm interview and lose the thread when a customer is angry, talks over them, uses regional idiom, or when they have to explain something they have not been trained on. Interview conditions systematically flatter candidates.',
+          'What to ask for instead:',
+        ],
+        bullets: [
+          'A recorded voice sample from an actual candidate, not a showcase reel. Ideally two: one scripted, one unscripted.',
+          'Who scored it, against which rubric, and whether that person is a native speaker. "Our recruiters assess it" is a different answer from "a native-speaker QA lead scores it against a written rubric."',
+          'A sample they rejected, and the reason. This tells you where the bar actually sits, which no amount of describing the bar will.',
+          'Whether fluency is re-checked after hire. Fluency assessed once at screening tells you nothing about the agent you get in month six.',
+        ],
+      },
+      {
+        paragraphs: [
+          'A note on accent, since buyers often raise it and rarely say it plainly: accent and comprehensibility are not the same thing, and optimising for a neutral accent can cost you comprehension. What predicts customer satisfaction is whether the agent understood the problem and was understood in return, not how close they sound to a US Midwest speaker.',
+        ],
+      },
+      {
+        heading: '2. Time-zone overlap: the number that matters is coverage at your peak',
+        level: 2,
+        paragraphs: [
+          'Nearshore is usually sold on time-zone alignment, and Latin America genuinely delivers it — most of the region sits within a few hours of US business hours, which is the entire point versus offshore delivery twelve hours out.',
+          'But "same time zone" is not the operational question. The question is whether the provider can staff your peak intervals, which are often not the middle of the business day. If your volume spikes at 7am Eastern or runs to 9pm, the relevant fact is whether agents are contracted and willing to work those hours locally, not whether the country is nominally in your time zone.',
+        ],
+        bullets: [
+          'Ask for an interval-level coverage plan against your actual arrival pattern, not a shift schedule in the abstract.',
+          'Ask what happens on local public holidays. Latin American holiday calendars differ from the US one, and a Mexican or Colombian holiday landing in your peak week is a real staffing event.',
+          'Ask about weekend and evening premiums, and whether agents opt in or are assigned. Assigned unpopular shifts show up later as attrition.',
+          'If you need genuine 24/7, ask directly whether that is covered nearshore or quietly handed to an offshore site overnight. Sub-delivery mid-contract is common and rarely volunteered.',
+        ],
+      },
+      {
+        heading: '3. Employment compliance: where the real risk sits',
+        level: 2,
+        paragraphs: [
+          'This is the criterion buyers raise last and should raise first, because it is the one that creates liability rather than just disappointment.',
+          'When someone works for you in another country, somebody has to be their legal employer. Latin American labour law is generally more employee-protective than US law — severance entitlements, mandatory bonuses such as the Colombian prima or the Mexican aguinaldo, and profit-sharing obligations are statutory, not negotiable. Getting the employment structure wrong does not surface as a compliance memo; it surfaces as a claim, usually at termination.',
+          'The questions that separate a real structure from a hopeful one:',
+        ],
+        bullets: [
+          'Who is the legal employer of record for these agents, in which country, under which entity? Ask for the entity name, not a description.',
+          'Are agents employees or independent contractors? Contractor misclassification is the most common structural problem in the region and the liability generally follows the company receiving the work.',
+          'Who carries severance exposure when a programme ends? If the answer is unclear, assume it is you.',
+          'How are statutory benefits, social contributions and mandatory bonuses handled, and are they included in what you are quoted?',
+          'What happens to the agents if you terminate the contract — and what happens to your process documentation and call recordings?',
+        ],
+      },
+      {
+        paragraphs: [
+          'A provider that answers these crisply has built the structure. One that redirects to their client list has not. It is a fast filter.',
+          'This is also the point where the staffing and outsourcing models genuinely diverge, and it is worth understanding which one you are buying — we cover that in /blog/eor-vs-staffing-agency-latin-america.',
+        ],
+      },
+      {
+        heading: 'The three questions that end most sales conversations early',
+        level: 2,
+        bullets: [
+          'What is your 90-day agent attrition on comparable programmes, calculated how? Ninety-day is the honest window; annualised figures hide early churn.',
+          'Show me a candidate you rejected and tell me why.',
+          'Which country and city will my agents actually sit in, and can that change without my written agreement?',
+        ],
+      },
+      {
+        paragraphs: [
+          'We staff nearshore programmes rather than run them, so treat our view on the staffing-versus-outsourcing question as interested rather than neutral. The vetting framework above applies either way — the criteria do not change based on which model you choose.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I verify English fluency for nearshore agents?',
+        a: 'Ask for recorded voice samples from real candidates rather than a showcase reel, and ask who scored them and against what rubric. A native-speaker QA lead scoring against a written rubric is meaningfully different from a recruiter self-assessing. The most revealing request is a candidate they rejected and the reason, because that shows where the bar actually sits. Also ask whether fluency is re-checked after hire.',
+      },
+      {
+        q: 'What time zone overlap do I need for nearshore support?',
+        a: 'Overlap with your peak intervals matters more than nominal time-zone alignment. Most of Latin America sits within a few hours of US business hours, but if your volume spikes early morning or late evening, what matters is whether agents are contracted and willing to work those hours locally. Also check local public holiday calendars, which differ from the US and can land inside your peak weeks.',
+      },
+      {
+        q: 'What is EOR compliance in nearshore outsourcing?',
+        a: 'Employer of record refers to which legal entity actually employs the agents working on your programme. Latin American labour law tends to be more employee-protective than US law, with statutory severance, mandatory bonuses such as the Colombian prima or Mexican aguinaldo, and social contributions. The key questions are which named entity is the legal employer, whether agents are employees or contractors, and who carries severance exposure when a programme ends.',
+      },
+      {
+        q: 'Is contractor misclassification a risk in Latin America?',
+        a: 'Yes, and it is the most common structural problem in the region. Engaging agents as independent contractors when the working relationship has the characteristics of employment creates liability that generally follows the company receiving the work. Ask directly whether agents are employees or contractors and under which entity.',
+      },
+    ],
+  },
+  {
+    slug: 'customer-support-staffing-agencies-latin-america',
+    title: 'Customer Support Staffing Agencies in Latin America: What They Actually Do',
+    excerpt:
+      'Most Latin America search results return outsourcing providers who run the operation for you. Staffing is a different model — agents inside your operation, on your scorecard, employed by someone else. Here is the distinction and when each one wins.',
+    metaTitle: 'Customer Support Staffing Agencies in Latin America',
+    metaDescription:
+      'How customer support staffing agencies in Latin America differ from BPO outsourcing: who manages the agents, who owns the process, who carries employment risk, and which model fits your operation.',
+    publishedAt: '2026-07-21',
+    author: 'Call Center Staffing',
+    category: 'Comparison',
+    readingMinutes: 7,
+    heroImage: '/images/agents-team-row.jpg',
+    primaryKeyword: 'customer support staffing agencies Latin America',
+    relatedPostSlugs: [
+      'how-to-vet-nearshore-customer-service-partners',
+      'eor-vs-staffing-agency-latin-america',
+      'in-house-vs-outsourced-call-center',
+    ],
+    sections: [
+      {
+        paragraphs: [
+          'Search for customer support help in Latin America and nearly everything returned is an outsourcing provider — a BPO that will run the function for you. That is a legitimate model, but it is not the only one, and a lot of operators end up outsourcing because it was the only option they were shown.',
+          'Staffing is the other model. The distinction is not commercial packaging; it changes who manages the work, who owns the process, and what you are left holding if the relationship ends.',
+        ],
+      },
+      {
+        heading: 'The actual difference',
+        level: 2,
+        bullets: [
+          'Outsourcing (BPO): the provider supplies agents, supervisors, QA, training and process. They run it. You buy an outcome and manage a vendor relationship. Your visibility is whatever reporting they give you.',
+          'Staffing: the agency supplies agents who work inside your operation — your systems, your scorecard, your training, your supervisors. The agency carries recruitment, employment and payroll. You run the floor.',
+        ],
+      },
+      {
+        paragraphs: [
+          'The practical test is who the agent asks when they do not know what to do. Under outsourcing, they ask the provider supervisor. Under staffing, they ask yours. Everything else follows from that.',
+        ],
+      },
+      {
+        heading: 'When staffing is the better model',
+        level: 2,
+        bullets: [
+          'Your process changes frequently. Every change has to be renegotiated and re-trained through a vendor layer under outsourcing. Under staffing it is an internal update.',
+          'Customer conversations are part of your product. If how customers are handled is a differentiator rather than a cost, handing it to a third party tends to erode it — gradually enough that you notice late.',
+          'You already know how to run a contact operation and the constraint is purely hiring speed and employment overhead in-country.',
+          'You want the institutional knowledge to stay with you. Under outsourcing, a meaningful amount of how your operation actually works ends up living in the provider.',
+        ],
+      },
+      {
+        heading: 'When outsourcing is the better model',
+        level: 2,
+        bullets: [
+          'The queue is a genuine cost centre with stable, well-documented process.',
+          'You do not have the supervisory bench to manage agents, and do not want to build it. Staffing fails badly here — agents inside your operation still need your leadership.',
+          'You need a fully managed outcome with a single accountable throat to choke, and are willing to trade visibility for it.',
+        ],
+      },
+      {
+        paragraphs: [
+          'We are a staffing agency, so weigh that accordingly. The honest summary is that staffing is not universally better — it is better when you have leadership capacity and process ownership matters. Where an operator lacks supervisors, outsourcing is the more realistic choice and we will say so.',
+        ],
+      },
+      {
+        heading: 'What to check before choosing a Latin American staffing partner',
+        level: 2,
+        bullets: [
+          'Which legal entity employs the agents, in which country. See /blog/eor-vs-staffing-agency-latin-america for why this matters more than it sounds.',
+          'Whether agents are employees or contractors, and who carries severance when a programme ends.',
+          'How English fluency is scored and by whom — the detail in /blog/how-to-vet-nearshore-customer-service-partners applies directly.',
+          'Whether the agency can supply supervisors and QA as well as frontline agents. Leadership is usually the real constraint on a ramp, not headcount.',
+          'What happens to the agents if you scale down. A partner who can redeploy people is structurally different from one who terminates them.',
+        ],
+      },
+      {
+        paragraphs: [
+          'If you want to size a cohort against your own volume rather than reason about this abstractly, /tools/staffing-calculator does the arithmetic, and /services/nearshore-call-center-staffing covers how we run the model.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is the difference between a staffing agency and a BPO in Latin America?',
+        a: 'A BPO runs the operation — their supervisors, QA, training and process — and you buy an outcome. A staffing agency supplies agents who work inside your operation on your systems and scorecard, managed by your supervisors, while the agency carries recruitment, employment and payroll. The practical test is who the agent asks when they do not know what to do.',
+      },
+      {
+        q: 'Can I hire remote customer service staff in Latin America without my own entity?',
+        a: 'Yes. That is the core of the staffing model — the agency is the legal employer in-country, so you do not need to incorporate to have people working for you there. What matters is confirming which named entity employs them, that they are employees rather than contractors, and who carries severance exposure when a programme ends.',
+      },
+      {
+        q: 'When should I choose staffing over outsourcing?',
+        a: 'Staffing suits operations where the process changes often, where customer conversations are a differentiator rather than a cost, and where you already have the supervisory capacity to manage agents. Outsourcing suits stable, well-documented queues that are genuinely a cost centre, or situations where you do not have and do not want to build a leadership bench.',
+      },
+      {
+        q: 'Which Latin American countries are best for customer support staffing?',
+        a: 'Mexico offers the closest time-zone alignment with the US and deep bilingual supply. Colombia has become a major bilingual delivery market with strong English in Bogota and Medellin. Costa Rica skews toward higher-complexity and regulated work. The right answer depends on your language mix, complexity and peak coverage needs rather than on a general ranking.',
+      },
+    ],
+  },
+  {
+    slug: 'eor-vs-staffing-agency-latin-america',
+    title: 'EOR vs Staffing Agency vs Own Entity: Hiring Support Teams in Latin America',
+    excerpt:
+      'Three ways to employ customer support people in Latin America without breaking the law, and the trade-offs nobody explains until something goes wrong at termination.',
+    metaTitle: 'EOR vs Staffing Agency in Latin America',
+    metaDescription:
+      'Employer of record, staffing agency, or your own entity: how each option works for hiring customer support teams in Latin America, what each costs you in control and risk, and how to choose.',
+    publishedAt: '2026-07-21',
+    author: 'Call Center Staffing',
+    category: 'Compliance',
+    readingMinutes: 7,
+    heroImage: '/images/cc-agent-writing.jpg',
+    primaryKeyword: 'EOR vs staffing agency Latin America',
+    relatedPostSlugs: [
+      'how-to-vet-nearshore-customer-service-partners',
+      'customer-support-staffing-agencies-latin-america',
+    ],
+    sections: [
+      {
+        paragraphs: [
+          'If you want customer support people working for you in Mexico, Colombia or elsewhere in Latin America, someone has to legally employ them. There are three viable structures, and the differences only become visible at the moments that matter — a termination, a labour claim, or the end of a programme.',
+          'This is not legal advice, and structures vary by country. It is the practical version of a conversation we have with most operators before they choose.',
+        ],
+      },
+      {
+        heading: 'Option 1: Your own entity',
+        level: 2,
+        paragraphs: [
+          'You incorporate in-country and employ people directly.',
+        ],
+        bullets: [
+          'Most control, lowest per-head cost at scale, and the people are unambiguously yours.',
+          'Slow and expensive to establish, and slow to unwind. Incorporation, tax registration, payroll infrastructure and local HR capability are all real projects.',
+          'You carry every obligation directly — severance, statutory bonuses, social contributions, and any labour claim.',
+          'Generally only sensible above a substantial and durable headcount. Setting up an entity for a programme you might not run in two years is how operators end up paying to close one.',
+        ],
+      },
+      {
+        heading: 'Option 2: Employer of record (EOR)',
+        level: 2,
+        paragraphs: [
+          'A third party legally employs the person on your behalf. You select and manage them; the EOR handles payroll, benefits and compliance.',
+        ],
+        bullets: [
+          'Fast, and no entity required. Good for small headcounts and for testing a market.',
+          'You still do all the recruiting. This is the point most buyers miss: a pure EOR is a compliance wrapper, not a hiring engine. If your constraint is finding qualified bilingual agents, an EOR does not solve it.',
+          'Per-head cost is typically higher than an entity at volume.',
+          'Termination and severance handling varies enormously between providers. Ask specifically who carries severance and how notice periods work.',
+        ],
+      },
+      {
+        heading: 'Option 3: Staffing agency',
+        level: 2,
+        paragraphs: [
+          'The agency recruits, employs and payrolls the agents, and they work inside your operation.',
+        ],
+        bullets: [
+          'Solves recruiting and compliance together, which is the practical difference from an EOR.',
+          'Fastest route to a working team, because the agency is already sourcing in that market continuously rather than starting a search for you.',
+          'Employment risk, severance exposure and replacement sit with the agency.',
+          'You give up some control over employment terms, and you are dependent on the agency\'s screening quality — which is why the vetting questions in /blog/how-to-vet-nearshore-customer-service-partners matter.',
+        ],
+      },
+      {
+        heading: 'How to choose',
+        level: 2,
+        bullets: [
+          'You have candidates already identified and just need them employed compliantly: EOR.',
+          'You need to find and employ people, at pace, and want replacement risk carried: staffing agency.',
+          'You are committed to a market long-term at meaningful scale and want the lowest per-head cost: your own entity.',
+          'You want the function run entirely by someone else: none of these — that is outsourcing, covered in /blog/customer-support-staffing-agencies-latin-america.',
+        ],
+      },
+      {
+        paragraphs: [
+          'We operate the staffing model, so that framing is not disinterested. But the EOR-versus-staffing distinction is genuinely misunderstood and worth stating plainly: an EOR employs whoever you find, a staffing agency finds them too. Buyers who choose an EOR expecting a hiring pipeline are usually disappointed for a quarter before they work that out.',
+        ],
+      },
+      {
+        heading: 'Country specifics worth knowing',
+        level: 2,
+        bullets: [
+          'Mexico: statutory aguinaldo (year-end bonus), profit-sharing obligations, and reforms in recent years that significantly restricted subcontracting of core business functions. The subcontracting rules are the ones to ask about directly.',
+          'Colombia: statutory prima paid twice yearly, severance (cesantías) accrual, and mandatory contributions. Bogota and Medellin are the deepest bilingual markets.',
+          'Costa Rica: higher wage floor than most of the region, generally paired with higher-complexity and regulated work rather than commodity voice.',
+          'Across the region: contractor misclassification is the most common and most expensive structural mistake, and the liability tends to follow the company receiving the work rather than the intermediary.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is the difference between an EOR and a staffing agency?',
+        a: 'An employer of record legally employs people you have already found, handling payroll, benefits and compliance. A staffing agency also recruits them. If your constraint is compliance, an EOR is sufficient. If your constraint is finding qualified bilingual agents at pace, an EOR does not solve it — that is the distinction buyers most often miss.',
+      },
+      {
+        q: 'Do I need my own entity to hire in Mexico or Colombia?',
+        a: 'No. Both an employer of record and a staffing agency let you have people working for you without incorporating. Your own entity generally only makes financial sense above a substantial and durable headcount, because incorporation, tax registration, payroll infrastructure and local HR capability are all real projects — and unwinding an entity is slower than setting one up.',
+      },
+      {
+        q: 'Who is liable for severance in Latin America?',
+        a: 'It depends on the structure, which is why it is worth asking explicitly and in writing. With your own entity the obligation is yours. With an EOR or staffing agency it normally sits with them, but handling varies significantly between providers. If the answer is vague, assume the exposure is yours.',
+      },
+      {
+        q: 'Can I engage Latin American support agents as contractors?',
+        a: 'It is common and it is the most frequent structural problem in the region. Where the working relationship has the characteristics of employment — set hours, your systems, your supervision — treating people as independent contractors risks misclassification, and the liability generally follows the company receiving the work.',
+      },
+    ],
+  },
   // Hand-written, not generated from BPO_CONTENT. Deliberately a different
   // shape from the templated location listicles: no invented ranking, no
   // competitor list to click away to, and a staffing-vs-BPO pivot that the
