@@ -2,6 +2,7 @@ import type { Post, PostSection } from './types';
 import { BPO_CONTENT } from './bpo-content';
 import { NETWORK_DIRECTORY_POST } from './network-directory';
 import { NEARSHORE_POSTS } from './posts-nearshore';
+import { OPERATIONS_POSTS } from './posts-operations';
 import {
   groupProvidersDetailSection,
   groupProvidersIntro,
@@ -785,6 +786,7 @@ const TRAFFIC_POSTS = TRAFFIC_POST_CONFIGS.map(createTrafficPost);
 const RAW_POSTS: Post[] = [
   NETWORK_DIRECTORY_POST,
   ...NEARSHORE_POSTS,
+  ...OPERATIONS_POSTS,
   ...TRAFFIC_POSTS,
   ...BPO_LOCATION_POSTS,
   // ---------------------------------------------------------------------
