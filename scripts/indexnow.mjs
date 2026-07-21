@@ -13,7 +13,7 @@
  * before submitting, or the endpoint returns 403.
  */
 
-const KEY = 'c693c21d4a2f44b389a9e1164fc2769c';
+const KEY = '23d51e2afe8d4c0da90ccf3f4e355529';
 const HOST = 'www.callcenterstaffing.net';
 const ORIGIN = `https://${HOST}`;
 const ENDPOINT = 'https://api.indexnow.org/IndexNow';
