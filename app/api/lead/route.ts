@@ -3,9 +3,10 @@ import { z } from 'zod';
 import { site } from '@/lib/site';
 
 const ENDPOINT = 'https://splitforms.com/api/submit';
-// Never hardcode the access key. Set SPLITFORMS_ACCESS_KEY in the environment.
-// The previously committed literal must be rotated at Splitforms.
-const ACCESS_KEY = process.env.SPLITFORMS_ACCESS_KEY;
+// SplitForms access keys are public form identifiers, not API secrets. Keep the
+// environment override so the form can be switched without a code deploy.
+const ACCESS_KEY =
+  process.env.SPLITFORMS_ACCESS_KEY ?? 'adc9e2eab8bc439ca7fc3c932a1d73c2';
 
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 const RATE_LIMIT_MAX = 8;
