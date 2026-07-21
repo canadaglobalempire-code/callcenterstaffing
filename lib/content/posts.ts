@@ -1,6 +1,7 @@
 import type { Post, PostSection } from './types';
 import { BPO_CONTENT } from './bpo-content';
 import { NETWORK_DIRECTORY_POST } from './network-directory';
+import { groupProvidersSection, groupProvidersDetailSection } from './group-providers';
 
 type BpoLocationPostConfig = {
   slug: string;
@@ -237,7 +238,12 @@ function createBpoLocationPost(config: BpoLocationPostConfig): Post {
       'in-house-vs-outsourced-call-center',
       'call-center-staffing-cost-2026',
     ],
-    sections: staffingSection ? [...c.sections, staffingSection] : c.sections,
+    sections: [
+      ...c.sections,
+      groupProvidersSection(),
+      groupProvidersDetailSection(),
+      ...(staffingSection ? [staffingSection] : []),
+    ],
     faqs: c.faqs,
   };
 }

@@ -401,9 +401,13 @@ function extractRankedCompanies(sections: PostSection[]) {
     list.push({
       number: rank.number,
       company: rank.title,
-      hq: hq || 'Global',
+      // No placeholder facts. "Global" was previously shown as the
+      // headquarters for any company we had no record of, which is simply
+      // wrong for e.g. Atento (Spain/Brazil), Softtek (Mexico) or Globant
+      // (Argentina). An em dash reads as "not stated" rather than asserting.
+      hq: hq || '—',
       website: website || '',
-      bestFor: bestFor || 'Global delivery scale',
+      bestFor: bestFor || '—',
     });
   });
 
@@ -1032,27 +1036,6 @@ function ArticleBrief({
   );
 }
 
-function SidebarCTA() {
-  return (
-    <aside className="rounded-lg border border-navy-950/10 bg-navy-950 p-5 text-white shadow-sm">
-      <div className="flex h-10 w-10 items-center justify-center rounded-md bg-accent-500 text-white">
-        <MessageSquareText className="h-5 w-5" />
-      </div>
-      <p className="mt-4 font-display text-[1.15rem] font-bold leading-tight tracking-normal text-white">
-        Need staffing numbers behind the decision?
-      </p>
-      <p className="mt-3 text-[14px] leading-relaxed text-white/75">
-        Get a written plan for seats, timeline, screening, and region fit before you pick an operating model.
-      </p>
-      <Link
-        href="/contact"
-        className="mt-5 inline-flex h-11 items-center justify-center rounded-md bg-accent-500 px-4 text-[14px] font-bold text-white transition-colors hover:bg-accent-400"
-      >
-        Get a plan
-      </Link>
-    </aside>
-  );
-}
 
 function InlineCTA() {
   return (
@@ -1209,10 +1192,12 @@ export default function BlogPostPage({ params }: { params: Params }) {
         </section>
       )}
 
-      {/* Main Content Layout with Sidebars */}
+      {/* Main content. The right-hand sidebar (plan CTA + "Common questions"
+          note) was removed, so the article column takes that space instead of
+          staying pinned at 760px. */}
       <section className="bg-neutral-50 py-14 lg:py-20">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_280px] xl:grid-cols-[220px_minmax(0,760px)_280px] xl:gap-10">
+          <div className="grid gap-10 lg:grid-cols-1 xl:grid-cols-[220px_minmax(0,1fr)] xl:gap-12">
             <div className="hidden xl:block">
               <div className="sticky top-28">
                 <ArticleNav sections={sectionViews} />
@@ -1239,22 +1224,6 @@ export default function BlogPostPage({ params }: { params: Params }) {
               </article>
             </main>
 
-            <div className="hidden lg:block">
-              <div className="sticky top-28 space-y-5">
-                <SidebarCTA />
-                {post.faqs && post.faqs.length > 0 && (
-                  <div className="rounded-lg border border-navy-950/10 bg-white p-5 shadow-sm">
-                    <div className="flex items-center gap-2 text-[13px] font-bold text-navy-950">
-                      <MessageSquareText className="h-4 w-4 text-accent-500" />
-                      Common questions
-                    </div>
-                    <p className="mt-3 text-[14px] leading-relaxed text-navy-700">
-                      The FAQ section below is structured for search and for buyers comparing options.
-                    </p>
-                  </div>
-                )}
-              </div>
-            </div>
           </div>
         </Container>
       </section>
