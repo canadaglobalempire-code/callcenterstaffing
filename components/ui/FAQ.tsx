@@ -29,7 +29,12 @@ export function FAQ({ items, className }: FAQProps) {
             </Accordion.Trigger>
           </Accordion.Header>
           <Accordion.Content className="overflow-hidden data-[state=closed]:animate-none data-[state=open]:animate-fade-in">
-            <p className="pb-6 pr-10 text-base leading-relaxed text-navy-700 max-w-prose">
+            {/* data-faq-answer is targeted by the speakable schema — answer
+                engines pull from FAQ answers more than from body copy. */}
+            <p
+              data-faq-answer
+              className="pb-6 pr-10 text-base leading-relaxed text-navy-700 max-w-prose"
+            >
               {item.a}
             </p>
           </Accordion.Content>

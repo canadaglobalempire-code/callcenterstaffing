@@ -1130,7 +1130,12 @@ export default function BlogPostPage({ params }: { params: Params }) {
                 {post.title}
               </h1>
 
-              <p className="mt-5 text-[16px] lg:text-[17px] leading-relaxed text-navy-700">
+              {/* data-speakable: the lede is the passage answer engines are
+                  most likely to quote, so it is flagged for extraction. */}
+              <p
+                data-speakable
+                className="mt-5 text-[16px] lg:text-[17px] leading-relaxed text-navy-700"
+              >
                 {post.excerpt}
               </p>
 

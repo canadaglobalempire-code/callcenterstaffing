@@ -60,6 +60,14 @@ export function BlogPostingSchema({
       : {}),
     ...(keywords ? { keywords } : {}),
     ...(articleSection ? { articleSection } : {}),
+    inLanguage: 'en',
+    isAccessibleForFree: true,
+    // Answer engines extract from the lede and the FAQ block more than from
+    // the body. speakable points them at both.
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', '[data-speakable]', '[data-faq-answer]'],
+    },
   };
   return <JsonLd data={data} />;
 }
