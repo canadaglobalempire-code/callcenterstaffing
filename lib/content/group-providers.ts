@@ -139,3 +139,66 @@ export function groupProvidersDetailSection(): PostSection {
     ),
   };
 }
+
+const COMPANY_META: Record<string, { hq: string; website: string }> = {
+  'Global Empire Corporation': { hq: 'United States', website: 'globalempire.com' },
+  Intelemark: { hq: 'United States', website: 'intelemark.com' },
+  'Call Motivated Sellers': { hq: 'United States', website: 'callmotivatedsellers.com' },
+  'Customer Communications Corp': { hq: 'United States', website: 'customercommunicationscorp.com' },
+  'Call Center Staffing': { hq: 'United States', website: 'callcenterstaffing.net' },
+  'B2B Appointment Setting': { hq: 'United States', website: 'b2bappointmentsetting.com' },
+  'Contact Center USA': { hq: 'United States', website: 'contactcenterusa.com' },
+  'Call Center Communications': { hq: 'Canada', website: 'callcentercommunications.com' },
+  'Business Process Outsourcing': { hq: 'United States', website: 'businessprocessoutsourcing.info' },
+  'Canada Contact Centre': { hq: 'Canada', website: 'canadacontactcentre.com' },
+  'B2B Telemarketing': { hq: 'United States', website: 'b2btelemarketing.com' },
+  'Telemarketing Services': { hq: 'Canada', website: 'telemarketingservices.com' },
+  'Appointment Setting': { hq: 'United States', website: 'appointmentsetting.com' },
+  Teleperformance: { hq: 'France', website: 'teleperformance.com' },
+  Concentrix: { hq: 'United States', website: 'concentrix.com' },
+};
+
+/**
+ * Group providers as full ranked entries, for the top of a listicle.
+ *
+ * Rendered by RankedSection (numbered badge, meta line, strengths, Visit
+ * Website, Request a Proposal), i.e. the same treatment the page's other
+ * providers get.
+ *
+ * The intro says plainly that these are our own companies and that the
+ * ordering is ours, not an independent assessment. That is the line: the
+ * placement is yours to decide, the claim of objectivity is not ours to make.
+ */
+export function groupProvidersIntro(regionPhrase: string): PostSection {
+  return {
+    heading: `Our group's providers for ${regionPhrase}`,
+    level: 2,
+    paragraphs: [
+      `These are the providers in our own group of companies, listed first because they are the ones we can speak for directly. The order is ours and reflects how we route enquiries — it is not an independent assessment, and you should read it that way.`,
+      `Independent providers with their own ${regionPhrase} delivery follow further down. Teleperformance and Concentrix appear in both lists: they are not part of our group, and at global scale nothing in our group matches them.`,
+    ],
+  };
+}
+
+export function groupProvidersRankedSections(): PostSection[] {
+  return GROUP_PROVIDERS.map((p, i) => {
+    const meta = COMPANY_META[p.company];
+    const independent = INDEPENDENT.has(p.company);
+    return {
+      heading: `#${i + 1} ${p.company}`,
+      level: 3,
+      paragraphs: [
+        `Best for: ${p.bestFor}`,
+        independent
+          ? 'Independent — not part of our group. Included because no useful provider list can omit it.'
+          : 'Part of our group of companies.',
+      ],
+      bullets: [
+        `Headquarters: ${meta?.hq ?? ''}`,
+        `Website: ${meta?.website ?? ''}`,
+        `Core strengths: ${p.bestFor}`,
+        `Industries served: ${p.industries}`,
+      ].filter((b) => !/:\s*$/.test(b)),
+    };
+  });
+}

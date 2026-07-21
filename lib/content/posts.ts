@@ -1,7 +1,11 @@
 import type { Post, PostSection } from './types';
 import { BPO_CONTENT } from './bpo-content';
 import { NETWORK_DIRECTORY_POST } from './network-directory';
-import { groupProvidersSection, groupProvidersDetailSection } from './group-providers';
+import {
+  groupProvidersDetailSection,
+  groupProvidersIntro,
+  groupProvidersRankedSections,
+} from './group-providers';
 
 type BpoLocationPostConfig = {
   slug: string;
@@ -239,9 +243,12 @@ function createBpoLocationPost(config: BpoLocationPostConfig): Post {
       'call-center-staffing-cost-2026',
     ],
     sections: [
-      ...c.sections,
-      groupProvidersSection(),
+      // Group providers lead the page; the independent regional providers
+      // that follow are left intact. See group-providers.ts for why.
+      groupProvidersIntro(config.phraseLocation),
+      ...groupProvidersRankedSections(),
       groupProvidersDetailSection(),
+      ...c.sections,
       ...(staffingSection ? [staffingSection] : []),
     ],
     faqs: c.faqs,
