@@ -1,5 +1,6 @@
 import type { Post, PostSection } from './types';
 import { BPO_CONTENT } from './bpo-content';
+import { NETWORK_DIRECTORY_POST } from './network-directory';
 
 type BpoLocationPostConfig = {
   slug: string;
@@ -767,6 +768,7 @@ function createTrafficPost(config: TrafficPostConfig): Post {
 const TRAFFIC_POSTS = TRAFFIC_POST_CONFIGS.map(createTrafficPost);
 
 export const POSTS: Post[] = [
+  NETWORK_DIRECTORY_POST,
   ...TRAFFIC_POSTS,
   ...BPO_LOCATION_POSTS,
   // ---------------------------------------------------------------------
