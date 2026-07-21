@@ -10,7 +10,9 @@ import { INSIGHTS } from '@/lib/content/insights';
 import { site } from '@/lib/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteLastModified = new Date('2026-07-06');
+  // Bump this when a sitewide content revision ships (titles, H1s, copy).
+  // Blog posts below carry their own real dates instead.
+  const siteLastModified = new Date('2026-07-21');
   return [
     { url: site.url, lastModified: siteLastModified, changeFrequency: 'weekly', priority: 1 },
     { url: `${site.url}/about`, lastModified: siteLastModified, changeFrequency: 'monthly' as const, priority: 0.6 },
