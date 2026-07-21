@@ -2,6 +2,110 @@ import type { Service } from './types';
 
 export const SERVICES: Service[] = [
   {
+    slug: 'inside-sales-outsourcing',
+    name: 'Inside Sales Outsourcing',
+    primaryKeyword: 'inside sales outsourcing',
+    metaTitle: 'Inside Sales Outsourcing & Staffing',
+    metaDescription:
+      'Inside sales outsourcing and staffing: SDRs, appointment setters and inbound sales agents screened on recorded discovery calls. Outsource inside sales or staff your own floor.',
+    heroImage: '/images/cc-agent-call.jpg',
+    hero: {
+      eyebrow: 'Services',
+      headline: 'Inside sales outsourcing, or inside sales agents on your own floor',
+      subhead:
+        'Two ways to add pipeline capacity: outsource the motion to a managed team, or staff SDRs and inbound sales agents who sit inside your operation on your CRM and your scorecard. We do the second, and will tell you plainly when the first is the better fit.',
+    },
+    intro:
+      'Inside sales is the hardest contact-centre discipline to hire for, because the tell is not in the CV. Tenure looks similar across good and bad candidates, and the interview rewards confidence rather than the actual skill — running discovery, hearing an objection accurately, and knowing when a deal is not there. We screen on recorded calls rather than on claims.',
+    whatIsIt:
+      'Outsourcing inside sales means a provider runs the motion for you — their SDRs, their process, their management — and you buy meetings or pipeline, sometimes packaged as inside sales as a service. Inside sales staffing means the agents work inside your operation, on your CRM, following your qualification criteria and coached by your sales leadership, while the agency carries recruitment, employment and payroll. Both add capacity. They differ in who owns the playbook and where the learning accumulates. If your qualification criteria change month to month, or the conversation is genuinely consultative, that learning belongs inside your team.',
+    whoItsFor: [
+      {
+        title: 'Teams that need pipeline before they need headcount',
+        body: 'You have closers who are under-fed rather than under-performing. Adding SDR capacity is faster than hiring more AEs and cheaper than buying leads that do not convert.',
+      },
+      {
+        title: 'Founders doing their own outbound',
+        body: 'The motion works when you run it and stalls when you stop. That is a capacity problem, not a strategy problem, and it is the most common reason early-stage teams plateau.',
+      },
+      {
+        title: 'Operations with seasonal or campaign-driven demand',
+        body: 'Product launches, renewal cycles and event follow-up need SDR capacity for eight weeks, not permanently. Staffing flexes; permanent headcount does not.',
+      },
+      {
+        title: 'Inbound-heavy teams losing speed to lead',
+        body: 'Inbound sales outsourcing exists mostly because response time decays fast. If inbound enquiries wait hours for a first touch, added capacity pays for itself before any skill improvement does.',
+      },
+    ],
+    ourApproach:
+      'We screen inside sales candidates on recorded discovery and objection-handling scenarios, scored against your qualification criteria rather than generic sales competencies. Every shortlist ships with the audio, so you hear the candidate handle a real objection before you decide. Agents stay on our payroll and work inside your CRM, so the pipeline, the call recordings and the process knowledge stay with you.',
+    approachSteps: [
+      {
+        title: 'Calibrate on your qualification bar',
+        body: 'We take your ICP, disqualification criteria and a recording of a good call and a bad one. That calibration is what makes the screen predictive rather than generic.',
+      },
+      {
+        title: 'Recorded discovery screen',
+        body: 'Candidates run a live discovery scenario against a scripted buyer persona. We score question discipline, listening accuracy and whether they disqualify when they should.',
+      },
+      {
+        title: 'Objection scenario under pressure',
+        body: 'A deliberately difficult objection, unscripted. We are testing recovery and honesty, not polish — the failure mode in inside sales is talking past the objection.',
+      },
+      {
+        title: 'Ramp with your sequences',
+        body: 'Agents start on your cadences and your CRM from day one. Nesting is staged: research and list work first, then live calls on the narrowest segment, then full territory.',
+      },
+    ],
+    whyChooseUs: [
+      {
+        title: 'We screen on recordings, not claims',
+        body: 'You hear every shortlisted candidate handle a discovery call and an objection before you approve them. Ask any provider for a candidate they rejected and the reason — that reveals where the bar actually sits.',
+      },
+      {
+        title: 'The pipeline stays yours',
+        body: 'Agents work in your CRM. Call recordings, notes and the accumulated understanding of why deals stall stay in your system rather than in a vendor account you lose at contract end.',
+      },
+      {
+        title: 'We will point you at outsourcing when it fits',
+        body: 'If you have no sales leadership with capacity to manage SDRs, staffing will disappoint you and a managed provider is the better call. We would rather say that than place people who fail.',
+      },
+      {
+        title: 'Flexible without permanent headcount',
+        body: 'Agents stay on our payroll and you pay only for hours worked, so a campaign-driven or seasonal motion does not become fixed cost.',
+      },
+    ],
+    outcomes: [
+      { metric: '5–10 business days', description: 'To first qualified shortlist with recorded discovery calls' },
+      { metric: '90-day', description: 'Attrition guarantee on every placement' },
+      { metric: 'Your CRM', description: 'Agents work in your systems — pipeline and recordings stay with you' },
+    ],
+    relatedRoles: ['outbound-sales-agents', 'inbound-customer-service', 'team-leads-supervisors'],
+    relatedLocations: ['united-states', 'mexico', 'colombia', 'philippines'],
+    faqs: [
+      {
+        q: 'What is inside sales outsourcing?',
+        a: 'A provider runs the inside sales motion for you — their SDRs, their process and their management — and you buy meetings or qualified pipeline. It differs from inside sales staffing, where agents work inside your operation on your CRM and qualification criteria, managed by your sales leadership, while the agency carries employment and payroll.',
+      },
+      {
+        q: 'Should I outsource inside sales or staff it internally?',
+        a: 'Outsource when the motion is well-defined, the qualification criteria are stable, and you do not have sales leadership with capacity to manage SDRs. Staff internally when the conversation is consultative, the criteria change frequently, or the understanding of why deals stall is something you need to keep. Staffing fails without leadership capacity on your side.',
+      },
+      {
+        q: 'How do you screen inside sales agents?',
+        a: 'On recorded calls rather than on CVs. Candidates run a live discovery scenario against a scripted buyer persona and then handle an unscripted objection. We score question discipline, listening accuracy and whether they disqualify when they should. Every shortlist ships with the audio.',
+      },
+      {
+        q: 'Can you staff inbound sales as well as outbound?',
+        a: 'Yes, and inbound is often the faster return. Inbound sales response time decays quickly — if enquiries wait hours for a first touch, added capacity pays for itself before any skill improvement does.',
+      },
+      {
+        q: 'How much does inside sales outsourcing cost?',
+        a: 'It depends on region, seniority, target volume and whether you need SDRs alone or supervisors and QA alongside them, so we scope and quote per programme rather than publish a rate card. Agents stay on our payroll and you pay only for hours worked.',
+      },
+    ],
+  },
+  {
     slug: 'call-center-recruitment',
     name: 'Call Center Recruitment',
     primaryKeyword: 'call center recruitment',
