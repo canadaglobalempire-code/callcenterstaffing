@@ -2,6 +2,114 @@ import type { Service } from './types';
 
 export const SERVICES: Service[] = [
   {
+    slug: 'customer-service-outsourcing',
+    name: 'Customer Service Outsourcing',
+    primaryKeyword: 'customer service outsourcing',
+    metaTitle: 'Customer Service Outsourcing & Support Staffing',
+    metaDescription:
+      'Customer service outsourcing explained: what outsourced customer support costs you in control, when staffing beats it, and how to evaluate companies that outsource customer service.',
+    heroImage: '/images/cc-diverse-team.jpg',
+    hero: {
+      eyebrow: 'Services',
+      headline: 'Customer service outsourcing, and when it is the wrong answer',
+      subhead:
+        'Outsourcing customer service hands the whole function to a provider. Staffing puts agents inside your operation and leaves the process with you. Most comparisons only explain the first because the people writing them only sell the first. Here is both, including where we are not the right choice.',
+    },
+    intro:
+      'Customer service outsourcing means a provider runs your support function — their supervisors, their quality framework, their floor — and you buy an outcome. It is a mature, well-understood model that works well for a specific shape of problem. It also quietly costs you something that does not appear on the invoice: the accumulated understanding of why your customers get in touch.',
+    whatIsIt:
+      'In an outsourced customer support arrangement, the provider recruits, employs, trains and manages the agents, owns the QA framework, and reports outcomes to you. Outsourced customer support services are usually priced per hour, per contact or per FTE, and providers use \'outsourcing customer services\' and the singular interchangeably. Customer experience outsourcing is the same model sold with more emphasis on analytics and journey design. The alternative is staffing: agents employed by an agency but working inside your operation, on your systems, following your scorecard, managed by your supervisors. Both add capacity. The difference is who owns the playbook — and where the learning ends up when the contract ends.',
+    whoItsFor: [
+      {
+        title: 'Outsourcing fits: stable, documented, high-volume queues',
+        body: 'Where the process is written down, outcomes are bounded and a correct answer exists, a competent provider will run it more cheaply and more reliably than you will. This is genuinely the majority of contact volume at most companies.',
+      },
+      {
+        title: 'Outsourcing fits: no supervisory bench, and no wish to build one',
+        body: 'Staffing fails badly without leadership capacity on your side. If you do not have team leaders with room to manage more agents, a managed service is the honest recommendation.',
+      },
+      {
+        title: 'Staffing fits: the conversation is part of the product',
+        body: 'If how customers are handled is a differentiator rather than a cost, delegating it tends to erode the thing that made it good — gradually enough that you notice about a year late.',
+      },
+      {
+        title: 'Staffing fits: your process changes often',
+        body: 'Every change has to be renegotiated and re-trained through a vendor layer. Under staffing it is an internal update. Fast-moving products are where outsourcing arrangements strain first.',
+      },
+    ],
+    ourApproach:
+      'We staff floors rather than run them, so treat our view here as informed rather than neutral. What we will do is size both options against your actual numbers. If the answer is that you should outsource, we have companies in our group that do exactly that and we will point you at them rather than sell you a model that will not hold.',
+    approachSteps: [
+      {
+        title: 'Segment the queue before choosing a model',
+        body: 'Most operations do not need one answer. Documented high-volume contacts and complex brand-critical ones have different requirements, and forcing both into one model to simplify the vendor relationship is usually a false economy.',
+      },
+      {
+        title: 'Test the four questions that separate providers',
+        body: '90-day attrition and how it is calculated; who screens candidates and whether they have run a floor; which site agents actually sit in and whether that can change without your agreement; who is the legal employer carrying severance.',
+      },
+      {
+        title: 'Model the exit before you sign',
+        body: 'Ask what happens to your process documentation, call recordings and institutional knowledge if you bring the function back in-house in eighteen months. The answer tells you how much of your operation you are lending out.',
+      },
+      {
+        title: 'Staff or outsource, then measure the same way',
+        body: 'Whichever model you choose, hold it to cost per ramped-and-retained agent rather than to headline rate. A cheaper-looking arrangement with higher attrition frequently costs more.',
+      },
+    ],
+    whyChooseUs: [
+      {
+        title: 'We will tell you not to use us',
+        body: 'Without supervisory capacity on your side, staffing disappoints. We would rather say that up front than place agents into an operation that cannot support them.',
+      },
+      {
+        title: 'The process knowledge stays with you',
+        body: 'Agents work on your systems and your scorecard. What your team learns about your customers accumulates in your operation rather than in a provider account you lose at contract end.',
+      },
+      {
+        title: 'Onshore, nearshore and offshore under one screen',
+        body: 'We staff all three, so we have no incentive to push you toward one delivery model. The recommendation follows the queue, not our margin.',
+      },
+      {
+        title: 'You pay only for hours worked',
+        body: 'Agents stay on our payroll. No HR, benefits or termination burden, and no fixed headcount risk when volume moves.',
+      },
+    ],
+    outcomes: [
+      { metric: '~72 hours', description: 'To first qualified candidates on most programmes' },
+      { metric: '90-day', description: 'Attrition guarantee on every placement' },
+      { metric: 'Your scorecard', description: 'Agents screened against your QA bar, not generic CX criteria' },
+    ],
+    relatedRoles: ['inbound-customer-service', 'bilingual-agents', 'team-leads-supervisors', 'qa-analysts'],
+    relatedLocations: ['united-states', 'mexico', 'colombia', 'philippines'],
+    faqs: [
+      {
+        q: 'What is customer service outsourcing?',
+        a: 'A provider runs your support function — recruiting, employing, training and managing the agents, owning the quality framework and reporting outcomes to you. You buy an outcome rather than manage a team. It differs from staffing, where agents work inside your operation on your systems and scorecard while an agency carries employment and payroll.',
+      },
+      {
+        q: 'When should you outsource customer service?',
+        a: 'When the queue is stable and well documented, outcomes are bounded, and contact handling is a cost centre rather than a differentiator — or when you lack supervisory capacity and do not want to build it. Outsourcing strains when the product is complex, the process changes frequently, or the customer conversation is part of what makes the brand good.',
+      },
+      {
+        q: 'What are the disadvantages of outsourced customer support?',
+        a: 'The cost that does not appear on the invoice is process knowledge. Over a contract, a meaningful amount of how your operation actually works ends up living with the provider, which is expensive to rebuild if you bring the function back. Change also gets slower, because every process update has to be renegotiated and re-trained through a vendor layer.',
+      },
+      {
+        q: 'How do I evaluate companies that outsource customer service?',
+        a: 'Four questions separate capability from a good pitch: what is your 90-day agent attrition and how is it calculated; who screens candidates and have they run a floor; which site will my agents sit in and can that change without my agreement; who is the legal employer carrying severance when the programme ends. Ask for a candidate they rejected and why — that reveals where the bar sits.',
+      },
+      {
+        q: 'How much does customer service outsourcing cost?',
+        a: 'It depends on delivery region, channel mix, complexity, seat count and language requirements, so we scope and quote per programme rather than publish a rate card. Whatever model you choose, compare on cost per ramped-and-retained agent rather than headline hourly rate — a cheaper arrangement with higher attrition often costs more.',
+      },
+      {
+        q: 'What is customer experience outsourcing?',
+        a: 'Broadly the same model as customer service outsourcing, sold with more emphasis on analytics, journey design and multi-channel orchestration. The evaluation questions do not change: who employs the agents, who screens them, where they sit, and what happens to your data and process knowledge at contract end.',
+      },
+    ],
+  },
+  {
     slug: 'inside-sales-outsourcing',
     name: 'Inside Sales Outsourcing',
     primaryKeyword: 'inside sales outsourcing',
