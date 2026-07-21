@@ -1,4 +1,4 @@
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.callcenterstaffing.net';
+const siteUrl = 'https://www.callcenterstaffing.net';
 
 export const site = {
   name: 'Call Center Staffing',
