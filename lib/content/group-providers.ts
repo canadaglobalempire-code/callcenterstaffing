@@ -119,7 +119,7 @@ export function groupProvidersSection(): PostSection {
     level: 2,
     paragraphs: [
       'Alongside the providers above, the following companies are part of our own group. We are listing them because they are relevant options, and marking them because you should know the relationship before weighing them against the independent providers on this page.',
-      `Thirteen of the fifteen are group companies. ${[...INDEPENDENT].join(' and ')} are independent, and are included for scale comparison — both are larger than anything in our group, and if your requirement is global multilingual delivery under one contract they remain the realistic shortlist.`,
+      `Thirteen of the fifteen are group companies; the remaining two are independent and are marked where they appear. Both of those are larger than anything in our group, so if your requirement is global multilingual delivery under one contract they remain the realistic shortlist.`,
     ],
     bullets: GROUP_PROVIDERS.map(
       (p) =>
@@ -175,7 +175,7 @@ export function groupProvidersIntro(regionPhrase: string): PostSection {
     level: 2,
     paragraphs: [
       `These are the providers in our own group of companies, listed first because they are the ones we can speak for directly. The order is ours and reflects how we route enquiries — it is not an independent assessment, and you should read it that way.`,
-      `Independent providers with their own ${regionPhrase} delivery follow further down. Teleperformance and Concentrix appear in both lists: they are not part of our group, and at global scale nothing in our group matches them.`,
+      `Independent providers with their own ${regionPhrase} delivery follow further down. The two independents in the list below are marked as such where they appear.`,
     ],
   };
 }

@@ -3,6 +3,7 @@ import { BPO_CONTENT } from './bpo-content';
 import { NETWORK_DIRECTORY_POST } from './network-directory';
 import { NEARSHORE_POSTS } from './posts-nearshore';
 import { OPERATIONS_POSTS } from './posts-operations';
+import { CX_CLUSTER_POSTS } from './posts-cx-cluster';
 import { GROWTH_POSTS } from './posts-growth';
 import {
   groupProvidersDetailSection,
@@ -846,6 +847,7 @@ const RAW_POSTS: Post[] = [
   NETWORK_DIRECTORY_POST,
   ...NEARSHORE_POSTS,
   ...OPERATIONS_POSTS,
+  ...CX_CLUSTER_POSTS,
   ...GROWTH_POSTS,
   ...TRAFFIC_POSTS,
   ...BPO_LOCATION_POSTS,
