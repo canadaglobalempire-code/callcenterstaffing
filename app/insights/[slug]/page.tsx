@@ -21,10 +21,11 @@ import { CTABand } from '@/components/sections/CTABand';
 import { StaffingPlanCTA } from '@/components/sections/StaffingPlanCTA';
 import { HeroQuoteForm } from '@/components/forms/HeroQuoteForm';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { BlogPostingSchema } from '@/components/seo/BlogPostingSchema';
 import { FAQSchema } from '@/components/seo/FAQSchema';
 import { INSIGHTS, getInsight } from '@/lib/content/insights';
 import { site } from '@/lib/site';
-import { alternatesFor } from '@/lib/seo';
+import { alternatesFor, socialImages } from '@/lib/seo';
 
 type Params = { slug: string };
 
@@ -35,6 +36,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: Params }): Metadata {
   const insight = getInsight(params.slug);
   if (!insight) return {};
+  const images = socialImages(insight.title, insight.heroImage ?? FALLBACK_IMAGE);
   return {
     title: insight.metaTitle,
     description: insight.metaDescription,
@@ -44,28 +46,25 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
       description: insight.metaDescription,
       url: `${site.url}/insights/${insight.slug}`,
       type: 'article',
-      ...(insight.heroImage
-        ? {
-            images: [
-              {
-                url: insight.heroImage,
-                width: 1200,
-                height: 630,
-                alt: insight.title,
-              },
-            ],
-          }
-        : {}),
+      publishedTime: insight.publishedAt,
+      modifiedTime: insight.updatedAt ?? insight.publishedAt,
+      authors: [insight.author],
+      images: images.openGraph,
     },
     twitter: {
       card: 'summary_large_image',
       title: insight.metaTitle,
       description: insight.metaDescription,
+      images: images.twitter,
     },
   };
 }
 
 const FALLBACK_IMAGE = '/images/cc-team-meeting.jpg';
+const DATE_FORMATTER = new Intl.DateTimeFormat('en-US', {
+  dateStyle: 'long',
+  timeZone: 'UTC',
+});
 
 /**
  * Render a paragraph string and turn inline path tokens (e.g. "/services/foo")
@@ -125,6 +124,17 @@ export default function InsightPage({ params }: { params: Params }) {
   return (
     <>
       <BreadcrumbSchema items={crumbs} />
+      <BlogPostingSchema
+        headline={insight.symptom}
+        description={insight.metaDescription}
+        url={`${site.url}/insights/${insight.slug}`}
+        datePublished={insight.publishedAt}
+        dateModified={insight.updatedAt}
+        author={insight.author}
+        image={heroImage}
+        keywords={insight.primaryKeyword}
+        articleSection="Call center operations"
+      />
       {insight.faqs && insight.faqs.length > 0 && (
         <FAQSchema items={insight.faqs} />
       )}
@@ -176,10 +186,25 @@ export default function InsightPage({ params }: { params: Params }) {
               {insight.symptom}
             </h1>
 
-            <p className="mt-6 max-w-[640px] text-[17px] lg:text-lg leading-relaxed text-white/80">
+            <p
+              data-speakable
+              className="mt-6 max-w-[640px] text-[17px] lg:text-lg leading-relaxed text-white/80"
+            >
               {insight.excerpt} You are not the first operator we have seen with
               this pattern, and the fix is more concrete than most teams expect.
             </p>
+
+            <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/70">
+              <span>By {insight.author}</span>
+              <time dateTime={insight.publishedAt}>
+                Published {DATE_FORMATTER.format(new Date(`${insight.publishedAt}T00:00:00Z`))}
+              </time>
+              {insight.updatedAt && (
+                <time dateTime={insight.updatedAt}>
+                  Updated {DATE_FORMATTER.format(new Date(`${insight.updatedAt}T00:00:00Z`))}
+                </time>
+              )}
+            </div>
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Button href="/contact" size="lg" withArrow>

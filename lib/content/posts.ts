@@ -304,7 +304,7 @@ function createBpoLocationPost(config: BpoLocationPostConfig): Post {
     relatedPostSlugs: [
       'top-15-bpo-companies-in-the-world',
       'in-house-vs-outsourced-call-center',
-      'call-center-staffing-cost-2026',
+      'call-center-staffing-cost',
     ],
     sections: [
       // Group providers lead the page; the independent regional providers
@@ -323,7 +323,7 @@ const BPO_LOCATION_POSTS = BPO_LOCATION_POST_CONFIGS.map(createBpoLocationPost);
 
 const TRAFFIC_POST_CONFIGS: TrafficPostConfig[] = [
   {
-    slug: 'best-call-center-outsourcing-companies-2026',
+    slug: 'best-call-center-outsourcing-companies',
     title: 'Best Call Center Outsourcing Companies 2026',
     primaryKeyword: 'best call center outsourcing companies',
     metaDescription:
@@ -365,7 +365,7 @@ const TRAFFIC_POST_CONFIGS: TrafficPostConfig[] = [
     ],
   },
   {
-    slug: 'best-customer-service-outsourcing-companies-2026',
+    slug: 'best-customer-service-outsourcing-companies',
     title: 'Best Customer Service Outsourcing Companies 2026',
     primaryKeyword: 'best customer service outsourcing companies',
     metaDescription:
@@ -401,13 +401,13 @@ const TRAFFIC_POST_CONFIGS: TrafficPostConfig[] = [
     finalTakeaway:
       'Choose a customer service outsourcing company that can protect response time, tone, and issue resolution. Cheap coverage that creates repeat contacts is not cheap for long.',
     relatedPostSlugs: [
-      'best-call-center-outsourcing-companies-2026',
+      'best-call-center-outsourcing-companies',
       'how-to-reduce-call-center-turnover',
       'top-15-bpo-companies-in-canada',
     ],
   },
   {
-    slug: 'inbound-call-center-outsourcing-2026',
+    slug: 'inbound-call-center-outsourcing',
     title: 'Inbound Call Center Outsourcing 2026',
     primaryKeyword: 'inbound call center outsourcing',
     metaDescription:
@@ -443,13 +443,13 @@ const TRAFFIC_POST_CONFIGS: TrafficPostConfig[] = [
     finalTakeaway:
       'Inbound call center outsourcing works when the call types, answers, systems, and escalation rules are ready before the vendor starts taking live calls.',
     relatedPostSlugs: [
-      'best-call-center-outsourcing-companies-2026',
+      'best-call-center-outsourcing-companies',
       'how-to-scale-a-call-center-without-sacrificing-quality',
       'call-center-no-show-rate',
     ],
   },
   {
-    slug: 'outbound-call-center-outsourcing-2026',
+    slug: 'outbound-call-center-outsourcing',
     title: 'Outbound Call Center Outsourcing 2026',
     primaryKeyword: 'outbound call center outsourcing',
     metaDescription:
@@ -485,13 +485,13 @@ const TRAFFIC_POST_CONFIGS: TrafficPostConfig[] = [
     finalTakeaway:
       'Outbound outsourcing can create strong pipeline lift, but only when the list, script, qualification rules, and compliance process are solid.',
     relatedPostSlugs: [
-      'best-call-center-outsourcing-companies-2026',
+      'best-call-center-outsourcing-companies',
       'how-to-hire-call-center-agents-fast',
       'top-15-bpo-companies-in-usa',
     ],
   },
   {
-    slug: 'nearshore-call-center-outsourcing-2026',
+    slug: 'nearshore-call-center-outsourcing',
     title: 'Nearshore Call Center Outsourcing 2026',
     primaryKeyword: 'nearshore call center outsourcing',
     metaDescription:
@@ -533,7 +533,7 @@ const TRAFFIC_POST_CONFIGS: TrafficPostConfig[] = [
     ],
   },
   {
-    slug: 'offshore-call-center-outsourcing-2026',
+    slug: 'offshore-call-center-outsourcing',
     title: 'Offshore Call Center Outsourcing 2026',
     primaryKeyword: 'offshore call center outsourcing',
     metaDescription:
@@ -571,11 +571,11 @@ const TRAFFIC_POST_CONFIGS: TrafficPostConfig[] = [
     relatedPostSlugs: [
       'top-15-bpo-companies-in-philippines',
       'top-15-bpo-companies-in-india',
-      'call-center-staffing-cost-2026',
+      'call-center-staffing-cost',
     ],
   },
   {
-    slug: 'call-center-outsourcing-for-small-business-2026',
+    slug: 'call-center-outsourcing-for-small-business',
     title: 'Call Center Outsourcing for Small Business 2026',
     primaryKeyword: 'call center outsourcing for small business',
     metaDescription:
@@ -611,13 +611,13 @@ const TRAFFIC_POST_CONFIGS: TrafficPostConfig[] = [
     finalTakeaway:
       'Small business call center outsourcing should be simple, flexible, and easy to manage. Avoid contracts that are bigger than the problem you are trying to solve.',
     relatedPostSlugs: [
-      'best-call-center-outsourcing-companies-2026',
-      'call-center-staffing-cost-2026',
+      'best-call-center-outsourcing-companies',
+      'call-center-staffing-cost',
       'how-to-hire-call-center-agents-fast',
     ],
   },
   {
-    slug: 'ecommerce-customer-service-outsourcing-2026',
+    slug: 'ecommerce-customer-service-outsourcing',
     title: 'Ecommerce Customer Service Outsourcing 2026',
     primaryKeyword: 'ecommerce customer service outsourcing',
     metaDescription:
@@ -654,12 +654,12 @@ const TRAFFIC_POST_CONFIGS: TrafficPostConfig[] = [
       'Ecommerce customer service outsourcing works when policies, tools, and brand voice are clear enough for agents to answer customers without creating rework.',
     relatedPostSlugs: [
       'seasonal-call-center-staffing-q4-prep',
-      'best-customer-service-outsourcing-companies-2026',
+      'best-customer-service-outsourcing-companies',
       'call-center-no-show-rate',
     ],
   },
   {
-    slug: 'healthcare-call-center-outsourcing-2026',
+    slug: 'healthcare-call-center-outsourcing',
     title: 'Healthcare Call Center Outsourcing 2026',
     primaryKeyword: 'healthcare call center outsourcing',
     metaDescription:
@@ -697,11 +697,11 @@ const TRAFFIC_POST_CONFIGS: TrafficPostConfig[] = [
     relatedPostSlugs: [
       'in-house-vs-outsourced-call-center',
       'case-study-60-bilingual-agents-in-38-days',
-      'best-customer-service-outsourcing-companies-2026',
+      'best-customer-service-outsourcing-companies',
     ],
   },
   {
-    slug: 'bpo-vs-call-center-outsourcing-2026',
+    slug: 'bpo-vs-call-center-outsourcing',
     title: 'BPO vs Call Center Outsourcing 2026',
     primaryKeyword: 'BPO vs call center outsourcing',
     metaDescription:
@@ -739,7 +739,7 @@ const TRAFFIC_POST_CONFIGS: TrafficPostConfig[] = [
     relatedPostSlugs: [
       'top-15-bpo-companies-in-the-world',
       'in-house-vs-outsourced-call-center',
-      'best-call-center-outsourcing-companies-2026',
+      'best-call-center-outsourcing-companies',
     ],
   },
 ];
@@ -872,7 +872,7 @@ const RAW_POSTS: Post[] = [
     relatedPostSlugs: [
       'customer-support-staffing-agencies-latin-america',
       'eor-vs-staffing-agency-latin-america',
-      'nearshore-call-center-outsourcing-2026',
+      'nearshore-call-center-outsourcing',
     ],
     sections: [
       {
@@ -1315,7 +1315,7 @@ const RAW_POSTS: Post[] = [
     primaryKeyword: 'top BPO companies in the world',
     relatedPostSlugs: [
       'in-house-vs-outsourced-call-center',
-      'call-center-staffing-cost-2026',
+      'call-center-staffing-cost',
       'case-study-bpo-launch-0-to-120-agents-90-days',
     ],
     sections: [
@@ -1605,7 +1605,7 @@ const RAW_POSTS: Post[] = [
         level: 2,
         paragraphs: [
           'The top BPO companies in the world are not interchangeable. Some are global enterprise giants. Some are niche outbound specialists. Some are staffing-first partners that help you keep operations in-house while filling seats faster. The right choice depends on whether you want to outsource a process, outsource a channel, add sales capacity, or recruit trained agents into a team you already manage.',
-          'For operators still deciding between outsourcing and staffing, start with /blog/in-house-vs-outsourced-call-center. If the immediate concern is budget, /blog/call-center-staffing-cost-2026 breaks down what call center staffing costs by region and role. If you are launching a new BPO operation, /blog/case-study-bpo-launch-0-to-120-agents-90-days shows what a real ramp calendar looks like.',
+          'For operators still deciding between outsourcing and staffing, start with /blog/in-house-vs-outsourced-call-center. If the immediate concern is budget, /blog/call-center-staffing-cost breaks down what call center staffing costs by region and role. If you are launching a new BPO operation, /blog/case-study-bpo-launch-0-to-120-agents-90-days shows what a real ramp calendar looks like.',
         ],
       },
     ],
@@ -1647,7 +1647,7 @@ const RAW_POSTS: Post[] = [
     readingMinutes: 9,
     heroImage: '/images/hero-agent-1.jpg',
     primaryKeyword: 'how to scale a call center',
-    relatedPostSlugs: ['how-to-reduce-call-center-turnover', 'call-center-staffing-cost-2026'],
+    relatedPostSlugs: ['how-to-reduce-call-center-turnover', 'call-center-staffing-cost'],
     sections: [
       {
         paragraphs: [
@@ -1780,7 +1780,7 @@ const RAW_POSTS: Post[] = [
     primaryKeyword: 'how to reduce call center turnover',
     relatedPostSlugs: [
       'how-to-scale-a-call-center-without-sacrificing-quality',
-      'call-center-staffing-cost-2026',
+      'call-center-staffing-cost',
     ],
     sections: [
       {
@@ -1901,7 +1901,7 @@ const RAW_POSTS: Post[] = [
     ],
   },
   {
-    slug: 'call-center-staffing-cost-2026',
+    slug: 'call-center-staffing-cost',
     title: 'Call Center Staffing Cost in 2026: What to Expect by Region and Role',
     excerpt:
       "Two cost questions get conflated constantly: what does an agent's wage look like, and what does the staffing engagement itself cost? Here is the honest read on both for 2026.",
@@ -2061,7 +2061,7 @@ const RAW_POSTS: Post[] = [
     heroImage: '/images/internet-call-center-headset-pair.jpg',
     primaryKeyword: 'call center outsourcing vs in-house',
     relatedPostSlugs: [
-      'call-center-staffing-cost-2026',
+      'call-center-staffing-cost',
       'how-to-scale-a-call-center-without-sacrificing-quality',
     ],
     sections: [
@@ -2088,7 +2088,7 @@ const RAW_POSTS: Post[] = [
           'A few useful ratios:',
         ],
         bullets: [
-          'For US onshore vs tier-1 nearshore (Mexico, Colombia) on the same role spec, the wage ratio typically lands around 0.5 to 0.65 — nearshore wages run roughly half to two-thirds of onshore for comparable quality. We unpack this in our /blog/call-center-staffing-cost-2026 piece.',
+          'For US onshore vs tier-1 nearshore (Mexico, Colombia) on the same role spec, the wage ratio typically lands around 0.5 to 0.65 — nearshore wages run roughly half to two-thirds of onshore for comparable quality. We unpack this in our /blog/call-center-staffing-cost piece.',
           'For US onshore vs offshore Philippines, the wage ratio runs lower — often 0.25 to 0.4 of onshore — but the integration overhead is higher because the time-zone offset reshapes how supervision and QA actually work.',
           'For in-house vs outsourced at the same geography, the BPO premium over a stable in-house floor runs perhaps 1.1x to 1.4x on agent-hour pricing, but the BPO usually carries the recruiting, attrition replacement, and ramp risk inside that price. The right comparison is total cost to deliver the SLA, not raw agent-hour rate.',
           'The hidden cost on the in-house side is recruiting and ramp inside attrition cycles. A floor running 60 percent annual attrition is paying to rehire and retrain 60 percent of headcount every year — and the cost of running that recruiting funnel in-house often crosses what a specialist partner would charge for the same volume.',
@@ -2309,7 +2309,7 @@ const RAW_POSTS: Post[] = [
     ],
   },
   {
-    slug: 'call-center-staffing-best-practices-2026',
+    slug: 'call-center-staffing-best-practices',
     title: 'Call Center Staffing Best Practices for 2026',
     excerpt:
       'Most call center staffing problems are not about effort. They are about a handful of operational disciplines that most teams know about and very few actually run. Here is the 2026 list.',
@@ -2419,7 +2419,7 @@ const RAW_POSTS: Post[] = [
         paragraphs: [
           'For any partner-led engagement, the attrition guarantee is the operating contract that matters most. The replacement fee is largely irrelevant if early-attrition leavers are not replaced; the cost-per-ramped-and-retained-agent is what actually pencils.',
           'A reasonable attrition guarantee for frontline US onshore is 30 to 60 days at no replacement charge; for nearshore and offshore, 60 to 90 days is reasonable given longer tenure curves. The replacement should be against the same role spec, with the same screening rubric, and inside an agreed turnaround window.',
-          'Operators evaluating partners should be specific: ask for the guarantee in writing, the replacement turnaround in writing, and the historical replacement rate the partner actually runs. A partner that cannot answer the historical question is not measuring the right thing. /blog/call-center-staffing-cost-2026 walks through how this plays into total engagement economics.',
+          'Operators evaluating partners should be specific: ask for the guarantee in writing, the replacement turnaround in writing, and the historical replacement rate the partner actually runs. A partner that cannot answer the historical question is not measuring the right thing. /blog/call-center-staffing-cost walks through how this plays into total engagement economics.',
         ],
       },
       {
@@ -2627,7 +2627,7 @@ const RAW_POSTS: Post[] = [
     primaryKeyword: 'call center no-show rate',
     relatedPostSlugs: [
       'how-to-reduce-call-center-turnover',
-      'call-center-staffing-best-practices-2026',
+      'call-center-staffing-best-practices',
     ],
     sections: [
       {
@@ -2773,7 +2773,7 @@ const RAW_POSTS: Post[] = [
     heroImage: '/images/cc-diverse-team.jpg',
     primaryKeyword: 'bilingual call center staffing case study',
     relatedPostSlugs: [
-      'call-center-staffing-best-practices-2026',
+      'call-center-staffing-best-practices',
       'how-to-hire-call-center-agents-fast',
     ],
     sections: [
@@ -2899,7 +2899,7 @@ const RAW_POSTS: Post[] = [
     heroImage: '/images/hd-office-team.jpg',
     primaryKeyword: 'BPO launch staffing case study',
     relatedPostSlugs: [
-      'call-center-staffing-best-practices-2026',
+      'call-center-staffing-best-practices',
       'in-house-vs-outsourced-call-center',
     ],
     sections: [

@@ -141,6 +141,9 @@ export type Insight = {
   metaTitle: string;
   metaDescription: string;
   primaryKeyword: string;
+  publishedAt: string;
+  updatedAt?: string;
+  author: string;
   heroImage?: string;
   sections: InsightSection[];
   diagnostics: string[]; // "if you're seeing X, this applies to you" — checkbox-style list, 4-6 items

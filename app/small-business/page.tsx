@@ -22,6 +22,7 @@ import { StaffingPlanCTA } from '@/components/sections/StaffingPlanCTA';
 import { CTABand } from '@/components/sections/CTABand';
 import { HeroQuoteForm } from '@/components/forms/HeroQuoteForm';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/seo/ServiceSchema';
 import { FAQSchema } from '@/components/seo/FAQSchema';
 import { site } from '@/lib/site';
 import { alternatesFor } from '@/lib/seo';
@@ -39,8 +40,6 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/images/cc-discussion.jpg',
-        width: 1200,
-        height: 630,
         alt: 'Call center staffing for small businesses and startups',
       },
     ],
@@ -171,6 +170,13 @@ export default function SmallBusinessPage() {
   return (
     <>
       <BreadcrumbSchema items={crumbs} />
+      <ServiceSchema
+        name="Call Center Staffing for Small Business"
+        description="Call center staffing for small business and startups, with 5–50 seat cohorts and a 90-day attrition guarantee."
+        serviceType="Small-business call center staffing"
+        areaServed={['US', 'CA', 'MX', 'PH', 'CO']}
+        url={`${site.url}/small-business`}
+      />
       <FAQSchema items={FAQS} />
 
       {/* HERO — 7/5 split, dark navy */}

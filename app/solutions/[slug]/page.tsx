@@ -24,7 +24,7 @@ import { ServiceSchema } from '@/components/seo/ServiceSchema';
 import { FAQSchema } from '@/components/seo/FAQSchema';
 import { SOLUTIONS, getSolution } from '@/lib/content/solutions';
 import { site } from '@/lib/site';
-import { alternatesFor } from '@/lib/seo';
+import { alternatesFor, socialImages } from '@/lib/seo';
 
 type Params = { slug: string };
 
@@ -35,6 +35,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: Params }): Metadata {
   const sol = getSolution(params.slug);
   if (!sol) return {};
+  const images = socialImages(sol.name, sol.heroImage);
   return {
     title: sol.metaTitle,
     description: sol.metaDescription,
@@ -43,14 +44,14 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
       title: sol.metaTitle,
       description: sol.metaDescription,
       url: `${site.url}/solutions/${sol.slug}`,
-      ...(sol.heroImage
-        ? { images: [{ url: sol.heroImage, width: 1200, height: 630, alt: sol.name }] }
-        : {}),
+      type: 'website',
+      images: images.openGraph,
     },
     twitter: {
       card: 'summary_large_image',
       title: sol.metaTitle,
       description: sol.metaDescription,
+      images: images.twitter,
     },
   };
 }

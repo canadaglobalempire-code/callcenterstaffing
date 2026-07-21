@@ -48,6 +48,22 @@ const nextConfig = {
         destination: '/case-studies',
         permanent: true,
       },
+      // Evergreen URLs: the year was stripped from these slugs so the URLs do
+      // not need rewriting (and losing their equity) every January. The old
+      // dated paths are indexed, so they redirect permanently.
+      { source: '/blog/best-call-center-outsourcing-companies-2026', destination: '/blog/best-call-center-outsourcing-companies', permanent: true },
+      { source: '/blog/best-customer-service-outsourcing-companies-2026', destination: '/blog/best-customer-service-outsourcing-companies', permanent: true },
+      { source: '/blog/bpo-companies-directory-2026', destination: '/blog/bpo-companies-directory', permanent: true },
+      { source: '/blog/bpo-vs-call-center-outsourcing-2026', destination: '/blog/bpo-vs-call-center-outsourcing', permanent: true },
+      { source: '/blog/call-center-outsourcing-for-small-business-2026', destination: '/blog/call-center-outsourcing-for-small-business', permanent: true },
+      { source: '/blog/call-center-staffing-best-practices-2026', destination: '/blog/call-center-staffing-best-practices', permanent: true },
+      { source: '/blog/call-center-staffing-cost-2026', destination: '/blog/call-center-staffing-cost', permanent: true },
+      { source: '/blog/ecommerce-customer-service-outsourcing-2026', destination: '/blog/ecommerce-customer-service-outsourcing', permanent: true },
+      { source: '/blog/healthcare-call-center-outsourcing-2026', destination: '/blog/healthcare-call-center-outsourcing', permanent: true },
+      { source: '/blog/inbound-call-center-outsourcing-2026', destination: '/blog/inbound-call-center-outsourcing', permanent: true },
+      { source: '/blog/nearshore-call-center-outsourcing-2026', destination: '/blog/nearshore-call-center-outsourcing', permanent: true },
+      { source: '/blog/offshore-call-center-outsourcing-2026', destination: '/blog/offshore-call-center-outsourcing', permanent: true },
+      { source: '/blog/outbound-call-center-outsourcing-2026', destination: '/blog/outbound-call-center-outsourcing', permanent: true },
     ];
   },
 };

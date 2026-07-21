@@ -85,7 +85,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${site.url}/insights`, lastModified: siteLastModified, changeFrequency: 'weekly' as const, priority: 0.75 },
     ...INSIGHTS.map((i) => ({
       url: `${site.url}/insights/${i.slug}`,
-      lastModified: siteLastModified,
+      lastModified: new Date(i.updatedAt ?? i.publishedAt),
       changeFrequency: 'monthly' as const,
       priority: 0.75,
     })),

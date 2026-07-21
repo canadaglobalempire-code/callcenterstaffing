@@ -21,7 +21,7 @@ import { SERVICES, getService } from '@/lib/content/services';
 import { getRole } from '@/lib/content/roles';
 import { getLocation } from '@/lib/content/locations';
 import { site } from '@/lib/site';
-import { alternatesFor } from '@/lib/seo';
+import { alternatesFor, socialImages } from '@/lib/seo';
 
 type Params = { slug: string };
 
@@ -44,6 +44,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: Params }): Metadata {
   const svc = getService(params.slug);
   if (!svc) return {};
+  const images = socialImages(svc.name, svc.heroImage);
   return {
     title: svc.metaTitle,
     description: svc.metaDescription,
@@ -52,14 +53,14 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
       title: svc.metaTitle,
       description: svc.metaDescription,
       url: `${site.url}/services/${svc.slug}`,
-      ...(svc.heroImage
-        ? { images: [{ url: svc.heroImage, width: 1200, height: 630, alt: svc.name }] }
-        : {}),
+      type: 'website',
+      images: images.openGraph,
     },
     twitter: {
       card: 'summary_large_image',
       title: svc.metaTitle,
       description: svc.metaDescription,
+      images: images.twitter,
     },
   };
 }

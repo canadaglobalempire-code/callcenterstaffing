@@ -30,7 +30,7 @@ import { FAQSchema } from '@/components/seo/FAQSchema';
 import { INDUSTRIES, getIndustry } from '@/lib/content/industries';
 import { ROLES } from '@/lib/content/roles';
 import { site } from '@/lib/site';
-import { alternatesFor } from '@/lib/seo';
+import { alternatesFor, socialImages } from '@/lib/seo';
 
 type Params = { slug: string };
 
@@ -75,6 +75,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: Params }): Metadata {
   const ind = getIndustry(params.slug);
   if (!ind) return {};
+  const images = socialImages(ind.name, INDUSTRY_HERO_IMAGES[ind.slug] ?? ind.heroImage);
   return {
     title: ind.metaTitle,
     description: ind.metaDescription,
@@ -83,14 +84,14 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
       title: ind.metaTitle,
       description: ind.metaDescription,
       url: `${site.url}/industries/${ind.slug}`,
-      ...(ind.heroImage
-        ? { images: [{ url: ind.heroImage, width: 1200, height: 630, alt: ind.name }] }
-        : {}),
+      type: 'website',
+      images: images.openGraph,
     },
     twitter: {
       card: 'summary_large_image',
       title: ind.metaTitle,
       description: ind.metaDescription,
+      images: images.twitter,
     },
   };
 }

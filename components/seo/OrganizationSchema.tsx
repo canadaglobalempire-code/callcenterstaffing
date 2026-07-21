@@ -13,8 +13,8 @@ export function OrganizationSchema() {
     logo: {
       '@type': 'ImageObject',
       url: `${site.url}/logo/logo.png`,
-      width: 512,
-      height: 512,
+      width: 2508,
+      height: 627,
     },
     image: `${site.url}/logo/logo.png`,
     description: site.description,

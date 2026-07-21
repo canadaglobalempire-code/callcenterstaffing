@@ -14,6 +14,9 @@ export const INSIGHTS: Insight[] = [
     metaDescription:
       'Your call center is understaffed and the floor is paying for it. The fix is not more job postings — it is forecast-aligned planning, a warm bench, and cohort waves. Here is the playbook.',
     primaryKeyword: 'call center understaffed',
+    publishedAt: '2026-06-02',
+    updatedAt: '2026-07-21',
+    author: 'Call Center Staffing',
     heroImage: '/images/cc-agent-night.jpg',
     diagnostics: [
       'SLA was missed in three of the last four weeks, and the misses are clustered in your peak intervals.',
@@ -162,6 +165,9 @@ export const INSIGHTS: Insight[] = [
     metaDescription:
       'Job postings get applicants but few pass the phone screen and fewer stay through nesting. The pool is not the problem — the screen is. Here is how specialist recruiters fix it.',
     primaryKeyword: "can't find call center agents",
+    publishedAt: '2026-06-02',
+    updatedAt: '2026-07-21',
+    author: 'Call Center Staffing',
     heroImage: '/images/cc-agent-smile.jpg',
     diagnostics: [
       'Phone-screen pass rate is below 20 percent — most candidates do not survive the first conversation.',
@@ -289,6 +295,9 @@ export const INSIGHTS: Insight[] = [
     metaDescription:
       'SLAs are missed. Coaching is not moving the number. WFM has the right model. The problem is recruiting, not operations. Here is how specialist recruiters change the math.',
     primaryKeyword: 'SLA slipping call center',
+    publishedAt: '2026-06-02',
+    updatedAt: '2026-07-21',
+    author: 'Call Center Staffing',
     heroImage: '/images/cc-team-meeting.jpg',
     diagnostics: [
       'Service level is missed in your peak intervals, even when total daily SL hits target.',

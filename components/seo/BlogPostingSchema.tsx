@@ -38,11 +38,13 @@ export function BlogPostingSchema({
     dateModified: dateModified ?? datePublished,
     author: {
       '@type': 'Organization',
+      '@id': `${site.url}#organization`,
       name: author ?? site.legalName,
       url: site.url,
     },
     publisher: {
       '@type': 'Organization',
+      '@id': `${site.url}#organization`,
       name: site.legalName,
       url: site.url,
       logo: {

@@ -31,7 +31,7 @@ import { StaffingPlanForm } from '@/components/forms/StaffingPlanForm';
 import { POSTS, getPost } from '@/lib/content/posts';
 import type { PostSection } from '@/lib/content/types';
 import { site } from '@/lib/site';
-import { alternatesFor } from '@/lib/seo';
+import { alternatesFor, socialImages } from '@/lib/seo';
 
 type Params = { slug: string };
 
@@ -57,6 +57,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: Params }): Metadata {
   const post = getPost(params.slug);
   if (!post) return {};
+  const images = socialImages(post.title, post.heroImage ?? FALLBACK_IMAGE);
   return {
     title: post.metaTitle,
     description: post.metaDescription,
@@ -69,14 +70,13 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt ?? post.publishedAt,
       authors: [post.author],
-      ...(post.heroImage
-        ? { images: [{ url: post.heroImage, width: 1200, height: 630, alt: post.title }] }
-        : {}),
+      images: images.openGraph,
     },
     twitter: {
       card: 'summary_large_image',
       title: post.metaTitle,
       description: post.metaDescription,
+      images: images.twitter,
     },
   };
 }
@@ -1212,7 +1212,7 @@ export default function BlogPostPage({ params }: { params: Params }) {
               </div>
             </div>
 
-            <main>
+            <div>
               <div className="mb-8 xl:hidden">
                 <ArticleNav sections={sectionViews} />
               </div>
@@ -1230,7 +1230,7 @@ export default function BlogPostPage({ params }: { params: Params }) {
                   </div>
                 ))}
               </article>
-            </main>
+            </div>
 
           </div>
         </Container>

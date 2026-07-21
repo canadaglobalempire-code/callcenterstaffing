@@ -315,7 +315,7 @@ export const OPERATIONS_POSTS: Post[] = [
     relatedPostSlugs: [
       'how-to-vet-nearshore-customer-service-partners',
       'eor-vs-staffing-agency-latin-america',
-      'healthcare-call-center-outsourcing-2026',
+      'healthcare-call-center-outsourcing',
     ],
     sections: [
       {

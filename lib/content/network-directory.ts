@@ -246,7 +246,7 @@ function entrySection(entry: Entry, index: number): PostSection {
 }
 
 export const NETWORK_DIRECTORY_POST: Post = {
-  slug: 'bpo-companies-directory-2026',
+  slug: 'bpo-companies-directory',
   title: 'BPO Companies in 2026: Provider Directory',
   excerpt:
     'A directory of the BPO and contact-centre providers we work with, what each is genuinely best at, and where the global majors fit. Group affiliations disclosed throughout.',

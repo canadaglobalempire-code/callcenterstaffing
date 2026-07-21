@@ -31,7 +31,7 @@ import { REGIONS, getRegion } from '@/lib/content/regions';
 import { LOCATIONS, getLocation } from '@/lib/content/locations';
 import { getRole } from '@/lib/content/roles';
 import { site } from '@/lib/site';
-import { alternatesFor } from '@/lib/seo';
+import { alternatesFor, socialImages } from '@/lib/seo';
 
 type Region = NonNullable<ReturnType<typeof getRegion>>;
 type Location = NonNullable<ReturnType<typeof getLocation>>;
@@ -46,6 +46,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const region = getRegion(params.slug);
   if (region) {
+    const images = socialImages(`Call center staffing in ${region.name}`, region.image);
     return {
       title: region.metaTitle,
       description: region.metaDescription,
@@ -54,20 +55,24 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
         title: region.metaTitle,
         description: region.metaDescription,
         url: `${site.url}/locations/${region.slug}`,
-        images: [
-          { url: region.image, width: 1200, height: 630, alt: `Call center staffing in ${region.name}` },
-        ],
+        type: 'website',
+        images: images.openGraph,
       },
       twitter: {
         card: 'summary_large_image',
         title: region.metaTitle,
         description: region.metaDescription,
+        images: images.twitter,
       },
     };
   }
 
   const location = getLocation(params.slug);
   if (location) {
+    const images = socialImages(
+      `Call center staffing in ${location.name}`,
+      location.heroImage,
+    );
     return {
       title: location.metaTitle,
       description: location.metaDescription,
@@ -76,19 +81,14 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
         title: location.metaTitle,
         description: location.metaDescription,
         url: `${site.url}/locations/${location.slug}`,
-        images: [
-          {
-            url: location.heroImage,
-            width: 1200,
-            height: 630,
-            alt: `Call center staffing in ${location.name}`,
-          },
-        ],
+        type: 'website',
+        images: images.openGraph,
       },
       twitter: {
         card: 'summary_large_image',
         title: location.metaTitle,
         description: location.metaDescription,
+        images: images.twitter,
       },
     };
   }

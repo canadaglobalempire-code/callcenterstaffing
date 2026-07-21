@@ -41,9 +41,7 @@ export const metadata: Metadata = {
     url: `${site.url}/outsourcing`,
     images: [
       {
-        url: '/images/hd-office-team.jpg',
-        width: 1200,
-        height: 630,
+        url: '/images/internet-office-planning-meeting.jpg',
         alt: 'Call center outsourcing and staffing',
       },
     ],
@@ -53,6 +51,7 @@ export const metadata: Metadata = {
     title: 'Call Center Outsourcing & Staffing — In-House, BPO, Hybrid',
     description:
       'Call center outsourcing companies, in-house staffing, hybrid models. We recruit agents for both.',
+    images: ['/images/internet-office-planning-meeting.jpg'],
   },
 };
 

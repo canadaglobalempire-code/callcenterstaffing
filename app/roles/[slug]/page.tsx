@@ -31,7 +31,7 @@ import { ServiceSchema } from '@/components/seo/ServiceSchema';
 import { FAQSchema } from '@/components/seo/FAQSchema';
 import { ROLES, getRole } from '@/lib/content/roles';
 import { site } from '@/lib/site';
-import { alternatesFor } from '@/lib/seo';
+import { alternatesFor, socialImages } from '@/lib/seo';
 
 type Params = { slug: string };
 
@@ -42,6 +42,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: Params }): Metadata {
   const role = getRole(params.slug);
   if (!role) return {};
+  const images = socialImages(role.name, ROLE_HERO_IMAGES[role.slug]);
   return {
     title: role.metaTitle,
     description: role.metaDescription,
@@ -50,11 +51,14 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
       title: role.metaTitle,
       description: role.metaDescription,
       url: `${site.url}/roles/${role.slug}`,
+      type: 'website',
+      images: images.openGraph,
     },
     twitter: {
       card: 'summary_large_image',
       title: role.metaTitle,
       description: role.metaDescription,
+      images: images.twitter,
     },
   };
 }

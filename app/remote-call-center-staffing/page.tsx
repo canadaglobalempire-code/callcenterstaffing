@@ -12,6 +12,7 @@ import { CTABand } from '@/components/sections/CTABand';
 import { FAQSection } from '@/components/sections/FAQSection';
 import { HeroQuoteForm } from '@/components/forms/HeroQuoteForm';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/seo/ServiceSchema';
 import { FAQSchema } from '@/components/seo/FAQSchema';
 import { site } from '@/lib/site';
 import { alternatesFor } from '@/lib/seo';
@@ -29,8 +30,6 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/images/cc-woman-typing.jpg',
-        width: 1200,
-        height: 630,
         alt: 'Remote work-from-home call center agents',
       },
     ],
@@ -40,6 +39,7 @@ export const metadata: Metadata = {
     title: 'Remote Customer Service Staffing Agency',
     description:
       'Hire trained remote customer service and work-from-home call center agents on our payroll.',
+    images: ['/images/cc-woman-typing.jpg'],
   },
 };
 
@@ -98,6 +98,13 @@ export default function RemoteStaffingPage() {
   return (
     <>
       <BreadcrumbSchema items={crumbs} />
+      <ServiceSchema
+        name="Remote Customer Service Staffing"
+        description="Hire remote customer service agents for voice, chat and email. Work-from-home agents stay on our payroll; deploy in 3–14 days and pay only for hours worked."
+        serviceType="Remote call center staffing"
+        areaServed={['US', 'CA', 'MX', 'PH', 'CO']}
+        url={`${site.url}/remote-call-center-staffing`}
+      />
       <FAQSchema items={FAQS} />
 
       {/* HERO */}
