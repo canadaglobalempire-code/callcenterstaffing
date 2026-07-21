@@ -78,12 +78,12 @@ const RESOURCES: { label: string; href: string; desc: string; icon: LucideIcon }
 ];
 
 export const metadata: Metadata = {
-  title: 'Resources — Call Center Staffing Guides, Tools & Insights',
+  title: 'Call Center Staffing Guides, Tools & Insights',
   description:
     'Playbooks, case studies, a free staffing calculator, FAQs and operator insights for scaling, launching and staffing call centers.',
   alternates: alternatesFor('/resources'),
   openGraph: {
-    title: 'Resources — Call Center Staffing Guides, Tools & Insights',
+    title: 'Call Center Staffing Guides, Tools & Insights',
     description:
       'Playbooks, case studies, a free staffing calculator, FAQs and operator insights for contact-center leaders.',
     url: `${site.url}/resources`,
@@ -98,7 +98,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Resources — Call Center Staffing Guides, Tools & Insights',
+    title: 'Call Center Staffing Guides, Tools & Insights',
     description: 'Playbooks, case studies, tools and insights for contact-center leaders.',
   },
 };

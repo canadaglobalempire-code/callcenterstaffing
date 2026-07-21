@@ -12,12 +12,12 @@ import { site } from '@/lib/site';
 import { alternatesFor } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Call Center Roles We Staff — Agents, Supervisors, QA, WFM & Ops',
+  title: 'Call Center Roles We Staff: Agents, QA, WFM & Ops',
   description:
     'Every seat on the floor: inbound and outbound agents, bilingual agents, team leads, QA analysts, workforce management, trainers and operations managers. Trained, screened, deployed.',
   alternates: alternatesFor('/roles'),
   openGraph: {
-    title: 'Call Center Roles We Staff — Agents, Supervisors, QA, WFM & Ops',
+    title: 'Call Center Roles We Staff: Agents, QA, WFM & Ops',
     description:
       'From frontline agents to ops directors, we recruit the entire stack — each role with a dedicated screening playbook.',
     url: `${site.url}/roles`,

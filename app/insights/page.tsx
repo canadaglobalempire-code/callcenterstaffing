@@ -15,13 +15,13 @@ import { site } from '@/lib/site';
 import { alternatesFor } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Operator Insights — Pain-Point Playbooks for Contact-Center Leaders',
+  title: 'Operator Insights for Contact-Center Leaders',
   description:
     'Pain-point playbooks for contact-center leaders. Understaffed floors, broken recruiting funnels, slipping SLAs — diagnostics and operational fixes from senior account managers.',
   alternates: alternatesFor('/insights'),
   openGraph: {
     title:
-      'Operator Insights — Pain-Point Playbooks for Contact-Center Leaders',
+      'Operator Insights for Contact-Center Leaders',
     description:
       'Diagnostics and operational fixes for the recurring pain points contact-center leaders see — written by senior account managers who run live engagements every day.',
     url: `${site.url}/insights`,

@@ -32,12 +32,12 @@ import { alternatesFor } from '@/lib/seo';
 import type { ComponentType, SVGProps } from 'react';
 
 export const metadata: Metadata = {
-  title: 'Call Center Staffing by Industry — Healthcare, Finance, Insurance & More',
+  title: 'Call Center Staffing by Industry: Healthcare & More',
   description:
     'Vertical-specific call center staffing across 13 industries. HIPAA, NMLS, PCI, CPNI, FERPA-aware screening with industry-trained recruiters since 2003.',
   alternates: alternatesFor('/industries'),
   openGraph: {
-    title: 'Call Center Staffing by Industry — Healthcare, Finance, Insurance & More',
+    title: 'Call Center Staffing by Industry: Healthcare & More',
     description:
       'Vertical-specific call center staffing across 13 industries. HIPAA, NMLS, PCI, CPNI, FERPA-aware screening with industry-trained recruiters since 2003.',
     url: `${site.url}/industries`,

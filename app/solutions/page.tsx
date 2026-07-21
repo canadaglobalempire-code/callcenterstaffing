@@ -12,12 +12,12 @@ import { site } from '@/lib/site';
 import { alternatesFor } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Call Center Staffing Solutions — Recruiting for Every Operating Situation',
+  title: 'Call Center Staffing Solutions for Every Situation',
   description:
     'Solutions for every contact-center situation: scaling an existing center, launching a new one, seasonal surge, direct-to-employer, compliance & licensed roles, and small business.',
   alternates: alternatesFor('/solutions'),
   openGraph: {
-    title: 'Call Center Staffing Solutions — Recruiting for Every Operating Situation',
+    title: 'Call Center Staffing Solutions for Every Situation',
     description:
       'Recruiting built for the rhythm of contact-center operations — scaling, launching, seasonal surge, direct-to-employer, compliance and small business.',
     url: `${site.url}/solutions`,

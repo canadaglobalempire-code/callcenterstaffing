@@ -32,7 +32,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
     default: `${site.name} — Specialized Call Center Recruiting`,
-    template: `%s | ${site.name}`,
+    // No brand suffix: every page title already leads with the "call center
+    // staffing" phrasing, so appending the brand cost ~23 chars and pushed 69
+    // of 98 titles past the ~60-char SERP truncation point. Pages own their
+    // full title now.
+    template: '%s',
   },
   description: site.description,
   applicationName: site.name,

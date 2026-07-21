@@ -10,7 +10,7 @@ export const INSIGHTS: Insight[] = [
     excerpt:
       'When the floor is short, every instinct says "post more jobs." That instinct is wrong. Understaffed call centers almost always have a calendar problem, not a sourcing problem — and posting more jobs makes it worse.',
     metaTitle:
-      'Call Center Understaffed? The Calendar Fix Operators Use to Catch Up',
+      'Call Center Understaffed? The Calendar Fix That Works',
     metaDescription:
       'Your call center is understaffed and the floor is paying for it. The fix is not more job postings — it is forecast-aligned planning, a warm bench, and cohort waves. Here is the playbook.',
     primaryKeyword: 'call center understaffed',
@@ -158,7 +158,7 @@ export const INSIGHTS: Insight[] = [
     excerpt:
       'When operators say "we cannot find call center agents," they almost always mean "the people we are finding do not stay." That is not a sourcing problem. That is a screen problem. Here is how to fix it.',
     metaTitle:
-      "Can't Find Call Center Agents? Fix the Screen, Not the Sourcing",
+      "Can't Find Call Center Agents? Fix Your Screen",
     metaDescription:
       'Job postings get applicants but few pass the phone screen and fewer stay through nesting. The pool is not the problem — the screen is. Here is how specialist recruiters fix it.',
     primaryKeyword: "can't find call center agents",
@@ -285,7 +285,7 @@ export const INSIGHTS: Insight[] = [
     excerpt:
       "When SLA slips and coaching cannot move the number, the problem is almost never on the floor. It is upstream — in the cohorts that did not survive nesting, the WFM ramp curve that does not match reality, and the screen that is letting through wrong-fit hires.",
     metaTitle:
-      'SLA Slipping in Your Call Center? The Fix Is Upstream of Operations',
+      'SLA Slipping in Your Call Center? Look Upstream',
     metaDescription:
       'SLAs are missed. Coaching is not moving the number. WFM has the right model. The problem is recruiting, not operations. Here is how specialist recruiters change the math.',
     primaryKeyword: 'SLA slipping call center',

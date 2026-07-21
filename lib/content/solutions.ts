@@ -43,7 +43,7 @@ Every cohort gets a 72-hour pre-start health check, a 30-day attrition flag, and
       { metric: '3.2%', description: 'No-show rate at start date' },
     ],
     caseStudy: {
-      company: 'NorthStar Health',
+      company: 'Healthcare payer · name withheld',
       challenge:
         'A 600-seat onshore floor running 28% annualized attrition; in-house TA was placing ~12 agents/week against a need of 22.',
       result:
@@ -125,7 +125,7 @@ From there we run cohort-aligned classes with named owners on our side and yours
       { metric: '40%', description: 'Of placements come from our pre-built market bench' },
     ],
     caseStudy: {
-      company: 'Beacon Outsourcing',
+      company: 'Fintech BPO · name withheld',
       challenge:
         'A new 250-seat BPO build in Guadalajara with a 90-day launch calendar and three concurrent client ramps.',
       result:

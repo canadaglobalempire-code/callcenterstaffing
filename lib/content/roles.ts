@@ -65,7 +65,7 @@ We place Spanish speaking call center agents and broader bilingual talent who ca
     slug: 'inbound-customer-service',
     name: 'Inbound Customer Service Agents',
     shortName: 'Inbound CS',
-    metaTitle: 'Inbound Customer Service Agent Staffing — High-Volume CX Recruiting',
+    metaTitle: 'Inbound Customer Service Agent Staffing',
     metaDescription:
       'Recruit inbound customer-service agents at scale across regions. Screened for empathy, AHT discipline and first-call resolution.',
     hero: {
@@ -120,7 +120,7 @@ Most recruiters screen for typing speed and a clean voice. We screen for the har
     slug: 'outbound-sales-agents',
     name: 'Outbound Sales Agents',
     shortName: 'Outbound Sales',
-    metaTitle: 'Outbound Sales Agent Staffing — B2C and B2B Voice Sales Recruiting',
+    metaTitle: 'Outbound Sales Agent Staffing — B2C & B2B Voice',
     metaDescription:
       'Recruit outbound sales agents who close. Screened for tonality, objection handling, conversion discipline and CRM speed across B2C and B2B verticals.',
     hero: {
@@ -173,7 +173,8 @@ Most recruiters screen for "energy" and a clean voice. We screen for the harder 
       'Recruit team leads and supervisors who run a floor. Screened for shrinkage discipline, coaching skill, and adherence — not just tenure.',
     hero: {
       eyebrow: 'Roles we staff',
-      headline: 'Floor leadership that actually runs the floor.',
+      headline:
+        'Call center team leads and supervisors who actually run the floor.',
       subhead:
         'Team leads and supervisors who can coach, manage shrinkage and hit adherence — promoted or hired, screened the same way.',
     },
@@ -217,7 +218,8 @@ Most staffing firms place team leads as a tenure exercise: longest-tenured agent
       'Recruit QA analysts with calibrated scoring discipline. Screened for inter-rater agreement, root-cause analysis, and coaching follow-through.',
     hero: {
       eyebrow: 'Roles we staff',
-      headline: 'QA analysts who score consistently — not creatively.',
+      headline:
+        'Call center QA analysts who score consistently — not creatively.',
       subhead:
         'Calibrated scoring, clean root-cause analysis, and coaching follow-through. We screen QA the way operators actually use it.',
     },
@@ -258,7 +260,8 @@ We screen for the calibration math first: agents pulled into our QA assessment s
       'Recruit WFM analysts, real-time analysts and WFM managers. Screened for forecast accuracy, intraday discipline, and Erlang fluency.',
     hero: {
       eyebrow: 'Roles we staff',
-      headline: 'WFM that protects the SLA — not just the spreadsheet.',
+      headline:
+        'Call center workforce management analysts who protect the SLA — not just the spreadsheet.',
       subhead:
         'Forecast accuracy, intraday discipline and Erlang fluency. WFM hires whose models actually match the floor.',
     },
@@ -301,7 +304,8 @@ We screen for forecast-vs-actual track records, intraday decisioning under press
       'Recruit trainers and QA coaches who shorten ramp and lift week-4 quality scores. Screened for delivery, retention design, and coaching transfer.',
     hero: {
       eyebrow: 'Roles we staff',
-      headline: 'Trainers who shorten ramp — not just fill seats in a classroom.',
+      headline:
+        'Call center trainers who shorten ramp — not just fill seats in a classroom.',
       subhead:
         'Onboarding delivery, retention design and coaching transfer. Trainers whose week-4 quality scores actually beat the average.',
     },
@@ -342,7 +346,8 @@ We screen for delivery skill (recorded teach-back), retention design (how they b
       'Recruit ops managers who run a floor on the numbers. Screened for P&L literacy, leadership cadence, and span-of-control discipline.',
     hero: {
       eyebrow: 'Roles we staff',
-      headline: 'Ops leaders who run the floor on the numbers.',
+      headline:
+        'Call center operations managers who run the floor on the numbers.',
       subhead:
         'P&L literacy, leadership cadence, and span-of-control discipline. Operations managers who can stand up a floor or turn one around.',
     },
