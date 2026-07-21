@@ -761,7 +761,7 @@ export const BPO_CONTENT: Record<string, BpoContent> = {
         "paragraphs": [
           "Most people who search for the top BPO companies in Mexico are not chasing the cheapest seat in the world. They are chasing proximity. Mexico sits in the same business day as the United States and Canada, which means a Pacific-time program in Tijuana or a Central-time program in Monterrey can answer your customers in real time instead of waiting twelve hours for a handoff in Manila.",
           "The second draw is language. Mexico has the deepest English-Spanish bilingual labor pool in Latin America, and border cities like Tijuana, Mexicali, and Ciudad Juarez are full of agents who grew up consuming US media and crossing the border, so their accent and cultural references land cleanly with American callers. That is a different value proposition than the Philippines (scale and English neutrality) or Colombia (cost and growing bilingual depth).",
-          "Mexico's contact center industry is large and mature, employing several hundred thousand people and ranking among the biggest in Latin America behind Brazil. Bilingual agent wages typically run roughly $4 to $6 per hour at the agent level, with all-in nearshore program rates commonly quoted in the low-to-mid teens to low-twenties per hour. The trade-off versus offshore is real: you pay more than India or the Philippines, but you buy time-zone overlap, drive-able or short-flight site visits, and a Spanish-first option for your US Hispanic customers."
+          "Mexico's contact center industry is large and mature, employing several hundred thousand people and ranking among the biggest in Latin America behind Brazil. Bilingual agent wages sit well below US equivalents, and all-in nearshore program rates vary by scope. The trade-off versus offshore is real: you pay more than India or the Philippines, but you buy time-zone overlap, drive-able or short-flight site visits, and a Spanish-first option for your US Hispanic customers."
         ]
       },
       {
@@ -978,7 +978,7 @@ export const BPO_CONTENT: Record<string, BpoContent> = {
       },
       {
         "q": "How much does a bilingual call center agent in Mexico cost?",
-        "a": "Bilingual agent wages in Mexico commonly run roughly $4 to $6 per hour at the agent level, while all-in managed nearshore program rates are typically quoted from the low-to-mid teens up to the low-twenties per hour, depending on city, channel mix, complexity, and seat count. Always confirm what the rate includes beyond agent hours, such as QA, technology, and supervision."
+        "a": "Bilingual agent wages in Mexico sit well below US equivalents, and all-in managed nearshore program rates vary by city, channel mix, complexity, and seat count. Always confirm what the rate includes beyond agent hours, such as QA, technology, and supervision."
       },
       {
         "q": "How did Mexico's 2021 labor reform affect call center outsourcing?",
@@ -996,7 +996,7 @@ export const BPO_CONTENT: Record<string, BpoContent> = {
       {
         "paragraphs": [
           "Colombia has quietly become one of the default nearshore answers for US and Canadian companies that want live, English-Spanish support without the time-zone pain of Asia. Bogota sits in Colombia Time (UTC-5), the same clock as US Eastern for most of the year and with no daylight-saving shuffle, so a Colombian agent picking up a call at 9am in Medellin is on the same hour as a customer in Miami or New York. That overlap is the single biggest reason this search term has exploded.",
-          "The market backs up the hype. Colombia's BPO sector pulled in roughly US$2.95 billion in 2024, making it one of the largest outsourcing markets in Latin America behind Brazil and Mexico, with delivery concentrated in Bogota, Medellin, Barranquilla, and Cali. Bilingual representative pay lands in the rough range of an equivalent US$8-11 per hour in base wage terms, and once Colombian employer burdens (social contributions, the legally mandated 13th-month prima, and severance) are layered on, fully loaded annual cost per bilingual agent tends to sit around US$10,000-13,000 depending on city and English level.",
+          "The market backs up the hype. Colombia's BPO sector pulled in roughly US$2.95 billion in 2024, making it one of the largest outsourcing markets in Latin America behind Brazil and Mexico, with delivery concentrated in Bogota, Medellin, Barranquilla, and Cali. Bilingual representative pay sits well below US equivalents, and once Colombian employer burdens (social contributions, the legally mandated 13th-month prima, and severance) are layered on, the fully loaded annual cost per bilingual agent varies by city and English level.",
           "If you are searching for the top BPO companies in Colombia, you almost certainly do not want a generic ranking. You want to know which providers genuinely operate floors here, which cities they sit in, how deep their bilingual bench really goes, and which one fits your seat count and channels. The list below is built from providers with verifiable Colombian operations, plus an honest note on when a full BPO is overkill."
         ]
       },
@@ -1079,7 +1079,7 @@ export const BPO_CONTENT: Record<string, BpoContent> = {
       },
       {
         "q": "What does a bilingual call center agent in Colombia cost?",
-        "a": "Base bilingual representative pay works out to roughly an equivalent US$8-11 per hour. Once Colombian employer burdens are added, including social contributions, the mandatory 13th-month prima, and severance, fully loaded cost per bilingual agent typically lands around US$10,000-13,000 per year, varying by city and English level. That is well below comparable onshore US hiring."
+        "a": "Base bilingual representative pay sits well below US equivalents. Colombian employer burdens — social contributions, the mandatory 13th-month prima, and severance — add to the fully loaded cost per bilingual agent, which varies by city and English level. That is well below comparable onshore US hiring."
       },
       {
         "q": "How does Colombia's time zone work for US customer support?",

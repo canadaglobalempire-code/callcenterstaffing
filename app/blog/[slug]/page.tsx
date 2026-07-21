@@ -316,7 +316,7 @@ function parseCompanyBulletsAndParagraphs(
   }
 
   if (!typicalPricing) {
-    typicalPricing = 'Hourly ($14-$22/hr blended onshore/nearshore) or dedicated FTE pricing';
+    typicalPricing = 'Hourly blended onshore/nearshore or dedicated FTE pricing';
   }
 
   if (!strengths) {

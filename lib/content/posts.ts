@@ -1263,8 +1263,8 @@ export const POSTS: Post[] = [
         heading: 'The real cost of attrition',
         level: 2,
         paragraphs: [
-          'Before getting tactical, it is worth being honest about what attrition actually costs. The fully loaded cost of replacing a frontline call center agent — sourcing, screening, training, nesting ramp, lost productivity during the empty seat — typically lands in the four-to-eight-thousand dollar range per head for US onshore, somewhat less for nearshore, and the floor impact compounds when more than one seat is empty at once.',
-          'A 100-seat operation with 60 percent annual attrition is hiring and ramping 60 agents every year just to stand still. At the low end of the cost range that is roughly $240,000 a year of pure replacement spend, plus the harder-to-measure cost of training capacity wasted, mentors burnt out, and CSAT bumps every time a tenured agent walks. Operators who get attrition from 60 to 35 percent typically free up six figures of operating budget without any other change.',
+          'Before getting tactical, it is worth being honest about what attrition actually costs. The fully loaded cost of replacing a frontline call center agent — sourcing, screening, training, nesting ramp, lost productivity during the empty seat — typically lands in the mid-four-figure range per head for US onshore, somewhat less for nearshore, and the floor impact compounds when more than one seat is empty at once.',
+          'A 100-seat operation with 60 percent annual attrition is hiring and ramping 60 agents every year just to stand still. At the low end of the cost range that is a substantial six-figure replacement spend every year, plus the harder-to-measure cost of training capacity wasted, mentors burnt out, and CSAT bumps every time a tenured agent walks. Operators who get attrition from 60 to 35 percent typically free up six figures of operating budget without any other change.',
           'Which is the actual frame for this post: reducing call center turnover is one of the highest-leverage things any operator can do, and most of the leverage sits upstream of the floor.',
         ],
       },
@@ -1452,10 +1452,10 @@ export const POSTS: Post[] = [
         ],
         bullets: [
           'Fully loaded recruiter compensation (salary, benefits, taxes — typically 1.3x base for a US-based recruiter).',
-          'Job-board, sourcing-tool and ATS spend — surprisingly often $1,500 to $4,000 per month per recruiter at any meaningful volume.',
+          'Job-board, sourcing-tool and ATS spend — surprisingly often a four-figure monthly sum per recruiter at any meaningful volume.',
           'Hiring-manager time — every screening loop, every offer negotiation, every replacement-after-leaver. This is the largest hidden cost in most operations.',
           'The opportunity cost of slow time-to-fill — empty seats are not free. Every day an agent seat is empty is lost contribution margin.',
-          'The cost of bad hires that an under-resourced funnel produces — the four-to-eight-thousand dollar replacement cost discussed in our piece on /blog/how-to-reduce-call-center-turnover.',
+          'The cost of bad hires that an under-resourced funnel produces — the mid-four-figure replacement cost discussed in our piece on /blog/how-to-reduce-call-center-turnover.',
         ],
       },
       {
@@ -1468,11 +1468,11 @@ export const POSTS: Post[] = [
         level: 2,
         paragraphs: [
           'The single number that should anchor every staffing-cost evaluation is cost per ramped-and-retained agent (CPRR). It is the fully loaded cost of getting an agent screened, hired, trained, nested and still on the floor at day 90 — divided by the count of agents who actually made it. It is the only number that fairly compares an in-house funnel with high attrition to a specialist funnel with higher replacement fees but better stay rates.',
-          'A simple worked example. Suppose an operator hires 100 agents for a campaign:',
+          'A simple worked example, expressed in relative units so it scales to any market or currency. Suppose an operator hires 100 agents for a campaign, and we call the in-house cost of recruiting and screening a single offer one unit:',
         ],
         bullets: [
-          'In-house funnel: $2,500 fully loaded recruiting and screening cost per offer, plus $5,000 training cost per agent, with 35 percent 90-day attrition. End-to-end: $7,500 spent per offer, 65 retained, true CPRR ≈ $11,500.',
-          'Specialist partner funnel: $5,000 replacement fee per offer, plus $5,000 training cost, with 12 percent 90-day attrition (helped by tighter screening). End-to-end: $10,000 spent per offer, 88 retained, true CPRR ≈ $11,400.',
+          'In-house funnel: one unit of fully loaded recruiting and screening cost per offer, plus two units of training cost per agent, with 35 percent 90-day attrition. End-to-end: three units spent per offer, 65 retained, true CPRR ≈ 4.6 units.',
+          'Specialist partner funnel: two units of replacement fee per offer, plus two units of training cost, with 12 percent 90-day attrition (helped by tighter screening). End-to-end: four units spent per offer, 88 retained, true CPRR ≈ 4.5 units.',
         ],
       },
       {

@@ -147,7 +147,7 @@ export const REGIONS: Region[] = [
       },
       {
         "title": "Cost efficiency without an offshore time gap",
-        "body": "Fully-loaded bilingual agent costs in Colombia run roughly $1,200-$1,800 a month versus $3,500-$4,500 in the US, so you capture offshore-style savings while keeping work on your customers' clock."
+        "body": "Fully-loaded bilingual agent costs in Colombia run well below their US equivalents, so you capture offshore-style savings while keeping work on your customers' clock."
       }
     ],
     "talentSnapshot": {
@@ -188,7 +188,7 @@ export const REGIONS: Region[] = [
     "faqs": [
       {
         "q": "How much does a South America call center agent cost?",
-        "a": "Bilingual agent rates in the region typically land around $5-$12 per hour USD fully managed, with Colombia and Peru at the value end and Argentina and Uruguay slightly higher for premium roles. You pay only for hours worked, with no entity or severance exposure on your side."
+        "a": "Rates vary by country, role seniority and language pair — Colombia and Peru sit at the value end, with Argentina and Uruguay higher for premium roles. We scope and quote per program rather than publish a rate card. You pay only for hours worked, with no entity or severance exposure on your side."
       },
       {
         "q": "How fast can you ramp a team in South America?",
@@ -573,7 +573,7 @@ export const REGIONS: Region[] = [
       },
       {
         "title": "Lower cost without cutting corners",
-        "body": "Fully loaded agent costs in the Philippines and India typically run a fraction of US or UK rates, with average Filipino BPO pay around $440-$620 a month. You get experienced CX labor at offshore economics while we carry the employment overhead."
+        "body": "Fully loaded agent costs in the Philippines and India typically run a fraction of US or UK rates. You get experienced CX labor at offshore economics while we carry the employment overhead."
       },
       {
         "title": "Mature, Western-aligned CX culture",
@@ -614,7 +614,7 @@ export const REGIONS: Region[] = [
     "faqs": [
       {
         "q": "How much cheaper is staffing agents in Asia versus onshore?",
-        "a": "Significantly. Average Filipino BPO pay runs roughly $440-$620 a month and Indian rates are comparable or lower, so fully loaded agent costs are a fraction of US, UK or Australian wages — you pay only for hours worked, with employment overhead on us."
+        "a": "Significantly. Fully loaded agent costs in the Philippines and India are a fraction of US, UK or Australian wages. We scope and quote per program rather than publish a rate card — you pay only for hours worked, with employment overhead on us."
       },
       {
         "q": "Can Asian teams really cover my overnight and weekend hours?",

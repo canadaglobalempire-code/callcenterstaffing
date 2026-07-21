@@ -85,7 +85,7 @@ const HONEST_LIMITS = [
       "Under 5 seats, our placement-fee economics don't work for either side. Try a freelancer or contract platform — and come back when you're ready to staff a cohort.",
   },
   {
-    title: 'Sub-$15/hr fully-loaded budgets',
+    title: 'Lowest-bidder budgets',
     body:
       'Outside our wage-benchmark range — even nearshore and offshore. We are not the cheapest option on the internet, and we will not pretend to be.',
   },

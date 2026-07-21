@@ -144,7 +144,7 @@ export const INSIGHTS: Insight[] = [
       },
       {
         q: 'Do we need an external staffing partner, or can we fix this in-house?',
-        a: 'You can usually fix it in-house if your funnel diagnostic is healthy at the top — applications coming in, screen pass rate above 25 percent, ghost rate below 20 percent. If any of those are broken, or if your in-house team is spending more than half its week on top-of-funnel sourcing instead of screening, an external partner with a pre-screened database is faster. The math we use: if your in-house cost-per-ramped-and-retained-agent is above $4,000, a specialist is almost certainly cheaper.',
+        a: 'You can usually fix it in-house if your funnel diagnostic is healthy at the top — applications coming in, screen pass rate above 25 percent, ghost rate below 20 percent. If any of those are broken, or if your in-house team is spending more than half its week on top-of-funnel sourcing instead of screening, an external partner with a pre-screened database is faster. The math we use: if your in-house cost-per-ramped-and-retained-agent is above the mid-four-figure mark, a specialist is almost certainly cheaper.',
       },
     ],
     relatedSlugs: ['cant-find-call-center-agents', 'sla-slipping'],
