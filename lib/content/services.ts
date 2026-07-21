@@ -622,9 +622,9 @@ Done badly, outsourced call center staffing creates a tug-of-war between brand a
     slug: 'nearshore-call-center-staffing',
     name: 'Nearshore Call Center Staffing',
     primaryKeyword: 'nearshore call center staffing',
-    metaTitle: 'Nearshore Call Center Staffing',
+    metaTitle: 'Nearshore Contact Center Staffing & Outsourcing',
     metaDescription:
-      'Hire nearshore call center agents in Mexico, Colombia & Costa Rica. CT/ET overlap, bilingual depth, pay per hour, 90-day guarantee. Get a shortlist in 72 hrs.',
+      'Nearshore contact center staffing and outsourcing across Mexico, Colombia and Costa Rica. Bilingual agents on US business hours, employed by us, working inside your operation.',
     heroImage: '/images/cc-agent-monitor.jpg',
     hero: {
       eyebrow: 'Services',
@@ -752,9 +752,9 @@ Reporting is to your QA scorecard with bilingual fluency scored at the level you
     slug: 'offshore-call-center-staffing',
     name: 'Offshore Call Center Staffing',
     primaryKeyword: 'offshore call center staffing',
-    metaTitle: 'Offshore Call Center Staffing',
+    metaTitle: 'Offshore Call Center & Contact Center Staffing',
     metaDescription:
-      'Hire trained offshore call center agents in the Philippines and India. 24/7 coverage, lower cost per seat, 90-day guarantee. First shortlist in 72 hrs.',
+      'Offshore call center and contact center staffing in the Philippines, India and South Africa. 24/7 and overnight coverage at offshore economics, with employment overhead on us.',
     heroImage: '/images/internet-call-center-agents-row.jpg',
     hero: {
       eyebrow: 'Services',

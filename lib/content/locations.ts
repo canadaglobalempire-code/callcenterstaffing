@@ -7,9 +7,9 @@ export const LOCATIONS: Location[] = [
     region: 'nearshore',
     flagEmoji: '🇲🇽',
     heroImage: '/images/cc-diverse-team.jpg',
-    metaTitle: 'Call Center Staffing in Mexico — Bilingual Nearshore Agents',
+    metaTitle: 'Mexico BPO & Nearshore Call Center Staffing',
     metaDescription:
-      'Place bilingual call-center agents in Guadalajara, Mexico City and Monterrey. CT/ET overlap and onshore-grade quality.',
+      'Mexico BPO and nearshore call center staffing in Guadalajara, Mexico City, Monterrey and Tijuana. Bilingual agents on US time zones, on our payroll — you pay only for hours worked.',
     hero: {
       eyebrow: 'Mexico · Nearshore',
       headline:
@@ -82,9 +82,9 @@ export const LOCATIONS: Location[] = [
     region: 'offshore',
     flagEmoji: '🇵🇭',
     heroImage: '/images/hd-office-team.jpg',
-    metaTitle: 'Call Center Staffing in the Philippines — Offshore CX Talent',
+    metaTitle: 'Call Center Outsourcing Philippines | Telemarketing',
     metaDescription:
-      'Recruit native-English call-center agents in Manila, Cebu and Davao. 24/7 coverage and mature CX infrastructure.',
+      'Call center outsourcing in the Philippines: telemarketing services, inbound and outbound agents in Manila, Cebu and Davao. Native-English talent, 24/7 coverage, agents on our payroll.',
     hero: {
       eyebrow: 'Philippines · Offshore',
       headline:

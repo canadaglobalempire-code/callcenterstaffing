@@ -5,9 +5,9 @@ export const INDUSTRIES: Industry[] = [
     slug: 'healthcare',
     name: 'Healthcare',
     primaryKeyword: 'healthcare call center staffing',
-    metaTitle: 'Healthcare Call Center Staffing',
+    metaTitle: 'Healthcare BPO & Call Center Services Staffing',
     metaDescription:
-      'HIPAA-cleared healthcare call center staffing for member services, prior auth & patient access. License-verified agents on our payroll, live in ~72 hours. Get a quote.',
+      'Healthcare BPO and call center services staffing: HIPAA-cleared agents for member services, prior auth, scheduling and healthcare back office support.',
     hero: {
       eyebrow: 'Industries · Healthcare',
       headline: 'HIPAA-Cleared Agents for Healthcare Member Services, Prior Auth & Patient Access',
@@ -108,9 +108,9 @@ export const INDUSTRIES: Industry[] = [
     slug: 'financial-services',
     name: 'Financial Services',
     primaryKeyword: 'financial services call center staffing',
-    metaTitle: 'Financial Services Call Center Staffing | NMLS, FCRA',
+    metaTitle: 'Financial Services Call Center Outsourcing',
     metaDescription:
-      'Financial services call center staffing for banks, lenders & fintechs. NMLS-verified, FCRA & Reg E-trained agents on our payroll. Get a shortlist in 72 hours.',
+      'Financial services call center outsourcing and staffing with NMLS-licensed, FCRA and PCI-aware agents screened for regulated queues before they reach your shortlist.',
     hero: {
       eyebrow: 'Industries · Financial Services',
       headline: 'Staff Your Financial Services Contact Center With Verified, Compliant Agents',
@@ -500,9 +500,9 @@ export const INDUSTRIES: Industry[] = [
     slug: 'travel-hospitality',
     name: 'Travel & Hospitality',
     primaryKeyword: 'travel call center staffing',
-    metaTitle: 'Travel Call Center Staffing',
+    metaTitle: 'Hospitality Call Center Outsourcing & Staffing',
     metaDescription:
-      'Travel & hospitality call center staffing: GDS-trained, 24/7 multilingual agents for OTAs, airlines, hotels and cruise. Live in ~72 hours. Book a staffing call.',
+      'Hospitality and travel call center outsourcing and staffing: 24/7 multilingual agents for reservations, disruption handling and loyalty support across time zones.',
     hero: {
       eyebrow: 'Industries · Travel & Hospitality',
       headline: 'Travel & Hospitality Call Center Staffing for 24/7 Multilingual Support',
@@ -791,9 +791,9 @@ export const INDUSTRIES: Industry[] = [
     slug: 'logistics',
     name: 'Logistics & Transportation',
     primaryKeyword: 'logistics call center staffing',
-    metaTitle: 'Logistics Call Center Staffing',
+    metaTitle: 'Logistics BPO Services & Call Center Staffing',
     metaDescription:
-      'Logistics call center staffing for track-and-trace, ETA, claims and dispatch. TMS-fluent agents on our payroll, peak-season bench, deployed in ~72 hours. Get a quote.',
+      'Logistics BPO services and call center staffing for track-and-trace, ETA management, claims and supply chain support queues.',
     hero: {
       eyebrow: 'Industries · Logistics & Transportation',
       headline: 'Logistics call center staffing for track-and-trace, ETA and claims',
@@ -1094,9 +1094,9 @@ export const INDUSTRIES: Industry[] = [
     slug: 'tech-support',
     name: 'Tech Support & Helpdesk',
     primaryKeyword: 'tech support staffing',
-    metaTitle: 'Tech Support Staffing — Tier 1/2/3',
+    metaTitle: 'Offshore IT Support & Tech Support Staffing',
     metaDescription:
-      'Hire vetted tier 1/2/3 tech support agents on our payroll. Zendesk, ServiceNow, Salesforce-fluent. 24/7 follow-the-sun coverage. Deploy in ~72 hours.',
+      'Offshore IT support and tech support staffing for Tier 1, 2 and 3 helpdesk teams. Product-literate agents screened on real troubleshooting, not scripted triage.',
     heroImage: '/images/cc-agent-laptop.jpg',
     hero: {
       eyebrow: 'Industries · Tech Support & Helpdesk',
