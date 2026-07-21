@@ -171,7 +171,7 @@ We embed with your client-services and ops leads, run weekly calibration with ea
       },
       {
         title: 'Per-client cohort owners',
-        body: 'Each client account on the floor gets a named recruiter who calibrates weekly with that client\'s QA team.',
+        body: "Each client account on the floor gets a named recruiter who calibrates weekly with that client's QA team.",
       },
       {
         title: 'Cross-client calibration',
@@ -197,12 +197,15 @@ We embed with your client-services and ops leads, run weekly calibration with ea
       },
       {
         title: 'Single program lead across multiple sites',
-        body: 'The largest active BPO engagement runs four sites in three countries with one embedded program lead. We coordinate, you don\'t.',
+        body: "The largest active BPO engagement runs four sites in three countries with one embedded program lead. We coordinate, you don't.",
       },
     ],
     outcomes: [
       { metric: '+24%', description: 'Floor SLA achievement vs. prior staffing model' },
-      { metric: 'Less than 14 days', description: 'Average cohort start from new-client SOW signature' },
+      {
+        metric: 'Less than 14 days',
+        description: 'Average cohort start from new-client SOW signature',
+      },
       { metric: '4 sites', description: 'Largest active engagement — across three countries' },
     ],
     relatedRoles: [
@@ -225,12 +228,12 @@ We embed with your client-services and ops leads, run weekly calibration with ea
         a: 'Yes — every active BPO engagement runs 3–8 client cohorts in parallel. We assign a dedicated cohort owner per client and run weekly cross-client calibration so QA bars stay aligned and strong agents get routed to the right account.',
       },
       {
-        q: 'Do you replace our BPO\'s in-house TA team?',
+        q: "Do you replace our BPO's in-house TA team?",
         a: 'No. We typically own frontline volume across all clients while your TA team owns leadership and exempt roles. Some BPO clients hand us 100% of frontline across all sites; others share the load with internal recruiters per site.',
       },
       {
         q: 'How fast can you spin up a new client account on the floor?',
-        a: 'For most new client SOWs, first cohort starts inside 14 days. The bench is already current, the cohort owner is named on day one, and calibration with the new client\'s QA team happens in week one.',
+        a: "For most new client SOWs, first cohort starts inside 14 days. The bench is already current, the cohort owner is named on day one, and calibration with the new client's QA team happens in week one.",
       },
       {
         q: 'What is the difference between BPO staffing and BPO outsourcing?',
@@ -238,11 +241,11 @@ We embed with your client-services and ops leads, run weekly calibration with ea
       },
       {
         q: 'Do the agents work for me or for you?',
-        a: 'The agents work to your goals and scorecard but stay on our payroll. That means we carry the HR, training, benefits and compliance burden — you carry none. If an agent isn\'t a fit, we swap them at no charge, and our 90-day attrition guarantee re-places anyone who leaves inside 90 days for free.',
+        a: "The agents work to your goals and scorecard but stay on our payroll. That means we carry the HR, training, benefits and compliance burden — you carry none. If an agent isn't a fit, we swap them at no charge, and our 90-day attrition guarantee re-places anyone who leaves inside 90 days for free.",
       },
       {
         q: 'How fast can you staff a BPO-style team?',
-        a: 'Most engagements get a first qualified shortlist within about 72 hours, with agents deployed shortly after. We\'ve maintained a current bench of trained inbound, outbound and bilingual agents across nearshore and offshore markets since 2003, so we ramp from a live pool rather than a cold search.',
+        a: "Most engagements get a first qualified shortlist within about 72 hours, with agents deployed shortly after. We've maintained a current bench of trained inbound, outbound and bilingual agents across nearshore and offshore markets since 2003, so we ramp from a live pool rather than a cold search.",
       },
     ],
   },
@@ -252,7 +255,7 @@ We embed with your client-services and ops leads, run weekly calibration with ea
     primaryKeyword: 'contact center staffing',
     metaTitle: 'Contact Center Staffing Agency',
     metaDescription:
-      'Omnichannel contact center staffing across voice, chat, email and social. Channel-fluent agents on our payroll, 90-day guarantee, shortlist in 72 hrs. Book a call.',
+      'Contact center staff augmentation and temporary call center staffing across voice, chat, email and social. Agents on our payroll; shortlist in 72 hrs.',
     heroImage: '/images/cc-headset-desk.jpg',
     hero: {
       eyebrow: 'Services',
@@ -260,7 +263,7 @@ We embed with your client-services and ops leads, run weekly calibration with ea
       subhead:
         'Voice, chat, email, social and async messaging — staffed against a blended scorecard. Channel-fluent agents, not voice-only generalists redeployed to chat.',
     },
-    intro: `Need contact center staffing for an omnichannel team where one agent handles voice, chat, email and social in a single shift? We supply channel-fluent agents screened per channel against your QA scorecard, not voice-only generalists redeployed to chat in week six. Agents stay on our payroll, you pay only for hours worked, and we have run contact center staffing since 2003 across 100,000+ trained agents. Get a first qualified shortlist in about 72 hours, with a 90-day attrition guarantee on every placement.`,
+    intro: `Need contact center staff augmentation, temporary call center staffing or a call center temp agency for an omnichannel team? We supply channel-fluent agents screened per channel against your QA scorecard, not voice-only generalists redeployed to chat in week six. Agents stay on our payroll, you pay only for hours worked, and we have run contact center staffing since 2003 across 100,000+ trained agents. Get a first qualified shortlist in about 72 hours, with a 90-day attrition guarantee on every placement.`,
     whatIsIt: `Contact center staffing covers omnichannel operations where voice is one channel among several. The screening profile is different from voice-only call center hiring: written-fluency at a scored level (most chat hires fail on grammar more than empathy), context-switching tolerance, async patience, and the discipline to follow brand-voice guidelines without sounding robotic.
 
 Done well, contact center staffing looks like a per-channel screen layered onto a single sourcing plan. We screen written fluency through a recorded chat role-play, voice through a recorded call role-play, and async through a brief turnaround test. Each candidate is ranked per channel, and the cohort is built so the channel mix matches your forecast — not so the easiest-to-fill channel dominates.
@@ -277,7 +280,7 @@ The trap most operators fall into is staffing voice-only and "redeploying to cha
       },
       {
         title: 'Operators consolidating channels',
-        body: 'Brands moving from siloed voice / chat / email teams onto a single blended floor and discovering the legacy hires don\'t flex across channels.',
+        body: "Brands moving from siloed voice / chat / email teams onto a single blended floor and discovering the legacy hires don't flex across channels.",
       },
       {
         title: 'BPOs running omnichannel client accounts',
@@ -354,7 +357,7 @@ The trap most operators fall into is staffing voice-only and "redeploying to cha
       },
       {
         q: 'What does a contact center staffing agency do?',
-        a: 'A contact center staffing agency sources, screens and supplies trained agents for omnichannel support teams — voice, chat, email, social and async. The agents stay on the agency\'s payroll, so you avoid the HR, recruiting and training burden and pay only for the hours worked. We screen each candidate per channel against your QA scorecard so a voice hire is not quietly redeployed to chat.',
+        a: "A contact center staffing agency sources, screens and supplies trained agents for omnichannel support teams — voice, chat, email, social and async. The agents stay on the agency's payroll, so you avoid the HR, recruiting and training burden and pay only for the hours worked. We screen each candidate per channel against your QA scorecard so a voice hire is not quietly redeployed to chat.",
       },
       {
         q: 'How much does contact center staffing cost?',
@@ -364,6 +367,10 @@ The trap most operators fall into is staffing voice-only and "redeploying to cha
         q: 'How fast can you staff an omnichannel contact center team?',
         a: 'Most briefs get a first qualified shortlist within about 72 hours, and a screened cohort can be deployed in days because our bench of 100,000+ trained agents is kept current. We screen voice, chat and async fluency before placement so agents are channel-ready on day one of nesting rather than ramped onto a channel they were never tested on.',
       },
+      {
+        q: 'Do you provide temporary call center staffing and staff augmentation?',
+        a: 'Yes. Temporary call center staffing and contact center staff augmentation both keep agents on our payroll while they work inside your operation, on your systems and scorecard. Engagements are month-to-month, you pay only for hours worked, and you can scale the cohort up or down without adding permanent headcount.',
+      },
     ],
   },
   {
@@ -372,7 +379,7 @@ The trap most operators fall into is staffing voice-only and "redeploying to cha
     primaryKeyword: 'customer service staffing agency',
     metaTitle: 'Customer Service Staffing Agency | CX Agents Fast',
     metaDescription:
-      'Customer service staffing agency placing CX agents across voice, chat, email & social. 90-day guarantee, first shortlist in 72 hrs. Book a discovery call.',
+      'Temporary customer service staffing for voice, live chat, email, social and non-voice support. Agents on our payroll; first shortlist in 72 hrs.',
     heroImage: '/images/cc-team-desk.jpg',
     hero: {
       eyebrow: 'Services',
@@ -380,7 +387,7 @@ The trap most operators fall into is staffing voice-only and "redeploying to cha
       subhead:
         'CX-focused agent placement across every channel — voice, chat, email, social. Senior account managers, calibrated quality, and a 90-day attrition guarantee on every assignment.',
     },
-    intro: `Looking for a customer service staffing agency that screens for the skills that actually move CSAT, retention and resolution? We place CX talent — frontline agents, escalation specialists, supervisors and QA — across voice, chat, email, social and async, with every placement graded to your scorecard, not a generic clerical bar. Agents stay on our payroll, you pay only for hours worked, and every assignment carries a 90-day attrition guarantee. Operators have kept us on retainer since 2003, with a first qualified shortlist typically inside 72 hours.`,
+    intro: `Looking for temporary customer service staffing across voice, live chat, email, social and non-voice support? We place frontline agents, escalation specialists, supervisors and QA with every placement graded to your scorecard, not a generic clerical bar. Agents stay on our payroll, you pay only for hours worked, and every assignment carries a 90-day attrition guarantee. Operators have kept us on retainer since 2003, with a first qualified shortlist typically inside 72 hours.`,
     whatIsIt: `A customer service staffing agency is the layer between your CX leadership and a market full of generic resumes. The work is screening for the specific competencies that move CSAT and retention: empathy at scored level (not self-reported), de-escalation discipline, brand-voice fluency, channel flex, and the patience to read a confused customer's third paragraph before responding.
 
 Done well, a customer service staffing agency looks like an embedded extension of your CX team. We sit with your QA leads to map the scorecard, screen against it (not against a generic CX rubric), and route placements to the queues where their strengths land hardest. Senior account managers carry pipeline against your live forecast — not a static job rec — and every cohort gets a named owner on our side.
@@ -420,7 +427,7 @@ Done badly, a customer service staffing agency hands you resumes and walks away.
       },
       {
         title: 'CSAT-trend reporting',
-        body: 'We report against your CSAT trend through ramp. Drift surfaces in our 30-day flag, not in your QA team\'s quarter-end review.',
+        body: "We report against your CSAT trend through ramp. Drift surfaces in our 30-day flag, not in your QA team's quarter-end review.",
       },
     ],
     whyChooseUs: [
@@ -483,6 +490,10 @@ Done badly, a customer service staffing agency hands you resumes and walks away.
         q: 'Can you provide bilingual or multichannel customer service agents?',
         a: 'Yes. We place agents across voice, chat, email, social and async, and current placements span 30+ languages with bilingual depth in Spanish, Portuguese, French, Tagalog, Mandarin and more. Channel flex and language fluency are scored to level, not self-reported.',
       },
+      {
+        q: 'Can you provide live chat, email and non-voice customer service staffing?',
+        a: 'Yes. We staff chat-first, email-first and blended non-voice teams as well as voice queues. Candidates complete a written-tone and response-accuracy screen before submission, then calibrate against your channel-specific QA scorecard during ramp.',
+      },
     ],
   },
   {
@@ -508,11 +519,11 @@ Done badly, outsourced call center staffing creates a tug-of-war between brand a
     whoItsFor: [
       {
         title: 'Brands whose BPO is missing hiring SLAs',
-        body: 'Operators whose BPO partner has a hiring problem they can\'t fix internally — usually a thin local talent pool or an under-resourced BPO TA team. We supplement, not replace.',
+        body: "Operators whose BPO partner has a hiring problem they can't fix internally — usually a thin local talent pool or an under-resourced BPO TA team. We supplement, not replace.",
       },
       {
         title: 'Brands ramping new BPO programs',
-        body: 'Operators standing up a new client account or new SOW with a BPO partner who needs the first 50–250 seats live faster than the BPO\'s internal funnel can deliver.',
+        body: "Operators standing up a new client account or new SOW with a BPO partner who needs the first 50–250 seats live faster than the BPO's internal funnel can deliver.",
       },
       {
         title: 'Brands tightening BPO quality',
@@ -535,7 +546,7 @@ Done badly, outsourced call center staffing creates a tug-of-war between brand a
       },
       {
         title: 'Co-managed calibration',
-        body: 'Weekly calibration with your QA lead and the BPO\'s onboarding team. Both sides grade to the same bar — drift surfaces early.',
+        body: "Weekly calibration with your QA lead and the BPO's onboarding team. Both sides grade to the same bar — drift surfaces early.",
       },
       {
         title: 'Dual-direction reporting',
@@ -562,7 +573,10 @@ Done badly, outsourced call center staffing creates a tug-of-war between brand a
     ],
     outcomes: [
       { metric: '+22 pts', description: '90-day retention vs. BPO-internal recruiting alone' },
-      { metric: 'Less than 72 hrs', description: 'Average time to first qualified shortlist for BPO onboarding' },
+      {
+        metric: 'Less than 72 hrs',
+        description: 'Average time to first qualified shortlist for BPO onboarding',
+      },
       { metric: '94%', description: 'Average cohort completion through ramp' },
     ],
     relatedRoles: [
@@ -580,7 +594,7 @@ Done badly, outsourced call center staffing creates a tug-of-war between brand a
       },
       {
         q: 'How do we engage you alongside an existing BPO partner?',
-        a: 'We design the engagement as tri-party from week one — your brand, the BPO and CCS all named. The BPO\'s TA lead is a stakeholder, not a downstream consumer. Weekly calibration includes both sides. Most BPOs welcome the supplemental recruiting capacity.',
+        a: "We design the engagement as tri-party from week one — your brand, the BPO and CCS all named. The BPO's TA lead is a stakeholder, not a downstream consumer. Weekly calibration includes both sides. Most BPOs welcome the supplemental recruiting capacity.",
       },
       {
         q: 'Who pays the replacement fee — the brand or the BPO?',
@@ -592,7 +606,7 @@ Done badly, outsourced call center staffing creates a tug-of-war between brand a
       },
       {
         q: 'What does outsourced call center staffing cost?',
-        a: 'You pay only for the hours your agents actually work — there is no recruiting fee, no payroll tax, and no training overhead, because the agents stay on our payroll. Most engagements are month-to-month with no long-term contract, and you can swap any agent free if the fit isn\'t right. We share a transparent per-hour rate by role and delivery market (onshore, nearshore, or offshore) in your free staffing plan.',
+        a: "You pay only for the hours your agents actually work — there is no recruiting fee, no payroll tax, and no training overhead, because the agents stay on our payroll. Most engagements are month-to-month with no long-term contract, and you can swap any agent free if the fit isn't right. We share a transparent per-hour rate by role and delivery market (onshore, nearshore, or offshore) in your free staffing plan.",
       },
       {
         q: 'How is outsourcing call center staffing different from hiring in-house?',
@@ -627,7 +641,7 @@ Reporting is to your QA scorecard with bilingual fluency scored at the level you
     whoItsFor: [
       {
         title: 'US operators wanting time-zone fit',
-        body: 'Brands whose live volume peaks in CT/ET hours and who can\'t accept the graveyard-shift wear that offshore puts on agents. Nearshore lets the agent live a normal life and still handle peak.',
+        body: "Brands whose live volume peaks in CT/ET hours and who can't accept the graveyard-shift wear that offshore puts on agents. Nearshore lets the agent live a normal life and still handle peak.",
       },
       {
         title: 'Brands needing bilingual depth at scale',
@@ -680,9 +694,15 @@ Reporting is to your QA scorecard with bilingual fluency scored at the level you
       },
     ],
     outcomes: [
-      { metric: 'Less than 72 hrs', description: 'Average time to first qualified bilingual shortlist' },
+      {
+        metric: 'Less than 72 hrs',
+        description: 'Average time to first qualified bilingual shortlist',
+      },
       { metric: '94%', description: 'Cohort completion through ramp across Mexican cities' },
-      { metric: '18 mo+', description: 'Average tenure for nearshore placements at our largest engagement' },
+      {
+        metric: '18 mo+',
+        description: 'Average tenure for nearshore placements at our largest engagement',
+      },
     ],
     relatedRoles: [
       'bilingual-agents',
@@ -696,7 +716,7 @@ Reporting is to your QA scorecard with bilingual fluency scored at the level you
     faqs: [
       {
         q: 'Which nearshore call center markets do you cover?',
-        a: 'Largest active footprint is Mexico — Guadalajara, Mexico City, Monterrey, Tijuana, Querétaro. We also place in Colombia (Bogotá, Medellín) and Costa Rica (San José). El Salvador and the Dominican Republic in select engagements. Tell us your forecast and we\'ll tell you our pipeline depth per city.',
+        a: "Largest active footprint is Mexico — Guadalajara, Mexico City, Monterrey, Tijuana, Querétaro. We also place in Colombia (Bogotá, Medellín) and Costa Rica (San José). El Salvador and the Dominican Republic in select engagements. Tell us your forecast and we'll tell you our pipeline depth per city.",
       },
       {
         q: 'How is bilingual fluency screened?',
@@ -720,7 +740,7 @@ Reporting is to your QA scorecard with bilingual fluency scored at the level you
       },
       {
         q: 'How fast can nearshore agents start?',
-        a: 'Most nearshore briefs get a first qualified bilingual shortlist inside 72 hours, drawn from an active bench of 100,000+ trained agents across Mexico, Colombia, Costa Rica and El Salvador. Engagements are month-to-month, and if any agent isn\'t the right fit you can swap them free.',
+        a: "Most nearshore briefs get a first qualified bilingual shortlist inside 72 hours, drawn from an active bench of 100,000+ trained agents across Mexico, Colombia, Costa Rica and El Salvador. Engagements are month-to-month, and if any agent isn't the right fit you can swap them free.",
       },
       {
         q: 'Is nearshore better than offshore for a US contact center?',
@@ -740,7 +760,7 @@ Reporting is to your QA scorecard with bilingual fluency scored at the level you
       eyebrow: 'Services',
       headline: 'Offshore Call Center Staffing in the Philippines and India',
       subhead:
-        'Philippines and India — the world\'s deepest CX talent pools. Active since 2003, with senior account managers living in-market and a 90-day attrition guarantee on every assignment.',
+        "Philippines and India — the world's deepest CX talent pools. Active since 2003, with senior account managers living in-market and a 90-day attrition guarantee on every assignment.",
     },
     intro: `Offshore call center staffing puts trained, screened agents in the Philippines and India onto your queues without the cost of running a contact center yourself. You get 24/7 coverage that your time zone can't staff, a meaningfully lower cost per seat, and a senior CX talent pool 20+ years deep — while every agent stays on our payroll and you pay only for hours worked. We have placed offshore agents since 2003, with our largest active footprint across Manila, Cebu, Davao, Iloilo and Clark, and a 90-day attrition guarantee on every assignment.`,
     whatIsIt: `Offshore call center staffing is the discipline of sourcing, screening and placing agents and supervisors in markets like the Philippines and India where local CX maturity is deep enough that the screen runs against an experienced talent pool — not a green one.
@@ -751,7 +771,7 @@ The trap most operators fall into with offshore call center hiring is treating t
     whoItsFor: [
       {
         title: 'Operators needing 24/7 coverage',
-        body: 'Brands whose live volume runs around the clock and who can\'t staff graveyard shifts onshore at scale. Offshore call center markets give natural day-shift coverage of US overnight hours.',
+        body: "Brands whose live volume runs around the clock and who can't staff graveyard shifts onshore at scale. Offshore call center markets give natural day-shift coverage of US overnight hours.",
       },
       {
         title: 'Operators with cost-economics mandates',
@@ -759,7 +779,7 @@ The trap most operators fall into with offshore call center hiring is treating t
       },
       {
         title: 'Operators needing deep CX maturity at scale',
-        body: 'Brands whose queues require senior agents — escalations, retention, technical support — at volumes onshore markets can\'t supply. The Philippines and India have the deepest senior CX pools globally.',
+        body: "Brands whose queues require senior agents — escalations, retention, technical support — at volumes onshore markets can't supply. The Philippines and India have the deepest senior CX pools globally.",
       },
       {
         title: 'BPOs scaling offshore floors',
@@ -804,8 +824,14 @@ The trap most operators fall into with offshore call center hiring is treating t
       },
     ],
     outcomes: [
-      { metric: 'Less than 72 hrs', description: 'Average time to first qualified offshore shortlist' },
-      { metric: '24 mo+', description: 'Average prior CX experience per agent at largest engagement' },
+      {
+        metric: 'Less than 72 hrs',
+        description: 'Average time to first qualified offshore shortlist',
+      },
+      {
+        metric: '24 mo+',
+        description: 'Average prior CX experience per agent at largest engagement',
+      },
       { metric: '92%', description: 'Cohort completion through ramp across Philippine cities' },
     ],
     relatedRoles: [
@@ -820,7 +846,7 @@ The trap most operators fall into with offshore call center hiring is treating t
     faqs: [
       {
         q: 'Which offshore call center markets do you cover?',
-        a: 'Largest footprint is the Philippines — Manila (BGC, Ortigas, Makati), Cebu, Davao, Iloilo, Clark / Pampanga. India is second — Bangalore, Hyderabad, Pune, Gurgaon. Vietnam and Eastern Europe are supported in select engagements. Tell us your forecast and we\'ll share pipeline depth per city.',
+        a: "Largest footprint is the Philippines — Manila (BGC, Ortigas, Makati), Cebu, Davao, Iloilo, Clark / Pampanga. India is second — Bangalore, Hyderabad, Pune, Gurgaon. Vietnam and Eastern Europe are supported in select engagements. Tell us your forecast and we'll share pipeline depth per city.",
       },
       {
         q: 'Why hire offshore vs. nearshore?',
@@ -828,7 +854,7 @@ The trap most operators fall into with offshore call center hiring is treating t
       },
       {
         q: 'How is English fluency screened in the Philippines?',
-        a: 'Recorded voice and written role-plays scored at CEFR level by senior account managers. C1+ is standard for offshore call center queues serving US and UK brands. The Philippines\' average English fluency is unusually high — most agents who pass our screen score C1 or above with American-aligned accents.',
+        a: "Recorded voice and written role-plays scored at CEFR level by senior account managers. C1+ is standard for offshore call center queues serving US and UK brands. The Philippines' average English fluency is unusually high — most agents who pass our screen score C1 or above with American-aligned accents.",
       },
       {
         q: 'What is the cost saving vs. onshore?',
@@ -844,7 +870,7 @@ The trap most operators fall into with offshore call center hiring is treating t
       },
       {
         q: 'Do I have to hire or payroll offshore agents myself?',
-        a: 'No. Every offshore agent stays on our payroll. You pay only for hours worked, on a month-to-month basis, with no HR, training, benefits or local-entity burden on your side. If an agent isn\'t the right fit, you can swap them at no cost, and every placement carries a 90-day attrition guarantee.',
+        a: "No. Every offshore agent stays on our payroll. You pay only for hours worked, on a month-to-month basis, with no HR, training, benefits or local-entity burden on your side. If an agent isn't the right fit, you can swap them at no cost, and every placement carries a 90-day attrition guarantee.",
       },
       {
         q: 'Is offshore call center quality good enough for US and UK brands?',
@@ -928,8 +954,14 @@ Compliance-cleared roles get specialised pipelines. NMLS, state-insurance, HIPAA
       },
     ],
     outcomes: [
-      { metric: 'Less than 72 hrs', description: 'Average time to first qualified onshore shortlist' },
-      { metric: '100%', description: 'License verification at shortlist for compliance-cleared roles' },
+      {
+        metric: 'Less than 72 hrs',
+        description: 'Average time to first qualified onshore shortlist',
+      },
+      {
+        metric: '100%',
+        description: 'License verification at shortlist for compliance-cleared roles',
+      },
       { metric: '40+ states', description: 'Active remote-first placement coverage' },
     ],
     relatedRoles: [
@@ -1052,9 +1084,15 @@ Where most vendors trust the resume, we trust the recording. That is why operato
       },
     ],
     outcomes: [
-      { metric: 'Less than 72 hrs', description: 'Average time to first qualified bilingual shortlist' },
+      {
+        metric: 'Less than 72 hrs',
+        description: 'Average time to first qualified bilingual shortlist',
+      },
       { metric: '30+', description: 'Languages actively recruited and scored to level' },
-      { metric: '+18 pts', description: 'CSAT lift on bilingual queues vs. self-reported fluency hires' },
+      {
+        metric: '+18 pts',
+        description: 'CSAT lift on bilingual queues vs. self-reported fluency hires',
+      },
     ],
     relatedRoles: [
       'bilingual-agents',
@@ -1096,6 +1134,117 @@ Where most vendors trust the resume, we trust the recording. That is why operato
       {
         q: 'How fast can you deliver a bilingual agent shortlist?',
         a: 'A first qualified, tested and recorded bilingual shortlist lands in about 72 hours for established language pairs. Less common pairs need a 30-60 day in-market pre-build. Every candidate is scored on a structured rubric in both languages and shipped with the recording, so you hear fluency before you hire.',
+      },
+    ],
+  },
+  {
+    slug: 'after-hours-customer-support-staffing',
+    name: 'After-Hours Customer Support Staffing',
+    primaryKeyword: '24/7 customer support staffing',
+    metaTitle: '24/7 Customer Support Staffing',
+    metaDescription:
+      '24/7 and after-hours customer support staffing for nights, weekends and holidays. Follow-the-sun agents on our payroll with a 90-day guarantee.',
+    heroImage: '/images/cc-agent-night.jpg',
+    hero: {
+      eyebrow: 'Services · 24/7 coverage',
+      headline: 'Staff nights, weekends and holidays without burning out your daytime team',
+      subhead:
+        'After-hours customer support agents across onshore, nearshore and offshore regions, scheduled to your interval forecast and kept on our payroll.',
+    },
+    intro: `24/7 customer support staffing is not one night shift copied seven days a week. Overnight, weekend and holiday intervals attract a smaller labor pool, carry different absence risk and need stronger escalation coverage than a daytime queue. We build follow-the-sun teams across the US, Latin America, the Philippines and South Africa so the hours land in a workable local shift wherever possible. Agents stay on our payroll, you pay only for hours worked, and every placement carries a 90-day attrition guarantee.`,
+    whatIsIt: `After-hours customer support staffing adds trained agents for the periods your internal team cannot cover reliably: evenings, overnight, weekends, holidays and emergency overflow. The staffing plan starts with interval demand, not a flat seat count. We map arrival patterns by half hour, identify the intervals that create abandonment or overtime, and build shifts around the actual coverage gap.
+
+For true 24/7 operations, one geography is rarely the cleanest answer. A follow-the-sun model can place US daytime work nearshore, US overnight work in the daytime Philippines or South Africa shift, and regulated escalations onshore. That reduces graveyard-shift attrition while keeping live handoffs between teams.
+
+Agents work inside your tools, knowledge base and QA program. We supply and employ the people; your team keeps control of process, customer data, escalation rules and brand voice.`,
+    whoItsFor: [
+      {
+        title: 'Operators losing SLA after 5 p.m.',
+        body: 'Teams whose daytime staffing is healthy but evening abandonment, weekend backlog or Monday-morning carryover keeps missing the service target.',
+      },
+      {
+        title: 'SaaS and technical-support teams',
+        body: 'Products with customers in multiple time zones that need tier-one triage and documented escalation while engineering and senior support are offline.',
+      },
+      {
+        title: 'Travel, healthcare and financial services',
+        body: 'Operations where the customer issue cannot wait until the next business day and after-hours agents need clear compliance and escalation boundaries.',
+      },
+      {
+        title: 'Seasonal and incident-driven programs',
+        body: 'Brands that need temporary overnight or weekend capacity during launches, open enrollment, weather events or holiday peaks.',
+      },
+    ],
+    ourApproach: `We start with your interval forecast, channel mix and escalation tree. Each coverage block is assigned to the region where it falls into a sustainable local shift, then candidates are screened for schedule realism before they are screened for skills. Voice, chat and email are calibrated separately, and every handoff has a named owner, a written severity threshold and a live status field. Cohorts launch in waves sized to your training capacity, with attendance and QA reviewed by interval during the first 30 days.`,
+    approachSteps: [
+      {
+        title: 'Map the uncovered intervals',
+        body: 'Arrival volume, service target, channels and current staffing are mapped by interval so we add coverage where the queue actually fails.',
+      },
+      {
+        title: 'Choose the sustainable region mix',
+        body: 'Onshore, nearshore and offshore shifts are matched to working hours, language, compliance and escalation needs.',
+      },
+      {
+        title: 'Screen schedule commitment',
+        body: 'Candidates confirm nights, weekends and holiday availability in writing and complete the same channel and QA screen as the daytime team.',
+      },
+      {
+        title: 'Calibrate handoffs',
+        body: 'Every shift change uses a written escalation and handoff process so context survives across regions and time zones.',
+      },
+    ],
+    whyChooseUs: [
+      {
+        title: 'Multiple delivery regions',
+        body: 'A 14-country recruiting footprint lets us move overnight work into sustainable daytime shifts instead of forcing every seat onto a graveyard schedule.',
+      },
+      {
+        title: 'Coverage planned from real intervals',
+        body: 'We staff against the hours and channels that miss service, not a rounded monthly headcount that hides the actual gap.',
+      },
+      {
+        title: 'Agents remain on our payroll',
+        body: 'Add temporary or continuing after-hours capacity without creating permanent headcount, benefits or termination work for your team.',
+      },
+      {
+        title: '90-day attrition guarantee',
+        body: 'If an agent leaves or misses the agreed bar inside 90 days, we re-source and replace at no additional fee.',
+      },
+    ],
+    outcomes: [
+      { metric: '24/7', description: 'Night, weekend and holiday coverage across regions' },
+      { metric: 'About 72 hrs', description: 'Typical time to first qualified shortlist' },
+      { metric: '90 days', description: 'Attrition guarantee on every placement' },
+    ],
+    relatedRoles: [
+      'inbound-customer-service',
+      'bilingual-agents',
+      'team-leads-supervisors',
+      'qa-analysts',
+      'workforce-management',
+    ],
+    relatedLocations: ['mexico', 'philippines', 'south-africa'],
+    faqs: [
+      {
+        q: 'Can you provide true 24/7 customer support staffing?',
+        a: 'Yes. We combine onshore, nearshore and offshore agents so nights, weekends and holidays can be covered in sustainable local shifts. The exact mix follows your interval volume, languages, compliance rules and escalation needs.',
+      },
+      {
+        q: 'Can after-hours agents handle chat and email as well as calls?',
+        a: 'Yes. We staff voice, live chat, email, social and blended queues. Candidates are screened for each channel they will handle, including written tone and response accuracy for digital work.',
+      },
+      {
+        q: 'How do overnight agents escalate urgent issues?',
+        a: 'Before launch we document severity levels, contacts, response times and the information required in every handoff. Agents are trained on that escalation tree and calibrated against realistic scenarios during nesting.',
+      },
+      {
+        q: 'Can coverage be temporary or seasonal?',
+        a: 'Yes. After-hours teams can cover a launch, peak season, backlog or continuing 24/7 operation. Agents stay on our payroll and engagements are month-to-month, so capacity can scale with the need.',
+      },
+      {
+        q: 'How fast can an after-hours team start?',
+        a: 'Most briefs receive a first qualified shortlist in about 72 hours. Go-live timing depends on cohort size, systems access, training and compliance, with smaller standard-support teams often starting in days rather than weeks.',
       },
     ],
   },

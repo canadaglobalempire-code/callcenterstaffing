@@ -50,7 +50,13 @@ export const INDUSTRIES: Industry[] = [
       'EMR keyboard fluency tested (Epic, Cerner, NextGen, Availity)',
       'Recorded PHI-verification role-play scored by senior healthcare recruiter',
     ],
-    regulatoryFrameworks: ['HIPAA', 'HITECH', 'CMS marketing rules', 'OIG/SAM exclusion', '42 CFR Part 2 (BH)'],
+    regulatoryFrameworks: [
+      'HIPAA',
+      'HITECH',
+      'CMS marketing rules',
+      'OIG/SAM exclusion',
+      '42 CFR Part 2 (BH)',
+    ],
     caseHighlight: {
       company: 'MedNorth Health',
       challenge:
@@ -90,7 +96,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: 'Do the healthcare agents work on your payroll or ours?',
-        a: 'Agents stay on Call Center Staffing\'s payroll, so you carry no HR, benefits or training burden. You pay only for hours worked, on a month-to-month basis, and can swap any agent for free if the fit isn\'t right — backed by our 90-day attrition guarantee.',
+        a: "Agents stay on Call Center Staffing's payroll, so you carry no HR, benefits or training burden. You pay only for hours worked, on a month-to-month basis, and can swap any agent for free if the fit isn't right — backed by our 90-day attrition guarantee.",
       },
       {
         q: 'How quickly can you deploy healthcare call center agents?',
@@ -157,8 +163,14 @@ export const INDUSTRIES: Industry[] = [
     },
     outcomes: [
       { metric: '0', description: 'Compliance violations across active engagements (24 months)' },
-      { metric: '100%', description: 'NMLS verification at shortlist — no failed-licensure starts' },
-      { metric: 'Less than 21 days', description: 'Average shortlist for licensed financial services roles' },
+      {
+        metric: '100%',
+        description: 'NMLS verification at shortlist — no failed-licensure starts',
+      },
+      {
+        metric: 'Less than 21 days',
+        description: 'Average shortlist for licensed financial services roles',
+      },
     ],
     faqs: [
       {
@@ -240,7 +252,12 @@ export const INDUSTRIES: Industry[] = [
       'CE hours current and tracked through engagement',
       'State DOI marketing compliance refresher before go-live',
     ],
-    regulatoryFrameworks: ['State insurance licensing (life, health, P&C)', 'TCPA', 'FNOL standards', 'NAIC market conduct'],
+    regulatoryFrameworks: [
+      'State insurance licensing (life, health, P&C)',
+      'TCPA',
+      'FNOL standards',
+      'NAIC market conduct',
+    ],
     caseHighlight: {
       company: 'Beacon Insurance',
       challenge:
@@ -281,6 +298,10 @@ export const INDUSTRIES: Industry[] = [
       {
         q: 'How quickly can you staff licensed insurance agents?',
         a: 'Licensed multi-state cohorts average under 25 days to ramp, and we keep a quarterly FNOL bench refresh for 72-hour CAT-event stand-up. A first cohort is typically live in two to three weeks with full state-appointment and line-of-authority match verified at shortlist.',
+      },
+      {
+        q: 'When should we start hiring call center agents for open enrollment?',
+        a: 'Start workforce planning in late spring and licensed-agent recruiting by July or August. State appointments, background checks, product training and nesting make open enrollment less forgiving than a normal seasonal ramp. Waiting until September usually forces smaller classes, shorter nesting or overtime on the existing team.',
       },
     ],
   },
@@ -426,7 +447,12 @@ export const INDUSTRIES: Industry[] = [
       'Call-recording disclosure muscle memory verified on recorded scenario',
       'Tier 1 modem-diagnostic scenario before tier 1 placement',
     ],
-    regulatoryFrameworks: ['TCPA', 'CPNI (47 CFR 64.2001)', 'FCC enforcement', 'State PUC tariff rules'],
+    regulatoryFrameworks: [
+      'TCPA',
+      'CPNI (47 CFR 64.2001)',
+      'FCC enforcement',
+      'State PUC tariff rules',
+    ],
     caseHighlight: {
       company: 'Coastline Connect',
       challenge:
@@ -519,7 +545,11 @@ export const INDUSTRIES: Industry[] = [
       'GDS keyboard-fluency scenario in your platform (Sabre/Amadeus/Galileo)',
       'Loyalty-program-tier and elite-recovery literacy verified at shortlist',
     ],
-    regulatoryFrameworks: ['DOT consumer protection', 'GDPR (EU travelers)', 'PCI DSS (bookings/refunds)'],
+    regulatoryFrameworks: [
+      'DOT consumer protection',
+      'GDPR (EU travelers)',
+      'PCI DSS (bookings/refunds)',
+    ],
     caseHighlight: {
       company: 'Wayfinder Travel',
       challenge:
@@ -623,7 +653,10 @@ export const INDUSTRIES: Industry[] = [
     outcomes: [
       { metric: '+34%', description: 'Tier 1 first-contact resolution vs. baseline' },
       { metric: '-78%', description: 'CSM-covered escalation volume after ramp (avg.)' },
-      { metric: 'Less than 30 days', description: 'Average ramp from plan sign to first cohort live' },
+      {
+        metric: 'Less than 30 days',
+        description: 'Average ramp from plan sign to first cohort live',
+      },
     ],
     faqs: [
       {
@@ -644,7 +677,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: 'Should I outsource SaaS customer support or hire in-house?',
-        a: 'You don\'t have to choose. We place trained tier 1/2, CS ops and onboarding agents who work as an extension of your team but stay on our payroll — so you skip the HR, recruiting and training burden, pay only for hours worked, and can scale up or down month-to-month. Most SaaS teams use us to clear backlog or cover growth without committing to permanent headcount.',
+        a: "You don't have to choose. We place trained tier 1/2, CS ops and onboarding agents who work as an extension of your team but stay on our payroll — so you skip the HR, recruiting and training burden, pay only for hours worked, and can scale up or down month-to-month. Most SaaS teams use us to clear backlog or cover growth without committing to permanent headcount.",
       },
       {
         q: 'How quickly can you staff a SaaS support team?',
@@ -673,7 +706,7 @@ export const INDUSTRIES: Industry[] = [
     industryChallenges: [
       {
         title: 'State PUC tariff complexity',
-        body: 'Tariff rules vary materially by state — disconnection notice timing, deferred-payment plan terms, medical-hardship hold provisions. Agents trained for one state\'s tariff cannot cover another without explicit refresher. Generic utility-CX recruiting misses this and creates PUC complaint exposure.',
+        body: "Tariff rules vary materially by state — disconnection notice timing, deferred-payment plan terms, medical-hardship hold provisions. Agents trained for one state's tariff cannot cover another without explicit refresher. Generic utility-CX recruiting misses this and creates PUC complaint exposure.",
       },
       {
         title: 'Storm-surge stand-up',
@@ -705,7 +738,12 @@ export const INDUSTRIES: Industry[] = [
       'Medical-hardship hold provisions trained per state',
       'Storm-protocol and PSPS-calendar orientation pre-go-live',
     ],
-    regulatoryFrameworks: ['State PUC tariff rules', 'LIHEAP / WAP intake standards', 'PSPS protocols (CA)', 'Cold-weather rule (multiple states)'],
+    regulatoryFrameworks: [
+      'State PUC tariff rules',
+      'LIHEAP / WAP intake standards',
+      'PSPS protocols (CA)',
+      'Cold-weather rule (multiple states)',
+    ],
     caseHighlight: {
       company: 'Heartland Power',
       challenge:
@@ -798,7 +836,12 @@ export const INDUSTRIES: Industry[] = [
       'DOT consumer-protection refresher for parcel and household-goods volume',
       'Cross-border freight terminology and customs-coordination literacy',
     ],
-    regulatoryFrameworks: ['DOT consumer protection', 'FMCSA (where applicable)', 'Carrier liability standards (Carmack)', 'Customs / cross-border documentation'],
+    regulatoryFrameworks: [
+      'DOT consumer protection',
+      'FMCSA (where applicable)',
+      'Carrier liability standards (Carmack)',
+      'Customs / cross-border documentation',
+    ],
     caseHighlight: {
       company: 'Continental Freight',
       challenge:
@@ -807,7 +850,10 @@ export const INDUSTRIES: Industry[] = [
         'Pipeline build started July 21; first cohort of 35 live October 14; full 110 live November 4 with bilingual Spanish bench in Monterrey and overnight dispatch coverage in Manila. Q4 exception-resolution time held at 1.4x baseline (vs. 3x prior year); January claims-intake backlog cleared in 9 days post-peak.',
     },
     outcomes: [
-      { metric: 'Less than 30 days', description: 'Average ramp from plan sign to first cohort live' },
+      {
+        metric: 'Less than 30 days',
+        description: 'Average ramp from plan sign to first cohort live',
+      },
       { metric: '-58%', description: 'Q4 exception-resolution time vs. prior staffing baseline' },
       { metric: '92%', description: 'Of seasonal cohort completes the contract' },
     ],
@@ -867,7 +913,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         title: 'Program eligibility complexity',
-        body: 'SNAP, Medicaid, unemployment, child-care subsidy and energy-assistance programs each have detailed eligibility logic that varies by jurisdiction and changes mid-fiscal-year. Agents who memorize and don\'t actually understand eligibility logic create reapplication churn and citizen frustration.',
+        body: "SNAP, Medicaid, unemployment, child-care subsidy and energy-assistance programs each have detailed eligibility logic that varies by jurisdiction and changes mid-fiscal-year. Agents who memorize and don't actually understand eligibility logic create reapplication churn and citizen frustration.",
       },
       {
         title: 'Citizen-service tone under pressure',
@@ -891,18 +937,26 @@ export const INDUSTRIES: Industry[] = [
       'FedRAMP-tooling experience documented for federal program work',
       'Program-specific eligibility scenario scored at shortlist',
     ],
-    regulatoryFrameworks: ['ADA Section 508', 'Title VI / LEP language access', 'FedRAMP (federal contracts)', 'Privacy Act / state equivalents'],
+    regulatoryFrameworks: [
+      'ADA Section 508',
+      'Title VI / LEP language access',
+      'FedRAMP (federal contracts)',
+      'Privacy Act / state equivalents',
+    ],
     caseHighlight: {
       company: 'Pacific State Services',
       challenge:
         'A state human-services prime contractor needed 180 benefits-intake agents covering SNAP, Medicaid and unemployment with LEP coverage in 7 languages and full ADA Section 508 protocol fluency for a fiscal-year program ramp. Prior staffing had missed LEP coverage on Vietnamese and Tagalog, generating Title VI complaint exposure.',
       result:
-        'Cohort plan delivered with full 7-language LEP coverage; first cohort of 60 live in 31 days; full 180 live by day 78. Title VI complaints dropped to zero in the engagement\'s first fiscal year; reapplication-due-to-error rate fell 41% vs. prior baseline.',
+        "Cohort plan delivered with full 7-language LEP coverage; first cohort of 60 live in 31 days; full 180 live by day 78. Title VI complaints dropped to zero in the engagement's first fiscal year; reapplication-due-to-error rate fell 41% vs. prior baseline.",
     },
     outcomes: [
       { metric: '0', description: 'Title VI complaints across active state engagements' },
       { metric: '7+', description: 'Languages typically covered per state engagement (LEP)' },
-      { metric: 'Less than 35 days', description: 'Average ramp from plan sign to first cohort live' },
+      {
+        metric: 'Less than 35 days',
+        description: 'Average ramp from plan sign to first cohort live',
+      },
     ],
     faqs: [
       {
@@ -911,7 +965,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: 'How do you handle LEP language access across many languages?',
-        a: 'We plan language coverage against the jurisdiction\'s LEP profile — Spanish, Mandarin, Vietnamese, Tagalog, Russian, Arabic, Haitian Creole and others depending on the state or county. Cohort design balances language-fluent agents with on-call interpreter integration where direct fluency is impractical.',
+        a: "We plan language coverage against the jurisdiction's LEP profile — Spanish, Mandarin, Vietnamese, Tagalog, Russian, Arabic, Haitian Creole and others depending on the state or county. Cohort design balances language-fluent agents with on-call interpreter integration where direct fluency is impractical.",
       },
       {
         q: 'Do you screen for ADA Section 508 protocol literacy?',
@@ -931,7 +985,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: 'What does government call center staffing cost?',
-        a: 'You pay only for hours worked — agents stay on our payroll, so there\'s no HR, benefits or training burden on your side. Engagements are month-to-month, you can swap any agent free, and we back placements with a 90-day attrition guarantee.',
+        a: "You pay only for hours worked — agents stay on our payroll, so there's no HR, benefits or training burden on your side. Engagements are month-to-month, you can swap any agent free, and we back placements with a 90-day attrition guarantee.",
       },
     ],
   },
@@ -984,7 +1038,12 @@ export const INDUSTRIES: Industry[] = [
       'Parent-vs-student authentication discipline verified',
       'Institutional-policy refresher coordinated with registrar pre-live',
     ],
-    regulatoryFrameworks: ['FERPA', 'Title IX awareness', 'Higher Education Act (incentive comp)', 'GLBA (financial aid)'],
+    regulatoryFrameworks: [
+      'FERPA',
+      'Title IX awareness',
+      'Higher Education Act (incentive comp)',
+      'GLBA (financial aid)',
+    ],
     caseHighlight: {
       company: 'Summit State University',
       challenge:
@@ -995,7 +1054,10 @@ export const INDUSTRIES: Industry[] = [
     outcomes: [
       { metric: '+14%', description: 'Deposit-conversion rate on inbound inquiry vs. baseline' },
       { metric: '0', description: 'FERPA-related escalations across active engagements' },
-      { metric: 'Less than 30 days', description: 'Average ramp for cycle-aligned enrollment cohorts' },
+      {
+        metric: 'Less than 30 days',
+        description: 'Average ramp for cycle-aligned enrollment cohorts',
+      },
     ],
     faqs: [
       {
@@ -1088,7 +1150,10 @@ export const INDUSTRIES: Industry[] = [
     },
     outcomes: [
       { metric: '+14 pts', description: 'FCR lift on tier 2 queues post-screening upgrade' },
-      { metric: 'Less than 8%', description: 'Ticket-handoff drift after 60-day calibration cycle' },
+      {
+        metric: 'Less than 8%',
+        description: 'Ticket-handoff drift after 60-day calibration cycle',
+      },
       { metric: '24/7', description: 'Coverage models we staff across 14 countries' },
     ],
     faqs: [

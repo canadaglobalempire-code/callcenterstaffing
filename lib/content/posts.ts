@@ -3,6 +3,7 @@ import { BPO_CONTENT } from './bpo-content';
 import { NETWORK_DIRECTORY_POST } from './network-directory';
 import { NEARSHORE_POSTS } from './posts-nearshore';
 import { OPERATIONS_POSTS } from './posts-operations';
+import { GROWTH_POSTS } from './posts-growth';
 import {
   groupProvidersDetailSection,
   groupProvidersIntro,
@@ -51,12 +52,18 @@ const BPO_LOCATION_POST_CONFIGS: BpoLocationPostConfig[] = [
     primaryKeyword: 'top BPO companies in USA',
     publishedAt: '2026-06-04',
     heroImage: '/images/cc-office-wide.jpg',
-    searchIntent: 'Most people searching this keyword want a provider that can handle US customers, US time zones, and quality-sensitive work.',
-    marketNote: 'The USA search is usually about trust, control, compliance, and brand voice. Buyers want support that feels close to the business and easy to manage.',
-    localAngle: 'For US buyers, the key decision is often onshore control versus lower-cost nearshore or offshore delivery.',
-    complianceNote: 'Ask about HIPAA, PCI, call recording rules, privacy controls, and state-specific operating requirements when they apply.',
-    companyFitLine: 'The best provider is the one that can match US service expectations without making the program too expensive to scale.',
-    finalAngle: 'Start with the customer experience you need, then choose whether the work should stay onshore, move nearshore, or be supported offshore.',
+    searchIntent:
+      'Most people searching this keyword want a provider that can handle US customers, US time zones, and quality-sensitive work.',
+    marketNote:
+      'The USA search is usually about trust, control, compliance, and brand voice. Buyers want support that feels close to the business and easy to manage.',
+    localAngle:
+      'For US buyers, the key decision is often onshore control versus lower-cost nearshore or offshore delivery.',
+    complianceNote:
+      'Ask about HIPAA, PCI, call recording rules, privacy controls, and state-specific operating requirements when they apply.',
+    companyFitLine:
+      'The best provider is the one that can match US service expectations without making the program too expensive to scale.',
+    finalAngle:
+      'Start with the customer experience you need, then choose whether the work should stay onshore, move nearshore, or be supported offshore.',
   },
   {
     slug: 'top-15-bpo-companies-in-canada',
@@ -65,12 +72,18 @@ const BPO_LOCATION_POST_CONFIGS: BpoLocationPostConfig[] = [
     primaryKeyword: 'top BPO companies in Canada',
     publishedAt: '2026-06-03',
     heroImage: '/images/internet-office-team-meeting.jpg',
-    searchIntent: 'People searching this phrase usually want North American support, strong English quality, and sometimes French-language coverage.',
-    marketNote: 'Canada is attractive for brands that need time-zone alignment, professional customer handling, and bilingual support options.',
-    localAngle: 'For Canadian programs, confirm language coverage, provincial expectations, and how the provider manages cross-border customer data.',
-    complianceNote: 'Ask how privacy, payment data, healthcare information, and bilingual service expectations are handled.',
-    companyFitLine: 'The right partner should be clear about Canadian coverage, escalation paths, and whether work is delivered in Canada or through a wider network.',
-    finalAngle: 'Canada is a strong option when customer trust and North American delivery matter more than the lowest possible seat cost.',
+    searchIntent:
+      'People searching this phrase usually want North American support, strong English quality, and sometimes French-language coverage.',
+    marketNote:
+      'Canada is attractive for brands that need time-zone alignment, professional customer handling, and bilingual support options.',
+    localAngle:
+      'For Canadian programs, confirm language coverage, provincial expectations, and how the provider manages cross-border customer data.',
+    complianceNote:
+      'Ask how privacy, payment data, healthcare information, and bilingual service expectations are handled.',
+    companyFitLine:
+      'The right partner should be clear about Canadian coverage, escalation paths, and whether work is delivered in Canada or through a wider network.',
+    finalAngle:
+      'Canada is a strong option when customer trust and North American delivery matter more than the lowest possible seat cost.',
   },
   {
     slug: 'top-15-bpo-companies-in-india',
@@ -79,12 +92,18 @@ const BPO_LOCATION_POST_CONFIGS: BpoLocationPostConfig[] = [
     primaryKeyword: 'top BPO companies in India',
     publishedAt: '2026-06-02',
     heroImage: '/images/hd-agents-row.jpg',
-    searchIntent: 'Searchers are usually comparing offshore scale, technical support depth, back-office capacity, and cost efficiency.',
-    marketNote: 'India remains one of the most mature BPO markets for voice, non-voice, IT support, finance operations, and large back-office programs.',
-    localAngle: 'For India-based delivery, pay close attention to time-zone coverage, accent expectations, training depth, and process documentation.',
-    complianceNote: 'Ask about data security, access controls, quality monitoring, and audit readiness for regulated work.',
-    companyFitLine: 'The best India BPO fit is usually the provider that combines cost advantage with strong management, reporting, and QA.',
-    finalAngle: 'India is strongest when scale, technical skill, and process discipline are more important than having agents in the customer time zone.',
+    searchIntent:
+      'Searchers are usually comparing offshore scale, technical support depth, back-office capacity, and cost efficiency.',
+    marketNote:
+      'India remains one of the most mature BPO markets for voice, non-voice, IT support, finance operations, and large back-office programs.',
+    localAngle:
+      'For India-based delivery, pay close attention to time-zone coverage, accent expectations, training depth, and process documentation.',
+    complianceNote:
+      'Ask about data security, access controls, quality monitoring, and audit readiness for regulated work.',
+    companyFitLine:
+      'The best India BPO fit is usually the provider that combines cost advantage with strong management, reporting, and QA.',
+    finalAngle:
+      'India is strongest when scale, technical skill, and process discipline are more important than having agents in the customer time zone.',
   },
   {
     slug: 'top-15-bpo-companies-in-philippines',
@@ -93,12 +112,18 @@ const BPO_LOCATION_POST_CONFIGS: BpoLocationPostConfig[] = [
     primaryKeyword: 'top BPO companies in Philippines',
     publishedAt: '2026-06-01',
     heroImage: '/images/internet-call-center-agents-row.jpg',
-    searchIntent: 'People searching this keyword usually want English-language customer support, offshore savings, and agents comfortable with US customers.',
-    marketNote: 'The Philippines is one of the strongest markets for voice support, customer care, sales support, and back-office service for English-speaking customers.',
-    localAngle: 'For Philippines programs, confirm night-shift staffing, supervisor ratios, retention plans, and how QA is calibrated to your brand.',
-    complianceNote: 'Ask how the provider handles customer data, payment information, call recordings, and regulated support workflows.',
-    companyFitLine: 'The right partner should show strong hiring, training, and retention practices because good agents are in high demand.',
-    finalAngle: 'The Philippines is a strong choice when you need English-language support at scale and want a mature offshore service market.',
+    searchIntent:
+      'People searching this keyword usually want English-language customer support, offshore savings, and agents comfortable with US customers.',
+    marketNote:
+      'The Philippines is one of the strongest markets for voice support, customer care, sales support, and back-office service for English-speaking customers.',
+    localAngle:
+      'For Philippines programs, confirm night-shift staffing, supervisor ratios, retention plans, and how QA is calibrated to your brand.',
+    complianceNote:
+      'Ask how the provider handles customer data, payment information, call recordings, and regulated support workflows.',
+    companyFitLine:
+      'The right partner should show strong hiring, training, and retention practices because good agents are in high demand.',
+    finalAngle:
+      'The Philippines is a strong choice when you need English-language support at scale and want a mature offshore service market.',
   },
   {
     slug: 'top-15-bpo-companies-in-uk',
@@ -107,12 +132,18 @@ const BPO_LOCATION_POST_CONFIGS: BpoLocationPostConfig[] = [
     primaryKeyword: 'top BPO companies in UK',
     publishedAt: '2026-05-31',
     heroImage: '/images/cc-team-collab.jpg',
-    searchIntent: 'Searchers often want UK customer support, European coverage, local brand tone, or a partner that understands UK consumers.',
-    marketNote: 'The UK search is usually about service quality, local language, regulatory comfort, and coverage for British customers.',
-    localAngle: 'For UK programs, ask whether delivery is truly UK-based, nearshore in Europe, or supported by a global network.',
-    complianceNote: 'Ask how GDPR, payment data, complaint handling, and sector-specific requirements are managed.',
-    companyFitLine: 'A strong UK BPO fit should protect brand voice while giving you enough flexibility to scale during demand spikes.',
-    finalAngle: 'The UK is a good fit when local customer experience and regulatory clarity matter more than the lowest seat price.',
+    searchIntent:
+      'Searchers often want UK customer support, European coverage, local brand tone, or a partner that understands UK consumers.',
+    marketNote:
+      'The UK search is usually about service quality, local language, regulatory comfort, and coverage for British customers.',
+    localAngle:
+      'For UK programs, ask whether delivery is truly UK-based, nearshore in Europe, or supported by a global network.',
+    complianceNote:
+      'Ask how GDPR, payment data, complaint handling, and sector-specific requirements are managed.',
+    companyFitLine:
+      'A strong UK BPO fit should protect brand voice while giving you enough flexibility to scale during demand spikes.',
+    finalAngle:
+      'The UK is a good fit when local customer experience and regulatory clarity matter more than the lowest seat price.',
   },
   {
     slug: 'top-15-bpo-companies-in-australia',
@@ -121,12 +152,18 @@ const BPO_LOCATION_POST_CONFIGS: BpoLocationPostConfig[] = [
     primaryKeyword: 'top BPO companies in Australia',
     publishedAt: '2026-05-30',
     heroImage: '/images/cc-team-desk.jpg',
-    searchIntent: 'People searching this term usually want support for Australian customers, local hours, English quality, and offshore options that still feel close.',
-    marketNote: 'Australia buyers often compare local contact centers against Philippines, India, and wider Asia-Pacific delivery models.',
-    localAngle: 'For Australia programs, confirm time-zone coverage, accent fit, escalation timing, and whether customer support feels local enough.',
-    complianceNote: 'Ask about privacy, payment handling, consumer support rules, and how sensitive data is accessed from offshore locations.',
-    companyFitLine: 'The best partner should balance customer experience with cost, especially if the work moves outside Australia.',
-    finalAngle: 'Australia is a strong search market for companies weighing local service quality against offshore cost savings.',
+    searchIntent:
+      'People searching this term usually want support for Australian customers, local hours, English quality, and offshore options that still feel close.',
+    marketNote:
+      'Australia buyers often compare local contact centers against Philippines, India, and wider Asia-Pacific delivery models.',
+    localAngle:
+      'For Australia programs, confirm time-zone coverage, accent fit, escalation timing, and whether customer support feels local enough.',
+    complianceNote:
+      'Ask about privacy, payment handling, consumer support rules, and how sensitive data is accessed from offshore locations.',
+    companyFitLine:
+      'The best partner should balance customer experience with cost, especially if the work moves outside Australia.',
+    finalAngle:
+      'Australia is a strong search market for companies weighing local service quality against offshore cost savings.',
   },
   {
     slug: 'top-15-bpo-companies-in-mexico',
@@ -135,12 +172,18 @@ const BPO_LOCATION_POST_CONFIGS: BpoLocationPostConfig[] = [
     primaryKeyword: 'top BPO companies in Mexico',
     publishedAt: '2026-05-29',
     heroImage: '/images/agents-office-pair.jpg',
-    searchIntent: 'Searchers are usually looking for nearshore support for US customers, Spanish-English talent, and better time-zone alignment.',
-    marketNote: 'Mexico is popular for nearshore call center work because it offers North American time zones, bilingual hiring, and easier management travel.',
-    localAngle: 'For Mexico programs, ask about city coverage, bilingual screening, supervisor quality, and how quickly cohorts can ramp.',
-    complianceNote: 'Ask how customer data, call recordings, payment workflows, and regulated industry scripts are controlled.',
-    companyFitLine: 'The right Mexico partner should make nearshore support feel close to your US operation while improving cost and hiring speed.',
-    finalAngle: 'Mexico is a strong option when you want nearshore speed, bilingual coverage, and easier collaboration with US operations.',
+    searchIntent:
+      'Searchers are usually looking for nearshore support for US customers, Spanish-English talent, and better time-zone alignment.',
+    marketNote:
+      'Mexico is popular for nearshore call center work because it offers North American time zones, bilingual hiring, and easier management travel.',
+    localAngle:
+      'For Mexico programs, ask about city coverage, bilingual screening, supervisor quality, and how quickly cohorts can ramp.',
+    complianceNote:
+      'Ask how customer data, call recordings, payment workflows, and regulated industry scripts are controlled.',
+    companyFitLine:
+      'The right Mexico partner should make nearshore support feel close to your US operation while improving cost and hiring speed.',
+    finalAngle:
+      'Mexico is a strong option when you want nearshore speed, bilingual coverage, and easier collaboration with US operations.',
   },
   {
     slug: 'top-15-bpo-companies-in-colombia',
@@ -149,12 +192,18 @@ const BPO_LOCATION_POST_CONFIGS: BpoLocationPostConfig[] = [
     primaryKeyword: 'top BPO companies in Colombia',
     publishedAt: '2026-05-28',
     heroImage: '/images/cc-agent-blue.jpg',
-    searchIntent: 'People searching this keyword usually want nearshore customer support, bilingual agents, and strong coverage for US time zones.',
-    marketNote: 'Colombia has become a common nearshore option for customer service, sales support, back office, and bilingual call center programs.',
-    localAngle: 'For Colombia delivery, confirm English screening, city talent depth, management coverage, and how the provider handles fast ramp needs.',
-    complianceNote: 'Ask how privacy, quality monitoring, call recording, and financial or healthcare workflows are controlled.',
-    companyFitLine: 'The right provider should combine bilingual talent with clear QA and a ramp plan that fits your calendar.',
-    finalAngle: 'Colombia is useful when you want nearshore support with US time-zone overlap and a strong Spanish-English talent pool.',
+    searchIntent:
+      'People searching this keyword usually want nearshore customer support, bilingual agents, and strong coverage for US time zones.',
+    marketNote:
+      'Colombia has become a common nearshore option for customer service, sales support, back office, and bilingual call center programs.',
+    localAngle:
+      'For Colombia delivery, confirm English screening, city talent depth, management coverage, and how the provider handles fast ramp needs.',
+    complianceNote:
+      'Ask how privacy, quality monitoring, call recording, and financial or healthcare workflows are controlled.',
+    companyFitLine:
+      'The right provider should combine bilingual talent with clear QA and a ramp plan that fits your calendar.',
+    finalAngle:
+      'Colombia is useful when you want nearshore support with US time-zone overlap and a strong Spanish-English talent pool.',
   },
   {
     slug: 'top-15-bpo-companies-in-south-africa',
@@ -163,12 +212,18 @@ const BPO_LOCATION_POST_CONFIGS: BpoLocationPostConfig[] = [
     primaryKeyword: 'top BPO companies in South Africa',
     publishedAt: '2026-05-27',
     heroImage: '/images/cc-agent-pro.jpg',
-    searchIntent: 'Searchers often want English-language customer support, offshore value, and coverage for UK, European, or US programs.',
-    marketNote: 'South Africa is a strong BPO market for English-language service, customer care, technical support, and sales support.',
-    localAngle: 'For South Africa programs, confirm accent fit, shift coverage, talent availability, and whether the team supports your target customer market.',
-    complianceNote: 'Ask about data privacy, payment workflows, call recording, and how regulated customer interactions are monitored.',
-    companyFitLine: 'The best partner should show strong language quality and a clear plan for retention and frontline supervision.',
-    finalAngle: 'South Africa is a good option when English quality and offshore economics both matter.',
+    searchIntent:
+      'Searchers often want English-language customer support, offshore value, and coverage for UK, European, or US programs.',
+    marketNote:
+      'South Africa is a strong BPO market for English-language service, customer care, technical support, and sales support.',
+    localAngle:
+      'For South Africa programs, confirm accent fit, shift coverage, talent availability, and whether the team supports your target customer market.',
+    complianceNote:
+      'Ask about data privacy, payment workflows, call recording, and how regulated customer interactions are monitored.',
+    companyFitLine:
+      'The best partner should show strong language quality and a clear plan for retention and frontline supervision.',
+    finalAngle:
+      'South Africa is a good option when English quality and offshore economics both matter.',
   },
   {
     slug: 'top-15-bpo-companies-in-latin-america',
@@ -177,12 +232,18 @@ const BPO_LOCATION_POST_CONFIGS: BpoLocationPostConfig[] = [
     primaryKeyword: 'top BPO companies in Latin America',
     publishedAt: '2026-05-26',
     heroImage: '/images/cc-team-row-2.jpg',
-    searchIntent: 'People searching this phrase usually want nearshore support across Mexico, Colombia, Central America, and South America.',
-    marketNote: 'Latin America is attractive for US companies that want time-zone overlap, bilingual agents, and more flexible scaling than onshore hiring.',
-    localAngle: 'For Latin America programs, compare countries by English depth, Spanish coverage, labor market maturity, cost, and ramp speed.',
-    complianceNote: 'Ask how each delivery country handles data security, call monitoring, payment workflows, and regulated service lanes.',
-    companyFitLine: 'The best partner should recommend the right country mix instead of forcing every program into one location.',
-    finalAngle: 'Latin America is strongest when nearshore collaboration, bilingual support, and flexible staffing all matter.',
+    searchIntent:
+      'People searching this phrase usually want nearshore support across Mexico, Colombia, Central America, and South America.',
+    marketNote:
+      'Latin America is attractive for US companies that want time-zone overlap, bilingual agents, and more flexible scaling than onshore hiring.',
+    localAngle:
+      'For Latin America programs, compare countries by English depth, Spanish coverage, labor market maturity, cost, and ramp speed.',
+    complianceNote:
+      'Ask how each delivery country handles data security, call monitoring, payment workflows, and regulated service lanes.',
+    companyFitLine:
+      'The best partner should recommend the right country mix instead of forcing every program into one location.',
+    finalAngle:
+      'Latin America is strongest when nearshore collaboration, bilingual support, and flexible staffing all matter.',
   },
 ];
 
@@ -739,9 +800,7 @@ function createTrafficPost(config: TrafficPostConfig): Post {
       {
         heading: 'Simple checklist',
         level: 2,
-        paragraphs: [
-          'Use this checklist before you request proposals or compare quotes.',
-        ],
+        paragraphs: ['Use this checklist before you request proposals or compare quotes.'],
         bullets: [
           'Write down the channels the team must cover.',
           'Define the hours, languages, and service levels you need.',
@@ -787,6 +846,7 @@ const RAW_POSTS: Post[] = [
   NETWORK_DIRECTORY_POST,
   ...NEARSHORE_POSTS,
   ...OPERATIONS_POSTS,
+  ...GROWTH_POSTS,
   ...TRAFFIC_POSTS,
   ...BPO_LOCATION_POSTS,
   // ---------------------------------------------------------------------
@@ -1038,9 +1098,7 @@ const RAW_POSTS: Post[] = [
       {
         heading: 'Option 1: Your own entity',
         level: 2,
-        paragraphs: [
-          'You incorporate in-country and employ people directly.',
-        ],
+        paragraphs: ['You incorporate in-country and employ people directly.'],
         bullets: [
           'Most control, lowest per-head cost at scale, and the people are unambiguously yours.',
           'Slow and expensive to establish, and slow to unwind. Incorporation, tax registration, payroll infrastructure and local HR capability are all real projects.',
@@ -1071,7 +1129,7 @@ const RAW_POSTS: Post[] = [
           'Solves recruiting and compliance together, which is the practical difference from an EOR.',
           'Fastest route to a working team, because the agency is already sourcing in that market continuously rather than starting a search for you.',
           'Employment risk, severance exposure and replacement sit with the agency.',
-          'You give up some control over employment terms, and you are dependent on the agency\'s screening quality — which is why the vetting questions in /blog/how-to-vet-nearshore-customer-service-partners matter.',
+          "You give up some control over employment terms, and you are dependent on the agency's screening quality — which is why the vetting questions in /blog/how-to-vet-nearshore-customer-service-partners matter.",
         ],
       },
       {
@@ -1200,7 +1258,7 @@ const RAW_POSTS: Post[] = [
         ],
         bullets: [
           'Outsourcing. The provider runs the operation — their supervisors, their QA, their floor, their process. You buy an outcome. This works when contact handling is not a differentiator for you and you would rather not build the capability. It goes wrong when your product is complex, when the process changes weekly, or when the customer conversation is a core part of the brand.',
-          'Staffing. The agents work on someone else\'s payroll but sit inside your operation, on your systems, following your scorecard, managed by your supervisors. You keep the process and the institutional knowledge. This works when you already know how to run the floor and the constraint is purely hiring and employment overhead. It goes wrong if you do not actually have the leadership capacity to manage them.',
+          "Staffing. The agents work on someone else's payroll but sit inside your operation, on your systems, following your scorecard, managed by your supervisors. You keep the process and the institutional knowledge. This works when you already know how to run the floor and the constraint is purely hiring and employment overhead. It goes wrong if you do not actually have the leadership capacity to manage them.",
         ],
       },
       {
@@ -2978,7 +3036,7 @@ function alreadyHasGroupSection(post: Post): boolean {
   return post.sections.some(
     (section) =>
       section.heading?.startsWith("Our group's providers") ||
-      section.heading === 'Providers in our group'
+      section.heading === 'Providers in our group',
   );
 }
 

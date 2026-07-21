@@ -17,12 +17,12 @@ import { site } from '@/lib/site';
 import { alternatesFor } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Remote Call Center Staffing — Work-From-Home Agents',
+  title: 'Remote Customer Service Staffing Agency',
   description:
-    'Remote call center staffing: trained work-from-home agents on our payroll, deployed in 72 hours. Pay per hour, swap any agent free. Get a written plan.',
+    'Hire remote customer service agents for voice, chat and email. Work-from-home agents stay on our payroll; deploy in 3–14 days and pay only for hours worked.',
   alternates: alternatesFor('/remote-call-center-staffing'),
   openGraph: {
-    title: 'Remote Call Center Staffing — Work-From-Home Agents',
+    title: 'Remote Customer Service Staffing Agency',
     description:
       'Trained remote, work-from-home call center agents on our payroll. Deploy in 72 hours, pay only for hours worked, onshore/nearshore/offshore.',
     url: `${site.url}/remote-call-center-staffing`,
@@ -37,8 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Remote Call Center Staffing — Work-From-Home Agents',
-    description: 'Trained remote work-from-home call center agents on our payroll, deployed in 72 hours.',
+    title: 'Remote Customer Service Staffing Agency',
+    description:
+      'Hire trained remote customer service and work-from-home call center agents on our payroll.',
   },
 };
 
@@ -82,6 +83,10 @@ const FAQS = [
     q: 'Can remote agents cover nights, weekends and 24/7?',
     a: 'Yes. We staff follow-the-sun coverage by recruiting work-from-home agents across onshore, nearshore and offshore regions, so your queue is covered around the clock without a second site.',
   },
+  {
+    q: 'Can you hire remote customer service agents for chat and email as well as phone?',
+    a: 'Yes. Remote customer service staffing covers voice, live chat, email, social and blended queues. We screen written tone and response accuracy for digital channels alongside voice quality, then match agents to your channel mix and operating hours.',
+  },
 ];
 
 export default function RemoteStaffingPage() {
@@ -96,7 +101,7 @@ export default function RemoteStaffingPage() {
       <FAQSchema items={FAQS} />
 
       {/* HERO */}
-      <section className="relative isolate overflow-hidden bg-black text-white pt-40 pb-20 lg:pt-48 lg:pb-28">
+      <section className="relative isolate overflow-hidden bg-black pb-20 pt-40 text-white lg:pb-28 lg:pt-48">
         <Image
           src="/images/cc-woman-typing.jpg"
           alt="Remote work-from-home call center agent"
@@ -105,31 +110,46 @@ export default function RemoteStaffingPage() {
           sizes="100vw"
           className="object-cover opacity-45"
         />
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/60 to-black/40" />
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20" />
-        <div aria-hidden className="absolute -top-40 -left-32 h-[520px] w-[520px] rounded-full bg-accent-500/30 blur-3xl" />
-        <div aria-hidden className="absolute top-1/3 -right-32 h-[420px] w-[420px] rounded-full bg-accent-500/20 blur-3xl" />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/60 to-black/40"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"
+        />
+        <div
+          aria-hidden
+          className="bg-accent-500/30 absolute -left-32 -top-40 h-[520px] w-[520px] rounded-full blur-3xl"
+        />
+        <div
+          aria-hidden
+          className="bg-accent-500/20 absolute -right-32 top-1/3 h-[420px] w-[420px] rounded-full blur-3xl"
+        />
 
-        <Container className="relative grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <Container className="relative grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-7">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-white/90 backdrop-blur-sm">
-              <span className="h-2 w-2 rounded-full bg-accent-500 animate-pulse" />
+              <span className="h-2 w-2 animate-pulse rounded-full bg-accent-500" />
               Remote · Work-from-home agents
             </span>
 
-            <h1 className="mt-6 font-display text-[2.5rem] sm:text-[3.25rem] lg:text-[4.25rem] font-extrabold leading-[1.02] tracking-[-0.04em] text-white">
+            <h1 className="mt-6 font-display text-[2.5rem] font-extrabold leading-[1.02] tracking-[-0.04em] text-white sm:text-[3.25rem] lg:text-[4.25rem]">
               Work-from-home agents,{' '}
               <span className="relative inline-block">
                 <span className="relative z-10 text-accent-500">staffed and ready.</span>
-                <span aria-hidden className="absolute inset-x-0 bottom-1 h-3 bg-accent-500/15 -z-0" />
+                <span
+                  aria-hidden
+                  className="bg-accent-500/15 absolute inset-x-0 bottom-1 -z-0 h-3"
+                />
               </span>
             </h1>
 
-            <p className="mt-6 max-w-[560px] text-[17px] lg:text-lg leading-relaxed text-white/75">
-              Hire trained remote call center agents without the real estate, the HR, or the idle
-              seats. We recruit work-from-home agents across onshore, nearshore and offshore regions,
-              keep them on our payroll, and deploy a team to your business in 72 hours — you pay only
-              for the hours they work.
+            <p className="mt-6 max-w-[560px] text-[17px] leading-relaxed text-white/75 lg:text-lg">
+              Hire remote customer service agents without the real estate, the HR, or the idle
+              seats. We recruit work-from-home agents across onshore, nearshore and offshore
+              regions, keep them on our payroll, and deploy a team to your business in 72 hours —
+              you pay only for the hours they work.
             </p>
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
@@ -138,7 +158,7 @@ export default function RemoteStaffingPage() {
               </Button>
               <a
                 href="#how"
-                className="group inline-flex items-center gap-2 rounded-full border border-white/25 px-6 h-14 text-[15px] font-semibold text-white hover:bg-white hover:text-navy-950 transition-colors"
+                className="group inline-flex h-14 items-center gap-2 rounded-full border border-white/25 px-6 text-[15px] font-semibold text-white transition-colors hover:bg-white hover:text-navy-950"
               >
                 How remote staffing works
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -157,14 +177,14 @@ export default function RemoteStaffingPage() {
       {/* WHAT / WHY */}
       <Section id="how" background="white">
         <Container>
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end mb-10">
+          <div className="mb-10 grid items-end gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-7">
               <Eyebrow>Remote call center staffing</Eyebrow>
               <Heading level={2} display="l" className="mt-5 max-w-2xl">
                 The agents work from home. The accountability stays with us.
               </Heading>
             </div>
-            <p className="lg:col-span-5 text-body-l text-navy-700 max-w-prose">
+            <p className="max-w-prose text-body-l text-navy-700 lg:col-span-5">
               Remote work removed the geographic limit on hiring — but it added a vetting, equipment
               and security problem. We solve both: trained work-from-home agents, screened for the
               home-office setup your queue demands, deployed without a physical floor.
@@ -177,9 +197,9 @@ export default function RemoteStaffingPage() {
               return (
                 <li
                   key={b.title}
-                  className="flex h-full flex-col rounded-3xl border border-navy-950/8 bg-white p-7 transition-colors hover:border-accent-500/40"
+                  className="border-navy-950/8 hover:border-accent-500/40 flex h-full flex-col rounded-3xl border bg-white p-7 transition-colors"
                 >
-                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent-500/10 text-accent-500">
+                  <span className="bg-accent-500/10 inline-flex h-12 w-12 items-center justify-center rounded-xl text-accent-500">
                     <Icon className="h-6 w-6" strokeWidth={2} />
                   </span>
                   <h3 className="mt-6 font-display text-xl font-bold tracking-tight text-navy-950">
@@ -191,37 +211,51 @@ export default function RemoteStaffingPage() {
             })}
           </ul>
 
-          <div className="mt-10 rounded-3xl border border-navy-950/8 bg-ink-50 p-7 lg:p-9">
+          <div className="border-navy-950/8 mt-10 rounded-3xl border bg-ink-50 p-7 lg:p-9">
             <Heading level={3} className="text-navy-950">
               Remote, hybrid or on-site — we staff all three.
             </Heading>
-            <p className="mt-4 text-base leading-relaxed text-navy-700 max-w-prose">
-              Many teams run a blend: remote agents for general CX and overflow, on-site or hybrid for
-              regulated, licensed or clean-desk work. Tell us the mix you need and we recommend the
-              model — and the region — that fits your compliance posture and budget.
+            <p className="mt-4 max-w-prose text-base leading-relaxed text-navy-700">
+              Many teams run a blend: remote agents for general CX and overflow, on-site or hybrid
+              for regulated, licensed or clean-desk work. Tell us the mix you need and we recommend
+              the model — and the region — that fits your compliance posture and budget.
             </p>
             <div className="mt-6 flex flex-wrap gap-3 text-[13px]">
-              {['Remote / WFH', 'Hybrid', 'On-site', 'Onshore', 'Nearshore', 'Offshore'].map((t) => (
-                <span
-                  key={t}
-                  className="inline-flex items-center gap-1.5 rounded-full bg-white border border-navy-950/8 px-3 py-1.5 font-semibold text-navy-800"
-                >
-                  <CheckCircle2 className="h-3.5 w-3.5 text-accent-500" />
-                  {t}
-                </span>
-              ))}
+              {['Remote / WFH', 'Hybrid', 'On-site', 'Onshore', 'Nearshore', 'Offshore'].map(
+                (t) => (
+                  <span
+                    key={t}
+                    className="border-navy-950/8 inline-flex items-center gap-1.5 rounded-full border bg-white px-3 py-1.5 font-semibold text-navy-800"
+                  >
+                    <CheckCircle2 className="h-3.5 w-3.5 text-accent-500" />
+                    {t}
+                  </span>
+                ),
+              )}
             </div>
             <div className="mt-7 flex flex-wrap gap-4 text-sm font-semibold">
-              <Link href="/services/onshore-call-center-staffing" className="text-accent-600 hover:underline underline-offset-4">
+              <Link
+                href="/services/onshore-call-center-staffing"
+                className="text-accent-600 underline-offset-4 hover:underline"
+              >
                 Onshore staffing →
               </Link>
-              <Link href="/services/nearshore-call-center-staffing" className="text-accent-600 hover:underline underline-offset-4">
+              <Link
+                href="/services/nearshore-call-center-staffing"
+                className="text-accent-600 underline-offset-4 hover:underline"
+              >
                 Nearshore staffing →
               </Link>
-              <Link href="/services/offshore-call-center-staffing" className="text-accent-600 hover:underline underline-offset-4">
+              <Link
+                href="/services/offshore-call-center-staffing"
+                className="text-accent-600 underline-offset-4 hover:underline"
+              >
                 Offshore staffing →
               </Link>
-              <Link href="/outsourcing" className="text-accent-600 hover:underline underline-offset-4">
+              <Link
+                href="/outsourcing"
+                className="text-accent-600 underline-offset-4 hover:underline"
+              >
                 Outsourcing vs in-house →
               </Link>
             </div>

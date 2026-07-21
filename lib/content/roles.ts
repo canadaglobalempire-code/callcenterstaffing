@@ -10,8 +10,7 @@ export const ROLES: Role[] = [
       'Hire Spanish speaking call center agents and bilingual talent across onshore, nearshore and offshore. Fluency scored to level — recordings shipped with every shortlist.',
     hero: {
       eyebrow: 'Roles we staff',
-      headline:
-        'Spanish speaking call center agents who actually move the needle on CSAT.',
+      headline: 'Spanish speaking call center agents who actually move the needle on CSAT.',
       subhead:
         'We screen for true conversational fluency — not memorized phrases — across Spanish, Portuguese, French, Tagalog, Mandarin and more. Every shortlist ships with a recorded sample in both languages.',
     },
@@ -70,8 +69,7 @@ We place Spanish speaking call center agents and broader bilingual talent who ca
       'Recruit inbound customer-service agents at scale across regions. Screened for empathy, AHT discipline and first-call resolution.',
     hero: {
       eyebrow: 'Roles we staff',
-      headline:
-        'Inbound CS agents who hit AHT without sandbagging quality.',
+      headline: 'Inbound CS agents who hit AHT without sandbagging quality.',
       subhead:
         'We screen for the trait operators actually pay for: agents who can resolve on first call without trading off CSAT.',
     },
@@ -120,18 +118,18 @@ Most recruiters screen for typing speed and a clean voice. We screen for the har
     slug: 'outbound-sales-agents',
     name: 'Outbound Sales Agents',
     shortName: 'Outbound Sales',
-    metaTitle: 'Outbound Sales Agent Staffing — B2C & B2B Voice',
+    metaTitle: 'Appointment Setting & Outbound Agent Staffing',
     metaDescription:
-      'Recruit outbound sales agents who close. Screened for tonality, objection handling, conversion discipline and CRM speed across B2C and B2B verticals.',
+      'Hire B2B appointment setters and outbound sales agents screened for discovery, objection handling, conversion discipline, TCPA and CRM speed.',
     hero: {
       eyebrow: 'Roles we staff',
-      headline: 'Outbound sales agents who actually move numbers.',
+      headline: 'Appointment setters and outbound agents who move numbers.',
       subhead:
         'We screen for the only thing outbound floors actually care about: agents who hit conversion without burning the list.',
     },
     whatTheyDo: `Outbound sales agents work the dialer or the queue, run discovery, handle objections and close — usually under aggressive daily contact and conversion targets, with quality monitored by your QA team or your client's compliance lead.
 
-Most recruiters screen for "energy" and a clean voice. We screen for the harder thing: agents who can hit conversion without false-yeses, hit dial counts without sandbagging quality, and survive 90 days on the dialer without burning out. Tenure on outbound floors is the cleanest signal of recruiting quality there is — and it is what we benchmark every cohort against.`,
+Most recruiters screen for "energy" and a clean voice. We screen for the harder thing: B2B appointment setters and outbound agents who can run discovery, book a qualified meeting, hit conversion without false-yeses, and survive 90 days on the dialer without burning out. Tenure on outbound floors is the cleanest signal of recruiting quality there is — and it is what we benchmark every cohort against.`,
     skillsScreenedFor: [
       'Tonality and energy modulation across a 6-hour shift',
       'Objection-handling without scripting',
@@ -162,6 +160,10 @@ Most recruiters screen for "energy" and a clean voice. We screen for the harder 
         q: 'Can you staff B2B as well as B2C outbound?',
         a: 'Yes — B2B outbound has its own pipeline. We screen for higher discovery skill, longer cycle resilience, and CRM hygiene.',
       },
+      {
+        q: 'Do you staff B2B appointment setters?',
+        a: 'Yes. We recruit appointment setters for prospecting, qualification and calendar booking, then screen them on a live discovery role-play. The scorecard covers question quality, objection recovery, qualification discipline, CRM notes and whether the booked meeting matches your acceptance criteria.',
+      },
     ],
   },
   {
@@ -173,8 +175,7 @@ Most recruiters screen for "energy" and a clean voice. We screen for the harder 
       'Recruit team leads and supervisors who run a floor. Screened for shrinkage discipline, coaching skill, and adherence — not just tenure.',
     hero: {
       eyebrow: 'Roles we staff',
-      headline:
-        'Call center team leads and supervisors who actually run the floor.',
+      headline: 'Call center team leads and supervisors who actually run the floor.',
       subhead:
         'Team leads and supervisors who can coach, manage shrinkage and hit adherence — promoted or hired, screened the same way.',
     },
@@ -218,8 +219,7 @@ Most staffing firms place team leads as a tenure exercise: longest-tenured agent
       'Recruit QA analysts with calibrated scoring discipline. Screened for inter-rater agreement, root-cause analysis, and coaching follow-through.',
     hero: {
       eyebrow: 'Roles we staff',
-      headline:
-        'Call center QA analysts who score consistently — not creatively.',
+      headline: 'Call center QA analysts who score consistently — not creatively.',
       subhead:
         'Calibrated scoring, clean root-cause analysis, and coaching follow-through. We screen QA the way operators actually use it.',
     },
@@ -234,12 +234,7 @@ We screen for the calibration math first: agents pulled into our QA assessment s
       'Compliance and disclosure literacy where applicable',
     ],
     placementTimeline: '5–10 business days for first qualified shortlist',
-    industriesUsing: [
-      'Healthcare',
-      'Financial Services',
-      'Insurance',
-      'Telecom & Media',
-    ],
+    industriesUsing: ['Healthcare', 'Financial Services', 'Insurance', 'Telecom & Media'],
     faqs: [
       {
         q: 'How do you measure calibration during screening?',
@@ -304,8 +299,7 @@ We screen for forecast-vs-actual track records, intraday decisioning under press
       'Recruit trainers and QA coaches who shorten ramp and lift week-4 quality scores. Screened for delivery, retention design, and coaching transfer.',
     hero: {
       eyebrow: 'Roles we staff',
-      headline:
-        'Call center trainers who shorten ramp — not just fill seats in a classroom.',
+      headline: 'Call center trainers who shorten ramp — not just fill seats in a classroom.',
       subhead:
         'Onboarding delivery, retention design and coaching transfer. Trainers whose week-4 quality scores actually beat the average.',
     },
@@ -320,12 +314,7 @@ We screen for delivery skill (recorded teach-back), retention design (how they b
       'Compliance and disclosure-heavy content delivery',
     ],
     placementTimeline: '5–10 business days for first qualified shortlist',
-    industriesUsing: [
-      'Healthcare',
-      'Financial Services',
-      'Insurance',
-      'Telecom & Media',
-    ],
+    industriesUsing: ['Healthcare', 'Financial Services', 'Insurance', 'Telecom & Media'],
     faqs: [
       {
         q: 'How do you measure trainer effectiveness in screening?',
@@ -346,8 +335,7 @@ We screen for delivery skill (recorded teach-back), retention design (how they b
       'Recruit ops managers who run a floor on the numbers. Screened for P&L literacy, leadership cadence, and span-of-control discipline.',
     hero: {
       eyebrow: 'Roles we staff',
-      headline:
-        'Call center operations managers who run the floor on the numbers.',
+      headline: 'Call center operations managers who run the floor on the numbers.',
       subhead:
         'P&L literacy, leadership cadence, and span-of-control discipline. Operations managers who can stand up a floor or turn one around.',
     },
