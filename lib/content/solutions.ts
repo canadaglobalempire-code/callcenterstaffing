@@ -412,7 +412,7 @@ Every cohort then completes a tailored compliance refresher — HIPAA, PCI, FCRA
   {
     slug: 'overflow-call-center-staffing',
     name: 'Overflow Call Center Staffing',
-    metaTitle: 'Call Center Overflow Staffing',
+    metaTitle: 'Call Center Overflow Staffing for Volume Spikes',
     metaDescription:
       'Call center overflow staffing for sudden volume, backlogs and SLA recovery. Add trained agents on our payroll without permanent headcount.',
     heroImage: '/images/cc-support-team.jpg',

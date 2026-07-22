@@ -1,7 +1,15 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Container } from '@/components/layout/Container';
 import { Heading } from '@/components/ui/Heading';
 import { Button } from '@/components/ui/Button';
+
+// The 404 page must not inherit the root layout's canonical, which points at
+// the homepage and told crawlers every dead URL was a duplicate of '/'.
+export const metadata: Metadata = {
+  title: 'Page Not Found — Call Center Staffing',
+  alternates: { canonical: null },
+};
 
 export default function NotFound() {
   return (

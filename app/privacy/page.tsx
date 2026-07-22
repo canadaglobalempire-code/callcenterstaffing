@@ -9,7 +9,7 @@ import { site } from '@/lib/site';
 import { alternatesFor } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy',
+  title: 'Privacy Policy — Call Center Staffing',
   description:
     'How Call Center Staffing collects, uses, and protects information submitted through this website.',
   alternates: alternatesFor('/privacy'),
@@ -18,6 +18,14 @@ export const metadata: Metadata = {
     description:
       'How Call Center Staffing collects, uses, and protects information submitted through this website.',
     url: `${site.url}/privacy`,
+    images: [
+      {
+        url: '/images/agents-team-row.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Call Center Staffing privacy policy',
+      },
+    ],
   },
 };
 

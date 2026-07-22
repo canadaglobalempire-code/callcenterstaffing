@@ -39,6 +39,14 @@ export const metadata: Metadata = {
     description:
       'Specialized recruiting for call centers, BPOs, and CX teams. Reduce churn, fill open positions faster, and improve KPIs.',
     url: `${site.url}/about`,
+    images: [
+      {
+        url: '/images/about-us.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'The Call Center Staffing recruiting team',
+      },
+    ],
   },
 };
 

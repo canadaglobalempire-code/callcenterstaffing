@@ -24,6 +24,14 @@ export const metadata: Metadata = {
     description:
       'Operational guides on scaling, retention and staffing cost for contact-center leaders.',
     url: `${site.url}/blog`,
+    images: [
+      {
+        url: '/images/cc-team-meeting.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Contact-center operators reviewing staffing plans',
+      },
+    ],
   },
 };
 

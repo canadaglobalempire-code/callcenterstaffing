@@ -341,7 +341,7 @@ Where most vendors hand you a stack of resumes and walk away, we report against 
     slug: 'bpo-recruitment',
     name: 'BPO Recruitment',
     primaryKeyword: 'BPO staffing services',
-    metaTitle: 'BPO Staffing Services',
+    metaTitle: 'BPO Staffing Services and Recruitment for Contact Centers',
     metaDescription:
       'BPO staffing services that put trained call-center agents on our payroll. Pay per hour worked, swap any agent free, deploy in ~72 hours. Get a staffing plan.',
     heroImage: '/images/cc-management.jpg',
@@ -1094,7 +1094,7 @@ The trap most operators fall into with offshore call center hiring is treating t
     slug: 'onshore-call-center-staffing',
     name: 'Onshore Call Center Staffing',
     primaryKeyword: 'onshore call center staffing',
-    metaTitle: 'Onshore Call Center Staffing',
+    metaTitle: 'Onshore Call Center Staffing in the US and Canada',
     metaDescription:
       'Onshore call center staffing with US-based, compliance-cleared agents. License-verified, brand-aligned, 90-day guarantee, first shortlist in 72 hrs. Get staff.',
     heroImage: '/images/hd-agents-pair.jpg',

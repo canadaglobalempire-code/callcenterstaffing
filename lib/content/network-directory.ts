@@ -250,7 +250,7 @@ export const NETWORK_DIRECTORY_POST: Post = {
   title: 'BPO Companies in 2026: Provider Directory',
   excerpt:
     'A directory of the BPO and contact-centre providers we work with, what each is genuinely best at, and where the global majors fit. Group affiliations disclosed throughout.',
-  metaTitle: 'BPO Companies Directory 2026',
+  metaTitle: 'BPO Companies Directory 2026: Contact Centre Providers',
   metaDescription:
     'Directory of BPO and contact centre providers for 2026: what each specialises in, industries served, and how to match a provider to your programme.',
   publishedAt: '2026-07-21',

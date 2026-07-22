@@ -41,6 +41,14 @@ export const metadata: Metadata = {
     description:
       'Personalized recruitment strategies tuned to your KPIs, omnichannel mix, and budget. Built around your contact center, not a template.',
     url: `${site.url}/how-we-work`,
+    images: [
+      {
+        url: '/images/cc-team-plan.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Planning a call center staffing engagement',
+      },
+    ],
   },
 };
 

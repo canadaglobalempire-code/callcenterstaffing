@@ -9,7 +9,7 @@ import { site } from '@/lib/site';
 import { alternatesFor } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Terms of Use',
+  title: 'Terms of Use — Call Center Staffing',
   description:
     'Website terms for using Call Center Staffing content, forms, calculators, and resources.',
   alternates: alternatesFor('/terms'),
@@ -18,6 +18,14 @@ export const metadata: Metadata = {
     description:
       'Website terms for using Call Center Staffing content, forms, calculators, and resources.',
     url: `${site.url}/terms`,
+    images: [
+      {
+        url: '/images/agents-team-row.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Call Center Staffing terms of use',
+      },
+    ],
   },
 };
 

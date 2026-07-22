@@ -303,7 +303,7 @@ export const OPERATIONS_POSTS: Post[] = [
     title: 'HIPAA Call Center Staffing: Screening for Healthcare Queues',
     excerpt:
       'HIPAA training is the easy part and almost every vendor has it. What separates programmes that pass an audit from ones that do not is screening, access design and what happens when an agent leaves.',
-    metaTitle: 'HIPAA Call Center Staffing',
+    metaTitle: 'HIPAA Call Center Staffing: BAAs, Screening and PHI',
     metaDescription:
       'Staffing HIPAA-covered contact centre queues: what a BAA obligates, screening beyond the certificate, minimum-necessary access, and offshore PHI questions.',
     publishedAt: '2026-07-21',

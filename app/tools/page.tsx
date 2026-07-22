@@ -22,6 +22,14 @@ export const metadata: Metadata = {
     description:
       'Free interactive tools for call center operators. Plan headcount, calculate cohort sizes, and pressure-test forecasts.',
     url: `${site.url}/tools`,
+    images: [
+      {
+        url: '/images/cc-woman-typing.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Free call center staffing calculators and planners',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',

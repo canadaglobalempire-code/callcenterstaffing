@@ -41,6 +41,14 @@ export const metadata: Metadata = {
     description:
       'Vertical-specific call center staffing across 13 industries. HIPAA, NMLS, PCI, CPNI, FERPA-aware screening with industry-trained recruiters since 2003.',
     url: `${site.url}/industries`,
+    images: [
+      {
+        url: '/images/cc-diverse-team.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Call center staffing across 13 industries',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',

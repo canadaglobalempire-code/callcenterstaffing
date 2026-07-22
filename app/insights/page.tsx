@@ -25,6 +25,14 @@ export const metadata: Metadata = {
     description:
       'Diagnostics and operational fixes for the recurring pain points contact-center leaders see — written by senior account managers who run live engagements every day.',
     url: `${site.url}/insights`,
+    images: [
+      {
+        url: '/images/cc-management.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Contact-center leaders reviewing floor performance',
+      },
+    ],
   },
 };
 
