@@ -14,9 +14,11 @@ Confirmed issues:
 
 ## Technical Fixes Implemented
 
-- Added a permanent redirect from `callcenterstaffing.net/*` to `https://www.callcenterstaffing.net/*` in `next.config.mjs`.
-- Cleaned `robots.txt` Host output from a full URL to `www.callcenterstaffing.net`.
-- Kept the sitemap URL on the canonical `www` host.
+- Added a permanent host redirect in `next.config.mjs` so only one host serves the site.
+  **Superseded 2026-07-22:** the canonical host is now the apex `callcenterstaffing.net`,
+  and `www.*` redirects to it (the redirect originally ran the other way).
+- Cleaned `robots.txt` Host output from a full URL to the bare canonical hostname.
+- Kept the sitemap URL on the canonical host.
 - Updated remaining "free quote" metadata/default CTA copy to "written plan" language.
 - Earlier local SEO/security work remains in place: canonical site URL, sitemap updates, privacy/terms pages, protected server-side lead route, no public phone/email, structured data cleanup, and conversion events.
 
@@ -88,9 +90,9 @@ Build and internally link these first because they combine buyer intent with low
 
 - Deploy the local changes.
 - Purge Hostinger/CDN cache after deploy.
-- In Google Search Console, verify both `https://www.callcenterstaffing.net` and domain property if possible.
-- Submit `https://www.callcenterstaffing.net/sitemap.xml`.
+- In Google Search Console, add a Domain property (it spans both hosts); `https://callcenterstaffing.net` is now the canonical URL-prefix property.
+- Submit `https://callcenterstaffing.net/sitemap.xml`.
 - Inspect these URLs manually in Search Console: `/`, `/services/call-center-recruitment`, `/services/bilingual-call-center-staffing`, `/industries/healthcare`, `/tools/staffing-calculator`.
-- Check whether Google selects the `www` canonical after deployment.
+- Check whether Google selects the apex (non-`www`) canonical after deployment.
 - Export GSC query/page data after 7-14 days, then replace the demand bands above with real impressions, clicks, CTR, and average position.
 
