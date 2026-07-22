@@ -39,8 +39,8 @@ const nextConfig = {
     return [
       {
         source: '/:path*',
-        has: [{ type: 'host', value: 'callcenterstaffing.net' }],
-        destination: 'https://www.callcenterstaffing.net/:path*',
+        has: [{ type: 'host', value: 'www.callcenterstaffing.net' }],
+        destination: 'https://callcenterstaffing.net/:path*',
         permanent: true,
       },
       {

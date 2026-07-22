@@ -1,4 +1,4 @@
-const siteUrl = 'https://www.callcenterstaffing.net';
+const siteUrl = 'https://callcenterstaffing.net';
 
 export const site = {
   name: 'Call Center Staffing',

@@ -9,12 +9,12 @@
  *   node scripts/indexnow.mjs                 # submit every URL in the sitemap
  *   node scripts/indexnow.mjs /blog/foo /bar  # submit specific paths
  *
- * The key file must be live at https://www.callcenterstaffing.net/<KEY>.txt
+ * The key file must be live at https://callcenterstaffing.net/<KEY>.txt
  * before submitting, or the endpoint returns 403.
  */
 
 const KEY = '23d51e2afe8d4c0da90ccf3f4e355529';
-const HOST = 'www.callcenterstaffing.net';
+const HOST = 'callcenterstaffing.net';
 const ORIGIN = `https://${HOST}`;
 const ENDPOINT = 'https://api.indexnow.org/IndexNow';
 
