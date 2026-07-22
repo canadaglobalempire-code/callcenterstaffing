@@ -106,7 +106,7 @@ export const GROWTH_POSTS: Post[] = [
       'Temporary staffing works when the demand has a clear scope, calendar and exit trigger. Without those three, a short-term cohort becomes an expensive permanent workaround.',
     metaTitle: 'Temporary Call Center Staffing Guide',
     metaDescription:
-      'Temporary call center staffing explained: when to use a temp agency, realistic ramp timing, cost drivers, screening and how to demobilize without losing good agents.',
+      'Temporary call center staffing: when to use a temp agency, realistic ramp timing, cost drivers, screening, and how to demobilize without losing good agents.',
     publishedAt: '2026-07-21',
     author: 'Call Center Staffing',
     category: 'Hiring',

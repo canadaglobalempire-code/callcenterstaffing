@@ -9,7 +9,7 @@ export const LOCATIONS: Location[] = [
     heroImage: '/images/cc-diverse-team.jpg',
     metaTitle: 'Mexico BPO & Nearshore Call Center Staffing',
     metaDescription:
-      'Mexico BPO and nearshore call center staffing in Guadalajara, Mexico City, Monterrey and Tijuana. Bilingual agents on US time zones, on our payroll — you pay only for hours worked.',
+      'Mexico nearshore call center staffing in Guadalajara, Mexico City, Monterrey and Tijuana. Bilingual agents on US time zones, on our payroll.',
     hero: {
       eyebrow: 'Mexico · Nearshore',
       headline:
@@ -84,7 +84,7 @@ export const LOCATIONS: Location[] = [
     heroImage: '/images/hd-office-team.jpg',
     metaTitle: 'Call Center Outsourcing Philippines | Telemarketing',
     metaDescription:
-      'Call center outsourcing in the Philippines: telemarketing services, inbound and outbound agents in Manila, Cebu and Davao. Native-English talent, 24/7 coverage, agents on our payroll.',
+      'Call center outsourcing in the Philippines: inbound, outbound and telemarketing agents in Manila, Cebu and Davao. Native-English talent, 24/7, on our payroll.',
     hero: {
       eyebrow: 'Philippines · Offshore',
       headline:
@@ -244,7 +244,7 @@ export const LOCATIONS: Location[] = [
     heroImage: '/images/cc-support-team.jpg',
     metaTitle: 'Call Center Staffing South Africa — Offshore CX Talent',
     metaDescription:
-      'Recruit native-English call center agents in Cape Town and Johannesburg. Offshore call center staffing with neutral / UK-preferred accents and UK time-zone overlap.',
+      'Recruit native-English call center agents in Cape Town and Johannesburg. Offshore staffing with neutral or UK-preferred accents and UK time-zone overlap.',
     hero: {
       eyebrow: 'South Africa · Offshore',
       headline:

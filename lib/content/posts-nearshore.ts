@@ -16,7 +16,7 @@ export const NEARSHORE_POSTS: Post[] = [
       'Almost every provider says their Mexican agents are B2 or C1. Very few can tell you who assessed that, against what rubric, or what happens to fluency under pressure. Here is how to test it before you commit a programme.',
     metaTitle: 'Hiring Bilingual Agents in Mexico',
     metaDescription:
-      'How to screen bilingual call center agents in Mexico for real conversational fluency: CEFR levels and their limits, regional differences between Guadalajara, Monterrey and Tijuana, and the tests that actually predict performance.',
+      'How to screen bilingual call center agents in Mexico: CEFR levels and their limits, how Guadalajara, Monterrey and Tijuana differ, and the tests that work.',
     publishedAt: '2026-07-21',
     author: 'Call Center Staffing',
     category: 'Hiring',
@@ -122,7 +122,7 @@ export const NEARSHORE_POSTS: Post[] = [
       'The choice is usually framed as cost versus quality. That framing is wrong and leads people to the wrong answer. The real variables are complexity, interval coverage and how much management attention you have to spend.',
     metaTitle: 'Nearshore vs Offshore for High-Volume Support',
     metaDescription:
-      'When offshore delivery suits high-volume contact centre work and when nearshore is the better call: complexity thresholds, interval coverage, management overhead, and the hybrid split most large operations end up running.',
+      'When offshore suits high-volume contact centre work and when nearshore wins: complexity thresholds, interval coverage, management overhead, and hybrid splits.',
     publishedAt: '2026-07-21',
     author: 'Call Center Staffing',
     category: 'Comparison',
@@ -219,7 +219,7 @@ export const NEARSHORE_POSTS: Post[] = [
       'Most "multilingual" support programmes are really English plus Spanish. Once you need Portuguese, French, German or Arabic, the sourcing problem changes shape entirely — and the usual nearshore answer stops applying.',
     metaTitle: 'Multilingual Support Staffing Beyond Spanish',
     metaDescription:
-      'How to staff multilingual customer support beyond English and Spanish: where Portuguese, French, German, Arabic and Asian-language capacity actually sits, and how to structure queues so rare languages do not break your coverage.',
+      'Staffing multilingual support beyond English and Spanish: where Portuguese, French, German, Arabic and Asian-language capacity sits, and how to queue it.',
     publishedAt: '2026-07-21',
     author: 'Call Center Staffing',
     category: 'Hiring',
@@ -308,7 +308,7 @@ export const NEARSHORE_POSTS: Post[] = [
       'UK buyers comparing contact centre providers are usually shown one model: a managed service that runs the operation for you. There is a second option, and for operations that already run a good floor it is often the better one.',
     metaTitle: 'Contact Centre Outsourcing in the UK',
     metaDescription:
-      'Comparing UK contact centre outsourcing against a staffing model: who manages the agents, GDPR and data-residency considerations, offshore and nearshore options for UK buyers, and which model fits which operation.',
+      'UK contact centre outsourcing vs a staffing model: who manages the agents, GDPR and data residency, offshore and nearshore options, and which model fits.',
     publishedAt: '2026-07-21',
     author: 'Call Center Staffing',
     category: 'Comparison',

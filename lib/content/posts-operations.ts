@@ -18,7 +18,7 @@ export const OPERATIONS_POSTS: Post[] = [
       'Most understaffed contact centres are not short of applicants. They are running a headcount model that ignores shrinkage, then treating the shortfall as a recruiting failure.',
     metaTitle: 'Occupancy, Shrinkage and Contact Centre Headcount',
     metaDescription:
-      'How occupancy and shrinkage determine call centre headcount: what each metric actually measures, the occupancy band that predicts attrition, and why most staffing models under-hire.',
+      'How occupancy and shrinkage set contact centre headcount: what each metric measures, the occupancy band that predicts attrition, and why models under-hire.',
     publishedAt: '2026-07-21',
     author: 'Call Center Staffing',
     category: 'Process',
@@ -117,7 +117,7 @@ export const OPERATIONS_POSTS: Post[] = [
       'Automation removes the easy contacts first. The queue that reaches your agents afterwards is shorter, harder and less forgiving — and staffing it the way you staffed the old one is how deflection programmes go wrong.',
     metaTitle: 'AI Deflection and Human Handoff in Contact Centres',
     metaDescription:
-      'What AI deflection does to contact centre staffing: why average handle time rises after automation, how handoff quality determines customer outcomes, and how to hire for the harder queue that remains.',
+      'What AI deflection does to contact centre staffing: why handle time rises after automation, why handoff quality matters, and how to hire for the harder queue.',
     publishedAt: '2026-07-21',
     author: 'Call Center Staffing',
     category: 'Process',
@@ -214,7 +214,7 @@ export const OPERATIONS_POSTS: Post[] = [
       'Most early attrition is not a hiring mistake. It is a nesting design problem — and it shows up on a predictable schedule that almost nobody staffs for.',
     metaTitle: 'Call Centre Agent Ramp and Nesting',
     metaDescription:
-      'Why new contact centre agents fail around week three, how nesting should be structured, and the support ratios and metrics that determine whether a cohort survives to day 90.',
+      'Why new contact centre agents fail around week three, how nesting should be structured, and the support ratios that decide whether a cohort survives day 90.',
     publishedAt: '2026-07-21',
     author: 'Call Center Staffing',
     category: 'Process',
@@ -305,7 +305,7 @@ export const OPERATIONS_POSTS: Post[] = [
       'HIPAA training is the easy part and almost every vendor has it. What separates programmes that pass an audit from ones that do not is screening, access design and what happens when an agent leaves.',
     metaTitle: 'HIPAA Call Center Staffing',
     metaDescription:
-      'Staffing HIPAA-covered contact centre queues: what a BAA actually obligates, screening beyond the training certificate, minimum-necessary access design, and offshore considerations for PHI.',
+      'Staffing HIPAA-covered contact centre queues: what a BAA obligates, screening beyond the certificate, minimum-necessary access, and offshore PHI questions.',
     publishedAt: '2026-07-21',
     author: 'Call Center Staffing',
     category: 'Compliance',
@@ -422,7 +422,7 @@ export const OPERATIONS_POSTS: Post[] = [
       'Colombia has become the second default for US nearshore support after Mexico. The talent case is genuine; the employment structure is where buyers get caught out.',
     metaTitle: 'Nearshore Staffing in Colombia',
     metaDescription:
-      'Hiring bilingual contact centre agents in Colombia: how Bogota, Medellin, Barranquilla and Cali differ, the statutory employment obligations US buyers underestimate, and when Colombia beats Mexico.',
+      'Hiring bilingual contact centre agents in Colombia: how Bogota, Medellin, Barranquilla and Cali differ, and the employment obligations US buyers underestimate.',
     publishedAt: '2026-07-21',
     author: 'Call Center Staffing',
     category: 'Comparison',

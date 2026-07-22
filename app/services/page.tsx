@@ -62,7 +62,7 @@ const SERVICE_TAGLINES: Record<string, string> = {
 export const metadata: Metadata = {
   title: 'Call Center Staffing Services: Onshore & Offshore',
   description:
-    'Specialised recruiting services for call centers, BPOs and contact centers. Onshore, nearshore and offshore. 100k+ trained agents, 90-day attrition guarantee, 72-hour first qualified.',
+    'Specialised recruiting services for call centers, BPOs and contact centers, onshore, nearshore and offshore. 90-day attrition guarantee, shortlist in 72 hrs.',
   alternates: alternatesFor('/services'),
   openGraph: {
     title: 'Call Center Staffing Services: Onshore & Offshore',

@@ -14,7 +14,7 @@ import { alternatesFor } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'Call Center Staffing Solutions for Every Situation',
   description:
-    'Solutions for every contact-center situation: scaling an existing center, launching a new one, seasonal surge, direct-to-employer, compliance & licensed roles, and small business.',
+    'Solutions for every contact-center situation: scaling an existing floor, launching a new one, seasonal surge, direct-to-employer and compliance-licensed roles.',
   alternates: alternatesFor('/solutions'),
   openGraph: {
     title: 'Call Center Staffing Solutions for Every Situation',

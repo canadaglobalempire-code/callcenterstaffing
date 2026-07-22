@@ -22,7 +22,7 @@ const METRO_LOCATIONS = LOCATIONS.filter((l) => l.name.includes(','));
 export const metadata: Metadata = {
   title: 'Where We Recruit — Call Center Staffing by Region',
   description:
-    'We deploy trained call center agents across nine regions worldwide — North America, South America, Central America, the Caribbean, Europe, Africa, Asia, Australia and the Middle East. Onshore, nearshore and offshore.',
+    'Trained call center agents deployed across nine regions worldwide, from North America and Latin America to Europe, Africa and Asia. Onshore or offshore.',
   alternates: alternatesFor('/locations'),
   openGraph: {
     title: 'Where We Recruit — Call Center Staffing by Region',

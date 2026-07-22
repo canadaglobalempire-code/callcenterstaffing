@@ -864,7 +864,7 @@ const RAW_POSTS: Post[] = [
       'Buyers evaluating nearshore support consistently check the same three things — English fluency, time-zone overlap and employment compliance — and consistently check them badly. Here is what each one actually means and how to test it before you sign.',
     metaTitle: 'How to Vet Nearshore Customer Service Partners',
     metaDescription:
-      'A vetting framework for nearshore customer service in Latin America: how to test English fluency properly, what time-zone overlap really requires, and the EOR and employment compliance questions most buyers miss.',
+      'A vetting framework for nearshore customer service in Latin America: testing English fluency properly, real time-zone overlap, and the EOR questions missed.',
     publishedAt: '2026-07-21',
     author: 'Call Center Staffing',
     category: 'Comparison',
@@ -980,7 +980,7 @@ const RAW_POSTS: Post[] = [
       'Most Latin America search results return outsourcing providers who run the operation for you. Staffing is a different model — agents inside your operation, on your scorecard, employed by someone else. Here is the distinction and when each one wins.',
     metaTitle: 'Customer Support Staffing Agencies in Latin America',
     metaDescription:
-      'How customer support staffing agencies in Latin America differ from BPO outsourcing: who manages the agents, who owns the process, who carries employment risk, and which model fits your operation.',
+      'How customer support staffing agencies in Latin America differ from BPO outsourcing: who manages the agents, who owns the process, who carries employment risk.',
     publishedAt: '2026-07-21',
     author: 'Call Center Staffing',
     category: 'Comparison',
@@ -1079,7 +1079,7 @@ const RAW_POSTS: Post[] = [
       'Three ways to employ customer support people in Latin America without breaking the law, and the trade-offs nobody explains until something goes wrong at termination.',
     metaTitle: 'EOR vs Staffing Agency in Latin America',
     metaDescription:
-      'Employer of record, staffing agency, or your own entity: how each option works for hiring customer support teams in Latin America, what each costs you in control and risk, and how to choose.',
+      'Employer of record, staffing agency or your own entity: how each works for hiring support teams in Latin America, and what each costs in control and risk.',
     publishedAt: '2026-07-21',
     author: 'Call Center Staffing',
     category: 'Compliance',
@@ -1190,7 +1190,7 @@ const RAW_POSTS: Post[] = [
       'Most "top BPO companies in Texas" lists rank vendors who paid to be on them. This one ranks the questions instead — what Dallas, Houston, Austin and San Antonio each do well, what to verify before signing, and when staffing your own floor beats outsourcing it.',
     metaTitle: 'BPO Companies in Texas: 2026 Buyer Guide',
     metaDescription:
-      'How to evaluate BPO companies in Texas: what each metro specialises in, the questions that separate real capability from a good pitch, and when staffing your own floor is the better call.',
+      'How to evaluate BPO companies in Texas: what each metro specialises in, the questions that separate capability from a pitch, and when to staff your own floor.',
     publishedAt: '2026-07-21',
     author: 'Call Center Staffing',
     category: 'Comparison',
@@ -1641,7 +1641,7 @@ const RAW_POSTS: Post[] = [
       'Most operators do not have a hiring problem in the abstract — they have a calendar problem. Here is the playbook for adding seats fast without watching the QA bar collapse.',
     metaTitle: 'How to Scale a Call Center Without Losing Quality',
     metaDescription:
-      'How to scale a call center without watching CSAT, AHT and QA scores fall. A practical playbook for forecast-aligned hiring, cohort waves, and 30/60/90 score-cards.',
+      'How to scale a call center without watching CSAT, AHT and QA scores fall: forecast-aligned hiring, cohort waves, and 30/60/90 score-cards.',
     publishedAt: '2026-04-22',
     updatedAt: '2026-05-05',
     author: 'Call Center Staffing',
@@ -1772,7 +1772,7 @@ const RAW_POSTS: Post[] = [
       'Most attrition in a call center is decided before the agent ever takes a live call. The fix is upstream — in the recruiting funnel and the first thirty days — not in retention bonuses.',
     metaTitle: 'How to Reduce Call Center Turnover: What Works',
     metaDescription:
-      'How to reduce call center turnover at the root: wrong-fit hires, unclear ramp expectations, unsupported nesting, and weak frontline leadership. A practical playbook.',
+      'How to reduce call center turnover at the root: wrong-fit hires, unclear ramp expectations, unsupported nesting and weak frontline leadership.',
     publishedAt: '2026-04-15',
     updatedAt: '2026-05-05',
     author: 'Call Center Staffing',
@@ -1909,7 +1909,7 @@ const RAW_POSTS: Post[] = [
       "Two cost questions get conflated constantly: what does an agent's wage look like, and what does the staffing engagement itself cost? Here is the honest read on both for 2026.",
     metaTitle: 'Call Center Staffing Cost 2026: Wages and ROI',
     metaDescription:
-      'Call center staffing cost in 2026: how staffing agencies actually charge, wage benchmarks across US, Mexico, Colombia and the Philippines, and the real ROI math.',
+      'Call center staffing cost in 2026: how staffing agencies actually charge, what moves a quote across the US, Mexico, Colombia and the Philippines, and ROI math.',
     publishedAt: '2026-04-08',
     updatedAt: '2026-05-05',
     author: 'Call Center Staffing',
@@ -2055,7 +2055,7 @@ const RAW_POSTS: Post[] = [
       'The in-house vs outsourced debate is rarely won by a deck. It is won by matching the operating model to the queue you actually run — and most operators end up running both at once.',
     metaTitle: 'In-House vs Outsourced Call Center — 2026 Trade-offs',
     metaDescription:
-      'In-house vs outsourced call center in 2026: how the decision actually gets made, cost ratios, control trade-offs, compliance ownership, and when each model wins.',
+      'In-house vs outsourced call center in 2026: how the decision gets made, cost ratios, control trade-offs, compliance ownership, and when each model wins.',
     publishedAt: '2026-04-08',
     author: 'Call Center Staffing',
     category: 'Comparison',
@@ -2187,7 +2187,7 @@ const RAW_POSTS: Post[] = [
       'Speed and quality are not opposites in call center hiring. They are both downstream of process discipline — and the operators who hire fastest are usually the ones with the tightest screening rubric.',
     metaTitle: 'How to Hire Call Center Agents Fast — Without Quality Loss',
     metaDescription:
-      'How to hire call center agents fast without dropping quality: the 72-hour shortlist standard, pre-built bench tactics, cohort waves, and when to bring in a specialist.',
+      'How to hire call center agents fast without dropping quality: the 72-hour shortlist standard, pre-built bench tactics, cohort waves, and when to get help.',
     publishedAt: '2026-04-15',
     author: 'Call Center Staffing',
     category: 'Hiring',
@@ -2317,7 +2317,7 @@ const RAW_POSTS: Post[] = [
       'Most call center staffing problems are not about effort. They are about a handful of operational disciplines that most teams know about and very few actually run. Here is the 2026 list.',
     metaTitle: 'Call Center Staffing Best Practices 2026',
     metaDescription:
-      'Call center staffing best practices for 2026: forecast-aligned recruiting, QA-aligned screening, cohort waves, 30/60/90 score-cards, attrition guarantees, and more.',
+      'Call center staffing best practices for 2026: forecast-aligned recruiting, QA-aligned screening, cohort waves, 30/60/90 score-cards and attrition guarantees.',
     publishedAt: '2026-04-29',
     author: 'Call Center Staffing',
     category: 'Process',
@@ -2478,7 +2478,7 @@ const RAW_POSTS: Post[] = [
       'The operators who hit Q4 cleanly start hiring for it in July. The ones who start in October miss the SLA, blow the budget, and lay people off in February. The timeline is brutal but it is also fixable.',
     metaTitle: 'Seasonal Call Center Staffing — Prepare for Q4 in July',
     metaDescription:
-      'Seasonal call center staffing: why Q4 hiring starts in July, how pre-built bench economics work, clean demobilization, and tax season and open enrollment timing.',
+      'Seasonal call center staffing: why Q4 hiring starts in July, how pre-built bench economics work, clean demobilization, and tax-season timing.',
     publishedAt: '2026-05-13',
     author: 'Call Center Staffing',
     category: 'Process',
@@ -2620,7 +2620,7 @@ const RAW_POSTS: Post[] = [
       'No-show rate is the metric that calls bullshit on the rest of the recruiting funnel. It does not care about pipeline volume, time-to-fill, or how good the screening looked on paper. The agent either showed up or did not.',
     metaTitle: 'Call Center No-Show Rate — What Good Looks Like in 2026',
     metaDescription:
-      'Call center no-show rate benchmarks for 2026: top quartile under 5 percent, average 5 to 10 percent, root causes, measurement, and how to fix offer ghosting and day-1 no-shows.',
+      'Call center no-show rate benchmarks for 2026: top quartile under 5 percent, average 5 to 10 percent, root causes, and how to fix offer ghosting and day-1 drops.',
     publishedAt: '2026-05-27',
     author: 'Call Center Staffing',
     category: 'Hiring',
@@ -2767,7 +2767,7 @@ const RAW_POSTS: Post[] = [
       'A US healthcare payer needed 60 bilingual agents nested by a fixed regulatory deadline. The previous retained search firm had placed 8 of 16 with quality misses. Here is what we did differently.',
     metaTitle: 'Case Study: 60 Bilingual Agents in 38 Days — Mexico City',
     metaDescription:
-      'How we placed 60 bilingual call center agents in Mexico City inside 38 days for a US healthcare payer — sourcing playbook, CEFR voice scoring, cohort waves, outcomes.',
+      'How we placed 60 bilingual call center agents in Mexico City in 38 days for a US healthcare payer: sourcing, CEFR voice scoring, cohort waves, outcomes.',
     publishedAt: '2026-03-25',
     author: 'Call Center Staffing',
     category: 'Case Study',
@@ -2893,7 +2893,7 @@ const RAW_POSTS: Post[] = [
       'A new fintech BPO had a signed contract, a leased floor, an open IT punchlist, and zero employer brand. They needed 120 agents on a 90-day clock. Here is exactly how we ran it.',
     metaTitle: 'Case Study: 0 to 120 Agents in 90 Days — BPO Launch',
     metaDescription:
-      'How we launched a fintech BPO from 0 to 120 agents in 90 days in Manila and Cebu — pre-built bench, embedded recruiters, cohort waves, first SLA hit inside ramp window.',
+      'How we launched a fintech BPO from 0 to 120 agents in 90 days across Manila and Cebu: pre-built bench, embedded recruiters, cohort waves, SLA hit in ramp.',
     publishedAt: '2026-04-01',
     author: 'Call Center Staffing',
     category: 'Case Study',

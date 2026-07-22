@@ -12,7 +12,7 @@ export const INSIGHTS: Insight[] = [
     metaTitle:
       'Call Center Understaffed? The Calendar Fix That Works',
     metaDescription:
-      'Your call center is understaffed and the floor is paying for it. The fix is not more job postings — it is forecast-aligned planning, a warm bench, and cohort waves. Here is the playbook.',
+      'Understaffed call center? The fix is not more job postings — it is forecast-aligned planning, a warm bench and cohort waves. Here is the playbook.',
     primaryKeyword: 'call center understaffed',
     publishedAt: '2026-06-02',
     updatedAt: '2026-07-21',
@@ -163,7 +163,7 @@ export const INSIGHTS: Insight[] = [
     metaTitle:
       "Can't Find Call Center Agents? Fix Your Screen",
     metaDescription:
-      'Job postings get applicants but few pass the phone screen and fewer stay through nesting. The pool is not the problem — the screen is. Here is how specialist recruiters fix it.',
+      'Postings get applicants but few pass the phone screen or survive nesting. The pool is not the problem — the screen is. How specialist recruiters fix it.',
     primaryKeyword: "can't find call center agents",
     publishedAt: '2026-06-02',
     updatedAt: '2026-07-21',
@@ -293,7 +293,7 @@ export const INSIGHTS: Insight[] = [
     metaTitle:
       'SLA Slipping in Your Call Center? Look Upstream',
     metaDescription:
-      'SLAs are missed. Coaching is not moving the number. WFM has the right model. The problem is recruiting, not operations. Here is how specialist recruiters change the math.',
+      'SLAs are missed and coaching is not moving the number. The problem is recruiting, not operations. How specialist recruiters change the math.',
     primaryKeyword: 'SLA slipping call center',
     publishedAt: '2026-06-02',
     updatedAt: '2026-07-21',

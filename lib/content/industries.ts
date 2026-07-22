@@ -110,7 +110,7 @@ export const INDUSTRIES: Industry[] = [
     primaryKeyword: 'financial services call center staffing',
     metaTitle: 'Financial Services Call Center Outsourcing',
     metaDescription:
-      'Financial services call center outsourcing and staffing with NMLS-licensed, FCRA and PCI-aware agents screened for regulated queues before they reach your shortlist.',
+      'Financial services call center staffing: NMLS-licensed, FCRA and PCI-aware agents screened for regulated queues before they reach your shortlist.',
     hero: {
       eyebrow: 'Industries · Financial Services',
       headline: 'Staff Your Financial Services Contact Center With Verified, Compliant Agents',
@@ -502,7 +502,7 @@ export const INDUSTRIES: Industry[] = [
     primaryKeyword: 'travel call center staffing',
     metaTitle: 'Hospitality Call Center Outsourcing & Staffing',
     metaDescription:
-      'Hospitality and travel call center outsourcing and staffing: 24/7 multilingual agents for reservations, disruption handling and loyalty support across time zones.',
+      'Hospitality and travel call center outsourcing: 24/7 multilingual agents for reservations, disruption handling and loyalty support across time zones.',
     hero: {
       eyebrow: 'Industries · Travel & Hospitality',
       headline: 'Travel & Hospitality Call Center Staffing for 24/7 Multilingual Support',
@@ -995,7 +995,7 @@ export const INDUSTRIES: Industry[] = [
     primaryKeyword: 'education call center staffing',
     metaTitle: 'Education Call Center Staffing | Enrollment & Aid',
     metaDescription:
-      'Education call center staffing for admissions, enrollment, financial aid & student services. FERPA-cleared agents, cycle-ready bench, live in ~72 hrs. Get a quote.',
+      'Education call center staffing for admissions, enrollment, financial aid & student services. FERPA-cleared agents, cycle-ready bench, live in ~72 hrs.',
     hero: {
       eyebrow: 'Industries · Education',
       headline: 'Education call center staffing for enrollment, financial aid and student services',

@@ -18,7 +18,7 @@ export const CX_CLUSTER_POSTS: Post[] = [
       'Most rankings of customer service outsourcing companies are sorted by who paid to be on them. Here is what to check instead — and the four questions that separate real capability from a good pitch.',
     metaTitle: 'Top Customer Service Outsourcing Companies',
     metaDescription:
-      'How to evaluate the top customer service outsourcing companies: what published rankings actually measure, the four questions that reveal capability, and how UK and US provider markets differ.',
+      'How to evaluate customer service outsourcing companies: what published rankings measure, the four questions that reveal capability, and UK vs US markets.',
     publishedAt: '2026-07-21',
     author: 'Call Center Staffing',
     category: 'Comparison',
@@ -112,7 +112,7 @@ export const CX_CLUSTER_POSTS: Post[] = [
       'Two providers quoting the same hourly rate can cost wildly different amounts over a year. The rate is the least useful number in the comparison — here is what actually moves it.',
     metaTitle: 'Customer Service Outsourcing Cost Drivers',
     metaDescription:
-      'What determines outsourced customer service cost: the seven variables that move a quote, why hourly rate is a poor comparison, and the metric that compares providers fairly.',
+      'What determines outsourced customer service cost: the seven variables that move a quote, why hourly rate is a poor comparison, and what compares fairly.',
     publishedAt: '2026-07-21',
     author: 'Call Center Staffing',
     category: 'Comparison',
@@ -214,7 +214,7 @@ export const CX_CLUSTER_POSTS: Post[] = [
       'Most customer service best-practice lists are written for a queue with no volume pressure. These are the ones that hold when the floor is short and the SLA is slipping.',
     metaTitle: 'Customer Service Best Practices',
     metaDescription:
-      'Customer service best practices for contact centre operators: the rules and guidelines that hold under volume pressure, what to measure, and where standard advice breaks down.',
+      'Customer service best practices for contact centre operators: the rules that hold under volume pressure, what to measure, and where standard advice breaks down.',
     publishedAt: '2026-07-21',
     author: 'Call Center Staffing',
     category: 'Process',

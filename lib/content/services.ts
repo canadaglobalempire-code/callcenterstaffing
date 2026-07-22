@@ -7,7 +7,7 @@ export const SERVICES: Service[] = [
     primaryKeyword: 'customer service outsourcing',
     metaTitle: 'Customer Service Outsourcing & Support Staffing',
     metaDescription:
-      'Customer service outsourcing explained: what outsourced customer support costs you in control, when staffing beats it, and how to evaluate companies that outsource customer service.',
+      'Customer service outsourcing explained: what outsourced support costs you in control, when staffing beats it, and how to evaluate outsourcing companies.',
     heroImage: '/images/cc-diverse-team.jpg',
     hero: {
       eyebrow: 'Services',
@@ -115,7 +115,7 @@ export const SERVICES: Service[] = [
     primaryKeyword: 'inside sales outsourcing',
     metaTitle: 'Inside Sales Outsourcing & Staffing',
     metaDescription:
-      'Inside sales outsourcing and staffing: SDRs, appointment setters and inbound sales agents screened on recorded discovery calls. Outsource inside sales or staff your own floor.',
+      'Inside sales outsourcing and staffing: SDRs, appointment setters and inbound agents screened on recorded discovery calls. Outsource or staff your own floor.',
     heroImage: '/images/cc-agent-call.jpg',
     hero: {
       eyebrow: 'Services',
@@ -836,7 +836,7 @@ Done badly, outsourced call center staffing creates a tug-of-war between brand a
     primaryKeyword: 'nearshore call center staffing',
     metaTitle: 'Nearshore Contact Center Staffing & Outsourcing',
     metaDescription:
-      'Nearshore contact center staffing and outsourcing across Mexico, Colombia and Costa Rica. Bilingual agents on US business hours, employed by us, working inside your operation.',
+      'Nearshore contact center staffing across Mexico, Colombia and Costa Rica. Bilingual agents on US business hours, employed by us, working inside your operation.',
     heroImage: '/images/cc-agent-monitor.jpg',
     hero: {
       eyebrow: 'Services',
@@ -966,7 +966,7 @@ Reporting is to your QA scorecard with bilingual fluency scored at the level you
     primaryKeyword: 'offshore call center staffing',
     metaTitle: 'Offshore Call Center & Contact Center Staffing',
     metaDescription:
-      'Offshore call center and contact center staffing in the Philippines, India and South Africa. 24/7 and overnight coverage at offshore economics, with employment overhead on us.',
+      'Offshore call center staffing in the Philippines, India and South Africa. 24/7 and overnight coverage at offshore economics, with employment overhead on us.',
     heroImage: '/images/internet-call-center-agents-row.jpg',
     hero: {
       eyebrow: 'Services',

@@ -32,7 +32,7 @@ import { alternatesFor } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'About Us — Call Center Staffing',
   description:
-    'Call Center Staffing focuses on making sure your call center has the right team with the right skills at the right time. Specialized recruiting for BPOs and contact centers across onshore, nearshore and offshore markets.',
+    'Specialised recruiting for BPOs and contact centers across onshore, nearshore and offshore markets — the right agents, with the right skills, at the right time.',
   alternates: alternatesFor('/about'),
   openGraph: {
     title: 'About Us — Call Center Staffing',

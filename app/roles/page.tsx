@@ -14,7 +14,7 @@ import { alternatesFor } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'Call Center Roles We Staff: Agents, QA, WFM & Ops',
   description:
-    'Every seat on the floor: inbound and outbound agents, bilingual agents, team leads, QA analysts, workforce management, trainers and operations managers. Trained, screened, deployed.',
+    'Every seat on the floor: inbound and outbound agents, bilingual agents, team leads, QA analysts, workforce management and trainers. Trained, screened, deployed.',
   alternates: alternatesFor('/roles'),
   openGraph: {
     title: 'Call Center Roles We Staff: Agents, QA, WFM & Ops',
