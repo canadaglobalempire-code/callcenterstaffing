@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Next 14's equivalent of expireTime: bound stale HTML to another five minutes.
+  experimental: { swrDelta: 300 },
   reactStrictMode: true,
   images: {
     formats: ['image/avif', 'image/webp'],

@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next';
 import { site } from '@/lib/site';
 
+export const revalidate = 300;
+
 export default function robots(): MetadataRoute.Robots {
   const hostname = new URL(site.url).hostname;
 

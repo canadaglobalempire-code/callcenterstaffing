@@ -9,6 +9,8 @@ import { POSTS } from '@/lib/content/posts';
 import { INSIGHTS } from '@/lib/content/insights';
 import { site } from '@/lib/site';
 
+export const revalidate = 300;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   // Bump this when a sitewide content revision ships (titles, H1s, copy).
   // Blog posts below carry their own real dates instead.

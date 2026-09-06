@@ -9,6 +9,8 @@ import { OrganizationSchema } from '@/components/seo/OrganizationSchema';
 import { WebsiteSchema } from '@/components/seo/WebsiteSchema';
 import { site } from '@/lib/site';
 
+export const revalidate = 300;
+
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
