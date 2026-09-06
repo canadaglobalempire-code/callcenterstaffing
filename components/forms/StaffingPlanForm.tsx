@@ -12,13 +12,14 @@ import { Recaptcha, type RecaptchaHandle } from './Recaptcha';
 
 const schema = z.object({
   name: z.string().min(2, 'Please enter your full name'),
-  company: z.string().min(2, 'Please enter your company'),
+  company: z.string().min(2, 'Enter your company').max(160).or(z.literal('')).optional(),
   website: z.string().optional(),
   email: z.string().email('Enter a valid company email'),
   phone: z
     .string()
-    .min(7, 'Enter a phone number we can reach you on')
-    .regex(/^[\d+\-().\s]+$/, 'Phone number contains invalid characters'),
+    .regex(/^[\d+\-().\s]{7,40}$/, 'Phone number contains invalid characters')
+    .or(z.literal(''))
+    .optional(),
   roleType: z.enum([
     'inbound-cs',
     'outbound-sales',
@@ -28,7 +29,10 @@ const schema = z.object({
     'multiple',
   ]),
   agentCount: z.enum(['1-9', '10-49', '50-199', '200-499', '500+']),
-  location: z.enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open']),
+  location: z
+    .enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open'])
+    .or(z.literal(''))
+    .optional(),
   notes: z.string().max(800).optional(),
 });
 
@@ -49,7 +53,7 @@ const AGENT_OPTIONS: { value: FormValues['agentCount']; label: string }[] = [
   { value: '200-499', label: '200–499 agents' },
   { value: '500+', label: '500+ agents' },
 ];
-const LOCATION_OPTIONS: { value: FormValues['location']; label: string }[] = [
+const LOCATION_OPTIONS: { value: NonNullable<FormValues['location']>; label: string }[] = [
   { value: 'onshore-us', label: 'Onshore (US / Canada)' },
   { value: 'nearshore-latam', label: 'Nearshore (Latin America)' },
   { value: 'offshore-asia', label: 'Offshore (Asia / Africa)' },
@@ -88,7 +92,7 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
     try {
       await submitLead({
         source: 'StaffingPlanForm',
-        subject: `New staffing plan request from ${values.name} (${values.company})`,
+        subject: `New staffing plan request from ${values.name}${values.company ? ` (${values.company})` : ''}`,
         renderedAt: renderedAtRef.current,
         companyWebsite: honeypotRef.current?.value,
         fields: {
@@ -112,6 +116,8 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
       setCaptchaToken(null);
     } catch (err) {
       setSubmitError(err instanceof Error ? err.message : 'Something went wrong. Try again.');
+      captchaRef.current?.reset();
+      setCaptchaToken(null);
     }
   };
 

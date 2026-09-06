@@ -12,7 +12,8 @@ export function NewsletterForm() {
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const fd = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const fd = new FormData(form);
     const email = String(fd.get('email') ?? '').trim();
     if (!email) return;
 
@@ -34,7 +35,7 @@ export function NewsletterForm() {
       });
       setStatus('done');
       renderedAtRef.current = Date.now();
-      e.currentTarget.reset();
+      form.reset();
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong.');
       setStatus('error');

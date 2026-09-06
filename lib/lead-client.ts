@@ -12,6 +12,8 @@ type SubmitLeadArgs = {
 
 type LeadResponse = {
   success?: boolean;
+  ready?: boolean;
+  payload?: Record<string, string>;
   message?: string;
 };
 
@@ -39,8 +41,20 @@ export async function submitLead({
   });
 
   const json = (await res.json()) as LeadResponse;
-  if (!res.ok || !json.success) {
+  if (!res.ok || !json.ready || !json.payload?.access_key) {
     throw new Error(json.message || 'Submission failed. Please try again.');
+  }
+
+  // SplitForms' public form identifier is protected by its domain allowlist.
+  // Only this browser request carries the visitor's genuine site Origin.
+  const delivery = await fetch('https://splitforms.com/api/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify(json.payload),
+  });
+  const result = (await delivery.json()) as LeadResponse;
+  if (!delivery.ok || result.success !== true) {
+    throw new Error(result.message || 'Submission failed. Please try again.');
   }
 
   return { success: true };

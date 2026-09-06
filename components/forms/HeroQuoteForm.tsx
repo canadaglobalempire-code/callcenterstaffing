@@ -13,14 +13,18 @@ import { Recaptcha, type RecaptchaHandle } from './Recaptcha';
 const schema = z.object({
   name: z.string().min(2, 'Enter your name'),
   email: z.string().email('Enter a valid work email'),
-  company: z.string().min(2, 'Enter your company'),
+  company: z.string().min(2, 'Enter your company').max(160).or(z.literal('')).optional(),
   website: z.string().optional(),
   phone: z
     .string()
-    .min(7, 'Enter a phone number')
-    .regex(/^[\d+\-().\s]+$/, 'Phone contains invalid characters'),
+    .regex(/^[\d+\-().\s]{7,40}$/, 'Phone contains invalid characters')
+    .or(z.literal(''))
+    .optional(),
   agentCount: z.enum(['1-9', '10-49', '50-199', '200-499', '500+']),
-  region: z.enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open']),
+  region: z
+    .enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open'])
+    .or(z.literal(''))
+    .optional(),
 });
 
 type FormValues = z.infer<typeof schema>;
@@ -32,7 +36,7 @@ const AGENT_OPTIONS: { value: FormValues['agentCount']; label: string }[] = [
   { value: '200-499', label: '200–499 agents' },
   { value: '500+', label: '500+ agents' },
 ];
-const REGION_OPTIONS: { value: FormValues['region']; label: string }[] = [
+const REGION_OPTIONS: { value: NonNullable<FormValues['region']>; label: string }[] = [
   { value: 'onshore-us', label: 'Onshore (US / Canada)' },
   { value: 'nearshore-latam', label: 'Nearshore (Latin America)' },
   { value: 'offshore-asia', label: 'Offshore (Asia / Africa)' },
@@ -78,7 +82,7 @@ export function HeroQuoteForm() {
     try {
       await submitLead({
         source: 'HeroQuoteForm',
-        subject: `New quote request from ${values.name} (${values.company})`,
+        subject: `New quote request from ${values.name}${values.company ? ` (${values.company})` : ''}`,
         renderedAt: renderedAtRef.current,
         companyWebsite: honeypotRef.current?.value,
         fields: {
@@ -100,6 +104,8 @@ export function HeroQuoteForm() {
       setCaptchaToken(null);
     } catch (err) {
       setSubmitError(err instanceof Error ? err.message : 'Something went wrong. Try again.');
+      captchaRef.current?.reset();
+      setCaptchaToken(null);
     }
   };
 

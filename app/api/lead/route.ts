@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { site } from '@/lib/site';
 
-const ENDPOINT = 'https://splitforms.com/api/submit';
 // SplitForms access keys are public form identifiers, not API secrets. Keep the
 // environment override so the form can be switched without a code deploy.
 const ACCESS_KEY =
@@ -38,28 +37,30 @@ const baseSchema = z.object({
 const heroFieldsSchema = z.object({
   name: z.string().min(2).max(120),
   email: z.string().email().max(180),
-  company: z.string().min(2).max(160),
+  company: z.string().min(2).max(160).optional(),
   website: z.string().max(220).optional(),
   phone: z
     .string()
     .min(7)
     .max(40)
-    .regex(/^[\d+\-().\s]+$/),
+    .regex(/^[\d+\-().\s]+$/)
+    .optional(),
   agentCount: z.enum(['1-9', '10-49', '50-199', '200-499', '500+']),
-  region: z.enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open']),
+  region: z.enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open']).optional(),
   'g-recaptcha-response': z.string().min(10).max(3000),
 });
 
 const staffingFieldsSchema = z.object({
   name: z.string().min(2).max(120),
-  company: z.string().min(2).max(160),
+  company: z.string().min(2).max(160).optional(),
   website: z.string().max(220).optional(),
   email: z.string().email().max(180),
   phone: z
     .string()
     .min(7)
     .max(40)
-    .regex(/^[\d+\-().\s]+$/),
+    .regex(/^[\d+\-().\s]+$/)
+    .optional(),
   roleType: z.enum([
     'inbound-cs',
     'outbound-sales',
@@ -69,7 +70,7 @@ const staffingFieldsSchema = z.object({
     'multiple',
   ]),
   agentCount: z.enum(['1-9', '10-49', '50-199', '200-499', '500+']),
-  location: z.enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open']),
+  location: z.enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open']).optional(),
   notes: z.string().max(800).optional(),
   'g-recaptcha-response': z.string().min(10).max(3000),
 });
@@ -132,7 +133,7 @@ function validateSubmitTiming(renderedAt: number) {
 }
 
 function json(
-  body: { success: boolean; message?: string },
+  body: { success?: false; ready?: true; payload?: Record<string, string>; message?: string },
   init?: { status?: number },
 ) {
   return NextResponse.json(body, {
@@ -143,7 +144,7 @@ function json(
   });
 }
 
-async function forwardToSplitforms(
+function prepareSplitformsPayload(
   accessKey: string,
   fields: Record<string, Primitive>,
   subject: string,
@@ -161,22 +162,7 @@ async function forwardToSplitforms(
     fd.set(key, String(value));
   }
 
-  const res = await fetch(ENDPOINT, {
-    method: 'POST',
-    body: fd,
-    headers: { Accept: 'application/json' },
-  });
-
-  const json = (await res.json()) as {
-    success?: boolean;
-    message?: string;
-  } & Record<string, unknown>;
-
-  if (!res.ok || !json.success) {
-    throw new Error(json.message || 'Submission failed. Please try again.');
-  }
-
-  return json;
+  return Object.fromEntries(fd.entries()) as Record<string, string>;
 }
 
 export async function POST(req: NextRequest) {
@@ -236,18 +222,17 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  try {
-    await forwardToSplitforms(
+  // Keep validation, timing, honeypot and rate checks here. The browser sends
+  // the checked payload so SplitForms sees its real allowed-domain Origin.
+  // "ready" is deliberately not delivery success.
+  return json({
+    ready: true,
+    payload: prepareSplitformsPayload(
       ACCESS_KEY,
       fields.data,
       parsed.data.subject,
       parsed.data.source,
       parsed.data.page,
-    );
-    return json({ success: true });
-  } catch (err) {
-    const message =
-      err instanceof Error ? err.message : 'Submission failed. Please try again.';
-    return json({ success: false, message }, { status: 502 });
-  }
+    ),
+  });
 }
