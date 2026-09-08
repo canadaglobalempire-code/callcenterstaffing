@@ -28,7 +28,7 @@ export function FAQ({ items, className }: FAQProps) {
               />
             </Accordion.Trigger>
           </Accordion.Header>
-          <Accordion.Content className="overflow-hidden data-[state=closed]:animate-none data-[state=open]:animate-fade-in">
+          <Accordion.Content forceMount className="overflow-hidden data-[state=closed]:hidden data-[state=open]:animate-fade-in">
             {/* data-faq-answer is targeted by the speakable schema — answer
                 engines pull from FAQ answers more than from body copy. */}
             <p

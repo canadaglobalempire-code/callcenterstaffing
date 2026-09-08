@@ -466,8 +466,7 @@ We embed with your client-services and ops leads, run weekly calibration with ea
     name: 'Contact Center Staffing',
     primaryKeyword: 'contact center staffing',
     metaTitle: 'Contact Center Staffing Agency',
-    metaDescription:
-      'Contact center staff augmentation and temporary call center staffing across voice, chat, email and social. Agents on our payroll; shortlist in 72 hrs.',
+    metaDescription: "Contact center staffing for voice, email and chat teams. Define agent skills, supervision, coverage and onboarding before requesting a staffing plan.",
     heroImage: '/images/cc-headset-desk.jpg',
     hero: {
       eyebrow: 'Services',
@@ -552,37 +551,17 @@ The trap most operators fall into is staffing voice-only and "redeploying to cha
     relatedLocations: ['mexico', 'philippines'],
     faqs: [
       {
-        q: 'How is contact center staffing different from call center staffing?',
-        a: 'Call center staffing screens primarily for voice. Contact center staffing screens per channel — voice, chat, email, social, async — because the QA bar grades each channel differently. Putting a voice-only agent on chat is the fastest way to wreck CSAT, and we screen against that risk from cohort one.',
+        "q": "What does contact center staffing add to my operation?",
+        "a": "Staffing adds agents to the operation you manage. Your brief defines the channels, tools, working hours and quality standards; it should also name who supervises the team and handles escalations. If you want a provider to own day-to-day service delivery as well as supply people, discuss a managed outsourcing model instead."
       },
       {
-        q: 'Can you staff chat-first or async-first floors?',
-        a: 'Yes. Roughly 35% of current contact center staffing placements are chat-first or async-first; voice is the escalation channel. We screen written fluency through a recorded chat role-play and grade against your per-channel QA bar.',
+        "q": "How do I prepare an omnichannel staffing brief?",
+        "a": "Break the workload down by phone, email, live chat and any other supported channel. Describe the skills each queue needs, the expected schedule and whether agents will switch channels during a shift. Include sample interactions and your quality scorecard so the selection process tests the actual work rather than relying on a generic customer-service interview."
       },
       {
-        q: 'How do you handle channel-mix drift in a cohort?',
-        a: 'Per-channel attrition is flagged at 30 days, channel by channel. If chat fluency is dropping faster than voice, we re-source the gap channel and rebalance the cohort before SLA misses. Drift is named in our 30-day flag, not surfaced at quarter-end.',
-      },
-      {
-        q: 'Do you place agents who can flex across channels in a single shift?',
-        a: 'Yes — most modern operators want this. We screen for context-switching tolerance and async patience explicitly. About 60% of current placements are blended-channel from day one of nesting; the rest are channel-specialised.',
-      },
-      {
-        q: 'What does a contact center staffing agency do?',
-        a: "A contact center staffing agency sources, screens and supplies trained agents for omnichannel support teams — voice, chat, email, social and async. The agents stay on the agency's payroll, so you avoid the HR, recruiting and training burden and pay only for the hours worked. We screen each candidate per channel against your QA scorecard so a voice hire is not quietly redeployed to chat.",
-      },
-      {
-        q: 'How much does contact center staffing cost?',
-        a: 'You pay a single hourly rate per agent for hours worked — no separate recruiting fee, severance or training overhead, because agents stay on our payroll. Rates depend on delivery geography (onshore, nearshore or offshore), channel mix and language requirements. Engagements are month-to-month, and if an agent leaves or misses the bar inside 90 days we re-source and re-place at no extra fee.',
-      },
-      {
-        q: 'How fast can you staff an omnichannel contact center team?',
-        a: 'Most briefs get a first qualified shortlist within about 72 hours, and a screened cohort can be deployed in days because our bench of 100,000+ trained agents is kept current. We screen voice, chat and async fluency before placement so agents are channel-ready on day one of nesting rather than ramped onto a channel they were never tested on.',
-      },
-      {
-        q: 'Do you provide temporary call center staffing and staff augmentation?',
-        a: 'Yes. Temporary call center staffing and contact center staff augmentation both keep agents on our payroll while they work inside your operation, on your systems and scorecard. Engagements are month-to-month, you pay only for hours worked, and you can scale the cohort up or down without adding permanent headcount.',
-      },
+        "q": "What should I confirm in a contact center staffing quote?",
+        "a": "Ask for the billing basis, expected hours, training arrangements, supervisor responsibilities and any minimum commitment. Confirm what happens when workload changes or an agent needs replacing. Agree system access, onboarding ownership and a start date before adding a cohort; a shortlist of candidates is not the same as a fully trained live team."
+      }
     ],
   },
   {
@@ -835,8 +814,7 @@ Done badly, outsourced call center staffing creates a tug-of-war between brand a
     name: 'Nearshore Call Center Staffing',
     primaryKeyword: 'nearshore call center staffing',
     metaTitle: 'Nearshore Contact Center Staffing & Outsourcing',
-    metaDescription:
-      'Nearshore contact center staffing across Mexico, Colombia and Costa Rica. Bilingual agents on US business hours, employed by us, working inside your operation.',
+    metaDescription: "Nearshore call center staffing for teams needing time-zone overlap and language support. Compare location, agent skills, schedules and total staffing costs.",
     heroImage: '/images/cc-agent-monitor.jpg',
     hero: {
       eyebrow: 'Services',
@@ -927,37 +905,17 @@ Reporting is to your QA scorecard with bilingual fluency scored at the level you
     relatedLocations: ['mexico'],
     faqs: [
       {
-        q: 'Which nearshore call center markets do you cover?',
-        a: "Largest active footprint is Mexico — Guadalajara, Mexico City, Monterrey, Tijuana, Querétaro. We also place in Colombia (Bogotá, Medellín) and Costa Rica (San José). El Salvador and the Dominican Republic in select engagements. Tell us your forecast and we'll tell you our pipeline depth per city.",
+        "q": "When is nearshore staffing a useful fit?",
+        "a": "Consider nearshore staffing when your customer-contact hours benefit from overlap with nearby countries and you need agents who can work within your existing management routine. Location is only one factor: compare language skills, queue experience and the actual shift schedule. Choose the team against the work rather than assuming every nearby market offers the same capability."
       },
       {
-        q: 'How is bilingual fluency screened?',
-        a: 'Recorded voice and written role-plays scored at level by senior account managers. We use a standard CEFR-aligned scale (B2+, C1) per queue requirement. Self-reported fluency is never accepted as an assignment criterion. Roughly 70% of self-reported "fluent" candidates fail to score above B1 in our screen.',
+        "q": "How should I compare nearshore locations?",
+        "a": "Start with the hours and languages your customers need, then review candidate availability, management access and your organisation's requirements for data handling. Ask where agents will work and whether that location can change. Compare the proposed team and operating arrangements, not a country-level claim about quality or a headline hourly rate."
       },
       {
-        q: 'What is the wage benchmark for a nearshore call center agent?',
-        a: 'Wages vary by city, language and queue. Guadalajara entry-level bilingual agent benchmarks moved roughly 18% upward between 2022 and 2024; Mexico City senior bilingual is meaningfully higher. We share city-level wage benchmarks in every staffing plan so finance can model accurately.',
-      },
-      {
-        q: 'How does USMCA affect nearshore call center contracting?',
-        a: 'USMCA gives US operators IP, labor and dispute-resolution terms in Mexico that align closely with US contracting norms. Our in-market legal partners structure agency-of-record and direct-hire contracts under USMCA — your legal team usually recognises the framework on first read.',
-      },
-      {
-        q: 'Can you run a multi-city nearshore engagement with one program lead?',
-        a: 'Yes. The largest active nearshore engagement runs continuous recruiting across three Mexican cities with one embedded program lead. Multi-country (Mexico + Colombia + Costa Rica) is supported with a regional lead and per-country recruiters.',
-      },
-      {
-        q: 'How much does nearshore call center staffing cost?',
-        a: 'You pay only for hours actually worked — agents stay on our payroll, so there is no separate recruiting fee, HR overhead or training burden. Hourly rates vary by city, language and queue; for example, Guadalajara entry-level bilingual benchmarks moved roughly 18% upward between 2022 and 2024, while Mexico City senior bilingual runs meaningfully higher. We share city-level wage benchmarks in every staffing plan so finance can model accurately.',
-      },
-      {
-        q: 'How fast can nearshore agents start?',
-        a: "Most nearshore briefs get a first qualified bilingual shortlist inside 72 hours, drawn from an active bench of 100,000+ trained agents across Mexico, Colombia, Costa Rica and El Salvador. Engagements are month-to-month, and if any agent isn't the right fit you can swap them free.",
-      },
-      {
-        q: 'Is nearshore better than offshore for a US contact center?',
-        a: 'Nearshore wins when you need CT/ET time-zone overlap so agents handle live US peak hours without graveyard shifts, deeper bilingual fluency, or USMCA-aligned IP and labor terms your legal team recognises. Offshore (Philippines, India) is usually more cost-efficient for follow-the-sun or after-hours queues. We staff all three and will recommend the fit your forecast and compliance bar actually call for.',
-      },
+        "q": "What belongs in a nearshore staffing request?",
+        "a": "Share the number of roles, channels, languages, preferred time zone, shift pattern and intended start date. Include your interview process, training plan and supervision arrangements. Request a quote that separates the staffing scope from any additional management or technology services so you can compare nearshore, onshore and offshore options on the same basis."
+      }
     ],
   },
   {
@@ -1225,8 +1183,7 @@ Compliance-cleared roles get specialised pipelines. NMLS, state-insurance, HIPAA
     name: 'Bilingual Call Center Staffing',
     primaryKeyword: 'bilingual call center staffing',
     metaTitle: 'Bilingual Call Center Staffing',
-    metaDescription:
-      'Hire bilingual call center agents with fluency tested to level, not self-reported. Spanish, Portuguese, Tagalog & more. Get a tested shortlist in 72 hrs.',
+    metaDescription: "Bilingual call center staffing for customer support teams. Specify language pairs, voice and writing skills, coverage hours and role-specific assessments.",
     heroImage: '/images/agent-female-office.jpg',
     hero: {
       eyebrow: 'Services',
@@ -1316,37 +1273,17 @@ Where most vendors trust the resume, we trust the recording. That is why operato
     relatedLocations: ['mexico', 'philippines'],
     faqs: [
       {
-        q: 'How is fluency scored?',
-        a: 'A structured rubric scored by a senior bilingual recruiter, mapped to CEFR (A1–C2) for European languages and ILR (0–5) for US-government-style rigor. Most CX queues require B2 or C1 CEFR — equivalent to ILR 3 / "professional working proficiency." Self-reported fluency is never accepted as a screen.',
+        "q": "How should bilingual agents be assessed for my support queue?",
+        "a": "Test the work in both languages. A voice role needs clear conversation and listening skills; email and chat roles also need accurate, natural writing. Supply sample interactions, terminology and your quality standards so an assessment reflects the customers the agent will support. Conversational fluency alone does not establish readiness for every specialist queue."
       },
       {
-        q: 'Which language pairs do you actively recruit?',
-        a: 'English-Spanish (largest pipeline, sourced from US bilingual markets, Mexico and Colombia), English-Portuguese (Brazil), English-Tagalog (Philippines), English-French (Canada and Mauritius), and on demand English-German, English-Mandarin and English-Cantonese. Other pairs available with 30–60 day pre-build.',
+        "q": "What affects bilingual staffing costs and availability?",
+        "a": "The language pair, proficiency needed, location, shift pattern and subject-matter experience all affect the available candidate pool and proposed rate. Ask for a quote for your exact requirements and confirm the assessment and training included. A universal language premium or a fixed delivery time can hide meaningful differences between roles."
       },
       {
-        q: 'Do bilingual placements cost more than monolingual?',
-        a: 'Yes — wage premium for verified B2/C1 fluency typically runs 15–25% above monolingual market rate, with regional variance. The trade-off is CSAT: self-reported "bilingual" hires drop CSAT 8–14 points on second-language queues. The wage premium pays for itself by month two on most queues.',
-      },
-      {
-        q: 'What happens if language quality drifts after placement?',
-        a: 'The 90-day score-card reports per language. If quality drifts in either language at the 30/60/90 review, we re-source and re-place at no additional fee. The clause is written into every SOW.',
-      },
-      {
-        q: 'Can you staff trilingual or multilingual queues?',
-        a: 'Yes. Trilingual placements (English + Spanish + Portuguese is the most common combination) are sourced primarily from Brazil, Argentina and Mexico. Pre-build timeline runs 30–45 days vs. 14–21 for bilingual. Every language is scored to level independently.',
-      },
-      {
-        q: 'How much does bilingual call center staffing cost?',
-        a: 'You pay only for hours worked, and bilingual agents carry a wage premium of roughly 15-25% over monolingual market rate for verified B2/C1 fluency, with regional variance by source market. There are no recruiting, training or HR fees — agents stay on our payroll. Because self-reported bilingual hires drop CSAT 8-14 points on second-language queues, the premium typically pays for itself by month two.',
-      },
-      {
-        q: 'Where do your bilingual agents work — onshore, nearshore or offshore?',
-        a: 'All three, selected by language pair, time zone and wage benchmark. English-Spanish is sourced from US bilingual markets (Miami, San Antonio, Los Angeles, Phoenix), nearshore Mexico (Guadalajara, Monterrey) and Colombia (Bogotá, Medellín); English-Portuguese from Brazil; English-Tagalog from the Philippines (Manila, Cebu); and English-French from Canada and Mauritius.',
-      },
-      {
-        q: 'How fast can you deliver a bilingual agent shortlist?',
-        a: 'A first qualified, tested and recorded bilingual shortlist lands in about 72 hours for established language pairs. Less common pairs need a 30-60 day in-market pre-build. Every candidate is scored on a structured rubric in both languages and shipped with the recording, so you hear fluency before you hire.',
-      },
+        "q": "Can one bilingual agent cover two language queues?",
+        "a": "A blended role needs a schedule and routing plan that account for demand in both languages. Specify whether the agent will switch between voice, email and chat as well as languages, and agree how performance will be reviewed in each queue. Include peak periods in the brief so the same person is not counted as full coverage for two simultaneous workloads."
+      }
     ],
   },
   {
