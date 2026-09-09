@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter, Inter_Tight } from 'next/font/google';
 import Script from 'next/script';
+import { ATTRIBUTION_SNIPPET } from '@/lib/attribution';
 import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -106,6 +107,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <StickyCTA />
         <OrganizationSchema />
         <WebsiteSchema />
+        <Script id="lead-attribution" strategy="beforeInteractive">
+          {ATTRIBUTION_SNIPPET}
+        </Script>
         <Script id="ms-clarity" strategy="afterInteractive">
           {`(function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};

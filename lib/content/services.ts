@@ -81,7 +81,7 @@ export const SERVICES: Service[] = [
       { metric: 'Your scorecard', description: 'Agents screened against your QA bar, not generic CX criteria' },
     ],
     relatedRoles: ['inbound-customer-service', 'bilingual-agents', 'team-leads-supervisors', 'qa-analysts'],
-    relatedLocations: ['united-states', 'mexico', 'colombia', 'philippines'],
+    relatedLocations: ['united-states', 'mexico', 'colombia', 'philippines', 'united-kingdom', 'india', 'ireland'],
     faqs: [
       {
         q: 'What is customer service outsourcing?',
@@ -189,7 +189,7 @@ export const SERVICES: Service[] = [
       { metric: 'Your CRM', description: 'Agents work in your systems — pipeline and recordings stay with you' },
     ],
     relatedRoles: ['outbound-sales-agents', 'inbound-customer-service', 'team-leads-supervisors'],
-    relatedLocations: ['united-states', 'mexico', 'colombia', 'philippines'],
+    relatedLocations: ['united-states', 'mexico', 'colombia', 'philippines', 'canada', 'united-kingdom'],
     faqs: [
       {
         q: 'What is inside sales outsourcing?',
@@ -301,7 +301,7 @@ Where most vendors hand you a stack of resumes and walk away, we report against 
       'qa-analysts',
       'workforce-management',
     ],
-    relatedLocations: ['mexico', 'philippines'],
+    relatedLocations: ['mexico', 'philippines', 'united-states', 'india', 'united-kingdom'],
     faqs: [
       {
         q: 'How fast can call center recruitment deliver a first cohort?',
@@ -429,7 +429,7 @@ We embed with your client-services and ops leads, run weekly calibration with ea
       'workforce-management',
       'operations-managers',
     ],
-    relatedLocations: ['mexico', 'philippines'],
+    relatedLocations: ['mexico', 'philippines', 'india', 'egypt'],
     faqs: [
       {
         q: 'How is BPO recruitment different from captive recruiting?',
@@ -548,7 +548,7 @@ The trap most operators fall into is staffing voice-only and "redeploying to cha
       'workforce-management',
       'trainers',
     ],
-    relatedLocations: ['mexico', 'philippines'],
+    relatedLocations: ['mexico', 'philippines', 'united-kingdom', 'canada'],
     faqs: [
       {
         "q": "What does contact center staffing add to my operation?",
@@ -651,7 +651,7 @@ Done badly, a customer service staffing agency hands you resumes and walks away.
       'qa-analysts',
       'trainers',
     ],
-    relatedLocations: ['mexico', 'philippines'],
+    relatedLocations: ['mexico', 'philippines', 'united-states', 'jamaica'],
     faqs: [
       {
         q: 'How is a specialised customer service staffing agency different from a generalist staffing firm?',
@@ -777,7 +777,7 @@ Done badly, outsourced call center staffing creates a tug-of-war between brand a
       'team-leads-supervisors',
       'qa-analysts',
     ],
-    relatedLocations: ['mexico', 'philippines'],
+    relatedLocations: ['mexico', 'philippines', 'india', 'united-kingdom'],
     faqs: [
       {
         q: 'Are you a BPO?',
@@ -902,7 +902,7 @@ Reporting is to your QA scorecard with bilingual fluency scored at the level you
       'qa-analysts',
       'workforce-management',
     ],
-    relatedLocations: ['mexico'],
+    relatedLocations: ['mexico', 'colombia', 'jamaica', 'dominican-republic', 'guatemala', 'costa-rica'],
     faqs: [
       {
         "q": "When is nearshore staffing a useful fit?",
@@ -1012,7 +1012,7 @@ The trap most operators fall into with offshore call center hiring is treating t
       'workforce-management',
       'operations-managers',
     ],
-    relatedLocations: ['philippines'],
+    relatedLocations: ['philippines', 'india', 'egypt', 'kenya', 'vietnam', 'poland'],
     faqs: [
       {
         q: 'Which offshore call center markets do you cover?',
@@ -1142,7 +1142,7 @@ Compliance-cleared roles get specialised pipelines. NMLS, state-insurance, HIPAA
       'workforce-management',
       'operations-managers',
     ],
-    relatedLocations: [],
+    relatedLocations: ['united-states', 'canada', 'phoenix-az', 'tampa-fl', 'atlanta-ga', 'charlotte-nc'],
     faqs: [
       {
         q: 'When does onshore call center staffing make sense vs. nearshore or offshore?',
@@ -1270,7 +1270,7 @@ Where most vendors trust the resume, we trust the recording. That is why operato
       'team-leads-supervisors',
       'qa-analysts',
     ],
-    relatedLocations: ['mexico', 'philippines'],
+    relatedLocations: ['mexico', 'colombia', 'dominican-republic', 'guatemala', 'canada', 'philippines', 'united-arab-emirates'],
     faqs: [
       {
         "q": "How should bilingual agents be assessed for my support queue?",
@@ -1373,7 +1373,7 @@ Agents work inside your tools, knowledge base and QA program. We supply and empl
       'qa-analysts',
       'workforce-management',
     ],
-    relatedLocations: ['mexico', 'philippines', 'south-africa'],
+    relatedLocations: ['mexico', 'philippines', 'south-africa', 'india', 'vietnam', 'singapore'],
     faqs: [
       {
         q: 'Can you provide true 24/7 customer support staffing?',

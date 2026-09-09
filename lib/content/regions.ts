@@ -708,6 +708,14 @@ export const REGIONS: Region[] = [
       {
         "q": "Can Australian agents cover after-hours and New Zealand customers?",
         "a": "Australian teams cover the full local business day across AWST, ACST and AEST/AEDT, and the Tasman overlap means the same program can serve New Zealand customers on NZST without a separate site. For true 24/7 coverage we pair Australian daytime shifts with our offshore Asian teams in a follow-the-sun model, so calls are answered around the clock."
+      },
+      {
+        "q": "How do Modern Award obligations work on a staffed placement?",
+        "a": "Agents we place in Australia are employed and paid by us against the applicable Modern Award and classification, including casual loading and penalty rates where they apply. We carry that employer obligation, so a seasonal ramp does not become a redundancy conversation later. Your team should confirm which award and classification your work falls under, because that is what drives the rate we quote."
+      },
+      {
+        "q": "Can offshore agents handle Australian customers convincingly?",
+        "a": "On general CX queues, consistently yes, provided we screen for Australian idiom and expectation rather than accent neutrality alone. On complaint-stage, financial-advice and vulnerable-customer conversations the failure rate rises and we recommend staying onshore. Manila is also two to three hours behind AEST, so Australian buyers get an offshore floor on a normal day shift with no night-shift premium, which is a structural advantage US buyers never get from the same market. Anyone telling you offshore works equally well for every queue is selling seats."
       }
     ]
   },

@@ -1,5 +1,7 @@
 'use client';
 
+import { getAttribution } from '@/lib/attribution';
+
 type Primitive = string | number | boolean | undefined;
 
 type SubmitLeadArgs = {
@@ -25,6 +27,7 @@ export async function submitLead({
   fields,
 }: SubmitLeadArgs): Promise<{ success: true }> {
   const page = typeof window !== 'undefined' ? window.location.pathname : '';
+  const attribution = getAttribution();
   const res = await fetch('/api/lead', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
@@ -34,6 +37,7 @@ export async function submitLead({
       page,
       renderedAt,
       companyWebsite,
+      attribution,
       fields: Object.fromEntries(
         Object.entries(fields).filter(([, value]) => value !== undefined && value !== ''),
       ),

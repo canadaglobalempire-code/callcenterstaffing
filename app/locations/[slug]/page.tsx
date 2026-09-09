@@ -15,6 +15,9 @@ import {
   CheckCircle2,
   Briefcase,
   CalendarClock,
+  Banknote,
+  Scale,
+  ListChecks,
 } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
 import { Section } from '@/components/layout/Section';
@@ -29,6 +32,8 @@ import { ServiceSchema } from '@/components/seo/ServiceSchema';
 import { FAQSchema } from '@/components/seo/FAQSchema';
 import { REGIONS, getRegion } from '@/lib/content/regions';
 import { LOCATIONS, getLocation } from '@/lib/content/locations';
+import { getLocationDetail } from '@/lib/content/locations-detail';
+import { getService } from '@/lib/content/services';
 import { getRole } from '@/lib/content/roles';
 import { site } from '@/lib/site';
 import { alternatesFor, socialImages } from '@/lib/seo';
@@ -356,6 +361,11 @@ const SHORE_LABEL: Record<Location['region'], string> = {
 };
 
 function LocationView({ location }: { location: Location }) {
+  const detail = getLocationDetail(location.slug);
+  const relatedServices = (detail?.relatedServices ?? [])
+    .map((slug) => getService(slug))
+    .filter((svc): svc is NonNullable<typeof svc> => Boolean(svc));
+
   const crumbs = [
     { label: 'Home', href: '/' },
     { label: 'Locations', href: '/locations' },
@@ -491,6 +501,40 @@ function LocationView({ location }: { location: Location }) {
 
       <TrustBar />
 
+      {/* INTRO */}
+      {detail?.intro && (
+        <Section background="white">
+          <Container>
+            <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
+              <div className="lg:col-span-7">
+                <Eyebrow>Staffing in {location.name}</Eyebrow>
+                <Heading level={2} display="l" className="mt-5 max-w-2xl">
+                  What staffing {location.name} actually involves.
+                </Heading>
+                <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-navy-700">
+                  <p>{detail.intro}</p>
+                  {detail.introSecondary && <p>{detail.introSecondary}</p>}
+                </div>
+              </div>
+
+              {detail.bodyImages?.[0] && (
+                <div className="lg:col-span-5">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-navy-950/8">
+                    <Image
+                      src={detail.bodyImages[0].src}
+                      alt={detail.bodyImages[0].alt}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 40vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              )}
+            </div>
+          </Container>
+        </Section>
+      )}
+
       {/* WHY HERE + SNAPSHOT */}
       <Section background="white">
         <Container>
@@ -585,6 +629,124 @@ function LocationView({ location }: { location: Location }) {
         </Container>
       </Section>
 
+      {/* COST BENCHMARK */}
+      {detail?.costBenchmark && (
+        <Section background="white">
+          <Container>
+            <div className="mb-10 grid items-end gap-10 lg:grid-cols-12 lg:gap-16">
+              <div className="lg:col-span-7">
+                <Eyebrow>Cost benchmarks</Eyebrow>
+                <Heading level={2} display="l" className="mt-5 max-w-2xl">
+                  What agents in {location.name} actually cost.
+                </Heading>
+              </div>
+              <p className="lg:col-span-5 text-body-l text-navy-700 max-w-prose">
+                {detail.costBenchmark.summary}
+              </p>
+            </div>
+
+            <div className="overflow-x-auto rounded-3xl border border-navy-950/8">
+              <table className="w-full min-w-[38rem] border-collapse text-left">
+                <thead>
+                  <tr className="bg-ink-50">
+                    <th className="px-6 py-4 font-display text-[13px] font-bold uppercase tracking-[0.12em] text-navy-700">
+                      Role
+                    </th>
+                    <th className="px-6 py-4 font-display text-[13px] font-bold uppercase tracking-[0.12em] text-navy-700">
+                      Indicative loaded cost
+                    </th>
+                    <th className="px-6 py-4 font-display text-[13px] font-bold uppercase tracking-[0.12em] text-navy-700">
+                      Notes
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {detail.costBenchmark.rows.map((row) => (
+                    <tr key={row.role} className="border-t border-navy-950/8 bg-white">
+                      <td className="px-6 py-4 font-display text-[15px] font-bold tracking-tight text-navy-950">
+                        {row.role}
+                      </td>
+                      <td className="whitespace-nowrap px-6 py-4 text-[15px] font-bold text-accent-500">
+                        {row.band}
+                      </td>
+                      <td className="px-6 py-4 text-[13px] leading-relaxed text-navy-700">
+                        {row.note}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="mt-6 flex items-start gap-4 rounded-2xl border border-navy-950/8 bg-ink-50 px-6 py-5">
+              <span className="grid h-10 w-10 flex-none place-items-center rounded-xl bg-accent-500/10 text-accent-500">
+                <Banknote className="h-5 w-5" strokeWidth={2} />
+              </span>
+              <p className="text-[13px] leading-relaxed text-navy-700">
+                {detail.costBenchmark.disclaimer}
+              </p>
+            </div>
+          </Container>
+        </Section>
+      )}
+
+      {/* HOW WE HIRE HERE */}
+      {detail?.hiringProcess && detail.hiringProcess.length > 0 && (
+        <Section background="neutral">
+          <Container>
+            <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
+              <div className="lg:col-span-5">
+                <Eyebrow>How we hire here</Eyebrow>
+                <Heading level={2} display="l" className="mt-5">
+                  The {location.name} playbook.
+                </Heading>
+                <p className="mt-6 text-[15px] leading-relaxed text-navy-700">
+                  Every market rewards a different sourcing decision. These are the ones that
+                  actually move retention and quality in {location.name} — not a generic recruiting
+                  process with the country name swapped in.
+                </p>
+                {detail.bodyImages?.[1] && (
+                  <div className="relative mt-8 aspect-[4/3] overflow-hidden rounded-3xl border border-navy-950/8">
+                    <Image
+                      src={detail.bodyImages[1].src}
+                      alt={detail.bodyImages[1].alt}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 40vw"
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+              </div>
+
+              <div className="lg:col-span-7">
+                <ul className="grid gap-5">
+                  {detail.hiringProcess.map((step, i) => (
+                    <li
+                      key={step.title}
+                      className="relative rounded-3xl border border-navy-950/8 bg-white p-7 transition-all hover:border-accent-500/40 hover:-translate-y-0.5 hover:shadow-md"
+                    >
+                      <div
+                        aria-hidden
+                        className="absolute right-5 top-3 select-none font-display text-[3.5rem] leading-none text-accent-500/15"
+                      >
+                        {String(i + 1).padStart(2, '0')}
+                      </div>
+                      <span className="inline-flex items-center gap-2 rounded-full bg-accent-500/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-accent-500">
+                        Step {i + 1}
+                      </span>
+                      <h3 className="mt-5 max-w-xl font-display text-base font-bold tracking-tight text-navy-950">
+                        {step.title}
+                      </h3>
+                      <p className="mt-2 text-[13px] leading-relaxed text-navy-700">{step.body}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </Container>
+        </Section>
+      )}
+
       {/* ROLES WE STAFF HERE */}
       {roles.length > 0 && (
         <Section background="white">
@@ -637,6 +799,150 @@ function LocationView({ location }: { location: Location }) {
                 </div>
               </div>
             )}
+          </Container>
+        </Section>
+      )}
+
+      {/* COMPLIANCE */}
+      {detail?.compliance && detail.compliance.length > 0 && (
+        <Section background="neutral">
+          <Container>
+            <div className="mb-10 grid items-end gap-10 lg:grid-cols-12 lg:gap-16">
+              <div className="lg:col-span-7">
+                <Eyebrow>Compliance &amp; risk</Eyebrow>
+                <Heading level={2} display="l" className="mt-5 max-w-2xl">
+                  What your legal team will ask about {location.name}.
+                </Heading>
+              </div>
+              <p className="lg:col-span-5 text-body-l text-navy-700 max-w-prose">
+                We staff to whatever constraints your compliance team sets. What follows is the
+                landscape, not legal advice — the regulatory position stays yours.
+              </p>
+            </div>
+
+            <ul className="grid gap-5 sm:grid-cols-2">
+              {detail.compliance.map((item) => (
+                <li
+                  key={item.title}
+                  className="rounded-3xl border border-navy-950/8 bg-white p-7 transition-all hover:border-accent-500/40 hover:-translate-y-0.5 hover:shadow-md"
+                >
+                  <span className="grid h-10 w-10 place-items-center rounded-xl bg-accent-500/10 text-accent-500">
+                    <ShieldCheck className="h-5 w-5" strokeWidth={2} />
+                  </span>
+                  <h3 className="mt-5 font-display text-base font-bold tracking-tight text-navy-950">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-[13px] leading-relaxed text-navy-700">{item.body}</p>
+                </li>
+              ))}
+            </ul>
+          </Container>
+        </Section>
+      )}
+
+      {/* COMPARISON */}
+      {detail?.comparison && (
+        <Section background="white">
+          <Container>
+            <div className="mb-10 grid items-end gap-10 lg:grid-cols-12 lg:gap-16">
+              <div className="lg:col-span-7">
+                <Eyebrow>Honest comparison</Eyebrow>
+                <Heading level={2} display="l" className="mt-5 max-w-2xl">
+                  {location.name} vs {detail.comparison.alternativeName}.
+                </Heading>
+              </div>
+              <p className="lg:col-span-5 text-body-l text-navy-700 max-w-prose">
+                {detail.comparison.summary}
+              </p>
+            </div>
+
+            <div className="overflow-x-auto rounded-3xl border border-navy-950/8">
+              <table className="w-full min-w-[38rem] border-collapse text-left">
+                <thead>
+                  <tr className="bg-ink-50">
+                    <th className="px-6 py-4 font-display text-[13px] font-bold uppercase tracking-[0.12em] text-navy-700">
+                      Factor
+                    </th>
+                    <th className="px-6 py-4 font-display text-[13px] font-bold uppercase tracking-[0.12em] text-accent-500">
+                      {location.name}
+                    </th>
+                    <th className="px-6 py-4 font-display text-[13px] font-bold uppercase tracking-[0.12em] text-navy-700">
+                      {detail.comparison.alternativeName}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {detail.comparison.rows.map((row) => (
+                    <tr key={row.factor} className="border-t border-navy-950/8 bg-white">
+                      <td className="px-6 py-4 font-display text-[14px] font-bold tracking-tight text-navy-950">
+                        {row.factor}
+                      </td>
+                      <td className="px-6 py-4 text-[13px] leading-relaxed text-navy-700">
+                        {row.here}
+                      </td>
+                      <td className="px-6 py-4 text-[13px] leading-relaxed text-navy-700">
+                        {row.alternative}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="mt-6 flex items-start gap-4 rounded-2xl border border-navy-950/8 bg-ink-50 px-6 py-5">
+              <span className="grid h-10 w-10 flex-none place-items-center rounded-xl bg-accent-500/10 text-accent-500">
+                <Scale className="h-5 w-5" strokeWidth={2} />
+              </span>
+              <p className="text-[13px] leading-relaxed text-navy-700">
+                Not sure which side you fall on? Tell us the queue, the volume and the compliance
+                constraints. A senior recruiter will say which market fits — including when the
+                answer is the other column.
+              </p>
+            </div>
+          </Container>
+        </Section>
+      )}
+
+      {/* RELATED SERVICES */}
+      {relatedServices.length > 0 && (
+        <Section background="neutral">
+          <Container>
+            <div className="mb-10 grid items-end gap-10 lg:grid-cols-12 lg:gap-16">
+              <div className="lg:col-span-7">
+                <Eyebrow>How we staff it</Eyebrow>
+                <Heading level={2} display="l" className="mt-5 max-w-2xl">
+                  Services we run in {location.name}.
+                </Heading>
+              </div>
+              <p className="lg:col-span-5 text-body-l text-navy-700 max-w-prose">
+                The staffing model matters as much as the market. These are the engagements we run
+                here most often.
+              </p>
+            </div>
+
+            <ul className="grid gap-4 sm:grid-cols-2">
+              {relatedServices.map((svc) => (
+                <li key={svc.slug}>
+                  <Link
+                    href={`/services/${svc.slug}`}
+                    className="group flex h-full items-start gap-4 rounded-3xl border border-navy-950/8 bg-white p-6 transition-all hover:border-accent-500/40 hover:-translate-y-0.5 hover:shadow-md"
+                  >
+                    <span className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-accent-500/10 text-accent-500">
+                      <ListChecks className="h-5 w-5" strokeWidth={2} />
+                    </span>
+                    <div className="flex-1">
+                      <div className="font-display text-base font-bold tracking-tight text-navy-950 transition-colors group-hover:text-accent-500">
+                        {svc.name}
+                      </div>
+                      <div className="mt-1 text-[13px] leading-snug text-navy-700">
+                        {svc.hero.eyebrow}
+                      </div>
+                    </div>
+                    <ArrowRight className="h-4 w-4 flex-none text-navy-700/40 transition-all group-hover:translate-x-1 group-hover:text-accent-500" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </Container>
         </Section>
       )}

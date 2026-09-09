@@ -1,4 +1,7 @@
 import type { Location } from './types';
+import { REGIONS } from './regions';
+import { BUYER_MARKET_LOCATIONS } from './locations-buyer';
+import { SUPPLY_MARKET_LOCATIONS } from './locations-supply';
 
 export const LOCATIONS: Location[] = [
   {
@@ -802,7 +805,20 @@ export const LOCATIONS: Location[] = [
       },
     ],
   },
+  ...BUYER_MARKET_LOCATIONS,
+  ...SUPPLY_MARKET_LOCATIONS,
 ];
+
+// /locations/[slug] resolves REGIONS before LOCATIONS, so a slug present in
+// both silently renders the region and orphans the location — while the
+// sitemap still lists the URL. Fail the build instead of shipping that.
+const REGION_SLUGS = new Set(REGIONS.map((r) => r.slug));
+const conflicting = LOCATIONS.filter((l) => REGION_SLUGS.has(l.slug)).map((l) => l.slug);
+if (conflicting.length > 0) {
+  throw new Error(
+    `Location slug(s) collide with a region slug and would be unreachable: ${conflicting.join(', ')}`,
+  );
+}
 
 export function getLocation(slug: string): Location | undefined {
   return LOCATIONS.find((l) => l.slug === slug);

@@ -25,14 +25,48 @@ type Primitive = string | number | boolean;
 
 const sourceSchema = z.enum(['HeroQuoteForm', 'StaffingPlanForm', 'NewsletterForm']);
 
+// First-touch attribution captured client-side. Every field is optional and
+// length-capped: it is untrusted visitor input (a referrer or utm_* value is
+// attacker-controllable), so it is validated like any other form field and
+// only ever forwarded as a string into the notification.
+const attributionSchema = z
+  .object({
+    landingPath: z.string().max(300),
+    referrer: z.string().max(300),
+    utmSource: z.string().max(300),
+    utmMedium: z.string().max(300),
+    utmCampaign: z.string().max(300),
+    utmTerm: z.string().max(300),
+    utmContent: z.string().max(300),
+    clickId: z.string().max(300),
+    landedAt: z.string().max(300),
+  })
+  .partial();
+
 const baseSchema = z.object({
   source: sourceSchema,
   subject: z.string().min(1).max(180),
   page: z.string().max(200).optional(),
   renderedAt: z.number().finite(),
   companyWebsite: z.string().max(0).optional(),
+  attribution: attributionSchema.optional(),
   fields: z.record(z.union([z.string(), z.number(), z.boolean()])),
 });
+
+type Attribution = z.infer<typeof attributionSchema>;
+
+// Labels the notification email shows. Keys mirror attributionSchema.
+const ATTRIBUTION_LABELS: Record<keyof Attribution, string> = {
+  landingPath: 'landing_page',
+  referrer: 'referrer',
+  utmSource: 'utm_source',
+  utmMedium: 'utm_medium',
+  utmCampaign: 'utm_campaign',
+  utmTerm: 'utm_term',
+  utmContent: 'utm_content',
+  clickId: 'click_id',
+  landedAt: 'landed_at',
+};
 
 const heroFieldsSchema = z.object({
   name: z.string().min(2).max(120),
@@ -150,12 +184,20 @@ function prepareSplitformsPayload(
   subject: string,
   source: string,
   page?: string,
+  attribution?: Attribution,
 ) {
   const fd = new FormData();
   fd.set('access_key', accessKey);
   fd.set('subject', subject);
   fd.set('source', source);
   if (page) fd.set('page', page);
+
+  if (attribution) {
+    for (const [key, label] of Object.entries(ATTRIBUTION_LABELS)) {
+      const value = attribution[key as keyof Attribution];
+      if (value) fd.set(label, value);
+    }
+  }
 
   for (const [key, value] of Object.entries(fields)) {
     if (value === '') continue;
@@ -233,6 +275,7 @@ export async function POST(req: NextRequest) {
       parsed.data.subject,
       parsed.data.source,
       parsed.data.page,
+      parsed.data.attribution,
     ),
   });
 }

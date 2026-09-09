@@ -99,7 +99,10 @@ export default function ServicePage({ params }: { params: Params }) {
         name={svc.name}
         description={svc.metaDescription}
         serviceType="Staffing and recruiting"
-        areaServed={['US', 'CA', 'MX', 'PH', 'CO']}
+        areaServed={[
+          'US', 'CA', 'MX', 'CO', 'PH', 'ZA', 'GB', 'IE', 'IN', 'EG',
+          'KE', 'JM', 'DO', 'GT', 'CR', 'PL', 'VN', 'AE', 'SG', 'AU',
+        ]}
         url={`${site.url}/services/${svc.slug}`}
       />
       <FAQSchema items={svc.faqs} />

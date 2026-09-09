@@ -27,6 +27,43 @@ export type Location = {
   faqs: FAQItem[];
 };
 
+/**
+ * Depth layer for /locations/[slug].
+ *
+ * Location pages rendered ~700 words against ~1,700 for services and industries
+ * — the thinnest page type on the site, and far too thin to compete for
+ * "call center staffing in X" against incumbents. These fields add the sections
+ * buyers actually search for (cost, process, compliance, alternatives) without
+ * rewriting the 24 existing LOCATIONS entries: the map is keyed by slug and
+ * every section renders only when its data is present.
+ */
+export type LocationDetail = {
+  /** 150-250 word lead. Renders directly under the hero. */
+  intro: string;
+  /** Second intro paragraph — the "what this market is actually for" angle. */
+  introSecondary?: string;
+  costBenchmark?: {
+    summary: string;
+    /** Indicative bands only. Never a quote — see `disclaimer`. */
+    rows: { role: string; band: string; note: string }[];
+    disclaimer: string;
+  };
+  /** Market-specific sourcing and screening steps, 4-5 items. */
+  hiringProcess?: { title: string; body: string }[];
+  /** Regulatory / employment / data-protection notes, 3-4 items. */
+  compliance?: { title: string; body: string }[];
+  /** Honest head-to-head against the market buyers most often weigh this one against. */
+  comparison?: {
+    alternativeName: string;
+    summary: string;
+    rows: { factor: string; here: string; alternative: string }[];
+  };
+  /** Two in-body images from /public/images, distinct from the hero. */
+  bodyImages?: { src: string; alt: string }[];
+  /** Service slugs most relevant to this market — internal linking. */
+  relatedServices?: string[];
+};
+
 export type Role = {
   slug: string;
   name: string;

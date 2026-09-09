@@ -272,6 +272,23 @@ const BPO_STAFFING_LINK: Record<string, { locationSlug: string; service: string 
     locationSlug: 'south-africa',
     service: 'offshore-call-center-staffing',
   },
+  'top-15-bpo-companies-in-canada': {
+    locationSlug: 'canada',
+    service: 'onshore-call-center-staffing',
+  },
+  'top-15-bpo-companies-in-india': {
+    locationSlug: 'india',
+    service: 'offshore-call-center-staffing',
+  },
+  'top-15-bpo-companies-in-uk': {
+    locationSlug: 'united-kingdom',
+    service: 'contact-center-staffing',
+  },
+  // /locations/australia is served by REGIONS, not LOCATIONS — same URL either way.
+  'top-15-bpo-companies-in-australia': {
+    locationSlug: 'australia',
+    service: 'contact-center-staffing',
+  },
 };
 
 function bpoStaffingSection(config: BpoLocationPostConfig): PostSection | null {
