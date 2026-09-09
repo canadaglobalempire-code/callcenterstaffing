@@ -246,6 +246,106 @@ const BPO_LOCATION_POST_CONFIGS: BpoLocationPostConfig[] = [
     finalAngle:
       'Latin America is strongest when nearshore collaboration, bilingual support, and flexible staffing all matter.',
   },
+  {
+    slug: 'top-15-bpo-companies-in-egypt',
+    titleLocation: 'Egypt',
+    phraseLocation: 'Egypt',
+    primaryKeyword: 'top BPO companies in Egypt',
+    publishedAt: '2026-09-08',
+    heroImage: '/images/cc-office-wide.jpg',
+    searchIntent:
+      'Searchers are usually European, UK or Gulf leaders who need multilingual support (Arabic plus European languages) on hours that overlap Europe and the Gulf.',
+    marketNote:
+      'Egypt competes on multilingual depth as much as cost, with Cairo hosting most multinational floors and ITIDA backing the sector as a strategic export.',
+    localAngle:
+      'For Egypt programmes, confirm the exact language headcount you need, the delivery city, and how UTC+2 maps to your peak hours.',
+    complianceNote:
+      'Ask about PDPL (Law 151/2020), PCI DSS for payments, and GDPR posture if your customers are in the EU or UK.',
+    companyFitLine:
+      'The best partner should prove genuine native-level headcount in each language you need, not a website claim.',
+    finalAngle:
+      'Egypt is strongest for European, UK, African and Middle Eastern multilingual programmes.',
+  },
+  {
+    slug: 'top-15-bpo-companies-in-kenya',
+    titleLocation: 'Kenya',
+    phraseLocation: 'Kenya',
+    primaryKeyword: 'top BPO companies in Kenya',
+    publishedAt: '2026-09-08',
+    heroImage: '/images/cc-agent-pro.jpg',
+    searchIntent:
+      'Searchers usually want neutral-accent English at offshore cost, often with an impact-sourcing story, on a time zone that overlaps the UK and Europe.',
+    marketNote:
+      'Kenya is East Africa’s leading BPO market, backed by the Ajira Digital programme and Konza Technopolis, with Nairobi as the delivery core.',
+    localAngle:
+      'For Kenya programmes, weigh scale versus boutique, impact-sourcing training length, and that UTC+3 is poor for US coverage.',
+    complianceNote:
+      'Ask about the Data Protection Act 2019, PCI DSS, GDPR posture, and redundant power and connectivity.',
+    companyFitLine:
+      'The best partner should show ramp timelines and 90-day retention so the social mission does not hide churn.',
+    finalAngle:
+      'Kenya is strongest for UK, European, African and Middle Eastern English-language programmes.',
+  },
+  {
+    slug: 'top-15-bpo-companies-in-jamaica',
+    titleLocation: 'Jamaica',
+    phraseLocation: 'Jamaica',
+    primaryKeyword: 'top BPO companies in Jamaica',
+    publishedAt: '2026-09-07',
+    heroImage: '/images/cc-team-row-2.jpg',
+    searchIntent:
+      'Searchers are usually US leaders wanting nearshore English voice inside the US business day, with cultural affinity to American consumers.',
+    marketNote:
+      'Jamaica is one of the Caribbean’s largest outsourcing markets, centred on Montego Bay’s free-zone cluster, promoted by JAMPRO and the GSAJ.',
+    localAngle:
+      'For Jamaica programmes, choose between Montego Bay and Kingston, and confirm EST (UTC-5, no daylight saving) overlap across the year.',
+    complianceNote:
+      'Ask about the Data Protection Act (in force 2023), PCI DSS, HIPAA posture, and a hurricane-season continuity plan.',
+    companyFitLine:
+      'The best partner should show US-programme references at your volume and vertical, plus a storm-continuity plan.',
+    finalAngle:
+      'Jamaica is strongest for US nearshore voice that must sit inside the American business day.',
+  },
+  {
+    slug: 'top-15-bpo-companies-in-dominican-republic',
+    titleLocation: 'the Dominican Republic',
+    phraseLocation: 'the Dominican Republic',
+    primaryKeyword: 'top BPO companies in Dominican Republic',
+    publishedAt: '2026-09-07',
+    heroImage: '/images/cc-support-team.jpg',
+    searchIntent:
+      'Searchers are usually US leaders needing bilingual Spanish and English support on US hours at nearshore cost, including the US Hispanic market.',
+    marketNote:
+      'The Dominican Republic pairs a mature free-trade-zone regime with genuine bilingual depth, centred on Santo Domingo with Santiago second.',
+    localAngle:
+      'For DR programmes, confirm the bilingual share, whether English-only work gets native-level agents, and AST (UTC-4) overlap.',
+    complianceNote:
+      'Ask about Law 172-13, PCI DSS, HIPAA posture, and a hurricane-season continuity plan.',
+    companyFitLine:
+      'The best partner should prove C1-level bilingual headcount and a clear split of Spanish versus English staffing.',
+    finalAngle:
+      'The Dominican Republic is strongest when you need one nearshore site covering both English and Spanish on US hours.',
+  },
+  {
+    slug: 'top-15-bpo-companies-in-costa-rica',
+    titleLocation: 'Costa Rica',
+    phraseLocation: 'Costa Rica',
+    primaryKeyword: 'top BPO companies in Costa Rica',
+    publishedAt: '2026-09-06',
+    heroImage: '/images/call-center-team.jpg',
+    searchIntent:
+      'Searchers usually want high-quality bilingual talent for complex or higher-value work and will pay a premium over other nearshore markets.',
+    marketNote:
+      'Costa Rica trades on an educated, stable, bilingual workforce and hosts large captives for US tech and finance brands, promoted by CINDE.',
+    localAngle:
+      'For Costa Rica programmes, make sure the work justifies the premium, and weigh outsourcer attrition against the captives.',
+    complianceNote:
+      'Ask about Law 8968 (PRODHAB), PCI DSS, HIPAA posture, and the all-in cost per agent-hour.',
+    companyFitLine:
+      'The best partner should match its specialism to the value of your work and prove it can retain talent against the captives.',
+    finalAngle:
+      'Costa Rica is strongest for quality-sensitive, higher-value bilingual work rather than lowest-cost high-volume voice.',
+  },
 ];
 
 // Country BPO posts that have a matching, published location page. For these we
@@ -288,6 +388,26 @@ const BPO_STAFFING_LINK: Record<string, { locationSlug: string; service: string 
   'top-15-bpo-companies-in-australia': {
     locationSlug: 'australia',
     service: 'contact-center-staffing',
+  },
+  'top-15-bpo-companies-in-egypt': {
+    locationSlug: 'egypt',
+    service: 'offshore-call-center-staffing',
+  },
+  'top-15-bpo-companies-in-kenya': {
+    locationSlug: 'kenya',
+    service: 'offshore-call-center-staffing',
+  },
+  'top-15-bpo-companies-in-jamaica': {
+    locationSlug: 'jamaica',
+    service: 'nearshore-call-center-staffing',
+  },
+  'top-15-bpo-companies-in-dominican-republic': {
+    locationSlug: 'dominican-republic',
+    service: 'nearshore-call-center-staffing',
+  },
+  'top-15-bpo-companies-in-costa-rica': {
+    locationSlug: 'costa-rica',
+    service: 'nearshore-call-center-staffing',
   },
 };
 

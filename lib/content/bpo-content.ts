@@ -1,6 +1,7 @@
 import type { PostSection, FAQItem } from './types';
+import { BPO_CONTENT_PHASE1 } from './bpo-content-phase1';
 
-type BpoContent = {
+export type BpoContent = {
   title: string;
   excerpt: string;
   metaTitle: string;
@@ -1735,5 +1736,6 @@ export const BPO_CONTENT: Record<string, BpoContent> = {
         "a": "If you lack the process, supervisors, tools, and QA to run a contact operation, a BPO that owns the whole thing can make sense. If you already have those and only need people, staffing is usually a better fit: trained agents work on your own floor and systems while staying on the provider's payroll, so you keep control of quality and process while solving the hiring gap."
       }
     ]
-  }
+  },
+  ...BPO_CONTENT_PHASE1,
 };
