@@ -346,6 +346,126 @@ const BPO_LOCATION_POST_CONFIGS: BpoLocationPostConfig[] = [
     finalAngle:
       'Costa Rica is strongest for quality-sensitive, higher-value bilingual work rather than lowest-cost high-volume voice.',
   },
+  {
+    slug: 'top-15-bpo-companies-in-guatemala',
+    titleLocation: 'Guatemala',
+    phraseLocation: 'Guatemala',
+    primaryKeyword: 'top BPO companies in Guatemala',
+    publishedAt: '2026-09-06',
+    heroImage: '/images/cc-team-row-2.jpg',
+    searchIntent:
+      'Searchers are usually US leaders wanting bilingual Spanish and English support at a lower cost than Mexico or Costa Rica, on US Central hours.',
+    marketNote:
+      'Guatemala anchors Central America’s Northern Triangle nearshore cluster, with Guatemala City holding most seats and cost below its regional peers.',
+    localAngle:
+      'For Guatemala programmes, verify C1 English share, weigh cost against talent depth, and confirm UTC-6 overlap.',
+    complianceNote:
+      'Guatemala has no comprehensive data-protection law yet, so require GDPR-equivalent or US-standard controls, PCI DSS and HIPAA terms by contract.',
+    companyFitLine:
+      'The best partner should prove language quality at your price point, not just the lowest rate.',
+    finalAngle:
+      'Guatemala is strongest for cost-driven bilingual nearshore voice on US hours.',
+  },
+  {
+    slug: 'top-15-bpo-companies-in-poland',
+    titleLocation: 'Poland',
+    phraseLocation: 'Poland',
+    primaryKeyword: 'top BPO companies in Poland',
+    publishedAt: '2026-09-05',
+    heroImage: '/images/cc-office-wide.jpg',
+    searchIntent:
+      'Searchers are usually European or UK leaders needing several European languages delivered inside the EU with GDPR by an educated workforce.',
+    marketNote:
+      'Poland is Central Europe’s largest business-services market and its multilingual nearshore hub, centred on Kraków, Warsaw, Wrocław and the Tricity.',
+    localAngle:
+      'For Poland programmes, confirm native-level language headcount, CX versus shared services, and that data stays in the EU.',
+    complianceNote:
+      'Poland is in the EU, so processing sits under GDPR (UODO); confirm data residency, subprocessors and PCI DSS.',
+    companyFitLine:
+      'The best partner should prove native-speaker headcount per language and genuine CX capacity, not only back office.',
+    finalAngle:
+      'Poland is strongest for EU multilingual delivery where language breadth and data residency matter.',
+  },
+  {
+    slug: 'top-15-bpo-companies-in-vietnam',
+    titleLocation: 'Vietnam',
+    phraseLocation: 'Vietnam',
+    primaryKeyword: 'top BPO companies in Vietnam',
+    publishedAt: '2026-09-05',
+    heroImage: '/images/cc-agent-pro.jpg',
+    searchIntent:
+      'Searchers are usually Asian, Japanese, Korean or Western leaders wanting low-cost back-office, data and East Asian-language delivery.',
+    marketNote:
+      'Vietnam is one of Asia’s fastest-growing outsourcing markets, strongest in back office, data, IT-enabled services and Japanese and Korean work.',
+    localAngle:
+      'For Vietnam programmes, match work type to its strengths, verify English quality, and check Japanese or Korean capacity if needed.',
+    complianceNote:
+      'Ask how the provider meets Vietnam’s Personal Data Protection Decree (13/2023) and cross-border transfer rules, plus PCI DSS.',
+    companyFitLine:
+      'The best partner should match its strengths to your work, whether back office, data or East Asian languages.',
+    finalAngle:
+      'Vietnam is strongest for cost-efficient back office, data and East Asian-language work rather than native English voice.',
+  },
+  {
+    slug: 'top-15-bpo-companies-in-ireland',
+    titleLocation: 'Ireland',
+    phraseLocation: 'Ireland',
+    primaryKeyword: 'top BPO companies in Ireland',
+    publishedAt: '2026-09-04',
+    heroImage: '/images/cc-support-team.jpg',
+    searchIntent:
+      'Searchers are usually technology and consumer brands wanting premium native-English-plus-EU-language EMEA support inside the EU.',
+    marketNote:
+      'Ireland is a premium EMEA hub, chosen for quality, EU membership and a multilingual internationally recruited workforce in Dublin and Cork.',
+    localAngle:
+      'For Ireland programmes, confirm the work justifies the premium, native-language headcount, and whether agents are Ireland-based.',
+    complianceNote:
+      'Ireland is in the EU with a strict GDPR regime (its DPC is the lead regulator for major tech); confirm residency, subprocessors and PCI DSS.',
+    companyFitLine:
+      'The best partner should justify Ireland’s premium with genuine multilingual quality and compliance depth.',
+    finalAngle:
+      'Ireland is strongest for premium, compliance-sensitive, multilingual EMEA support.',
+  },
+  {
+    slug: 'top-15-bpo-companies-in-singapore',
+    titleLocation: 'Singapore',
+    phraseLocation: 'Singapore',
+    primaryKeyword: 'top BPO companies in Singapore',
+    publishedAt: '2026-09-04',
+    heroImage: '/images/call-center-team.jpg',
+    searchIntent:
+      'Searchers are usually regional or global brands wanting an APAC control tower for high-value, English-and-Mandarin support and coordination.',
+    marketNote:
+      'Singapore is a premium APAC hub used as a control tower, with high-volume delivery usually routed to the Philippines, Malaysia or India.',
+    localAngle:
+      'For Singapore programmes, decide onshore versus control tower, reserve it for high-value work, and confirm where agents sit.',
+    complianceNote:
+      'Singapore’s PDPA (PDPC) governs local data and cross-border transfer; confirm residency and PCI DSS.',
+    companyFitLine:
+      'The best partner should be explicit about what stays in Singapore and what is delivered from cheaper APAC sites.',
+    finalAngle:
+      'Singapore is strongest as a compliant APAC control tower for high-value work, not high-volume voice.',
+  },
+  {
+    slug: 'top-15-bpo-companies-in-united-arab-emirates',
+    titleLocation: 'the UAE',
+    phraseLocation: 'the UAE',
+    primaryKeyword: 'top BPO companies in UAE',
+    publishedAt: '2026-09-03',
+    heroImage: '/images/cc-agent-pro.jpg',
+    searchIntent:
+      'Searchers are usually Gulf enterprises and regional arms of global brands wanting genuine Arabic-and-English CX with a local presence.',
+    marketNote:
+      'The UAE is the Middle East’s leading business hub for bilingual Gulf-market CX, with some providers fronting in Dubai and delivering from Egypt or India.',
+    localAngle:
+      'For UAE programmes, confirm Gulf-dialect Arabic share, onshore versus blended delivery, and which data regime applies.',
+    complianceNote:
+      'Ask which regime governs your data — federal PDPL (Decree-Law 45/2021), DIFC or ADGM — plus cross-border transfer and PCI DSS.',
+    companyFitLine:
+      'The best partner should prove native Gulf-dialect Arabic capacity and be clear about where agents actually sit.',
+    finalAngle:
+      'The UAE is strongest for Arabic-and-English Gulf-market support where local presence matters.',
+  },
 ];
 
 // Country BPO posts that have a matching, published location page. For these we
@@ -408,6 +528,30 @@ const BPO_STAFFING_LINK: Record<string, { locationSlug: string; service: string 
   'top-15-bpo-companies-in-costa-rica': {
     locationSlug: 'costa-rica',
     service: 'nearshore-call-center-staffing',
+  },
+  'top-15-bpo-companies-in-guatemala': {
+    locationSlug: 'guatemala',
+    service: 'nearshore-call-center-staffing',
+  },
+  'top-15-bpo-companies-in-poland': {
+    locationSlug: 'poland',
+    service: 'offshore-call-center-staffing',
+  },
+  'top-15-bpo-companies-in-vietnam': {
+    locationSlug: 'vietnam',
+    service: 'offshore-call-center-staffing',
+  },
+  'top-15-bpo-companies-in-ireland': {
+    locationSlug: 'ireland',
+    service: 'contact-center-staffing',
+  },
+  'top-15-bpo-companies-in-singapore': {
+    locationSlug: 'singapore',
+    service: 'contact-center-staffing',
+  },
+  'top-15-bpo-companies-in-united-arab-emirates': {
+    locationSlug: 'united-arab-emirates',
+    service: 'contact-center-staffing',
   },
 };
 
