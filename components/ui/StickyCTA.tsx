@@ -41,7 +41,7 @@ export function StickyCTA() {
           <X className="h-3.5 w-3.5" />
         </button>
         <Link
-          href="/contact"
+          href="/contact#staffing-plan"
           className="inline-flex items-center gap-2 rounded-full bg-accent-500 px-5 h-10 text-[13px] font-bold uppercase tracking-[0.12em] text-white shadow-lg transition-all hover:bg-accent-400 hover:shadow-xl"
         >
           <span className="hidden sm:inline">Get a quote</span>
