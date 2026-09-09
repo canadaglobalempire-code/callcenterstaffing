@@ -466,6 +466,206 @@ const BPO_LOCATION_POST_CONFIGS: BpoLocationPostConfig[] = [
     finalAngle:
       'The UAE is strongest for Arabic-and-English Gulf-market support where local presence matters.',
   },
+  {
+    slug: 'top-15-bpo-companies-in-florida',
+    titleLocation: 'Florida',
+    phraseLocation: 'Florida',
+    primaryKeyword: 'BPO companies in Florida',
+    publishedAt: '2026-09-09',
+    heroImage: '/images/cc-support-team.jpg',
+    searchIntent:
+      'Searchers are usually US leaders wanting deep onshore capacity, strong bilingual depth and experienced CX leadership, on US Eastern hours.',
+    marketNote:
+      'Florida is a deep onshore CX market (Sykes was founded in Tampa) spanning Tampa, Orlando, Miami and Jacksonville, with no state income tax and native Spanish in the south.',
+    localAngle:
+      'For Florida, match the metro to the programme and plan for hurricane-season continuity; native Spanish concentrates in Miami-Dade.',
+    complianceNote:
+      'For healthcare and insurance work, confirm HIPAA and PCI DSS controls and a named compliance lead.',
+    companyFitLine:
+      'The best partner should show the right metro, experienced leadership and a real storm-continuity record.',
+    finalAngle:
+      'Florida is strongest for onshore quality, bilingual depth and experienced CX leadership.',
+  },
+  {
+    slug: 'top-15-bpo-companies-in-arizona',
+    titleLocation: 'Arizona',
+    phraseLocation: 'Arizona',
+    primaryKeyword: 'BPO companies in Arizona',
+    publishedAt: '2026-09-09',
+    heroImage: '/images/cc-office-wide.jpg',
+    searchIntent:
+      'Searchers are usually US leaders wanting reliable, low-disaster-risk onshore delivery with financial-services depth and fast ramp.',
+    marketNote:
+      'Phoenix is one of the largest onshore CX metros, anchored by financial-services captives, with very low weather-continuity risk and no daylight saving.',
+    localAngle:
+      'For Arizona, weigh Phoenix versus the East Valley and Tucson, and use its low disaster risk as a continuity advantage.',
+    complianceNote:
+      'For card and lending work, confirm PCI DSS and any NMLS or regulated-work controls and a named compliance lead.',
+    companyFitLine:
+      'The best partner should retain talent against the financial-services captives and prove its uptime record.',
+    finalAngle:
+      'Arizona is strongest for reliable, financial-services-experienced onshore delivery on West Coast hours.',
+  },
+  {
+    slug: 'top-15-bpo-companies-in-georgia',
+    titleLocation: 'Georgia',
+    phraseLocation: 'Georgia',
+    primaryKeyword: 'BPO companies in Georgia',
+    publishedAt: '2026-09-08',
+    heroImage: '/images/cc-team-row-2.jpg',
+    searchIntent:
+      'Searchers are usually US leaders with payments, fintech, travel or logistics programmes wanting a deep Southeastern onshore pool.',
+    marketNote:
+      'Atlanta anchors Southeastern CX with unusual payments and fintech density ("Transaction Alley") plus Delta and UPS logistics heritage.',
+    localAngle:
+      'For Georgia, use Atlanta for payments and travel depth and the secondary metros (Columbus, Savannah, Augusta) for cost.',
+    complianceNote:
+      'For payments work, confirm PCI DSS controls and fraud-handling experience with a named compliance lead.',
+    companyFitLine:
+      'The best partner should prove references in your exact workflow, especially payments or fraud.',
+    finalAngle:
+      'Georgia is strongest for payments, fintech, travel and logistics CX in the Southeast.',
+  },
+  {
+    slug: 'top-15-bpo-companies-in-north-carolina',
+    titleLocation: 'North Carolina',
+    phraseLocation: 'North Carolina',
+    primaryKeyword: 'BPO companies in North Carolina',
+    publishedAt: '2026-09-08',
+    heroImage: '/images/cc-agent-pro.jpg',
+    searchIntent:
+      'Searchers are usually US leaders with banking, lending or technical-support programmes wanting experienced onshore leadership.',
+    marketNote:
+      'North Carolina pairs Charlotte (second-largest US banking centre) with the Research Triangle tech and life-sciences hub in one state.',
+    localAngle:
+      'For North Carolina, use Charlotte for regulated banking work and the Triangle for technical support; the Triad for cost.',
+    complianceNote:
+      'For banking work, confirm PCI DSS, NMLS or licensing handling and a named compliance lead.',
+    companyFitLine:
+      'The best partner should match the region to the programme and prove workflow-specific references.',
+    finalAngle:
+      'North Carolina is strongest for financial services, lending and technical support with deep onshore leadership.',
+  },
+  {
+    slug: 'top-15-bpo-companies-in-california',
+    titleLocation: 'California',
+    phraseLocation: 'California',
+    primaryKeyword: 'BPO companies in California',
+    publishedAt: '2026-09-07',
+    heroImage: '/images/call-center-team.jpg',
+    searchIntent:
+      'Searchers are usually US leaders needing premium technical or brand-critical CX, deep bilingual capacity, or West Coast hours.',
+    marketNote:
+      'California is the highest-cost onshore market, chosen for deep tech and entertainment CX, native-Spanish depth and the strict CPRA privacy regime.',
+    localAngle:
+      'For California, reserve it for brand-critical, technical or Spanish-heavy work; push commodity voice to Arizona, Texas or nearshore.',
+    complianceNote:
+      'Confirm how the provider handles CPRA consumer data-rights requests and California break and scheduling law.',
+    companyFitLine:
+      'The best partner should justify California’s premium and be fluent in its labour and privacy rules.',
+    finalAngle:
+      'California is strongest for premium, technical, brand-critical or CPRA-bound CX, not commodity voice.',
+  },
+  {
+    slug: 'top-15-bpo-companies-in-new-york',
+    titleLocation: 'New York',
+    phraseLocation: 'New York',
+    primaryKeyword: 'BPO companies in New York',
+    publishedAt: '2026-09-07',
+    heroImage: '/images/cc-office-wide.jpg',
+    searchIntent:
+      'Searchers are usually US leaders weighing NYC specialist depth against far cheaper, stable upstate onshore capacity.',
+    marketNote:
+      'New York is two markets: high-cost NYC finance, media and luxury CX, and much cheaper upstate metros (Buffalo, Rochester, Syracuse) for value.',
+    localAngle:
+      'For New York, always name the metro: upstate can cost a fraction of Manhattan for stable native-English work.',
+    complianceNote:
+      'Confirm how the provider meets the SHIELD Act for New York residents’ data, plus PCI DSS for payments.',
+    companyFitLine:
+      'The best partner should match the metro to the work and be explicit about the upstate-downstate cost gap.',
+    finalAngle:
+      'New York is strongest split by metro: NYC for specialist depth, upstate for affordable stable capacity.',
+  },
+  {
+    slug: 'top-15-bpo-companies-in-ohio',
+    titleLocation: 'Ohio',
+    phraseLocation: 'Ohio',
+    primaryKeyword: 'BPO companies in Ohio',
+    publishedAt: '2026-09-06',
+    heroImage: '/images/cc-team-row-2.jpg',
+    searchIntent:
+      'Searchers are usually US leaders wanting low-cost, neutral-accent onshore delivery with insurance, healthcare or retail depth.',
+    marketNote:
+      'Ohio is an underrated low-cost onshore state: Columbus insurance, Cleveland healthcare, Cincinnati retail, Dayton value, across four metros.',
+    localAngle:
+      'For Ohio, use Columbus for insurance depth and Dayton for cost; the neutral Midwest accent plays nationwide.',
+    complianceNote:
+      'For healthcare and insurance work, confirm HIPAA and PCI DSS controls and a named compliance lead.',
+    companyFitLine:
+      'The best partner should show workflow depth in insurance or healthcare and low, real 90-day attrition.',
+    finalAngle:
+      'Ohio is strongest for affordable, stable, neutral-accent onshore delivery in insurance, healthcare and retail.',
+  },
+  {
+    slug: 'top-15-bpo-companies-in-nevada',
+    titleLocation: 'Nevada',
+    phraseLocation: 'Nevada',
+    primaryKeyword: 'BPO companies in Nevada',
+    publishedAt: '2026-09-05',
+    heroImage: '/images/cc-agent-pro.jpg',
+    searchIntent:
+      'Searchers are usually US leaders needing 24/7 or after-hours coverage, West Coast hours, or a lower-cost California alternative.',
+    marketNote:
+      'Nevada offers a genuine 24/7 workforce in Las Vegas plus a growing Reno tech and logistics hub, with no state income tax.',
+    localAngle:
+      'For Nevada, use Las Vegas for after-hours and always-on coverage and Reno for tech-literate day-shift talent.',
+    complianceNote:
+      'Confirm PCI DSS controls for payment or gaming-adjacent work and a named compliance lead.',
+    companyFitLine:
+      'The best partner should prove low night and weekend attrition for always-on programmes.',
+    finalAngle:
+      'Nevada is strongest for 24/7 and after-hours coverage and as a lower-cost California alternative.',
+  },
+  {
+    slug: 'top-15-bpo-companies-in-utah',
+    titleLocation: 'Utah',
+    phraseLocation: 'Utah',
+    primaryKeyword: 'BPO companies in Utah',
+    publishedAt: '2026-09-04',
+    heroImage: '/images/call-center-team.jpg',
+    searchIntent:
+      'Searchers are usually US leaders wanting multilingual support beyond Spanish, product-literate tech agents, or low-cost onshore delivery.',
+    marketNote:
+      'Utah offers a uniquely multilingual workforce (returned-missionary languages) plus the Silicon Slopes tech corridor, at low cost.',
+    localAngle:
+      'For Utah, lead with its rare multilingual pool and Provo tech talent; Ogden for cost.',
+    complianceNote:
+      'Confirm PCI DSS and any regulated-work controls and a named compliance lead where relevant.',
+    companyFitLine:
+      'The best partner should prove native depth in the specific languages you need beyond English.',
+    finalAngle:
+      'Utah is strongest for multilingual support beyond Spanish, technical work and low-cost onshore delivery.',
+  },
+  {
+    slug: 'top-15-bpo-companies-in-tennessee',
+    titleLocation: 'Tennessee',
+    phraseLocation: 'Tennessee',
+    primaryKeyword: 'BPO companies in Tennessee',
+    publishedAt: '2026-09-03',
+    heroImage: '/images/cc-support-team.jpg',
+    searchIntent:
+      'Searchers are usually US leaders with healthcare or logistics programmes wanting low-cost onshore delivery with domain depth.',
+    marketNote:
+      'Tennessee anchors healthcare (Nashville/HCA) and logistics (Memphis/FedEx) CX at low cost, with no tax on earned wages.',
+    localAngle:
+      'For Tennessee, use Nashville for healthcare depth and Memphis for logistics; Knoxville and Chattanooga for cost.',
+    complianceNote:
+      'For healthcare work, confirm HIPAA and PCI DSS controls and a named compliance lead.',
+    companyFitLine:
+      'The best partner should prove references in your exact workflow, especially healthcare or logistics.',
+    finalAngle:
+      'Tennessee is strongest for healthcare and logistics CX at low cost with genuine domain depth.',
+  },
 ];
 
 // Country BPO posts that have a matching, published location page. For these we
