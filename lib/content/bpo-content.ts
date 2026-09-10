@@ -2,6 +2,7 @@ import type { PostSection, FAQItem } from './types';
 import { BPO_CONTENT_PHASE1 } from './bpo-content-phase1';
 import { BPO_CONTENT_PHASE1B } from './bpo-content-phase1b';
 import { BPO_CONTENT_STATES } from './bpo-content-states';
+import { BPO_CONTENT_INDUSTRIES } from './bpo-content-industries';
 
 export type BpoContent = {
   title: string;
@@ -1742,4 +1743,5 @@ export const BPO_CONTENT: Record<string, BpoContent> = {
   ...BPO_CONTENT_PHASE1,
   ...BPO_CONTENT_PHASE1B,
   ...BPO_CONTENT_STATES,
+  ...BPO_CONTENT_INDUSTRIES,
 };
