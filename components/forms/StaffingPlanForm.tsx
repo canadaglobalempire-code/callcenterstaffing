@@ -10,29 +10,25 @@ import { submitLead } from '@/lib/lead-client';
 import { trackLeadSubmission } from '@/lib/analytics';
 import { Recaptcha, type RecaptchaHandle } from './Recaptcha';
 
+// Every field except the free-text notes is required so each lead arrives
+// complete. The website accepts any text, so a bare domain, a full URL or "N/A"
+// all satisfy it.
 const schema = z.object({
   name: z.string().min(2, 'Please enter your full name'),
-  company: z.string().min(2, 'Enter your company').max(160).or(z.literal('')).optional(),
-  website: z.string().optional(),
+  company: z.string().min(2, 'Enter your company').max(160),
+  website: z.string().trim().min(1, 'Enter your website, or N/A'),
   email: z.string().email('Enter a valid company email'),
-  phone: z
-    .string()
-    .regex(/^[\d+\-().\s]{7,40}$/, 'Phone number contains invalid characters')
-    .or(z.literal(''))
-    .optional(),
-  roleType: z.enum([
-    'inbound-cs',
-    'outbound-sales',
-    'bilingual',
-    'team-leads',
-    'qa-wfm',
-    'multiple',
-  ]),
-  agentCount: z.enum(['1-9', '10-49', '50-199', '200-499', '500+']),
-  location: z
-    .enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open'])
-    .or(z.literal(''))
-    .optional(),
+  phone: z.string().regex(/^[\d+\-().\s]{7,40}$/, 'Enter a valid phone number'),
+  roleType: z.enum(
+    ['inbound-cs', 'outbound-sales', 'bilingual', 'team-leads', 'qa-wfm', 'multiple'],
+    { errorMap: () => ({ message: 'Select a role type' }) },
+  ),
+  agentCount: z.enum(['1-9', '10-49', '50-199', '200-499', '500+'], {
+    errorMap: () => ({ message: 'Select how many agents you need' }),
+  }),
+  location: z.enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open'], {
+    errorMap: () => ({ message: 'Select a location preference' }),
+  }),
   notes: z.string().max(800).optional(),
 });
 
@@ -184,7 +180,7 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
           type="text"
           {...register('website')}
           className={fieldClass}
-          placeholder="www.yourcompany.com"
+          placeholder="yourcompany.com or N/A"
         />
       </Field>
 
@@ -221,7 +217,7 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
       </Field>
 
       <Field
-        label="Anything we should know?"
+        label="Anything we should know? (optional)"
         id="notes"
         error={errors.notes?.message}
         className="lg:col-span-2"
@@ -315,8 +311,11 @@ const Select = forwardRef<
 >((props, ref) => {
   const { options, className, ...rest } = props;
   return (
+    // Start on the placeholder. With no value the browser preselects the first
+    // real option, so an untouched select would still submit an answer.
     <select
       ref={ref}
+      defaultValue=""
       {...rest}
       className={cn(fieldClass, 'appearance-none bg-no-repeat bg-[length:14px] bg-[right_14px_center]', className)}
       style={{

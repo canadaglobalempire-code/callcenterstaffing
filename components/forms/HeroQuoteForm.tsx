@@ -10,21 +10,20 @@ import { submitLead } from '@/lib/lead-client';
 import { trackLeadSubmission } from '@/lib/analytics';
 import { Recaptcha, type RecaptchaHandle } from './Recaptcha';
 
+// Every field is required so each lead arrives complete. The website accepts
+// any text, so a bare domain, a full URL or "N/A" all satisfy it.
 const schema = z.object({
   name: z.string().min(2, 'Enter your name'),
   email: z.string().email('Enter a valid work email'),
-  company: z.string().min(2, 'Enter your company').max(160).or(z.literal('')).optional(),
-  website: z.string().optional(),
-  phone: z
-    .string()
-    .regex(/^[\d+\-().\s]{7,40}$/, 'Phone contains invalid characters')
-    .or(z.literal(''))
-    .optional(),
-  agentCount: z.enum(['1-9', '10-49', '50-199', '200-499', '500+']),
-  region: z
-    .enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open'])
-    .or(z.literal(''))
-    .optional(),
+  company: z.string().min(2, 'Enter your company').max(160),
+  website: z.string().trim().min(1, 'Enter your website, or N/A'),
+  phone: z.string().regex(/^[\d+\-().\s]{7,40}$/, 'Enter a valid phone number'),
+  agentCount: z.enum(['1-9', '10-49', '50-199', '200-499', '500+'], {
+    errorMap: () => ({ message: 'Select how many agents you need' }),
+  }),
+  region: z.enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open'], {
+    errorMap: () => ({ message: 'Select a region' }),
+  }),
 });
 
 type FormValues = z.infer<typeof schema>;
@@ -191,7 +190,7 @@ export function HeroQuoteForm() {
                   type="text"
                   {...register('website')}
                   className={fieldClass}
-                  placeholder="Website (e.g. www.yourcompany.com)"
+                  placeholder="Website (yourcompany.com or N/A)"
                 />
               </Field>
 
@@ -325,8 +324,11 @@ const Select = forwardRef<
     placeholder?: string;
   }
 >(({ options, placeholder, className, ...rest }, ref) => (
+  // Start on the placeholder. With no value the browser preselects the first
+  // real option, so an untouched select would still submit an answer.
   <select
     ref={ref}
+    defaultValue=""
     {...rest}
     className={cn(
       fieldClass,

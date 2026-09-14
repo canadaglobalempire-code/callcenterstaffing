@@ -68,33 +68,33 @@ const ATTRIBUTION_LABELS: Record<keyof Attribution, string> = {
   landedAt: 'landed_at',
 };
 
+// Every lead field is required (the staffing form's notes excepted), matching
+// the client-side schemas in components/forms.
 const heroFieldsSchema = z.object({
   name: z.string().min(2).max(120),
   email: z.string().email().max(180),
-  company: z.string().min(2).max(160).optional(),
-  website: z.string().max(220).optional(),
+  company: z.string().min(2).max(160),
+  website: z.string().trim().min(1).max(220),
   phone: z
     .string()
     .min(7)
     .max(40)
-    .regex(/^[\d+\-().\s]+$/)
-    .optional(),
+    .regex(/^[\d+\-().\s]+$/),
   agentCount: z.enum(['1-9', '10-49', '50-199', '200-499', '500+']),
-  region: z.enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open']).optional(),
+  region: z.enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open']),
   'g-recaptcha-response': z.string().min(10).max(3000),
 });
 
 const staffingFieldsSchema = z.object({
   name: z.string().min(2).max(120),
-  company: z.string().min(2).max(160).optional(),
-  website: z.string().max(220).optional(),
+  company: z.string().min(2).max(160),
+  website: z.string().trim().min(1).max(220),
   email: z.string().email().max(180),
   phone: z
     .string()
     .min(7)
     .max(40)
-    .regex(/^[\d+\-().\s]+$/)
-    .optional(),
+    .regex(/^[\d+\-().\s]+$/),
   roleType: z.enum([
     'inbound-cs',
     'outbound-sales',
@@ -104,7 +104,7 @@ const staffingFieldsSchema = z.object({
     'multiple',
   ]),
   agentCount: z.enum(['1-9', '10-49', '50-199', '200-499', '500+']),
-  location: z.enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open']).optional(),
+  location: z.enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open']),
   notes: z.string().max(800).optional(),
   'g-recaptcha-response': z.string().min(10).max(3000),
 });
