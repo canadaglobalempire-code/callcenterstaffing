@@ -218,6 +218,7 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
 
       <Field
         label="Anything we should know? (optional)"
+        optional
         id="notes"
         error={errors.notes?.message}
         className="lg:col-span-2"
@@ -280,17 +281,24 @@ function Field({
   error,
   children,
   className,
+  optional = false,
 }: {
   label: string;
   id: string;
   error?: string;
   children: React.ReactNode;
   className?: string;
+  optional?: boolean;
 }) {
   return (
     <div className={cn('flex flex-col gap-2', className)}>
       <label htmlFor={id} className={labelClass}>
         {label}
+        {!optional && (
+          <span aria-hidden="true" className="ml-0.5 text-red-600">
+            *
+          </span>
+        )}
       </label>
       {children}
       {error && (

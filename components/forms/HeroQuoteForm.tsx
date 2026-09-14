@@ -171,7 +171,7 @@ export function HeroQuoteForm() {
                   id="name"
                   {...register('name')}
                   className={fieldClass}
-                  placeholder="Your name"
+                  placeholder="Your name *"
                 />
               </Field>
 
@@ -180,7 +180,7 @@ export function HeroQuoteForm() {
                   id="company"
                   {...register('company')}
                   className={fieldClass}
-                  placeholder="Company"
+                  placeholder="Company *"
                 />
               </Field>
 
@@ -190,7 +190,7 @@ export function HeroQuoteForm() {
                   type="text"
                   {...register('website')}
                   className={fieldClass}
-                  placeholder="Website (yourcompany.com or N/A)"
+                  placeholder="Website (yourcompany.com or N/A) *"
                 />
               </Field>
 
@@ -200,7 +200,7 @@ export function HeroQuoteForm() {
                   type="email"
                   {...register('email')}
                   className={fieldClass}
-                  placeholder="you@company.com"
+                  placeholder="you@company.com *"
                 />
               </Field>
 
@@ -210,14 +210,14 @@ export function HeroQuoteForm() {
                   type="tel"
                   {...register('phone')}
                   className={fieldClass}
-                  placeholder="Phone number"
+                  placeholder="Phone number *"
                 />
               </Field>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div className="flex flex-col gap-1.5">
                   <label htmlFor="agentCount" className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/70">
-                    Agents needed
+                    Agents needed <span aria-hidden="true" className="text-accent-500">*</span>
                   </label>
                   <Select id="agentCount" {...register('agentCount')} options={AGENT_OPTIONS} placeholder="Select size" />
                   {errors.agentCount?.message && (
@@ -229,7 +229,7 @@ export function HeroQuoteForm() {
                 </div>
                 <div className="flex flex-col gap-1.5">
                   <label htmlFor="region" className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/70">
-                    Region
+                    Region <span aria-hidden="true" className="text-accent-500">*</span>
                   </label>
                   <Select id="region" {...register('region')} options={REGION_OPTIONS} placeholder="Select region" />
                   {errors.region?.message && (
