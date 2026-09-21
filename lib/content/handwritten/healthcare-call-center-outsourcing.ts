@@ -174,6 +174,7 @@ export const post: Post = {
     {
       paragraphs: [
         'Healthcare call center outsourcing works when it is treated as a controlled extension of your own operation rather than a handoff. Keep the scope non-clinical, put the HIPAA relationship in writing with the right parties, give urgent calls a path that needs no judgment, and keep your privacy officer involved from the first vendor call to the first monthly review.',
+        'For the queue mechanics behind a patient line, /blog/inbound-call-center-outsourcing covers forecasting, after-hours coverage and overflow in detail.',
       ],
     },
   ],

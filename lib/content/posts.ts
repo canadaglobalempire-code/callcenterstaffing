@@ -951,6 +951,40 @@ function bpoStaffingSection(config: BpoLocationPostConfig): PostSection | null {
   };
 }
 
+// Related posts for a location ranking: its three nearest regional siblings (the
+// block is a three-card row), so the rankings link to each other instead of all pointing at the
+// same three posts. Rings are cyclic, so every ranking is linked from three others.
+const BPO_LOCATION_RINGS: string[][] = [
+  ['usa', 'canada', 'arizona', 'california', 'florida', 'georgia', 'nevada', 'new-york', 'north-carolina', 'ohio', 'tennessee', 'utah'],
+  ['latin-america', 'mexico', 'colombia', 'costa-rica', 'guatemala', 'dominican-republic', 'jamaica'],
+  ['philippines', 'india', 'vietnam', 'singapore', 'australia'],
+  ['uk', 'ireland', 'poland', 'south-africa', 'kenya', 'egypt', 'united-arab-emirates'],
+];
+const BPO_SLUG_PREFIX = 'top-15-bpo-companies-in-';
+
+// Industry rankings: two sibling industries, the world list, and the buyer guide
+// that matches the vertical (or the general provider-evaluation guide).
+const BPO_INDUSTRY_RING = ['healthcare', 'insurance', 'financial-services', 'ecommerce', 'saas', 'telecom', 'travel', 'logistics', 'utilities', 'real-estate'];
+const BPO_INDUSTRY_GUIDE: Record<string, string> = {
+  healthcare: 'healthcare-call-center-outsourcing',
+  ecommerce: 'ecommerce-customer-service-outsourcing',
+};
+const industryRankingSlug = (key: string) => `top-15-${key}-call-center-outsourcing-companies`;
+
+function bpoLocationRelated(slug: string): string[] {
+  const industry = BPO_INDUSTRY_RING.find((key) => slug === industryRankingSlug(key));
+  if (industry) {
+    const i = BPO_INDUSTRY_RING.indexOf(industry);
+    const siblings = [1, 2].map((step) => industryRankingSlug(BPO_INDUSTRY_RING[(i + step) % BPO_INDUSTRY_RING.length]));
+    return [...siblings, BPO_INDUSTRY_GUIDE[industry] ?? 'best-call-center-outsourcing-companies'];
+  }
+  const key = slug.replace(BPO_SLUG_PREFIX, '');
+  const ring = BPO_LOCATION_RINGS.find((r) => r.includes(key));
+  if (!ring) return [`${BPO_SLUG_PREFIX}the-world`, 'in-house-vs-outsourced-call-center', 'call-center-staffing-cost'];
+  const i = ring.indexOf(key);
+  return [1, 2, 3].map((step) => `${BPO_SLUG_PREFIX}${ring[(i + step) % ring.length]}`);
+}
+
 function createBpoLocationPost(config: BpoLocationPostConfig): Post {
   const c = BPO_CONTENT[config.slug];
   const staffingSection = bpoStaffingSection(config);
@@ -966,11 +1000,7 @@ function createBpoLocationPost(config: BpoLocationPostConfig): Post {
     readingMinutes: 12,
     heroImage: config.heroImage,
     primaryKeyword: c.primaryKeyword,
-    relatedPostSlugs: [
-      'top-15-bpo-companies-in-the-world',
-      'in-house-vs-outsourced-call-center',
-      'call-center-staffing-cost',
-    ],
+    relatedPostSlugs: bpoLocationRelated(config.slug),
     sections: [
       // Group providers lead the page; the independent regional providers
       // that follow are left intact. See group-providers.ts for why.

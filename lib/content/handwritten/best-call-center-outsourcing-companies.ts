@@ -176,6 +176,7 @@ export const post: Post = {
         "Some buyers reach the end of this process and realize that nothing is wrong with how their operation runs. The scripts work, the supervisors are good, quality monitoring is in place and the telephony is theirs. What is missing is people. Recruiting cannot fill classes fast enough, or attrition keeps reopening the same seats. Handing that operation to an outsourcer replaces a working management layer with someone else's in order to solve a hiring problem.",
         'That is the case for the staffing model. A recruiting partner sources and screens agents, and where needed supervisors, QA analysts and workforce management staff, who then work inside your operation on your systems. We have done this for about 20 years across onshore, nearshore and offshore markets. /services/call-center-recruitment explains the model and /locations shows the regions covered.',
         'Staffing is the wrong choice if you have no floor leadership, no quality process or no wish to run a call center at all. In that situation a managed outsourcer is the better answer, and the evaluation above is how to choose one. If you are undecided between the two, /blog/in-house-vs-outsourced-call-center compares the operating models side by side.',
+        'Once the shortlist exists, /blog/inbound-call-center-outsourcing and /blog/outbound-call-center-outsourcing go deeper on what to test for each program type.',
       ],
     },
   ],

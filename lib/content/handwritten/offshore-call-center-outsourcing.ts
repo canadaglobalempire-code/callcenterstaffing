@@ -140,6 +140,7 @@ export const post: Post = {
       paragraphs: [
         'Full outsourcing suits clear, repeatable, high-volume work when you want a provider to own recruiting, supervision, facilities and service level. If you do not have contact center management capacity to spare, that is the right purchase, and the sections above tell you how to buy it carefully.',
         'If you already run a mature operation and want offshore hours or offshore scale without giving up daily control, staffing is the alternative. Agents are recruited and employed in the offshore market and work on your systems, your scorecard and your schedule, reporting to your team leads or to leads you add alongside them. You carry more of the management load and keep the process knowledge in-house. /solutions/scaling-existing-call-center explains how cohort planning works when volume rises, /services/offshore-call-center-staffing covers the model itself, and /locations/philippines describes the largest offshore market we recruit in. Staffing is what we do, so treat our preference as an interested one. The readiness tests in this guide apply to both models.',
+        'If time-zone overlap matters more to you than overnight coverage, /blog/nearshore-call-center-outsourcing is the closer fit.',
       ],
     },
   ],

@@ -136,6 +136,7 @@ export const post: Post = {
     {
       paragraphs: [
         'If a vendor cannot or will not answer those points in writing, the name on the proposal is not the problem. If it can, you will know exactly which of the three things you are buying. /blog/in-house-vs-outsourced-call-center is a useful next read if the remaining decision is whether to move the work out at all.',
+        'Smaller teams weighing the same choice should also read /blog/call-center-outsourcing-for-small-business before committing to either model.',
       ],
     },
   ],

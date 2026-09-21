@@ -158,6 +158,7 @@ export const post: Post = {
         'From the second week, move to a weekly review built on four questions: how many calls were answered versus missed, how many were resolved without reaching you, how many escalations were justified under your own urgent rule, and what callers asked that the script did not cover. Add each uncovered question to the document. By the end of the month the script should be noticeably longer and your interruptions noticeably fewer.',
         'Set the decision point in advance. At thirty days, either the lane is running with less of your attention than before, or it is not. If it is, consider adding a second lane. If it is not, look first at whether the scope was bounded and the documentation complete, then at whether the delivery model matches the work. Switching from shared to dedicated agents, or from a program to your own placed people, fixes more small business programs than switching providers does.',
         'When you are ready to talk through which route fits, the form at /contact reaches our team. We will tell you if staffing is not the answer.',
+        'If the terminology is still getting in the way, /blog/bpo-vs-call-center-outsourcing separates the two models and shows where agent staffing sits between them.',
       ],
     },
   ],

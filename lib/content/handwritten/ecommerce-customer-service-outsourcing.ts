@@ -167,6 +167,7 @@ export const post: Post = {
     {
       paragraphs: [
         'Every unjustified escalation points to a missing macro or an unclear rule. Every justified one that repeats points to a limit you may be ready to raise. Treat the first ninety days as the period in which your documentation catches up with reality, and the program will be steadier going into the next peak than it was going into this one.',
+        'Stores with only a handful of daily contacts should start with /blog/call-center-outsourcing-for-small-business, which covers when it is too early to outsource at all.',
       ],
     },
   ],

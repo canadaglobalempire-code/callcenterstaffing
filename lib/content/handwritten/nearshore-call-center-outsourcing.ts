@@ -143,6 +143,7 @@ export const post: Post = {
       paragraphs: [
         'Nearshore does not have to mean handing over the operation. Outsourcing suits you when you want a provider to run the floor, supply supervisors and QA, and report against a service level. It is the better choice if you have no contact center management of your own, or if the work is a defined queue you want off your plate.',
         'Staffing suits you when the process, the tools, the scorecard and the supervisors are already yours and the constraint is trained people. In that model, nearshore agents work inside your operation, on your systems and under your team leads, while the agency handles recruiting and employment. You keep the daily control that made nearshore attractive to begin with. /services/nearshore-call-center-staffing explains how we recruit for that model. We place agents and do not run outsourced programs, so weigh our view with that in mind. The tests in this guide apply to both models.',
+        'If overnight coverage is the real requirement, /blog/offshore-call-center-outsourcing covers that model and what it demands from your process.',
       ],
     },
   ],

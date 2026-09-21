@@ -151,6 +151,7 @@ export const post: Post = {
       level: 2,
       paragraphs: [
         'Vague questions get brochure answers. These requests are harder to answer in generalities:',
+        'If part of the program is proactive calling rather than answering, /blog/outbound-call-center-outsourcing covers how that contract and its risks differ.',
       ],
       bullets: [
         'Ask which call types agents would handle on day one, which would wait for a second phase, and why.',

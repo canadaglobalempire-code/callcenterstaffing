@@ -159,6 +159,7 @@ export const post: Post = {
         'Everything above assumes you want a provider to run part of your support function. Some teams do not. They have a knowledge base that works, leads who coach well and a voice customers like. What they lack is enough trained people, and recruiting is slower than ticket growth.',
         "In that case, adding people to your own team is usually cleaner than outsourcing a channel. That is the work we do. We are a staffing and recruiting agency with about 20 years in contact centers, placing agents, team leads, QA analysts and trainers into clients' own operations across onshore, nearshore and offshore markets. /services/contact-center-staffing describes the model, and /roles lists the positions covered.",
         'We are not neutral on this point, so weigh it accordingly. If your documentation is thin, your leads are stretched, or you want someone else to carry the operation, an outsourcing company is the better choice, and the tests in this guide are how to pick one.',
+        'Online retailers should also read /blog/ecommerce-customer-service-outsourcing, which covers order, returns and peak-season work specifically.',
       ],
     },
   ],

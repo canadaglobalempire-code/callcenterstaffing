@@ -160,6 +160,7 @@ export const post: Post = {
       paragraphs: [
         'Keep the work inside if the sale depends on deep product or technical fluency, if every conversation needs judgment that cannot be scripted, or if you cannot yet monitor consent and opt-out handling. Also hold off if you are hoping callers will fix a weak offer or an unclear sales process. They will only confirm the problem faster.',
         'Full outsourcing suits campaigns with clear scripts, clean lists and defined qualification rules, particularly when you have no sales floor management of your own. If you do have the managers, the CRM and the coaching rhythm, and the constraint is finding people who can do the work, recruiting agents into your own team keeps the script, the data and the brand voice under your control. /services/inside-sales-outsourcing sets out how we approach that model, and /blog/call-center-staff-augmentation-vs-outsourcing compares the two structures in more detail.',
+        'For the service side of the same decision, /blog/inbound-call-center-outsourcing walks through forecasting, service level and queue design.',
       ],
     },
   ],
