@@ -32,6 +32,7 @@ import { POSTS, getPost } from '@/lib/content/posts';
 import type { PostSection } from '@/lib/content/types';
 import { site } from '@/lib/site';
 import { alternatesFor, socialImages } from '@/lib/seo';
+import { citeSources } from '@/lib/cite-sources';
 
 type Params = { slug: string };
 
@@ -461,7 +462,7 @@ function shouldShowEditorialImage(section: SectionView) {
   return section.index === 1 || section.index % 4 === 0;
 }
 
-function renderInlineLinks(text: string, keyPrefix: string): ReactNode[] {
+function renderInlineLinks(text: string, keyPrefix: string, cited?: Set<string>): ReactNode[] {
   const regex = /(\/[a-z0-9][a-z0-9\-/]*[a-z0-9])/g;
   const parts: ReactNode[] = [];
   let lastIndex = 0;
@@ -470,7 +471,7 @@ function renderInlineLinks(text: string, keyPrefix: string): ReactNode[] {
 
   while ((match = regex.exec(text)) !== null) {
     if (match.index > lastIndex) {
-      parts.push(text.slice(lastIndex, match.index));
+      parts.push(cited ? citeSources(text.slice(lastIndex, match.index), cited) : text.slice(lastIndex, match.index));
     }
 
     const href = match[1];
@@ -487,7 +488,7 @@ function renderInlineLinks(text: string, keyPrefix: string): ReactNode[] {
   }
 
   if (lastIndex < text.length) {
-    parts.push(text.slice(lastIndex));
+    parts.push(cited ? citeSources(text.slice(lastIndex), cited) : text.slice(lastIndex));
   }
 
   return parts;
@@ -497,10 +498,12 @@ function ArticleParagraph({
   children,
   compact = false,
   id,
+  cited,
 }: {
   children: string;
   compact?: boolean;
   id: string;
+  cited?: Set<string>;
 }) {
   return (
     <p
@@ -510,7 +513,7 @@ function ArticleParagraph({
           : 'mt-5 text-[17px] leading-[1.85] text-navy-700'
       }
     >
-      {renderInlineLinks(children, id)}
+      {renderInlineLinks(children, id, cited)}
     </p>
   );
 }
@@ -752,6 +755,8 @@ function StandardSection({
   postTitle: string;
   rankedCompanies: ReturnType<typeof extractRankedCompanies>;
 }) {
+  // Laws named in this section link to their primary source on first mention.
+  const cited = new Set<string>();
   const HeadingTag = section.level === 3 ? 'h3' : 'h2';
   const headingClass =
     section.level === 3
@@ -767,7 +772,7 @@ function StandardSection({
       )}
 
       {section.paragraphs?.map((paragraph, index) => (
-        <ArticleParagraph key={index} id={`${section.id}-p-${index}`}>
+        <ArticleParagraph key={index} id={`${section.id}-p-${index}`} cited={cited}>
           {paragraph}
         </ArticleParagraph>
       ))}

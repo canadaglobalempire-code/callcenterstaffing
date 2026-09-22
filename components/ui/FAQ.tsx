@@ -3,6 +3,7 @@
 import * as Accordion from '@radix-ui/react-accordion';
 import { Plus } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { citeSources } from '@/lib/cite-sources';
 
 type FAQProps = {
   items: { q: string; a: string }[];
@@ -10,6 +11,8 @@ type FAQProps = {
 };
 
 export function FAQ({ items, className }: FAQProps) {
+  // One set per render so each law is linked once per page, on first mention.
+  const cited = new Set<string>();
   return (
     <Accordion.Root
       type="multiple"
@@ -35,7 +38,7 @@ export function FAQ({ items, className }: FAQProps) {
               data-faq-answer
               className="pb-6 pr-10 text-base leading-relaxed text-navy-700 max-w-prose"
             >
-              {item.a}
+              {citeSources(item.a, cited)}
             </p>
           </Accordion.Content>
         </Accordion.Item>
