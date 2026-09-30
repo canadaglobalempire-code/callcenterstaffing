@@ -264,7 +264,7 @@ export default function IndustryPage({ params }: { params: Params }) {
               </Heading>
             </div>
             <div className="lg:col-span-7">
-              <p className="text-[17px] leading-relaxed text-navy-700">{ind.intro}</p>
+              <p className="text-[17px] leading-relaxed text-navy-700">{ind.slug === 'logistics' ? <>{ind.intro.split('Peak-season planning')[0]}<Link href="/industries/warehouse" style={{ color: 'inherit', textDecoration: 'inherit' }}>Peak-season planning</Link>{ind.intro.split('Peak-season planning')[1]}</> : ind.intro}</p>
             </div>
           </div>
         </Container>

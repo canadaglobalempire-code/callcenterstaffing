@@ -22,7 +22,7 @@ export const BUYER_MARKET_LOCATIONS: Location[] = [
     heroImage: '/images/cc-team-meeting.jpg',
     metaTitle: 'UK Call Centre Staffing Agency | Contact Centre Recruitment',
     metaDescription:
-      'Contact centre staffing for UK businesses — UK-based agents plus nearshore and offshore teams on GMT hours. Agents on our payroll, first slate in about 72 hours.',
+      'UK contact centre staffing: UK-based agents plus nearshore and offshore teams on GMT hours. Agents on our payroll, first slate in about 72 hours.',
     hero: {
       eyebrow: 'United Kingdom · Onshore, nearshore & offshore',
       headline: 'Contact centre staffing for UK operations — without the agency retainer.',
@@ -99,7 +99,7 @@ export const BUYER_MARKET_LOCATIONS: Location[] = [
     region: 'onshore',
     flagEmoji: '🇨🇦',
     heroImage: '/images/cc-team-collab.jpg',
-    metaTitle: 'Canadian Call Center Staffing | Bilingual French-English Agents',
+    metaTitle: 'Canada Call Center Staffing | French & English Agents',
     metaDescription:
       'Call center staffing across Canada — Toronto, Montreal, Vancouver and the Maritimes. French-English bilingual agents on your time zone, on our payroll.',
     hero: {
@@ -263,7 +263,7 @@ export const BUYER_MARKET_LOCATIONS: Location[] = [
     heroImage: '/images/cc-team-desk.jpg',
     metaTitle: 'Singapore Call Centre Staffing | APAC Customer Support',
     metaDescription:
-      'Contact centre staffing for Singapore and APAC — regional support teams across English, Mandarin, Malay and Bahasa. Agents on our payroll, first slate in 72 hours.',
+      'Contact centre staffing for Singapore and APAC: support teams in English, Mandarin, Malay and Bahasa. Agents on our payroll, first slate in 72 hours.',
     hero: {
       eyebrow: 'Singapore · APAC hub',
       headline: 'Run APAC support from Singapore — staff it from wherever the math works.',

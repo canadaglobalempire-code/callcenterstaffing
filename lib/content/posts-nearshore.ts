@@ -26,7 +26,7 @@ export const NEARSHORE_POSTS: Post[] = [
     relatedPostSlugs: [
       'how-to-vet-nearshore-customer-service-partners',
       'customer-support-staffing-agencies-latin-america',
-      'nearshore-vs-offshore-high-volume-support',
+      'multilingual-support-staffing-beyond-spanish',
     ],
     sections: [
       {

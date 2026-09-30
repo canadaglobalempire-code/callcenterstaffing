@@ -122,7 +122,7 @@ export const CX_CLUSTER_POSTS: Post[] = [
     relatedPostSlugs: [
       'top-customer-service-outsourcing-companies',
       'occupancy-shrinkage-headcount',
-      'in-house-vs-outsourced-call-center',
+      'customer-service-best-practices',
     ],
     sections: [
       {

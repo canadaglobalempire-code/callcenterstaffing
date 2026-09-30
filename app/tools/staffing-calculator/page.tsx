@@ -116,7 +116,7 @@ export default function StaffingCalculatorPage() {
           <div className="lg:col-span-7">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-white/90 backdrop-blur-sm">
               <span className="h-2 w-2 rounded-full bg-accent-500 animate-pulse" />
-              Free tool · No signup required
+              <Link href="/tools">Free tool</Link> · No signup required
             </span>
 
             <h1 className="mt-6 font-display text-[2.5rem] sm:text-[3.25rem] lg:text-[4.25rem] font-extrabold leading-[1.02] tracking-[-0.04em] text-white">
