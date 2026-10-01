@@ -3,6 +3,8 @@ import { citeSources } from '@/lib/cite-sources';
 
 // Existing phrases point to detailed, relevant reading without changing their text.
 const destinations: Record<string, string> = {
+  'texas': '/blog/bpo-companies-in-texas',
+  'bpo companies': '/blog/bpo-companies-directory',
   'colombia': '/blog/nearshore-staffing-colombia',
   'multilingual support': '/blog/multilingual-support-staffing-beyond-spanish',
   'customer service best practices': '/blog/customer-service-best-practices',
@@ -11,7 +13,7 @@ const destinations: Record<string, string> = {
   'warehouse': '/industries/warehouse',
   'san antonio': '/locations/san-antonio-tx',
 };
-const pattern = /\b(Colombia|multilingual support|customer service best practices|UK outsourcing|UK|warehouse|San Antonio)\b/gi;
+const pattern = /\b(Texas|BPO companies|Colombia|multilingual support|customer service best practices|UK outsourcing|UK|warehouse|San Antonio)\b/gi;
 
 export function ContextualText({ text, cited }: { text: string; cited?: Set<string> }) {
   return text.split(pattern).map((part, index) => {

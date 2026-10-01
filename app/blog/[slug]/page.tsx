@@ -762,7 +762,7 @@ function StandardSection({
 }) {
   // Laws named in this section link to their primary source on first mention.
   const cited = new Set<string>();
-  const strictLinks = rankedCompanies.length === 0 && !/(?:top|best).*(?:compan|provider|bpo)/i.test(postTitle);
+  const strictLinks = postSlug === 'bpo-vs-call-center-outsourcing' || (rankedCompanies.length === 0 && !/(?:top|best).*(?:compan|provider|bpo)/i.test(postTitle));
   const HeadingTag = section.level === 3 ? 'h3' : 'h2';
   const headingClass =
     section.level === 3
