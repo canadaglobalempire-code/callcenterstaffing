@@ -483,15 +483,13 @@ function renderInlineLinks(text: string, keyPrefix: string, cited?: Set<string>,
     }
 
     const href = strictLinks ? match[0] : match[1];
-    parts.push(
-      <Link
-        key={`${keyPrefix}-link-${i++}`}
-        href={href}
-        className="font-semibold text-accent-500 underline decoration-accent-500/30 underline-offset-[3px] hover:decoration-accent-500"
-      >
-        {href}
-      </Link>,
-    );
+    const key = `${keyPrefix}-link-${i++}`;
+    const className = "font-semibold text-accent-500 underline decoration-accent-500/30 underline-offset-[3px] hover:decoration-accent-500";
+    // These slash fragments are ordinary prose, not pages. Keep their visible
+    // styling while removing the false link semantics; do not invent destinations.
+    parts.push(['/native-equivalent', '/data', '/2023'].includes(href)
+      ? <span key={key} className={className}>{href}</span>
+      : <Link key={key} href={href} className={className}>{href}</Link>);
     lastIndex = match.index + match[0].length;
   }
 
