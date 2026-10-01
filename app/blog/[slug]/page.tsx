@@ -61,13 +61,18 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
   const post = getPost(params.slug);
   if (!post) return {};
   const images = socialImages(post.title, post.heroImage ?? FALLBACK_IMAGE);
+  // Head-only fixes leave the visible article/list fields unchanged.
+  const headTitle = post.slug === 'top-15-financial-services-call-center-outsourcing-companies'
+    ? 'Financial Services Call Center Outsourcing Companies' : post.metaTitle;
+  const headDescription = post.metaDescription.length > 160
+    ? post.metaDescription.replace(/, (?:and )?(?:the )?staffing option\.$/, '.') : post.metaDescription;
   return {
-    title: post.metaTitle,
-    description: post.metaDescription,
+    title: headTitle,
+    description: headDescription,
     alternates: alternatesFor(`/blog/${post.slug}`),
     openGraph: {
-      title: post.metaTitle,
-      description: post.metaDescription,
+      title: headTitle,
+      description: headDescription,
       url: `${site.url}/blog/${post.slug}`,
       type: 'article',
       publishedTime: post.publishedAt,
@@ -77,8 +82,8 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.metaTitle,
-      description: post.metaDescription,
+      title: headTitle,
+      description: headDescription,
       images: images.twitter,
     },
   };
