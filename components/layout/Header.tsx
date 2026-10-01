@@ -269,6 +269,13 @@ export function Header() {
 
   return (
     <header
+      onKeyDown={(event) => {
+        if (event.key === 'Escape' && open) {
+          event.preventDefault();
+          setOpen(false);
+          event.currentTarget.querySelector<HTMLButtonElement>('button[aria-expanded]')?.focus();
+        }
+      }}
       className={cn(
         'fixed left-0 right-0 z-50 transition-all duration-300 px-4 lg:px-8',
         scrolled ? 'top-2' : 'top-5',
@@ -300,6 +307,17 @@ export function Header() {
                 className="relative"
                 onMouseEnter={() => item.children && setOpenMenu(item.label)}
                 onMouseLeave={() => setOpenMenu(null)}
+                onBlur={(event) => {
+                  if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setOpenMenu(null);
+                }}
+                onKeyDown={(event) => {
+                  if (event.key === 'Escape') {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    event.currentTarget.querySelector<HTMLAnchorElement>('a[aria-haspopup]')?.focus();
+                    setOpenMenu(null);
+                  }
+                }}
               >
                 <Link
                   href={item.href}
