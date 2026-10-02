@@ -358,7 +358,7 @@ export const NEARSHORE_POSTS: Post[] = [
           'Philippines and India — the largest and most cost-efficient pools, best suited to documented high-volume and overnight work rather than complex or brand-critical conversations.',
         ],
         paragraphs: [
-          'South Africa deserves particular attention for UK buyers. The combination of near-identical working hours and an accent that UK customers respond well to solves the two problems that usually push British operations back onshore.',
+          'South Africa deserves particular attention for UK buyers. The combination of near-identical working hours and an accent that UK customers respond well to solves the two problems that usually push British operations back onshore. /blog/outsource-customer-service-to-africa compares South Africa with Kenya and Egypt in more detail.',
         ],
       },
       {

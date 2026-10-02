@@ -1397,6 +1397,121 @@ Agents work inside your tools, knowledge base and QA program. We supply and empl
       },
     ],
   },
+  {
+    slug: 'dedicated-call-center-agents',
+    name: 'Dedicated Call Center Agents',
+    primaryKeyword: 'dedicated call center agent staffing',
+    metaTitle: 'Dedicated Call Center Agents, On Our Payroll',
+    metaDescription:
+      'Dedicated call center agents who work only on your program, inside your systems and to your scorecard. On our payroll, 90-day guarantee, free agent swap.',
+    heroImage: '/images/cc-agent-headset.jpg',
+    hero: {
+      eyebrow: 'Services · Dedicated agents',
+      headline: 'Dedicated call center agents who work only on your customers',
+      subhead:
+        'Named agents recruited to your scorecard, trained on your product and scheduled to your forecast. They stay on our payroll; you direct the work.',
+    },
+    intro: `Dedicated call center agents work only on your program. They are not shared across a pool of clients, they learn your products and policies in depth, and they are scheduled against your forecast rather than a provider's blended queue. We recruit and employ dedicated agents across onshore, nearshore and offshore markets, place them inside your tools and QA program, and keep them on our payroll so you pay only for the hours they work. Every placement carries a 90-day attrition guarantee, and you can swap any agent free if the fit is not right.`,
+    whatIsIt: `A dedicated call center agent is a named person assigned to one client's work for the length of the engagement. The agent answers only your customers, works from your knowledge base and escalation rules, and builds up the product knowledge that a shared agent covering several clients cannot hold.
+
+Shared agents take calls for many companies from one pool, working from on-screen scripts and notes. That model can suit low or unpredictable volume, message taking and simple call types, because you are paying for usage rather than for a person. It struggles when calls are long, products are complex, policies change often or customers expect the agent to remember their history.
+
+Dedicated agents are the better fit when volume is steady enough to keep a team busy, when the work is regulated or needs specific training, and when brand voice matters. They cost more per contact at low volume and less in rework, repeat calls and escalations once volume is steady. Our agents work inside your systems under your supervisors, so process knowledge stays with your operation, not with a vendor's floor.`,
+    whoItsFor: [
+      {
+        title: 'Teams outgrowing a shared answering pool',
+        body: 'Operators whose volume, handle time or product depth has moved past what shared agents can cover, and whose repeat contacts and escalations show it.',
+      },
+      {
+        title: 'Regulated and licensed programs',
+        body: 'Healthcare, insurance and financial services work where agents need specific training, consistent controls and an auditable record of who handled each customer.',
+      },
+      {
+        title: 'Brands where voice and context matter',
+        body: 'Companies whose customers expect agents to know the product, the policy history and the tone of the brand, not read from a generic script.',
+      },
+      {
+        title: 'In-house centers adding capacity',
+        body: 'Operations that run their own floor and want extra dedicated agents working to the same scorecard, without adding permanent headcount.',
+      },
+    ],
+    ourApproach: `We start with your forecast, call types, channels and QA scorecard, then recruit agents specifically for your program. Candidates are screened against your scorecard, not a generic rubric, and you approve the shortlist. Once placed, agents are trained on your product, work inside your tools and report to your supervisors or to team leads we add alongside them. Because each agent is assigned only to you, coaching and calibration build on the same people week after week. If an agent leaves or misses the agreed bar inside 90 days, we re-source and replace them at no additional fee.`,
+    approachSteps: [
+      {
+        title: 'Define the program',
+        body: 'Volume, hours, channels, languages and the scorecard agents will be measured against are agreed before recruiting starts.',
+      },
+      {
+        title: 'Recruit to your scorecard',
+        body: 'Candidates are screened for the call types and channels they will handle, and you approve each agent on the shortlist.',
+      },
+      {
+        title: 'Train inside your operation',
+        body: 'Agents learn your product, systems and escalation rules, then move through nesting with QA reviewed closely in the first weeks.',
+      },
+      {
+        title: 'Keep the bench stable',
+        body: 'Attendance and quality are reviewed continuously. Any agent who leaves or misses the bar inside 90 days is replaced at no extra fee.',
+      },
+    ],
+    whyChooseUs: [
+      {
+        title: 'Agents assigned only to you',
+        body: 'Every agent we place works on your program alone, so training, coaching and product knowledge accumulate in your team rather than being spread across other clients.',
+      },
+      {
+        title: 'You keep control of the work',
+        body: 'Agents use your systems, knowledge base and QA program. Your team keeps ownership of process, customer data, escalation rules and brand voice.',
+      },
+      {
+        title: 'No permanent headcount',
+        body: 'Agents stay on our payroll. You pay only for the hours they work, engagements run month-to-month, and capacity can scale with demand.',
+      },
+      {
+        title: 'Recruiters who know contact centers',
+        body: 'Every recruiter on our team has operated on a contact-center floor or recruited exclusively into them for 5+ years, drawing on 100k+ trained agents across 14 countries.',
+      },
+    ],
+    outcomes: [
+      { metric: '100k+', description: 'Trained agents in our database across 14 countries' },
+      { metric: 'About 72 hrs', description: 'Typical time to first qualified shortlist' },
+      { metric: '90 days', description: 'Attrition guarantee on every placement' },
+    ],
+    relatedRoles: [
+      'inbound-customer-service',
+      'outbound-sales-agents',
+      'bilingual-agents',
+      'team-leads-supervisors',
+      'qa-analysts',
+    ],
+    relatedLocations: ['united-states', 'mexico', 'colombia', 'philippines', 'south-africa'],
+    faqs: [
+      {
+        q: 'What is a dedicated call center agent?',
+        a: 'A named agent who works only on your program for the length of the engagement. Dedicated agents answer only your customers, learn your products and policies in depth, and are scheduled against your forecast rather than a shared pool.',
+      },
+      {
+        q: 'What is the difference between dedicated and shared call center agents?',
+        a: 'Shared agents answer for several companies from one pool using scripts and notes, so you pay for usage. Dedicated agents work only on your business and usually inside your own systems, so you pay for their time. Shared suits low or unpredictable volume and simple calls; dedicated suits steady volume, complex products, regulated work and brand-sensitive conversations.',
+      },
+      {
+        q: 'Do dedicated agents work in our systems?',
+        a: 'Yes. Agents work inside your telephony, CRM, knowledge base and QA program, and report to your supervisors or to team leads we add alongside them. We supply and employ the people; your team keeps control of process and customer data.',
+      },
+      {
+        q: 'What happens if a dedicated agent leaves?',
+        a: 'Every placement carries a 90-day attrition guarantee. If an agent leaves or misses the agreed bar inside 90 days, we re-source and replace them at no additional fee. You can also swap any agent free if the fit is not right.',
+      },
+      {
+        q: 'How is dedicated agent staffing billed?',
+        a: 'You pay only for the hours your agents work. Agents stay on our payroll, so there is no recruiting fee, payroll tax or benefits cost on your side, and engagements run month-to-month. Your rate depends on role, language, delivery market and schedule, and is set out in your free staffing plan.',
+      },
+      {
+        q: 'How quickly can dedicated agents start?',
+        a: 'Most briefs receive a first qualified shortlist in about 72 hours. Go-live timing depends on team size, systems access, training length and any compliance checks your program requires.',
+      },
+    ],
+  },
 ];
 
 export function getService(slug: string): Service | undefined {

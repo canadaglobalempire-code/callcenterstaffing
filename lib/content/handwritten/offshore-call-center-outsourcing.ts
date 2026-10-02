@@ -23,7 +23,7 @@ export const post: Post = {
   sections: [
     {
       paragraphs: [
-        'Offshore call center outsourcing places your customer contact work with a provider many time zones away. For US buyers that usually means the Philippines or India, with South Africa, Egypt, Kenya and Vietnam among the other established or growing markets. The appeal is well known: large labor pools, lower labor cost than onshore or nearshore delivery, and providers with long experience running high-volume programs.',
+        'Offshore call center outsourcing places your customer contact work with a provider many time zones away. For US buyers that usually means the Philippines or India, with South Africa, Egypt, Kenya and Vietnam among the other established or growing markets. The appeal is well known: large labor pools, lower labor cost than onshore or nearshore delivery, and providers with long experience running high-volume programs. For the African markets specifically, /blog/outsource-customer-service-to-africa compares South Africa, Kenya and Egypt.',
         'Cost gets most of the attention, and it is the least useful place to start. The time difference that makes offshore harder to manage also makes it the natural answer for overnight coverage, and the distance that lowers cost also raises the bar for your documentation, your security review and your quality program. This guide works through those trade-offs in the order you should face them.',
       ],
     },

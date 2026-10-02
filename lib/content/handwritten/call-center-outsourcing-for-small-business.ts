@@ -33,7 +33,7 @@ export const post: Post = {
       paragraphs: [
         'Nearly every small business option falls into one of two delivery models, and most buying mistakes come from wanting the behavior of one while paying for the other.',
         'In a shared model, a pool of agents answers for many businesses at once. When your line rings, whoever is free picks up, reads your greeting and works from a script and a short set of notes about your company. You pay for usage rather than for a person. The model exists because low, uneven call volume cannot keep a full-time person busy, and pooling many small accounts solves that.',
-        'In a dedicated model, named agents work only on your business. They learn your products, your regulars and your exceptions, and they usually work inside your own phone system and software. You are paying for their time whether the phone rings or not, which is why the model only makes sense once there is enough steady work to fill a shift.',
+        'In a dedicated model, named agents work only on your business. They learn your products, your regulars and your exceptions, and they usually work inside your own phone system and software. You are paying for their time whether the phone rings or not, which is why the model only makes sense once there is enough steady work to fill a shift. /services/dedicated-call-center-agents describes how dedicated agents are recruited, trained and replaced.',
       ],
       bullets: [
         'Shared fits: message taking, appointment booking against clear rules, order intake from a fixed menu, after-hours coverage, overflow when your own people are busy.',
