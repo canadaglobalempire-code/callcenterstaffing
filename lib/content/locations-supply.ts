@@ -96,7 +96,7 @@ export const SUPPLY_MARKET_LOCATIONS: Location[] = [
     region: 'offshore',
     flagEmoji: '🇪🇬',
     heroImage: '/images/cc-team-row-2.jpg',
-    metaTitle: 'Egypt Call Center Staffing | Arabic & European Language Agents',
+    metaTitle: 'Egypt Call Center Staffing | Arabic & European Languages',
     metaDescription:
       'Egypt call center staffing in Cairo, Giza and Alexandria. Arabic-English bilingual agents plus French, German and Italian European-language support.',
     hero: {
@@ -242,7 +242,7 @@ export const SUPPLY_MARKET_LOCATIONS: Location[] = [
     region: 'nearshore',
     flagEmoji: '🇯🇲',
     heroImage: '/images/cc-woman-headset.jpg',
-    metaTitle: 'Jamaica Call Center Staffing | Native-English Nearshore Agents',
+    metaTitle: 'Jamaica Call Center Staffing | Native-English Agents',
     metaDescription:
       'Jamaica nearshore call center staffing in Kingston, Montego Bay and Portmore. Native-English agents never more than an hour off US Eastern, on our payroll.',
     hero: {
@@ -315,7 +315,7 @@ export const SUPPLY_MARKET_LOCATIONS: Location[] = [
     region: 'nearshore',
     flagEmoji: '🇩🇴',
     heroImage: '/images/cc-agent-headset.jpg',
-    metaTitle: 'Dominican Republic Call Center Staffing | Bilingual Nearshore',
+    metaTitle: 'Dominican Republic Call Center Staffing | Bilingual Agents',
     metaDescription:
       'Dominican Republic nearshore call center staffing in Santo Domingo and Santiago. Bilingual Spanish-English agents on US Eastern time, on our payroll.',
     hero: {
@@ -534,7 +534,7 @@ export const SUPPLY_MARKET_LOCATIONS: Location[] = [
     region: 'offshore',
     flagEmoji: '🇵🇱',
     heroImage: '/images/cc-team-meeting.jpg',
-    metaTitle: 'Poland Contact Centre Staffing | Multilingual European Support',
+    metaTitle: 'Poland Contact Centre Staffing | Multilingual EU Support',
     metaDescription:
       'Poland contact centre staffing in Kraków, Warsaw and Wrocław. Multilingual European support in German, French, Nordic and Slavic languages, on our payroll.',
     hero: {

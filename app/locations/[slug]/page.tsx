@@ -30,6 +30,7 @@ import { FAQSection } from '@/components/sections/FAQSection';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/seo/ServiceSchema';
 import { FAQSchema } from '@/components/seo/FAQSchema';
+import { ContextualText } from '@/components/ContextualText';
 import { REGIONS, getRegion } from '@/lib/content/regions';
 import { LOCATIONS, getLocation } from '@/lib/content/locations';
 import { getLocationDetail } from '@/lib/content/locations-detail';
@@ -158,7 +159,7 @@ function RegionView({ region }: { region: Region }) {
             </h1>
 
             <p className="mt-6 max-w-[600px] text-[17px] lg:text-lg leading-relaxed text-white/80">
-              {region.intro}
+              <ContextualText text={region.intro} />
             </p>
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
@@ -239,7 +240,7 @@ function RegionView({ region }: { region: Region }) {
                       <CheckCircle2 className="h-5 w-5 flex-none text-accent-500" strokeWidth={2.25} />
                       {w.title}
                     </div>
-                    <p className="mt-3 text-[14px] leading-relaxed text-navy-700">{w.body}</p>
+                    <p className="mt-3 text-[14px] leading-relaxed text-navy-700"><ContextualText text={w.body} /></p>
                   </li>
                 ))}
               </ul>
@@ -512,7 +513,7 @@ function LocationView({ location }: { location: Location }) {
                   What staffing {location.name} actually involves.
                 </Heading>
                 <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-navy-700">
-                  <p>{detail.intro}</p>
+                  <p><ContextualText text={detail.intro} /></p>
                   {detail.introSecondary && <p>{detail.introSecondary}</p>}
                 </div>
               </div>
@@ -555,7 +556,7 @@ function LocationView({ location }: { location: Location }) {
                       <CheckCircle2 className="h-5 w-5 flex-none text-accent-500" strokeWidth={2.25} />
                       {w.title}
                     </div>
-                    <p className="mt-3 text-[14px] leading-relaxed text-navy-700">{w.body}</p>
+                    <p className="mt-3 text-[14px] leading-relaxed text-navy-700"><ContextualText text={w.body} /></p>
                   </li>
                 ))}
               </ul>

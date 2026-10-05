@@ -144,7 +144,7 @@ export default function ResourcesIndexPage() {
             </h1>
 
             <p className="mt-6 max-w-[560px] text-[17px] lg:text-lg leading-relaxed text-white/75">
-              Playbooks, case studies, a free staffing calculator and straight answers — the same
+              Playbooks, case studies, <Link href="/tools">a free staffing calculator</Link> and straight answers — the same
               thinking we bring to every engagement, in one place.
             </p>
 

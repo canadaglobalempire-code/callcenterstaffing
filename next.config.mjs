@@ -39,6 +39,8 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      { source: '/offshore', destination: '/services/offshore-call-center-staffing', permanent: true },
+      { source: '/outbound', destination: '/roles/outbound-sales-agents', permanent: true },
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'www.callcenterstaffing.net' }],

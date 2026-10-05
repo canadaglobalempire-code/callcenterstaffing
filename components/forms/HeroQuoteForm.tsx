@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, forwardRef } from 'react';
+import { useState, useRef, useId, cloneElement, isValidElement, forwardRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -47,6 +47,8 @@ const fieldClass =
   'h-12 w-full rounded-xl border border-white/20 bg-white px-4 text-[15px] text-navy-950 font-medium shadow-sm transition-colors focus:border-accent-500 focus:ring-2 focus:ring-accent-500/30 focus:outline-none placeholder:text-navy-700/55 placeholder:font-normal';
 
 export function HeroQuoteForm() {
+  const formId = useId();
+  const fieldId = (name: string) => `${formId}-${name}`;
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
@@ -166,27 +168,27 @@ export function HeroQuoteForm() {
                 aria-hidden="true"
               />
 
-              <Field id="name" label="Your name" error={errors.name?.message}>
+              <Field id={fieldId('name')} label="Your name" error={errors.name?.message}>
                 <input
-                  id="name"
+                  id={fieldId('name')}
                   {...register('name')}
                   className={fieldClass}
                   placeholder="Your name *"
                 />
               </Field>
 
-              <Field id="company" label="Company" error={errors.company?.message}>
+              <Field id={fieldId('company')} label="Company" error={errors.company?.message}>
                 <input
-                  id="company"
+                  id={fieldId('company')}
                   {...register('company')}
                   className={fieldClass}
                   placeholder="Company *"
                 />
               </Field>
 
-              <Field id="website" label="Website" error={errors.website?.message}>
+              <Field id={fieldId('website')} label="Website" error={errors.website?.message}>
                 <input
-                  id="website"
+                  id={fieldId('website')}
                   type="text"
                   {...register('website')}
                   className={fieldClass}
@@ -194,9 +196,9 @@ export function HeroQuoteForm() {
                 />
               </Field>
 
-              <Field id="email" label="Company email" error={errors.email?.message}>
+              <Field id={fieldId('email')} label="Company email" error={errors.email?.message}>
                 <input
-                  id="email"
+                  id={fieldId('email')}
                   type="email"
                   {...register('email')}
                   className={fieldClass}
@@ -204,9 +206,9 @@ export function HeroQuoteForm() {
                 />
               </Field>
 
-              <Field id="phone" label="Phone number" error={errors.phone?.message}>
+              <Field id={fieldId('phone')} label="Phone number" error={errors.phone?.message}>
                 <input
-                  id="phone"
+                  id={fieldId('phone')}
                   type="tel"
                   {...register('phone')}
                   className={fieldClass}
@@ -216,24 +218,24 @@ export function HeroQuoteForm() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="agentCount" className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/70">
+                  <label htmlFor={fieldId('agentCount')} className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/70">
                     Agents needed <span aria-hidden="true" className="text-accent-500">*</span>
                   </label>
-                  <Select id="agentCount" {...register('agentCount')} options={AGENT_OPTIONS} placeholder="Select size" />
+                  <Select aria-invalid={errors.agentCount ? true : undefined} aria-describedby={errors.agentCount ? `${fieldId('agentCount')}-error` : undefined} id={fieldId('agentCount')} {...register('agentCount')} options={AGENT_OPTIONS} placeholder="Select size" />
                   {errors.agentCount?.message && (
-                    <p className="inline-flex items-center gap-1 text-xs text-accent-500 font-medium">
+                    <p id={`${fieldId('agentCount')}-error`} className="inline-flex items-center gap-1 text-xs text-accent-500 font-medium">
                       <AlertCircle className="h-3 w-3" />
                       {errors.agentCount.message}
                     </p>
                   )}
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="region" className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/70">
+                  <label htmlFor={fieldId('region')} className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/70">
                     Region <span aria-hidden="true" className="text-accent-500">*</span>
                   </label>
-                  <Select id="region" {...register('region')} options={REGION_OPTIONS} placeholder="Select region" />
+                  <Select aria-invalid={errors.region ? true : undefined} aria-describedby={errors.region ? `${fieldId('region')}-error` : undefined} id={fieldId('region')} {...register('region')} options={REGION_OPTIONS} placeholder="Select region" />
                   {errors.region?.message && (
-                    <p className="inline-flex items-center gap-1 text-xs text-accent-500 font-medium">
+                    <p id={`${fieldId('region')}-error`} className="inline-flex items-center gap-1 text-xs text-accent-500 font-medium">
                       <AlertCircle className="h-3 w-3" />
                       {errors.region.message}
                     </p>
@@ -306,9 +308,14 @@ function Field({
       <label htmlFor={id} className="sr-only">
         {label}
       </label>
-      {children}
+      {isValidElement(children)
+        ? cloneElement(children as React.ReactElement<{ 'aria-invalid'?: boolean; 'aria-describedby'?: string }>, {
+            'aria-invalid': error ? true : undefined,
+            'aria-describedby': error ? `${id}-error` : undefined,
+          })
+        : children}
       {error && (
-        <p className="inline-flex items-center gap-1 text-xs text-accent-500 font-medium">
+        <p id={`${id}-error`} className="inline-flex items-center gap-1 text-xs text-accent-500 font-medium">
           <AlertCircle className="h-3 w-3" />
           {error}
         </p>

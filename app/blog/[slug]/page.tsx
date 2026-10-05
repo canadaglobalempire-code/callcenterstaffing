@@ -33,6 +33,8 @@ import type { PostSection } from '@/lib/content/types';
 import { site } from '@/lib/site';
 import { alternatesFor, socialImages } from '@/lib/seo';
 import { citeSources } from '@/lib/cite-sources';
+import { ContextualText } from '@/components/ContextualText';
+import { inlinePathRegex, isSitePath } from '@/lib/inline-links';
 
 type Params = { slug: string };
 
@@ -59,13 +61,18 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
   const post = getPost(params.slug);
   if (!post) return {};
   const images = socialImages(post.title, post.heroImage ?? FALLBACK_IMAGE);
+  // Head-only fixes leave the visible article/list fields unchanged.
+  const headTitle = post.slug === 'top-15-financial-services-call-center-outsourcing-companies'
+    ? 'Financial Services Call Center Outsourcing Companies' : post.metaTitle;
+  const headDescription = post.metaDescription.length > 160
+    ? post.metaDescription.replace(/, (?:and )?(?:the )?staffing option\.$/, '.') : post.metaDescription;
   return {
-    title: post.metaTitle,
-    description: post.metaDescription,
+    title: headTitle,
+    description: headDescription,
     alternates: alternatesFor(`/blog/${post.slug}`),
     openGraph: {
-      title: post.metaTitle,
-      description: post.metaDescription,
+      title: headTitle,
+      description: headDescription,
       url: `${site.url}/blog/${post.slug}`,
       type: 'article',
       publishedTime: post.publishedAt,
@@ -75,8 +82,8 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.metaTitle,
-      description: post.metaDescription,
+      title: headTitle,
+      description: headDescription,
       images: images.twitter,
     },
   };
@@ -462,33 +469,32 @@ function shouldShowEditorialImage(section: SectionView) {
   return section.index === 1 || section.index % 4 === 0;
 }
 
-function renderInlineLinks(text: string, keyPrefix: string, cited?: Set<string>): ReactNode[] {
-  const regex = /(\/[a-z0-9][a-z0-9\-/]*[a-z0-9])/g;
+function renderInlineLinks(text: string, keyPrefix: string, cited?: Set<string>, strictLinks = false): ReactNode[] {
+  const regex = strictLinks ? inlinePathRegex() : /(\/[a-z0-9][a-z0-9\-/]*[a-z0-9])/g;
   const parts: ReactNode[] = [];
   let lastIndex = 0;
   let match: RegExpExecArray | null;
   let i = 0;
 
   while ((match = regex.exec(text)) !== null) {
+    if (strictLinks && !isSitePath(match[0])) continue;
     if (match.index > lastIndex) {
-      parts.push(cited ? citeSources(text.slice(lastIndex, match.index), cited) : text.slice(lastIndex, match.index));
+      parts.push(strictLinks ? <ContextualText key={`${keyPrefix}-text-${lastIndex}`} text={text.slice(lastIndex, match.index)} cited={cited} /> : cited ? citeSources(text.slice(lastIndex, match.index), cited) : text.slice(lastIndex, match.index));
     }
 
-    const href = match[1];
-    parts.push(
-      <Link
-        key={`${keyPrefix}-link-${i++}`}
-        href={href}
-        className="font-semibold text-accent-500 underline decoration-accent-500/30 underline-offset-[3px] hover:decoration-accent-500"
-      >
-        {href}
-      </Link>,
-    );
+    const href = strictLinks ? match[0] : match[1];
+    const key = `${keyPrefix}-link-${i++}`;
+    const className = "font-semibold text-accent-500 underline decoration-accent-500/30 underline-offset-[3px] hover:decoration-accent-500";
+    // These slash fragments are ordinary prose, not pages. Keep their visible
+    // styling while removing the false link semantics; do not invent destinations.
+    parts.push(['/native-equivalent', '/data', '/2023'].includes(href)
+      ? <span key={key} className={className}>{href}</span>
+      : <Link key={key} href={href} className={className}>{href}</Link>);
     lastIndex = match.index + match[0].length;
   }
 
   if (lastIndex < text.length) {
-    parts.push(cited ? citeSources(text.slice(lastIndex), cited) : text.slice(lastIndex));
+    parts.push(strictLinks ? <ContextualText key={`${keyPrefix}-text-${lastIndex}`} text={text.slice(lastIndex)} cited={cited} /> : cited ? citeSources(text.slice(lastIndex), cited) : text.slice(lastIndex));
   }
 
   return parts;
@@ -499,11 +505,13 @@ function ArticleParagraph({
   compact = false,
   id,
   cited,
+  strictLinks = false,
 }: {
   children: string;
   compact?: boolean;
   id: string;
   cited?: Set<string>;
+  strictLinks?: boolean;
 }) {
   return (
     <p
@@ -513,7 +521,7 @@ function ArticleParagraph({
           : 'mt-5 text-[17px] leading-[1.85] text-navy-700'
       }
     >
-      {renderInlineLinks(children, id, cited)}
+      {renderInlineLinks(children, id, cited, strictLinks)}
     </p>
   );
 }
@@ -572,7 +580,7 @@ function DetailRows({ bullets, id }: { bullets: string[]; id: string }) {
   );
 }
 
-function ArticleBullets({ bullets, id }: { bullets: string[]; id: string }) {
+function ArticleBullets({ bullets, id, strictLinks = false }: { bullets: string[]; id: string; strictLinks?: boolean }) {
   return (
     <ul className="mt-6 space-y-3">
       {bullets.map((bullet, index) => {
@@ -585,10 +593,10 @@ function ArticleBullets({ bullets, id }: { bullets: string[]; id: string }) {
               {parsed ? (
                 <>
                   <strong className="font-semibold text-navy-950">{parsed.label}:</strong>{' '}
-                  {renderInlineLinks(parsed.body, `${id}-bullet-${index}`)}
+                  {renderInlineLinks(parsed.body, `${id}-bullet-${index}`, undefined, strictLinks)}
                 </>
               ) : (
-                renderInlineLinks(bullet, `${id}-bullet-${index}`)
+                renderInlineLinks(bullet, `${id}-bullet-${index}`, undefined, strictLinks)
               )}
             </span>
           </li>
@@ -757,6 +765,7 @@ function StandardSection({
 }) {
   // Laws named in this section link to their primary source on first mention.
   const cited = new Set<string>();
+  const strictLinks = postSlug === 'bpo-vs-call-center-outsourcing' || (rankedCompanies.length === 0 && !/(?:top|best).*(?:compan|provider|bpo)/i.test(postTitle));
   const HeadingTag = section.level === 3 ? 'h3' : 'h2';
   const headingClass =
     section.level === 3
@@ -772,7 +781,7 @@ function StandardSection({
       )}
 
       {section.paragraphs?.map((paragraph, index) => (
-        <ArticleParagraph key={index} id={`${section.id}-p-${index}`} cited={cited}>
+        <ArticleParagraph key={index} id={`${section.id}-p-${index}`} cited={cited} strictLinks={strictLinks}>
           {paragraph}
         </ArticleParagraph>
       ))}
@@ -796,7 +805,7 @@ function StandardSection({
             <ComparisonList bullets={section.bullets} id={section.id} />
           )
         ) : (
-          <ArticleBullets bullets={section.bullets} id={section.id} />
+          <ArticleBullets bullets={section.bullets} id={section.id} strictLinks={strictLinks} />
         )
       ) : null}
     </section>

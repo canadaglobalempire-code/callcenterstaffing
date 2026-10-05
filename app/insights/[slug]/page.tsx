@@ -1,3 +1,4 @@
+import { inlinePathRegex, isSitePath } from '@/lib/inline-links';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -72,17 +73,18 @@ const DATE_FORMATTER = new Intl.DateTimeFormat('en-US', {
  * authors can write internal links inline as plain strings.
  */
 function renderParagraph(text: string, key: number): ReactNode {
-  const regex = /(\/[a-z0-9][a-z0-9\-/]*[a-z0-9])/g;
+  const regex = inlinePathRegex();
   const parts: ReactNode[] = [];
   let lastIndex = 0;
   let match: RegExpExecArray | null;
   let i = 0;
 
   while ((match = regex.exec(text)) !== null) {
+    if (!isSitePath(match[0])) continue;
     if (match.index > lastIndex) {
       parts.push(text.slice(lastIndex, match.index));
     }
-    const href = match[1];
+    const href = match[0];
     parts.push(
       <Link
         key={`${key}-l-${i++}`}

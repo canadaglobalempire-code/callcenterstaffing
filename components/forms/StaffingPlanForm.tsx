@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, forwardRef } from 'react';
+import { useState, useRef, useId, cloneElement, isValidElement, forwardRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -62,6 +62,8 @@ const fieldClass =
 const labelClass = 'text-xs font-semibold uppercase tracking-[0.12em] text-navy-700';
 
 export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
+  const formId = useId();
+  const fieldId = (name: string) => `${formId}-${name}`;
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
@@ -161,22 +163,22 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
         aria-hidden="true"
       />
 
-      <Field label="Full name" id="name" error={errors.name?.message}>
-        <input id="name" {...register('name')} className={fieldClass} placeholder="Operations lead" />
+      <Field label="Full name" id={fieldId('name')} error={errors.name?.message}>
+        <input id={fieldId('name')} {...register('name')} className={fieldClass} placeholder="Operations lead" />
       </Field>
 
-      <Field label="Company" id="company" error={errors.company?.message}>
+      <Field label="Company" id={fieldId('company')} error={errors.company?.message}>
         <input
-          id="company"
+          id={fieldId('company')}
           {...register('company')}
           className={fieldClass}
           placeholder="Northstar Commerce"
         />
       </Field>
 
-      <Field label="Website" id="website" error={errors.website?.message}>
+      <Field label="Website" id={fieldId('website')} error={errors.website?.message}>
         <input
-          id="website"
+          id={fieldId('website')}
           type="text"
           {...register('website')}
           className={fieldClass}
@@ -184,9 +186,9 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
         />
       </Field>
 
-      <Field label="Company email" id="email" error={errors.email?.message}>
+      <Field label="Company email" id={fieldId('email')} error={errors.email?.message}>
         <input
-          id="email"
+          id={fieldId('email')}
           type="email"
           {...register('email')}
           className={fieldClass}
@@ -194,9 +196,9 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
         />
       </Field>
 
-      <Field label="Phone" id="phone" error={errors.phone?.message}>
+      <Field label="Phone" id={fieldId('phone')} error={errors.phone?.message}>
         <input
-          id="phone"
+          id={fieldId('phone')}
           type="tel"
           {...register('phone')}
           className={fieldClass}
@@ -204,27 +206,27 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
         />
       </Field>
 
-      <Field label="Role type" id="roleType" error={errors.roleType?.message}>
-        <Select id="roleType" {...register('roleType')} options={ROLE_OPTIONS} />
+      <Field label="Role type" id={fieldId('roleType')} error={errors.roleType?.message}>
+        <Select id={fieldId('roleType')} {...register('roleType')} options={ROLE_OPTIONS} />
       </Field>
 
-      <Field label="Agents needed" id="agentCount" error={errors.agentCount?.message}>
-        <Select id="agentCount" {...register('agentCount')} options={AGENT_OPTIONS} />
+      <Field label="Agents needed" id={fieldId('agentCount')} error={errors.agentCount?.message}>
+        <Select id={fieldId('agentCount')} {...register('agentCount')} options={AGENT_OPTIONS} />
       </Field>
 
-      <Field label="Location preference" id="location" error={errors.location?.message}>
-        <Select id="location" {...register('location')} options={LOCATION_OPTIONS} />
+      <Field label="Location preference" id={fieldId('location')} error={errors.location?.message}>
+        <Select id={fieldId('location')} {...register('location')} options={LOCATION_OPTIONS} />
       </Field>
 
       <Field
         label="Anything we should know? (optional)"
         optional
-        id="notes"
+        id={fieldId('notes')}
         error={errors.notes?.message}
         className="lg:col-span-2"
       >
         <textarea
-          id="notes"
+          id={fieldId('notes')}
           rows={4}
           {...register('notes')}
           className={cn(fieldClass, 'h-auto py-3 leading-relaxed')}
@@ -300,9 +302,14 @@ function Field({
           </span>
         )}
       </label>
-      {children}
+      {isValidElement(children)
+        ? cloneElement(children as React.ReactElement<{ 'aria-invalid'?: boolean; 'aria-describedby'?: string }>, {
+            'aria-invalid': error ? true : undefined,
+            'aria-describedby': error ? `${id}-error` : undefined,
+          })
+        : children}
       {error && (
-        <p className="inline-flex items-center gap-1 text-xs text-red-600">
+        <p id={`${id}-error`} className="inline-flex items-center gap-1 text-xs text-red-600">
           <AlertCircle className="h-3 w-3" />
           {error}
         </p>
