@@ -203,7 +203,22 @@ export default function ServicePage({ params }: { params: Params }) {
             <Heading level={2} display="m" className="mt-5">
               What is {svc.primaryKeyword}?
             </Heading>
-            <p className="mt-6 text-body-l text-navy-700">{svc.intro}</p>
+            <p className="mt-6 text-body-l text-navy-700">
+              {svc.slug === 'after-hours-customer-support-staffing' ? (
+                <>
+                  {svc.intro.split('automotive call center staffing')[0]}
+                  <Link
+                    href="/industries/automotive"
+                    className="font-semibold text-accent-500 underline decoration-accent-500/30 underline-offset-[3px] hover:decoration-accent-500"
+                  >
+                    automotive call center staffing
+                  </Link>
+                  {svc.intro.split('automotive call center staffing')[1]}
+                </>
+              ) : (
+                svc.intro
+              )}
+            </p>
           </div>
 
           {/* Two equal columns */}

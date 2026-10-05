@@ -49,6 +49,7 @@ const INDUSTRY_HERO_IMAGES: Record<string, string> = {
   education: '/images/agent-focused.jpg',
   'tech-support': '/images/cc-agent-laptop.jpg',
   warehouse: '/images/agents-row.jpg',
+  automotive: '/images/cc-agent-monitor.jpg',
 };
 
 // Secondary "our approach" image per industry — distinct from the hero above.
@@ -66,6 +67,7 @@ const INDUSTRY_APPROACH_IMAGES: Record<string, string> = {
   education: '/images/diverse-team.jpg',
   'tech-support': '/images/cc-team-work.jpg',
   warehouse: '/images/hd-agents-row.jpg',
+  automotive: '/images/cc-team-huddle.jpg',
 };
 
 export function generateStaticParams() {

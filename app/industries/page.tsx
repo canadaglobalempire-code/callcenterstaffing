@@ -14,6 +14,7 @@ import {
   Building,
   GraduationCap,
   Headphones,
+  Car,
   Package,
   ArrowUpRight,
   ArrowRight,
@@ -34,19 +35,19 @@ import type { ComponentType, SVGProps } from 'react';
 export const metadata: Metadata = {
   title: 'Call Center Staffing by Industry: Healthcare & More',
   description:
-    'Vertical-specific call center staffing across 13 industries. HIPAA, NMLS, PCI, CPNI, FERPA-aware screening with industry-trained recruiters since 2003.',
+    'Vertical-specific call center staffing across 14 industries. HIPAA, NMLS, PCI, CPNI, FERPA-aware screening with industry-trained recruiters since 2003.',
   alternates: alternatesFor('/industries'),
   openGraph: {
     title: 'Call Center Staffing by Industry: Healthcare & More',
     description:
-      'Vertical-specific call center staffing across 13 industries. HIPAA, NMLS, PCI, CPNI, FERPA-aware screening with industry-trained recruiters since 2003.',
+      'Vertical-specific call center staffing across 14 industries. HIPAA, NMLS, PCI, CPNI, FERPA-aware screening with industry-trained recruiters since 2003.',
     url: `${site.url}/industries`,
     images: [
       {
         url: '/images/cc-diverse-team.jpg',
         width: 1200,
         height: 630,
-        alt: 'Call center staffing across 13 industries',
+        alt: 'Call center staffing across 14 industries',
       },
     ],
   },
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Call Center Staffing by Industry',
     description:
-      'Vertical-specific call center staffing across 13 industries with industry-trained recruiters.',
+      'Vertical-specific call center staffing across 14 industries with industry-trained recruiters.',
   },
 };
 
@@ -74,6 +75,7 @@ const ICONS: Record<string, LucideIcon> = {
   education: GraduationCap,
   'tech-support': Headphones,
   warehouse: Package,
+  automotive: Car,
 };
 
 const NOTES: Record<string, string> = {
@@ -90,6 +92,7 @@ const NOTES: Record<string, string> = {
   education: 'FERPA · enrollment · aid',
   'tech-support': 'tier 1/2/3 · ticket quality · 24/7',
   warehouse: 'WMS · returns · Q4 surge',
+  automotive: 'BDC · service scheduling · TCPA',
 };
 
 export default function IndustriesHubPage() {
@@ -128,7 +131,7 @@ export default function IndustriesHubPage() {
           <div className="max-w-4xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-white/90 backdrop-blur-sm">
               <span className="h-2 w-2 rounded-full bg-accent-500 animate-pulse" />
-              Industries · 13 verticals
+              Industries · 14 verticals
             </span>
 
             <h1 className="mt-6 font-display text-[2.5rem] sm:text-[3.25rem] lg:text-[4.25rem] font-extrabold leading-[1.02] tracking-[-0.04em] text-white">
@@ -141,7 +144,7 @@ export default function IndustriesHubPage() {
 
             <p className="mt-6 max-w-[640px] text-[17px] lg:text-lg leading-relaxed text-white/75">
               Compliance, licensure, language mix and seasonality all change how we screen.
-              Thirteen industries. Thirteen screening protocols. Recruiters who know the regulator —
+              Fourteen industries. Fourteen screening protocols. Recruiters who know the regulator —
               not just the resume.
             </p>
 
@@ -153,7 +156,7 @@ export default function IndustriesHubPage() {
                 href="#industries-grid"
                 className="group inline-flex items-center gap-2 rounded-full border border-white/25 px-6 h-14 text-[15px] font-semibold text-white hover:bg-white hover:text-navy-950 transition-colors"
               >
-                See all 13 verticals
+                See all 14 verticals
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
@@ -170,12 +173,20 @@ export default function IndustriesHubPage() {
             <div className="lg:col-span-7">
               <Eyebrow>Vertical playbooks</Eyebrow>
               <Heading level={2} display="l" className="mt-5 max-w-2xl">
-                Thirteen industries. Thirteen screening protocols.
+                Fourteen industries. Fourteen screening protocols.
               </Heading>
             </div>
             <p className="lg:col-span-5 text-body-l text-navy-700 max-w-prose">
               Click any industry to see its compliance considerations, common roles, outcome
               benchmarks and the way we screen against the regulator — not just your QA scorecard.
+              That includes{' '}
+              <Link
+                href="/industries/automotive"
+                className="font-semibold text-accent-500 underline decoration-accent-500/30 underline-offset-[3px] hover:decoration-accent-500"
+              >
+                automotive call center staffing
+              </Link>{' '}
+              for dealership BDC, service scheduling and after-hours coverage.
             </p>
           </div>
 

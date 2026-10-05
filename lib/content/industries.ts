@@ -1288,6 +1288,92 @@ export const INDUSTRIES: Industry[] = [
       },
     ],
   },
+  {
+    slug: 'automotive',
+    name: 'Automotive',
+    primaryKeyword: 'automotive call center staffing',
+    metaTitle: 'Automotive Call Center Staffing for Dealerships & BDC',
+    metaDescription:
+      'Automotive call center staffing for dealership BDC, sales and service scheduling lines. Appointment confirmation and after-hours coverage. Get a staffing plan.',
+    hero: {
+      eyebrow: 'Industries · Automotive',
+      headline: 'Automotive Call Center Staffing for Dealership BDC, Sales & Service',
+      subhead:
+        'Dealership BDC and sales coverage, service scheduling lines, appointment confirmation and after-hours overflow — staffed by recruiters who screen for speed-to-lead discipline, DMS/CRM fluency and schedule realism across single rooftops and multi-store dealer groups.',
+    },
+    intro: `Automotive call center staffing is how dealerships, dealer groups and manufacturer programs put trained agents on BDC, sales and service-scheduling queues without carrying the hiring, training and seasonal-bench risk in-house. The work is unforgiving in specific ways: internet leads decay in minutes, service customers call with a vehicle they need back today, and every appointment taken has to be confirmed or it becomes a no-show. We recruit and place inbound BDC and sales agents, service scheduling reps and outbound confirmation callers who stay on our payroll while you pay only for hours worked. Every shortlisted agent is screened on a recorded speed-to-lead or scheduling role-play, DMS/CRM keyboard fluency and TCPA-disciplined outbound practice. We plan cohorts against your real calendar — sales events, model year-end, tax-season service surges and Saturday service peaks — and can return a first shortlist in roughly 72 hours with a 90-day attrition guarantee.`,
+    industryChallenges: [
+      {
+        title: 'Speed-to-lead on internet leads',
+        body: 'Dealership web leads and inbound calls go cold in minutes, and the first store to reach the buyer usually sets the terms of the conversation. Agents who queue leads into a callback list instead of working them live — or who cannot pass a credit or trade-in pre-screen — quietly convert fewer leads than the store paid for. Speed-to-lead discipline is screened on a recorded scenario, not assumed.',
+      },
+      {
+        title: 'Service-lane scheduling literacy',
+        body: 'A service scheduling agent has to read recommended-maintenance intervals, triage a driveability complaint, quote a wait estimate and coordinate loaner or transport — often while the customer is on the line with a vehicle in the drive. Agents without dealership or service-desk background inflate handle time and double-book the lane. DMS/CRM fluency is tested, not taken from the resume.',
+      },
+      {
+        title: 'Confirmation calls and no-show recovery',
+        body: 'Every unfilled slot in a service lane or showroom is revenue that never arrives. Confirmation and reminder calling works only when it is persistent, documented and TCPA-disciplined — agents who skip consent rules or call the wrong number create legal exposure while trying to save an appointment. Outbound candidates are screened on consent, cadence and reschedule-capture practice before they ever dial.',
+      },
+      {
+        title: 'Weekend, seasonal and after-hours peaks',
+        body: 'Saturday service volume, model year-end sales events, tax-season service surges and weather-driven repair spikes all land outside a Monday-to-Friday recruiting plan. Stores that scramble for temporary help each cycle pay for it in missed appointments and burned-out advisors. The cohort calendar has to be built against the store real calendar — benched early, demobilized cleanly.',
+      },
+    ],
+    staffingApproach: `We staff automotive contact centers against the pace of the store, not a generic CX rubric. Inbound BDC and sales candidates complete a recorded speed-to-lead scenario — a fresh internet lead lands mid-call and the candidate has to qualify, set an appointment and document it in the CRM while the buyer is still on the phone. Service scheduling candidates are screened on a timed scenario in a dealership-style DMS/CRM — reading a maintenance menu, checking technician availability, booking the slot and setting follow-up expectations without double-booking the lane. Outbound confirmation and follow-up candidates are screened separately for TCPA discipline: consent language, callback cadence, voicemail practice and reschedule capture on a recorded scenario. For multi-rooftop dealer groups we screen for shared-queue judgment — knowing which store owns the customer, routing to the right rooftop and protecting each store process. Cohort calendars are planned against your real windows: month-end sales pushes, model year-end, tax-season service surges, Saturday service coverage and manufacturer program launches. Bilingual Spanish BDC and service work runs from our Mexico nearshore delivery for US-LATAM customers; onshore covers licensed sales-side conversations and escalation-heavy service queues; offshore back-office handles CRM hygiene, lead data entry and campaign follow-up. As with every engagement, agents stay on our payroll, you pay only for hours worked, any agent can be swapped free, and every placement is backed by a 90-day attrition guarantee.`,
+    rolesCommonlyStaffed: [
+      'inbound-customer-service',
+      'outbound-sales-agents',
+      'bilingual-agents',
+      'team-leads-supervisors',
+      'qa-analysts',
+      'workforce-management',
+    ],
+    complianceConsiderations: [
+      'TCPA-disciplined outbound screening for confirmation and follow-up calling',
+      'DMS/CRM keyboard fluency tested on a timed scheduling scenario',
+      'Recorded speed-to-lead role-play scored at shortlist and shared with your team',
+      'Evening, weekend and holiday availability confirmed in writing pre-submission',
+      'CCPA awareness for California customer data on sales and service records',
+      'PCI awareness for deposit and payment-related conversations',
+    ],
+    regulatoryFrameworks: ['TCPA', 'CCPA', 'PCI DSS'],
+    outcomes: [
+      { metric: 'About 72 hrs', description: 'Typical time to first qualified shortlist' },
+      { metric: 'Less than 21 days', description: 'Average shortlist for steady-state automotive cohorts' },
+      { metric: '90-day', description: 'Attrition guarantee on every placement' },
+    ],
+    faqs: [
+      {
+        q: 'What is automotive call center staffing?',
+        a: 'It is the recruiting and placement of trained agents for dealership and automotive contact-center work — BDC inbound lead handling, sales support, service scheduling, appointment confirmation and after-hours overflow. We supply and employ the agents; they work your DMS/CRM, scripts and processes while staying on our payroll. You pay only for hours worked, month-to-month, and any agent can be swapped free under our 90-day attrition guarantee.',
+      },
+      {
+        q: 'Can you staff a dealership BDC for both sales and service?',
+        a: 'Yes. We recruit BDC agents for inbound internet-lead response, sales appointment setting, service scheduling and customer follow-up. The two profiles are screened differently — sales-side candidates complete a recorded speed-to-lead scenario, while service-side candidates are tested on a timed scheduling scenario with maintenance menus and technician availability — and we can staff a combined queue when your store runs one.',
+      },
+      {
+        q: 'How do you handle appointment confirmation and follow-up calls?',
+        a: 'Outbound confirmation candidates are screened separately from inbound profiles for TCPA discipline — consent language, calling cadence, voicemail practice and documentation — on a recorded scenario before they reach your shortlist. Cohorts work from your CRM lists and your cadence rules, capture reschedules back into the calendar, and escalate unreachable customers according to your process.',
+      },
+      {
+        q: 'Can you cover after-hours and weekend service lines?',
+        a: 'Yes. After-hours and Saturday service coverage is a scheduling problem before it is a recruiting problem: we map the intervals where the queue actually fails, screen candidates for written schedule commitment, and place overnight or weekend work in sustainable shifts across onshore and nearshore regions. Coverage can be continuing 24/7 or a seasonal overlay on your existing team.',
+      },
+      {
+        q: 'How do you handle seasonal peaks like sales events and service surges?',
+        a: 'We build the cohort calendar against your real windows — month-end and year-end sales events, model year-end, tax-season service surges and weather-driven repair spikes. Peak cohorts are benched ahead of the window, trained on your processes before go-live, and demobilized cleanly at the end of the period with a retention offer for top performers.',
+      },
+      {
+        q: 'Do you work with multi-rooftop dealer groups and manufacturer programs?',
+        a: 'Yes. For dealer groups we screen for shared-queue judgment — which store owns the customer, how to route to the right rooftop and how to keep each store process intact inside a combined BDC. For manufacturer and captive-program work we staff against your published requirements and report QA against your scorecard, with cohorts scaled per program wave.',
+      },
+      {
+        q: 'How fast can automotive agents start, and where do they sit?',
+        a: 'A first qualified shortlist typically arrives in about 72 hours, with steady-state cohorts live in under 21 days. Bilingual Spanish BDC and service work runs primarily from our Mexico nearshore delivery; onshore covers sales-side conversations and escalation-heavy queues; offshore handles CRM hygiene and lead data entry. Every placement stays on our payroll with a 90-day attrition guarantee.',
+      },
+    ],
+  },
 ];
 
 export function getIndustry(slug: string): Industry | undefined {

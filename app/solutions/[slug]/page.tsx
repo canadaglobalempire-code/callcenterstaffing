@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowRight, AlertCircle, Lightbulb, TrendingUp, Quote, Clock, Target, BarChart3 } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
@@ -187,9 +188,23 @@ export default function SolutionPage({ params }: { params: Params }) {
                   How we solve it differently.
                 </h2>
                 <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-white/80">
-                  {sol.ourApproach.split('\n\n').map((p, i) => (
-                    <p key={i}>{p}</p>
-                  ))}
+                  {sol.ourApproach.split('\n\n').map((p, i) =>
+                    sol.slug === 'overflow-call-center-staffing' &&
+                    p.includes('automotive call center staffing') ? (
+                      <p key={i}>
+                        {p.split('automotive call center staffing')[0]}
+                        <Link
+                          href="/industries/automotive"
+                          className="font-semibold text-accent-500 underline decoration-accent-500/30 underline-offset-[3px] hover:decoration-accent-500"
+                        >
+                          automotive call center staffing
+                        </Link>
+                        {p.split('automotive call center staffing')[1]}
+                      </p>
+                    ) : (
+                      <p key={i}>{p}</p>
+                    ),
+                  )}
                 </div>
               </div>
             </div>
