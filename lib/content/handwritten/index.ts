@@ -11,6 +11,7 @@ import { post as healthcareCallCenterOutsourcing } from './healthcare-call-cente
 import { post as bpoVsCallCenterOutsourcing } from './bpo-vs-call-center-outsourcing';
 import { post as howToChooseABpoCompany } from './how-to-choose-a-bpo-company';
 import { post as outsourceCustomerServiceToAfrica } from './outsource-customer-service-to-africa';
+import { post as callCenterStaffingAgencies } from './call-center-staffing-agencies';
 
 export const HANDWRITTEN_TRAFFIC_POSTS = [
   bestCallCenterOutsourcingCompanies,
@@ -25,4 +26,5 @@ export const HANDWRITTEN_TRAFFIC_POSTS = [
   bpoVsCallCenterOutsourcing,
   howToChooseABpoCompany,
   outsourceCustomerServiceToAfrica,
+  callCenterStaffingAgencies,
 ];
