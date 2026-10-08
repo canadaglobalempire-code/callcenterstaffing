@@ -67,13 +67,13 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
   const headDescription = post.metaDescription.length > 160
     ? post.metaDescription.replace(/, (?:and )?(?:the )?staffing option\.$/, '.') : post.metaDescription;
   return {
-    title: headTitle,
+    title: post.path ? { absolute: headTitle } : headTitle,
     description: headDescription,
-    alternates: alternatesFor(`/blog/${post.slug}`),
+    alternates: alternatesFor(post.path ?? `/blog/${post.slug}`),
     openGraph: {
       title: headTitle,
       description: headDescription,
-      url: `${site.url}/blog/${post.slug}`,
+      url: `${site.url}${post.path ?? `/blog/${post.slug}`}`,
       type: 'article',
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt ?? post.publishedAt,
@@ -469,7 +469,13 @@ function shouldShowEditorialImage(section: SectionView) {
   return section.index === 1 || section.index % 4 === 0;
 }
 
-function renderInlineLinks(text: string, keyPrefix: string, cited?: Set<string>, strictLinks = false): ReactNode[] {
+function renderInlineLinks(text: string, keyPrefix: string, cited?: Set<string>, strictLinks = false, markdown = false): ReactNode[] {
+  if (markdown) {
+    const parts = text.split(/\[([^\]]+)\]\((\/[^)\s]*|https:\/\/[^)\s]+)\)/);
+    return parts.map((part, index) => index % 3 === 2 ? null : index % 3 === 1
+      ? <Link key={`${keyPrefix}-${index}`} href={parts[index + 1]} className="font-semibold text-accent-500 underline decoration-accent-500/30 underline-offset-[3px] hover:decoration-accent-500">{part}</Link>
+      : cited ? citeSources(part, cited) : part);
+  }
   const regex = strictLinks ? inlinePathRegex() : /(\/[a-z0-9][a-z0-9\-/]*[a-z0-9])/g;
   const parts: ReactNode[] = [];
   let lastIndex = 0;
@@ -506,12 +512,14 @@ function ArticleParagraph({
   id,
   cited,
   strictLinks = false,
+  markdown = false,
 }: {
   children: string;
   compact?: boolean;
   id: string;
   cited?: Set<string>;
   strictLinks?: boolean;
+  markdown?: boolean;
 }) {
   return (
     <p
@@ -521,7 +529,7 @@ function ArticleParagraph({
           : 'mt-5 text-[17px] leading-[1.85] text-navy-700'
       }
     >
-      {renderInlineLinks(children, id, cited, strictLinks)}
+      {renderInlineLinks(children, id, cited, strictLinks, markdown)}
     </p>
   );
 }
@@ -781,7 +789,7 @@ function StandardSection({
       )}
 
       {section.paragraphs?.map((paragraph, index) => (
-        <ArticleParagraph key={index} id={`${section.id}-p-${index}`} cited={cited} strictLinks={strictLinks}>
+        <ArticleParagraph key={index} id={`${section.id}-p-${index}`} cited={cited} strictLinks={strictLinks} markdown={Boolean(getPost(postSlug)?.path)}>
           {paragraph}
         </ArticleParagraph>
       ))}
@@ -1084,11 +1092,11 @@ export default function BlogPostPage({ params }: { params: Params }) {
   const crumbs = [
     { label: 'Home', href: '/' },
     { label: 'Blog', href: '/blog' },
-    { label: post.title, href: `/blog/${post.slug}` },
+    { label: post.title, href: post.path ?? `/blog/${post.slug}` },
   ];
 
   const heroImage = post.heroImage ?? FALLBACK_IMAGE;
-  const url = `${site.url}/blog/${post.slug}`;
+  const url = `${site.url}${post.path ?? `/blog/${post.slug}`}`;
   const sectionViews = buildSectionViews(post.sections);
   const rankedCompanies = extractRankedCompanies(post.sections);
   const firstRankedIndex = sectionViews.findIndex((sec) => parseRankedHeading(sec.heading) !== null);
@@ -1269,7 +1277,7 @@ export default function BlogPostPage({ params }: { params: Params }) {
               {related.map((rp) => (
                 <li key={rp.slug}>
                   <Link
-                    href={`/blog/${rp.slug}`}
+                    href={rp.path ?? `/blog/${rp.slug}`}
                     className="group flex h-full flex-col rounded-lg border border-navy-950/10 bg-white p-5 shadow-sm transition-all hover:border-accent-500/40 hover:-translate-y-0.5"
                   >
                     <div className="relative aspect-[16/10] overflow-hidden rounded-md ring-1 ring-navy-950/5">

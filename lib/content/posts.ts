@@ -1,4 +1,5 @@
 import type { Post, PostSection } from './types';
+import dashboardGuides from './dashboard-guides.json';
 import { BPO_CONTENT } from './bpo-content';
 import { NETWORK_DIRECTORY_POST } from './network-directory';
 import { NEARSHORE_POSTS } from './posts-nearshore';
@@ -3236,7 +3237,7 @@ function withGroupProviders(post: Post): Post {
   };
 }
 
-export const POSTS: Post[] = RAW_POSTS.map(withGroupProviders);
+export const POSTS: Post[] = [...RAW_POSTS.map(withGroupProviders), ...(dashboardGuides as Post[])];
 
 export function getPost(slug: string): Post | undefined {
   return POSTS.find((p) => p.slug === slug);

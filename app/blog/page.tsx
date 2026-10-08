@@ -143,7 +143,7 @@ export default function BlogIndexPage() {
             </div>
 
             <Link
-              href={`/blog/${featured.slug}`}
+              href={featured.path ?? `/blog/${featured.slug}`}
               className="group grid lg:grid-cols-12 gap-8 lg:gap-12 items-stretch rounded-3xl border border-navy-950/8 bg-white p-6 lg:p-8 transition-all hover:border-accent-500/40 hover:shadow-md hover:-translate-y-0.5"
             >
               <div className="relative lg:col-span-6 aspect-[4/3] lg:aspect-auto overflow-hidden rounded-2xl ring-1 ring-navy-950/5">
@@ -206,7 +206,7 @@ export default function BlogIndexPage() {
             {(rest.length ? rest : posts).map((post) => (
               <li key={post.slug}>
                 <Link
-                  href={`/blog/${post.slug}`}
+                  href={post.path ?? `/blog/${post.slug}`}
                   className="group flex h-full flex-col rounded-3xl border border-navy-950/8 bg-white p-6 transition-all hover:border-accent-500/40 hover:shadow-md hover:-translate-y-0.5"
                 >
                   <div className="relative aspect-[16/10] overflow-hidden rounded-2xl ring-1 ring-navy-950/5">

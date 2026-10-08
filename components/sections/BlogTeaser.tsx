@@ -8,7 +8,7 @@ import { Heading } from '@/components/ui/Heading';
 import { POSTS } from '@/lib/content/posts';
 
 export function BlogTeaser() {
-  const latest = [...POSTS]
+  const latest = [...POSTS].filter(post => !post.path)
     .sort((a, b) => (b.publishedAt > a.publishedAt ? 1 : -1))
     .slice(0, 3);
 
