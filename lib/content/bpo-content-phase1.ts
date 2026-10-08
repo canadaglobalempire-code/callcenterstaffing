@@ -15,9 +15,9 @@ export const BPO_CONTENT_PHASE1: Record<string, BpoContent> = {
     title: 'Top 15 BPO Companies in Egypt 2026',
     excerpt:
       'An Egypt-specific buyer guide to leading BPO and contact-centre providers across Cairo, Alexandria and the Smart Village, with honest best-fit notes, the multilingual and compliance questions European and Gulf buyers should ask, and when trained agents on your own floor beat a full outsourcer.',
-    metaTitle: 'Top 15 BPO Companies in Egypt 2026',
+    metaTitle: "BPO Companies in Egypt: Provider Guide",
     metaDescription:
-      'Compare 14 real BPO companies in Egypt for 2026: Cairo multilingual hubs, best-fit notes, buyer questions, PDPL compliance and the staffing option.',
+      "Compare the Egypt BPO provider guide. Confirm actual delivery locations, language skills and operating hours for the customer work you need.",
     primaryKeyword: 'top BPO companies in Egypt',
     sections: [
       {

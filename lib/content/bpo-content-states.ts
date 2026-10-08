@@ -16,9 +16,9 @@ export const BPO_CONTENT_STATES: Record<string, BpoContent> = {
     title: 'Top 15 BPO Companies in Florida 2026',
     excerpt:
       'A Florida-specific buyer guide to BPO and call-center providers across Tampa, Orlando, Miami and Jacksonville, with what each metro does well, the tax and hurricane factors that change the maths, and when staffing your own floor beats outsourcing.',
-    metaTitle: 'Top 15 BPO & Call Center Companies in Florida 2026',
+    metaTitle: "BPO Companies in Florida: Provider Guide",
     metaDescription:
-      'Compare BPO and call center companies in Florida for 2026: Tampa, Orlando, Miami and Jacksonville metros, bilingual depth, no state income tax, staffing option.',
+      "Compare the Florida BPO provider guide. Define customer channels, workload and operating hours, then confirm actual delivery scope with providers.",
     primaryKeyword: 'BPO companies in Florida',
     sections: [
       {

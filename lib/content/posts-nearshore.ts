@@ -217,9 +217,9 @@ export const NEARSHORE_POSTS: Post[] = [
     title: 'Multilingual Support Staffing: Hiring Beyond Spanish',
     excerpt:
       'Most "multilingual" support programmes are really English plus Spanish. Once you need Portuguese, French, German or Arabic, the sourcing problem changes shape entirely — and the usual nearshore answer stops applying.',
-    metaTitle: 'Multilingual Support Staffing Beyond Spanish',
+    metaTitle: "Multilingual Customer Support Staffing Beyond Spanish",
     metaDescription:
-      'Staffing multilingual support beyond English and Spanish: where Portuguese, French, German, Arabic and Asian-language capacity sits, and how to queue it.',
+      "Plan multilingual support staffing beyond Spanish. Define required languages, customer channels, agent assessment and the coverage your programme needs.",
     publishedAt: '2026-07-21',
     author: 'Call Center Staffing',
     category: 'Hiring',

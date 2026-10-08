@@ -18,8 +18,8 @@ export const BPO_CONTENT: Record<string, BpoContent> = {
   "top-15-bpo-companies-in-usa": {
     "title": "Top 15 BPO Companies in the USA 2026",
     "excerpt": "A buyer-focused guide to the top BPO companies operating in the USA in 2026, with what each provider is known for, who they fit, the questions to ask, and when trained staffing beats a full outsourcer.",
-    "metaTitle": "Top 15 BPO Companies in the USA (2026 Buyer Guide)",
-    "metaDescription": "Compare 14 real BPO companies in the USA: Teleperformance, Concentrix, TTEC, Alorica, TaskUs and more, with best-fit notes and the questions to ask each.",
+    "metaTitle": "BPO Companies in the USA: Provider Guide",
+    "metaDescription": "Compare the BPO provider guide for the USA. Review service scope, customer hours and management responsibility before requesting an outsourcing proposal.",
     "primaryKeyword": "top BPO companies in USA",
     "sections": [
       {
@@ -118,8 +118,8 @@ export const BPO_CONTENT: Record<string, BpoContent> = {
   "top-15-bpo-companies-in-canada": {
     "title": "Top 15 BPO Companies in Canada 2026",
     "excerpt": "A buyer's guide to BPO companies operating in Canada: 14 real providers, what each is known for, how bilingual and PIPEDA needs change the shortlist, and when trained agents on your own floor beat a full outsource.",
-    "metaTitle": "Top 14 BPO Companies in Canada (2026 Buyer Guide)",
-    "metaDescription": "Real BPO providers operating in Canada, ranked by fit. Compare bilingual coverage, PIPEDA data residency, and onshore vs offshore delivery before you sign.",
+    "metaTitle": "BPO Companies in Canada: Provider Guide",
+    "metaDescription": "Compare the Canada BPO provider guide. Define customer channels, languages, operating hours and task ownership before choosing a delivery programme.",
     "primaryKeyword": "top BPO companies in Canada",
     "sections": [
       {
@@ -412,8 +412,8 @@ export const BPO_CONTENT: Record<string, BpoContent> = {
   "top-15-bpo-companies-in-uk": {
     "title": "Top 15 BPO Companies in the UK 2026",
     "excerpt": "A 2026 buyer guide to the UK's best-known BPO and contact centre outsourcers, from Teleperformance and Capita to Glasgow's Kura and home-working specialist Sensee, with best-fit notes, GDPR questions, and an honest staffing alternative.",
-    "metaTitle": "Top 15 BPO Companies in the UK 2026",
-    "metaDescription": "Compare 14 real UK BPO and contact centre outsourcers for 2026. Best-fit notes, GDPR and FCA questions to ask, and when in-house staffing beats a full BPO.",
+    "metaTitle": "BPO Companies in the UK: Provider Guide",
+    "metaDescription": "Compare the UK BPO provider guide. Review the actual tasks, delivery scope, customer coverage and handoff responsibilities before choosing a programme.",
     "primaryKeyword": "top BPO companies in UK",
     "sections": [
       {
@@ -656,8 +656,8 @@ export const BPO_CONTENT: Record<string, BpoContent> = {
   "top-15-bpo-companies-in-australia": {
     "title": "Top 15 BPO Companies in Australia 2026",
     "excerpt": "A practical 2026 shortlist of real BPO and CX providers operating in Australia, with onshore vs Manila trade-offs, Privacy Act questions to ask, and an honest note on when staffing beats outsourcing.",
-    "metaTitle": "Top 15 BPO Companies in Australia 2026",
-    "metaDescription": "Compare 14 real BPO companies operating in Australia in 2026. Onshore vs offshore trade-offs, Privacy Act questions, best-fit notes, and a staffing alternative.",
+    "metaTitle": "BPO Companies in Australia: Provider Guide",
+    "metaDescription": "Compare the Australia BPO provider guide. Review customer hours, language requirements and task ownership before selecting the proposed delivery team.",
     "primaryKeyword": "top BPO companies in Australia",
     "sections": [
       {

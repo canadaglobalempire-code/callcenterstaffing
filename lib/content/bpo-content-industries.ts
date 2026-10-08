@@ -16,9 +16,9 @@ export const BPO_CONTENT_INDUSTRIES: Record<string, BpoContent> = {
     title: 'Top 15 Healthcare Call Center Outsourcing Companies 2026',
     excerpt:
       'A buyer guide to healthcare call-center and BPO companies for 2026, covering HIPAA-bound patient access, payer and provider workflows, the compliance questions that actually matter, and when staffing licensed, trained agents on your own floor beats outsourcing.',
-    metaTitle: 'Top 15 Healthcare Call Center Outsourcing Companies 2026',
+    metaTitle: "Healthcare Call Center Outsourcing Companies: Guide",
     metaDescription:
-      'Compare healthcare call center outsourcing companies for 2026: HIPAA-bound patient access, payer and provider CX, buyer questions, and the staffing option.',
+      "Review the healthcare call center outsourcing company guide. Compare administrative tasks, coverage, access and specialist escalation requirements.",
     primaryKeyword: 'healthcare call center outsourcing companies',
     sections: [
       {
@@ -215,9 +215,9 @@ export const BPO_CONTENT_INDUSTRIES: Record<string, BpoContent> = {
     title: 'Top 15 Ecommerce Call Center Outsourcing Companies 2026',
     excerpt:
       'A buyer guide to ecommerce and retail call-center and BPO companies for 2026, covering omnichannel support, peak-season scaling, order and returns workflows, the questions that matter, and when staffing your own floor beats outsourcing.',
-    metaTitle: 'Top 15 Ecommerce Call Center Outsourcing Companies 2026',
+    metaTitle: "Ecommerce Call Center Outsourcing Companies: Guide",
     metaDescription:
-      'Compare ecommerce call center outsourcing companies for 2026: omnichannel support, peak-season scaling, returns and order workflows, and the staffing option.',
+      "Review the ecommerce call center outsourcing company guide. Compare order enquiries, returns, peak coverage and the actual responsibilities proposed.",
     primaryKeyword: 'ecommerce call center outsourcing companies',
     sections: [
       {
@@ -313,9 +313,9 @@ export const BPO_CONTENT_INDUSTRIES: Record<string, BpoContent> = {
     title: 'Top 15 Financial Services Call Center Outsourcing Companies 2026',
     excerpt:
       'A buyer guide to financial-services call-center and BPO companies for 2026, covering banking, lending, fintech and collections workflows, NMLS and PCI compliance, the questions that matter, and when staffing trained agents on your own floor beats outsourcing.',
-    metaTitle: 'Top 15 Financial Services Call Center Outsourcing Companies 2026',
+    metaTitle: "Financial Services Call Center Outsourcing Companies",
     metaDescription:
-      'Compare financial services call center outsourcing companies for 2026: banking, lending, fintech and collections, NMLS and PCI, buyer questions, staffing option.',
+      "Review the financial services call center outsourcing company guide. Confirm task authority, account access, customer coverage and escalation needs.",
     primaryKeyword: 'financial services call center outsourcing companies',
     sections: [
       {

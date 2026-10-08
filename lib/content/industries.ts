@@ -309,9 +309,9 @@ export const INDUSTRIES: Industry[] = [
     slug: 'ecommerce-retail',
     name: 'eCommerce & Retail',
     primaryKeyword: 'ecommerce customer service outsourcing',
-    metaTitle: 'eCommerce Customer Service Outsourcing',
+    metaTitle: "Ecommerce Call Center Staffing for Customer Support",
     metaDescription:
-      'eCommerce customer service outsourcing done as staffing: trained agents on our payroll, pay per hour, Q4 surge bench pre-built. Get a free plan in 1 day.',
+      "Explore ecommerce call center staffing for order enquiries, returns and seasonal coverage. Define customer channels, agent authority and the workload you need.",
     hero: {
       eyebrow: 'Industries · eCommerce & Retail',
       headline: 'Ecommerce & retail customer service agents, staffed on our payroll',
@@ -396,7 +396,10 @@ export const INDUSTRIES: Industry[] = [
         q: 'Are your agents PCI-compliant for payment and checkout troubleshooting?',
         a: 'Yes. Every payment-touching agent has documented PCI awareness training and passes a recorded call-control scenario at shortlist where they must refuse to repeat a card number aloud. For brands serving California consumers we also screen for CCPA awareness and verified deletion-request handling.',
       },
-    ],
+
+{"q": "What is an ecommerce call center?", "a": "An ecommerce call center handles customer conversations about online orders, delivery, returns and account questions. Define which actions agents may complete and which exceptions return to your team."},
+{"q": "How does staffing differ from outsourcing the whole support operation?", "a": "Staffing adds agents to an operation you manage. A managed outsourcing arrangement can include wider responsibility for running the queue. Compare supervision, training, systems and quality ownership in the actual proposal."},
+],
   },
   {
     slug: 'telecom-media',

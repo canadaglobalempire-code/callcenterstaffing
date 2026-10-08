@@ -472,8 +472,8 @@ export const REGIONS: Region[] = [
     "languages": "English (native) · French · Arabic",
     "coverage": "UK overlap · US night-shift",
     "image": "/images/cc-support-team.jpg",
-    "metaTitle": "Call Center Staffing in Africa | Offshore CX Agents",
-    "metaDescription": "Staff neutral-accent, UK-overlapping offshore call center agents across South Africa, Kenya, Egypt and Nigeria. On our payroll, billed per hour worked.",
+    "metaTitle": "Offshore Call Center Staffing in Africa",
+    "metaDescription": "Explore offshore call center staffing in Africa. Compare the actual language skills, customer coverage, training and team management needed for your programme.",
     "h1": "Offshore Call Center Agents Across Africa, On Your Schedule",
     "intro": "Africa has become the offshore answer for teams that want neutral, UK-leaning English at a price that undercuts onshore markets without the round-the-world handoff gap. South Africa anchors the region with a workforce that British and Australian customers hear as familiar, while Kenya, Egypt and Nigeria add English depth, French and Arabic, and time zones that overlap a full European business day. Because GMT+0 to GMT+3 sits directly under the UK and EU, an agent in Cape Town or Nairobi is live when London opens and still on shift when New York wakes. We staff these markets as offshore delivery: agents you direct day to day, kept on our payroll, billed only for the hours they actually work.",
     "whyHere": [
