@@ -68,6 +68,10 @@ const ATTRIBUTION_LABELS: Record<keyof Attribution, string> = {
   landedAt: 'landed_at',
 };
 
+// Phone arrives as dial code + national digits from components/forms/PhoneField,
+// e.g. "+14035551234": a plus, then 5-15 digits (E.164 maximum).
+const e164Phone = z.string().regex(/^\+[1-9]\d{4,14}$/);
+
 // Every lead field is required (the staffing form's notes excepted), matching
 // the client-side schemas in components/forms.
 const heroFieldsSchema = z.object({
@@ -75,11 +79,7 @@ const heroFieldsSchema = z.object({
   email: z.string().email().max(180),
   company: z.string().min(2).max(160),
   website: z.string().trim().min(1).max(220),
-  phone: z
-    .string()
-    .min(7)
-    .max(40)
-    .regex(/^[\d+\-().\s]+$/),
+  phone: e164Phone,
   agentCount: z.enum(['1-9', '10-49', '50-199', '200-499', '500+']),
   region: z.enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open']),
   'g-recaptcha-response': z.string().min(10).max(3000),
@@ -90,11 +90,7 @@ const staffingFieldsSchema = z.object({
   company: z.string().min(2).max(160),
   website: z.string().trim().min(1).max(220),
   email: z.string().email().max(180),
-  phone: z
-    .string()
-    .min(7)
-    .max(40)
-    .regex(/^[\d+\-().\s]+$/),
+  phone: e164Phone,
   roleType: z.enum([
     'inbound-cs',
     'outbound-sales',

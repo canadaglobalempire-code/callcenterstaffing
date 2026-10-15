@@ -9,6 +9,7 @@ import { cn } from '@/lib/utils';
 import { submitLead } from '@/lib/lead-client';
 import { trackLeadSubmission } from '@/lib/analytics';
 import { Recaptcha, type RecaptchaHandle } from './Recaptcha';
+import { PhoneField, DEFAULT_COUNTRY, isKnownCountry, isValidNationalNumber, toE164 } from './PhoneField';
 
 // Every field except the free-text notes is required so each lead arrives
 // complete. The website accepts any text, so a bare domain, a full URL or "N/A"
@@ -18,7 +19,12 @@ const schema = z.object({
   company: z.string().min(2, 'Enter your company').max(160),
   website: z.string().trim().min(1, 'Enter your website, or N/A'),
   email: z.string().email('Enter a valid company email'),
-  phone: z.string().regex(/^[\d+\-().\s]{7,40}$/, 'Enter a valid phone number'),
+  phoneCountry: z.string().refine(isKnownCountry, 'Select a country code'),
+  phone: z
+    .string()
+    .trim()
+    .min(1, 'Enter your mobile number')
+    .refine(isValidNationalNumber, 'Enter a valid phone number'),
   roleType: z.enum(
     ['inbound-cs', 'outbound-sales', 'bilingual', 'team-leads', 'qa-wfm', 'multiple'],
     { errorMap: () => ({ message: 'Select a role type' }) },
@@ -76,9 +82,11 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
+    watch,
   } = useForm<FormValues>({
     resolver: zodResolver(schema),
     mode: 'onBlur',
+    defaultValues: { phoneCountry: DEFAULT_COUNTRY },
   });
 
   const onSubmit = async (values: FormValues) => {
@@ -98,7 +106,7 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
           company: values.company,
           website: values.website,
           email: values.email,
-          phone: values.phone,
+          phone: toE164(values.phoneCountry, values.phone),
           roleType: values.roleType,
           agentCount: values.agentCount,
           location: values.location,
@@ -197,12 +205,14 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
       </Field>
 
       <Field label="Phone" id={fieldId('phone')} error={errors.phone?.message}>
-        <input
+        <PhoneField
           id={fieldId('phone')}
-          type="tel"
-          {...register('phone')}
-          className={fieldClass}
+          fieldClass={fieldClass}
+          countryField={register('phoneCountry')}
+          numberField={register('phone')}
+          country={watch('phoneCountry')}
           placeholder="Best callback number"
+          chevronColor="#2a3d5f"
         />
       </Field>
 

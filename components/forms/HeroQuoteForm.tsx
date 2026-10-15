@@ -9,6 +9,7 @@ import { cn } from '@/lib/utils';
 import { submitLead } from '@/lib/lead-client';
 import { trackLeadSubmission } from '@/lib/analytics';
 import { Recaptcha, type RecaptchaHandle } from './Recaptcha';
+import { PhoneField, DEFAULT_COUNTRY, isKnownCountry, isValidNationalNumber, toE164 } from './PhoneField';
 
 // Every field is required so each lead arrives complete. The website accepts
 // any text, so a bare domain, a full URL or "N/A" all satisfy it.
@@ -17,7 +18,12 @@ const schema = z.object({
   email: z.string().email('Enter a valid work email'),
   company: z.string().min(2, 'Enter your company').max(160),
   website: z.string().trim().min(1, 'Enter your website, or N/A'),
-  phone: z.string().regex(/^[\d+\-().\s]{7,40}$/, 'Enter a valid phone number'),
+  phoneCountry: z.string().refine(isKnownCountry, 'Select a country code'),
+  phone: z
+    .string()
+    .trim()
+    .min(1, 'Enter your mobile number')
+    .refine(isValidNationalNumber, 'Enter a valid phone number'),
   agentCount: z.enum(['1-9', '10-49', '50-199', '200-499', '500+'], {
     errorMap: () => ({ message: 'Select how many agents you need' }),
   }),
@@ -60,6 +66,7 @@ export function HeroQuoteForm() {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
+    watch,
   } = useForm<FormValues>({
     resolver: zodResolver(schema),
     mode: 'onBlur',
@@ -68,6 +75,7 @@ export function HeroQuoteForm() {
       email: '',
       company: '',
       website: '',
+      phoneCountry: DEFAULT_COUNTRY,
       phone: '',
       agentCount: undefined,
       region: undefined,
@@ -91,7 +99,7 @@ export function HeroQuoteForm() {
           email: values.email,
           company: values.company,
           website: values.website,
-          phone: values.phone,
+          phone: toE164(values.phoneCountry, values.phone),
           agentCount: values.agentCount,
           region: values.region,
           'g-recaptcha-response': captchaToken,
@@ -207,11 +215,12 @@ export function HeroQuoteForm() {
               </Field>
 
               <Field id={fieldId('phone')} label="Phone number" error={errors.phone?.message}>
-                <input
+                <PhoneField
                   id={fieldId('phone')}
-                  type="tel"
-                  {...register('phone')}
-                  className={fieldClass}
+                  fieldClass={fieldClass}
+                  countryField={register('phoneCountry')}
+                  numberField={register('phone')}
+                  country={watch('phoneCountry')}
                   placeholder="Phone number *"
                 />
               </Field>
