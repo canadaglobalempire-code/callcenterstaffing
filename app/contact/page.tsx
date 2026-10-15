@@ -231,8 +231,8 @@ export default function ContactPage() {
         <Container>
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* LEFT: what you'll get + trust list */}
-            <div className="lg:col-span-5">
-              <Eyebrow>Contact Call Center Staffing</Eyebrow>
+            <div className="lg:col-span-5 min-w-0">
+              <Eyebrow className="flex-wrap whitespace-normal">Contact Call Center Staffing</Eyebrow>
               <Heading level={2} display="l" className="mt-5">
                 What&apos;s in your written staffing quote.
               </Heading>
