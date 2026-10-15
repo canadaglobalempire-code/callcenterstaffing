@@ -300,6 +300,7 @@ export const NETWORK_DIRECTORY_POST: Post = {
     {
       paragraphs: [
         'If you are still deciding between outsourcing and staffing rather than between providers, /blog/in-house-vs-outsourced-call-center covers that comparison, and /tools/staffing-calculator sizes a cohort against your own volume.',
+        'For country-specific shortlists, /blog/top-15-bpo-companies-in-usa covers the best-known BPO companies in the USA and /blog/top-15-bpo-companies-in-uk does the same for the UK.',
       ],
     },
   ],

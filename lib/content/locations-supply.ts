@@ -40,7 +40,7 @@ export const SUPPLY_MARKET_LOCATIONS: Location[] = [
       },
       {
         title: 'Native UK-hours coverage',
-        body: 'IST is 4.5 to 5.5 hours ahead of London. Indian teams cover a full UK working day on a day shift, which is why UK buyers get better retention and quality out of India than US buyers running the same market on nights.',
+        body: 'IST is 4.5 to 5.5 hours ahead of London. Indian teams cover a full UK working day on a day shift, which is why UK buyers get better retention and quality out of India than US buyers running the same market on nights. For the wider regional picture, see our page on call center staffing across Asia.',
       },
     ],
     talentSnapshot: {
@@ -120,7 +120,7 @@ export const SUPPLY_MARKET_LOCATIONS: Location[] = [
       },
       {
         title: 'Government-backed sector investment',
-        body: 'Egypt has invested heavily in outsourcing as a national growth sector, with dedicated infrastructure and training pipelines. That translates to real depth in QA, WFM and training leadership, not just frontline headcount.',
+        body: 'Egypt has invested heavily in outsourcing as a national growth sector, with dedicated infrastructure and training pipelines. That translates to real depth in QA, WFM and training leadership, not just frontline headcount. For the wider regional picture, see our pages on call center staffing across Africa and call center staffing across the Middle East.',
       },
     ],
     talentSnapshot: {
@@ -194,7 +194,7 @@ export const SUPPLY_MARKET_LOCATIONS: Location[] = [
       },
       {
         title: 'A young, digitally native workforce',
-        body: 'Kenya’s mobile-money and fintech maturity produced a workforce comfortable with digital-first service, chat and app-based support. For fintech, mobility and marketplace support queues this is a real fit rather than a generic pitch.',
+        body: 'Kenya’s mobile-money and fintech maturity produced a workforce comfortable with digital-first service, chat and app-based support. For fintech, mobility and marketplace support queues this is a real fit rather than a generic pitch. For the wider regional picture, see our page on call center staffing across Africa.',
       },
     ],
     talentSnapshot: {
@@ -266,7 +266,7 @@ export const SUPPLY_MARKET_LOCATIONS: Location[] = [
       },
       {
         title: 'A mature, purpose-built sector',
-        body: 'Jamaica’s outsourcing sector has been serving US clients for over twenty years, with established site infrastructure in Kingston and Montego Bay and a workforce that treats CX as a career rather than a stopgap.',
+        body: 'Jamaica’s outsourcing sector has been serving US clients for over twenty years, with established site infrastructure in Kingston and Montego Bay and a workforce that treats CX as a career rather than a stopgap. For the wider regional picture, see our page on call center staffing across the Caribbean.',
       },
     ],
     talentSnapshot: {
@@ -339,7 +339,7 @@ export const SUPPLY_MARKET_LOCATIONS: Location[] = [
       },
       {
         title: 'Free-zone infrastructure built for outsourcing',
-        body: 'The DR’s free-trade-zone regime has supported CX operations for two decades, giving mature site infrastructure, established connectivity redundancy and a workforce familiar with US service standards.',
+        body: 'The DR’s free-trade-zone regime has supported CX operations for two decades, giving mature site infrastructure, established connectivity redundancy and a workforce familiar with US service standards. For the wider regional picture, see our page on call center staffing across the Caribbean.',
       },
     ],
     talentSnapshot: {
@@ -411,7 +411,7 @@ export const SUPPLY_MARKET_LOCATIONS: Location[] = [
       },
       {
         title: 'Low attrition relative to the region',
-        body: 'CX work is a competitive, well-regarded career path in Guatemala City rather than one option among many. Retention tends to run better than in saturated nearshore hubs where advisors change employer for small wage increments.',
+        body: 'CX work is a competitive, well-regarded career path in Guatemala City rather than one option among many. Retention tends to run better than in saturated nearshore hubs where advisors change employer for small wage increments. For the wider regional picture, see our page on call center staffing across Central America.',
       },
     ],
     talentSnapshot: {
@@ -483,7 +483,7 @@ export const SUPPLY_MARKET_LOCATIONS: Location[] = [
       },
       {
         title: 'CST coverage with low attrition',
-        body: 'A fixed UTC-6 clock that never sits more than an hour from US Central, and retention that runs well above regional norms — advisors treat CX and shared-services work as a long-term profession, which shows up directly in tenure and quality consistency.',
+        body: 'A fixed UTC-6 clock that never sits more than an hour from US Central, and retention that runs well above regional norms — advisors treat CX and shared-services work as a long-term profession, which shows up directly in tenure and quality consistency. For the wider regional picture, see our page on call center staffing across Central America.',
       },
     ],
     talentSnapshot: {
@@ -558,7 +558,7 @@ export const SUPPLY_MARKET_LOCATIONS: Location[] = [
       },
       {
         title: 'A mature, professional services sector',
-        body: 'Poland’s business-services sector employs hundreds of thousands across finance, IT and CX, producing a deep bench of team leads, QA managers and operations directors — not just frontline capacity.',
+        body: 'Poland’s business-services sector employs hundreds of thousands across finance, IT and CX, producing a deep bench of team leads, QA managers and operations directors — not just frontline capacity. For the wider regional picture, see our page on call center staffing across Europe.',
       },
     ],
     talentSnapshot: {
@@ -645,7 +645,7 @@ export const SUPPLY_MARKET_LOCATIONS: Location[] = [
       },
       {
         title: 'ICT covers APAC and Australian hours',
-        body: 'UTC+7 covers Southeast Asia, sits one hour behind Singapore and Manila, and reaches Australian business hours on a day shift — no night-shift premium for AEST programs.',
+        body: 'UTC+7 covers Southeast Asia, sits one hour behind Singapore and Manila, and reaches Australian business hours on a day shift — no night-shift premium for AEST programs. For the wider regional picture, see our page on call center staffing across Asia.',
       },
     ],
     talentSnapshot: {

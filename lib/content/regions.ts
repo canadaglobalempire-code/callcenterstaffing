@@ -42,9 +42,9 @@ export const REGIONS: Region[] = [
     "coverage": "PT · MT · CT · ET",
     "image": "/images/america.jpg",
     "metaTitle": "Call Center Staffing in North America | US, Canada, MX",
-    "metaDescription": "Staff US and Canada onshore agents for regulated, brand-sensitive queues plus nearshore Mexico bilingual depth on your time zone. Deploy in ~72 hours.",
+    "metaDescription": "US and Canada onshore agents for regulated, brand-sensitive queues plus nearshore Mexico bilingual depth on your time zone. First candidates in 72 hrs.",
     "h1": "Onshore and Nearshore Call Center Agents Across North America",
-    "intro": "North America is where companies place the queues that can't afford an accent mismatch or a compliance gap: licensed insurance, healthcare intake, financial services, and high-touch brand support. The United States and Canada give you native-English (and French-Canadian) agents who already live inside your customers' culture and regulatory expectations, while nearshore Mexico adds genuine bilingual English-Spanish depth at a materially lower hourly cost. Because every one of these agents shares Pacific-to-Eastern business hours, you get real-time coverage with no follow-the-sun lag. We staff this region when proximity, language fidelity, and regulatory comfort matter more than rock-bottom price.",
+    "intro": "North America is where companies place the queues that can't afford an accent mismatch or a compliance gap: licensed insurance, healthcare intake, financial services, and high-touch brand support. The United States and Canada give you native-English (and French-Canadian) agents who already live inside your customers' culture and regulatory expectations, while nearshore Mexico adds genuine bilingual English-Spanish depth at a materially lower hourly cost. Because every one of these agents shares Pacific-to-Eastern business hours, you get real-time coverage with no follow-the-sun lag. We staff this region when proximity, language fidelity, and regulatory comfort matter more than rock-bottom price. For country-level detail, we keep separate pages on call center staffing in the United States, call center staffing in Canada and call center staffing in Mexico.",
     "whyHere": [
       {
         "title": "Native English plus French-Canadian and bilingual Spanish",
@@ -109,7 +109,7 @@ export const REGIONS: Region[] = [
       },
       {
         "q": "How fast can you deploy agents in North America, and do they stay on your payroll?",
-        "a": "We can typically deploy in about 72 hours across US, Canadian, and Mexican hubs. Every agent stays on our payroll, you pay only for hours worked, and you can swap any agent free under our 90-day attrition guarantee."
+        "a": "Across US, Canadian and Mexican hubs our timeline is 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days). Every agent stays on our payroll, you pay only for hours worked, and you can swap any agent free under our 90-day attrition guarantee."
       }
     ]
   },
@@ -131,7 +131,7 @@ export const REGIONS: Region[] = [
     "metaTitle": "Call Center Staffing in South America | Nearshore",
     "metaDescription": "Hire bilingual South America call center agents on US Central/Eastern hours. English-Spanish-Portuguese talent from Colombia, Argentina, Brazil and Peru.",
     "h1": "Nearshore Call Center Agents Across South America",
-    "intro": "South America is where US and Canadian teams go when they want bilingual agents who live the same business day as their customers. Countries like Colombia and Peru sit on UTC-5 — effectively Eastern Time year-round — while Argentina, Brazil and Uruguay run on UTC-3 with a long shared overlap with the US East Coast. The region pairs Spanish-native fluency and government-backed English programs with labor costs a fraction of onshore rates, making it the default nearshore choice for voice, chat and sales programs. Our agents here stay on our payroll, so you get this depth without standing up a Bogota or Buenos Aires entity.",
+    "intro": "South America is where US and Canadian teams go when they want bilingual agents who live the same business day as their customers. Countries like Colombia and Peru sit on UTC-5 — effectively Eastern Time year-round — while Argentina, Brazil and Uruguay run on UTC-3 with a long shared overlap with the US East Coast. The region pairs Spanish-native fluency and government-backed English programs with labor costs a fraction of onshore rates, making it the default nearshore choice for voice, chat and sales programs. Our agents here stay on our payroll, so you get this depth without standing up a Bogota or Buenos Aires entity. For the region's largest delivery market, we also keep a dedicated page on call center staffing in Colombia.",
     "whyHere": [
       {
         "title": "Real-time zone alignment, not follow-the-sun",
@@ -192,7 +192,7 @@ export const REGIONS: Region[] = [
       },
       {
         "q": "How fast can you ramp a team in South America?",
-        "a": "Because we already employ agents across Colombia, Brazil and Argentina, we can typically deploy a vetted bilingual pod in about 72 hours and scale a larger queue within a couple of weeks, drawing on the region's deep, continuously refreshed graduate pool."
+        "a": "Because we already employ agents across Colombia, Brazil and Argentina, a vetted bilingual pod follows our standard timeline — 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days) — and a larger queue scales within a couple of weeks, drawing on the region's deep, continuously refreshed graduate pool."
       },
       {
         "q": "Which time zones and languages can South America cover?",
@@ -216,9 +216,9 @@ export const REGIONS: Region[] = [
     "coverage": "CT · ET overlap",
     "image": "/images/cc-diverse-team.jpg",
     "metaTitle": "Call Center Staffing in Central America | Nearshore",
-    "metaDescription": "Hire bilingual nearshore call-center agents in Central America on US time zones. Agents on our payroll, pay per hour, swap-free, deploy in ~72 hours.",
+    "metaDescription": "Hire bilingual nearshore call-center agents in Central America on US time zones. On our payroll, pay per hour, swap-free, first candidates in 72 hours.",
     "h1": "Bilingual Nearshore Call-Center Agents Across Central America",
-    "intro": "Central America sits in the US Central time zone, which means agents staffed here answer calls during your customers' working hours with zero overnight handoff. The isthmus pairs deep Spanish-native fluency with a fast-growing bilingual English workforce shaped by close cultural and migratory ties to the United States, so accents land neutral and idioms feel familiar. As a nearshore region we use it for bilingual customer service, outbound sales and blended voice campaigns at costs well below US onshore rates. Our agents work on our payroll across hubs like San José, Guatemala City and San Pedro Sula, so you scale a team without opening an entity in the region.",
+    "intro": "Central America sits in the US Central time zone, which means agents staffed here answer calls during your customers' working hours with zero overnight handoff. The isthmus pairs deep Spanish-native fluency with a fast-growing bilingual English workforce shaped by close cultural and migratory ties to the United States, so accents land neutral and idioms feel familiar. As a nearshore region we use it for bilingual customer service, outbound sales and blended voice campaigns at costs well below US onshore rates. Our agents work on our payroll across hubs like San José, Guatemala City and San Pedro Sula, so you scale a team without opening an entity in the region. For country-level detail, see our pages on call center staffing in Guatemala and call center staffing in Costa Rica.",
     "whyHere": [
       {
         "title": "True Central-time alignment, no night shift",
@@ -279,7 +279,7 @@ export const REGIONS: Region[] = [
       },
       {
         "q": "How fast can you ramp a Central American team?",
-        "a": "Because we already staff agents across San José, Guatemala City, San Pedro Sula and other hubs, a starter pod can be live in about 72 hours, with larger bilingual cohorts ramped in weeks rather than the months a new in-region build would take."
+        "a": "Because we already staff agents across San José, Guatemala City, San Pedro Sula and other hubs, a starter pod follows our standard timeline of 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days), with larger bilingual cohorts ramped in weeks rather than the months a new in-region build would take."
       },
       {
         "q": "Will the time zone really line up with my US operation?",
@@ -302,9 +302,9 @@ export const REGIONS: Region[] = [
     "coverage": "ET overlap",
     "image": "/images/cc-team-meeting.jpg",
     "metaTitle": "Call Center Staffing in the Caribbean | Nearshore",
-    "metaDescription": "Staff native-English Caribbean agents on US Eastern Time. Jamaica, Dominican Republic, Trinidad and Guyana talent on our payroll, deployed in ~72 hours.",
+    "metaDescription": "Native-English Caribbean agents on US Eastern Time. Jamaica, Dominican Republic, Trinidad and Guyana talent on our payroll; first candidates in 72 hrs.",
     "h1": "Caribbean Call Center Agents on US Time Zones, Without the BPO Markup",
-    "intro": "The Caribbean is where companies go when they want a native or near-native English voice that sits on the same clock as their US customers but costs 40-60% less than hiring stateside. Jamaica, Trinidad & Tobago and Guyana all run on Eastern Time, so there is no follow-the-sun handoff to manage and no awkward overnight shift to staff. With more than 80,000 BPO workers across the region and over two decades of contact-center heritage, the talent is experienced rather than green. We place these agents onto your queues on our payroll, so you get Caribbean nearshore delivery without standing up an entity or signing a long BPO contract.",
+    "intro": "The Caribbean is where companies go when they want a native or near-native English voice that sits on the same clock as their US customers but costs 40-60% less than hiring stateside. Jamaica, Trinidad & Tobago and Guyana all run on Eastern Time, so there is no follow-the-sun handoff to manage and no awkward overnight shift to staff. With more than 80,000 BPO workers across the region and over two decades of contact-center heritage, the talent is experienced rather than green. We place these agents onto your queues on our payroll, so you get Caribbean nearshore delivery without standing up an entity or signing a long BPO contract. For country-level detail, see our pages on call center staffing in Jamaica and call center staffing in the Dominican Republic.",
     "whyHere": [
       {
         "title": "Native English on a neutral, US-familiar accent",
@@ -365,7 +365,7 @@ export const REGIONS: Region[] = [
       },
       {
         "q": "How fast can you ramp a Caribbean team?",
-        "a": "Because we draw from established, vetted talent pools in Kingston, Santo Domingo, Port of Spain and Georgetown, we can deploy trained agents in about 72 hours and scale a queue in days rather than the weeks a new BPO contract would take."
+        "a": "Because we draw from established, vetted talent pools in Kingston, Santo Domingo, Port of Spain and Georgetown, our timeline is 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days), and a queue scales in days rather than the weeks a new BPO contract would take."
       },
       {
         "q": "Will my US customers notice the agents aren't local?",
@@ -392,7 +392,7 @@ export const REGIONS: Region[] = [
     "metaTitle": "Call Center Staffing in Europe | Multilingual Agents",
     "metaDescription": "Staff native and near-native multilingual call-center agents across Europe. GDPR-ready talent in the UK, Ireland, Poland, Romania and Portugal on local hours.",
     "h1": "Multilingual Call-Center Agents Across Europe",
-    "intro": "Europe is where you staff one team that answers in a dozen languages without leaving the continent. From native-English desks in the UK and Ireland to the multilingual nearshore hubs of Poland, Romania and Portugal, a single European footprint lets you cover German, French, Spanish, Dutch, Italian and Nordic queues on the customer's own clock and inside EU data borders. It plays three roles at once: onshore for brand-sensitive UK and Irish voice work, nearshore for Western European programs that need cost relief without leaving GDPR, and a multilingual backbone for pan-European CX. We place agents who carry your accent, your languages and your compliance posture from day one.",
+    "intro": "Europe is where you staff one team that answers in a dozen languages without leaving the continent. From native-English desks in the UK and Ireland to the multilingual nearshore hubs of Poland, Romania and Portugal, a single European footprint lets you cover German, French, Spanish, Dutch, Italian and Nordic queues on the customer's own clock and inside EU data borders. It plays three roles at once: onshore for brand-sensitive UK and Irish voice work, nearshore for Western European programs that need cost relief without leaving GDPR, and a multilingual backbone for pan-European CX. We place agents who carry your accent, your languages and your compliance posture from day one. For country-level detail, see our pages on call center staffing in the United Kingdom, call center staffing in Ireland and call center staffing in Poland.",
     "whyHere": [
       {
         "title": "True multilingual depth in one region",
@@ -475,7 +475,7 @@ export const REGIONS: Region[] = [
     "metaTitle": "Offshore Call Center Staffing in Africa",
     "metaDescription": "Explore offshore call center staffing in Africa. Compare the actual language skills, customer coverage, training and team management needed for your programme.",
     "h1": "Offshore Call Center Agents Across Africa, On Your Schedule",
-    "intro": "Africa has become the offshore answer for teams that want neutral, UK-leaning English at a price that undercuts onshore markets without the round-the-world handoff gap. South Africa anchors the region with a workforce that British and Australian customers hear as familiar, while Kenya, Egypt and Nigeria add English depth, French and Arabic, and time zones that overlap a full European business day. Because GMT+0 to GMT+3 sits directly under the UK and EU, an agent in Cape Town or Nairobi is live when London opens and still on shift when New York wakes. We staff these markets as offshore delivery: agents you direct day to day, kept on our payroll, billed only for the hours they actually work.",
+    "intro": "Africa has become the offshore answer for teams that want neutral, UK-leaning English at a price that undercuts onshore markets without the round-the-world handoff gap. South Africa anchors the region with a workforce that British and Australian customers hear as familiar, while Kenya, Egypt and Nigeria add English depth, French and Arabic, and time zones that overlap a full European business day. Because GMT+0 to GMT+3 sits directly under the UK and EU, an agent in Cape Town or Nairobi is live when London opens and still on shift when New York wakes. We staff these markets as offshore delivery: agents you direct day to day, kept on our payroll, billed only for the hours they actually work. For the region's anchor market, see our dedicated page on call center staffing in South Africa; we also keep country pages on call center staffing in Kenya and call center staffing in Egypt.",
     "whyHere": [
       {
         "title": "An accent UK and Australian ears trust",
@@ -561,7 +561,7 @@ export const REGIONS: Region[] = [
     "metaTitle": "Call Center Staffing in Asia | 24/7 Offshore Agents",
     "metaDescription": "Staff offshore call center agents across Asia. Tap the Philippines and India's million-strong English talent for 24/7 voice, chat and back-office support.",
     "h1": "Offshore Call Center Agents Across Asia, On Your Payroll Terms",
-    "intro": "Asia is where most of the world's offshore contact-center capacity actually lives. The Philippines alone fields roughly 1.7 million BPO workers and India well over four million, giving companies a depth of trained, English-fluent agents no other region can match. Because Asian business hours sit on the far side of the clock from North America and Europe, the region is purpose-built for true 24/7 and overnight coverage, while costs run a fraction of onshore rates. We place agents here on our payroll, bill you only for hours worked, and swap anyone who isn't a fit at no charge.",
+    "intro": "Asia is where most of the world's offshore contact-center capacity actually lives. The Philippines alone fields roughly 1.7 million BPO workers and India well over four million, giving companies a depth of trained, English-fluent agents no other region can match. Because Asian business hours sit on the far side of the clock from North America and Europe, the region is purpose-built for true 24/7 and overnight coverage, while costs run a fraction of onshore rates. We place agents here on our payroll, bill you only for hours worked, and swap anyone who isn't a fit at no charge. For the region's deepest English-fluent pool, see our dedicated page on call center staffing in the Philippines; we also keep country pages on call center staffing in India, call center staffing in Singapore and call center staffing in Vietnam.",
     "whyHere": [
       {
         "title": "The world's largest offshore English talent pool",
@@ -622,7 +622,7 @@ export const REGIONS: Region[] = [
       },
       {
         "q": "How fast can you ramp a team in the Philippines or India?",
-        "a": "Because the talent pool here is the deepest in the world, we typically deploy trained agents in about 72 hours and scale large ramps quickly — backed by free agent swaps and our 90-day attrition guarantee."
+        "a": "Because the talent pool here is the deepest in the world, our timeline is 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days), and large ramps scale quickly — backed by free agent swaps and our 90-day attrition guarantee."
       }
     ]
   },
@@ -640,7 +640,7 @@ export const REGIONS: Region[] = [
     "coverage": "AEST · APAC",
     "image": "/images/hd-agents-row.jpg",
     "metaTitle": "Call Center Staffing in Australia | Onshore Agents",
-    "metaDescription": "Hire onshore, native-English call centre agents in Australia on AEST/AEDT hours. Privacy Act-compliant, deployed in ~72 hours. Pay per hour worked.",
+    "metaDescription": "Hire onshore, native-English call centre agents in Australia on AEST/AEDT hours. Privacy Act-compliant, first candidates in 72 hours. Pay per hour worked.",
     "h1": "Onshore Australian Call Centre Agents, on AEST Business Hours",
     "intro": "Australia is where you staff agents who already sound like your customers: native, neutral Australian-English speakers who understand the local market, the regulators and the consumer expectations of buyers in Sydney, Melbourne, Auckland and beyond. Companies build teams here when proximity, accent and onshore data residency matter more than the lowest possible hourly rate, particularly for regulated financial services, government-adjacent, telco and premium retail queues. With three domestic time zones plus the Tasman overlap with New Zealand, Australia is the natural base for daytime APAC support and the anchor of follow-the-sun programs that hand off to our Asian and North American teams. Agents stay on our payroll and you pay only for hours worked, so you get a genuinely local Australian footprint without carrying the employment risk.",
     "whyHere": [
@@ -703,7 +703,7 @@ export const REGIONS: Region[] = [
       },
       {
         "q": "How fast can you ramp an Australian team?",
-        "a": "We can typically deploy vetted, native-English Australian agents in around 72 hours for standard voice and chat queues. Roles needing licensing or heavy regulatory training (for example financial-services complaints) take a little longer to certify, and you can swap any agent free if the fit isn't right, backed by our 90-day attrition guarantee."
+        "a": "For standard voice and chat queues, native-English Australian agents follow our timeline of 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days). Roles needing licensing or heavy regulatory training (for example financial-services complaints) take a little longer to certify, and you can swap any agent free if the fit isn't right, backed by our 90-day attrition guarantee."
       },
       {
         "q": "Can Australian agents cover after-hours and New Zealand customers?",
@@ -734,9 +734,9 @@ export const REGIONS: Region[] = [
     "coverage": "GST · regional hours",
     "image": "/images/office-phone.jpg",
     "metaTitle": "Call Center Staffing in the Middle East | Arabic + EN",
-    "metaDescription": "Staff Arabic- and English-speaking contact-center agents across the Gulf, Levant and Egypt. On our payroll, pay per hour, deploy in ~72 hours.",
+    "metaDescription": "Staff Arabic- and English-speaking contact-center agents across the Gulf, Levant and Egypt. On our payroll, pay per hour, first candidates in 72 hours.",
     "h1": "Arabic and English Contact-Center Agents Across the Gulf, Levant and Egypt",
-    "intro": "Companies staff agents in the Middle East when they need true native-Arabic service alongside professional English and European-language depth on Gulf and Cairo business hours. As a multilingual delivery region it sits between onshore and offshore for Western buyers: it is the natural home base for Arabic queues serving the GCC, and a cost-efficient option for English, French and German support that overlaps the European workday. Egypt anchors the volume play with roughly 500,000 graduates entering the market each year and BPO costs around half of US levels, while Jordan supplies a crisp, neutral Arabic accent and the UAE adds premium, culturally fluent talent for high-value brands. Whether you need Khaleeji-dialect customer care or bilingual sales into Saudi Arabia, this region delivers language coverage that no purely offshore hub can replicate.",
+    "intro": "Companies staff agents in the Middle East when they need true native-Arabic service alongside professional English and European-language depth on Gulf and Cairo business hours. As a multilingual delivery region it sits between onshore and offshore for Western buyers: it is the natural home base for Arabic queues serving the GCC, and a cost-efficient option for English, French and German support that overlaps the European workday. Egypt anchors the volume play with roughly 500,000 graduates entering the market each year and BPO costs around half of US levels, while Jordan supplies a crisp, neutral Arabic accent and the UAE adds premium, culturally fluent talent for high-value brands. Whether you need Khaleeji-dialect customer care or bilingual sales into Saudi Arabia, this region delivers language coverage that no purely offshore hub can replicate. For country-level detail, see our pages on call center staffing in the United Arab Emirates and call center staffing in Egypt.",
     "whyHere": [
       {
         "title": "Native Arabic with real dialect coverage",

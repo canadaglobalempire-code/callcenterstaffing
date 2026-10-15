@@ -37,6 +37,12 @@ const SERVICE_SUPPORT_IMAGES: Record<string, string> = {
   'bilingual-call-center-staffing': '/images/internet-call-center-headset-pair.jpg',
 };
 
+// One in-body link per service intro, on a phrase the intro already contains.
+const INTRO_LINKS: Record<string, { phrase: string; href: string }> = {
+  'after-hours-customer-support-staffing': { phrase: 'automotive call center staffing', href: '/industries/automotive' },
+  'bilingual-call-center-staffing': { phrase: 'how to hire bilingual agents in Mexico', href: '/blog/hiring-bilingual-agents-mexico' },
+};
+
 export function generateStaticParams() {
   return SERVICES.map((s) => ({ slug: s.slug }));
 }
@@ -68,6 +74,7 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
 export default function ServicePage({ params }: { params: Params }) {
   const svc = getService(params.slug);
   if (!svc) notFound();
+  const introLink = INTRO_LINKS[svc.slug];
 
   const crumbs = [
     { label: 'Home', href: '/' },
@@ -204,16 +211,16 @@ export default function ServicePage({ params }: { params: Params }) {
               What is {svc.primaryKeyword}?
             </Heading>
             <p className="mt-6 text-body-l text-navy-700">
-              {svc.slug === 'after-hours-customer-support-staffing' ? (
+              {introLink ? (
                 <>
-                  {svc.intro.split('automotive call center staffing')[0]}
+                  {svc.intro.split(introLink.phrase)[0]}
                   <Link
-                    href="/industries/automotive"
+                    href={introLink.href}
                     className="font-semibold text-accent-500 underline decoration-accent-500/30 underline-offset-[3px] hover:decoration-accent-500"
                   >
-                    automotive call center staffing
+                    {introLink.phrase}
                   </Link>
-                  {svc.intro.split('automotive call center staffing')[1]}
+                  {svc.intro.split(introLink.phrase)[1]}
                 </>
               ) : (
                 svc.intro

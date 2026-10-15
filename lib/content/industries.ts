@@ -14,7 +14,7 @@ export const INDUSTRIES: Industry[] = [
       subhead:
         'Member services, provider intake, prior auth, claims and Rx refill — staffed by recruiters who have placed for payers, providers and PBMs since 2003.',
     },
-    intro: `Need HIPAA-compliant agents for member services, provider intake, prior authorization, claims or Rx refill lines? Call Center Staffing recruits, screens and places trained healthcare contact-center agents who stay on our payroll while you pay only for hours worked. Every shortlisted agent arrives with HIPAA training current within twelve months, a clean OIG/SAM exclusion check, and a recorded PHI-verification role-play scored by a senior healthcare recruiter. We plan cohorts against real healthcare windows — open enrollment, Medicare AEP and CMS audit prep — and can deploy in as little as ~72 hours with a 90-day attrition guarantee.`,
+    intro: `Need HIPAA-compliant agents for member services, provider intake, prior authorization, claims or Rx refill lines? Call Center Staffing recruits, screens and places trained healthcare contact-center agents who stay on our payroll while you pay only for hours worked. Every shortlisted agent arrives with HIPAA training current within twelve months, a clean OIG/SAM exclusion check, and a recorded PHI-verification role-play scored by a senior healthcare recruiter. We plan cohorts against real healthcare windows — open enrollment, Medicare AEP and CMS audit prep — with 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days) and a 90-day attrition guarantee.`,
     industryChallenges: [
       {
         title: 'HIPAA training currency',
@@ -99,8 +99,12 @@ export const INDUSTRIES: Industry[] = [
         a: "Agents stay on Call Center Staffing's payroll, so you carry no HR, benefits or training burden. You pay only for hours worked, on a month-to-month basis, and can swap any agent for free if the fit isn't right — backed by our 90-day attrition guarantee.",
       },
       {
+        q: 'Who signs the Business Associate Agreement (BAA)?',
+        a: 'The BAA sits between your organization (the covered entity) and the employer of the people touching PHI on your behalf — and since agents stay on our payroll, that question resolves around us as employer rather than a separate vendor chain. Exact scope, systems and signatories are agreed in writing before anyone takes a live PHI call; run the structure past your privacy officer during scoping, because how it must be drawn depends on your workflows and systems.',
+      },
+      {
         q: 'How quickly can you deploy healthcare call center agents?',
-        a: 'For 10-25 HIPAA-cleared seats we typically place in 14-21 days, and small backfills can go live in as little as ~72 hours. Open-enrollment and Medicare AEP cohorts of 50-150 seats run in waves and benefit from 60+ days of pre-build aligned to your training calendar.',
+        a: 'For 10-25 HIPAA-cleared seats we typically place in 14-21 days, and first qualified candidates for small backfills arrive in about 72 hours. Open-enrollment and Medicare AEP cohorts of 50-150 seats run in waves and benefit from 60+ days of pre-build aligned to your training calendar.',
       },
     ],
   },
@@ -318,7 +322,7 @@ export const INDUSTRIES: Industry[] = [
       subhead:
         'Order management, returns, refunds, loyalty and PCI-cleared payments — staffed by recruiters who pre-build the Q4 bench in July and demobilize cleanly in February.',
     },
-    intro: `Looking for ecommerce customer service outsourcing without handing your brand voice to a black-box call center? We staff trained order-management, returns, refunds, loyalty and PCI-cleared payment agents who work your queues, your tools and your tone — but stay on our payroll, so there is no HR, training or attrition burden on you. You pay only for hours worked, scale up for Black Friday and Cyber Monday peaks we start sourcing in July, and swap any agent free if the fit is off. Onshore, nearshore (Mexico) and offshore (Philippines) delivery, deployed in roughly 72 hours and month-to-month.`,
+    intro: `Looking for ecommerce customer service outsourcing without handing your brand voice to a black-box call center? We staff trained order-management, returns, refunds, loyalty and PCI-cleared payment agents who work your queues, your tools and your tone — but stay on our payroll, so there is no HR, training or attrition burden on you. You pay only for hours worked, scale up for Black Friday and Cyber Monday peaks we start sourcing in July, and swap any agent free if the fit is off. Onshore, nearshore (Mexico) and offshore (Philippines) delivery, month-to-month, with 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days).`,
     industryChallenges: [
       {
         title: 'Q4 surge starts in July',
@@ -390,7 +394,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: 'How quickly can you staff seasonal ecommerce support agents for Black Friday and Q4?',
-        a: 'We start sourcing peak cohorts in July and can deploy a vetted, brand-trained team in roughly 72 hours once a plan is signed. Brands that engage by mid-summer land fully-screened cohorts on day one of training; later starts are possible but candidate quality and cohort completion drop the closer you get to October.',
+        a: 'We start sourcing peak cohorts in July and once a plan is signed the timeline is 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days). Brands that engage by mid-summer land fully-screened cohorts on day one of training; later starts are possible but candidate quality and cohort completion drop the closer you get to October.',
       },
       {
         q: 'Are your agents PCI-compliant for payment and checkout troubleshooting?',
@@ -407,7 +411,7 @@ export const INDUSTRIES: Industry[] = [
     primaryKeyword: 'telecom call center staffing',
     metaTitle: 'Telecom Call Center Staffing | Tier 1/2 & CPNI',
     metaDescription:
-      'Hire tier 1/2 telecom support, billing, retention and CPNI-trained sales agents. Bilingual Spanish bench, TCPA discipline, deploy in ~72 hours. Get agents.',
+      'Hire tier 1/2 telecom support, billing, retention and CPNI-trained sales agents. Bilingual Spanish bench, TCPA discipline, first candidates in 72 hours.',
     hero: {
       eyebrow: 'Industries · Telecom & Media',
       headline: 'Hire Telecom & Media Call Center Agents — Tier 1, Tier 2 & CPNI Sales',
@@ -487,7 +491,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: 'How fast can you deploy telecom call center agents?',
-        a: 'We typically place screened tier 1 telecom agents on your floor in about 72 hours, and ramp larger cohorts in stages — our Coastline Connect engagement had 40 tier 1 agents live in 28 days and a full 165-seat bilingual ramp live by day 75.',
+        a: 'For tier 1 telecom agents the timeline is 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days), and we ramp larger cohorts in stages — our Coastline Connect engagement had 40 tier 1 agents live in 28 days and a full 165-seat bilingual ramp live by day 75.',
       },
       {
         q: 'Do telecom agents stay on your payroll or ours?',
@@ -512,7 +516,7 @@ export const INDUSTRIES: Industry[] = [
       subhead:
         'OTAs, airlines, hotels, cruise and tour — staffed for GDS fluency, irrops handling and 24/7 multi-language coverage with Manila and Mexico anchoring the night-side.',
     },
-    intro: `Travel call center staffing means recruiting, screening and placing trained customer-service agents and supervisors for OTAs, airlines, hotels, cruise lines and tour operators — agents who stay on our payroll while you pay only for hours worked. The work is 24/7 and multilingual by default, and dominated by irregular operations: cancellations, rebookings, weather waivers and overbooking, where agent calm and PNR accuracy decide the outcome. We screen GDS fluency (Sabre, Amadeus, Galileo) and irrops handling on timed, recorded scenarios — never assumed from a resume — and anchor night-side English in Manila with bilingual Spanish daytime from Mexico. With our 90-day attrition guarantee, free agent swaps and ~72-hour deploy, you scale travel CX up for peak season and down across shoulder months without carrying the hiring risk.`,
+    intro: `Travel call center staffing means recruiting, screening and placing trained customer-service agents and supervisors for OTAs, airlines, hotels, cruise lines and tour operators — agents who stay on our payroll while you pay only for hours worked. The work is 24/7 and multilingual by default, and dominated by irregular operations: cancellations, rebookings, weather waivers and overbooking, where agent calm and PNR accuracy decide the outcome. We screen GDS fluency (Sabre, Amadeus, Galileo) and irrops handling on timed, recorded scenarios — never assumed from a resume — and anchor night-side English in Manila with bilingual Spanish daytime from Mexico. With our 90-day attrition guarantee, free agent swaps and 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days), you scale travel CX up for peak season and down across shoulder months without carrying the hiring risk.`,
     industryChallenges: [
       {
         title: 'Irrops empathy + process discipline',
@@ -588,7 +592,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: 'How fast can you stand up a travel customer service team?',
-        a: 'We deploy trained, GDS-screened agents in about 72 hours from a bench refreshed against your historical peak and irrops volume. A full multi-language program (night-side English plus bilingual daytime) typically reaches first cohort live within roughly 35 days and full scale by day 90, as in our Wayfinder Travel engagement.',
+        a: 'GDS-screened agents come from a bench refreshed against your historical peak and irrops volume, on a timeline of 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days). A full multi-language program (night-side English plus bilingual daytime) typically reaches first cohort live within roughly 35 days and full scale by day 90, as in our Wayfinder Travel engagement.',
       },
       {
         q: 'Can you screen agents for GDS and PNR handling before they reach my floor?',
@@ -602,14 +606,14 @@ export const INDUSTRIES: Industry[] = [
     primaryKeyword: 'saas customer support outsourcing',
     metaTitle: 'SaaS Customer Support Outsourcing',
     metaDescription:
-      'Staff SaaS tier 1/2 technical support, CS ops and onboarding with product-screened agents. SOC 2 & GDPR-aware, deploy in ~72 hrs. Get matched agents.',
+      'Staff SaaS tier 1/2 technical support, CS ops and onboarding with product-screened agents. SOC 2 & GDPR-aware, first candidates in 72 hrs. Get agents.',
     hero: {
       eyebrow: 'Industries · SaaS & Tech',
       headline: 'SaaS & Tech Customer Support Agents, Screened for Product Depth',
       subhead:
         'Tier 1 and tier 2 technical support, onboarding, customer success ops and trust-and-safety — screened for actual product literacy, API fluency and SOC 2 / GDPR awareness.',
     },
-    intro: `Hire SaaS customer support agents who actually resolve tickets instead of just closing them. We recruit and place tier 1 and tier 2 technical support, customer success operations, onboarding specialists and trust-and-safety reviewers for B2B and B2C software companies worldwide — screened for real product literacy, API fluency and SOC 2 / GDPR awareness. Agents stay on our payroll, you pay only for hours worked, swap anyone free, and your first product-screened cohort can be live in roughly 72 hours. Since 2003 we've trained 100,000+ agents, with onshore, nearshore and offshore delivery matched to your stack and channel mix.`,
+    intro: `Hire SaaS customer support agents who actually resolve tickets instead of just closing them. We recruit and place tier 1 and tier 2 technical support, customer success operations, onboarding specialists and trust-and-safety reviewers for B2B and B2C software companies worldwide — screened for real product literacy, API fluency and SOC 2 / GDPR awareness. Agents stay on our payroll, you pay only for hours worked, swap anyone free, and the timeline is 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days). Since 2003 we've trained 100,000+ agents, with onshore, nearshore and offshore delivery matched to your stack and channel mix.`,
     industryChallenges: [
       {
         title: 'Product depth on day one',
@@ -684,7 +688,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: 'How quickly can you staff a SaaS support team?',
-        a: 'A first product-screened cohort can be live in roughly 72 hours for standard tier 1, and within about 30 days for a full multi-tier ramp. In one developer-tools engagement, 18 product-screened tier 1 agents went live in 26 days and cleared a 14-day ticket backlog in 11 days post-go-live.',
+        a: 'For standard tier 1 the timeline is 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days); a full multi-tier ramp takes about 30 days. In one developer-tools engagement, 18 product-screened tier 1 agents went live in 26 days and cleared a 14-day ticket backlog in 11 days post-go-live.',
       },
       {
         q: 'Are your SaaS support agents SOC 2 and GDPR aware?',
@@ -803,7 +807,7 @@ export const INDUSTRIES: Industry[] = [
       subhead:
         'Track-and-trace, ETA management, exceptions, claims intake and dispatch support — staffed by recruiters who screen for real TMS fluency and peak-season cohort discipline.',
     },
-    intro: `Logistics call center staffing puts trained, TMS-fluent agents on your floor for track-and-trace, ETA management, exception handling, claims intake and dispatch support — without the HR, recruiting or training burden landing on your team. We recruit and screen for real platform fluency (MercuryGate, Oracle TMS, McLeod, BluJay) and parcel-API experience, then place agents who stay on our payroll while you pay only for hours worked. Peak-season planning is where logistics CX wins or loses, so we pre-build bench against your historical Q4 surge — not an abstract recruiting funnel — and can deploy in as little as 72 hours. Onshore, nearshore (Monterrey, Guadalajara) and offshore (Manila) delivery, with bilingual Spanish coverage for cross-border freight.`,
+    intro: `Logistics call center staffing puts trained, TMS-fluent agents on your floor for track-and-trace, ETA management, exception handling, claims intake and dispatch support — without the HR, recruiting or training burden landing on your team. We recruit and screen for real platform fluency (MercuryGate, Oracle TMS, McLeod, BluJay) and parcel-API experience, then place agents who stay on our payroll while you pay only for hours worked. Peak-season planning is where logistics CX wins or loses, so we pre-build bench against your historical Q4 surge — not an abstract recruiting funnel — and our timeline is 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days). Onshore, nearshore (Monterrey, Guadalajara) and offshore (Manila) delivery, with bilingual Spanish coverage for cross-border freight.`,
     industryChallenges: [
       {
         title: 'TMS and tracking-event fluency',
@@ -879,7 +883,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: 'How quickly can you staff a logistics call center?',
-        a: 'For standard track-and-trace and dispatch-support roles we can deploy trained agents in as little as 72 hours, with the first cohort typically live within 30 days of plan sign-off. For Q4 parcel surge we start pipeline build in July and run cohort waves of 25-50 through September and October so peak coverage is live and ramped before volume hits.',
+        a: 'For standard track-and-trace and dispatch-support roles the timeline is 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days), with a full first cohort typically live within 30 days of plan sign-off. For Q4 parcel surge we start pipeline build in July and run cohort waves of 25-50 through September and October so peak coverage is live and ramped before volume hits.',
       },
       {
         q: 'Do the logistics agents work for us or for you?',
@@ -897,7 +901,7 @@ export const INDUSTRIES: Industry[] = [
     primaryKeyword: 'government call center staffing',
     metaTitle: 'Government Call Center Staffing',
     metaDescription:
-      'Government call center staffing for citizen services, benefits intake, DMV & 311. US-based, ADA 508-aware, clearable, LEP-covered agents. Deploy in ~72 hrs.',
+      'Government call center staffing for citizen services, benefits intake, DMV & 311. US-based, ADA 508-aware, LEP-covered agents. First candidates in 72 hrs.',
     hero: {
       eyebrow: 'Industries · Government & Public Sector',
       headline: 'Government & Public Sector Call Center Staffing',
@@ -980,7 +984,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: 'How fast can you staff a government or citizen-services call center?',
-        a: 'For routine citizen-service and benefits-intake roles we can deploy screened agents in as little as ~72 hours. For larger fiscal-year or open-enrollment ramps we plan cohort waves against your program calendar — a recent state engagement put 60 benefits-intake agents live in 31 days and 180 by day 78.',
+        a: 'For routine citizen-service and benefits-intake roles the timeline is 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days). For larger fiscal-year or open-enrollment ramps we plan cohort waves against your program calendar — a recent state engagement put 60 benefits-intake agents live in 31 days and 180 by day 78.',
       },
       {
         q: 'Are your government call center agents US-based and security-clearable?',
@@ -998,7 +1002,7 @@ export const INDUSTRIES: Industry[] = [
     primaryKeyword: 'education call center staffing',
     metaTitle: 'Education Call Center Staffing | Enrollment & Aid',
     metaDescription:
-      'Education call center staffing for admissions, enrollment, financial aid & student services. FERPA-cleared agents, cycle-ready bench, live in ~72 hrs.',
+      'Education call center staffing for admissions, enrollment, financial aid & student services. FERPA-cleared agents, first candidates in 72 hrs.',
     hero: {
       eyebrow: 'Industries · Education',
       headline: 'Education call center staffing for enrollment, financial aid and student services',
@@ -1085,7 +1089,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: 'How fast can you staff for an enrollment or FAFSA surge?',
-        a: 'We pre-build bench against your enrollment calendar and can deploy cycle-aligned cohorts in about 72 hours once a plan is approved, with first waves typically live in under 30 days. For spring decision-deadline peaks, start the pipeline by mid-January; for fall, lead the August registration crunch by 60 days.',
+        a: 'We pre-build bench against your enrollment calendar and once a plan is approved the timeline is 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days), with full first waves typically live in under 30 days. For spring decision-deadline peaks, start the pipeline by mid-January; for fall, lead the August registration crunch by 60 days.',
       },
       {
         q: 'Can you provide bilingual Spanish enrollment and financial aid agents?',
@@ -1107,7 +1111,7 @@ export const INDUSTRIES: Industry[] = [
       subhead:
         'We screen for the technical depth that actually closes a ticket and the customer tone that keeps a frustrated user calm. Same candidate, both halves verified — not a tradeoff your team has to live with.',
     },
-    intro: `Need tech support agents who can actually close a ticket without burning out your engineers? We recruit and staff tier 1 helpdesk agents, tier 2 troubleshooters and tier 3 escalation specialists who navigate Zendesk, ServiceNow, Salesforce Service Cloud, Jira and Freshdesk while keeping a frustrated customer calm. Every agent stays on our payroll and is screened on a recorded troubleshooting scenario in your stack, so you skip the HR and training burden and pay only for hours worked. With follow-the-sun cohorts onshore, nearshore and offshore, you get true 24/7 coverage deployed in about 72 hours — no quality cliff at midnight.`,
+    intro: `Need tech support agents who can actually close a ticket without burning out your engineers? We recruit and staff tier 1 helpdesk agents, tier 2 troubleshooters and tier 3 escalation specialists who navigate Zendesk, ServiceNow, Salesforce Service Cloud, Jira and Freshdesk while keeping a frustrated customer calm. Every agent stays on our payroll and is screened on a recorded troubleshooting scenario in your stack, so you skip the HR and training burden and pay only for hours worked. With follow-the-sun cohorts onshore, nearshore and offshore, you get true 24/7 coverage — 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days) — with no quality cliff at midnight.`,
     industryChallenges: [
       {
         title: 'Technical depth vs. tone fluency',
@@ -1186,7 +1190,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: 'How fast can you deploy tech support agents?',
-        a: 'Most engagements deploy in about 72 hours for shortlisted tier 1 and tier 2 candidates, with full cohorts ramping over a few weeks. In our Vertex SaaS engagement, 22 pre-screened tier 2 agents were live in 24 days and 90 seats across three time zones by day 78.',
+        a: 'For tier 1 and tier 2 roles the timeline is 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days), with full cohorts ramping over a few weeks. In our Vertex SaaS engagement, 22 pre-screened tier 2 agents were live in 24 days and 90 seats across three time zones by day 78.',
       },
       {
         q: 'What happens if a tech support agent is not a fit?',
@@ -1208,7 +1212,7 @@ export const INDUSTRIES: Industry[] = [
       subhead:
         'High-volume, time-sensitive fulfillment CX — carrier ETA escalations, missed deliveries, returns processing and B2B order-status calls — staffed against the seasonal curve, not a flat headcount plan. Q4 bench pre-built in July; demobilized cleanly in February.',
     },
-    intro: `Fulfillment customer service staffing is how ecommerce operators, 3PL warehouse partners and B2B distributors put WMS/TMS-fluent agents on returns, delivery-exception and order-status queues without carrying the hiring, training or seasonal-bench risk themselves. The work is high-volume and time-sensitive — carrier ETA escalations, missed deliveries, RMA processing and B2B pallet inquiries — and the agent profile is distinct from generic ecommerce CX: it rewards carrier-system literacy and the ability to read a tracking trace, not just brand-tone polish. Every agent stays on our payroll, you pay only for hours worked, and we plan the Q4-to-January surge against your real volume curve — benching in July, demobilizing cleanly in February. Swap any agent free, with a 90-day attrition guarantee, and deploy in roughly 72 hours.`,
+    intro: `Fulfillment customer service staffing is how ecommerce operators, 3PL warehouse partners and B2B distributors put WMS/TMS-fluent agents on returns, delivery-exception and order-status queues without carrying the hiring, training or seasonal-bench risk themselves. The work is high-volume and time-sensitive — carrier ETA escalations, missed deliveries, RMA processing and B2B pallet inquiries — and the agent profile is distinct from generic ecommerce CX: it rewards carrier-system literacy and the ability to read a tracking trace, not just brand-tone polish. Every agent stays on our payroll, you pay only for hours worked, and we plan the Q4-to-January surge against your real volume curve — benching in July, demobilizing cleanly in February. Swap any agent free, with a 90-day attrition guarantee and a timeline of 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days).`,
     industryChallenges: [
       {
         title: 'Q4 surge volume',
@@ -1287,7 +1291,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: 'How fast can you stand up a fulfillment CX cohort, and what does it cost?',
-        a: 'We deploy screened agents in roughly 72 hours for steady-state needs, and we bench Q4 surge cohorts starting in July for an October-November ramp. You pay per hour worked, month-to-month — no long-term lock-in — and any agent can be swapped free, backed by a 90-day attrition guarantee.',
+        a: 'For steady-state needs the timeline is 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days), and we bench Q4 surge cohorts starting in July for an October-November ramp. You pay per hour worked, month-to-month — no long-term lock-in — and any agent can be swapped free, backed by a 90-day attrition guarantee.',
       },
     ],
   },

@@ -49,6 +49,16 @@ export const OPERATIONS_POSTS: Post[] = [
         ],
       },
       {
+        heading: 'How to calculate call center occupancy',
+        level: 2,
+        paragraphs: [
+          'Occupancy is a ratio of two times on the same logged-in interval: of the time an agent is available to take work, what share was spent handling contacts (talk time plus after-call work). The formula is occupancy % = handle time ÷ occupied time × 100, where handle time = talk time + after-call work, and occupied time = handle time + available idle time — the logged-in, ready time that excludes breaks, training and meetings.',
+          'Worked example: an agent is logged in and available for 7.5 hours of an 8-hour shift (the other 30 minutes are breaks and training). Of those 7.5 hours, 6.0 hours are handle time (talk + ACW) and 1.5 hours are idle waiting for the next contact. Occupancy = 6.0 ÷ 7.5 = 80%.',
+          'Shrinkage uses a different denominator — paid hours, not available hours. Shrinkage % = (paid hours − available hours) ÷ paid hours × 100. In the same example: (8.0 − 7.5) ÷ 8.0 = 6.25% for that slice alone; stack leave, sickness, coaching and the rest on top to get the planning figure.',
+          'Do not mix the two denominators. Dividing handle time by paid hours understates occupancy and hides how hard the floor is working; treating available time as paid time turns a shrinkage problem into an apparent occupancy problem. For how occupancy and backlog interact when volume spikes, /blog/call-center-overflow-staffing-backlog covers the arithmetic.',
+        ],
+      },
+      {
         heading: 'The occupancy band nobody wants to hear',
         level: 2,
         paragraphs: [
@@ -95,6 +105,10 @@ export const OPERATIONS_POSTS: Post[] = [
       {
         q: 'What is a good occupancy rate for a call center?',
         a: 'Broadly 70 to 85 percent for sustained voice work. Above roughly 85 to 90 percent sustained, you are removing the recovery time between contacts, which degrades quality first and then drives attrition — usually with a two to three month lag that makes the cause hard to see. Below about 70 percent you are carrying more headcount than the volume requires.',
+      },
+      {
+        q: 'How do you calculate occupancy in a call center?',
+        a: 'Occupancy % = handle time ÷ occupied time × 100, where handle time is talk time plus after-call work and occupied time is handle time plus available idle time — the logged-in, ready interval, excluding breaks, training and meetings. Example: 6.0 hours of handle time in 7.5 hours available = 80% occupancy. Shrinkage is a different ratio over paid hours: (paid − available) ÷ paid × 100.',
       },
       {
         q: 'What shrinkage should I plan for?',

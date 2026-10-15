@@ -44,7 +44,7 @@ export const BUYER_MARKET_LOCATIONS: Location[] = [
       },
       {
         title: 'Advisors on our payroll, not your headcount',
-        body: 'No permanent recruitment fee, no notice-period exposure, no redundancy risk on a seasonal ramp. We employ the advisor; you direct the work and pay for hours worked. Swap anyone who is not performing at no cost.',
+        body: 'No permanent recruitment fee, no notice-period exposure, no redundancy risk on a seasonal ramp. We employ the advisor; you direct the work and pay for hours worked. Swap anyone who is not performing at no cost. For the wider regional picture, see our page on call center staffing across Europe.',
       },
     ],
     talentSnapshot: {
@@ -123,7 +123,7 @@ export const BUYER_MARKET_LOCATIONS: Location[] = [
       },
       {
         title: 'The Maritimes cost advantage',
-        body: 'Moncton, Halifax and Saint John run materially below Toronto and Vancouver on loaded cost, with lower attrition and a long contact-centre history. New Brunswick in particular is officially bilingual, which makes it the most cost-efficient French-English pool in the country.',
+        body: 'Moncton, Halifax and Saint John run materially below Toronto and Vancouver on loaded cost, with lower attrition and a long contact-centre history. New Brunswick in particular is officially bilingual, which makes it the most cost-efficient French-English pool in the country. For the wider regional picture, see our page on call center staffing across North America.',
       },
     ],
     talentSnapshot: {
@@ -202,7 +202,7 @@ export const BUYER_MARKET_LOCATIONS: Location[] = [
       },
       {
         title: 'Regional cost relief outside Dublin',
-        body: 'Cork, Limerick, Galway and Waterford run below Dublin on loaded cost with lower attrition, and the multilingual pool now extends to all four. Dublin is not automatically the right Irish city.',
+        body: 'Cork, Limerick, Galway and Waterford run below Dublin on loaded cost with lower attrition, and the multilingual pool now extends to all four. Dublin is not automatically the right Irish city. For the wider regional picture, see our page on call center staffing across Europe.',
       },
     ],
     talentSnapshot: {
@@ -285,7 +285,7 @@ export const BUYER_MARKET_LOCATIONS: Location[] = [
       },
       {
         title: 'Employment-pass reality, handled',
-        body: 'Frontline CX roles rarely clear Employment Pass or S Pass thresholds, which is precisely why so many Singapore programs stall. We staff the roles that do clear locally and place the rest across the region rather than pretending the constraint is not there.',
+        body: 'Frontline CX roles rarely clear Employment Pass or S Pass thresholds, which is precisely why so many Singapore programs stall. We staff the roles that do clear locally and place the rest across the region rather than pretending the constraint is not there. For the wider regional picture, see our page on call center staffing across Asia.',
       },
     ],
     talentSnapshot: {
@@ -359,7 +359,7 @@ export const BUYER_MARKET_LOCATIONS: Location[] = [
       },
       {
         title: 'Free-zone structures we already work inside',
-        body: 'Dubai Internet City, DMCC and the Abu Dhabi free zones each carry different employment and visa mechanics. We staff inside structures our clients already hold, rather than requiring you to stand up a new entity to hire five advisors.',
+        body: 'Dubai Internet City, DMCC and the Abu Dhabi free zones each carry different employment and visa mechanics. We staff inside structures our clients already hold, rather than requiring you to stand up a new entity to hire five advisors. For the wider regional picture, see our page on call center staffing across the Middle East.',
       },
     ],
     talentSnapshot: {

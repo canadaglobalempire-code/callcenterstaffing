@@ -6,11 +6,11 @@ export const SOLUTIONS: Solution[] = [
     name: 'Scaling an Existing Call Center',
     metaTitle: 'Scale Call Center Staffing Fast',
     metaDescription:
-      'Scale call center staffing on your forecast: ramp agents fast, backfill attrition, protect SLAs. Agents on our payroll, deploy in ~72 hours. Get a written plan.',
+      'Scale call center staffing on your forecast: ramp agents fast, backfill attrition, protect SLAs. Agents on our payroll, first candidates in 72 hours.',
     heroImage: '/images/cc-agent-pro.jpg',
     hero: {
       eyebrow: 'Solutions',
-      headline: 'Scale Your Call Center Staffing to Match Forecast — Agents Ready in ~72 Hours',
+      headline: 'Scale Your Call Center Staffing to Match Forecast — First Candidates in 72 Hours',
       subhead:
         'When demand outpaces your in-house hiring, you need to scale call center staffing without overloading your ops or TA team. We run continuous, embedded recruiting against your real forecast, AHT and QA scorecard — so you ramp agents fast, backfill attrition before SLAs slip, and add seats at the cadence your numbers demand. Agents stay on our payroll and you pay only for hours worked, so you scale up (or down) without HR or training burden.',
     },
@@ -72,7 +72,7 @@ Every cohort gets a 72-hour pre-start health check, a 30-day attrition flag, and
       },
       {
         q: 'How fast can you scale up our call center staffing?',
-        a: 'We deploy pre-screened agents in roughly 72 hours and move full cohorts of 10-50 aligned to your training calendar. Most engagements go from plan to first live cohort in under 30 days, then scale weekly against your forecast.',
+        a: 'Our timeline is 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days), and we move full cohorts of 10-50 aligned to your training calendar. Most engagements go from plan to first live cohort in under 30 days, then scale weekly against your forecast.',
       },
       {
         q: 'Do we hire the agents or do they stay on your payroll?',
@@ -243,7 +243,7 @@ Because the bench is built ahead of the curve, you get peak-season quality witho
       },
       {
         q: 'How fast can you deploy a seasonal surge cohort?',
-        a: 'When the off-season bench is pre-built, a 10–50 seat cohort can deploy in roughly 72 hours and reach the first qualified call in under 25 days. Larger surges run in waves aligned to your training calendar, with a named cohort owner on our side.',
+        a: 'When the off-season bench is pre-built, a 10–50 seat cohort follows the standard timeline of 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days). Larger surges run in waves aligned to your training calendar, with a named cohort owner on our side.',
       },
     ],
   },
@@ -331,21 +331,21 @@ We coordinate offer, background, drug screen and badging through your in-house p
     name: 'Compliance & Licensed Roles',
     metaTitle: 'Licensed Call Center Agents Staffing',
     metaDescription:
-      'Licensed call center agents staffing — NMLS, state-insurance, HIPAA and PCI-cleared agents, license verified at submission. Deploy in ~72 hours. Book a call.',
+      'Licensed call center agents staffing — NMLS, state-insurance, HIPAA and PCI-cleared agents, license verified at submission. First candidates in 72 hours.',
     heroImage: '/images/office-phone.jpg',
     hero: {
       eyebrow: 'Solutions',
       headline:
         'Licensed & Compliant Call Center Agents, Verified Before They Ever Reach Your Shortlist',
       subhead:
-        'When your floor is regulated, a generic "licensed agent" requisition isn\'t enough — an expired NMLS license or a missed background-check window means the agent legally can\'t take a call on day one. Our licensed call center agents staffing carries warm, year-round pipelines of NMLS, state-insurance, HIPAA-cleared, PCI-cleared and SOC 2-aware agents, with every license verified at submission, never at offer. Agents stay on our payroll and you pay only for hours worked — so you add compliant capacity in roughly 72 hours without taking on the HR, licensing and re-certification burden yourself.',
+        'When your floor is regulated, a generic "licensed agent" requisition isn\'t enough — an expired NMLS license or a missed background-check window means the agent legally can\'t take a call on day one. Our licensed call center agents staffing carries warm, year-round pipelines of NMLS, state-insurance, HIPAA-cleared, PCI-cleared and SOC 2-aware agents, with every license verified at submission, never at offer. Agents stay on our payroll and you pay only for hours worked — so you add compliant capacity — 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days) — without taking on the HR, licensing and re-certification burden yourself.',
     },
     problem: `Regulated contact-center work has a recruiting problem that generic staffing firms don't see: license currency, background check timing, training-hour minimums, and disclosure-handling competence are all real constraints — and missing any of them means the assignment can't legally take calls on day one. Licensed call center agents staffing is a different discipline — and NMLS licensed agents staffing in particular is its own pipeline that has to be warm-kept year-round, not built reactively.
 
 Most generalist firms place to a "licensed agent" requisition and hope the candidate's license is current and unrestricted. The teams that win regulated work have a staffing partner who verifies license status, NPDB, and disclosure literacy before the candidate hits the shortlist.`,
     ourApproach: `We carry active, current pipelines of NMLS-licensed, state-insurance-licensed, HIPAA-cleared, and PCI-cleared agents in the markets you operate in. Every shortlisted candidate has a verified, current license on the date of submission — never a stale credential we hope is still active at offer. Disclosure-handling is screened in a recorded role-play scored by a senior account manager who has actually run a regulated floor.
 
-Every cohort then completes a tailored compliance refresher — HIPAA, PCI, FCRA, Reg E or TCPA, matched to your regulator — before taking a single live call. Agents stay on our payroll and you pay only for hours worked, so you add compliant capacity in roughly 72 hours and scale back just as fast, without inheriting the licensing and re-certification burden yourself.`,
+Every cohort then completes a tailored compliance refresher — HIPAA, PCI, FCRA, Reg E or TCPA, matched to your regulator — before taking a single live call. Agents stay on our payroll and you pay only for hours worked, so you add compliant capacity — 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days) — and scale back just as fast, without inheriting the licensing and re-certification burden yourself.`,
     approachSteps: [
       {
         title: 'License-verified pipeline',
@@ -397,7 +397,7 @@ Every cohort then completes a tailored compliance refresher — HIPAA, PCI, FCRA
       },
       {
         q: 'Are your call center agents HIPAA and PCI compliant?',
-        a: "Yes. We maintain active pipelines of HIPAA-cleared and PCI-cleared agents, and every shortlisted candidate's clearance is verified at submission. Each cohort also completes a tailored compliance refresher (HIPAA, PCI, FCRA, Reg E or TCPA as applicable) before going live.",
+        a: "Yes. We maintain active pipelines of HIPAA-cleared and PCI-cleared agents, and every shortlisted candidate's clearance is verified at submission. Each cohort also completes a tailored compliance refresher (HIPAA, PCI, FCRA, Reg E or TCPA as applicable) before going live. On the BAA side: because agents stay on our payroll, the agreement covering anyone who touches PHI sits between your organization and us as their employer — scope, systems and signatories agreed in writing before the first live PHI call.",
       },
       {
         q: 'How does NMLS licensed agents staffing work and how is the license verified?',

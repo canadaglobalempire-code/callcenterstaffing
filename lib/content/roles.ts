@@ -5,9 +5,9 @@ export const ROLES: Role[] = [
     slug: 'bilingual-agents',
     name: 'Bilingual Call Center Agents',
     shortName: 'Bilingual Agents',
-    metaTitle: 'Bilingual & Spanish Speaking Call Center Agents — Staffing',
+    metaTitle: 'Bilingual & Spanish-Speaking Call Center Agent Role',
     metaDescription:
-      'Hire Spanish-speaking call center agents and bilingual talent onshore, nearshore and offshore. Fluency scored to level, with recordings on every shortlist.',
+      'What bilingual and Spanish-speaking call center agents do, the skills and languages we screen for, and how fluency is scored to CEFR level on a recording.',
     hero: {
       eyebrow: 'Roles we staff',
       headline: 'Spanish speaking call center agents who actually move the needle on CSAT.',

@@ -61,7 +61,7 @@ const GETTING_STARTED_FAQS = [
 const PROCESS_FAQS = [
   {
     q: 'How fast can you ramp a team?',
-    a: 'First qualified shortlist within 72 hours of plan sign-off on most engagements. For 10–25 seats, full cohort live in 3–4 weeks. Larger ramps (50–200) run as cohort waves — first cohort live in 30–45 days, follow-on cohorts every two weeks until the seat plan is full. Bilingual or licensed roles add a week for verification.',
+    a: 'On most engagements it is 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days), counted from plan sign-off. Larger ramps (50–200) run as cohort waves, with follow-on cohorts every two weeks until the seat plan is full. Bilingual or licensed roles add a week for verification.',
   },
   {
     q: 'How long does it take to launch a new call center?',
@@ -103,7 +103,7 @@ const COMPLIANCE_FAQS = [
   },
   {
     q: 'Are you HIPAA, PCI, or SOC 2 compliant?',
-    a: 'Yes. Compliance is vetted at candidate submission — HIPAA training certificates, PCI-DSS awareness, background and credit checks where the role requires them — and the specific obligations are written into the SOW for every engagement. For SOC 2 work we align our submission process to your auditor requirements. We will not place a candidate into a regulated seat without the documentation in hand.',
+    a: 'Three separate answers. Training evidence: compliance is vetted at candidate submission — HIPAA training certificates dated within twelve months (issuing platform verified), PCI-DSS awareness, background and credit checks where the role requires them — and we will not place a candidate into a regulated seat without the documentation in hand. Payroll truth: agents stay on our payroll while you pay only for hours worked, so employment, supervision and QA sit with us, not you. BAA: a Business Associate Agreement sits between your organization and the employer of anyone touching PHI on your behalf — with agents on our payroll that is our side of the table, and the scope, systems and signatories are agreed in writing before anyone takes a live PHI call. SOC 2 work is aligned to your auditor requirements.',
   },
   {
     q: 'Can you place licensed agents (NMLS, state-insurance)?',

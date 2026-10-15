@@ -20,9 +20,9 @@ import { site } from '@/lib/site';
 import { alternatesFor } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Call Center Staffing Agency | Trained Agents in 72 Hrs',
+  title: 'Call Center Staffing Agency | First Candidates in 72 Hrs',
   description:
-    'Hire trained call center agents on our payroll. Deploy a team in 72 hours, pay only for hours worked, swap any agent free. Get a written staffing plan.',
+    'Hire trained call center agents on our payroll. First qualified candidates in 72 hours, live agents in 3–14 days. Pay only for hours worked.',
   keywords: [
     'trained call center agents',
     'trained call center staff',

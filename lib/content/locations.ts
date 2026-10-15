@@ -35,7 +35,7 @@ export const LOCATIONS: Location[] = [
       },
       {
         title: 'USMCA-aligned compliance',
-        body: 'Vendor structures we’ve set up for SOC 2, HIPAA-aware and PCI work, with NDAs and IP terms reviewed by US counsel.',
+        body: 'Vendor structures we’ve set up for SOC 2, HIPAA-aware and PCI work, with NDAs and IP terms reviewed by US counsel. For the wider regional picture, see our page on call center staffing across North America.',
       },
     ],
     talentSnapshot: {
@@ -110,7 +110,7 @@ export const LOCATIONS: Location[] = [
       },
       {
         title: 'Tier-1 quality benchmark',
-        body: 'Quality that matches or exceeds tier-2 onshore vendor floors — driven by tenure, training maturity and a deep ops-leadership bench.',
+        body: 'Quality that matches or exceeds tier-2 onshore vendor floors — driven by tenure, training maturity and a deep ops-leadership bench. For the wider regional picture, see our page on call center staffing across Asia.',
       },
     ],
     talentSnapshot: {
@@ -190,7 +190,7 @@ export const LOCATIONS: Location[] = [
       },
       {
         title: 'BPO-friendly government incentives',
-        body: 'Free Trade Zone (Zona Franca) tax structures, ProColombia investment support, and a stable bilingual-education pipeline (the 2014 National Bilingual Programme) make multi-year captive builds defensible. Vendor partners we work with hold SOC 2 and PCI compliance as table stakes.',
+        body: 'Free Trade Zone (Zona Franca) tax structures, ProColombia investment support, and a stable bilingual-education pipeline (the 2014 National Bilingual Programme) make multi-year captive builds defensible. Vendor partners we work with hold SOC 2 and PCI compliance as table stakes. For the wider regional picture, see our page on call center staffing across South America.',
       },
     ],
     talentSnapshot: {
@@ -270,7 +270,7 @@ export const LOCATIONS: Location[] = [
       },
       {
         title: 'Cost-competitive for premium-accent work',
-        body: 'Loaded costs run 10–20% below the Philippines for comparable native-English roles, with a meaningfully better accent fit for UK and premium US queues. The math becomes compelling specifically when accent neutrality is non-negotiable.',
+        body: 'Loaded costs run 10–20% below the Philippines for comparable native-English roles, with a meaningfully better accent fit for UK and premium US queues. The math becomes compelling specifically when accent neutrality is non-negotiable. For the wider regional picture, see our page on call center staffing across Africa.',
       },
     ],
     talentSnapshot: {
@@ -349,7 +349,7 @@ export const LOCATIONS: Location[] = [
       },
       {
         title: 'Sun-belt and intermountain wage efficiency',
-        body: 'Phoenix, Tampa, San Antonio, Boise and Salt Lake City run loaded costs 25–40% below New York / California metros for comparable agent quality — with deeper labor pools and lower attrition. The geography of US onshore staffing has shifted: we recruit where the math actually works.',
+        body: 'Phoenix, Tampa, San Antonio, Boise and Salt Lake City run loaded costs 25–40% below New York / California metros for comparable agent quality — with deeper labor pools and lower attrition. The geography of US onshore staffing has shifted: we recruit where the math actually works. For the wider regional picture, see our page on call center staffing across North America.',
       },
     ],
     talentSnapshot: {

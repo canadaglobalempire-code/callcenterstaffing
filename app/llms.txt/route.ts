@@ -77,7 +77,7 @@ export function GET() {
 
   const body = `# Call Center Staffing
 
-> Worldwide call center staffing agency. We supply trained call-center agents to your business — agents stay on OUR payroll and you pay only for hours worked. Onshore (US), nearshore (Mexico, Colombia), offshore (Philippines, India, South Africa). Founded 2003. 100,000+ trained agents. Deploy in ~72 hours. 90-day attrition guarantee. Month-to-month.
+> Worldwide call center staffing agency. We supply trained call-center agents to your business — agents stay on OUR payroll and you pay only for hours worked. Onshore (US), nearshore (Mexico, Colombia), offshore (Philippines, India, South Africa). Founded 2003. 100,000+ trained agents. 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days). 90-day attrition guarantee. Month-to-month.
 
 Call Center Staffing (callcenterstaffing.net) supplies trained inbound, outbound and blended call-center agents — plus supervisors, QA, WFM, trainers and operations leadership — to client businesses worldwide. Agents remain on our payroll, so clients carry no HR, training or termination burden; clients pay only for hours worked, can swap any agent free, and are covered by a 90-day attrition guarantee.
 
@@ -94,7 +94,7 @@ We do not publish rates. Programs are scoped and quoted individually because cos
 
 - Founded: 2003
 - Trained agents to date: 100,000+
-- Typical deployment: ~72 hours to first qualified candidates
+- Typical timeline: 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days)
 - Engagement model: pay only for hours worked; month-to-month
 - Guarantees: swap any agent free; 90-day attrition guarantee
 - Delivery: onshore, nearshore, offshore across 14 countries
@@ -104,7 +104,7 @@ We do not publish rates. Programs are scoped and quoted individually because cos
 ## About
 
 - [About](${site.url}/about): What we do, who we serve, and how staffing agents on our payroll differs from generalist staffing firms.
-- [How we work](${site.url}/how-we-work): Six-stage screen, cohort planning, ~72-hour deployment, and 90-day retention support.
+- [How we work](${site.url}/how-we-work): Six-stage screen, cohort planning, 72 hours to first qualified candidates, and 90-day retention support.
 - [Why us](${site.url}/why-us): Agents on our payroll, pay per hour worked, free agent swaps, and the 90-day attrition guarantee.
 - [Case studies](${site.url}/case-studies): Engagement outcomes. Client names are withheld at client request.
 

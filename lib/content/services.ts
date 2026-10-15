@@ -219,7 +219,7 @@ export const SERVICES: Service[] = [
     primaryKeyword: 'call center recruitment',
     metaTitle: 'Call Center Recruitment Agency',
     metaDescription:
-      'Specialist call center recruitment agency. Hire screened agents, leads & QA in 72 hrs, 90-day attrition guarantee, since 2003. Get a shortlist today.',
+      'Specialist call center recruitment agency. Screened agents, leads & QA, first candidates in 72 hrs, 90-day attrition guarantee, since 2003.',
     heroImage: '/images/cc-team-row-2.jpg',
     hero: {
       eyebrow: 'Services',
@@ -343,7 +343,7 @@ Where most vendors hand you a stack of resumes and walk away, we report against 
     primaryKeyword: 'BPO staffing services',
     metaTitle: 'BPO Staffing Services and Recruitment for Contact Centers',
     metaDescription:
-      'BPO staffing services that put trained call-center agents on our payroll. Pay per hour worked, swap any agent free, deploy in ~72 hours. Get a staffing plan.',
+      'BPO staffing services that put trained call-center agents on our payroll. Pay per hour worked, swap any agent free, first candidates in 72 hours.',
     heroImage: '/images/cc-management.jpg',
     hero: {
       eyebrow: 'Services',
@@ -457,7 +457,7 @@ We embed with your client-services and ops leads, run weekly calibration with ea
       },
       {
         q: 'How fast can you staff a BPO-style team?',
-        a: "Most engagements get a first qualified shortlist within about 72 hours, with agents deployed shortly after. We've maintained a current bench of trained inbound, outbound and bilingual agents across nearshore and offshore markets since 2003, so we ramp from a live pool rather than a cold search.",
+        a: "On most engagements the timeline is 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days). We've maintained a current bench of trained inbound, outbound and bilingual agents across nearshore and offshore markets since 2003, so we ramp from a live pool rather than a cold search.",
       },
     ],
   },
@@ -675,7 +675,7 @@ Done badly, a customer service staffing agency hands you resumes and walks away.
       },
       {
         q: 'How fast can you staff a customer service team?',
-        a: 'Most briefs get a first qualified shortlist inside 72 hours, and screened agents can deploy in roughly 72 hours once a role profile is approved. Larger cohorts are sized to your training calendar with a named account manager owning the ramp.',
+        a: 'Once a role profile is approved, the timeline on most briefs is 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days). Larger cohorts are sized to your training calendar with a named account manager owning the ramp.',
       },
       {
         q: 'Can you provide bilingual or multichannel customer service agents?',
@@ -693,7 +693,7 @@ Done badly, a customer service staffing agency hands you resumes and walks away.
     primaryKeyword: 'outsourced call center staffing',
     metaTitle: 'Outsourced Call Center Staffing',
     metaDescription:
-      'Outsourced call center staffing without the HR burden. Trained agents on our payroll, pay per hour, 90-day guarantee, deploy in ~72 hours. Get a written plan.',
+      'Outsourced call center staffing without the HR burden. Trained agents on our payroll, pay per hour, 90-day guarantee, first candidates in 72 hours.',
     heroImage: '/images/internet-office-team-meeting.jpg',
     hero: {
       eyebrow: 'Services',
@@ -801,7 +801,7 @@ Done badly, outsourced call center staffing creates a tug-of-war between brand a
       },
       {
         q: 'How is outsourcing call center staffing different from hiring in-house?',
-        a: 'When you hire in-house you carry the recruiting, payroll, benefits, training, and attrition risk yourself, and it typically takes weeks to fill a seat. With outsourced call center staffing, we supply trained agents in about 72 hours, keep them on our payroll, replace anyone who leaves inside 90 days at no charge, and let you scale up or down month-to-month — so you get the agents without the HR burden.',
+        a: 'When you hire in-house you carry the recruiting, payroll, benefits, training, and attrition risk yourself, and it typically takes weeks to fill a seat. With outsourced call center staffing, the timeline is 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days); we keep agents on our payroll, replace anyone who leaves inside 90 days at no charge, and let you scale up or down month-to-month — so you get the agents without the HR burden.',
       },
       {
         q: 'Can you supplement recruiting on our existing BPO floor?',
@@ -1036,7 +1036,7 @@ The trap most operators fall into with offshore call center hiring is treating t
       },
       {
         q: 'How fast can offshore call center agents start?',
-        a: 'Most offshore briefs get a first qualified shortlist within 72 hours, with agents deployable in roughly 72 hours to a few days once you approve. We hold an active bench of 100,000+ trained agents across the Philippines and India, so you are screening from a ready pool rather than starting a search from scratch.',
+        a: 'On most offshore briefs the timeline is 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days). We hold an active bench of 100,000+ trained agents across the Philippines and India, so you are screening from a ready pool rather than starting a search from scratch.',
       },
       {
         q: 'Do I have to hire or payroll offshore agents myself?',
@@ -1182,8 +1182,8 @@ Compliance-cleared roles get specialised pipelines. NMLS, state-insurance, HIPAA
     slug: 'bilingual-call-center-staffing',
     name: 'Bilingual Call Center Staffing',
     primaryKeyword: 'bilingual call center staffing',
-    metaTitle: 'Bilingual Call Center Staffing',
-    metaDescription: "Bilingual call center staffing for customer support teams. Specify language pairs, voice and writing skills, coverage hours and role-specific assessments.",
+    metaTitle: 'Bilingual Call Center Staffing | Mexico & Nearshore Agents',
+    metaDescription: "Bilingual call center staffing on our payroll: Spanish, Portuguese, Tagalog and more from nearshore Mexico and Colombia, fluency scored on a recording.",
     heroImage: '/images/agent-female-office.jpg',
     hero: {
       eyebrow: 'Services',
@@ -1191,7 +1191,7 @@ Compliance-cleared roles get specialised pipelines. NMLS, state-insurance, HIPAA
       subhead:
         'Spanish, Portuguese, Tagalog, French and more. Every bilingual agent is tested to level on a structured rubric — you hear the recording before you hire.',
     },
-    intro: `Need bilingual call center agents who hold CSAT in both languages? We staff Spanish, Portuguese, Tagalog, French and 30+ more language pairs, with every agent tested on a structured fluency rubric and shipped as a recording you hear before you hire. Agents stay on our payroll, you pay only for hours worked, and a 90-day attrition and language-drift guarantee covers every placement. Since 2003 we've staffed bilingual queues from nearshore Mexico and Colombia, offshore Philippines, and onshore US markets like Miami and San Antonio.`,
+    intro: `Need bilingual call center agents who hold CSAT in both languages? We staff Spanish, Portuguese, Tagalog, French and 30+ more language pairs, with every agent tested on a structured fluency rubric and shipped as a recording you hear before you hire. Agents stay on our payroll, you pay only for hours worked, and a 90-day attrition and language-drift guarantee covers every placement. Since 2003 we've staffed bilingual queues from nearshore Mexico and Colombia, offshore Philippines, and onshore US markets like Miami and San Antonio. If you are running the screen yourself, our guide on how to hire bilingual agents in Mexico covers CEFR limits, city differences and the tests that predict performance.`,
     whatIsIt: `Bilingual call center staffing is the end-to-end practice of sourcing and verifying agents who can carry live volume in two languages without dropping CSAT in either. The work matters because language drift on a queue costs more than wage premium — a Spanish agent who handles English queues at B1 fluency will see CSAT drop 8–14 points vs. a calibrated bilingual agent.
 
 Done well, every bilingual call center placement carries a recorded language sample scored to a level — CEFR-style for European languages, ILR for US-government-style mapping. The recording is shared with the shortlist; you hear the agent in both languages before you hire. Cohort calibration runs in both languages — a bilingual cohort that calibrates only in English will drift in the second language inside 30 days.

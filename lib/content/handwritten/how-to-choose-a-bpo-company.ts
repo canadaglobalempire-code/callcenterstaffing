@@ -60,7 +60,7 @@ export const post: Post = {
     },
     {
       paragraphs: [
-        'Once you know the region, country rankings are a practical place to collect names. Our country lists cover the major delivery markets, including /blog/top-15-bpo-companies-in-the-world, /blog/top-15-bpo-companies-in-philippines, /blog/top-15-bpo-companies-in-mexico and /blog/top-15-bpo-companies-in-colombia. Use any list as a starting point for research, not a substitute for it. Aim for a long list of eight to ten providers and a short list of three or four that receive your full brief.',
+        'Once you know the region, country rankings are a practical place to collect names. Our country lists cover the major delivery markets, including /blog/top-15-bpo-companies-in-the-world, /blog/top-15-bpo-companies-in-philippines, /blog/top-15-bpo-companies-in-mexico and /blog/top-15-bpo-companies-in-colombia. For onshore programmes, our lists of the top 15 BPO companies in the USA and the top 15 BPO companies in the UK cover those two markets. Use any list as a starting point for research, not a substitute for it. Aim for a long list of eight to ten providers and a short list of three or four that receive your full brief.',
       ],
     },
     {

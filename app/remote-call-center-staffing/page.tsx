@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Remote Customer Service Staffing Agency',
     description:
-      'Trained remote, work-from-home call center agents on our payroll. Deploy in 72 hours, pay only for hours worked, onshore/nearshore/offshore.',
+      'Trained remote, work-from-home call center agents on our payroll. First candidates in 72 hours, pay only for hours worked, onshore/nearshore/offshore.',
     url: `${site.url}/remote-call-center-staffing`,
     images: [
       {
@@ -155,7 +155,7 @@ export default function RemoteStaffingPage() {
             <p className="mt-6 max-w-[560px] text-[17px] leading-relaxed text-white/75 lg:text-lg">
               Hire remote customer service agents without the real estate, the HR, or the idle
               seats. We recruit work-from-home agents across onshore, nearshore and offshore
-              regions, keep them on our payroll, and deploy a team to your business in 72 hours —
+              regions, keep them on our payroll, and work to 72 hours to first qualified candidates, 3–14 days to live agents (healthcare 21 days) —
               you pay only for the hours they work.
             </p>
 

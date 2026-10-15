@@ -14,9 +14,9 @@ export const NEARSHORE_POSTS: Post[] = [
     title: 'Hiring Bilingual Agents in Mexico: Screening for Real Fluency',
     excerpt:
       'Almost every provider says their Mexican agents are B2 or C1. Very few can tell you who assessed that, against what rubric, or what happens to fluency under pressure. Here is how to test it before you commit a programme.',
-    metaTitle: 'Hiring Bilingual Agents in Mexico',
+    metaTitle: 'How to Hire Bilingual Agents in Mexico: Screening Guide',
     metaDescription:
-      'How to screen bilingual call center agents in Mexico: CEFR levels and their limits, how Guadalajara, Monterrey and Tijuana differ, and the tests that work.',
+      'A hiring guide for bilingual agents in Mexico: what CEFR levels miss, how Guadalajara, Monterrey and Tijuana differ, and the fluency tests that work.',
     publishedAt: '2026-07-21',
     author: 'Call Center Staffing',
     category: 'Hiring',
@@ -92,7 +92,7 @@ export const NEARSHORE_POSTS: Post[] = [
       },
       {
         paragraphs: [
-          'Our /locations/mexico page covers the delivery detail by city, and /services/bilingual-call-center-staffing explains how the screen runs. If you are comparing Mexico against offshore delivery for a high-volume queue, /blog/nearshore-vs-offshore-high-volume-support is the more useful starting point.',
+          'If you would rather have this screen run for you, our bilingual call center staffing service applies it to every shortlist, with agents kept on our payroll. Our /locations/mexico page covers the delivery detail by city. If you are comparing Mexico against offshore delivery for a high-volume queue, /blog/nearshore-vs-offshore-high-volume-support is the more useful starting point.',
         ],
       },
     ],
@@ -375,6 +375,7 @@ export const NEARSHORE_POSTS: Post[] = [
         paragraphs: [
           'We operate the staffing model, so read the above as informed rather than neutral. The recommendation we most often give against our own interest: if you do not have team leaders with capacity to manage additional agents, a managed service is the right call, and staffing will disappoint you.',
           'Our /locations/europe and /locations/south-africa pages cover the delivery detail, and /tools/staffing-calculator sizes a cohort against your own volume.',
+          'If you decide a managed service is the right model, /blog/top-15-bpo-companies-in-uk sets out the best-known UK providers and what each is known for.',
         ],
       },
     ],
