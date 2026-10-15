@@ -1,6 +1,6 @@
 'use client';
 
-import { forwardRef } from 'react';
+import { forwardRef, useState } from 'react';
 import type { UseFormRegisterReturn } from 'react-hook-form';
 import { cn } from '@/lib/utils';
 
@@ -258,19 +258,33 @@ export const COUNTRIES: Country[] = [
   { name: "Zimbabwe", iso2: "ZW", dial: "+263", flag: "🇿🇼" },
 ];
 
-export const DEFAULT_COUNTRY = 'US';
+export const DEFAULT_DIAL = '+1';
+const UNKNOWN_FLAG = '🌐';
 
-export function isKnownCountry(iso2: string): boolean {
-  return COUNTRIES.some((c) => c.iso2 === iso2);
+/** Typed dial code -> "+digits" (auto-prefixes "+", drops anything else, max 4 digits). */
+export function normaliseDial(value: string): string {
+  if (value.trim() === '') return '';
+  return `+${value.replace(/\D/g, '').slice(0, 4)}`;
 }
 
-export function findCountry(iso2: string | undefined): Country {
-  return COUNTRIES.find((c) => c.iso2 === iso2) ?? COUNTRIES[0];
+/** A dial code is "+" then 1-4 digits; it cannot start with 0 (the API needs +[1-9]). */
+export function isValidDialCode(value: string): boolean {
+  return /^\+[1-9]\d{0,3}$/.test(value);
+}
+
+/**
+ * Country for a dial code. A shared code keeps the preferred country when it
+ * matches (e.g. Canada picked from the list), otherwise the first in the list,
+ * so "+1" resolves to the pinned United States. Unknown codes give undefined.
+ */
+export function countryForDial(dial: string, preferredIso2?: string | null): Country | undefined {
+  const preferred = preferredIso2 ? COUNTRIES.find((c) => c.iso2 === preferredIso2) : undefined;
+  if (preferred && preferred.dial === dial) return preferred;
+  return COUNTRIES.find((c) => c.dial === dial);
 }
 
 // The national part may contain spaces, dashes, dots and parentheses; letters
-// are rejected. Dial codes are at most 3 digits, so 4-12 national digits keeps
-// the combined value within E.164 (15 digits max), which the API enforces.
+// are rejected. 4-12 national digits; the combined length is checked separately.
 export function isValidNationalNumber(value: string): boolean {
   if (!/^[\d\s().-]+$/.test(value)) return false;
   const digits = value.replace(/\D/g, '');
@@ -278,34 +292,47 @@ export function isValidNationalNumber(value: string): boolean {
 }
 
 /** Dial code + national digits, e.g. "+14035551234". */
-export function toE164(iso2: string | undefined, national: string): string {
-  return `${findCountry(iso2).dial}${national.replace(/\D/g, '')}`;
+export function toE164(dial: string, national: string): string {
+  return `${dial}${national.replace(/\D/g, '')}`;
+}
+
+/** Combined value accepted by app/api/lead: "+" then 5-15 digits (E.164 maximum). */
+export function isValidE164(value: string): boolean {
+  return /^\+[1-9]\d{4,14}$/.test(value);
 }
 
 type PhoneFieldProps = {
   id: string;
   /** Classes of the neighbouring inputs, reused for both halves of the group. */
   fieldClass: string;
-  countryField: UseFormRegisterReturn;
+  /** group-focus-within: variants of the form's focus styles, for the dial-code group. */
+  groupFocusClass: string;
+  dialField: UseFormRegisterReturn;
   numberField: UseFormRegisterReturn;
-  /** Currently selected ISO2 code (from watch()) so the button shows its flag and code. */
-  country: string | undefined;
+  /** Current dial code (from watch()). */
+  dial: string | undefined;
+  /** Writes a dial code chosen from the list into the form. */
+  onDialSelect: (dial: string) => void;
+  dialInvalid?: boolean;
   placeholder?: string;
   chevronColor?: string;
   'aria-invalid'?: boolean;
   'aria-describedby'?: string;
 };
 
-// A native <select> drawn as a compact "flag +code" button on the left of the
-// number input. The select text is transparent and an overlay shows the short
-// form, while the open list shows "flag Country +code".
+// Left group: [flag] [typed dial code] [chevron]. An invisible native <select>
+// fills the whole group underneath, so clicking the flag or chevron opens the
+// country list, while the dial-code input sits above it in the middle.
 export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(function PhoneField(
   {
     id,
     fieldClass,
-    countryField,
+    groupFocusClass,
+    dialField,
     numberField,
-    country,
+    dial = DEFAULT_DIAL,
+    onDialSelect,
+    dialInvalid,
     placeholder,
     chevronColor = '#0f172a',
     'aria-invalid': ariaInvalid,
@@ -313,36 +340,59 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(function P
   },
   ref,
 ) {
-  const selected = findCountry(country);
+  // Set only when a country is picked from the list, so a shared code such as
+  // +1 keeps showing Canada after choosing it; typing clears it.
+  const [pickedIso2, setPickedIso2] = useState<string | null>(null);
+  const country = countryForDial(dial, pickedIso2);
   return (
     <div ref={ref} className="flex w-full">
-      <div className="relative flex-none">
+      <div className="group relative w-[7.25rem] flex-none focus-within:z-10">
         <select
           id={`${id}-country`}
           aria-label="Country calling code"
-          defaultValue={DEFAULT_COUNTRY}
-          {...countryField}
-          className={cn(
-            fieldClass,
-            'w-[6.25rem] appearance-none rounded-r-none pr-6 text-transparent focus:z-10 focus:relative',
-          )}
+          value={country?.iso2 ?? ''}
+          onChange={(e) => {
+            const picked = COUNTRIES.find((c) => c.iso2 === e.target.value);
+            if (!picked) return;
+            setPickedIso2(picked.iso2);
+            onDialSelect(picked.dial);
+          }}
+          className={cn(fieldClass, groupFocusClass, 'appearance-none rounded-r-none pr-6 text-transparent')}
         >
+          <option value="" disabled hidden>
+            {`${UNKNOWN_FLAG} Other`}
+          </option>
           {COUNTRIES.map((c) => (
             <option key={c.iso2} value={c.iso2} className="text-navy-950">
               {`${c.flag} ${c.name} ${c.dial}`}
             </option>
           ))}
         </select>
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 left-0 z-20 flex items-center gap-1.5 pl-3 text-[15px] font-medium text-navy-950"
-        >
-          <span>{selected.flag}</span>
-          <span>{selected.dial}</span>
-        </span>
+        <div className="pointer-events-none absolute inset-0 z-10 flex items-center gap-1.5 pl-3 pr-7 text-[15px] font-medium text-navy-950">
+          <span aria-hidden="true">{country?.flag ?? UNKNOWN_FLAG}</span>
+          <input
+            id={`${id}-dial`}
+            type="text"
+            inputMode="numeric"
+            autoComplete="tel-country-code"
+            maxLength={5}
+            aria-label="Country dial code"
+            aria-required="true"
+            aria-invalid={dialInvalid || undefined}
+            aria-describedby={dialInvalid ? ariaDescribedBy : undefined}
+            defaultValue={DEFAULT_DIAL}
+            {...dialField}
+            onChange={(e) => {
+              e.target.value = normaliseDial(e.target.value);
+              setPickedIso2(null);
+              return dialField.onChange(e);
+            }}
+            className="pointer-events-auto relative z-20 h-7 w-full min-w-0 border-0 bg-transparent p-0 text-[15px] font-medium text-navy-950 focus:outline-none focus:ring-0"
+          />
+        </div>
         <svg
           aria-hidden="true"
-          className="pointer-events-none absolute right-2.5 top-1/2 z-20 -translate-y-1/2"
+          className="pointer-events-none absolute right-2.5 top-1/2 z-10 -translate-y-1/2"
           width="12"
           height="12"
           viewBox="0 0 24 24"

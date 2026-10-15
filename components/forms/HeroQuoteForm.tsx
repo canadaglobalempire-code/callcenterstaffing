@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 import { submitLead } from '@/lib/lead-client';
 import { trackLeadSubmission } from '@/lib/analytics';
 import { Recaptcha, type RecaptchaHandle } from './Recaptcha';
-import { PhoneField, DEFAULT_COUNTRY, isKnownCountry, isValidNationalNumber, toE164 } from './PhoneField';
+import { PhoneField, DEFAULT_DIAL, isValidDialCode, isValidNationalNumber, isValidE164, toE164 } from './PhoneField';
 
 // Every field is required so each lead arrives complete. The website accepts
 // any text, so a bare domain, a full URL or "N/A" all satisfy it.
@@ -18,7 +18,7 @@ const schema = z.object({
   email: z.string().email('Enter a valid work email'),
   company: z.string().min(2, 'Enter your company').max(160),
   website: z.string().trim().min(1, 'Enter your website, or N/A'),
-  phoneCountry: z.string().refine(isKnownCountry, 'Select a country code'),
+  phoneDial: z.string().refine(isValidDialCode, 'Enter a valid country code, e.g. +44'),
   phone: z
     .string()
     .trim()
@@ -30,6 +30,11 @@ const schema = z.object({
   region: z.enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open'], {
     errorMap: () => ({ message: 'Select a region' }),
   }),
+}).superRefine((v, ctx) => {
+  // Same rule as app/api/lead: the combined number may hold at most 15 digits.
+  if (isValidDialCode(v.phoneDial) && isValidNationalNumber(v.phone) && !isValidE164(toE164(v.phoneDial, v.phone))) {
+    ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['phone'], message: 'Enter a valid phone number' });
+  }
 });
 
 type FormValues = z.infer<typeof schema>;
@@ -67,6 +72,7 @@ export function HeroQuoteForm() {
     formState: { errors, isSubmitting },
     reset,
     watch,
+    setValue,
   } = useForm<FormValues>({
     resolver: zodResolver(schema),
     mode: 'onBlur',
@@ -75,7 +81,7 @@ export function HeroQuoteForm() {
       email: '',
       company: '',
       website: '',
-      phoneCountry: DEFAULT_COUNTRY,
+      phoneDial: DEFAULT_DIAL,
       phone: '',
       agentCount: undefined,
       region: undefined,
@@ -99,7 +105,7 @@ export function HeroQuoteForm() {
           email: values.email,
           company: values.company,
           website: values.website,
-          phone: toE164(values.phoneCountry, values.phone),
+          phone: toE164(values.phoneDial, values.phone),
           agentCount: values.agentCount,
           region: values.region,
           'g-recaptcha-response': captchaToken,
@@ -214,13 +220,16 @@ export function HeroQuoteForm() {
                 />
               </Field>
 
-              <Field id={fieldId('phone')} label="Phone number" error={errors.phone?.message}>
+              <Field id={fieldId('phone')} label="Phone number" error={errors.phoneDial?.message ?? errors.phone?.message}>
                 <PhoneField
                   id={fieldId('phone')}
                   fieldClass={fieldClass}
-                  countryField={register('phoneCountry')}
+                  groupFocusClass="group-focus-within:border-accent-500 group-focus-within:ring-2 group-focus-within:ring-accent-500/30"
+                  dialField={register('phoneDial')}
                   numberField={register('phone')}
-                  country={watch('phoneCountry')}
+                  dial={watch('phoneDial')}
+                  onDialSelect={(dial) => setValue('phoneDial', dial, { shouldValidate: true })}
+                  dialInvalid={errors.phoneDial ? true : undefined}
                   placeholder="Phone number *"
                 />
               </Field>
