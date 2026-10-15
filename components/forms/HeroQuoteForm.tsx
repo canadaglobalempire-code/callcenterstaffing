@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 import { submitLead } from '@/lib/lead-client';
 import { trackLeadSubmission } from '@/lib/analytics';
 import { Recaptcha, type RecaptchaHandle } from './Recaptcha';
-import { PhoneField, DEFAULT_DIAL, isValidDialCode, isValidNationalNumber, isValidE164, toE164 } from './PhoneField';
+import { PhoneField, DEFAULT_DIAL, isDialCodePrefix, isValidDialCode, isValidNationalNumber, isValidE164, toE164 } from './PhoneField';
 
 // Every field is required so each lead arrives complete. The website accepts
 // any text, so a bare domain, a full URL or "N/A" all satisfy it.
@@ -31,7 +31,7 @@ const schema = z.object({
     errorMap: () => ({ message: 'Select a region' }),
   }),
 }).superRefine((v, ctx) => {
-  // Same rule as app/api/lead: the combined number may hold at most 15 digits.
+  // Same rule as app/api/lead: 7-15 digits in total, starting with a known dial code.
   if (isValidDialCode(v.phoneDial) && isValidNationalNumber(v.phone) && !isValidE164(toE164(v.phoneDial, v.phone))) {
     ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['phone'], message: 'Enter a valid phone number' });
   }
@@ -73,6 +73,8 @@ export function HeroQuoteForm() {
     reset,
     watch,
     setValue,
+    trigger,
+    clearErrors,
   } = useForm<FormValues>({
     resolver: zodResolver(schema),
     mode: 'onBlur',
@@ -229,6 +231,12 @@ export function HeroQuoteForm() {
                   numberField={register('phone')}
                   dial={watch('phoneDial')}
                   onDialSelect={(dial) => setValue('phoneDial', dial, { shouldValidate: true })}
+                  onDialTyped={(dial) => {
+                    // A partly typed code ("+3" on the way to "+380") waits for blur/submit;
+                    // an unknown complete code (+999) or a real one is checked right away.
+                    if (isDialCodePrefix(dial) && !isValidDialCode(dial)) clearErrors('phoneDial');
+                    else void trigger('phoneDial');
+                  }}
                   dialInvalid={errors.phoneDial ? true : undefined}
                   placeholder="Phone number *"
                 />

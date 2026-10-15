@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { site } from '@/lib/site';
+import { isValidE164 } from '@/lib/phone';
 
 // SplitForms access keys are public form identifiers, not API secrets. Keep the
 // environment override so the form can be switched without a code deploy.
@@ -69,8 +70,9 @@ const ATTRIBUTION_LABELS: Record<keyof Attribution, string> = {
 };
 
 // Phone arrives as dial code + national digits from components/forms/PhoneField,
-// e.g. "+14035551234": a plus, then 5-15 digits (E.164 maximum).
-const e164Phone = z.string().regex(/^\+[1-9]\d{4,14}$/);
+// e.g. "+14035551234": a plus, then 7-15 digits (E.164 maximum) starting with a
+// dial code from the country list (lib/phone), so "+9992025550123" is rejected.
+const e164Phone = z.string().refine(isValidE164);
 
 // Every lead field is required (the staffing form's notes excepted), matching
 // the client-side schemas in components/forms.
