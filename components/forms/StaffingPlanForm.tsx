@@ -5,8 +5,10 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Check, ArrowRight, AlertCircle, Send } from 'lucide-react';
+import Script from 'next/script';
 import { cn } from '@/lib/utils';
 import { submitLead } from '@/lib/lead-client';
+import { SPLITFORMS_KEY } from '@/lib/splitforms';
 import { trackLeadSubmission } from '@/lib/analytics';
 import { Recaptcha, type RecaptchaHandle } from './Recaptcha';
 import { PhoneField, DEFAULT_DIAL, isDialCodePrefix, isValidDialCode, isValidNationalNumber, isValidE164, toE164 } from './PhoneField';
@@ -81,6 +83,7 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
   const captchaRef = useRef<RecaptchaHandle>(null);
   const renderedAtRef = useRef(Date.now());
   const honeypotRef = useRef<HTMLInputElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const {
     register,
@@ -109,6 +112,7 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
         subject: `New staffing plan request from ${values.name}${values.company ? ` (${values.company})` : ''}`,
         renderedAt: renderedAtRef.current,
         companyWebsite: honeypotRef.current?.value,
+        form: formRef.current,
         fields: {
           name: values.name,
           company: values.company,
@@ -165,10 +169,13 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
 
   return (
     <form
+      ref={formRef}
+      data-sf-key={SPLITFORMS_KEY}
       onSubmit={handleSubmit(onSubmit)}
       className={cn('grid gap-5', compact ? '' : 'lg:grid-cols-2')}
       noValidate
     >
+      <Script src="https://splitforms.com/embed.js" strategy="afterInteractive" />
       <input
         ref={honeypotRef}
         type="text"

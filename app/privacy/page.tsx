@@ -49,6 +49,7 @@ const sections = [
     body: [
       'Public phone numbers and direct email addresses are intentionally not published on this website. This keeps spam calls and spam email down and allows legitimate inquiries to be routed through protected forms.',
       'Forms may use CAPTCHA, validation, analytics, and submission services to verify requests and reduce automated abuse.',
+      'Our forms use Splitforms to save what you type into an enquiry form, even if you do not submit it, so we can follow up on your request.',
     ],
   },
   {
