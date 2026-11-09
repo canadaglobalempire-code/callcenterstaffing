@@ -2,6 +2,32 @@
 
 import { getAttribution } from '@/lib/attribution';
 
+/** Notification email subject for every lead form (app/api/lead enforces it too). */
+export const LEAD_SUBJECT = 'Call Center Staffing – Website Inquiry';
+
+/** "Thanks, John!" from a full name; "Thanks!" when there is none. */
+export function thanksName(fullName?: string): string {
+  const first = (fullName ?? '').trim().split(/\s+/)[0];
+  return first ? `Thanks, ${first}!` : 'Thanks!';
+}
+
+/** Scroll to (and focus) the first field, in page order, whose name is listed. */
+export function focusFirstInvalid(form: HTMLFormElement | null, names: string[]) {
+  if (!form) return;
+  const el =
+    Array.from(form.querySelectorAll<HTMLElement>('[name]')).find((f) =>
+      names.includes(f.getAttribute('name') ?? ''),
+    ) ?? (names.length === 0 ? form.querySelector<HTMLElement>('[data-captcha]') : null);
+  if (!el) return;
+  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  if (el instanceof HTMLInputElement || el instanceof HTMLSelectElement || el instanceof HTMLTextAreaElement) {
+    el.focus({ preventScroll: true });
+  }
+}
+
+const DELIVERY_FAILED =
+  'Your inquiry could not be sent. Please try again, or email or call us directly.';
+
 type Primitive = string | number | boolean | undefined;
 
 type SubmitLeadArgs = {
@@ -47,7 +73,7 @@ export async function submitLead({
     }),
   });
 
-  const json = (await res.json()) as LeadResponse;
+  const json = (await res.json().catch(() => ({}))) as LeadResponse;
   if (!res.ok || !json.ready || !json.payload?.access_key) {
     throw new Error(json.message || 'Submission failed. Please try again.');
   }
@@ -59,14 +85,23 @@ export async function submitLead({
 
   // SplitForms' public form identifier is protected by its domain allowlist.
   // Only this browser request carries the visitor's genuine site Origin.
-  const delivery = await fetch('https://splitforms.com/api/submit', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-    body: JSON.stringify(sfSid ? { ...json.payload, sf_sid: sfSid } : json.payload),
-  });
-  const result = (await delivery.json()) as LeadResponse;
+  // Only an explicit {success: true} from SplitForms counts as delivered. A
+  // network error (offline, splitforms.com blocked by an extension), a non-JSON
+  // reply or {success: false} is shown to the visitor instead of a fake thank-you.
+  let delivery: Response;
+  try {
+    delivery = await fetch('https://splitforms.com/api/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(sfSid ? { ...json.payload, sf_sid: sfSid } : json.payload),
+    });
+  } catch {
+    throw new Error(DELIVERY_FAILED);
+  }
+  const result = (await delivery.json().catch(() => ({}))) as LeadResponse;
   if (!delivery.ok || result.success !== true) {
-    throw new Error(result.message || 'Submission failed. Please try again.');
+    console.error('SplitForms rejected the lead', delivery.status, result);
+    throw new Error(result.message || DELIVERY_FAILED);
   }
 
   // Tracking is optional: a blocked script must never undo a delivered lead.

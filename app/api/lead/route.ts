@@ -13,6 +13,10 @@ const RATE_LIMIT_MAX = 8;
 const MIN_SUBMIT_TIME_MS = 1500;
 const MAX_SUBMIT_AGE_MS = 24 * 60 * 60 * 1000;
 
+// Notification email subject for every lead form, set here so a client cannot
+// change it. SplitForms uses a field named exactly `subject` verbatim.
+const LEAD_SUBJECT = 'Call Center Staffing – Website Inquiry';
+
 type RateBucket = {
   count: number;
   resetAt: number;
@@ -74,8 +78,8 @@ const ATTRIBUTION_LABELS: Record<keyof Attribution, string> = {
 // dial code from the country list (lib/phone), so "+9992025550123" is rejected.
 const e164Phone = z.string().refine(isValidE164);
 
-// Every lead field is required (the staffing form's notes excepted), matching
-// the client-side schemas in components/forms.
+// Every lead field is required, matching the client-side schemas in
+// components/forms.
 const heroFieldsSchema = z.object({
   name: z.string().min(2).max(120),
   email: z.string().email().max(180),
@@ -103,7 +107,8 @@ const staffingFieldsSchema = z.object({
   ]),
   agentCount: z.enum(['1-9', '10-49', '50-199', '200-499', '500+']),
   location: z.enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open']),
-  notes: z.string().max(800).optional(),
+  // The form's "Anything we should know?" notes, posted as `message`.
+  message: z.string().trim().min(2).max(800),
   'g-recaptcha-response': z.string().min(10).max(3000),
 });
 
@@ -127,7 +132,12 @@ function getRateMap() {
 
 function getClientKey(req: NextRequest) {
   const forwarded = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim();
-  return forwarded || req.headers.get('x-real-ip') || 'unknown';
+  return (
+    req.headers.get('cf-connecting-ip')?.trim() ||
+    req.headers.get('x-real-ip')?.trim() ||
+    forwarded ||
+    null
+  );
 }
 
 function isAllowedOrigin(req: NextRequest) {
@@ -146,6 +156,10 @@ function isAllowedOrigin(req: NextRequest) {
 
 function isRateLimited(req: NextRequest) {
   const key = getClientKey(req);
+  // No client IP (no proxy header): do not put every visitor in one shared
+  // 'unknown' bucket, where 8 leads in 10 minutes would block everyone else.
+  // SplitForms still rate-limits the browser's own request by its real IP.
+  if (!key) return false;
   const now = Date.now();
   const rateMap = getRateMap();
   const bucket = rateMap.get(key);
@@ -176,6 +190,49 @@ function json(
   });
 }
 
+// Attribution is compacted before it reaches the notification email:
+// - landing_page keeps the path only. Its query string repeats the utm_* values
+//   sent separately and, on ad clicks, carries a 100-character gclid/msclkid/
+//   fbclid token. SplitForms' content filter judges a form with no message
+//   field by its LONGEST text value, and that token reads as gibberish, so
+//   every Google/Microsoft/Meta ad lead from the quote form was quarantined
+//   as spam with a success reply and no email.
+// - click_id names the ad network instead of the opaque token (useless in an
+//   email, and the same gibberish signal).
+// - referrer keeps the host ("google.com"), not a full URL with a path/query.
+const CLICK_ID_PARAMS: Record<string, string> = {
+  gclid: 'Google Ads (gclid)',
+  gbraid: 'Google Ads (gbraid)',
+  wbraid: 'Google Ads (wbraid)',
+  msclkid: 'Microsoft Ads (msclkid)',
+  fbclid: 'Meta (fbclid)',
+  ttclid: 'TikTok (ttclid)',
+};
+
+function compactAttribution(attribution: Attribution): Record<string, string> {
+  const out: Partial<Record<keyof Attribution, string>> = { ...attribution };
+  const [path, query = ''] = (attribution.landingPath ?? '').split('?');
+  if (attribution.landingPath) out.landingPath = path || '/';
+  if (attribution.clickId) {
+    const params = new URLSearchParams(query);
+    const network = Object.keys(CLICK_ID_PARAMS).find((k) => params.get(k) === attribution.clickId);
+    out.clickId = network ? CLICK_ID_PARAMS[network] : 'yes';
+  }
+  if (attribution.referrer) {
+    try {
+      out.referrer = new URL(attribution.referrer).hostname.replace(/^www\./, '');
+    } catch {
+      out.referrer = attribution.referrer.split(/[/?#]/)[0];
+    }
+  }
+  const result: Record<string, string> = {};
+  for (const [key, label] of Object.entries(ATTRIBUTION_LABELS)) {
+    const value = out[key as keyof Attribution];
+    if (value) result[label] = value;
+  }
+  return result;
+}
+
 function prepareSplitformsPayload(
   accessKey: string,
   fields: Record<string, Primitive>,
@@ -184,22 +241,23 @@ function prepareSplitformsPayload(
   page?: string,
   attribution?: Attribution,
 ) {
+  // Insertion order is the order the notification email lists the fields:
+  // the lead's own answers first, then where the lead came from.
   const fd = new FormData();
   fd.set('access_key', accessKey);
   fd.set('subject', subject);
-  fd.set('source', source);
-  if (page) fd.set('page', page);
-
-  if (attribution) {
-    for (const [key, label] of Object.entries(ATTRIBUTION_LABELS)) {
-      const value = attribution[key as keyof Attribution];
-      if (value) fd.set(label, value);
-    }
-  }
 
   for (const [key, value] of Object.entries(fields)) {
     if (value === '') continue;
     fd.set(key, String(value));
+  }
+
+  fd.set('source', source);
+  if (page) fd.set('page', page);
+  if (attribution) {
+    for (const [label, value] of Object.entries(compactAttribution(attribution))) {
+      fd.set(label, value);
+    }
   }
 
   return Object.fromEntries(fd.entries()) as Record<string, string>;
@@ -270,7 +328,7 @@ export async function POST(req: NextRequest) {
     payload: prepareSplitformsPayload(
       ACCESS_KEY,
       fields.data,
-      parsed.data.subject,
+      parsed.data.source === 'NewsletterForm' ? parsed.data.subject : LEAD_SUBJECT,
       parsed.data.source,
       parsed.data.page,
       parsed.data.attribution,

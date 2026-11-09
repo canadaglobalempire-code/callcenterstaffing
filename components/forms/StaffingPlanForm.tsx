@@ -1,21 +1,20 @@
 'use client';
 
-import { useState, useRef, useId, cloneElement, isValidElement, forwardRef } from 'react';
+import { useState, useRef, useId, useEffect, cloneElement, isValidElement, forwardRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Check, ArrowRight, AlertCircle, Send } from 'lucide-react';
 import Script from 'next/script';
 import { cn } from '@/lib/utils';
-import { submitLead } from '@/lib/lead-client';
+import { submitLead, LEAD_SUBJECT, thanksName, focusFirstInvalid } from '@/lib/lead-client';
 import { SPLITFORMS_KEY } from '@/lib/splitforms';
 import { trackLeadSubmission } from '@/lib/analytics';
 import { Recaptcha, type RecaptchaHandle } from './Recaptcha';
 import { PhoneField, DEFAULT_DIAL, isDialCodePrefix, isValidDialCode, isValidNationalNumber, isValidE164, toE164 } from './PhoneField';
 
-// Every field except the free-text notes is required so each lead arrives
-// complete. The website accepts any text, so a bare domain, a full URL or "N/A"
-// all satisfy it.
+// Every field is required so each lead arrives complete. The website accepts
+// any text, so a bare domain, a full URL or "N/A" all satisfy it.
 const schema = z.object({
   name: z.string().min(2, 'Please enter your full name'),
   company: z.string().min(2, 'Enter your company').max(160),
@@ -37,7 +36,7 @@ const schema = z.object({
   location: z.enum(['onshore-us', 'nearshore-latam', 'offshore-asia', 'multi-region', 'open'], {
     errorMap: () => ({ message: 'Select a location preference' }),
   }),
-  notes: z.string().max(800).optional(),
+  notes: z.string().trim().min(2, 'Tell us a little about your needs').max(800),
 }).superRefine((v, ctx) => {
   // Same rule as app/api/lead: 7-15 digits in total, starting with a known dial code.
   if (isValidDialCode(v.phoneDial) && isValidNationalNumber(v.phone) && !isValidE164(toE164(v.phoneDial, v.phone))) {
@@ -73,11 +72,17 @@ const LOCATION_OPTIONS: { value: NonNullable<FormValues['location']>; label: str
 const fieldClass =
   'h-11 w-full rounded-md border border-ink-200 bg-white px-3.5 text-[15px] text-navy-950 shadow-sm transition-colors focus:border-brand-600 focus:outline-none placeholder:text-navy-700/50';
 const labelClass = 'text-xs font-semibold uppercase tracking-[0.12em] text-navy-700';
+// Red border + soft red ring on a field that failed validation; cleared as soon
+// as the field becomes valid (react-hook-form revalidates on change after submit).
+const errorRing = (on: unknown) => (on ? '!border-red-600 ring-2 ring-red-600/20' : '');
 
 export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
   const formId = useId();
   const fieldId = (name: string) => `${formId}-${name}`;
   const [submitted, setSubmitted] = useState(false);
+  const [thanks, setThanks] = useState('Thanks!');
+  const [showBanner, setShowBanner] = useState(false);
+  const [captchaMissing, setCaptchaMissing] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const captchaRef = useRef<RecaptchaHandle>(null);
@@ -100,16 +105,44 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
     defaultValues: { phoneDial: DEFAULT_DIAL },
   });
 
+  const backToForm = () => {
+    renderedAtRef.current = Date.now();
+    setSubmitted(false);
+  };
+  // Back to an empty, working form ~6 s after the thank-you (or on the button).
+  useEffect(() => {
+    if (!submitted) return;
+    const t = setTimeout(() => {
+      renderedAtRef.current = Date.now();
+      setSubmitted(false);
+    }, 6000);
+    return () => clearTimeout(t);
+  }, [submitted]);
+
+  useEffect(() => {
+    if (captchaToken) setCaptchaMissing(false);
+  }, [captchaToken]);
+
+  const hasErrors = Object.keys(errors).length > 0 || captchaMissing;
+
+  // Missing/invalid fields: nothing is sent; banner, red fields, scroll to the first.
+  const onInvalid = (fieldErrors: Record<string, unknown> = {}) => {
+    setCaptchaMissing(!captchaToken);
+    setShowBanner(true);
+    focusFirstInvalid(formRef.current, Object.keys(fieldErrors));
+  };
+
   const onSubmit = async (values: FormValues) => {
     setSubmitError(null);
     if (!captchaToken) {
-      setSubmitError('Please confirm you are not a robot.');
+      onInvalid();
       return;
     }
+    setShowBanner(false);
     try {
       await submitLead({
         source: 'StaffingPlanForm',
-        subject: `New staffing plan request from ${values.name}${values.company ? ` (${values.company})` : ''}`,
+        subject: LEAD_SUBJECT,
         renderedAt: renderedAtRef.current,
         companyWebsite: honeypotRef.current?.value,
         form: formRef.current,
@@ -122,16 +155,20 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
           roleType: values.roleType,
           agentCount: values.agentCount,
           location: values.location,
-          notes: values.notes,
+          // Posted as "message" so SplitForms reads it as the visitor's message.
+          message: values.notes,
           'g-recaptcha-response': captchaToken,
         },
       });
       trackLeadSubmission('StaffingPlanForm');
-      setSubmitted(true);
+      setThanks(thanksName(values.name));
       reset();
-      renderedAtRef.current = Date.now();
+      clearErrors();
+      setShowBanner(false);
+      setCaptchaMissing(false);
       captchaRef.current?.reset();
       setCaptchaToken(null);
+      setSubmitted(true);
     } catch (err) {
       setSubmitError(err instanceof Error ? err.message : 'Something went wrong. Try again.');
       captchaRef.current?.reset();
@@ -148,20 +185,16 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
         <span className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-brand-600 text-white">
           <Check className="h-6 w-6" />
         </span>
-        <h3 className="mt-5 font-display text-xl font-semibold tracking-[-0.01em] text-navy-950">Quote request received.</h3>
+        <h3 className="mt-5 font-display text-xl font-semibold tracking-[-0.01em] text-navy-950">{thanks}</h3>
         <p className="mt-2 text-navy-700 max-w-sm mx-auto">
-          A senior recruiter will respond within one business day with a written quote and
-          sourcing timeline.
+          Your inquiry has been received. One of our representatives will reach out to you.
         </p>
         <button
           type="button"
           className="mt-6 text-sm font-semibold text-brand-600 hover:text-navy-950"
-          onClick={() => {
-            renderedAtRef.current = Date.now();
-            setSubmitted(false);
-          }}
+          onClick={backToForm}
         >
-          Submit another request
+          Submit another inquiry
         </button>
       </div>
     );
@@ -171,7 +204,7 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
     <form
       ref={formRef}
       data-sf-key={SPLITFORMS_KEY}
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit(onSubmit, onInvalid)}
       className={cn('grid gap-5', compact ? '' : 'lg:grid-cols-2')}
       noValidate
     >
@@ -186,15 +219,28 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
         aria-hidden="true"
       />
 
+      {showBanner && hasErrors && (
+        <p
+          role="alert"
+          className={cn(
+            'inline-flex items-center gap-2 rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm font-medium text-red-700',
+            compact ? '' : 'lg:col-span-2',
+          )}
+        >
+          <AlertCircle className="h-4 w-4 flex-none" />
+          Please complete the highlighted fields below.
+        </p>
+      )}
+
       <Field label="Full name" id={fieldId('name')} error={errors.name?.message}>
-        <input id={fieldId('name')} {...register('name')} className={fieldClass} placeholder="Operations lead" />
+        <input id={fieldId('name')} {...register('name')} className={cn(fieldClass, errorRing(errors.name))} placeholder="Operations lead" />
       </Field>
 
       <Field label="Company" id={fieldId('company')} error={errors.company?.message}>
         <input
           id={fieldId('company')}
           {...register('company')}
-          className={fieldClass}
+          className={cn(fieldClass, errorRing(errors.company))}
           placeholder="Northstar Commerce"
         />
       </Field>
@@ -204,7 +250,7 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
           id={fieldId('website')}
           type="text"
           {...register('website')}
-          className={fieldClass}
+          className={cn(fieldClass, errorRing(errors.website))}
           placeholder="yourcompany.com or N/A"
         />
       </Field>
@@ -214,7 +260,7 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
           id={fieldId('email')}
           type="email"
           {...register('email')}
-          className={fieldClass}
+          className={cn(fieldClass, errorRing(errors.email))}
           placeholder="you@company.com"
         />
       </Field>
@@ -222,7 +268,7 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
       <Field label="Phone" id={fieldId('phone')} error={errors.phoneDial?.message ?? errors.phone?.message}>
         <PhoneField
           id={fieldId('phone')}
-          fieldClass={fieldClass}
+          fieldClass={cn(fieldClass, errorRing(errors.phone || errors.phoneDial))}
           groupFocusClass="group-focus-within:border-brand-600"
           dialField={register('phoneDial')}
           numberField={register('phone')}
@@ -241,20 +287,19 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
       </Field>
 
       <Field label="Role type" id={fieldId('roleType')} error={errors.roleType?.message}>
-        <Select id={fieldId('roleType')} {...register('roleType')} options={ROLE_OPTIONS} />
+        <Select id={fieldId('roleType')} {...register('roleType')} className={errorRing(errors.roleType)} options={ROLE_OPTIONS} />
       </Field>
 
       <Field label="Agents needed" id={fieldId('agentCount')} error={errors.agentCount?.message}>
-        <Select id={fieldId('agentCount')} {...register('agentCount')} options={AGENT_OPTIONS} />
+        <Select id={fieldId('agentCount')} {...register('agentCount')} className={errorRing(errors.agentCount)} options={AGENT_OPTIONS} />
       </Field>
 
       <Field label="Location preference" id={fieldId('location')} error={errors.location?.message}>
-        <Select id={fieldId('location')} {...register('location')} options={LOCATION_OPTIONS} />
+        <Select id={fieldId('location')} {...register('location')} className={errorRing(errors.location)} options={LOCATION_OPTIONS} />
       </Field>
 
       <Field
-        label="Anything we should know? (optional)"
-        optional
+        label="Anything we should know?"
         id={fieldId('notes')}
         error={errors.notes?.message}
         className="lg:col-span-2"
@@ -263,13 +308,23 @@ export function StaffingPlanForm({ compact = false }: { compact?: boolean }) {
           id={fieldId('notes')}
           rows={4}
           {...register('notes')}
-          className={cn(fieldClass, 'h-auto py-3 leading-relaxed')}
+          className={cn(fieldClass, 'h-auto py-3 leading-relaxed', errorRing(errors.notes))}
           placeholder="Account licensure, language mix, ramp constraints…"
         />
       </Field>
 
       <div className="lg:col-span-2 flex flex-col gap-4 pt-2">
-        <Recaptcha ref={captchaRef} onChange={setCaptchaToken} />
+        <div>
+          <div data-captcha className={cn('w-fit rounded-md', captchaMissing && 'ring-2 ring-red-600 ring-offset-2')}>
+            <Recaptcha ref={captchaRef} onChange={setCaptchaToken} />
+          </div>
+          {captchaMissing && (
+            <p className="mt-1.5 inline-flex items-center gap-1 text-xs text-red-600">
+              <AlertCircle className="h-3 w-3" />
+              Please confirm you are not a robot.
+            </p>
+          )}
+        </div>
 
         <button
           type="submit"
@@ -317,24 +372,20 @@ function Field({
   error,
   children,
   className,
-  optional = false,
 }: {
   label: string;
   id: string;
   error?: string;
   children: React.ReactNode;
   className?: string;
-  optional?: boolean;
 }) {
   return (
     <div className={cn('flex flex-col gap-2', className)}>
       <label htmlFor={id} className={labelClass}>
         {label}
-        {!optional && (
-          <span aria-hidden="true" className="ml-0.5 text-red-600">
-            *
-          </span>
-        )}
+        <span aria-hidden="true" className="ml-0.5 text-red-600">
+          *
+        </span>
       </label>
       {isValidElement(children)
         ? cloneElement(children as React.ReactElement<{ 'aria-invalid'?: boolean; 'aria-describedby'?: string }>, {

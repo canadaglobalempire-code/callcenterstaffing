@@ -3,7 +3,7 @@
 import { forwardRef, useState } from 'react';
 import type { UseFormRegisterReturn } from 'react-hook-form';
 import { cn } from '@/lib/utils';
-import { COUNTRIES, DEFAULT_DIAL, UNKNOWN_FLAG, countryForDial, normaliseDial } from '@/lib/phone';
+import { COUNTRIES, DEFAULT_DIAL, UNKNOWN_FLAG, countryForDial, normaliseDial, splitPhone } from '@/lib/phone';
 
 export {
   COUNTRIES,
@@ -15,6 +15,7 @@ export {
   isValidE164,
   isValidNationalNumber,
   normaliseDial,
+  splitPhone,
   toE164,
 } from '@/lib/phone';
 export type { Country } from '@/lib/phone';
@@ -136,6 +137,23 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(function P
         aria-invalid={ariaInvalid}
         aria-describedby={ariaDescribedBy}
         {...numberField}
+        onBlur={(e) => {
+          // A full international number pasted or autofilled into the number box
+          // ("+1 (780) 970-4990", "0044 7911 123456"): move its dial code into the
+          // code box and keep only the national digits, so the code is never sent twice.
+          if (/^\s*(\+|00)/.test(e.target.value)) {
+            const p = splitPhone(dial, e.target.value);
+            if (p.national) {
+              if (p.dial !== dial) {
+                setPickedIso2(null);
+                onDialSelect(p.dial);
+              }
+              e.target.value = p.national;
+              void numberField.onChange(e);
+            }
+          }
+          return numberField.onBlur(e);
+        }}
         className={cn(fieldClass, '-ml-px min-w-0 flex-1 rounded-l-none focus:relative focus:z-10')}
         placeholder={placeholder}
       />

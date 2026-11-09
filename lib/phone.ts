@@ -289,24 +289,61 @@ export function countryForDial(dial: string, preferredIso2?: string | null): Cou
   return COUNTRIES.find((c) => c.dial === dial);
 }
 
-// The national part may contain spaces, dashes, dots and parentheses; letters
-// are rejected. 4-12 national digits; the combined length is checked separately.
+// The national part may contain spaces, dashes, dots and parentheses, and may
+// start with "+" or "00" when a full international number is pasted or
+// autofilled ("+1 (780) 970-4990"); letters are rejected. 4-15 digits; the
+// combined length is checked separately.
 export function isValidNationalNumber(value: string): boolean {
-  if (!/^[\d\s().-]+$/.test(value)) return false;
+  if (!/^\s*\+?[\d\s().-]+$/.test(value)) return false;
   const digits = value.replace(/\D/g, '');
-  return digits.length >= 4 && digits.length <= 12;
+  return digits.length >= 4 && digits.length <= 15;
 }
 
-/** Dial code + national digits, e.g. "+14035551234". */
+// Countries whose numbers keep their leading 0 after the dial code (Italy,
+// Vatican City, San Marino, Côte d'Ivoire, Congo). Everywhere else a leading 0
+// is the domestic trunk prefix and is dropped: UK "07911 123456" -> +447911123456.
+const KEEP_LEADING_ZERO: ReadonlySet<string> = new Set(['+39', '+378', '+225', '+242']);
+
+/**
+ * Split what the visitor typed into a dial code and national digits:
+ * - "+1 (780) 970-4990" or "0044 7911 123456" typed into the number box carries
+ *   its own dial code, which replaces the one in the code box (no "+1" twice);
+ * - for +1 (US/Canada) an 11-digit "1 780 970 4990" loses the leading 1;
+ * - a domestic trunk 0 is dropped (except where the 0 is part of the number).
+ */
+export function splitPhone(dial: string, national: string): { dial: string; national: string } {
+  const raw = national.trim();
+  let code = dial;
+  let digits = raw.replace(/\D/g, '');
+  if (/^(\+|00)/.test(raw)) {
+    const intl = raw.startsWith('+') ? digits : digits.slice(2);
+    const match = Array.from(DIAL_CODES)
+      .filter((d) => intl.startsWith(d.slice(1)))
+      .sort((a, b) => b.length - a.length)[0];
+    if (match) {
+      code = match;
+      digits = intl.slice(match.length - 1);
+    }
+  }
+  if (code === '+1' && digits.length === 11 && digits.startsWith('1')) digits = digits.slice(1);
+  else if (digits.startsWith('0') && !KEEP_LEADING_ZERO.has(code)) digits = digits.slice(1);
+  return { dial: code, national: digits };
+}
+
+/** Dial code + national digits, e.g. "+14035551234" (see splitPhone). */
 export function toE164(dial: string, national: string): string {
-  return `${dial}${national.replace(/\D/g, '')}`;
+  const p = splitPhone(dial, national);
+  return `${p.dial}${p.national}`;
 }
 
 /**
  * Combined value accepted by app/api/lead: "+" then 7-15 digits in total
- * (E.164 maximum) that begin with a known dial code from COUNTRIES.
+ * (E.164 maximum) that begin with a known dial code from COUNTRIES. +1
+ * (US/Canada/NANP) numbers must be exactly 10 digits with a real area code
+ * (first digit 2-9), so "+117809704990" or a 9-digit number is rejected.
  */
 export function isValidE164(value: string): boolean {
   if (!/^\+\d{7,15}$/.test(value)) return false;
+  if (value.startsWith('+1')) return /^\+1[2-9]\d{9}$/.test(value);
   return Array.from(DIAL_CODES).some((d) => value.startsWith(d));
 }

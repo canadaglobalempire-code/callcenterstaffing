@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useRef, useId, cloneElement, isValidElement, forwardRef } from 'react';
+import { useState, useRef, useId, useEffect, cloneElement, isValidElement, forwardRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Check, ArrowRight, AlertCircle, ShieldCheck, Send } from 'lucide-react';
 import Script from 'next/script';
 import { cn } from '@/lib/utils';
-import { submitLead } from '@/lib/lead-client';
+import { submitLead, LEAD_SUBJECT, thanksName, focusFirstInvalid } from '@/lib/lead-client';
 import { SPLITFORMS_KEY } from '@/lib/splitforms';
 import { trackLeadSubmission } from '@/lib/analytics';
 import { Recaptcha, type RecaptchaHandle } from './Recaptcha';
@@ -58,11 +58,17 @@ const REGION_OPTIONS: { value: NonNullable<FormValues['region']>; label: string 
 
 const fieldClass =
   'h-12 w-full rounded-xl border border-white/20 bg-white px-4 text-[15px] text-navy-950 font-medium shadow-sm transition-colors focus:border-accent-500 focus:ring-2 focus:ring-accent-500/30 focus:outline-none placeholder:text-navy-700/55 placeholder:font-normal';
+// Red border + soft red ring on a field that failed validation; cleared as soon
+// as the field becomes valid (react-hook-form revalidates on change after submit).
+const errorRing = (on: unknown) => (on ? '!border-red-500 ring-2 ring-red-500/30' : '');
 
 export function HeroQuoteForm() {
   const formId = useId();
   const fieldId = (name: string) => `${formId}-${name}`;
   const [submitted, setSubmitted] = useState(false);
+  const [thanks, setThanks] = useState('Thanks!');
+  const [showBanner, setShowBanner] = useState(false);
+  const [captchaMissing, setCaptchaMissing] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const captchaRef = useRef<RecaptchaHandle>(null);
@@ -93,16 +99,44 @@ export function HeroQuoteForm() {
     },
   });
 
+  // Back to an empty, working form ~6 s after the thank-you (or on the button).
+  const backToForm = () => {
+    renderedAtRef.current = Date.now();
+    setSubmitted(false);
+  };
+  useEffect(() => {
+    if (!submitted) return;
+    const t = setTimeout(() => {
+      renderedAtRef.current = Date.now();
+      setSubmitted(false);
+    }, 6000);
+    return () => clearTimeout(t);
+  }, [submitted]);
+
+  useEffect(() => {
+    if (captchaToken) setCaptchaMissing(false);
+  }, [captchaToken]);
+
+  const hasErrors = Object.keys(errors).length > 0 || captchaMissing;
+
+  // Missing/invalid fields: nothing is sent; banner, red fields, scroll to the first.
+  const onInvalid = (fieldErrors: Record<string, unknown> = {}) => {
+    setCaptchaMissing(!captchaToken);
+    setShowBanner(true);
+    focusFirstInvalid(formRef.current, Object.keys(fieldErrors));
+  };
+
   const onSubmit = async (values: FormValues) => {
     setSubmitError(null);
     if (!captchaToken) {
-      setSubmitError('Please confirm you are not a robot.');
+      onInvalid();
       return;
     }
+    setShowBanner(false);
     try {
       await submitLead({
         source: 'HeroQuoteForm',
-        subject: `New quote request from ${values.name}${values.company ? ` (${values.company})` : ''}`,
+        subject: LEAD_SUBJECT,
         renderedAt: renderedAtRef.current,
         companyWebsite: honeypotRef.current?.value,
         form: formRef.current,
@@ -118,11 +152,14 @@ export function HeroQuoteForm() {
         },
       });
       trackLeadSubmission('HeroQuoteForm');
-      setSubmitted(true);
+      setThanks(thanksName(values.name));
       reset();
-      renderedAtRef.current = Date.now();
+      clearErrors();
+      setShowBanner(false);
+      setCaptchaMissing(false);
       captchaRef.current?.reset();
       setCaptchaToken(null);
+      setSubmitted(true);
     } catch (err) {
       setSubmitError(err instanceof Error ? err.message : 'Something went wrong. Try again.');
       captchaRef.current?.reset();
@@ -146,22 +183,18 @@ export function HeroQuoteForm() {
             <span className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-accent-500 text-white shadow-xl">
               <Check className="h-7 w-7" strokeWidth={2.5} />
             </span>
-            <h3 className="mt-5 font-display text-2xl font-bold tracking-tight text-white">
-              Quote request received.
+            <h3 role="status" className="mt-5 font-display text-2xl font-bold tracking-tight text-white">
+              {thanks}
             </h3>
             <p className="mt-3 text-white/75 max-w-sm mx-auto text-[15px]">
-              A senior recruiter will review the request and respond with a written quote and
-              sourcing timeline within one business day.
+              Your inquiry has been received. One of our representatives will reach out to you.
             </p>
             <button
               type="button"
-              onClick={() => {
-                renderedAtRef.current = Date.now();
-                setSubmitted(false);
-              }}
+              onClick={backToForm}
               className="mt-5 text-sm font-semibold text-accent-500 hover:text-accent-400"
             >
-              Submit another request
+              Submit another inquiry
             </button>
           </div>
         ) : (
@@ -177,7 +210,7 @@ export function HeroQuoteForm() {
               </div>
             </div>
 
-            <form ref={formRef} data-sf-key={SPLITFORMS_KEY} onSubmit={handleSubmit(onSubmit)} className="mt-6 grid gap-3.5" noValidate>
+            <form ref={formRef} data-sf-key={SPLITFORMS_KEY} onSubmit={handleSubmit(onSubmit, onInvalid)} className="mt-6 grid gap-3.5" noValidate>
               <Script src="https://splitforms.com/embed.js" strategy="afterInteractive" />
               <input
                 ref={honeypotRef}
@@ -189,11 +222,21 @@ export function HeroQuoteForm() {
                 aria-hidden="true"
               />
 
+              {showBanner && hasErrors && (
+                <p
+                  role="alert"
+                  className="inline-flex items-center gap-2 rounded-lg border border-red-500/40 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-300"
+                >
+                  <AlertCircle className="h-4 w-4 flex-none" />
+                  Please complete the highlighted fields below.
+                </p>
+              )}
+
               <Field id={fieldId('name')} label="Your name" error={errors.name?.message}>
                 <input
                   id={fieldId('name')}
                   {...register('name')}
-                  className={fieldClass}
+                  className={cn(fieldClass, errorRing(errors.name))}
                   placeholder="Your name *"
                 />
               </Field>
@@ -202,7 +245,7 @@ export function HeroQuoteForm() {
                 <input
                   id={fieldId('company')}
                   {...register('company')}
-                  className={fieldClass}
+                  className={cn(fieldClass, errorRing(errors.company))}
                   placeholder="Company *"
                 />
               </Field>
@@ -212,7 +255,7 @@ export function HeroQuoteForm() {
                   id={fieldId('website')}
                   type="text"
                   {...register('website')}
-                  className={fieldClass}
+                  className={cn(fieldClass, errorRing(errors.website))}
                   placeholder="Website (yourcompany.com or N/A) *"
                 />
               </Field>
@@ -222,7 +265,7 @@ export function HeroQuoteForm() {
                   id={fieldId('email')}
                   type="email"
                   {...register('email')}
-                  className={fieldClass}
+                  className={cn(fieldClass, errorRing(errors.email))}
                   placeholder="you@company.com *"
                 />
               </Field>
@@ -230,7 +273,7 @@ export function HeroQuoteForm() {
               <Field id={fieldId('phone')} label="Phone number" error={errors.phoneDial?.message ?? errors.phone?.message}>
                 <PhoneField
                   id={fieldId('phone')}
-                  fieldClass={fieldClass}
+                  fieldClass={cn(fieldClass, errorRing(errors.phone || errors.phoneDial))}
                   groupFocusClass="group-focus-within:border-accent-500 group-focus-within:ring-2 group-focus-within:ring-accent-500/30"
                   dialField={register('phoneDial')}
                   numberField={register('phone')}
@@ -252,7 +295,7 @@ export function HeroQuoteForm() {
                   <label htmlFor={fieldId('agentCount')} className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/70">
                     Agents needed <span aria-hidden="true" className="text-accent-500">*</span>
                   </label>
-                  <Select aria-invalid={errors.agentCount ? true : undefined} aria-describedby={errors.agentCount ? `${fieldId('agentCount')}-error` : undefined} id={fieldId('agentCount')} {...register('agentCount')} options={AGENT_OPTIONS} placeholder="Select size" />
+                  <Select aria-invalid={errors.agentCount ? true : undefined} aria-describedby={errors.agentCount ? `${fieldId('agentCount')}-error` : undefined} id={fieldId('agentCount')} {...register('agentCount')} className={errorRing(errors.agentCount)} options={AGENT_OPTIONS} placeholder="Select size" />
                   {errors.agentCount?.message && (
                     <p id={`${fieldId('agentCount')}-error`} className="inline-flex items-center gap-1 text-xs text-accent-500 font-medium">
                       <AlertCircle className="h-3 w-3" />
@@ -264,7 +307,7 @@ export function HeroQuoteForm() {
                   <label htmlFor={fieldId('region')} className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/70">
                     Region <span aria-hidden="true" className="text-accent-500">*</span>
                   </label>
-                  <Select aria-invalid={errors.region ? true : undefined} aria-describedby={errors.region ? `${fieldId('region')}-error` : undefined} id={fieldId('region')} {...register('region')} options={REGION_OPTIONS} placeholder="Select region" />
+                  <Select aria-invalid={errors.region ? true : undefined} aria-describedby={errors.region ? `${fieldId('region')}-error` : undefined} id={fieldId('region')} {...register('region')} className={errorRing(errors.region)} options={REGION_OPTIONS} placeholder="Select region" />
                   {errors.region?.message && (
                     <p id={`${fieldId('region')}-error`} className="inline-flex items-center gap-1 text-xs text-accent-500 font-medium">
                       <AlertCircle className="h-3 w-3" />
@@ -275,7 +318,18 @@ export function HeroQuoteForm() {
               </div>
 
               <div className="mt-1">
-                <Recaptcha ref={captchaRef} onChange={setCaptchaToken} theme="dark" />
+                <div
+                  data-captcha
+                  className={cn('w-fit rounded-md', captchaMissing && 'ring-2 ring-red-500 ring-offset-2 ring-offset-navy-950')}
+                >
+                  <Recaptcha ref={captchaRef} onChange={setCaptchaToken} theme="dark" />
+                </div>
+                {captchaMissing && (
+                  <p className="mt-1.5 inline-flex items-center gap-1 text-xs text-accent-500 font-medium">
+                    <AlertCircle className="h-3 w-3" />
+                    Please confirm you are not a robot.
+                  </p>
+                )}
               </div>
 
               <button
