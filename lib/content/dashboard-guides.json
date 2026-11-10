@@ -28,7 +28,7 @@
           "For each item below, name the responsible owner, the input they need and the record that shows completion. Include an exception example so the provider can explain how it would handle work outside the normal path."
         ],
         "bullets": [
-          "Define supplier records, purchase requests and enquiry tasks",
+          "Define supplier records, purchase requests and inquiry tasks",
           "Separate administrative processing from approval and negotiation",
           "Screen candidates against the actual systems and exception rules"
         ]
@@ -75,7 +75,7 @@
     "faqs": [
       {
         "q": "What should be defined before requesting a proposal?",
-        "a": "Define supplier records, purchase requests and enquiry tasks. Separate administrative processing from approval and negotiation. Screen candidates against the actual systems and exception rules. Record the task owners, permitted decisions and the evidence required for completion."
+        "a": "Define supplier records, purchase requests and inquiry tasks. Separate administrative processing from approval and negotiation. Screen candidates against the actual systems and exception rules. Record the task owners, permitted decisions and the evidence required for completion."
       },
       {
         "q": "How should the programme be reviewed?",
@@ -109,7 +109,7 @@
       {
         "heading": "Define the work and the decision boundary",
         "paragraphs": [
-          "Real estate call center outsourcing staffs defined enquiries, scheduling and administrative follow-up for property teams. Leasing, maintenance and seller outreach need different scripts and owners.",
+          "Real estate call center outsourcing staffs defined inquiries, scheduling and administrative follow-up for property teams. Leasing, maintenance and seller outreach need different scripts and owners.",
           "Write the scope around the task, the records it uses and the person authorised to complete it. This is a planning guide: specialist qualifications, delivery locations, system access and commercial terms must be confirmed for the actual engagement. A broad service name does not establish those details."
         ],
         "bullets": []
@@ -128,7 +128,7 @@
       {
         "heading": "A worked review scenario",
         "paragraphs": [
-          "Illustrative scenario, not a client case: A tenant calls about an urgent maintenance problem while the script is written for new leasing enquiries. The scope should provide the correct routing path for each contact type.",
+          "Illustrative scenario, not a client case: A tenant calls about an urgent maintenance problem while the script is written for new leasing inquiries. The scope should provide the correct routing path for each contact type.",
           "Walk through the scenario with the proposed team. Ask what the agent records, which rule applies, where uncertainty is visible and who owns the next action. A useful demonstration explains both completion and the exception route. It should use your approved procedure rather than a persuasive but unsupported promise."
         ],
         "bullets": []
@@ -256,8 +256,8 @@
       {
         "heading": "Plan chat concurrency by task complexity",
         "paragraphs": [
-          "A chat agent may handle more than one conversation, but a concurrency limit should follow the task and the available tools. Short order-status enquiries and a sensitive complaint do not impose the same reading, decision and follow-up workload. Ask how the platform assigns chats, whether agents can reduce concurrency for difficult cases and what happens when a customer stops responding. Distinguish active conversation work from waiting time when interpreting handle-time reports.",
-          "Test realistic combinations instead of assuming every agent can sustain a universal number of simultaneous chats. A useful scenario puts an account enquiry, an ambiguous policy question and a returning customer in the queue together. Review whether the agent keeps the records separate, gives accurate replies and creates the required follow-up tasks. Compare quality and completion at the proposed workload before expanding concurrency to meet a volume target."
+          "A chat agent may handle more than one conversation, but a concurrency limit should follow the task and the available tools. Short order-status inquiries and a sensitive complaint do not impose the same reading, decision and follow-up workload. Ask how the platform assigns chats, whether agents can reduce concurrency for difficult cases and what happens when a customer stops responding. Distinguish active conversation work from waiting time when interpreting handle-time reports.",
+          "Test realistic combinations instead of assuming every agent can sustain a universal number of simultaneous chats. A useful scenario puts an account inquiry, an ambiguous policy question and a returning customer in the queue together. Review whether the agent keeps the records separate, gives accurate replies and creates the required follow-up tasks. Compare quality and completion at the proposed workload before expanding concurrency to meet a volume target."
         ]
       },
       {
@@ -278,7 +278,7 @@
         "heading": "Keep customer context across channels",
         "paragraphs": [
           "An omnichannel programme needs a consistent way to recognise the customer, identify the issue and view previous work. Before outsourcing, list the identifiers and records agents need, the approved identity checks and the systems in which they operate. Ask how a case created in chat is found when the customer later calls. The goal is to preserve the relevant facts without giving agents unnecessary access or making the customer disclose the same information repeatedly.",
-          "Test a complete journey during the pilot: start an enquiry in one channel, change channels, require an internal handoff and then return for an update. Inspect the notes and task history at every step. If an integration cannot expose the history, agree an approved temporary handoff method and an owner for the gap. Calling three independent queues omnichannel does not settle the information and ownership work between them."
+          "Test a complete journey during the pilot: start an inquiry in one channel, change channels, require an internal handoff and then return for an update. Inspect the notes and task history at every step. If an integration cannot expose the history, agree an approved temporary handoff method and an owner for the gap. Calling three independent queues omnichannel does not settle the information and ownership work between them."
         ]
       },
       {
@@ -371,7 +371,7 @@
       {
         "heading": "Define the work and the decision boundary",
         "paragraphs": [
-          "Human resources support staffing covers defined administrative enquiries and records. Employment decisions and sensitive exceptions need an authorised HR owner.",
+          "Human resources support staffing covers defined administrative inquiries and records. Employment decisions and sensitive exceptions need an authorised HR owner.",
           "Write the scope around the task, the records it uses and the person authorised to complete it. This is a planning guide: specialist qualifications, delivery locations, system access and commercial terms must be confirmed for the actual engagement. A broad service name does not establish those details."
         ],
         "bullets": []
@@ -382,7 +382,7 @@
           "For each item below, name the responsible owner, the input they need and the record that shows completion. Include an exception example so the provider can explain how it would handle work outside the normal path."
         ],
         "bullets": [
-          "Specify onboarding, record collection and enquiry tasks",
+          "Specify onboarding, record collection and inquiry tasks",
           "Define permitted access to employee information",
           "Route policy interpretation and employment decisions to HR specialists"
         ]
@@ -390,7 +390,7 @@
       {
         "heading": "A worked review scenario",
         "paragraphs": [
-          "Illustrative scenario, not a client case: An employee asks an agent to resolve a disputed employment status. The agent records the enquiry and follows the HR escalation process rather than applying a guessed policy.",
+          "Illustrative scenario, not a client case: An employee asks an agent to resolve a disputed employment status. The agent records the inquiry and follows the HR escalation process rather than applying a guessed policy.",
           "Walk through the scenario with the proposed team. Ask what the agent records, which rule applies, where uncertainty is visible and who owns the next action. A useful demonstration explains both completion and the exception route. It should use your approved procedure rather than a persuasive but unsupported promise."
         ],
         "bullets": []
@@ -431,7 +431,7 @@
     "faqs": [
       {
         "q": "What should be defined before requesting a proposal?",
-        "a": "Specify onboarding, record collection and enquiry tasks. Define permitted access to employee information. Route policy interpretation and employment decisions to HR specialists. Record the task owners, permitted decisions and the evidence required for completion."
+        "a": "Specify onboarding, record collection and inquiry tasks. Define permitted access to employee information. Route policy interpretation and employment decisions to HR specialists. Record the task owners, permitted decisions and the evidence required for completion."
       },
       {
         "q": "How should the programme be reviewed?",

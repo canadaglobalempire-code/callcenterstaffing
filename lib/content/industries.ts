@@ -315,7 +315,7 @@ export const INDUSTRIES: Industry[] = [
     primaryKeyword: 'ecommerce customer service outsourcing',
     metaTitle: "Ecommerce Call Center Staffing for Customer Support",
     metaDescription:
-      "Explore ecommerce call center staffing for order enquiries, returns and seasonal coverage. Define customer channels, agent authority and the workload you need.",
+      "Explore ecommerce call center staffing for order inquiries, returns and seasonal coverage. Define customer channels, agent authority and the workload you need.",
     hero: {
       eyebrow: 'Industries · eCommerce & Retail',
       headline: 'Ecommerce & retail customer service agents, staffed on our payroll',

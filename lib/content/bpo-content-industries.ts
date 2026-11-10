@@ -217,7 +217,7 @@ export const BPO_CONTENT_INDUSTRIES: Record<string, BpoContent> = {
       'A buyer guide to ecommerce and retail call-center and BPO companies for 2026, covering omnichannel support, peak-season scaling, order and returns workflows, the questions that matter, and when staffing your own floor beats outsourcing.',
     metaTitle: "Ecommerce Call Center Outsourcing Companies: Guide",
     metaDescription:
-      "Review the ecommerce call center outsourcing company guide. Compare order enquiries, returns, peak coverage and the actual responsibilities proposed.",
+      "Review the ecommerce call center outsourcing company guide. Compare order inquiries, returns, peak coverage and the actual responsibilities proposed.",
     primaryKeyword: 'ecommerce call center outsourcing companies',
     sections: [
       {
@@ -910,8 +910,8 @@ export const BPO_CONTENT_INDUSTRIES: Record<string, BpoContent> = {
         heading: 'Why real-estate call-center outsourcing is different',
         level: 2,
         paragraphs: [
-          'In real estate, the whole game is speed to lead. A buyer or seller enquiry is worth a great deal for a few minutes and very little a few hours later, because the same prospect has messaged four other agents. The single most valuable thing a real-estate call operation does is answer fast, qualify well, and get the appointment on the calendar before a competitor does. That is why "call center" in real estate usually means lead response, inside sales and appointment setting more than traditional support.',
-          'The work splits into a few distinct jobs: answering services that make sure no call goes to voicemail, inside sales agents (ISAs) who qualify and nurture leads and book appointments, outbound prospecting for investors and brokerages, and property-management support that handles tenant maintenance and leasing enquiries. An answering service that just takes messages is a very different thing from an ISA operation that actively converts leads, and buyers often conflate the two.',
+          'In real estate, the whole game is speed to lead. A buyer or seller inquiry is worth a great deal for a few minutes and very little a few hours later, because the same prospect has messaged four other agents. The single most valuable thing a real-estate call operation does is answer fast, qualify well, and get the appointment on the calendar before a competitor does. That is why "call center" in real estate usually means lead response, inside sales and appointment setting more than traditional support.',
+          'The work splits into a few distinct jobs: answering services that make sure no call goes to voicemail, inside sales agents (ISAs) who qualify and nurture leads and book appointments, outbound prospecting for investors and brokerages, and property-management support that handles tenant maintenance and leasing inquiries. An answering service that just takes messages is a very different thing from an ISA operation that actively converts leads, and buyers often conflate the two.',
           'Weigh a real-estate partner on response speed, conversion and appointment-setting performance, and CRM discipline. A cheap service that answers slowly or fails to log and follow up leads costs you deals, not just calls.',
         ],
       },
@@ -919,12 +919,12 @@ export const BPO_CONTENT_INDUSTRIES: Record<string, BpoContent> = {
         heading: 'What to verify in a real-estate call partner',
         level: 2,
         bullets: [
-          'Speed to lead: Ask their average speed to first contact on inbound leads and how they guarantee fast response, including after hours and weekends when property enquiries spike.',
+          'Speed to lead: Ask their average speed to first contact on inbound leads and how they guarantee fast response, including after hours and weekends when property inquiries spike.',
           'Answering versus ISA: Be clear whether you need message-taking and call answering or active lead qualification, nurturing and appointment setting, and confirm the provider actually does the one you need.',
           'Conversion and appointments: For ISA work, ask for qualification and appointment-set rates and how agents follow scripts without sounding scripted.',
           'CRM discipline: Confirm integration with your CRM (Follow Up Boss, kvCORE, Salesforce and the like) and that every lead is logged, tagged and followed up.',
           'TCPA compliance: For outbound and texting, confirm consent management and calling-rule compliance, since the liability follows you.',
-          'Property-management support: If relevant, confirm competence on maintenance triage, leasing enquiries and tenant communication.',
+          'Property-management support: If relevant, confirm competence on maintenance triage, leasing inquiries and tenant communication.',
         ],
       },
       {
@@ -939,7 +939,7 @@ export const BPO_CONTENT_INDUSTRIES: Record<string, BpoContent> = {
           '3. Verse.io (verse.io) - Lead-conversion and concierge service focused on speed to lead. Best fit: teams wanting fast qualification and appointment setting. Question to ask: what is your speed to lead and appointment-set rate?',
           '4. Conversion Monster (conversionmonster.com) - Inside-sales-agent service built for real estate lead conversion. Best fit: teams outsourcing ISA qualification and nurture. Question to ask: what conversion and appointment rates do you deliver?',
           '5. MyOutDesk (myoutdesk.com) - Virtual-assistant and ISA provider for real estate. Best fit: agents wanting dedicated virtual ISAs and admin support. Question to ask: how do you train VAs on my CRM and scripts?',
-          '6. Ruby (ruby.com) - Live virtual receptionist service with real-estate clients. Best fit: brokerages wanting on-brand answering. Question to ask: how do you handle after-hours enquiries?',
+          '6. Ruby (ruby.com) - Live virtual receptionist service with real-estate clients. Best fit: brokerages wanting on-brand answering. Question to ask: how do you handle after-hours inquiries?',
           '7. Upcall (upcall.com) - Outbound calling service for lead follow-up and qualification. Best fit: outbound prospecting and lead reactivation. Question to ask: how do you ensure TCPA-compliant outbound?',
           '8. Abby Connect (abby.com) - Virtual receptionist service with real-estate use cases. Best fit: agents wanting warm answering and intake. Question to ask: how do you qualify and route leads?',
           '9. Span Global Services (spanglobalservices.com) - Outbound and lead-generation provider for real estate. Best fit: investor and brokerage outbound. Question to ask: what lists and compliance do you use?',

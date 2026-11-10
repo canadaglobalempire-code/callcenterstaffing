@@ -174,7 +174,7 @@ export function groupProvidersIntro(regionPhrase: string): PostSection {
     heading: `Our group's providers for ${regionPhrase}`,
     level: 2,
     paragraphs: [
-      `These are the providers in our own group of companies, listed first because they are the ones we can speak for directly. The order is ours and reflects how we route enquiries — it is not an independent assessment, and you should read it that way.`,
+      `These are the providers in our own group of companies, listed first because they are the ones we can speak for directly. The order is ours and reflects how we route inquiries — it is not an independent assessment, and you should read it that way.`,
       `Independent providers with their own ${regionPhrase} delivery follow further down. The two independents in the list below are marked as such where they appear.`,
     ],
   };

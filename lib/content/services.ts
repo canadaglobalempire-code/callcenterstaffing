@@ -142,7 +142,7 @@ export const SERVICES: Service[] = [
       },
       {
         title: 'Inbound-heavy teams losing speed to lead',
-        body: 'Inbound sales outsourcing exists mostly because response time decays fast. If inbound enquiries wait hours for a first touch, added capacity pays for itself before any skill improvement does.',
+        body: 'Inbound sales outsourcing exists mostly because response time decays fast. If inbound inquiries wait hours for a first touch, added capacity pays for itself before any skill improvement does.',
       },
     ],
     ourApproach:
@@ -205,7 +205,7 @@ export const SERVICES: Service[] = [
       },
       {
         q: 'Can you staff inbound sales as well as outbound?',
-        a: 'Yes, and inbound is often the faster return. Inbound sales response time decays quickly — if enquiries wait hours for a first touch, added capacity pays for itself before any skill improvement does.',
+        a: 'Yes, and inbound is often the faster return. Inbound sales response time decays quickly — if inquiries wait hours for a first touch, added capacity pays for itself before any skill improvement does.',
       },
       {
         q: 'How much does inside sales outsourcing cost?',
